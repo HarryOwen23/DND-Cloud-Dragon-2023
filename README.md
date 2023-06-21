@@ -1,6 +1,3 @@
-# Background section 
-
-
 # DND-Cloud-Dragon-2023 (Name is a work in progress) 
 A DND related project for Elastacloud + beyond. 
 
