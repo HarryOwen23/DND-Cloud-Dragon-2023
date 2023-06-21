@@ -5,12 +5,13 @@
 A DND related project for Elastacloud + beyond. 
 
 ## About 
-This is an open source project created to provide support DND.
+This is an open source project created to provide support with building for both DND and other ideas.
 Things it can be used for: 
  - Character creation 
- - Campaign Assistance 
- - World building help 
+ - Campaign Assistance
+ - Document different ideas user's would have in mind
+ - World building help
 
 <span style="color:red"><p> With DND-Cloud-Dragon-2023, I hope to make an accessible tool to help dnd players make character building a nice and spicy experience!</p></span>
 <span style="color:red"><p> The tool will also be used for DM's to help with world builing for their campaigns.</p></span>
-<span style="color:red"><p><p> Massive thanks to all who want to contribute to the repo!</p></span>
+<span style="color:red"><p> Massive thanks to all who want to contribute to the repo!</p></span>
