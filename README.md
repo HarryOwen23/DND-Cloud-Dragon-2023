@@ -1,7 +1,10 @@
+<h1 align="center">DND-Cloud-Dragon</h1>
+
 # DND-Cloud-Dragon-2023 (Name is a work in progress) 
 A DND related project for Elastacloud + beyond. 
 
-## About 
+<h2 align="left">About</h2>
+
 This is an open source project created to provide support with building for both DND and other ideas.
 Things it can be used for: 
  - Character creation 
