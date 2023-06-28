@@ -1,4 +1,11 @@
-<h1 align="center">DND-Cloud-Dragon (Name is a work in progress)</h1>
+<html>
+	<head>
+		<title>DND-Cloud-Dragon (Name is a work in progress)</title>
+		<style>
+		h1{ color: red; }
+		p {font-size:38pt; }
+		</style>
+	</head>
 
 A DND related project for Elastacloud + beyond. 
 
@@ -16,3 +23,5 @@ Things it can be used for:
 <p>With DND-Cloud-Dragon-2023, I hope to make an accessible tool to help dnd players make character building a nice and spicy experience!</p>
 <p>The tool will also be used for DM's to help with world builing for their campaigns.</p>
 <p>Massive thanks to all who want to contribute to the repo!</p>
+
+</html>
