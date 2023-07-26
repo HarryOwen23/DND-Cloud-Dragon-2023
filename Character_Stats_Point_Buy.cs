@@ -67,7 +67,7 @@ public class Character_Stats_Point_Buy
         }
 
         Console.WriteLine("Ability Score Adjustment Completed!");
-        Console.WriteLine("Final Ability Scores:");
+        Console.WriteLine("The Final Scores Are:");
         for (int i = 0; i < abilityScores.Length; i++)
         {
             Console.WriteLine(abilities[i] + ": " + abilityScores[i]);
