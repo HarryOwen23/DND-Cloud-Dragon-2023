@@ -21,6 +21,8 @@ Things it can be used for:
 <p>The tool will also be used for DM's to help with world builing for their campaigns.</p>
 <p>Massive thanks to all who want to contribute to the repo!</p>
 
+<h2 align="left">Future Updates</h2>
+
 <h2 align="left">Disclaimer</h2>
 
 
