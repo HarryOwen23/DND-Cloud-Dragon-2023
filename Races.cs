@@ -7,9 +7,9 @@ public class Races
 	public string Name { get; set; }
 	public Dictionary<namespace, int> abilityBonuses { get; set; }
 
-	public Races(string name)
+	public Races(string nameOfRace)
 	{
-		Name = name;
+		Name = nameOfRace;
 		abilityBonuses = new Dictionary<string, int>();
 	}
 
