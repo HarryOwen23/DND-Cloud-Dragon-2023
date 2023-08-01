@@ -25,6 +25,10 @@ class raceModifier
         dwarfGrayRace.AddAbilityScoreBonus("STR", 1);
         dwarfGrayRace.AddAbilityScoreBonus("CON", 2);
 
+        DndRace dwarfDuergarRace = new DndRace("Dwarf (Duergar)");
+        dwarfDuergarRace.AddAbilityScoreBonus("STR", 1);
+        dwarfDuergarRace.AddAbilityScoreBonus("CON", 2);
+
         // Elf Races
         DndRace elfHighRace = new DndRace("Elf (High)");
         elfHighRace.AddAbilityScoreBonus("DEX", 2);
@@ -41,6 +45,14 @@ class raceModifier
         DndRace elfEladrinRace = new DndRace("Elf (Eladrin)");
         elfEladrinRace.AddAbilityScoreBonus("DEX", 2);
         elfEladrinRace.AddAbilityScoreBonus("INT", 1);
+
+        DndRace elfSeaRace = new DndRace("Elf (Sea)");
+        elfSeaRace.AddAbilityScoreBonus("DEX", 2);
+        elfSeaRace.AddAbilityScoreBonus("CON", 1);
+
+        DndRace elfShadarRace = new DndRace("Elf (Shadar-kai)");
+        elfShadarRace.AddAbilityScoreBonus("DEX", 2);
+        elfShadarRace.AddAbilityScoreBonus("CON", 1);
 
         // Halfling Races 
         DndRace halflingLfRace = new DndRace("Halfling (Lightfoot)");
@@ -130,11 +142,132 @@ class raceModifier
         goliathRace.AddAbilityScoreBonus("STR", 2);
         goliathRace.AddAbilityScoreBonus("CON", 1);
 
+        // Firbolg
+        DndRace firbolgRace = new DndRace("Firbolg");
+        firbolgRace.AddAbilityScoreBonus("STR", 1);
+        firbolgRace.AddAbilityScoreBonus("WIS", 2);
+
+        // Kenku
+        DndRace kenkuRace = new DndRace("Kenku");
+        kenkuRace.AddAbilityScoreBonus("DEX", 2);
+        kenkuRace.AddAbilityScoreBonus("WIS",1);
+
+        // Lizardfolk 
+        DndRace lizardFolkRace = new DndRace("Lizardfolk");
+        lizardFolkRace.AddAbilityScoreBonus("CON", 2);
+        lizardFolkRace.AddAbilityScoreBonus("WIS", 1);
+
+        // Tabaxi 
+        DndRace tabaxiRace = new DndRace("Tabaxi");
+        tabaxiRace.AddAbilityScoreBonus("DEX", 2);
+        tabaxiRace.AddAbilityScoreBonus("CHA", 1);
+
+        // Triton 
+        DndRace tritonRace = new DndRace("Triton");
+        tritonRace.AddAbilityScoreBonus("STR", 2);
+        tritonRace.AddAbilityScoreBonus("CON", 1);
+        tritonRace.AddAbilityScoreBonus("CHA", 1);
+
+        // Bugbear
+        DndRace bugBearRace = new DndRace("Tabaxi");
+        bugBearRace.AddAbilityScoreBonus("STR", 2);
+        bugBearRace.AddAbilityScoreBonus("CON", 1);
+
+        // Goblin Races 
+        DndRace goblinRace = new DndRace("Goblin");
+        goblinRace.AddAbilityScoreBonus("DEX", 2);
+        goblinRace.AddAbilityScoreBonus("CON", 1);
+
+        DndRace hobGoblinRace = new DndRace("Hobgoblin");
+        hobGoblinRace.AddAbilityScoreBonus("CON", 2);
+        hobGoblinRace.AddAbilityScoreBonus("INT", 1);
+
+        // Kobold Race 
+        DndRace koboldRace = new DndRace("Kobold");
+        koboldRace.AddAbilityScoreBonus("DEX", 2);
+
+        // Yuan-ti Pureblood Race 
+        DndRace yuantiPbRace = new DndRace("Yuan-ti Pureblood");
+        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
+        yuantiPbRace.AddAbilityScoreBonus("CHA", 1);
+
+        // Githyanki
+        DndRace githyankiRace = new DndRace("Githyanki");
+        yuantiPbRace.AddAbilityScoreBonus("STR", 2);
+        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
+
+        // Githzerai	
+        DndRace githyankiRace = new DndRace("Githzerai");
+        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
+        yuantiPbRace.AddAbilityScoreBonus("WIS", 2);
+
+        // Tortle 
+        DndRace tortleRace = new DndRace("Tortle");
+        tortleRace.AddAbilityScoreBonus("STR", 2);
+        tortleRace.AddAbilityScoreBonus("WIS", 1);
+
+        // Verdan
+        DndRace verdanRace = new DndRace("Verdan");
+        verdanRace.AddAbilityScoreBonus("CON", 2);
+        verdanRace.AddAbilityScoreBonus("CHA", 2);
+
+        // Kalashtar
+        DndRace kalashtarRace = new DndRace("Kalashtar");
+        kalashtarRace.AddAbilityScoreBonus("CON", 2);
+        kalashtarRace.AddAbilityScoreBonus("CHA", 1);
+
+        // Shifter Races 
+        DndRace shifterBeasthideRace = new DndRace("Shifter (Beasthide)");
+        shifterBeasthideRace.AddAbilityScoreBonus("STR", 1);
+        shifterBeasthideRace.AddAbilityScoreBonus("CON", 2);
+
+        DndRace shifterLongToothRace = new DndRace("Shifter (Longtooth)");
+        shifterLongToothRace.AddAbilityScoreBonus("STR", 2);
+        shifterLongToothRace.AddAbilityScoreBonus("DEX", 1);
+
+        DndRace shifterSwiftstrideRace = new DndRace("Shifter (Swiftstride)");
+        shifterSwiftstrideRace.AddAbilityScoreBonus("DEX", 2);
+        shifterSwiftstrideRace.AddAbilityScoreBonus("CHA", 1);
+
+        DndRace shifterWildhuntRace = new DndRace("Shifter (Wildhunt)");
+        shifterWildhuntRace.AddAbilityScoreBonus("DEX", 1);
+        shifterWildhuntRace.AddAbilityScoreBonus("WIS", 2);
+
+        // Centaur 
+        DndRace centaurRace = new DndRace("Centaur");
+        centaurRace.AddAbilityScoreBonus("STR", 2);
+        centaurRace.AddAbilityScoreBonus("WIS", 1);
+
+        // Loxodon 
+        DndRace loxodonRace = new DndRace("Loxodon");
+        loxodonRace.AddAbilityScoreBonus("CON", 2);
+        loxodonRace.AddAbilityScoreBonus("WIS", 1);
+
+        // Minotaur 
+        DndRace minotaurRace = new DndRace("Minotaur");
+        minotaurRace.AddAbilityScoreBonus("STR", 2);
+        minotaurRace.AddAbilityScoreBonus("CON", 1);
+
+        // Vedalken 
+        DndRace vedalkenRace = new DndRace("Vedalken");
+        vedalkenRace.AddAbilityScoreBonus("INT", 2);
+        vedalkenRace.AddAbilityScoreBonus("WIS", 1);
+
+        // Leonin
+        DndRace leoninRace = new DndRace("Leonin");
+        vedalkenRace.AddAbilityScoreBonus("STR", 1);
+        vedalkenRace.AddAbilityScoreBonus("CON", 2);
+
+        // Satyr 
+        DndRace SatyrRace = new DndRace("Satyr");
+        SatyrRace.AddAbilityScoreBonus("DEX", 1);
+        SatyrRace.AddAbilityScoreBonus("CHA", 2);
+
         // Example usage
         Console.WriteLine("Welcome to the character creation screen!");
 
         // Let's say the player chooses to play an Elf character
-        DndRace selectedRace = elfRace;
+        DndRace selectedRace = ;
 
         Console.WriteLine("You've selected the " + selectedRace.Name + " race.");
         Console.WriteLine("Ability Score Bonuses:");
