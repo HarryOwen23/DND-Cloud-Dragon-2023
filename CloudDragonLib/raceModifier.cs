@@ -143,7 +143,7 @@ class raceModifier
         goliathRace.AddAbilityScoreBonus("CON", 1);
 
         // Firbolg
-        DndRace firbolgRace = new DndRace("Firbolg");
+        DndRace firbolgRace = new DndRace("/");
         firbolgRace.AddAbilityScoreBonus("STR", 1);
         firbolgRace.AddAbilityScoreBonus("WIS", 2);
 
@@ -169,7 +169,7 @@ class raceModifier
         tritonRace.AddAbilityScoreBonus("CHA", 1);
 
         // Bugbear
-        DndRace bugBearRace = new DndRace("Tabaxi");
+        DndRace bugBearRace = new DndRace("Bugbear");
         bugBearRace.AddAbilityScoreBonus("STR", 2);
         bugBearRace.AddAbilityScoreBonus("CON", 1);
 
