@@ -1,0 +1,128 @@
+[
+    {
+        "Name": "Human",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Dwarf (Hill)",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Dwarf (Mountain)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Dwarf (Gray/Duergar)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Dward (Duergar)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Elf (High)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Elf (Wood)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        {
+            "Name": "Elf (Drow)",
+            {
+                "BonusType": "DEX",
+                "BonusValue": 2
+            },
+            {
+                "BonusType": "CHA",
+                "BonusValue": 1
+            }
+        }
+    },
+    {
+        {
+            "Name": "Elf (Eladrin)",
+            {
+                "BonusType": "DEX",
+                "BonusValue": 2
+            },
+            {
+                "BonusType": "INT",
+                "BonusValue": 1
+            }
+        }
+    }
+    {
+        "Name": "Bugbear",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    }
+]
