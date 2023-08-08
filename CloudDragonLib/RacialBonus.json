@@ -133,499 +133,499 @@
         }
     },
 
+    {
+        "Name": "Halfling (lightfoot)",
         {
-            "Name": "Halfling (lightfoot)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 1
-            }
+            "BonusType": "DEX",
+            "BonusValue": 2
         },
         {
-            "Name": "Halfling (Stout)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Halfling (Ghostwise)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Gnome (Forest)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Gnome (Rock)",
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Gnome (Deep)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Orc",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Half Orc",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Tiefling",
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Tiefling (Feral)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Aasimar",
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Aasimar (Protector)",
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Aasimar (Scourge)",
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Aasimar (Fallen)",
-            {
-                "BonusType": "STR",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Arakocra",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Genasi (Air)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Genasi (Earth)",
-            {
-                "BonusType": "STR",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Genasi (Fire)",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Genasi (Water)",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Goliath",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Firbolg",
-            {
-                "BonusType": "STR",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Kenku",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Lizardfolk",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Tabaxi",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Triton",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Bugbear",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Goblin",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Hobgoblin",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Kobold",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Yuan-ti Pureblood",
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Githyanki",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Githzerai",
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Tortle",
-            {
-                "BonusType": "INT",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Verdan",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Kalashtar",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Shifter (Beasthide)",
-            {
-                "BonusType": "STR",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Shifter (Longtooth)",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Shifter (Swiftstride)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Shifter (Wildhunt)",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Centaur",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Loxodon",
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Minotaur",
-            {
-                "BonusType": "STR",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 1
-            }
-        },
-        {
-            "Name": "Vedalken",
-            {
-                "BonusType": "INT",
-                "BonusValue": 2
-            },
-            {
-                "BonusType": "WIS",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Leonin",
-            {
-                "BonusType": "STR",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CON",
-                "BonusValue": 2
-            }
-        },
-        {
-            "Name": "Satyr",
-            {
-                "BonusType": "DEX",
-                "BonusValue": 1
-            },
-            {
-                "BonusType": "CHA",
-                "BonusValue": 2
-            }
+            "BonusType": "CHA",
+            "BonusValue": 1
         }
+    },
+    {
+        "Name": "Halfling (Stout)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Halfling (Ghostwise)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Gnome (Forest)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Gnome (Rock)",
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Gnome (Deep)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Orc",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Half Orc",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Tiefling",
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Tiefling (Feral)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Aasimar",
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Aasimar (Protector)",
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Aasimar (Scourge)",
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Aasimar (Fallen)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Arakocra",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Genasi (Air)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Genasi (Earth)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Genasi (Fire)",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Genasi (Water)",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Goliath",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Firbolg",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Kenku",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Lizardfolk",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Tabaxi",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Triton",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Bugbear",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Goblin",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Hobgoblin",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Kobold",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Yuan-ti Pureblood",
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Githyanki",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Githzerai",
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Tortle",
+        {
+            "BonusType": "INT",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Verdan",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Kalashtar",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Shifter (Beasthide)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Shifter (Longtooth)",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Shifter (Swiftstride)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Shifter (Wildhunt)",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Centaur",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Loxodon",
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Minotaur",
+        {
+            "BonusType": "STR",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 1
+        }
+    },
+    {
+        "Name": "Vedalken",
+        {
+            "BonusType": "INT",
+            "BonusValue": 2
+        },
+        {
+            "BonusType": "WIS",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Leonin",
+        {
+            "BonusType": "STR",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CON",
+            "BonusValue": 2
+        }
+    },
+    {
+        "Name": "Satyr",
+        {
+            "BonusType": "DEX",
+            "BonusValue": 1
+        },
+        {
+            "BonusType": "CHA",
+            "BonusValue": 2
+        }
+    }
 ]

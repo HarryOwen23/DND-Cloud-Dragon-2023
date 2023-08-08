@@ -1,0 +1,5 @@
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.csproj.AssemblyReference.cache
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.AssemblyInfoInputs.cache
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.AssemblyInfo.cs
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.csproj.CoreCompileInputs.cache
