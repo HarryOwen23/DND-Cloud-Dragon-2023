@@ -1,0 +1,35 @@
+﻿[
+    {
+        "Class Name": "Fighter",
+        {
+            "Class Feature": "Fighting Syle",
+            "Class Feature Description": "You choose a fighting style as your speciality. Choose one of the following Archery, Defense, Dueling, Great Weapon Fighting, Protection, or Two-Weapon Fighting.",
+            
+        },
+        {
+            "Class Feature": "Second Wind",
+            "Class Featrue Description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+        },
+        {
+            "Class Feature": "Action Surge",
+            "Class Feature Description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action."
+        },
+        {
+            "Class Feature": "Martial Archetype",
+            "Class Feature Description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+        },
+        {
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
+        },
+        {
+            "Class Feature": "Extra Attack",
+            "Class Feature Description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the attack action on your turn",
+            "Class Feature Desctiption": "The number of attacks increases to three when you reach 11th level and to four times when you reach 20th level in this class"
+        },
+        {
+            "Class Feature": "Indomitable",
+            "Class Feature Description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+        }
+    }
+]
