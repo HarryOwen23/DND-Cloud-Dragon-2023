@@ -1,25 +1,25 @@
 [
     {
-        "Arcane_Tradition": "Chronurgy Magic",
+        "Arcane_Tradition": "School of Divination",
         {
-            "Tradition_Abilitiy": "Chronal Shift",
-            "Arcane_Tradition_Desctiption": "At 2nd level, you can magically exert limited control over the flow of time around a creature. As a reaction, after you or a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can force the creature to reroll. You make this decision after you see whether the roll succeeds or fails. The target must use the result of the second roll. You can use this ability twice, and you regain any expended uses when you finish a long rest. "
+            "Tradition_Abilitiy": "Divination Savant",
+            "Arcane_Tradition_Description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Divination spell into your spellbook is halved."
         },
         {
-            "Tradition_Abilitiy": "Temporal Awareness",
-            "Arcane_Tradition_Desctiption": "Starting at 2nd level, you can add your Intelligence modifiers to your initiative rolls"
+            "Tradition_Abilitiy": "Portent",
+            "Arcane_Tradition_Description": "Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn. Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls."
         },
         {
-            "Tradition_Ability": "Momentary Stasis",
-            "Arcane_Tradition_Desctiption": "When you reach 6th level, as an action, you can magically force a Large or smaller creature you can see within 60 feet of you to make a Constitution saving throw against your spell save DC. Unless the saving throw is a success, the creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage. While encased in this way, the creature is incapacitated and has a speed of 0. You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+            "Tradition_Ability": "Expert Divination",
+            "Arcane_Tradition_Description": "Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level."
         },
         {
-            "Tradition_Ability": "Arcane Abeyance",
-            "Arcane_Tradition_Desctiption": "At 10th level, when you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote. The spell is frozen in time at the moment of casting and held within a gray bead for 1 hour. This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage. When the duration ends, or if the bead is destroyed, it vanishes in aflash of light, and the spell is lost. A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus and save DC, and the spell treats the creature who released it as the caster for all other purposes. Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+            "Tradition_Ability": "The Third Eye",
+            "Arcane_Tradition_Description": "Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can't use the feature again until you finish a short or long rest. Darkvision. You gain darkvision out to a range of 60 feet. Ethereal Sight. You can see into the Ethereal Plane within 60 feet of you. Greater Comprehension. You can read any language. See Invisibility. You can see invisible creatures and objects within 10 feet of you that are within line of sight."
         },
         {
-            "Tradition_Ability": "Convergent Future",
-            "Arcane_Tradition_Description": "Starting at 14th level, you can peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. When you or a creature you can see within 60 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed or one less than that number (your choice). When you use this feature, you gain one level of exhaustion. Only by finishing a long rest can you remove a level of exhaustion gained in this way."
+            "Tradition_Ability": "Greater Portent",
+            "Arcane_Tradition_Description": "Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two."
         }
     }
 ]
