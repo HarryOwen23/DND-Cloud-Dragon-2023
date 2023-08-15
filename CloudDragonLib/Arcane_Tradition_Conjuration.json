@@ -1,0 +1,25 @@
+[
+    {
+        "Arcane_Tradition": "School of Conjuration",
+        {
+            "Tradition_Abilitiy": "Conjuration Savant",
+            "Arcane_Tradition_Desctiption": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Conjuration spell into your spellbook is halved."
+        },
+        {
+            "Tradition_Abilitiy": "Temporal Awareness",
+            "Arcane_Tradition_Desctiption": ""
+        },
+        {
+            "Tradition_Ability": "Momentary Stasis",
+            "Arcane_Tradition_": ""
+        },
+        {
+            "Tradition_Ability": "",
+            "Arcane_Tradition_Desctiption": ""
+        },
+        {
+            "Tradition_Ability": "Convergent Future",
+            "Arcane_Tradition_Description": ""
+        }
+    }
+]
