@@ -1,25 +1,28 @@
 [
     {
-        "Arcane_Tradition": "Chronurgy Magic",
+        "Arcane_Tradition": "School of War Magic",
         {
-            "Tradition_Abilitiy": "Chronal Shift",
-            "Arcane_Tradition_Desctiption": "At 2nd level, you can magically exert limited control over the flow of time around a creature. As a reaction, after you or a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can force the creature to reroll. You make this decision after you see whether the roll succeeds or fails. The target must use the result of the second roll. You can use this ability twice, and you regain any expended uses when you finish a long rest. "
+            "Tradition_Abilitiy": "Arcane Deflection",
+            "Arcane_Tradition_Desctiption": "At 2nd level, you have learned to weave your magic to fortify yourself against harm. When you are hit by an attack or you fail a saving throw, you can use your reaction to gain a +2 bonus to your AC against that attack or a +4 bonus to that saving throw.",
+            "Arcane_Tradition_Description_2": "When you use this feature, you can't cast spells other than cantrips until the end of your next turn."
         },
         {
-            "Tradition_Abilitiy": "Temporal Awareness",
-            "Arcane_Tradition_Desctiption": "Starting at 2nd level, you can add your Intelligence modifiers to your initiative rolls"
+            "Tradition_Abilitiy": "Tactical Wit",
+            "Arcane_Tradition_Desctiption": "Starting at 2nd level, your keen ability to assess tactical situations allows you to act quickly in battle. You can give yourself a bonus to your initiative rolls equal to your Intelligence modifier.",
         },
         {
-            "Tradition_Ability": "Momentary Stasis",
-            "Arcane_Tradition_Desctiption": "When you reach 6th level, as an action, you can magically force a Large or smaller creature you can see within 60 feet of you to make a Constitution saving throw against your spell save DC. Unless the saving throw is a success, the creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage. While encased in this way, the creature is incapacitated and has a speed of 0. You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+            "Tradition_Ability": "Power Surge",
+            "Arcane_Tradition_Desctiption": "Starting at 6th level, you can store magical energy within yourself to later empower your damaging spells.",
+            "Arcane_Tradition_Description_2": "You can store a maximum number of power surges equal to your Intelligence modifier (minimum of one). Whenever you finish a long rest, your number of power surges resets to one. Whenever you successfully end a spell with Dispel Magic or Counterspell, you gain one power surge, as you steal magic from the spell you foiled. If you end a short rest with no power surges, you gain one power surge.",
+            "Arcane_Tradition_Description_3": "Once per turn when you deal damage to a creature or object with a wizard spell, you can spend one power surge to deal extra force damage to that target. The extra damage equals half your wizard level."
         },
         {
-            "Tradition_Ability": "Arcane Abeyance",
-            "Arcane_Tradition_Desctiption": "At 10th level, when you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote. The spell is frozen in time at the moment of casting and held within a gray bead for 1 hour. This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage. When the duration ends, or if the bead is destroyed, it vanishes in aflash of light, and the spell is lost. A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus and save DC, and the spell treats the creature who released it as the caster for all other purposes. Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+            "Tradition_Ability": "Durable Magic",
+            "Arcane_Tradition_Desctiption": "Beginning at 10th level, the magic you channel helps ward off harm. While you maintain concentration on a spell, you have a +2 bonus to AC and all saving throws."
         },
         {
-            "Tradition_Ability": "Convergent Future",
-            "Arcane_Tradition_Description": "Starting at 14th level, you can peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. When you or a creature you can see within 60 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed or one less than that number (your choice). When you use this feature, you gain one level of exhaustion. Only by finishing a long rest can you remove a level of exhaustion gained in this way."
+            "Tradition_Ability": "Deflecting Shroud",
+            "Arcane_Tradition_Desctiption": "At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, you can cause magical energy to arc from you. Up to three creatures of your choice within 60 feet of you each take force damage equal to half your wizard level."
         }
     }
 ]
