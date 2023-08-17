@@ -2,6 +2,27 @@
     {
         "Class Name": "Wizard",
         {
+            "HitDice": "1d6 per wizard level",
+            "At1stLevel": "6 + your Constitution modifier",
+            "AtHigherLevels": "1d6 (or 4) + your Constitution modifier per wizard level after 1st"
+        },
+        {
+            "Armor": "None",
+            "Weapons": "Daggers, darts, slings, quarterstaffs, light crossbows",
+            "Tools": "None",
+            "SavingThrows": "Intelligence, Wisdom",
+            "Skills": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion"
+        },
+        {
+            "Equipment": [
+                "(a) a quarterstaff or (b) a dagger",
+                "(a) a component pouch or (b) an arcane focus",
+                "(a) a scholar's pack or (b) an explorer's pack",
+                "A spellbook"
+            ],
+            "AdditionalEquipment": "You start with the following equipment, in addition to the equipment granted by your background."
+        },
+        {
             "Class Feature": "Spellcasting",
             "Class Feature Description": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."    
         },

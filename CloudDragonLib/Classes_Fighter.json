@@ -2,9 +2,29 @@
     {
         "Class Name": "Fighter",
         {
+            "HitDice": "1d10 per fighter level",
+            "At1stLevel": "10 + your Constitution modifier",
+            "AtHigherLevels": "1d10 (or 6) + your Constitution modifier per fighter level after 1st"
+        },
+        {
+            "Armor": "All armor, shields",
+            "Weapons": "Simple weapons, martial weapons",
+            "Tools": "None",
+            "SavingThrows": "Strength, Constitution",
+            "Skills": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival"
+        },
+        {
+            "Equipment": [
+                "(a) chain mail or (b) leather, longbow, and 20 arrows",
+                "(a) a martial weapon and a shield or (b) two martial weapons",
+                "(a) a light crossbow and 20 bolts or (b) two handaxes",
+                "(a) a dungeoneer's pack or (b) an explorer's pack"
+            ]
+        },
+        {
             "Class Feature": "Fighting Syle",
-            "Class Feature Description": "You choose a fighting style as your speciality. Choose one of the following Archery, Defense, Dueling, Great Weapon Fighting, Protection, or Two-Weapon Fighting.",
-            
+            "Class Feature Description": "You choose a fighting style as your speciality. Choose one of the following Archery, Defense, Dueling, Great Weapon Fighting, Protection, or Two-Weapon Fighting."
+
         },
         {
             "Class Feature": "Second Wind",
