@@ -133,10 +133,39 @@
             "Class Feature Description 3": "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
         },
         {
-
+            "Class Feature": "Harness Divine Power (Optional)",
+            "Class Feature Description": "Also at 3rd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 3rd level, once; 7th level, twice; and 15th level, thrice. You regain all expended uses when you finish a long rest."
         },
         {
-
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
+            "Class Feature": "Martial Versatility (Optional)",
+            "Class Feature Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
+        },
+        {
+            "Class Feature": "Extra Attack",
+            "Class Feature Description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+        },
+        {
+            "Class Feature": "Aura of Protection",
+            "Class Feature Descritpion": "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus."
+            "Class Feature Descritpion 2": "At 18th level, the range of this aura increases to 30 feet."
+        },
+        {
+            "Class Feature": "Aura of Courage",
+            "Class Feature Description": "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious.",
+            "Class Feature Description 2": "At 18th level, the range of this aura increases to 30 feet"
+        },
+        {
+            "Class Feature": "Improved Divine Smite",
+            "Class Feature Description": "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage."
+        },
+        {
+            "Class Feature": "Cleansing Touch",
+            "Class Feature Description": "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.",
+            "Class Feature Description 2": "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
         }
     }
 ]
