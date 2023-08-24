@@ -1,0 +1,74 @@
+{
+    "Archetype Name": "Psi Warrior",
+    {
+        {
+            "Archetype Feature": "Psionic Power",
+            "Archetype Feature Description": [
+                "At 3rd level, you harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a d6. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
+                "Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.",
+                "When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level (d8), 11th level (d10), and 17th level (d12).",
+                "The powers below use your Psionic Energy dice.",
+                {
+                    "Psionic Power": [
+                        {
+                            "Protective Field": "When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1), as you create a momentary shield of telekinetic force."
+                        },
+                        {
+                            "Psionic Strike": "You can propel your weapons with psionic force. Once on each of your turns, immediately after you hit a target within 30 feet of you with an attack and deal damage to it with a weapon, you can expend one Psionic Energy die, rolling it and dealing force damage to the target equal to the number rolled plus your Intelligence modifier."
+                        },
+                        {
+                            "Telekinetic Movement": "You can move an object or a creature with your mind. As an action, you target one loose object that is Large or smaller or one willing creature, other than yourself. If you can see the target and it is within 30 feet of you, you can move it up to 30 feet to an unoccupied space you can see. Alternatively, if it is a Tiny object, you can move it to or from your hand. Either way, you can move the target horizontally, vertically, or both. Once you take this action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Archetype Feature": "Telekinetic Adept",
+            "Archetype Feature Description": [
+                "By the 7th level, You have mastered new ways to use your telekinetic abilities, detailed below.",
+                {
+                    "Psi-Powered Leap": "As a bonus action, you can propel your body with your mind. You gain a flying speed equal to twice your walking speed until the end of the current turn. Once you take this bonus action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+                },
+                {
+                    "Telekinetic Thrust": "When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. If the save fails, you can knock the target prone or move it up to 10 feet in any direction horizontally."
+                }
+            ]
+        },
+        {
+            "Archetype Feature": "Spell Slots",
+            "Archetype Feature Description": [
+                "Starting at 7th level, you can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are deafened and blinded. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
+            ]
+        },
+        {
+            "Archetype Feature": "Spells Known of 1st Level and Higher",
+            "Archetype Feature Description": [
+                "You know three 1st-level wizard spells of your choice, two of which you must choose from the abjuration and evocation spells on the wizard spell list.",
+                "The Spells Known column of the Eldritch Knight Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an abjuration or evocation spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
+                "The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
+                "Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an abjuration or evocation spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
+            ]
+        },
+        {
+            "Archetype Feature": "Guarded Mind",
+            "Archetype Feature Description": [
+                "Starting at 10th level, the psionic energy flowing through you has bolstered your mind. You have resistance to psychic damage. Moreover, if you start your turn charmed or frightened, you can expend a Psionic Energy die and end every effect on yourself subjecting you to those conditions."
+            ]
+        },
+        {
+            "Archetype Feature": "Bulwark of Force",
+            "Archetype Feature Description": [
+                "At 15th level, you can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by half cover for 1 minute or until you're incapacitated.",
+                "Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
+            ]
+        },
+        {
+            "Archetype Feature": "Telekinetic Master",
+            "Archetype Feature Description": [
+                "By 18th level, your ability to move creatures and objects with your mind is matched by few. You can cast the Telekinesis spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
+                "Once you cast the spell with this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
+            ]
+        }
+    }
+}

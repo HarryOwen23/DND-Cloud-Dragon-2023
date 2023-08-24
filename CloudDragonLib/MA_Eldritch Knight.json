@@ -1,0 +1,76 @@
+{
+    "Archetype Name": "Eldritch Knight",
+    {
+        {
+            "Archetype Feature": "Spellcasting"
+            "Archetype Feature Description": [
+                "When you reach 3rd level, you augment your martial prowess with the ability to cast spells."
+            ]
+        },
+        {
+            "Archetype Feature": "Cantrips",
+            "Archetype Feature Description": [
+                "You learn two cantrips of your choice from the wizard spell list. You learn an additional wizard cantrip of your choice at 10th level."
+            ]
+        },
+        {
+            "Archetype Feature": "Spell Slots",
+            "Archetype Feature Description": [
+                "Starting at 7th level, you can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are deafened and blinded. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
+            ]
+        },
+        {
+            "Archetype Feature": "Spells Known of 1st Level and Higher"
+            "Archetype Feature Description": [
+                "You know three 1st-level wizard spells of your choice, two of which you must choose from the abjuration and evocation spells on the wizard spell list.",
+                "The Spells Known column of the Eldritch Knight Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an abjuration or evocation spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
+                "The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
+                "Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an abjuration or evocation spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
+            ]
+        },
+        {
+            "Archetype Feature": "Spellcasting Ability",
+            "Archetype Feature Description": [
+                "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+                {
+                    "Spellcasting Ability Notes": [
+                        "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier",
+                        "Spell attack modifier = your proficiency bonus + your Intelligence modifier"
+                    ]
+                }
+            ]
+        },
+        {
+            "Archetype Feature": "Weapon Bond",
+            "Archetype Feature Description": [
+                "At 3rd level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.",
+                "Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.",
+                "You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two."
+            ]
+        },
+        {
+            "Archetype Feature": "War Magic",
+            "Archetype Feature Description": [
+                "Beginning at 7th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
+            ]
+        },
+        {
+            "Archetype Feature": "Eldritch Strike",
+            "Archetype Feature Description": [
+                "At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
+            ]
+        },
+        {
+            "Archetype Feature": "Arcane Charge",
+            "Archetype Feature Description": [
+                "At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action."
+            ]
+        },
+        {
+            "Archetype Feature": "Improved War Magic",
+            "Archetype Feature Description": [
+                "Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action."
+            ]
+        }
+    }
+}
