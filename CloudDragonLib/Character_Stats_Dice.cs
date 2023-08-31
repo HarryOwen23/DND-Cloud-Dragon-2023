@@ -33,7 +33,7 @@ public class CharStats
     }
 
     // Modifier variable 
-    public static Modifier(int score) => (int)Math.Floor((score - 10) * 0.5);
+    public static int Modify(int score) => (int)Math.Floor((score - 10) * 0.5);
 
     // Variable RollD6 is created as an RNG
     private static int RollD6() => statsrng.Next(1, 7);
@@ -54,5 +54,12 @@ public class CharStats
             AbilityScore(), AbilityScore(),
             AbilityScore(), AbilityScore()
         );
+    }
+}
+public class CharGen
+{
+    public CharGen(int score_1, int score_2, int score_3, int score_4, int score_5, int score_6)
+    {
+        
     }
 }

@@ -5,274 +5,274 @@ class raceModifier
     static void Main()
     {
         // Creating races and adding ability score bonuses
-        DndRace humanRace = new DndRace("Human");
-        humanRace.AddAbilityScoreBonus("STR", 1);
-        humanRace.AddAbilityScoreBonus("DEX", 1);
-        humanRace.AddAbilityScoreBonus("CON", 1);
-        humanRace.AddAbilityScoreBonus("INT", 1);
-        humanRace.AddAbilityScoreBonus("WIS", 1);
-        humanRace.AddAbilityScoreBonus("CHA", 1);
+        Races humanRace = new Races("Human");
+        humanRace.Add_ability_Bonuses("STR", 1);
+        humanRace.Add_ability_Bonuses("DEX", 1);
+        humanRace.Add_ability_Bonuses("CON", 1);
+        humanRace.Add_ability_Bonuses("INT", 1);
+        humanRace.Add_ability_Bonuses("WIS", 1);
+        humanRace.Add_ability_Bonuses("CHA", 1);
 
         // Dwarf Races
-        DndRace dwarfHillRace = new DndRace("Dwarf (Hill)");
-        dwarfHillRace.AddAbilityScoreBonus("CON", 2);
+        Races dwarfHillRace = new Races("Dwarf (Hill)");
+        dwarfHillRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace dwarfMountainRace = new DndRace("Dwarf (Mountain)");
-        dwarfMountainRace.AddAbilityScoreBonus("STR", 2);
-        dwarfHillRace.AddAbilityScoreBonus("CON", 2);
+        Races dwarfMountainRace = new Races("Dwarf (Mountain)");
+        dwarfMountainRace.Add_ability_Bonuses("STR", 2);
+        dwarfHillRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace dwarfGrayRace = new DndRace("Dwarf (Gray/Duergar)");
-        dwarfGrayRace.AddAbilityScoreBonus("STR", 1);
-        dwarfGrayRace.AddAbilityScoreBonus("CON", 2);
+        Races dwarfGrayRace = new Races("Dwarf (Gray/Duergar)");
+        dwarfGrayRace.Add_ability_Bonuses("STR", 1);
+        dwarfGrayRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace dwarfDuergarRace = new DndRace("Dwarf (Duergar)");
-        dwarfDuergarRace.AddAbilityScoreBonus("STR", 1);
-        dwarfDuergarRace.AddAbilityScoreBonus("CON", 2);
+        Races dwarfDuergarRace = new Races("Dwarf (Duergar)");
+        dwarfDuergarRace.Add_ability_Bonuses("STR", 1);
+        dwarfDuergarRace.Add_ability_Bonuses("CON", 2);
 
         // Elf Races
-        DndRace elfHighRace = new DndRace("Elf (High)");
-        elfHighRace.AddAbilityScoreBonus("DEX", 2);
-        elfHighRace.AddAbilityScoreBonus("INT", 1);
+        Races elfHighRace = new Races("Elf (High)");
+        elfHighRace.Add_ability_Bonuses("DEX", 2);
+        elfHighRace.Add_ability_Bonuses("INT", 1);
 
-        DndRace elfWoodRace = new DndRace("Elf (Wood)");
-        elfWoodRace.AddAbilityScoreBonus("DEX", 2);
-        elfWoodRace.AddAbilityScoreBonus("WIS", 1);
+        Races elfWoodRace = new Races("Elf (Wood)");
+        elfWoodRace.Add_ability_Bonuses("DEX", 2);
+        elfWoodRace.Add_ability_Bonuses("WIS", 1);
 
-        DndRace elfDrowRace = new DndRace("Elf (Drow)");
-        elfDrowRace.AddAbilityScoreBonus("DEX", 2);
-        elfDrowRace.AddAbilityScoreBonus("CHA", 1);
+        Races elfDrowRace = new Races("Elf (Drow)");
+        elfDrowRace.Add_ability_Bonuses("DEX", 2);
+        elfDrowRace.Add_ability_Bonuses("CHA", 1);
 
-        DndRace elfEladrinRace = new DndRace("Elf (Eladrin)");
-        elfEladrinRace.AddAbilityScoreBonus("DEX", 2);
-        elfEladrinRace.AddAbilityScoreBonus("INT", 1);
+        Races elfEladrinRace = new Races("Elf (Eladrin)");
+        elfEladrinRace.Add_ability_Bonuses("DEX", 2);
+        elfEladrinRace.Add_ability_Bonuses("INT", 1);
 
-        DndRace elfSeaRace = new DndRace("Elf (Sea)");
-        elfSeaRace.AddAbilityScoreBonus("DEX", 2);
-        elfSeaRace.AddAbilityScoreBonus("CON", 1);
+        Races elfSeaRace = new Races("Elf (Sea)");
+        elfSeaRace.Add_ability_Bonuses("DEX", 2);
+        elfSeaRace.Add_ability_Bonuses("CON", 1);
 
-        DndRace elfShadarRace = new DndRace("Elf (Shadar-kai)");
-        elfShadarRace.AddAbilityScoreBonus("DEX", 2);
-        elfShadarRace.AddAbilityScoreBonus("CON", 1);
+        Races elfShadarRace = new Races("Elf (Shadar-kai)");
+        elfShadarRace.Add_ability_Bonuses("DEX", 2);
+        elfShadarRace.Add_ability_Bonuses("CON", 1);
 
         // Halfling Races 
-        DndRace halflingLfRace = new DndRace("Halfling (Lightfoot)");
-        halflingLfRace.AddAbilityScoreBonus("DEX", 2);
-        halflingLfRace.AddAbilityScoreBonus("CHA", 1);
+        Races halflingLfRace = new Races("Halfling (Lightfoot)");
+        halflingLfRace.Add_ability_Bonuses("DEX", 2);
+        halflingLfRace.Add_ability_Bonuses("CHA", 1);
 
-        DndRace halflingStoutRace = new DndRace("Halfling (Stout)");
-        halflingStoutRace.AddAbilityScoreBonus("DEX", 2);
-        halflingStoutRace.AddAbilityScoreBonus("CON", 1);
+        Races halflingStoutRace = new Races("Halfling (Stout)");
+        halflingStoutRace.Add_ability_Bonuses("DEX", 2);
+        halflingStoutRace.Add_ability_Bonuses("CON", 1);
 
-        DndRace halflingGhostwiseRace = new DndRace("Halfling (Ghostwise)");
-        halflingGhostwiseRace.AddAbilityScoreBonus("DEX", 2);
-        halflingGhostwiseRace.AddAbilityScoreBonus("WIS", 1);
+        Races halflingGhostwiseRace = new Races("Halfling (Ghostwise)");
+        halflingGhostwiseRace.Add_ability_Bonuses("DEX", 2);
+        halflingGhostwiseRace.Add_ability_Bonuses("WIS", 1);
 
         // Gnome Races 
-        DndRace GnomeForestRace = new DndRace("Gnome (Forest)");
-        GnomeForestRace.AddAbilityScoreBonus("DEX", 1);
-        GnomeForestRace.AddAbilityScoreBonus("INT", 2);
+        Races GnomeForestRace = new Races("Gnome (Forest)");
+        GnomeForestRace.Add_ability_Bonuses("DEX", 1);
+        GnomeForestRace.Add_ability_Bonuses("INT", 2);
 
-        DndRace GnomeRockRace = new DndRace("Gnome (Rock)");
-        GnomeRockRace.AddAbilityScoreBonus("CON", 1);
-        GnomeRockRace.AddAbilityScoreBonus("INT", 2);
+        Races GnomeRockRace = new Races("Gnome (Rock)");
+        GnomeRockRace.Add_ability_Bonuses("CON", 1);
+        GnomeRockRace.Add_ability_Bonuses("INT", 2);
 
-        DndRace GnomeDeepRace = new DndRace("Gnome (Deep)");
-        GnomeRockRace.AddAbilityScoreBonus("DEX", 1);
-        GnomeRockRace.AddAbilityScoreBonus("INT", 2);
+        Races GnomeDeepRace = new Races("Gnome (Deep)");
+        GnomeRockRace.Add_ability_Bonuses("DEX", 1);
+        GnomeRockRace.Add_ability_Bonuses("INT", 2);
 
         // Orc Races 
-        DndRace OrcRace = new DndRace("Orc");
-        GnomeForestRace.AddAbilityScoreBonus("STR", 2);
-        GnomeForestRace.AddAbilityScoreBonus("CON", 1);
+        Races OrcRace = new Races("Orc");
+        GnomeForestRace.Add_ability_Bonuses("STR", 2);
+        GnomeForestRace.Add_ability_Bonuses("CON", 1);
 
-        DndRace halfOrcRace = new DndRace("Half Orc");
-        halfOrcRace.AddAbilityScoreBonus("STR", 2);
-        halfOrcRace.AddAbilityScoreBonus("CON", 1);
+        Races halfOrcRace = new Races("Half Orc");
+        halfOrcRace.Add_ability_Bonuses("STR", 2);
+        halfOrcRace.Add_ability_Bonuses("CON", 1);
 
         // Tiefling Race
-        DndRace tieflingRace = new DndRace("Tiefling");
-        tieflingRace.AddAbilityScoreBonus("INT", 1);
-        tieflingRace.AddAbilityScoreBonus("CHA", 2);
+        Races tieflingRace = new Races("Tiefling");
+        tieflingRace.Add_ability_Bonuses("INT", 1);
+        tieflingRace.Add_ability_Bonuses("CHA", 2);
 
-        DndRace tieflingFeralRace = new DndRace("Tiefling (Feral)");
-        tieflingFeralRace.AddAbilityScoreBonus("DEX", 2);
-        tieflingFeralRace.AddAbilityScoreBonus("INT", 1);
+        Races tieflingFeralRace = new Races("Tiefling (Feral)");
+        tieflingFeralRace.Add_ability_Bonuses("DEX", 2);
+        tieflingFeralRace.Add_ability_Bonuses("INT", 1);
 
         // Aasimar Races
-        DndRace aasimarRace = new DndRace("Aasimar");
-        aasimarRace.AddAbilityScoreBonus("WIS", 1);
-        aasimarRace.AddAbilityScoreBonus("CHA", 2);
+        Races aasimarRace = new Races("Aasimar");
+        aasimarRace.Add_ability_Bonuses("WIS", 1);
+        aasimarRace.Add_ability_Bonuses("CHA", 2);
 
-        DndRace aasimarProtectorRace = new DndRace("Aasimar (Protector)");
-        aasimarProtectorRace.AddAbilityScoreBonus("WIS", 1);
-        aasimarProtectorRace.AddAbilityScoreBonus("CHA", 2);
+        Races aasimarProtectorRace = new Races("Aasimar (Protector)");
+        aasimarProtectorRace.Add_ability_Bonuses("WIS", 1);
+        aasimarProtectorRace.Add_ability_Bonuses("CHA", 2);
 
-        DndRace aasimarScourgeRace = new DndRace("Aasimar (Scourge)");
-        aasimarScourgeRace.AddAbilityScoreBonus("CON", 1);
-        aasimarScourgeRace.AddAbilityScoreBonus("CHA", 2);
+        Races aasimarScourgeRace = new Races("Aasimar (Scourge)");
+        aasimarScourgeRace.Add_ability_Bonuses("CON", 1);
+        aasimarScourgeRace.Add_ability_Bonuses("CHA", 2);
 
-        DndRace aasimarFallenRace = new DndRace("Aasimar (Fallen)");
-        aasimarFallenRace.AddAbilityScoreBonus("STR", 1);
-        aasimarFallenRace.AddAbilityScoreBonus("CHA", 2);
+        Races aasimarFallenRace = new Races("Aasimar (Fallen)");
+        aasimarFallenRace.Add_ability_Bonuses("STR", 1);
+        aasimarFallenRace.Add_ability_Bonuses("CHA", 2);
 
         // Aarakocra Race
-        DndRace aarakocraRace = new DndRace("Aarakocra");
-        aarakocraRace.AddAbilityScoreBonus("DEX", 2);
-        aarakocraRace.AddAbilityScoreBonus("WIS", 1);
+        Races aarakocraRace = new Races("Aarakocra");
+        aarakocraRace.Add_ability_Bonuses("DEX", 2);
+        aarakocraRace.Add_ability_Bonuses("WIS", 1);
 
         // Gensai Races
-        DndRace gensaiAirRace = new DndRace("Genasi (Air)");
-        gensaiAirRace.AddAbilityScoreBonus("DEX", 1);
-        gensaiAirRace.AddAbilityScoreBonus("CON", 2);
+        Races gensaiAirRace = new Races("Genasi (Air)");
+        gensaiAirRace.Add_ability_Bonuses("DEX", 1);
+        gensaiAirRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace gensaiEarthRace = new DndRace("Genasi (Earth)");
-        gensaiEarthRace.AddAbilityScoreBonus("STR", 1);
-        gensaiEarthRace.AddAbilityScoreBonus("CON", 2);
+        Races gensaiEarthRace = new Races("Genasi (Earth)");
+        gensaiEarthRace.Add_ability_Bonuses("STR", 1);
+        gensaiEarthRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace gensaiFireRace = new DndRace("Genasi (Fire)");
-        gensaiFireRace.AddAbilityScoreBonus("CON", 2);
-        gensaiFireRace.AddAbilityScoreBonus("INT", 1);
+        Races gensaiFireRace = new Races("Genasi (Fire)");
+        gensaiFireRace.Add_ability_Bonuses("CON", 2);
+        gensaiFireRace.Add_ability_Bonuses("INT", 1);
 
-        DndRace gensaiWaterRace = new DndRace("Genasi (Water)");
-        gensaiWaterRace.AddAbilityScoreBonus("CON", 2);
-        gensaiWaterRace.AddAbilityScoreBonus("WIS", 1);
+        Races gensaiWaterRace = new Races("Genasi (Water)");
+        gensaiWaterRace.Add_ability_Bonuses("CON", 2);
+        gensaiWaterRace.Add_ability_Bonuses("WIS", 1);
 
         // Goliath Race 
-        DndRace goliathRace = new DndRace("Goliath");
-        goliathRace.AddAbilityScoreBonus("STR", 2);
-        goliathRace.AddAbilityScoreBonus("CON", 1);
+        Races goliathRace = new Races("Goliath");
+        goliathRace.Add_ability_Bonuses("STR", 2);
+        goliathRace.Add_ability_Bonuses("CON", 1);
 
         // Firbolg
-        DndRace firbolgRace = new DndRace("/");
-        firbolgRace.AddAbilityScoreBonus("STR", 1);
-        firbolgRace.AddAbilityScoreBonus("WIS", 2);
+        Races firbolgRace = new Races("/");
+        firbolgRace.Add_ability_Bonuses("STR", 1);
+        firbolgRace.Add_ability_Bonuses("WIS", 2);
 
         // Kenku
-        DndRace kenkuRace = new DndRace("Kenku");
-        kenkuRace.AddAbilityScoreBonus("DEX", 2);
-        kenkuRace.AddAbilityScoreBonus("WIS",1);
+        Races kenkuRace = new Races("Kenku");
+        kenkuRace.Add_ability_Bonuses("DEX", 2);
+        kenkuRace.Add_ability_Bonuses("WIS",1);
 
         // Lizardfolk 
-        DndRace lizardFolkRace = new DndRace("Lizardfolk");
-        lizardFolkRace.AddAbilityScoreBonus("CON", 2);
-        lizardFolkRace.AddAbilityScoreBonus("WIS", 1);
+        Races lizardFolkRace = new Races("Lizardfolk");
+        lizardFolkRace.Add_ability_Bonuses("CON", 2);
+        lizardFolkRace.Add_ability_Bonuses("WIS", 1);
 
         // Tabaxi 
-        DndRace tabaxiRace = new DndRace("Tabaxi");
-        tabaxiRace.AddAbilityScoreBonus("DEX", 2);
-        tabaxiRace.AddAbilityScoreBonus("CHA", 1);
+        Races tabaxiRace = new Races("Tabaxi");
+        tabaxiRace.Add_ability_Bonuses("DEX", 2);
+        tabaxiRace.Add_ability_Bonuses("CHA", 1);
 
         // Triton 
-        DndRace tritonRace = new DndRace("Triton");
-        tritonRace.AddAbilityScoreBonus("STR", 2);
-        tritonRace.AddAbilityScoreBonus("CON", 1);
-        tritonRace.AddAbilityScoreBonus("CHA", 1);
+        Races tritonRace = new Races("Triton");
+        tritonRace.Add_ability_Bonuses("STR", 2);
+        tritonRace.Add_ability_Bonuses("CON", 1);
+        tritonRace.Add_ability_Bonuses("CHA", 1);
 
         // Bugbear
-        DndRace bugBearRace = new DndRace("Bugbear");
-        bugBearRace.AddAbilityScoreBonus("STR", 2);
-        bugBearRace.AddAbilityScoreBonus("CON", 1);
+        Races bugBearRace = new Races("Bugbear");
+        bugBearRace.Add_ability_Bonuses("STR", 2);
+        bugBearRace.Add_ability_Bonuses("CON", 1);
 
         // Goblin Races 
-        DndRace goblinRace = new DndRace("Goblin");
-        goblinRace.AddAbilityScoreBonus("DEX", 2);
-        goblinRace.AddAbilityScoreBonus("CON", 1);
+        Races goblinRace = new Races("Goblin");
+        goblinRace.Add_ability_Bonuses("DEX", 2);
+        goblinRace.Add_ability_Bonuses("CON", 1);
 
-        DndRace hobGoblinRace = new DndRace("Hobgoblin");
-        hobGoblinRace.AddAbilityScoreBonus("CON", 2);
-        hobGoblinRace.AddAbilityScoreBonus("INT", 1);
+        Races hobGoblinRace = new Races("Hobgoblin");
+        hobGoblinRace.Add_ability_Bonuses("CON", 2);
+        hobGoblinRace.Add_ability_Bonuses("INT", 1);
 
         // Kobold Race 
-        DndRace koboldRace = new DndRace("Kobold");
-        koboldRace.AddAbilityScoreBonus("DEX", 2);
+        Races koboldRace = new Races("Kobold");
+        koboldRace.Add_ability_Bonuses("DEX", 2);
 
         // Yuan-ti Pureblood Race 
-        DndRace yuantiPbRace = new DndRace("Yuan-ti Pureblood");
-        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
-        yuantiPbRace.AddAbilityScoreBonus("CHA", 1);
+        Races yuantiPbRace = new Races("Yuan-ti Pureblood");
+        yuantiPbRace.Add_ability_Bonuses("INT", 1);
+        yuantiPbRace.Add_ability_Bonuses("CHA", 1);
 
         // Githyanki
-        DndRace githyankiRace = new DndRace("Githyanki");
-        yuantiPbRace.AddAbilityScoreBonus("STR", 2);
-        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
+        Races githyankiRace = new Races("Githyanki");
+        yuantiPbRace.Add_ability_Bonuses("STR", 2);
+        yuantiPbRace.Add_ability_Bonuses("INT", 1);
 
         // Githzerai	
-        DndRace githyankiRace = new DndRace("Githzerai");
-        yuantiPbRace.AddAbilityScoreBonus("INT", 1);
-        yuantiPbRace.AddAbilityScoreBonus("WIS", 2);
+        Races githzeraiRace = new Races("Githzerai");
+        githzeraiRace.Add_ability_Bonuses("INT", 1);
+        githzeraiRace.Add_ability_Bonuses("WIS", 2);
 
         // Tortle 
-        DndRace tortleRace = new DndRace("Tortle");
-        tortleRace.AddAbilityScoreBonus("STR", 2);
-        tortleRace.AddAbilityScoreBonus("WIS", 1);
+        Races tortleRace = new Races("Tortle");
+        tortleRace.Add_ability_Bonuses("STR", 2);
+        tortleRace.Add_ability_Bonuses("WIS", 1);
 
         // Verdan
-        DndRace verdanRace = new DndRace("Verdan");
-        verdanRace.AddAbilityScoreBonus("CON", 2);
-        verdanRace.AddAbilityScoreBonus("CHA", 2);
+        Races verdanRace = new Races("Verdan");
+        verdanRace.Add_ability_Bonuses("CON", 2);
+        verdanRace.Add_ability_Bonuses("CHA", 2);
 
         // Kalashtar
-        DndRace kalashtarRace = new DndRace("Kalashtar");
-        kalashtarRace.AddAbilityScoreBonus("CON", 2);
-        kalashtarRace.AddAbilityScoreBonus("CHA", 1);
+        Races kalashtarRace = new Races("Kalashtar");
+        kalashtarRace.Add_ability_Bonuses("CON", 2);
+        kalashtarRace.Add_ability_Bonuses("CHA", 1);
 
         // Shifter Races 
-        DndRace shifterBeasthideRace = new DndRace("Shifter (Beasthide)");
-        shifterBeasthideRace.AddAbilityScoreBonus("STR", 1);
-        shifterBeasthideRace.AddAbilityScoreBonus("CON", 2);
+        Races shifterBeasthideRace = new Races("Shifter (Beasthide)");
+        shifterBeasthideRace.Add_ability_Bonuses("STR", 1);
+        shifterBeasthideRace.Add_ability_Bonuses("CON", 2);
 
-        DndRace shifterLongToothRace = new DndRace("Shifter (Longtooth)");
-        shifterLongToothRace.AddAbilityScoreBonus("STR", 2);
-        shifterLongToothRace.AddAbilityScoreBonus("DEX", 1);
+        Races shifterLongToothRace = new Races("Shifter (Longtooth)");
+        shifterLongToothRace.Add_ability_Bonuses("STR", 2);
+        shifterLongToothRace.Add_ability_Bonuses("DEX", 1);
 
-        DndRace shifterSwiftstrideRace = new DndRace("Shifter (Swiftstride)");
-        shifterSwiftstrideRace.AddAbilityScoreBonus("DEX", 2);
-        shifterSwiftstrideRace.AddAbilityScoreBonus("CHA", 1);
+        Races shifterSwiftstrideRace = new Races("Shifter (Swiftstride)");
+        shifterSwiftstrideRace.Add_ability_Bonuses("DEX", 2);
+        shifterSwiftstrideRace.Add_ability_Bonuses("CHA", 1);
 
-        DndRace shifterWildhuntRace = new DndRace("Shifter (Wildhunt)");
-        shifterWildhuntRace.AddAbilityScoreBonus("DEX", 1);
-        shifterWildhuntRace.AddAbilityScoreBonus("WIS", 2);
+        Races shifterWildhuntRace = new Races("Shifter (Wildhunt)");
+        shifterWildhuntRace.Add_ability_Bonuses("DEX", 1);
+        shifterWildhuntRace.Add_ability_Bonuses("WIS", 2);
 
         // Centaur 
-        DndRace centaurRace = new DndRace("Centaur");
-        centaurRace.AddAbilityScoreBonus("STR", 2);
-        centaurRace.AddAbilityScoreBonus("WIS", 1);
+        Races centaurRace = new Races("Centaur");
+        centaurRace.Add_ability_Bonuses("STR", 2);
+        centaurRace.Add_ability_Bonuses("WIS", 1);
 
         // Loxodon 
-        DndRace loxodonRace = new DndRace("Loxodon");
-        loxodonRace.AddAbilityScoreBonus("CON", 2);
-        loxodonRace.AddAbilityScoreBonus("WIS", 1);
+        Races loxodonRace = new Races("Loxodon");
+        loxodonRace.Add_ability_Bonuses("CON", 2);
+        loxodonRace.Add_ability_Bonuses("WIS", 1);
 
         // Minotaur 
-        DndRace minotaurRace = new DndRace("Minotaur");
-        minotaurRace.AddAbilityScoreBonus("STR", 2);
-        minotaurRace.AddAbilityScoreBonus("CON", 1);
+        Races minotaurRace = new Races("Minotaur");
+        minotaurRace.Add_ability_Bonuses("STR", 2);
+        minotaurRace.Add_ability_Bonuses("CON", 1);
 
         // Vedalken 
-        DndRace vedalkenRace = new DndRace("Vedalken");
-        vedalkenRace.AddAbilityScoreBonus("INT", 2);
-        vedalkenRace.AddAbilityScoreBonus("WIS", 1);
+        Races vedalkenRace = new Races("Vedalken");
+        vedalkenRace.Add_ability_Bonuses("INT", 2);
+        vedalkenRace.Add_ability_Bonuses("WIS", 1);
 
         // Leonin
-        DndRace leoninRace = new DndRace("Leonin");
-        vedalkenRace.AddAbilityScoreBonus("STR", 1);
-        vedalkenRace.AddAbilityScoreBonus("CON", 2);
+        Races leoninRace = new Races("Leonin");
+        vedalkenRace.Add_ability_Bonuses("STR", 1);
+        vedalkenRace.Add_ability_Bonuses("CON", 2);
 
         // Satyr 
-        DndRace SatyrRace = new DndRace("Satyr");
-        SatyrRace.AddAbilityScoreBonus("DEX", 1);
-        SatyrRace.AddAbilityScoreBonus("CHA", 2);
+        Races SatyrRace = new Races("Satyr");
+        SatyrRace.Add_ability_Bonuses("DEX", 1);
+        SatyrRace.Add_ability_Bonuses("CHA", 2);
 
         // Example usage
         Console.WriteLine("Welcome to the character creation screen!");
 
         // Let's say the player chooses to play an Elf character
-        DndRace selectedRace = ;
+        Races selectedRace = SatyrRace;
 
         Console.WriteLine("You've selected the " + selectedRace.Name + " race.");
         Console.WriteLine("Ability Score Bonuses:");
 
-        foreach (var bonus in selectedRace.AbilityScoreBonuses)
+        foreach (var bonus in selectedRace.abilityBonuses)
         {
             Console.WriteLine(bonus.Key + ": " + bonus.Value);
         }

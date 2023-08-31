@@ -34,7 +34,7 @@ public class Character_Stats_Point_Buy
                     Console.WriteLine("Enter the number of points to adjust the score: ");
                     if (int.TryParse(Console.ReadLine(), out adjust))
                     {
-                        if (adjust <= max_spend_points && adjust >= -abilityScores[select - 1] + 8)
+                        if (adjust <= max_spend_points && adjust >= CharStats[select - 1] + 8)
                         {
                             max_spend_points -= adjust;
                             stats[select - 1] += adjust;

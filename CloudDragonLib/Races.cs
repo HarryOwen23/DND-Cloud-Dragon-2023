@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Races
 {
 	public string Name { get; set; }
-	public Dictionary<namespace, int> abilityBonuses { get; set; }
+	public Dictionary<string, int> abilityBonuses { get; set; }
 
 	public Races(string nameOfRace)
 	{
@@ -15,21 +15,21 @@ public class Races
 
 	public void Add_ability_Bonuses(string abilityName, int abilityBonus)
 	{
-		if (abilityBonus.ContainsKey(abilityName))
+		if (abilityBonuses.ContainsKey(abilityName))
 		{
-			abilityBonus[abilityName] += abilityBonus;
+			abilityBonuses[abilityName] += abilityBonus;
         }
 		else
 		{
-            abilityBonus.Add(abilityName, abilityBonus);
+            abilityBonuses.Add(abilityName, abilityBonus);
 
         }
     }
     public void RemoveAbilityScoreBonus(string abilityName)
     {
-        if (AbilityScoreBonuses.ContainsKey(abilityName))
+        if (abilityBonuses.ContainsKey(abilityName))
         {
-            AbilityScoreBonuses.Remove(abilityName);
+            abilityBonuses.Remove(abilityName);
         }
     } 
 }
