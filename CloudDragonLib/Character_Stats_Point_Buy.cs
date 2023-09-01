@@ -37,7 +37,7 @@ public class Character_Stats_Point_Buy
                         if (adjust <= max_spend_points && adjust >= CharStats[select - 1] + 8)
                         {
                             max_spend_points -= adjust;
-                            stats[select - 1] += adjust;
+                            CharStats[select - 1] += adjust;
                             Console.WriteLine("New " + abilityScores[select - 1] + " score: " + abilityScores[select - 1]);
                         }
                         else
@@ -70,7 +70,7 @@ public class Character_Stats_Point_Buy
         Console.WriteLine("The Final Scores Are:");
         for (int i = 0; i < abilityScores.Length; i++)
         {
-            Console.WriteLine(abilities[i] + ": " + abilityScores[i]);
+            Console.WriteLine(abilityScores[i] + ": " + abilityScores[i]);
         }
     }
 }

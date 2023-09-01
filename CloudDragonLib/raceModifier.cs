@@ -193,8 +193,8 @@ class raceModifier
 
         // Githyanki
         Races githyankiRace = new Races("Githyanki");
-        yuantiPbRace.Add_ability_Bonuses("STR", 2);
-        yuantiPbRace.Add_ability_Bonuses("INT", 1);
+        githyankiRace.Add_ability_Bonuses("STR", 2);
+        githyankiRace.Add_ability_Bonuses("INT", 1);
 
         // Githzerai	
         Races githzeraiRace = new Races("Githzerai");

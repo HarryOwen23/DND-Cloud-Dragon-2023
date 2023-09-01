@@ -17,7 +17,8 @@ namespace CloudDragon.Lib
 
 		public Task<List<Races>> Populate(string fileName)
 		{
-
-		}
+            var result = new List<Races>();
+            return result;
+        }
 	}
 }
