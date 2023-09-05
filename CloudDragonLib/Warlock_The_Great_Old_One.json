@@ -1,0 +1,60 @@
+{
+    "Archetype Name": "The Great Old One",
+    "Archetype Abilities": [
+        {
+            "Archetype Ability": "Expanded Spell List",
+            "Archetype Ability Description": [
+                "The Great Old One lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+                {
+                    "Great Old One Expanded Spells": [
+                        {
+                            "Spell Level": "1st",
+                            "Spells": [ "Dissonant Whispers", "Tasha's Hideous Laughter" ]
+                        },
+                        {
+                            "Spell Level": "2nd",
+                            "Spells": [ "Detect Thoughts", "Phantasmal Force" ]
+                        },
+                        {
+                            "Spell Level": "3rd",
+                            "Spells": [ "Clairvoyance", "Sending" ]
+                        },
+                        {
+                            "Spell Level": "4th",
+                            "Spells": [ "Dominate Beast", "Evard's Black Tentacles" ]
+                        },
+                        {
+                            "Spell Level": "5th",
+                            "Spells": [ "Dominate Person", "Telepathy" ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Archetype Ability": "Awakened Mind",
+            "Archetype Ability Description": [
+                "Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can communicate telepathically with any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic messages, but the creature must be able to understand at least one language."
+            ]
+        },
+        {
+            "Archetype Ability": "Entropic Ward",
+            "Archetype Ability Description": [
+                "Beginning at 6th level, you can use your reaction to impose disadvantage on an attack roll against you. The attacker must be within 30 feet of you, and you must be able to see the attacker. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+            ]
+        },
+        {
+            "Archetype Ability": "Thought Shield",
+            "Archetype Ability Description": [
+                "Starting at 10th level, your thoughts can't be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that it dealt to you."
+            ]
+        },
+        {
+            "Archetype Ability": "Create Thrall",
+            "Archetype Ability Description": [
+                "Starting at 14th level, you gain the ability to infect a humanoid's mind with the alien magic of your patron. You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a remove curse spell is cast on it, the charmed condition is removed from it, or you use this feature again.",
+                "You can communicate telepathically with the charmed creature as long as the two of you are on the same plane of existence."
+            ]
+        }
+    ]
+}

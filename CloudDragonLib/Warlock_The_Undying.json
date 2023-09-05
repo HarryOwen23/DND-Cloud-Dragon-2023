@@ -1,0 +1,75 @@
+{
+    "Archetype Name": "The Undying",
+    "Archetype Abilities": [
+        {
+            "Archetype Ability": "Expanded Spell List",
+            "Archetype Ability Description": [
+                "The Undying lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+                {
+                    "Undying Expanded Spells": [
+                        {
+                            "Spell Level": "1st",
+                            "Spells": [
+                                "False Life",
+                                "Ray of Sickness"
+                            ]
+                        },
+                        {
+                            "Spell Level": "2nd",
+                            "Spells": [
+                                "Blindness/Deafness",
+                                "Silence"
+                            ]
+                        },
+                        {
+                            "Spell Level": "3rd",
+                            "Spells": [
+                                "Feign Death",
+                                "Speak with Dead"
+                            ]
+                        },
+                        {
+                            "Spell Level": "4th",
+                            "Spells": [
+                                "Death Ward",
+                                "Contagion"
+                            ]
+                        },
+                        {
+                            "Spell Level": "5th",
+                            "Spells": [
+                                "Antilife Shell",
+                                "Raise Dead"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Archetype Ability": "Among the Dead",
+            "Archetype Ability Description": [
+                "Starting at 1st level, you have a mystical connection to the undead. You can communicate with them, even when others can't. You understand the Unseen, a secret language of the undead, which includes silent communication through gestures, allowing you to talk to the dead even if they can't speak."
+            ]
+        },
+        {
+            "Archetype Ability": "Defy Death",
+            "Archetype Ability Description": [
+                "Beginning at 6th level, you have learned to cheat death. When you have 0 hit points and are reduced to making death saving throws, you can choose to succeed on one death saving throw. You can use this feature once, and you regain the ability to do so when you finish a long rest."
+            ]
+        },
+        {
+            "Archetype Ability": "Undying Nature",
+            "Archetype Ability Description": [
+                "Starting at 10th level, you have resistance to poison damage, and you are immune to disease. Additionally, you don't need to eat, drink, or breathe."
+            ]
+        },
+        {
+            "Archetype Ability": "Indestructible Life",
+            "Archetype Ability Description": [
+                "At 14th level, your patron bestows upon you the gift of undeath. You no longer suffer the frailty of old age, and you can't be aged magically. You are immune to any effect that would age you, and you can't die from old age."
+            ]
+        }
+    ]
+}
+
