@@ -1,38 +1,29 @@
-{
-    "Circle Name": "Circle of the Wildfire",
+[
     {
+        "Circle Name": "Circle of the Wildfire",
         "Circle Ability": "Circle Spells",
         "Circle Ability Description": {
             "2nd Level Spells": [
                 "Burning Hands",
                 "Cure Wounds"
-            ]
-        },
-        {
+            ],
             "3rd Level Spells": [
                 "Flaming Sphere",
                 "Scorching Ray"
-            ]
-        },
-        {
+            ],
             "5th Level Spells": [
                 "Plant Growth",
                 "Revivify"
-            ]
-        },
-        {
+            ],
             "7th Level Spells": [
                 "Aura of Life",
                 "Fire Shield"
-            ]
-        },
-        {
+            ],
             "9th Level Spells": [
                 "Flame Strike",
                 "Mass Cure Wounds"
             ]
-        },
-        ]
+        }
     },
     {
         "Circle Ability": "Summon Wildfire Spirit",
@@ -65,4 +56,4 @@
             "Once you use this feature, you can't use it again until you finish a long rest."
         ]
     }
-}
+]

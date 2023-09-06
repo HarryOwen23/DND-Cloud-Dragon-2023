@@ -1,6 +1,6 @@
-{
-    "Archetype Name": "College of Swords",
+[
     {
+        "Archetype Name": "College of Swords",
         "Archetype Feature": "Bonus Proficiencies",
         "Archetype Feature Description": [
             "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.",
@@ -12,7 +12,7 @@
         "Archetype Feature Description": [
             "At 3rd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
             {
-                "Deuling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+                "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
             },
             {
                 "Two-Weapon Fighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
@@ -47,4 +47,4 @@
             "Starting at 14th level, whenever you use a Blade Flourish option, you can roll a d6 and use it instead of expending a Bardic Inspiration die."
         ]
     }
-}
+]

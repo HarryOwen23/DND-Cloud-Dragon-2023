@@ -1,6 +1,6 @@
-{
-    "Circle Name": "Circle of the Stars",
+[
     {
+        "Circle Name": "Circle of the Stars",
         "Circle Ability": "Star Map",
         "Circle Ability Description": [
             "At 2nd level, you've created a star chart as part of your heavenly studies. It is a Tiny object and can serve as a spellcasting focus for your druid spells. You determine its form by rolling on the Star Map table or by choosing one.",
@@ -86,5 +86,4 @@
             "At 14th level, while in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
         ]
     }
-
-}
+]

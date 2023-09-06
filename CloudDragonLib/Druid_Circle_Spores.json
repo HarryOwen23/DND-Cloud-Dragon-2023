@@ -1,37 +1,28 @@
-{
-    "Circle Name": "Circle of the Spores",
+[
     {
+        "Circle Name": "Circle of the Spores",
         "Circle Ability": "Circle Spells",
         "Circle Ability Description": {
             "2nd Level Spells": [
                 "Chill Touch"
-            ]
-        },
-        {
+            ],
             "3rd Level Spells": [
                 "Blindness/Deafness",
-                "Gentle Response"
-            ]
-        },
-        {
+                "Gentle Repose"
+            ],
             "5th Level Spells": [
                 "Animate Dead",
                 "Gaseous Form"
-            ]
-        },
-        {
+            ],
             "7th Level Spells": [
                 "Blight",
                 "Confusion"
-            ]
-        },
-        {
+            ],
             "9th Level Spells": [
                 "Cloudkill",
                 "Contagion"
             ]
-        },
-        ]
+        }
     },
     {
         "Circle Ability": "Halo of Spores",
@@ -47,7 +38,7 @@
                 "When you deal your Halo of Spores damage, roll the damage die a second time and add it to the total.",
                 "Your melee weapon attacks deal an extra 1d6 necrotic damage to any target they hit."
             ],
-            "These benefits last for 10 minutes, until you lose all these temporary hit points. or until you use your Wild Shape again."
+            "These benefits last for 10 minutes, until you lose all these temporary hit points, or until you use your Wild Shape again."
         ]
     },
     {
@@ -72,5 +63,4 @@
             "At 14th level, the fungal spores in your body alter you: you can't be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
         ]
     }
-
-}
+]
