@@ -1,28 +1,37 @@
-[
-    {
-        "Arcane_Tradition": "School of War Magic",
+{
+    "Arcane Tradition Name": "School of War Magic",
+    "Arcane Tradition Description": "The School of War Magic combines martial prowess and magical expertise, making its practitioners formidable spellcasters and skilled warriors. These wizards are at home on the battlefield, where they use their spells to bolster their allies and thwart their enemies.",
+    "Arcane Tradition Abilities": [
         {
-            "Tradition_Abilitiy": "Arcane Deflection",
-            "Arcane_Tradition_Desctiption": "At 2nd level, you have learned to weave your magic to fortify yourself against harm. When you are hit by an attack or you fail a saving throw, you can use your reaction to gain a +2 bonus to your AC against that attack or a +4 bonus to that saving throw.",
-            "Arcane_Tradition_Description_2": "When you use this feature, you can't cast spells other than cantrips until the end of your next turn."
+            "Tradition Ability": "Arcane Deflection",
+            "Arcane Tradition Description": [
+                "At 2nd level, you have learned to weave your magic to fortify yourself against harm. When you are hit by an attack or you fail a saving throw, you can use your reaction to gain a +2 bonus to your AC against that attack or a +4 bonus to that saving throw.",
+                "When you use this feature, you can't cast spells other than cantrips until the end of your next turn."
+            ]
         },
         {
-            "Tradition_Abilitiy": "Tactical Wit",
-            "Arcane_Tradition_Desctiption": "Starting at 2nd level, your keen ability to assess tactical situations allows you to act quickly in battle. You can give yourself a bonus to your initiative rolls equal to your Intelligence modifier.",
+            "Tradition Ability": "Tactical Wit",
+            "Arcane Tradition Description": "Starting at 2nd level, your keen ability to assess tactical situations allows you to act quickly in battle. You can give yourself a bonus to your initiative rolls equal to your Intelligence modifier."
         },
         {
-            "Tradition_Ability": "Power Surge",
-            "Arcane_Tradition_Desctiption": "Starting at 6th level, you can store magical energy within yourself to later empower your damaging spells.",
-            "Arcane_Tradition_Description_2": "You can store a maximum number of power surges equal to your Intelligence modifier (minimum of one). Whenever you finish a long rest, your number of power surges resets to one. Whenever you successfully end a spell with Dispel Magic or Counterspell, you gain one power surge, as you steal magic from the spell you foiled. If you end a short rest with no power surges, you gain one power surge.",
-            "Arcane_Tradition_Description_3": "Once per turn when you deal damage to a creature or object with a wizard spell, you can spend one power surge to deal extra force damage to that target. The extra damage equals half your wizard level."
+            "Tradition Ability": "Power Surge",
+            "Arcane Tradition Description": [
+                "Starting at 6th level, you can store magical energy within yourself to later empower your damaging spells.",
+                "You can store a maximum number of power surges equal to your Intelligence modifier (minimum of one). Whenever you finish a long rest, your number of power surges resets to one. Whenever you successfully end a spell with Dispel Magic or Counterspell, you gain one power surge, as you steal magic from the spell you foiled. If you end a short rest with no power surges, you gain one power surge.",
+                "Once per turn when you deal damage to a creature or object with a wizard spell, you can spend one power surge to deal extra force damage to that target. The extra damage equals half your wizard level."
+            ]
         },
         {
-            "Tradition_Ability": "Durable Magic",
-            "Arcane_Tradition_Desctiption": "Beginning at 10th level, the magic you channel helps ward off harm. While you maintain concentration on a spell, you have a +2 bonus to AC and all saving throws."
+            "Tradition Ability": "Durable Magic",
+            "Arcane Tradition Description": [
+                "Beginning at 10th level, the magic you channel helps ward off harm. While you maintain concentration on a spell, you have a +2 bonus to AC and all saving throws."
+            ]
         },
         {
-            "Tradition_Ability": "Deflecting Shroud",
-            "Arcane_Tradition_Desctiption": "At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, you can cause magical energy to arc from you. Up to three creatures of your choice within 60 feet of you each take force damage equal to half your wizard level."
+            "Tradition Ability": "Deflecting Shroud",
+            "Arcane Tradition Description": [
+                "At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, you can cause magical energy to arc from you. Up to three creatures of your choice within 60 feet of you each take force damage equal to half your wizard level."
+            ]
         }
-    }
-]
+    ]
+}

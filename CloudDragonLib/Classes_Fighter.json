@@ -1,28 +1,25 @@
 ﻿[
     {
         "Class Name": "Fighter",
-        {
-            "HitDice": "1d10 per fighter level",
-            "At1stLevel": "10 + your Constitution modifier",
-            "AtHigherLevels": "1d10 (or 6) + your Constitution modifier per fighter level after 1st"
+        "HitDice": "1d10 per fighter level",
+        "HitPoints": {
+            "At 1st Level": "10 + your Constitution modifier",
+            "At Higher Levels": "1d10 (or 6) + your Constitution modifier per fighter level after 1st"
         },
-        {
+        "Proficiencies": {
             "Armor": "All armor, shields",
             "Weapons": "Simple weapons, martial weapons",
             "Tools": "None",
-            "SavingThrows": "Strength, Constitution",
+            "Saving Throws": "Strength, Constitution",
             "Skills": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival"
         },
-        {
-            "Equipment": [
-                "(a) chain mail or (b) leather, longbow, and 20 arrows",
-                "(a) a martial weapon and a shield or (b) two martial weapons",
-                "(a) a light crossbow and 20 bolts or (b) two handaxes",
-                "(a) a dungeoneer's pack or (b) an explorer's pack"
-            ]
-        },
-        {    
-        "Fighting_Styles": [
+        "Starting Equipment": [
+            "(a) chain mail or (b) leather, longbow, and 20 arrows",
+            "(a) a martial weapon and a shield or (b) two martial weapons",
+            "(a) a light crossbow and 20 bolts or (b) two handaxes",
+            "(a) a dungeoneer's pack or (b) an explorer's pack"
+        ],
+        "Fighting Styles": [
             {
                 "Archery": "You gain a +2 bonus to attack rolls you make with ranged weapons."
             },
@@ -63,34 +60,53 @@
                 "Mariner": "As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to armor class."
             },
             {
-                 "TunnelFighter": "As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
+                "TunnelFighter": "As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
             }
-            ]
-        },
-        {
-            "Class Feature": "Second Wind",
-            "Class Featrue Description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
-        },
-        {
-            "Class Feature": "Action Surge",
-            "Class Feature Description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action."
-        },
-        {
-            "Class Feature": "Martial Archetype",
-            "Class Feature Description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
-        },
-        {
-            "Class Feature": "Ability Score Improvement",
-            "Class Feature Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
-        },
-        {
-            "Class Feature": "Extra Attack",
-            "Class Feature Description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the attack action on your turn",
-            "Class Feature Desctiption": "The number of attacks increases to three when you reach 11th level and to four times when you reach 20th level in this class"
-        },
-        {
-            "Class Feature": "Indomitable",
-            "Class Feature Description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
-        }
+        ],
+        "Class Features": [
+            {
+                "Feature": "Second Wind",
+                "Description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+            },
+            {
+                "Feature": "Action Surge",
+                "Description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action."
+            },
+            {
+                "Feature": "Martial Archetype",
+                "Description": [
+                    "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
+                    {
+                        "Class Archetypes": [
+                            "Arcane Archer",
+                            "Banneret",
+                            "Battle Master",
+                            "Cavalier",
+                            "Champion",
+                            "Echo Knight",
+                            "Elderitch Knigh",
+                            "Psi Warrior",
+                            "Rune Knight",
+                            "Samurai"
+                        ]
+                    }
+                ]
+            },
+            {
+                "Feature": "Ability Score Improvement",
+                "Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
+            },
+            {
+                "Feature": "Extra Attack",
+                "Description": [
+                    "Beginning at 5th level, you can attack twice, instead of once, whenever you take the attack action on your turn.",
+                    "The number of attacks increases to three when you reach 11th level and to four times when you reach 20th level in this class."
+                ]
+            },
+            {
+                "Feature": "Indomitable",
+                "Description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+            }
+        ]
     }
 ]

@@ -1,118 +1,110 @@
 ﻿[
     {
-        "Class Name": "Cleric",
-        {
-            "HitDice": "1d8 per cleric level",
-            "At1stLevel": "8 + your Constitution modifier",
-            "AtHigherLevels": "1d8 (or 5) + your Constitution modifier per cleric level after 1st"
+        "Class Name": "Druid",
+        "HitDice": "1d8 per druid level",
+        "HitPoints": {
+            "At 1st Level": "8 + your Constitution modifier",
+            "At Higher Levels": "1d8 (or 5) + your Constitution modifier per druid level after 1st"
         },
-        {
-            "Armor": "Light armor, medium armor, shields",
-            "Weapons": "All simple weapons",
-            "Tools": "None",
-            "SavingThrows": "Wisdom, Charisma",
-            "Skills": "Choose two from History, Insight, Medicine, Persuasion, and Religion"
+        "Proficiencies": {
+            "Armor": "Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)",
+            "Weapons": "Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
+            "Tools": "Herbalism kit",
+            "Saving Throws": "Intelligence, Wisdom",
+            "Skills": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival"
         },
-        {
-            "Equipment": [
-                "(a) a mace or (b) a warhammer (if proficient)",
-                "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
-                "(a) a light crossbow and 20 bolts or (b) any simple weapon",
-                "(a) a priest's pack or (b) an explorer's pack",
-                "A shield and a holy symbol"
-            ]
-        },
-        {
-            "Class Feature": "Spell Casting",
-            "Class Feature Description": "As a conduit for divine power, you can cast cleric spells."
-        },
-        {
-            "Class Feature": "Cantrips",
-            "Class Feature Description": "At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table."
-        },
-        {
-            "Class Feature": "Spell Slots",
-            "Class Feature Description": "The Cleric table shows how many spell slots you have to cast your cleric spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-            "Class Feature Description 2": "You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-            "Class Feature Description 3": "You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
-        },
-        {
-            "Class Feature": "Spellcasting Ability",
-            "Class Feature Description": "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
-            "Class Feature Description 2": "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
-            "Class Feature Description 3": "Spell attack modifier = your proficiency bonus + your Wisdom modifier."
-        },
-        {
-            "Class Feature": "Ritual Casting",
-            "Class Feature Description": "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
-        },
-        {
-            "Class Feature": "Spellcasting Focus",
-            "Class Feature Description": "You can use a holy symbol as a spellcasting focus for your cleric spells."
-        },
-        {
-            "Class Feature": "Divine Domain",
-            "Class Feature Description": "At 1st level, you choose a domain shaped by your choice of Deity and the gifts they grant you. Your choice grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.",
-            "Class Archetypes": [
-                "Arcana",
-                "Death",
-                "Forge",
-                "Grave",
-                "Knowledge",
-                "Life",
-                "Light",
-                "Nature",
-                "Order",
-                "Peace",
-                "Tempest",
-                "Trickery",
-                "Twilight",
-                "War"
-            ]
-        },
-        {
-            "Class Feature": "Domain Spells",
-            "Class Feature Description": "Each domain has a list of spells-its domain spells that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
-            "Class Feature Description 2": "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
-        },
-        {
-            "Class Feature": "Channel Divinity",
-            "Class Feature Description": "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
-            "Class Feature Description 2": "When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.",
-            "Class Feature Description 3": "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.",
-            "Class Feature Description 4": "Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses."
-        },
-        {
-            "Class Feature": "Channel Divinity: Turn Undead",
-            "Class Feature Description": "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-            "Class Feature Description 2": "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
-        },
-        {
-            "Class Feature": "Harness Divine Power (Optional)",
-            "Class Feature Description": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
-        },
-        {
-            "Class Feature": "Ability Score Improvement",
-            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-        },
-        {
-            "Class Feature": "Cantrip Versatility (Optional)",
-            "Class Feature Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list."
-        },
-        {
-            "Class Feature": "Destroy Undead",
-            "Class Feature Description": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above."
-        },
-        {
-            "Class Feature": "Blessed Strikes (Optional)",
-            "Class Feature Description": "When you reach 8th level, you are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal 1d8 radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn.",
-            "Class Feature Note": "Replaces the Divine Strike or Potent Spellcasting feature"
-        },
-        {
-            "Class Feature": "Divine Intervention",
-            "Class Feature Description": "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.",
-            "Class Feature Description 2": "Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.",
-            "Class Feature Description 3": "At 20th level, your call for intervention succeeds automatically, no roll required."
-        }
+        "Starting Equipment": [
+            "(a) a wooden shield or (b) any simple weapon",
+            "(a) a scimitar or (b) any simple melee weapon",
+            "Leather armor, an explorer's pack, and a druidic focus"
+        ],
+        "Class Features": [
+            {
+                "Feature": "Druidic",
+                "Description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+            },
+            {
+                "Feature": "Spellcasting",
+                "Description": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+            },
+            {
+                "Feature": "Cantrips",
+                "Description": "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+            },
+            {
+                "Feature": "Spellcasting Ability",
+                "Description": [
+                    "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
+                    "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
+                    "Spell attack modifier = your proficiency bonus + your Wisdom modifier"
+                ]
+            },
+            {
+                "Feature": "Ritual Casting",
+                "Description": "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+            },
+            {
+                "Feature": "Spellcasting Focus",
+                "Description": "You can use a druidic focus as a spellcasting focus for your druid spells."
+            },
+            {
+                "Feature": "Wild Shape",
+                "Description": [
+                    "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
+                    "Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+                    "You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die."
+                ]
+            },
+            {
+                "Feature": "Druid Circle",
+                "Description": [
+                    "At 2nd level, you choose to identify with a circle of druids. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+                    {
+                        "Class Archetypes":
+                        [
+                            "Dreams",
+                            "Land",
+                            "Moon",
+                            "Shepherd",
+                            "Spores",
+                            "Stars",
+                            "Wildfire"
+                        ]
+                    }
+                ]
+            },
+            {
+                "Feature": "Wild Companion (Optional)",
+                "Description": [
+                    "At 2nd level, you gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the Find Familiar spell, without material components.",
+                    "Class Feature Description 2",
+                    :,
+                    "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+                ]
+            },
+            {
+                "Feature": "Ability Score Improvement",
+                "Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+            },
+            {
+                "Feature": "Cantrip Versatility (Optional)",
+                "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            },
+            {
+                "Feature": "Timeless Body",
+                "Description": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+            },
+            {
+                "Feature": "Beast Spells",
+                "Description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+            },
+            {
+                "Feature": "Archdruid",
+                "Description": [
+                    "At 20th level, you can use your Wild Shape an unlimited number of times.",
+                    "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+                ]
+            }
+        ]
     }
 ]

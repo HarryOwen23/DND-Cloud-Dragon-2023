@@ -1,95 +1,107 @@
 ﻿[
     {
-        "Class Name": "",
-        {
-            "HitDice": "1d8 per druid level",
-            "At1stLevel": "8 + your Constitution modifier",
-            "AtHigherLevels": "1d8 (or 5) + your Constitution modifier per druid level after 1st"
+        "Class Name": "Druid",
+        "HitDice": "1d8 per druid level",
+        "HitPoints": {
+            "At 1st Level": "8 + your Constitution modifier",
+            "At Higher Levels": "1d8 (or 5) + your Constitution modifier per druid level after 1st"
         },
-        {
+        "Proficiencies": {
             "Armor": "Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)",
             "Weapons": "Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
             "Tools": "Herbalism kit",
-            "SavingThrows": "Intelligence, Wisdom",
+            "Saving Throws": "Intelligence, Wisdom",
             "Skills": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival"
         },
-        {
-            "Equipment": [
-                "(a) a wooden shield or (b) any simple weapon",
-                "(a) a scimitar or (b) any simple melee weapon",
-                "Leather armor, an explorer's pack, and a druidic focus"
-            ]
-        },
-        {
-            "Class Feature": "Druidic",
-            "Class Feature Description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
-        },
-        {
-            "Class Feature": "Spellcasting",
-            "Class Feature Description": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
-        },
-        {
-            "Class Feature": "Cantrips",
-            "Class Feature Description": "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
-        },
-        {
-            "Class Feature": "Spellcasting Ability",
-            "Class Feature Description": "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
-            "Class Feature Description 2": "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
-            "Class Feature Description 3": "Spell attack modifier = your proficiency bonus + your Wisdom modifier"
-        },
-        {
-            "Class Feature": "Ritual Casting",
-            "Class Feature Description": "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
-        },
-        {
-            "Class Feature": "Spellcasting Focus",
-            "Class Feature Description": "You can use a druidic focus as a spellcasting focus for your druid spells."
-        },
-        {
-            "Class Feature": "Wild Shape",
-            "Class Feature Description": "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
-            "Class Feature Description 2": "Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
-            "Class Feature Description 3": "You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die."
-        },
-        {
-            "Class Feature": "Druid Circle",
-            "Class Feature Description": "At 2nd level, you choose to identify with a circle of druids. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
-            "Class Feature Description 2": [
-                "Dreams",
-                "Land",
-                "Moon",
-                "Shepherd",
-                "Spores",
-                "Stars",
-                "Wildfire"
-            ]
-        },
-        {
-            "Class Feature": "Wild Companion (Optional)",
-            "Class Feature Description": "At 2nd level, you gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the Find Familiar spell, without material components.",
-            "Class Feature Descriptuon 2": "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
-        },
-        {
-            "Class Feature": "Ability Score Improvement",
-            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
-        },
-        {
-            "Class Feature": "Cantrip Versatility (Optional)",
-            "Class Feature Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
-        },
-        {
-            "Class Feature": "Timeless Body",
-            "Class Feature Description": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
-        },
-        {
-            "Class Feature": "Beast Spells",
-            "Class Feature Description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
-        },
-        {
-            "Class Feature": "Archdruid",
-            "Class Feature Description": "At 20th level, you can use your Wild Shape an unlimited number of times.",
-            "Class Feature Description 2": "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
-        }
+        "Starting Equipment": [
+            "(a) a wooden shield or (b) any simple weapon",
+            "(a) a scimitar or (b) any simple melee weapon",
+            "Leather armor, an explorer's pack, and a druidic focus"
+        ],
+        "Class Features": [
+            {
+                "Feature": "Druidic",
+                "Description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+            },
+            {
+                "Feature": "Spellcasting",
+                "Description": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+            },
+            {
+                "Feature": "Cantrips",
+                "Description": "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+            },
+            {
+                "Feature": "Spellcasting Ability",
+                "Description": [
+                    "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
+                    "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
+                    "Spell attack modifier = your proficiency bonus + your Wisdom modifier"
+                ]
+            },
+            {
+                "Feature": "Ritual Casting",
+                "Description": "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+            },
+            {
+                "Feature": "Spellcasting Focus",
+                "Description": "You can use a druidic focus as a spellcasting focus for your druid spells."
+            },
+            {
+                "Feature": "Wild Shape",
+                "Description": [
+                    "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
+                    "Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+                    "You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die."
+                ]
+            },
+            {
+                "Feature": "Druid Circle",
+                "Description": [
+                    "At 2nd level, you choose to identify with a circle of druids. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+                    {
+                        "Class Archetypes": [
+                            "Dreams",
+                            "Land",
+                            "Moon",
+                            "Shepherd",
+                            "Spores",
+                            "Stars",
+                            "Wildfire"
+                        ]
+                    }                
+                ]
+            },
+            {
+                "Feature": "Wild Companion (Optional)",
+                "Description": [
+                    "At 2nd level, you gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the Find Familiar spell, without material components.",
+                    "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+                ]
+            },
+            {
+                "Feature": "Ability Score Improvement",
+                "Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+            },
+            {
+                "Feature": "Cantrip Versatility (Optional)",
+                "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            },
+            {
+                "Feature": "Timeless Body",
+                "Description": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+            },
+            {
+                "Feature": "Beast Spells",
+                "Description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+            },
+            {
+                "Feature": "Archdruid",
+                "Description": [
+                    "At 20th level, you can use your Wild Shape an unlimited number of times.",
+                    "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+                ]
+            }
+        ]
     }
 ]

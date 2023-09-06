@@ -1,62 +1,62 @@
 ﻿[
     {
         "Class Name": "Wizard",
-        {
-            "HitDice": "1d6 per wizard level",
-            "At1stLevel": "6 + your Constitution modifier",
-            "AtHigherLevels": "1d6 (or 4) + your Constitution modifier per wizard level after 1st"
+        "HitDice": "1d6 per wizard level",
+        "HitPoints": {
+            "At 1st Level": "6 + your Constitution modifier",
+            "At Higher Levels": "1d6 (or 4) + your Constitution modifier per wizard level after 1st"
         },
-        {
+        "Proficiencies": {
             "Armor": "None",
             "Weapons": "Daggers, darts, slings, quarterstaffs, light crossbows",
             "Tools": "None",
-            "SavingThrows": "Intelligence, Wisdom",
+            "Saving Throws": "Intelligence, Wisdom",
             "Skills": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion"
         },
-        {
-            "Equipment": [
-                "(a) a quarterstaff or (b) a dagger",
-                "(a) a component pouch or (b) an arcane focus",
-                "(a) a scholar's pack or (b) an explorer's pack",
-                "A spellbook"
-            ],
-            "AdditionalEquipment": "You start with the following equipment, in addition to the equipment granted by your background."
-        },
-        {
-            "Class Feature": "Spellcasting",
-            "Class Feature Description": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."    
-        },
-        {
-            "Class Feature": "Cantrips",
-            "Class Feature Description": "At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
-        },
-        {
-            "Class Feature": "Spellbook",
-            "Class Feature Description": "At 1st level, you have a spellbook containing six 1st-level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
-        },
-        {
-            "Class Feature": "Arcane Recovery",
-            "Class Feature Description": "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher."
-        },
-        {
-            "Class Feature": "Arcane Tradition",
-            "Class Feature Description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of the following schools. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
-        },
-        {
-            "Class Feature": "Cantrip Formulas (Optional)",
-            "Class Feature Description": "At 3rd level, you have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
-        },
-        {
-            "Class Feature": "Ability Score Improvement",
-            "Class Feature Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
-        },
-        {
-            "Class Feature": "Spell Mastery",
-            "Class Feature Description": "At 18th level, attain mastery over specific spells to cast them freely. Select a 1st-level and a 2nd-level wizard spell from your spellbook. Cast these spells at their lowest levels without using a spell slot if prepared. To cast at higher levels, use spell slots as usual. Spend 8 hours studying to swap chosen spells with others of the same levels."
-        },
-        {
-            "Class Feature": "Signature Spells",
-            "Class Feature Description": "At 20th level, you achieve mastery over two potent spells that you can cast effortlessly. Select two 3rd-level wizard spells from your spellbook as your signature spells. These spells are always prepared, don't count against your prepared spells, and can each be cast once at 3rd level without using a spell slot. You need to rest before using this ability again. To cast these spells at higher levels, you must still use spell slots."
-        }
+        "Starting Equipment": [
+            "(a) a quarterstaff or (b) a dagger",
+            "(a) a component pouch or (b) an arcane focus",
+            "(a) a scholar's pack or (b) an explorer's pack",
+            "A spellbook"
+        ],
+        "AdditionalEquipment": "You start with the following equipment, in addition to the equipment granted by your background.",
+        "Class Features": [
+            {
+                "Feature": "Spellcasting",
+                "Description": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+            },
+            {
+                "Feature": "Cantrips",
+                "Description": "At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+            },
+            {
+                "Feature": "Spellbook",
+                "Description": "At 1st level, you have a spellbook containing six 1st-level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+            },
+            {
+                "Feature": "Arcane Recovery",
+                "Description": "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher."
+            },
+            {
+                "Feature": "Arcane Tradition",
+                "Description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of the following schools. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+            },
+            {
+                "Feature": "Cantrip Formulas (Optional)",
+                "Description": "At 3rd level, you have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
+            },
+            {
+                "Feature": "Ability Score Improvement",
+                "Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
+            },
+            {
+                "Feature": "Spell Mastery",
+                "Description": "At 18th level, attain mastery over specific spells to cast them freely. Select a 1st-level and a 2nd-level wizard spell from your spellbook. Cast these spells at their lowest levels without using a spell slot if prepared. To cast at higher levels, use spell slots as usual. Spend 8 hours studying to swap chosen spells with others of the same levels."
+            },
+            {
+                "Feature": "Signature Spells",
+                "Description": "At 20th level, you achieve mastery over two potent spells that you can cast effortlessly. Select two 3rd-level wizard spells from your spellbook as your signature spells. These spells are always prepared, don't count against your prepared spells, and can each be cast once at 3rd level without using a spell slot. You need to rest before using this ability again. To cast these spells at higher levels, you must still use spell slots."
+            }
+        ]
     }
 ]
