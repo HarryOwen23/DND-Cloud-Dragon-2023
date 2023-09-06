@@ -1,6 +1,6 @@
-{
-    "Domain Name": "Forge Domain",
+[
     {
+        "Domain Name": "Forge Domain",
         "Domain Ability": "Forge Domain Spells",
         "Domain Ability Description": [
             {
@@ -40,7 +40,6 @@
         "Domain Ability Description": [
             "When you choose this domain at 1st level, you gain proficiency with heavy armor and smith's tools."
         ]
-
     },
     {
         "Domain Ability": "Blessing of the Forge",
@@ -84,4 +83,4 @@
             ]
         ]
     }
-}
+]

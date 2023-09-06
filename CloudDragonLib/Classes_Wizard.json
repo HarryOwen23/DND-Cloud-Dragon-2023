@@ -39,7 +39,27 @@
             },
             {
                 "Feature": "Arcane Tradition",
-                "Description": "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of the following schools. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+                "Description": [
+                    "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of the following schools. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.",
+                    {
+                        " Class Archetypes": [
+                            "School of Abjuration",
+                            "School of Bladesinging",
+                            "School of Chronurgy",
+                            "School of Conjuration",
+                            "School of Divination",
+                            "School of Enchantment",
+                            "School of Evocation",
+                            "School of Graviturgy",
+                            "School of Illusion",
+                            "School of Necromancy",
+                            "School of Order of Scribes",
+                            "School of Transmutation",
+                            "School of War Magic"
+                        ]
+                    }
+                
+                ]
             },
             {
                 "Feature": "Cantrip Formulas (Optional)",

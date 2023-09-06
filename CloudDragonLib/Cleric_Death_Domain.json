@@ -1,6 +1,6 @@
-{
-    "Domain Name": "Death Domain",
+[
     {
+        "Domain Name": "Death Domain",
         "Domain Ability": "Death Domain Spells",
         "Domain Ability Description": [
             {
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "Domain Ability": "Inescapable Destructuion",
+        "Domain Ability": "Inescapable Destruction",
         "Domain Ability Description": [
             "Starting at 6th level, your ability to channel negative energy becomes more potent. Necrotic damage dealt by your cleric spells and Channel Divinity options ignores resistance to necrotic damage."
         ]
@@ -62,7 +62,7 @@
     {
         "Domain Ability": "Divine Strike",
         "Domain Ability Description": [
-            "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an a 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+            "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an additional 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
         ]
     },
     {
@@ -71,4 +71,4 @@
             "Starting at 17th level, when you cast a necromancy spell of 1st through 5th level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, you must provide them for each target."
         ]
     }
-}
+]

@@ -1,6 +1,6 @@
-{
-    "Domain Name": "Knowledge Domain",
+[
     {
+        "Domain Name": "Knowledge Domain",
         "Domain Ability": "Knowledge Domain Spells",
         "Domain Ability Description": [
             {
@@ -65,7 +65,7 @@
     },
     {
         "Domain Ability": "Visions of the Past",
-        "Doman Ability Description": [
+        "Domain Ability Description": [
             "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
             "Once you use this feature, you can't use it again until you finish a short or long rest.",
             {
@@ -76,4 +76,4 @@
             }
         ]
     }
-}
+]

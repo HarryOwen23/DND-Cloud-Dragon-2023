@@ -1,77 +1,75 @@
-{
+[
     {
         "Domain Name": "War Domain",
-        {
-            "Domain Ability": "War Domain Spells",
-            "Domain Ability Description": [
-                {
-                    "1st Level Spells": [
-                        "Divine Favor",
-                        "Shield of Faith"
-                    ]
-                },
-                {
-                    "3rd Level Spells": [
-                        "Magic Weapon",
-                        "Spiritual Weapon"
-                    ]
-                },
-                {
-                    "5th Level Spells": [
-                        "Crusader's Mantle",
-                        "Spirit Guardians"
-                    ]
-                },
-                {
-                    "7th Level Spells": [
-                        "Freedom of Movement",
-                        "Stoneskin"
-                    ]
-                },
-                {
-                    "9th Level Spells": [
-                        "Flame Strike",
-                        "Hold Monster"
-                    ]
-                }
-            ]
-        },
-        {
-            "Domain Ability": "Bonus Proficiency",
-            "Domain Ability Description": [
-                "At 1st level, you gain proficiency with martial weapons and heavy armor."
-            ]
-        },
-        {
-            "Domain Ability": "War Priest",
-            "Domain Ability Description": [
-                "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action.",
-                "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-            ]
-        },
-        {
-            "Domain Ability": "Channel Divinity: Guided Strike",
-            "Domain Ability Description": [
-                "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
-            ]
-        },
-        {
-            "Domain Ability": "Channel Divinity: War God's Blessing",
-            "Domain Ability Description": [
-                "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
-            ]
-        },
-        {
-            "Domain Ability": "Divine Strike",
-            "Domain Ability Description": [
-                "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
-            ]
-        },
-        {
-            "Domain Ability": "Avatar of Battle",
-            "Domain Ability Description": [
-                "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
-            ]
-        }
+        "Domain Ability": "War Domain Spells",
+        "Domain Ability Description": [
+            {
+                "1st Level Spells": [
+                    "Divine Favor",
+                    "Shield of Faith"
+                ]
+            },
+            {
+                "3rd Level Spells": [
+                    "Magic Weapon",
+                    "Spiritual Weapon"
+                ]
+            },
+            {
+                "5th Level Spells": [
+                    "Crusader's Mantle",
+                    "Spirit Guardians"
+                ]
+            },
+            {
+                "7th Level Spells": [
+                    "Freedom of Movement",
+                    "Stoneskin"
+                ]
+            },
+            {
+                "9th Level Spells": [
+                    "Flame Strike",
+                    "Hold Monster"
+                ]
+            }
+        ]
+    },
+    {
+        "Domain Ability": "Bonus Proficiency",
+        "Domain Ability Description": [
+            "At 1st level, you gain proficiency with martial weapons and heavy armor."
+        ]
+    },
+    {
+        "Domain Ability": "War Priest",
+        "Domain Ability Description": [
+            "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action.",
+            "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+        ]
+    },
+    {
+        "Domain Ability": "Channel Divinity: Guided Strike",
+        "Domain Ability Description": [
+            "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+        ]
+    },
+    {
+        "Domain Ability": "Channel Divinity: War God's Blessing",
+        "Domain Ability Description": [
+            "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+        ]
+    },
+    {
+        "Domain Ability": "Divine Strike",
+        "Domain Ability Description": [
+            "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
+        ]
+    },
+    {
+        "Domain Ability": "Avatar of Battle",
+        "Domain Ability Description": [
+            "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+        ]
     }
-}
+]
