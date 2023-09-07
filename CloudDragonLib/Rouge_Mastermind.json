@@ -1,0 +1,42 @@
+{
+    "Subclass Name": "Mastermind",
+    "Subclass Features": [
+        {
+            "Feature Name": "Master of Intrigue",
+            "Feature Description": [
+                "When you choose this archetype at 3rd level, you gain proficiency with the disguise kit, the forgery kit, and one gaming set of your choice. You can also speak two additional languages of your choice."
+            ]
+        },
+        {
+            "Feature Name": "Master of Tactics",
+            "Feature Description": [
+                "At 3rd level, your keen intellect and understanding of tactics allow you to aid your allies in combat. If you use the Help action to aid an ally in attacking a creature, the target of that attack can be within 30 feet of you, rather than 5 feet, if the target can see or hear you."
+            ]
+        },
+        {
+            "Feature Name": "Insightful Manipulator",
+            "Feature Description": [
+                "Starting at 9th level, if you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
+                [
+                    "Intelligence score",
+                    "Wisdom score",
+                    "Charisma score",
+                    "Class levels (if any)",
+                    "Rogue levels (if any)"
+                ]
+            ]
+        },
+        {
+            "Feature Name": "Misdirection",
+            "Feature Description": [
+                "At 13th level, you can react to danger with extraordinary agility. When a creature makes an attack roll against you, you can use your reaction to grant yourself a +4 bonus to AC against that attack, potentially causing the attack to miss you."
+            ]
+        },
+        {
+            "Feature Name": "Soul of Deceit",
+            "Feature Description": [
+                "Starting at 17th level, you gain the ability to change your appearance and even your thoughts. You can cast the Alter Self spell at will without expending a spell slot. Additionally, you can't be targeted by Detect Thoughts or similar spells or abilities unless you choose to allow it."
+            ]
+        }
+    ]
+}
