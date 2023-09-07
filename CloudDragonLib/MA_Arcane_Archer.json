@@ -1,10 +1,10 @@
 {
     "Archetype Name": "Arcane Archer",
-    {
+    "Archetype Features": [
         {
             "Archetype Feature": "Arcane Archer Lore",
             "Archetype Feature Description": [
-                "At 3rd level, you learn magical theory or some of the secrets of nature – typical for practitioners of of this elven martial tradition. You choose to gain proficiency in either the Arcana or the Nature skill, and you choose to learn either the Prestidigitation or Druidcraft cantrip."
+                "At 3rd level, you learn magical theory or some of the secrets of nature – typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the Arcana or the Nature skill, and you choose to learn either the Prestidigitation or Druidcraft cantrip."
             ]
         },
         {
@@ -35,11 +35,11 @@
         },
         {
             "Arcane Shot Options": "Arcane Shot Options",
-            "Archetype Feature Description": [
+            "Arcane Shot Options Description": [
                 "The Arcane Shot feature lets you choose options for it at certain levels. The options are presented here in alphabetical order. They are all magical effects, and each one is associated with one of the schools of magic.",
                 "If an option requires a saving throw, your Arcane Shot save DC equals 8 + your proficiency bonus + your Intelligence modifier."
             ],
-            [
+            "Arcane Shot Options List": [
                 {
                     "Banishing Arrow": [
                         "You use abjuration magic to try to temporarily banish your target to a harmless location in the Feywild. The creature hit by the arrow must also succeed on a Charisma saving throw or be banished. While banished in this way, its speed is 0, and it is incapacitated. At the end of its next turn, the target reappears in the space it vacated or in the nearest unoccupied space if that space is occupied.",
@@ -90,5 +90,5 @@
                 }
             ]
         }
-    }
+    ]
 }

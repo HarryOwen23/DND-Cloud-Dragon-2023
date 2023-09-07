@@ -1,6 +1,6 @@
 {
     "Archetype Name": "Echo Knight",
-    {
+    "Archetype Features": [
         {
             "Archetype Feature": "Manifest Echo",
             "Archetype Feature Description": [
@@ -49,5 +49,5 @@
                 "In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
             ]
         }
-    }
+    ]
 }
