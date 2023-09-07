@@ -1,6 +1,6 @@
 {
-    {
-        "Archetype Name": "Lunar Sorcery",
+    "Archetype Name": "Lunar Sorcery",
+    "Archetype Abilities": [
         {
             "Archetype Ability": "Lunar Embodiment",
             "Archetype Ability Description": [
@@ -36,7 +36,7 @@
                                 "Sorcerer Level": "9th",
                                 "Full Moon Spells": "Rary's Telepathic Bond",
                                 "New Moon Spells": "Hold Monster",
-                                "Crescent Moon Spells": "Misead"
+                                "Crescent Moon Spells": "Mislead"
                             }
                         ]
                     }
@@ -65,7 +65,7 @@
                         "Crescent Moon": "Divination and Transmutation spells"
                     }
                 ],
-                "Whenever you use Metamagic on a spell of a school of magic associated with your current Lunar Embodiment phase, you can reduce the sorcery points spent by 1 (minimum 0). You can reduce the sorcery points spent for your Metamagic a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest"
+                "Whenever you use Metamagic on a spell of a school of magic associated with your current Lunar Embodiment phase, you can reduce the sorcery points spent by 1 (minimum 0). You can reduce the sorcery points spent for your Metamagic a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             ]
         },
         {
@@ -110,6 +110,5 @@
                 "Once you use one of these bonus action benefits, you can’t use that benefit again until you finish a long rest, unless you spend 5 sorcery points to use it again."
             ]
         }
-    }
-
+    ]
 }

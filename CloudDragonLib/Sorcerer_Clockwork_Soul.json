@@ -1,81 +1,44 @@
 {
-    {
-        "Archetype Name": "Clockwork Soul",
+    "Archetype Name": "Clockwork Soul",
+    "Archetype Abilities": [
         {
-            " Archetype Ability": "",
-            " Archetype Ability Description": [
-                "You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each spell counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know. These spells can’t be replaced when you gain a level in this class.",
-                "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list.",
-                [
-                    {
-                        "1st Level Spells": [
-                            "Alarm",
-                            "Protection from Evil and Good"
-                        ]
-                    },
-                    {
-                        "3rd Level Spells": [
-                            "Aid",
-                            "Lesser Restoration"
-                        ]
-                    },
-                    {
-                        "5th Level Spells": [
-                            "Dispel Magic",
-                            "Protection from Energy"
-                        ]
-                    },
-                    {
-                        "7th Level Spells": [
-                            "Freedom of Movement",
-                            "Summon Construct"
-                        ]
-                    },
-                    {
-                        "9th Level Spells": [
-                            "Greater Restoration",
-                            "Wall of Force"
-                        ]
-                    }
-                ],
-                "In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
-                [
-                    {
-                        "Manifestations of Order": [
-                            {
-                                "Dice Number": "1",
-                                "Manifestation": "Spectral cogwheels hover behind you."
-                            },
-                            {
-                                "Dice Number": "2",
-                                "Manifestation": "The hands of a clock spin in your eyes."
-                            },
-                            {
-                                "Dice Number": "3",
-                                "Manifestation": "Your skin glows with a brassy sheen."
-                            },
-                            {
-                                "Dice Number": "4",
-                                "Manifestation": "Floating equations and geometric objects overlay your body."
-                            },
-                            {
-                                "Dice Number": "5",
-                                "Manifestation": "Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."
-                            },
-                            {
-                                "Dice Number": "6",
-                                "Manifestation": "The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."
-                            }
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
-            "Archetype Ability": "",
+            "Archetype Ability": "Clockwork Spells",
             "Archetype Ability Description": [
-                "",
-                ""
+                "You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each spell counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know. These spells can’t be replaced when you gain a level in this class.",
+                "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list."
+            ],
+            "Clockwork Spells Table": {
+                "1st Level Spells": [ "Alarm", "Protection from Evil and Good" ],
+                "3rd Level Spells": [ "Aid", "Lesser Restoration" ],
+                "5th Level Spells": [ "Dispel Magic", "Protection from Energy" ],
+                "7th Level Spells": [ "Freedom of Movement", "Summon Construct" ],
+                "9th Level Spells": [ "Greater Restoration", "Wall of Force" ]
+            },
+            "Manifestations of Order": [
+                {
+                    "Dice Number": "1",
+                    "Manifestation": "Spectral cogwheels hover behind you."
+                },
+                {
+                    "Dice Number": "2",
+                    "Manifestation": "The hands of a clock spin in your eyes."
+                },
+                {
+                    "Dice Number": "3",
+                    "Manifestation": "Your skin glows with a brassy sheen."
+                },
+                {
+                    "Dice Number": "4",
+                    "Manifestation": "Floating equations and geometric objects overlay your body."
+                },
+                {
+                    "Dice Number": "5",
+                    "Manifestation": "Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."
+                },
+                {
+                    "Dice Number": "6",
+                    "Manifestation": "The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."
+                }
             ]
         },
         {
@@ -111,6 +74,5 @@
                 "Once you use this action, you can’t use it again until you finish a long rest, unless you spend 7 sorcery points to use it again."
             ]
         }
-    }
-
+    ]
 }
