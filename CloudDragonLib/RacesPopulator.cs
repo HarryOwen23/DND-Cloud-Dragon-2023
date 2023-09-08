@@ -16,13 +16,14 @@ namespace CloudDragon.Lib
 
 	public class RacesPopulator : IRacesPopulator
 	{
-		public RacesPopulator()
+        public RacesPopulator()
 		{
 		}
 
-		public Task<List<Races>> Populate(string fileName)
+		public async Task<List<Races>> Populate(string fileName)
 		{
             var result = new List<Races>();
+
             return result;
         }
 	}
