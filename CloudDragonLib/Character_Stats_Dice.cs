@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 // a class created to provide RNG for individual dnd stats 
 public class CharStats
 {
-    // Private readonly class to retrieve the 
+    // Private readonly class to retrieve the stats generated
 	private static Random statsrng;
 
 	// The public variables stats are created
