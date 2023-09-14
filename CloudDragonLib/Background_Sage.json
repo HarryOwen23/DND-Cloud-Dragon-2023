@@ -1,0 +1,51 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Sage",
+            "Description": "You are a scholar, researcher, or academic who has dedicated your life to the pursuit of knowledge. You have spent years studying and accumulating information in various fields of expertise.",
+            "Skill Proficiencies": [ "Arcana", "History" ],
+            "Tool Proficiencies": [],
+            "Languages": [],
+            "Starting Equipment": [
+                "A letter of introduction from a university or academic institution",
+                "A book of lore or a tome of knowledge",
+                "A set of common clothes",
+                "A belt pouch containing 10 gold pieces"
+            ],
+            "Feature": "Researcher",
+            "Feature Description": "You have access to a vast network of academic contacts, and you can reach out to fellow scholars and experts for information and assistance. You can spend time in libraries or universities to gain access to valuable research materials and archives."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am constantly seeking to expand my knowledge and understanding.",
+        "2. I am eager to share my expertise with others and enjoy educating them.",
+        "3. I can be absent-minded and preoccupied with my thoughts and research.",
+        "4. I am often seen as eccentric or unconventional in my thinking and behavior.",
+        "5. I am driven by a thirst for discovery and solving mysteries.",
+        "6. I tend to be skeptical and demand evidence before accepting claims or theories."
+    ],
+    "Ideals": [
+        "1. Knowledge. The pursuit of knowledge is the highest goal in life. (Neutral)",
+        "2. Discovery. I am driven to uncover hidden truths and mysteries. (Any)",
+        "3. Wisdom. I use my knowledge to guide and help others. (Good)",
+        "4. Power. Knowledge is power, and I seek to wield it for my own gain. (Evil)",
+        "5. Curiosity. I am endlessly curious and seek to learn about everything. (Chaotic)",
+        "6. Innovation. I strive to create new knowledge and push the boundaries of understanding. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or teacher who greatly influenced my intellectual development.",
+        "2. I am searching for a rare and ancient tome of knowledge that holds the key to a great secret.",
+        "3. I am dedicated to preserving and protecting valuable knowledge from being lost or destroyed.",
+        "4. I have a deep respect for a particular deity or patron of knowledge.",
+        "5. I have a close-knit group of fellow scholars and researchers who are like family to me.",
+        "6. I am on a quest to unravel a great mystery or solve a complex puzzle."
+    ],
+    "Flaws": [
+        "1. I can become obsessed with my research and neglect other aspects of life.",
+        "2. I am often oblivious to social cues and norms, leading to awkward interactions.",
+        "3. I can be dismissive of those who are not as knowledgeable or intelligent as I am.",
+        "4. I am easily frustrated when faced with ignorance or incompetence.",
+        "5. I have a tendency to overanalyze situations and see complexity where it may not exist.",
+        "6. I am secretive and protective of my research, even to the point of paranoia."
+    ]
+}
