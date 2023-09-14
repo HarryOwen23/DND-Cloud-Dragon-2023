@@ -1,0 +1,51 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Far Traveler",
+            "Description": "You come from a distant and foreign land, having traveled far from your homeland to explore new places, cultures, and experiences. Your unique background and customs may seem strange to those you encounter in your new surroundings.",
+            "Skill Proficiencies": [ "Insight", "Perception" ],
+            "Languages": [ "One of your choice" ],
+            "Starting Equipment": [
+                "A set of traveler's clothes",
+                "An emblem or symbol of your homeland",
+                "A pouch containing 10 gold pieces",
+                "A trinket or token from your homeland",
+                "A staff or walking stick"
+            ],
+            "Feature": "Foreign Contacts",
+            "Feature Description": "Your extensive travels and interactions with people from distant lands have granted you a network of foreign contacts. You can call upon these contacts for information, assistance, and shelter when you are in a foreign land or distant region. They may provide you with introductions to locals, guidance on local customs, or even safe places to stay."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am curious and always eager to learn about new places and cultures.",
+        "2. I have a strong sense of wanderlust and am always looking for the next adventure.",
+        "3. I am open-minded and accepting of different customs and beliefs.",
+        "4. I am adaptable and can easily blend into new environments and social circles.",
+        "5. I am proud of my homeland and enjoy sharing stories and traditions from my culture.",
+        "6. I can be a bit reserved and introverted, especially when confronted with unfamiliar situations."
+    ],
+    "Ideals": [
+        "1. Freedom: I value personal freedom and believe in the importance of individual autonomy. (Chaotic)",
+        "2. Discovery: I am driven by the desire to explore and discover new places, cultures, and knowledge. (Neutral)",
+        "3. Harmony: I seek to find common ground and promote harmony among people of different backgrounds. (Good)",
+        "4. Adaptability: I believe in the importance of adaptability and the ability to thrive in any environment. (Neutral)",
+        "5. Tradition: I am deeply attached to the customs and traditions of my homeland, and I strive to uphold them. (Lawful)",
+        "6. Ambition: I am driven by personal ambition and seek to achieve greatness in my travels. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a close friend or ally from my homeland who travels with me and shares my adventures.",
+        "2. I have a family member or loved one back in my homeland whom I send money or gifts to regularly.",
+        "3. I am on a quest or mission from my homeland, and I am determined to fulfill it no matter what.",
+        "4. I am searching for a specific artifact or treasure that is tied to my homeland's history.",
+        "5. I have a mentor or teacher from my homeland who guides me in my travels and adventures.",
+        "6. I am haunted by a past event or mistake from my homeland, and I am seeking redemption or closure."
+    ],
+    "Flaws": [
+        "1. I can be naive and overly trusting of strangers, often putting myself in risky situations.",
+        "2. I have a tendency to romanticize the places I visit and the people I meet, sometimes leading to disappointment.",
+        "3. I can be stubborn and resistant to change or new ideas, clinging to the customs of my homeland.",
+        "4. I have a short attention span and can become easily distracted by new and shiny things.",
+        "5. I am fiercely protective of my homeland's reputation and am quick to defend it, even when it's not necessary.",
+        "6. I have a fear of settling down and becoming tied to one place or culture, which can lead to restlessness."
+    ]
+}

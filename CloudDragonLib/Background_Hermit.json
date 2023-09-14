@@ -1,0 +1,51 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Hermit",
+            "Description": "You have lived a life of seclusion and isolation, seeking wisdom and enlightenment away from the hustle and bustle of society. Your time spent in solitude has granted you unique insights and skills.",
+            "Skill Proficiencies": [ "Medicine", "Religion" ],
+            "Tool Proficiencies": [],
+            "Languages": [ "One of your choice" ],
+            "Starting Equipment": [
+                "A scroll case stuffed full of notes from your studies or prayers",
+                "A winter blanket",
+                "A set of common clothes",
+                "10 gold pieces"
+            ],
+            "Feature": "Discovery",
+            "Feature Description": "Your long hours of study and meditation have granted you an understanding of a particular field of knowledge or spiritual insight. You can accurately answer questions related to your chosen field, and you have advantage on Intelligence (Religion) checks made to recall information about deities, religious traditions, holy symbols, and the like."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am a recluse who prefers solitude and quiet contemplation.",
+        "2. I am kind and compassionate, always willing to offer a helping hand to those in need.",
+        "3. I am curious and eager to learn more about the world beyond my hermitage.",
+        "4. I am distrustful of authority and institutions, preferring to rely on my own judgment.",
+        "5. I am wise and patient, rarely reacting impulsively to situations.",
+        "6. I have a peculiar habit or quirk that makes me stand out in social situations."
+    ],
+    "Ideals": [
+        "1. Solitude: I value my isolation and seek to preserve it. (Neutral)",
+        "2. Enlightenment: I am on a quest for spiritual and intellectual enlightenment. (Any)",
+        "3. Charity: I believe in helping others and giving back to the world. (Good)",
+        "4. Independence: I value my freedom and autonomy above all else. (Chaotic)",
+        "5. Wisdom: I believe in the power of knowledge and wisdom to guide us. (Lawful)",
+        "6. Simplicity: I prefer a simple and unadorned life, free from materialistic desires. (Neutral)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or teacher who guided me in my hermitage and to whom I owe a great debt.",
+        "2. I am on a quest to seek out a particular piece of ancient knowledge or a lost relic.",
+        "3. I have a deep connection to a natural location, such as a forest, cave, or mountaintop, where I found solitude and enlightenment.",
+        "4. I have a vision or prophecy that I believe will come to pass, and I am working to fulfill it.",
+        "5. I have a family member or loved one from whom I became estranged during my time of seclusion, and I seek to reconnect with them.",
+        "6. I am haunted by a mysterious event or phenomenon from my time of isolation, and I aim to uncover the truth behind it."
+    ],
+    "Flaws": [
+        "1. I can be socially awkward and have difficulty relating to others.",
+        "2. I am set in my ways and resistant to change or new ideas.",
+        "3. I can be overly cautious, hesitating to take risks or step out of my comfort zone.",
+        "4. I have a tendency to withdraw from social situations and avoid interaction with others.",
+        "5. I am prone to eccentric or idiosyncratic behavior that can be off-putting to others.",
+        "6. I can be overly critical of those who do not share my values or beliefs."
+    ]
+}

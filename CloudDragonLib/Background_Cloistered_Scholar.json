@@ -1,0 +1,51 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Cloistered Scholar",
+            "Description": "You are a scholar who has spent years in seclusion, studying ancient tomes, scrolls, and texts in pursuit of knowledge. Your life has been dedicated to learning and the pursuit of academic excellence.",
+            "Skill Proficiencies": [ "History", "Research (Homebrew Skill)" ],
+            "Languages": [ "Two of your choice" ],
+            "Starting Equipment": [
+                "A set of common clothes",
+                "A scroll of your research notes",
+                "A bottle of ink and a quill",
+                "A small knife",
+                "A pouch containing 10 gold pieces"
+            ],
+            "Feature": "Library Access",
+            "Feature Description": "Your scholarly background grants you access to libraries and repositories of knowledge that are not typically available to the public. You can gain entry to academic institutions, libraries, and the personal collections of scholars and sages. Additionally, you can often request assistance and information from other scholars and researchers."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am inquisitive and constantly seek new knowledge and insights.",
+        "2. I am patient and meticulous in my research, willing to spend hours on a single topic.",
+        "3. I am introverted and prefer the company of books and scrolls to that of people.",
+        "4. I am eager to share my knowledge with others and enjoy teaching and explaining complex topics.",
+        "5. I am always seeking to uncover hidden truths and secrets, no matter where they may lead.",
+        "6. I can be absent-minded and forgetful, often losing track of time when engrossed in my studies."
+    ],
+    "Ideals": [
+        "1. Knowledge: I believe that knowledge is the greatest treasure and should be pursued at all costs. (Neutral)",
+        "2. Wisdom: I seek to use my knowledge for the betterment of the world and the enlightenment of others. (Good)",
+        "3. Ambition: I am driven by the desire to make groundbreaking discoveries and achieve academic recognition. (Any)",
+        "4. Truth: I value truth and the pursuit of truth above all else, even when it challenges established beliefs. (Lawful)",
+        "5. Curiosity: I am constantly driven by curiosity and the need to explore the unknown. (Chaotic)",
+        "6. Isolation: I prefer the solitude of study and contemplation, valuing my personal research above all else. (Neutral)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or respected scholar who taught me the ways of academia, and I owe them a debt of gratitude.",
+        "2. I am dedicated to uncovering the lost knowledge of a long-forgotten civilization or culture.",
+        "3. I have a personal library or collection of rare tomes that I will go to great lengths to protect.",
+        "4. I am haunted by a riddle or enigma that has eluded my understanding for years, and I am determined to solve it.",
+        "5. I have a deep respect for the scholarly community, and I strive to foster collaboration and camaraderie among scholars.",
+        "6. I have a special interest in a particular field of study, and I am always on the lookout for new information related to it."
+    ],
+    "Flaws": [
+        "1. I can become obsessed with my research, neglecting personal relationships and other responsibilities.",
+        "2. I am often oblivious to the world around me, frequently lost in my thoughts and studies.",
+        "3. I can be condescending and impatient with those who lack my level of knowledge and understanding.",
+        "4. I am secretive about my findings and discoveries, fearing that others may steal or exploit them.",
+        "5. I have a tendency to overanalyze and overthink, making simple decisions more complicated than they need to be.",
+        "6. I am easily distracted by new topics and ideas, often abandoning current research for the next intriguing subject."
+    ]
+}

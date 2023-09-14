@@ -1,0 +1,50 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Guild Merchant",
+            "Description": "You are a member of a merchant guild or trading company, a well-established organization that deals in goods, services, and commerce. Your guild provides you with a network of contacts and resources to excel in the world of trade.",
+            "Skill Proficiencies": [ "Insight", "Persuasion" ],
+            "Tool Proficiencies": [ " One type of artisan's tools" ],
+            "Languages": [ "One of your choice" ],
+            "Starting Equipment": [
+                "A letter of introduction from your guild",
+                "A set of traveler's clothes",
+                "A belt pouch containing 15 gold pieces"
+            ],
+            "Feature": "Guild Membership",
+            "Feature Description": "You are a member of a merchant guild, and you can rely on their support and assistance. Your guild will provide you with lodging and food if necessary, and you can receive aid from other guild members in legal and business matters. Your guild might also have a presence in larger cities and towns, which can offer you a place to work and a safe haven."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am shrewd and always looking for opportunities to make a profit.",
+        "2. I am friendly and outgoing, easily making connections with others in the world of commerce.",
+        "3. I am meticulous and pay close attention to details in my business dealings.",
+        "4. I am competitive and enjoy the challenge of outsmarting other merchants.",
+        "5. I am a patient negotiator, willing to wait for the best deal to come my way.",
+        "6. I am a natural networker, always seeking to expand my contacts and business relationships."
+    ],
+    "Ideals": [
+        "1. Prosperity: I seek to accumulate wealth and build a prosperous future. (Any)",
+        "2. Fairness: I believe in honest and fair business practices. (Lawful)",
+        "3. Ambition: I am driven to achieve success and rise above my competitors. (Any)",
+        "4. Independence: I value my freedom and autonomy in the world of trade. (Chaotic)",
+        "5. Generosity: I am generous and believe in giving back to those less fortunate. (Good)",
+        "6. Innovation: I strive to bring new ideas and products to the market. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a close friend or mentor within my guild who has guided and inspired me.",
+        "2. I owe a significant debt to my guild for training and support, and I am determined to repay it.",
+        "3. I am on a quest to seek out rare materials or trade opportunities that could benefit my guild.",
+        "4. I have a rival or competitor in the world of trade, and our rivalry is far from over.",
+        "5. I have a family member or loved one who is also a member of my guild, and we share a special bond.",
+        "6. I am haunted by a business deal gone wrong and am determined to set things right."
+    ],
+    "Flaws": [
+        "1. I can be overly cautious and risk-averse, missing out on potentially lucrative opportunities.",
+        "2. I am prone to overworking myself, neglecting other aspects of my life in the pursuit of wealth.",
+        "3. I can be ruthless and cutthroat in business, sometimes at the expense of ethics and fairness.",
+        "4. I have a tendency to hoard wealth and possessions, fearing poverty or loss.",
+        "5. I am easily swayed by offers of quick profits, even if they are morally questionable.",
+        "6. I can be dismissive of those who are less successful in the world of trade, viewing them as inferior."
+    ]
+}
