@@ -1,0 +1,36 @@
+{
+    "Heavy Armor": [
+        {
+            "Name": "Ring Mail",
+            "Armor Class (AC)": "14",
+            "Strength": "-",
+            "Stealth": "Disadvantage",
+            "Weight": "40 lb.",
+            "Cost": "30 gp"
+        },
+        {
+            "Name": "Chain Mail",
+            "Armor Class (AC)": "16",
+            "Strength": "Str 13",
+            "Stealth": "Disadvantage",
+            "Weight": "55 lb.",
+            "Cost": "75 gp"
+        },
+        {
+            "Name": "Splint",
+            "Armor Class (AC)": "17",
+            "Strength": "Str 15",
+            "Stealth": "Disadvantage",
+            "Weight": "60 lb.",
+            "Cost": "200 gp"
+        },
+        {
+            "Name": "Plate",
+            "Armor Class (AC)": "18",
+            "Strength": "Str 15",
+            "Stealth": "Disadvantage",
+            "Weight": "65 lb.",
+            "Cost": "1,500 gp"
+        }
+    ]
+}
