@@ -1,0 +1,29 @@
+{
+    "Clothes": [
+        {
+            "Name": "Common Clothes",
+            "Cost": "5 sp",
+            "Weight": "3 lb."
+        },
+        {
+            "Name": "Costume",
+            "Cost": "5 gp",
+            "Weight": "4 lb."
+        },
+        {
+            "Name": "Fine Clothes",
+            "Cost": "15 gp",
+            "Weight": "6 lb."
+        },
+        {
+            "Name": "Robes",
+            "Cost": "1 gp",
+            "Weight": "4 lb."
+        },
+        {
+            "Name": "Traveler's Clothes",
+            "Cost": "2 gp",
+            "Weight": "4 lb."
+        }
+    ]
+}
