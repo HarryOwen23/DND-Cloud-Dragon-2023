@@ -1,0 +1,57 @@
+{
+    "Pack Name": "Burglar's Pack",
+    "Contents": [
+        {
+            "Ttem": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Ball Bearings (bag of 1,000)",
+            "Quantity": 1
+        },
+        {
+            "Item": "10-foot Pole",
+            "Quantity": 1
+        },
+        {
+            "Item": "Crowbar",
+            "Quantity": 1
+        },
+        {
+            "Item": "Hammer",
+            "Quantity": 1
+        },
+        {
+            "Item": "Piton",
+            "Quantity": 10
+        },
+        {
+            "Item": "Hooded Lantern",
+            "Quantity": 1
+        },
+        {
+            "Item": "Oil (flask)",
+            "Quantity": 2
+        },
+        {
+            "Item": "Rations (5 days)",
+            "Quantity": 5
+        },
+        {
+            "Item": "Tinderbox",
+            "Quantity": 1
+        },
+        {
+            "Item": "Waterskin",
+            "Quantity": 1
+        },
+        {
+            "Item": "Rope, Silk (50 feet)",
+            "Quantity": 1
+        },
+        {
+            "Item": "Thieves' Tools",
+            "Quantity": 1
+        }
+    ]
+}
