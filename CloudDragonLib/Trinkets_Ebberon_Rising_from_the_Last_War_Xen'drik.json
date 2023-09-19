@@ -1,0 +1,36 @@
+{
+    "Trinkets": [
+        {
+            "Dice Number": 1,
+            "Trinket": "A punched ticket for a voyage from Sharn to Stormreach"
+        },
+        {
+            "Dice Number": 2,
+            "Trinket": "A scorpion's barb engraved with a single Elvish letter"
+        },
+        {
+            "Dice Number": 3,
+            "Trinket": "A copper coin so big you could use it as a dinner plate"
+        },
+        {
+            "Dice Number": 4,
+            "Trinket": "An image of an elf warrior engraved on a giant's tooth"
+        },
+        {
+            "Dice Number": 5,
+            "Trinket": "A single page from a giant wizard's spellbook, bearing an incomplete spell"
+        },
+        {
+            "Dice Number": 6,
+            "Trinket": "A scrap of parchment, part of a map of Stormreach"
+        },
+        {
+            "Dice Number": 7,
+            "Trinket": "A small book titled Feersome Beests of Zendrik"
+        },
+        {
+            "Dice Number": 8,
+            "Trinket": "A scrimshaw carving of a sahuagin"
+        }
+    ]
+}
