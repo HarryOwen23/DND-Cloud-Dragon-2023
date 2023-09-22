@@ -1,0 +1,11 @@
+{
+    "MartialMeleeWeapons": [
+        {
+            "Name": "Hoopak",
+            "Cost": "1 gp",
+            "Damage": "1d6 piercing (melee) or 1d4 bludgeoning (ranged)",
+            "Weight": "2 lb.",
+            "Properties": "Ammunition (range 40/160), finesse, special, two-handed"
+        }
+    ]
+}
