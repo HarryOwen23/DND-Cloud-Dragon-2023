@@ -1,0 +1,56 @@
+﻿{
+    "Trade_Goods": [
+        {
+            "Cost": "1 cp",
+            "Goods": "1 lb. of wheat"
+        },
+        {
+            "Cost": "2 cp",
+            "Goods": "1 lb. of flour or one chicken"
+        },
+        {
+            "Cost": "5 cp",
+            "Goods": "1 lb. of salt"
+        },
+        {
+            "Cost": "1 sp",
+            "Goods": "1 lb. of iron or 1 sq. yd. of canvas"
+        },
+        {
+            "Cost": "5 sp",
+            "Goods": "1 lb. of copper or 1 sq. yd. of cotton cloth"
+        },
+        {
+            "Cost": "1 gp",
+            "Goods": "1 lb. of ginger or one goat"
+        },
+        {
+            "Cost": "2 gp",
+            "Goods": "1 lb. of cinnamon or pepper, or one sheep"
+        },
+        {
+            "Cost": "3 gp",
+            "Goods": "1 lb. of cloves or one pig"
+        },
+        {
+            "Cost": "5 gp",
+            "Goods": "1 lb. of silver or 1 sq. yd. of linen"
+        },
+        {
+            "Cost": "10 gp",
+            "Goods": "1 sq. yd. of silk or one cow"
+        },
+        {
+            "Cost": "15 gp",
+            "Goods": "1 lb. of saffron or one ox"
+        },
+        {
+            "Cost": "50 gp",
+            "Goods": "1 lb. of gold"
+        },
+        {
+            "Cost": "500 gp",
+            "Goods": "1 lb. of platinum"
+        }
+    ]
+}
