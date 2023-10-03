@@ -1,0 +1,66 @@
+﻿{
+    "Musical Instruments": {
+        "Description": "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument.",
+        "Skills": {
+            "History": "Your expertise aids you in recalling lore related to your instrument.",
+            "Performance": "Your ability to put on a good show is improved when you incorporate an instrument into your act."
+        },
+        "Compose a Tune": "As part of a long rest, you can compose a new tune and lyrics for your instrument. You might use this ability to impress a noble or spread scandalous rumors with a catchy tune.",
+        "Activities": {
+            "Identify a tune": "DC 10",
+            "Improvise a tune": "DC 20"
+        },
+        "Instruments": [
+            {
+                "Name": "Bagpipes",
+                "Cost": "30 gp",
+                "Weight": "6 lb."
+            },
+            {
+                "Name": "Drum",
+                "Cost": "6 gp",
+                "Weight": "3 lb."
+            },
+            {
+                "Name": "Dulcimer",
+                "Cost": "25 gp",
+                "Weight": "10 lb."
+            },
+            {
+                "Name": "Flute",
+                "Cost": "2 gp",
+                "Weight": "1 lb."
+            },
+            {
+                "Name": "Lute",
+                "Cost": "35 gp",
+                "Weight": "2 lb."
+            },
+            {
+                "Name": "Lyre",
+                "Cost": "30 gp",
+                "Weight": "2 lb."
+            },
+            {
+                "Name": "Horn",
+                "Cost": "3 gp",
+                "Weight": "2 lb."
+            },
+            {
+                "Name": "Pan flute",
+                "Cost": "12 gp",
+                "Weight": "2 lb."
+            },
+            {
+                "Name": "Shawm",
+                "Cost": "2 gp",
+                "Weight": "1 lb."
+            },
+            {
+                "Name": "Viol",
+                "Cost": "30 gp",
+                "Weight": "1 lb."
+            }
+        ]
+    }
+}

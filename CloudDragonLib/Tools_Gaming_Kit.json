@@ -1,7 +1,24 @@
 ﻿{
     "Gaming Kit": {
         "Description": "Proficiency with a gaming set applies to one type of game, such as Three-Dragon Ante or games of chance that use dice.",
-        "Components": "A gaming set has all the pieces needed to play a specific game or type of game, such as a complete deck of cards or a board and tokens.",
+        "Components": {
+            "Dice set": {
+                "Price": "1 sp",
+                "Weight": "-"
+            },
+            "Dragonchess set": {
+                "Price": "1 gp",
+                "Weight": "1/2 lb"
+            },
+            "Playing card set": {
+                "Price": "5 sp",
+                "Weight": "-"
+            },
+            "Three-Dragon Ante set": {
+                "Price": "1 gp",
+                "Weight": "-"
+            }
+        },
         "Skills": {
             "History": "Your mastery of a game includes knowledge of its history, as well as of important events it was connected to or prominent historical figures involved with it.",
             "Insight": "Playing games with someone is a good way to gain understanding of their personality, granting you a better ability to discern their lies from their truths and read their mood.",
