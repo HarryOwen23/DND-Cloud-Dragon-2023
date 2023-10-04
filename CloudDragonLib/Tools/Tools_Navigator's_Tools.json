@@ -1,0 +1,23 @@
+﻿{
+    "Navigator's Tools": {
+        "Description": "Proficiency with navigator's tools helps you determine a true course based on observing the stars. It also grants you insight into charts and maps while developing your sense of direction.",
+        "Components": {
+            "Navigator's tools": {
+                "Sextant": true,
+                "Compass": true,
+                "Calipers": true,
+                "Ruler": true,
+                "Parchment": true,
+                "Ink": true,
+                "Quill": true
+            }
+        },
+        "Skills": {
+            "Survival": "Knowledge of navigator's tools helps you avoid becoming lost and also grants you insight into the most likely location for roads and settlements."
+        },
+        "Activities": {
+            "Plot a course": "DC 10",
+            "Discover your position on a nautical chart": "DC 15"
+        }
+    }
+}

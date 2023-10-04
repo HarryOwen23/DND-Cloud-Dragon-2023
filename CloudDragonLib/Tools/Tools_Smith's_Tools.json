@@ -1,0 +1,23 @@
+﻿{
+    "Smith's Tools": {
+        "Description": "Smith's tools allow you to work metal, beating it to alter its shape, repair damage, or work raw ingots into useful items.",
+        "Components": {
+            "Smith's tools": {
+                "Hammers": true,
+                "Tongs": true,
+                "Charcoal": true,
+                "Rags": true,
+                "Whetstone": true
+            }
+        },
+        "Skills": {
+            "Arcana, History": "Your expertise lends you additional insight when examining metal objects, such as weapons.",
+            "Investigation": "You can spot clues and make deductions that others might overlook when an investigation involves armor, weapons, or other metalwork."
+        },
+        "Activities": {
+            "Sharpen a dull blade": "DC 10",
+            "Repair a suit of armor": "DC 15",
+            "Sunder a nonmagical metal object": "DC 15"
+        }
+    }
+}
