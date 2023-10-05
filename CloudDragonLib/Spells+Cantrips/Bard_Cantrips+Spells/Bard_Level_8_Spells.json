@@ -1,0 +1,29 @@
+﻿{
+    "8thLevelBardSpells": [
+        {
+            "Name": "Dominate Monster",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration."
+        },
+        {
+            "Name": "Feeblemind",
+            "School": "Enchantment",
+            "Description": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality."
+        },
+        {
+            "Name": "Glibness",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15."
+        },
+        {
+            "Name": "Mind Blank",
+            "School": "Abjuration",
+            "Description": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition."
+        },
+        {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is stunned."
+        }
+    ]
+}

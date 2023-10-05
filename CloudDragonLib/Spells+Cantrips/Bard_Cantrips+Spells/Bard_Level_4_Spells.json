@@ -1,0 +1,44 @@
+﻿{
+    "4thLevelBardSpells": [
+        {
+            "Name": "Compulsion",
+            "School": "Enchantment",
+            "Description": "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed."
+        },
+        {
+            "Name": "Confusion",
+            "School": "Enchantment",
+            "Description": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action."
+        },
+        {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Description": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired."
+        },
+        {
+            "Name": "Freedom of Movement",
+            "School": "Abjuration",
+            "Description": "For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained."
+        },
+        {
+            "Name": "Greater Invisibility",
+            "School": "Illusion",
+            "Description": "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person."
+        },
+        {
+            "Name": "Hallucinatory Terrain",
+            "School": "Illusion",
+            "Description": "You make natural terrain in a 150-foot cube in range look, sound, and even smell like some other sort of natural terrain."
+        },
+        {
+            "Name": "Locate Creature",
+            "School": "Divination",
+            "Description": "Describe or name a creature that is familiar to you. The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once."
+        },
+        {
+            "Name": "Polymorph",
+            "School": "Transmutation",
+            "Description": "This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect."
+        }
+    ]
+}
