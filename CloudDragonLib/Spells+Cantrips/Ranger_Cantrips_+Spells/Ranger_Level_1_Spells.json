@@ -1,14 +1,14 @@
 ﻿{
-    "RangerLevel1Spells": [
+    "1stLevelRangerSpells": [
         {
             "Name": "Alarm",
             "School": "Abjuration",
-            "Description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range."
+            "Description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube."
         },
         {
             "Name": "Animal Friendship",
             "School": "Enchantment",
-            "Description": "This spell lets you convince a beast that you mean it no harm."
+            "Description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range."
         },
         {
             "Name": "Cure Wounds",
@@ -26,9 +26,9 @@
             "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you."
         },
         {
-            "Name": "Entangle",
+            "Name": "Fog Cloud",
             "School": "Conjuration",
-            "Description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range."
+            "Description": "You create a 20-foot-radius sphere of fog centered on a point within range."
         },
         {
             "Name": "Goodberry",
@@ -38,7 +38,22 @@
         {
             "Name": "Hunter's Mark",
             "School": "Divination",
-            "Description": "Choose a creature you can see within range and mystically mark it as your quarry."
+            "Description": "You choose a creature you can see within range and mystically mark it as your quarry."
+        },
+        {
+            "Name": "Jump",
+            "School": "Transmutation",
+            "Description": "You touch a creature, and the creature's jump distance is tripled until the spell ends."
+        },
+        {
+            "Name": "Longstrider",
+            "School": "Transmutation",
+            "Description": "You touch a creature, and the target's speed increases by 10 feet until the spell ends."
+        },
+        {
+            "Name": "Speak with Animals",
+            "School": "Divination",
+            "Description": "You gain the ability to comprehend and verbally communicate with beasts for the duration."
         }
     ]
 }

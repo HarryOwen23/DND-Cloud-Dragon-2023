@@ -1,74 +1,14 @@
 ﻿{
-    "RangerLevel5Spells": [
-        {
-            "Name": "Antilife Shell",
-            "School": "Abjuration",
-            "Description": "A shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs."
-        },
-        {
-            "Name": "Awaken",
-            "School": "Transmutation",
-            "Description": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant."
-        },
+    "5thLevelRangerSpells": [
         {
             "Name": "Commune with Nature",
             "School": "Divination",
             "Description": "You briefly become one with nature and gain knowledge of the surrounding territory."
         },
         {
-            "Name": "Conjure Elemental",
-            "School": "Conjuration",
-            "Description": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range."
-        },
-        {
-            "Name": "Contagion",
-            "School": "Necromancy",
-            "Description": "Your touch inflicts disease."
-        },
-        {
-            "Name": "Geas",
-            "School": "Enchantment",
-            "Description": "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide."
-        },
-        {
-            "Name": "Greater Restoration",
-            "School": "Abjuration",
-            "Description": "You imbue a creature you touch with positive energy to undo a debilitating effect."
-        },
-        {
-            "Name": "Insect Plague",
-            "School": "Conjuration",
-            "Description": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range."
-        },
-        {
-            "Name": "Mass Cure Wounds",
-            "School": "Evocation",
-            "Description": "A wave of healing energy washes out from a point of your choice within range."
-        },
-        {
-            "Name": "Planar Binding",
-            "School": "Abjuration",
-            "Description": "With this spell, you attempt to bind a celestial, an elemental, a fey, or a fiend to your service."
-        },
-        {
-            "Name": "Reincarnate",
-            "School": "Transmutation",
-            "Description": "You touch a dead humanoid or a piece of a dead humanoid."
-        },
-        {
-            "Name": "Scrying",
-            "School": "Divination",
-            "Description": "You can see and hear a particular creature you choose that is on the same plane of existence as you."
-        },
-        {
             "Name": "Tree Stride",
             "School": "Conjuration",
             "Description": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet."
-        },
-        {
-            "Name": "Wall of Stone",
-            "School": "Evocation",
-            "Description": "A nonmagical wall of solid stone springs into existence at a point you choose within range."
         }
     ]
 }
