@@ -10,7 +10,6 @@
     <Folder Include="Spells+Cantrips\Wizard_Cantrips_+_Spells\" />
     <Folder Include="Spells+Cantrips\Warlock_Cantrips_+_Spells\" />
     <Folder Include="Spells+Cantrips\Sorcerer_Cantrips_+_Spells\" />
-    <Folder Include="Spells+Cantrips\Ranger_Cantrips_+Spells\" />
   </ItemGroup>
 
 </Project>

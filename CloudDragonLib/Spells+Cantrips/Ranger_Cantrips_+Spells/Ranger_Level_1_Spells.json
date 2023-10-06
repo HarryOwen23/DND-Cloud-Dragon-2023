@@ -1,0 +1,44 @@
+﻿{
+    "RangerLevel1Spells": [
+        {
+            "Name": "Alarm",
+            "School": "Abjuration",
+            "Description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range."
+        },
+        {
+            "Name": "Animal Friendship",
+            "School": "Enchantment",
+            "Description": "This spell lets you convince a beast that you mean it no harm."
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you."
+        },
+        {
+            "Name": "Detect Poison and Disease",
+            "School": "Divination",
+            "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you."
+        },
+        {
+            "Name": "Entangle",
+            "School": "Conjuration",
+            "Description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range."
+        },
+        {
+            "Name": "Goodberry",
+            "School": "Transmutation",
+            "Description": "Up to ten berries appear in your hand and are infused with magic for the duration."
+        },
+        {
+            "Name": "Hunter's Mark",
+            "School": "Divination",
+            "Description": "Choose a creature you can see within range and mystically mark it as your quarry."
+        }
+    ]
+}

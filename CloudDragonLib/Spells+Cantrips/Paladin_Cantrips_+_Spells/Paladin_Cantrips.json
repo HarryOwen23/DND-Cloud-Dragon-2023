@@ -1,0 +1,29 @@
+﻿{
+    "PaladinCantrips": [
+        {
+            "Name": "Blade Ward",
+            "School": "Abjuration",
+            "Description": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks."
+        },
+        {
+            "Name": "Light",
+            "School": "Evocation",
+            "Description": "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like."
+        },
+        {
+            "Name": "Sacred Flame",
+            "School": "Evocation",
+            "Description": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage."
+        },
+        {
+            "Name": "Spare the Dying",
+            "School": "Necromancy",
+            "Description": "You touch a living creature that has 0 hit points. The creature becomes stable."
+        },
+        {
+            "Name": "Thaumaturgy",
+            "School": "Transmutation",
+            "Description": "You manifest a minor wonder, a sign of supernatural power, within range."
+        }
+    ]
+}
