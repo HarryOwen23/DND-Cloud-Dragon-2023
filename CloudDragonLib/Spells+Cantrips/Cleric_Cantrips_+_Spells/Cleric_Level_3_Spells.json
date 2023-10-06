@@ -1,1 +1,99 @@
-﻿
+﻿{
+    "3rdLevelClericSpells": [
+        {
+            "Name": "Animate Dead",
+            "School": "Necromancy",
+            "Description": "This spell creates an undead servant to obey your spoken commands."
+        },
+        {
+            "Name": "Beacon of Hope",
+            "School": "Abjuration",
+            "Description": "This spell bestows hope and vitality. Choose any number of creatures within range."
+        },
+        {
+            "Name": "Bestow Curse",
+            "School": "Necromancy",
+            "Description": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration."
+        },
+        {
+            "Name": "Clairvoyance",
+            "School": "Divination",
+            "Description": "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you."
+        },
+        {
+            "Name": "Create Food and Water",
+            "School": "Conjuration",
+            "Description": "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range."
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range."
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends."
+        },
+        {
+            "Name": "Glyph of Warding",
+            "School": "Abjuration",
+            "Description": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest)."
+        },
+        {
+            "Name": "Magic Circle",
+            "School": "Abjuration",
+            "Description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range."
+        },
+        {
+            "Name": "Mass Healing Word",
+            "School": "Evocation",
+            "Description": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points."
+        },
+        {
+            "Name": "Meld into Stone",
+            "School": "Transmutation",
+            "Description": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration."
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice."
+        },
+        {
+            "Name": "Remove Curse",
+            "School": "Abjuration",
+            "Description": "At your touch, all curses affecting one creature or object end."
+        },
+        {
+            "Name": "Revivify",
+            "School": "Necromancy",
+            "Description": "You touch a creature that has died within the last minute."
+        },
+        {
+            "Name": "Sending",
+            "School": "Evocation",
+            "Description": "You send a short message of twenty-five words or less to a creature with which you are familiar."
+        },
+        {
+            "Name": "Speak with Dead",
+            "School": "Necromancy",
+            "Description": "You grant the semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose."
+        },
+        {
+            "Name": "Spirit Guardians",
+            "School": "Conjuration",
+            "Description": "You call forth spirits to protect you."
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears."
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground."
+        }
+    ]
+}

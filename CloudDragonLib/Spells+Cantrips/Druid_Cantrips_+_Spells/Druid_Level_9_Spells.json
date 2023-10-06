@@ -1,0 +1,24 @@
+﻿{
+    "9thLevelDruidSpells": [
+        {
+            "Name": "Foresight",
+            "School": "Divination",
+            "Description": "You touch a willing creature and bestow a limited ability to see into the immediate future."
+        },
+        {
+            "Name": "Shapechange",
+            "School": "Transmutation",
+            "Description": "You assume the form of a different creature for the duration."
+        },
+        {
+            "Name": "Storm of Vengeance",
+            "School": "Conjuration",
+            "Description": "A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet."
+        },
+        {
+            "Name": "True Resurrection",
+            "School": "Necromancy",
+            "Description": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age."
+        }
+    ]
+}
