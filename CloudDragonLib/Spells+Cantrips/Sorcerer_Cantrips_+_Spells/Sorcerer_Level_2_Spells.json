@@ -1,0 +1,109 @@
+﻿{
+    "SorcererLevel2Spells": [
+        {
+            "Name": "Alter Self",
+            "School": "Transmutation",
+            "Description": "You assume a different form."
+        },
+        {
+            "Name": "Blindness/Deafness",
+            "School": "Necromancy",
+            "Description": "You can blind or deafen a foe."
+        },
+        {
+            "Name": "Blur",
+            "School": "Illusion",
+            "Description": "Your body becomes blurred, shifting and wavering to all who can see you."
+        },
+        {
+            "Name": "Darkness",
+            "School": "Evocation",
+            "Description": "Magical darkness spreads from a point you choose within range."
+        },
+        {
+            "Name": "Darkvision",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature to grant it the ability to see in the dark."
+        },
+        {
+            "Name": "Detect Thoughts",
+            "School": "Divination",
+            "Description": "You gain insight into the thinking of one creature."
+        },
+        {
+            "Name": "Enhance Ability",
+            "School": "Transmutation",
+            "Description": "You touch a creature and bestow upon it a magical enhancement."
+        },
+        {
+            "Name": "Enlarge/Reduce",
+            "School": "Transmutation",
+            "Description": "You cause a creature or object you can see within range to grow larger or smaller for the duration."
+        },
+        {
+            "Name": "Gust of Wind",
+            "School": "Evocation",
+            "Description": "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose."
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "The target must succeed on a Wisdom saving throw or be paralyzed for the duration."
+        },
+        {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Description": "A creature you touch becomes invisible until the spell ends."
+        },
+        {
+            "Name": "Knock",
+            "School": "Transmutation",
+            "Description": "Choose an object that you can see within range."
+        },
+        {
+            "Name": "Levitate",
+            "School": "Transmutation",
+            "Description": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there."
+        },
+        {
+            "Name": "Mirror Image",
+            "School": "Illusion",
+            "Description": "Three illusory duplicates of yourself appear in your space."
+        },
+        {
+            "Name": "Misty Step",
+            "School": "Conjuration",
+            "Description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
+        },
+        {
+            "Name": "Scorching Ray",
+            "School": "Evocation",
+            "Description": "You create three rays of fire and hurl them at targets within range."
+        },
+        {
+            "Name": "See Invisibility",
+            "School": "Divination",
+            "Description": "For the duration, you see invisible creatures and objects as if they were visible."
+        },
+        {
+            "Name": "Shatter",
+            "School": "Evocation",
+            "Description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range."
+        },
+        {
+            "Name": "Spider Climb",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free."
+        },
+        {
+            "Name": "Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you."
+        },
+        {
+            "Name": "Web",
+            "School": "Conjuration",
+            "Description": "You conjure a mass of thick, sticky webbing at a point of your choice within range."
+        }
+    ]
+}

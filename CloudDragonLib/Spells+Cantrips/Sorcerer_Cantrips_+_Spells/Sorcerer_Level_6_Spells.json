@@ -1,0 +1,49 @@
+﻿{
+    "SorcererLevel6Spells": [
+        {
+            "Name": "Chain Lightning",
+            "School": "Evocation",
+            "Description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range."
+        },
+        {
+            "Name": "Circle of Death",
+            "School": "Necromancy",
+            "Description": "A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range."
+        },
+        {
+            "Name": "Disintegrate",
+            "School": "Transmutation",
+            "Description": "A thin green ray springs from your pointing finger to a target that you can see within range."
+        },
+        {
+            "Name": "Eyebite",
+            "School": "Necromancy",
+            "Description": "For the spell's duration, your eyes become an inky void imbued with dread power."
+        },
+        {
+            "Name": "Globe of Invulnerability",
+            "School": "Abjuration",
+            "Description": "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you."
+        },
+        {
+            "Name": "Mass Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you."
+        },
+        {
+            "Name": "Move Earth",
+            "School": "Transmutation",
+            "Description": "Choose an area of terrain no larger than 40 feet on a side within range."
+        },
+        {
+            "Name": "Sunbeam",
+            "School": "Evocation",
+            "Description": "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-line."
+        },
+        {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are."
+        }
+    ]
+}
