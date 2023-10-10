@@ -1,0 +1,39 @@
+﻿{
+    "WarlockCantrips": [
+        {
+            "Name": "Eldritch Blast",
+            "School": "Evocation",
+            "Description": "A beam of crackling energy streaks toward a creature within range."
+        },
+        {
+            "Name": "Chill Touch",
+            "School": "Necromancy",
+            "Description": "You create a ghostly, skeletal hand in the space of a creature within range."
+        },
+        {
+            "Name": "Mage Hand",
+            "School": "Conjuration",
+            "Description": "A spectral, floating hand appears at a point you choose within range."
+        },
+        {
+            "Name": "Minor Illusion",
+            "School": "Illusion",
+            "Description": "You create a sound or an image of an object within range that lasts for the duration."
+        },
+        {
+            "Name": "Poison Spray",
+            "School": "Conjuration",
+            "Description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm."
+        },
+        {
+            "Name": "Prestidigitation",
+            "School": "Transmutation",
+            "Description": "This spell is a minor magical trick that novice spellcasters use for practice."
+        },
+        {
+            "Name": "True Strike",
+            "School": "Divination",
+            "Description": "You extend your hand and point a finger at a target in range."
+        }
+    ]
+}

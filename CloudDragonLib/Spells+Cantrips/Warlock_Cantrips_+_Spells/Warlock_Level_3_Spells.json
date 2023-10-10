@@ -1,0 +1,59 @@
+﻿{
+    "WarlockLevel3Spells": [
+        {
+            "Name": "Counterspell",
+            "School": "Abjuration",
+            "Description": "You attempt to interrupt a creature in the process of casting a spell."
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends."
+        },
+        {
+            "Name": "Fear",
+            "School": "Illusion",
+            "Description": "You project a phantasmal image of a creature's worst fears."
+        },
+        {
+            "Name": "Fly",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration."
+        },
+        {
+            "Name": "Gaseous Form",
+            "School": "Transmutation",
+            "Description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud."
+        },
+        {
+            "Name": "Hypnotic Pattern",
+            "School": "Illusion",
+            "Description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range."
+        },
+        {
+            "Name": "Magic Circle",
+            "School": "Abjuration",
+            "Description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range."
+        },
+        {
+            "Name": "Major Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube."
+        },
+        {
+            "Name": "Remove Curse",
+            "School": "Abjuration",
+            "Description": "At your touch, all curses affecting one creature or object end."
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears."
+        },
+        {
+            "Name": "Vampiric Touch",
+            "School": "Necromancy",
+            "Description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds."
+        }
+    ]
+}

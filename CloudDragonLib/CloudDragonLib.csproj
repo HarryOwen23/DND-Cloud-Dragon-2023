@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Spells+Cantrips\Wizard_Cantrips_+_Spells\" />
-    <Folder Include="Spells+Cantrips\Warlock_Cantrips_+_Spells\" />
   </ItemGroup>
 
 </Project>
