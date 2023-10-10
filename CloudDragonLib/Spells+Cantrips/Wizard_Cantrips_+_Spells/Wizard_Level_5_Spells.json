@@ -1,0 +1,119 @@
+﻿{
+    "WizardLevel5Spells": [
+        {
+            "Name": "Animate Objects",
+            "School": "Transmutation",
+            "Description": "Objects come to life at your command."
+        },
+        {
+            "Name": "Arcane Hand",
+            "School": "Evocation",
+            "Description": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range."
+        },
+        {
+            "Name": "Cloudkill",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range."
+        },
+        {
+            "Name": "Cone of Cold",
+            "School": "Evocation",
+            "Description": "A blast of cold air erupts from your hands."
+        },
+        {
+            "Name": "Conjure Elemental",
+            "School": "Conjuration",
+            "Description": "You call forth an elemental servant."
+        },
+        {
+            "Name": "Contact Other Plane",
+            "School": "Divination",
+            "Description": "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane."
+        },
+        {
+            "Name": "Creation",
+            "School": "Illusion",
+            "Description": "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range."
+        },
+        {
+            "Name": "Dominate Person",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a humanoid that you can see within range."
+        },
+        {
+            "Name": "Dream",
+            "School": "Illusion",
+            "Description": "This spell shapes a creature's dreams."
+        },
+        {
+            "Name": "Geas",
+            "School": "Enchantment",
+            "Description": "You place a magical command on a creature that you can see within range."
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range."
+        },
+        {
+            "Name": "Legend Lore",
+            "School": "Divination",
+            "Description": "Name or describe a person, place, or object."
+        },
+        {
+            "Name": "Mislead",
+            "School": "Illusion",
+            "Description": "You become invisible at the same time that an illusory double of you appears where you are standing."
+        },
+        {
+            "Name": "Modify Memory",
+            "School": "Enchantment",
+            "Description": "You attempt to reshape another creature's memories."
+        },
+        {
+            "Name": "Passwall",
+            "School": "Transmutation",
+            "Description": "A passage appears at a point of your choice that you can see on a wooden, plaster, or stone surface."
+        },
+        {
+            "Name": "Planar Binding",
+            "School": "Abjuration",
+            "Description": "With this spell, you attempt to bind a celestial, an elemental, a fey, or a fiend to your service."
+        },
+        {
+            "Name": "Scrying",
+            "School": "Divination",
+            "Description": "You can see and hear a particular creature you choose that is on the same plane of existence as you."
+        },
+        {
+            "Name": "Seeming",
+            "School": "Illusion",
+            "Description": "This spell allows you to change the appearance of any number of creatures that you can see within range."
+        },
+        {
+            "Name": "Telekinesis",
+            "School": "Transmutation",
+            "Description": "You gain the ability to move or manipulate creatures or objects by thought."
+        },
+        {
+            "Name": "Telepathic Bond",
+            "School": "Divination",
+            "Description": "You forge a telepathic link among up to eight willing creatures of your choice within range."
+        },
+        {
+            "Name": "Teleportation Circle",
+            "School": "Conjuration",
+            "Description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you."
+        },
+        {
+            "Name": "Wall of Force",
+            "School": "Evocation",
+            "Description": "An invisible wall of force springs into existence at a point you choose within range."
+        },
+        {
+            "Name": "Wall of Stone",
+            "School": "Evocation",
+            "Description": "A nonmagical wall of solid stone springs into existence at a point you choose within range."
+        }
+    ]
+}

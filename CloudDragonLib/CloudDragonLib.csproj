@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Spells+Cantrips\Wizard_Cantrips_+_Spells\" />
-  </ItemGroup>
-
 </Project>

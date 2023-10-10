@@ -1,0 +1,79 @@
+﻿{
+    "WizardLevel7Spells": [
+        {
+            "Name": "Arcane Sword",
+            "School": "Evocation",
+            "Description": "You create a sword-shaped plane of force that hovers within range."
+        },
+        {
+            "Name": "Delayed Blast Fireball",
+            "School": "Evocation",
+            "Description": "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-long line."
+        },
+        {
+            "Name": "Etherealness",
+            "School": "Transmutation",
+            "Description": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane."
+        },
+        {
+            "Name": "Finger of Death",
+            "School": "Necromancy",
+            "Description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain."
+        },
+        {
+            "Name": "Forcecage",
+            "School": "Evocation",
+            "Description": "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range."
+        },
+        {
+            "Name": "Magnificent Mansion",
+            "School": "Conjuration",
+            "Description": "You conjure an extradimensional dwelling in range that lasts for the duration."
+        },
+        {
+            "Name": "Mirage Arcane",
+            "School": "Illusion",
+            "Description": "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain."
+        },
+        {
+            "Name": "Plane Shift",
+            "School": "Conjuration",
+            "Description": "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence."
+        },
+        {
+            "Name": "Prismatic Spray",
+            "School": "Evocation",
+            "Description": "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose."
+        },
+        {
+            "Name": "Project Image",
+            "School": "Illusion",
+            "Description": "You create an illusory copy of yourself that lasts for the duration."
+        },
+        {
+            "Name": "Reverse Gravity",
+            "School": "Transmutation",
+            "Description": "This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range."
+        },
+        {
+            "Name": "Sequester",
+            "School": "Transmutation",
+            "Description": "By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration."
+        },
+        {
+            "Name": "Simulacrum",
+            "School": "Illusion",
+            "Description": "You shape an illusory duplicate of one beast or humanoid that is within range for the entire casting time of the spell."
+        },
+        {
+            "Name": "Symbol",
+            "School": "Abjuration",
+            "Description": "When you cast this spell, you inscribe a harmful glyph either on a surface (such as a section of floor, a wall, or a table) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph."
+        },
+        {
+            "Name": "Teleport",
+            "School": "Conjuration",
+            "Description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select."
+        }
+    ]
+}
