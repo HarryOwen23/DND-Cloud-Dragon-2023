@@ -10,3 +10,4 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\n
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\refint\CloudDragonLib.dll
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.pdb
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\ref\CloudDragonLib.dll
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_ Paladin.json

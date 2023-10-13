@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jzs7EXZXgX32r3hu6ndHOPjV60cgh4KOS4IJQ5Pags8D37UNgN0hcIOh98QJfrymhaaJsBYoCpfOuRiiKdjCfQ==",
+  "dgSpecHash": "QGf7upmYIN6nJt+Y7qHUR6/a0Z+jx44wXLfa8uHh85zitxBH2dJG59gTPIToVvK8qddUasOLpOl08xP45Ek9NQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HarryOwen\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
