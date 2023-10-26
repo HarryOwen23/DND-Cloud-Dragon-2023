@@ -18,3 +18,5 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.pdb
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.genruntimeconfig.cache
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\ref\CloudDragon.dll
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Currency\Currency_Coins.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Currency\Currency_Gemstones.json

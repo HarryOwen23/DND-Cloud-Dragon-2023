@@ -98,9 +98,10 @@ namespace CloudDragon
         [JsonPropertyName("Archetype Feature Description")]
         public List<object> FeatureDescription { get; set; }
     }
-    internal class Program
+
+    internal class CharacterLoader : ILoader
     {
-        static void Main(string[] args)
+        void ILoader.Load()
         {
             Console.WriteLine("Loading Cloud Dragon ....");
 
@@ -110,7 +111,7 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
 
-                var cloudDragonData = JsonSerializer.Deserialize<List<CloudDragonData>>(jsonData);
+                var cloudDragonData = JsonSerializer.Deserialize<List<Character_Class>>(jsonData);
 
                 // Access and display some properties
                 Console.WriteLine($"Class Name: {cloudDragonData[0].ClassName}");
@@ -157,6 +158,20 @@ namespace CloudDragon
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
             }
+        }
+    }
+    
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            ILoader currencyLoader = new CurrencyLoader();
+            currencyLoader.Load();
+
+            //ILoader characterLoader = new CharacterLoader();
+            //characterLoader.Load();
+
         }
     }
 }

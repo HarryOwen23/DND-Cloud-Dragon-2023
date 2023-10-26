@@ -38,15 +38,17 @@ namespace CloudDragon
 
     internal class Currency_Json_Loader
     {
-        public static Currency LoadCurrencyData(string jsonFilePath)
+        public static Currency LoadCurrencyData(string jsonFilePathGems, string jsonFilePathCoins)
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
+                string jsonDataGems = File.ReadAllText(jsonFilePathGems);
+                string jsonDataCoins = File.ReadAllText(jsonFilePathCoins);
 
-                var currencyData = JsonSerializer.Deserialize<Currency>(jsonData);
+                var currencyDataGems= JsonSerializer.Deserialize<Currency>(jsonDataGems);
+                var currencyDataCoins= JsonSerializer.Deserialize<Currency>(jsonDataCoins);
 
-                return currencyData;
+                return new Currency { Coins = currencyDataCoins.Coins, Gemstones = currencyDataGems.Gemstones};
             }
             catch (Exception e)
             {
@@ -55,15 +57,21 @@ namespace CloudDragon
             }
         }
     }
-    internal class CurrencyLoader
+
+    internal interface ILoader
     {
-        static void Main(string[] args)
+        void Load();
+    }
+    internal class CurrencyLoader : ILoader
+    {
+        void ILoader.Load()
         {
             Console.WriteLine("Loading Cloud Dragon ....");
 
-            string jsonFilePath = "path_to_your_combined_currency_data.json";
+            string jsonFilePathGems = "Currency\\Currency_Gemstones.json";
+            string jsonFilePathCoins = "Currency\\Currency_Coins.json";
 
-            var currencyData = Currency_Json_Loader.LoadCurrencyData(jsonFilePath);
+            var currencyData = Currency_Json_Loader.LoadCurrencyData(jsonFilePathGems, jsonFilePathCoins);
 
             if (currencyData != null)
             {
