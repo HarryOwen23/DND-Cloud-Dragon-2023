@@ -1,0 +1,29 @@
+﻿{
+    "SorcererLevel9Spells": [
+        {
+            "Name": "Gate",
+            "School": "Conjuration",
+            "Description": "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence."
+        },
+        {
+            "Name": "Meteor Swarm",
+            "School": "Evocation",
+            "Description": "Blazing orbs of fire plummet to the ground at four different points you can see within range."
+        },
+        {
+            "Name": "Power Word Kill",
+            "School": "Enchantment",
+            "Description": "You utter a word of power that can compel one creature you can see within range to die instantly."
+        },
+        {
+            "Name": "Time Stop",
+            "School": "Transmutation",
+            "Description": "You briefly stop the flow of time for everyone but yourself."
+        },
+        {
+            "Name": "Wish",
+            "School": "Conjuration",
+            "Description": "Desire is the most powerful spell a mortal creature can cast."
+        }
+    ]
+}

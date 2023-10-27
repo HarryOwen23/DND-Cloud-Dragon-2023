@@ -1,0 +1,39 @@
+﻿{
+    "DruidCantrips": [
+        {
+            "Name": "Druidcraft",
+            "School": "Transmutation",
+            "Description": "Whispering to the spirits of nature, you create one of the following effects within range."
+        },
+        {
+            "Name": "Produce Flame",
+            "School": "Conjuration",
+            "Description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment."
+        },
+        {
+            "Name": "Shillelagh",
+            "School": "Transmutation",
+            "Description": "The wood of a club or quarterstaff you are holding is imbued with nature's power."
+        },
+        {
+            "Name": "Guidance",
+            "School": "Divination",
+            "Description": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice."
+        },
+        {
+            "Name": "Mending",
+            "School": "Transmutation",
+            "Description": "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin."
+        },
+        {
+            "Name": "Poison Spray",
+            "School": "Conjuration",
+            "Description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm."
+        },
+        {
+            "Name": "Resistance",
+            "School": "Abjuration",
+            "Description": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice."
+        }
+    ]
+}

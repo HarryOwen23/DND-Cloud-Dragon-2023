@@ -1,0 +1,50 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Athlete",
+            "Description": "You are a skilled athlete who has excelled in physical competitions and sports. You might have been a professional athlete, a celebrated champion, or a rising star in your chosen sport before you became an adventurer.",
+            "Skill Proficiencies": [ "Athletics", "Acrobatics" ],
+            "Languages": [ "One of your choice" ],
+            "Starting Equipment": [
+                "A set of athletic clothing",
+                "A trophy or award from your past athletic career",
+                "A water skin",
+                "A pouch containing 10 gold pieces"
+            ],
+            "Feature": "Athletic Prowess",
+            "Feature Description": "Your physical training and athletic abilities give you an edge in physical challenges. You have advantage on Strength (Athletics) checks and Dexterity (Acrobatics) checks related to physical feats and competitions. Additionally, you can earn a modest living through your athletic skills, such as by performing in exhibitions, teaching sports, or participating in competitions."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am competitive by nature and always strive to be the best at what I do.",
+        "2. I am disciplined and dedicated to my physical training and strive for constant improvement.",
+        "3. I love the thrill of physical challenges and am always seeking new contests to test my abilities.",
+        "4. I am confident in my skills and enjoy showing off my athletic prowess to others.",
+        "5. I am a team player and value cooperation and camaraderie with my fellow adventurers.",
+        "6. I can be a bit of a show-off, especially when it comes to my athletic abilities."
+    ],
+    "Ideals": [
+        "1. Excellence: I strive for excellence in all things and aim to be the best I can be. (Any)",
+        "2. Competition: I live for the thrill of competition and seek out challenges to prove my skills. (Chaotic)",
+        "3. Sportsmanship: I believe in fair play, respect for opponents, and upholding the spirit of the game. (Good)",
+        "4. Glory: I am driven by the desire for fame, recognition, and the adoration of fans. (Any)",
+        "5. Teamwork: I value teamwork and believe that together, we can achieve greatness. (Lawful)",
+        "6. Fun: I view athletics as a way to have fun and enjoy life to the fullest. (Chaotic)"
+    ],
+    "Bonds": [
+        "1. My coach or mentor played a significant role in my life, and I owe my success to their guidance.",
+        "2. I have a loyal fan or supporter who follows me on my adventures and cheers me on from afar.",
+        "3. I am part of a sports team or league, and my teammates are like family to me.",
+        "4. I have a friendly rivalry with a fellow athlete, and we constantly push each other to improve.",
+        "5. I have a sports-related goal or dream that I am determined to achieve.",
+        "6. I once faced a humiliating defeat that still haunts me, and I am determined to redeem myself."
+    ],
+    "Flaws": [
+        "1. I can be overly competitive and struggle to accept defeat gracefully.",
+        "2. I sometimes prioritize my athletic pursuits over other responsibilities and commitments.",
+        "3. I have a short temper, especially when I perceive unfairness or cheating in sports.",
+        "4. I can be reckless in my pursuit of physical challenges, risking injury or harm to myself and others.",
+        "5. I have a tendency to boast about my athletic accomplishments, which can rub people the wrong way.",
+        "6. I can be overly superstitious, believing in rituals and lucky charms to improve my performance."
+    ]
+}

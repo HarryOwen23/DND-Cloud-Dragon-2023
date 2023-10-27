@@ -1,0 +1,24 @@
+﻿{
+    "WarlockLevel4Spells": [
+        {
+            "Name": "Banishment",
+            "School": "Abjuration",
+            "Description": "You attempt to send one creature that you can see within range to another plane of existence."
+        },
+        {
+            "Name": "Blight",
+            "School": "Necromancy",
+            "Description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it."
+        },
+        {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Description": "You teleport yourself from your current location to any other spot within range."
+        },
+        {
+            "Name": "Hallucinatory Terrain",
+            "School": "Illusion",
+            "Description": "You make natural terrain in a 150-foot cube in range look, sound, and even smell like some other sort of natural terrain."
+        }
+    ]
+}

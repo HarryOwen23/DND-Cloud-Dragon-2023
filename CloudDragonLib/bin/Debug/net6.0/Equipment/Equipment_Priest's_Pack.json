@@ -1,0 +1,45 @@
+{
+    "Pack Name": "Priest's Pack",
+    "Contents": [
+        {
+            "Item": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Blanket",
+            "Quantity": 1
+        },
+        {
+            "Item": "Candle",
+            "Quantity": 10
+        },
+        {
+            "Item": "Tinderbox",
+            "Quantity": 1
+        },
+        {
+            "Item": "Alms Box",
+            "Quantity": 1
+        },
+        {
+            "Item": "Incense (block)",
+            "Quantity": 2
+        },
+        {
+            "Item": "Censer",
+            "Quantity": 1
+        },
+        {
+            "Item": "Vestments",
+            "Quantity": 1
+        },
+        {
+            "Item": "Rations (2 days)",
+            "Quantity": 2
+        },
+        {
+            "Item": "Waterskin",
+            "Quantity": 1
+        }
+    ]
+}

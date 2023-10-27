@@ -1,0 +1,44 @@
+﻿{
+    "2ndLevelPaladinSpells": [
+        {
+            "Name": "Aid",
+            "School": "Abjuration",
+            "Description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration."
+        },
+        {
+            "Name": "Branding Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike."
+        },
+        {
+            "Name": "Find Steed",
+            "School": "Conjuration",
+            "Description": "You summon a loyal steed that serves you as a mount, allowing you to travel at a fast pace."
+        },
+        {
+            "Name": "Lesser Restoration",
+            "School": "Abjuration",
+            "Description": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned."
+        },
+        {
+            "Name": "Locate Object",
+            "School": "Divination",
+            "Description": "Describe or name an object that is familiar to you. You sense the direction to the object's location as long as that object is within 1,000 feet of you."
+        },
+        {
+            "Name": "Magic Weapon",
+            "School": "Transmutation",
+            "Description": "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls."
+        },
+        {
+            "Name": "Protection from Poison",
+            "School": "Abjuration",
+            "Description": "You touch a creature. If it is poisoned, you neutralize the poison."
+        },
+        {
+            "Name": "Zone of Truth",
+            "School": "Enchantment",
+            "Description": "You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range."
+        }
+    ]
+}

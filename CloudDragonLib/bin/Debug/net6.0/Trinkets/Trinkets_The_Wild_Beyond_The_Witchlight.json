@@ -1,0 +1,404 @@
+{
+    "Trinkets": [
+        {
+            "Dice Number": 1,
+            "Feywild Trinket": "Cookie cutter shaped like a unicorn"
+        },
+        {
+            "Dice Number": 2,
+            "Feywild Trinket": "Two yew rings linked together"
+        },
+        {
+            "Dice Number": 3,
+            "Feywild Trinket": "Silver hand mirror with a nymph-shaped handle"
+        },
+        {
+            "Dice Number": 4,
+            "Feywild Trinket": "Painted wooden key whose teeth change configuration every day at dawn"
+        },
+        {
+            "Dice Number": 5,
+            "Feywild Trinket": "Delicate silver cameo with pictures of twin children opposite one another"
+        },
+        {
+            "Dice Number": 6,
+            "Feywild Trinket": "Golden pendant charm shaped like a leprechaun"
+        },
+        {
+            "Dice Number": 7,
+            "Feywild Trinket": "Tiny wooden box containing a croquet set sized for pixies or sprites"
+        },
+        {
+            "Dice Number": 8,
+            "Feywild Trinket": "Tiny pair of sharp, iron scissors"
+        },
+        {
+            "Dice Number": 9,
+            "Feywild Trinket": "Chess piece shaped like a dancing satyr wearing a bishop's hat and clutching a gnarled staff"
+        },
+        {
+            "Dice Number": 10,
+            "Feywild Trinket": "Saltshaker shaped like a wizard's tower"
+        },
+        {
+            "Dice Number": 11,
+            "Feywild Trinket": "Crystal orb that allows an elf who holds it to sleep"
+        },
+        {
+            "Dice Number": 12,
+            "Feywild Trinket": "Pendant that shows the phases of the moon"
+        },
+        {
+            "Dice Number": 13,
+            "Feywild Trinket": "Large iron fingernail"
+        },
+        {
+            "Dice Number": 14,
+            "Feywild Trinket": "Tiny electrum whistle that only Fey can hear"
+        },
+        {
+            "Dice Number": 15,
+            "Feywild Trinket": "Wooden jigsaw puzzle piece as big as a saucer, with a painted image of a jug on it"
+        },
+        {
+            "Dice Number": 16,
+            "Feywild Trinket": "Spool of glistening silver thread"
+        },
+        {
+            "Dice Number": 17,
+            "Feywild Trinket": "Sheet of music that goblins find upsetting when they hear it played or sung"
+        },
+        {
+            "Dice Number": 18,
+            "Feywild Trinket": "Rotten ogre's tooth with the Elvish glyph for 'moon' etched into it"
+        },
+        {
+            "Dice Number": 19,
+            "Feywild Trinket": "Vitrified eye of a displacer beast"
+        },
+        {
+            "Dice Number": 20,
+            "Feywild Trinket": "Tiny duskwood coffin containing the ashes of a troll"
+        },
+        {
+            "Dice Number": 21,
+            "Feywild Trinket": "Old invitation to a banquet in the Summer Court, written in ink on vellum in Sylvan"
+        },
+        {
+            "Dice Number": 22,
+            "Feywild Trinket": "Gossamer shawl that glows faintly in moonlight"
+        },
+        {
+            "Dice Number": 23,
+            "Feywild Trinket": "Ball-and-cup toy that plays a short, victorious jingle whenever the ball lands in the cup"
+        },
+        {
+            "Dice Number": 24,
+            "Feywild Trinket": "Sprite's skull covered in ink fingerprints"
+        },
+        {
+            "Dice Number": 25,
+            "Feywild Trinket": "Silver fork with the outer tines bent sideways"
+        },
+        {
+            "Dice Number": 26,
+            "Feywild Trinket": "A soot-stained sock in which a nugget of coal magically appears each day at dawn"
+        },
+        {
+            "Dice Number": 27,
+            "Feywild Trinket": "Tiny wooden stool (sized for a pixie or sprite) that gives splinters to those who hold it"
+        },
+        {
+            "Dice Number": 28,
+            "Feywild Trinket": "Tiny clockwork dragonfly that slowly beats its wings (but can't fly) when wound up"
+        },
+        {
+            "Dice Number": 29,
+            "Feywild Trinket": "Toy unicorn made of wood, painted with bright colors"
+        },
+        {
+            "Dice Number": 30,
+            "Feywild Trinket": "Pixie plushie that sings when you squeeze it"
+        },
+        {
+            "Dice Number": 31,
+            "Feywild Trinket": "1-inch-square painting of a sleeping elf"
+        },
+        {
+            "Dice Number": 32,
+            "Feywild Trinket": "Thimble that helps you daydream when worn"
+        },
+        {
+            "Dice Number": 33,
+            "Feywild Trinket": "Pumpkin cupcake that magically regenerates itself in its paper cup each day at dawn"
+        },
+        {
+            "Dice Number": 34,
+            "Feywild Trinket": "Fake Three-Dragon Ante card depicting a faerie dragon"
+        },
+        {
+            "Dice Number": 35,
+            "Feywild Trinket": "Teacup made from a varnished mushroom cap that magically keeps its liquid contents lukewarm"
+        },
+        {
+            "Dice Number": 36,
+            "Feywild Trinket": "Rock that floats and is small enough to hide in your closed fist"
+        },
+        {
+            "Dice Number": 37,
+            "Feywild Trinket": "Tiny bottle filled with rainwater collected from the Feywild"
+        },
+        {
+            "Dice Number": 38,
+            "Feywild Trinket": "Opalescent conch shell that laughs when you hold it to your ear"
+        },
+        {
+            "Dice Number": 39,
+            "Feywild Trinket": "Vial of viscous liquid labeled 'Fomorian spit. Do not drink!'"
+        },
+        {
+            "Dice Number": 40,
+            "Feywild Trinket": "Wax candle that roars and crackles like a bonfire while lit"
+        },
+        {
+            "Dice Number": 41,
+            "Feywild Trinket": "Potted daffodil that sways when near a source of music"
+        },
+        {
+            "Dice Number": 42,
+            "Feywild Trinket": "8-ounce, glass wine bottle that magically reassembles itself 1 minute after being broken"
+        },
+        {
+            "Dice Number": 43,
+            "Feywild Trinket": "Tiny wooden sylph figurehead from a model ship"
+        },
+        {
+            "Dice Number": 44,
+            "Feywild Trinket": "Tiny pumpkin-shaped cauldron carved out of bog oak"
+        },
+        {
+            "Dice Number": 45,
+            "Feywild Trinket": "Bar of soap that smells like something memorable from your childhood"
+        },
+        {
+            "Dice Number": 46,
+            "Feywild Trinket": "Piece of orange parchment folded to look like a knight astride a unicorn"
+        },
+        {
+            "Dice Number": 47,
+            "Feywild Trinket": "Tinted glasses so dark that they can't be seen through"
+        },
+        {
+            "Dice Number": 48,
+            "Feywild Trinket": "8-inch-long glass ant figurine"
+        },
+        {
+            "Dice Number": 49,
+            "Feywild Trinket": "Piece of parchment bearing a child's drawing of an oni"
+        },
+        {
+            "Dice Number": 50,
+            "Feywild Trinket": "Tiny hourglass without sand in it"
+        },
+        {
+            "Dice Number": 51,
+            "Feywild Trinket": "Empty vial with corked ends at the top and bottom"
+        },
+        {
+            "Dice Number": 52,
+            "Feywild Trinket": "Pair of green leprechaun boots tied together by their laces"
+        },
+        {
+            "Dice Number": 53,
+            "Feywild Trinket": "Smoking pipe made from a tree root"
+        },
+        {
+            "Dice Number": 54,
+            "Feywild Trinket": "Red cap that droops down to one's shoulders when worn"
+        },
+        {
+            "Dice Number": 55,
+            "Feywild Trinket": "Mask that helps you remember your dreams if you wear it while you sleep"
+        },
+        {
+            "Dice Number": 56,
+            "Feywild Trinket": "Notebook that shows what's written on it only when held upside down"
+        },
+        {
+            "Dice Number": 57,
+            "Feywild Trinket": "Wooden top with four sides, each bearing the image of children enjoying a different season"
+        },
+        {
+            "Dice Number": 58,
+            "Feywild Trinket": "Tiny beehive wig made for sprites or pixies"
+        },
+        {
+            "Dice Number": 59,
+            "Feywild Trinket": "Wooden mouse figurine that squeaks when held"
+        },
+        {
+            "Dice Number": 60,
+            "Feywild Trinket": "Stuffed oni doll with a creepy smile and one missing eye"
+        },
+        {
+            "Dice Number": 61,
+            "Feywild Trinket": "Empty bag labeled 'Candy'"
+        },
+        {
+            "Dice Number": 62,
+            "Feywild Trinket": "Tinted glass monocle that makes things look green"
+        },
+        {
+            "Dice Number": 63,
+            "Feywild Trinket": "Black executioner's hood sized for a pixie or sprite"
+        },
+        {
+            "Dice Number": 64,
+            "Feywild Trinket": "Piano key carved from a satyr's horn"
+        },
+        {
+            "Dice Number": 65,
+            "Feywild Trinket": "Tiny wooden lute with cat hairs for strings"
+        },
+        {
+            "Dice Number": 66,
+            "Feywild Trinket": "Iron needle with an eye that refuses to let thread pass through it"
+        },
+        {
+            "Dice Number": 67,
+            "Feywild Trinket": "Tiny sundial that casts a shadow only in moonlight"
+        },
+        {
+            "Dice Number": 68,
+            "Feywild Trinket": "Wooden pan flute that attracts harmless local fauna when played"
+        },
+        {
+            "Dice Number": 69,
+            "Feywild Trinket": "Silvered pinecone"
+        },
+        {
+            "Dice Number": 70,
+            "Feywild Trinket": "Flask of spectral glowworms that change color to reflect the mood of the flask's holder"
+        },
+        {
+            "Dice Number": 71,
+            "Feywild Trinket": "Wooden apple painted blue"
+        },
+        {
+            "Dice Number": 72,
+            "Feywild Trinket": "Tuning fork that sounds the tone for the F key"
+        },
+        {
+            "Dice Number": 73,
+            "Feywild Trinket": "Nunchaku sized for a pixie or sprite"
+        },
+        {
+            "Dice Number": 74,
+            "Feywild Trinket": "Copper coin with a smiling satyr's face on one side and a satyr's skull on the other"
+        },
+        {
+            "Dice Number": 75,
+            "Feywild Trinket": "Severed chicken's foot attached to a leather cord"
+        },
+        {
+            "Dice Number": 76,
+            "Feywild Trinket": "Collection of baby teeth in a tiny wooden box"
+        },
+        {
+            "Dice Number": 77,
+            "Feywild Trinket": "Pinwheel whirligig that spins even when there's no wind"
+        },
+        {
+            "Dice Number": 78,
+            "Feywild Trinket": "Child's parasol covered in moss and leaves"
+        },
+        {
+            "Dice Number": 79,
+            "Feywild Trinket": "Wooden magnifying glass missing its lens"
+        },
+        {
+            "Dice Number": 80,
+            "Feywild Trinket": "Glossy mushroom with a red, bell-shaped cap that jingles when shook"
+        },
+        {
+            "Dice Number": 81,
+            "Feywild Trinket": "Pouch of seeds that smell like home"
+        },
+        {
+            "Dice Number": 82,
+            "Feywild Trinket": "Petrified robin's egg"
+        },
+        {
+            "Dice Number": 83,
+            "Feywild Trinket": "Wooden spoon with a hole in the center"
+        },
+        {
+            "Dice Number": 84,
+            "Feywild Trinket": "Paper wasp nest in a jar"
+        },
+        {
+            "Dice Number": 85,
+            "Feywild Trinket": "Sprig of rosemary wrapped with ribbon at one end"
+        },
+        {
+            "Dice Number": 86,
+            "Feywild Trinket": "Tiny, unfurnished dollhouse sized for a pixie child"
+        },
+        {
+            "Dice Number": 87,
+            "Feywild Trinket": "Paintbrush made entirely of ceramic-even the bristles"
+        },
+        {
+            "Dice Number": 88,
+            "Feywild Trinket": "Candlestick whose candlelight looks like a tiny, dancing fairy made of fire"
+        },
+        {
+            "Dice Number": 89,
+            "Feywild Trinket": "Spectacle frames in the shape of butterfly wings"
+        },
+        {
+            "Dice Number": 90,
+            "Feywild Trinket": "Set of false wooden teeth"
+        },
+        {
+            "Dice Number": 91,
+            "Feywild Trinket": "Tiny book of fairytales"
+        },
+        {
+            "Dice Number": 92,
+            "Feywild Trinket": "Rucksack in which one potato magically appears each day at dawn"
+        },
+        {
+            "Dice Number": 93,
+            "Feywild Trinket": "Pixie's winter jacket lined with fox fur"
+        },
+        {
+            "Dice Number": 94,
+            "Feywild Trinket": "Tasseled wine charm shaped like a sprite"
+        },
+        {
+            "Dice Number": 95,
+            "Feywild Trinket": "Weak magnetic wand"
+        },
+        {
+            "Dice Number": 96,
+            "Feywild Trinket": "100-sided die the size of a plum, cut from coal"
+        },
+        {
+            "Dice Number": 97,
+            "Feywild Trinket": "Glass slipper, missing its mate"
+        },
+        {
+            "Dice Number": 98,
+            "Feywild Trinket": "Tiny dreamcatcher"
+        },
+        {
+            "Dice Number": 99,
+            "Feywild Trinket": "Barbell sized for a pixie or sprite"
+        },
+        {
+            "Dice Number": 100,
+            "Feywild Trinket": "Music box that plays a sprightly tune you remember from your childhood"
+        }
+    ]
+}

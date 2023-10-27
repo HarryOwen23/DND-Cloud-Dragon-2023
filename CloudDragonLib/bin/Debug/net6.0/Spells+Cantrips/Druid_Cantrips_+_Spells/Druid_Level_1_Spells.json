@@ -1,0 +1,84 @@
+﻿{
+    "1stLevelDruidSpells": [
+        {
+            "Name": "Animal Friendship",
+            "School": "Enchantment",
+            "Description": "This spell lets you convince a beast that you mean it no harm."
+        },
+        {
+            "Name": "Charm Person",
+            "School": "Enchantment",
+            "Description": "You attempt to charm a humanoid you can see within range."
+        },
+        {
+            "Name": "Create or Destroy Water",
+            "School": "Transmutation",
+            "Description": "You either create or destroy water."
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you."
+        },
+        {
+            "Name": "Detect Poison and Disease",
+            "School": "Divination",
+            "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases."
+        },
+        {
+            "Name": "Entangle",
+            "School": "Conjuration",
+            "Description": "Grasping weeds and vines sprout from the ground in a 20-foot square."
+        },
+        {
+            "Name": "Faerie Fire",
+            "School": "Evocation",
+            "Description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light."
+        },
+        {
+            "Name": "Fog Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of fog centered on a point within range."
+        },
+        {
+            "Name": "Goodberry",
+            "School": "Transmutation",
+            "Description": "Up to ten berries appear in your hand and are infused with magic for the duration."
+        },
+        {
+            "Name": "Healing Word",
+            "School": "Evocation",
+            "Description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Jump",
+            "School": "Transmutation",
+            "Description": "You touch a creature. The creature's jump distance is tripled until the spell ends."
+        },
+        {
+            "Name": "Longstrider",
+            "School": "Transmutation",
+            "Description": "You touch a creature. The target's speed increases by 10 feet until the spell ends."
+        },
+        {
+            "Name": "Purify Food and Drink",
+            "School": "Transmutation",
+            "Description": "All nonmagical food and drink within a 5-foot radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease."
+        },
+        {
+            "Name": "Speak with Animals",
+            "School": "Divination",
+            "Description": "You gain the ability to comprehend and verbally communicate with beasts for the duration."
+        },
+        {
+            "Name": "Thunderwave",
+            "School": "Evocation",
+            "Description": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw."
+        }
+    ]
+}

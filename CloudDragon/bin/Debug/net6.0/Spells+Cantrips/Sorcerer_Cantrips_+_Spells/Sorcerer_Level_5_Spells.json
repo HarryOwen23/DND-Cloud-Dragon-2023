@@ -1,0 +1,59 @@
+﻿{
+    "SorcererLevel5Spells": [
+        {
+            "Name": "Animate Objects",
+            "School": "Transmutation",
+            "Description": "Objects come to life at your command."
+        },
+        {
+            "Name": "Cloudkill",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range."
+        },
+        {
+            "Name": "Cone of Cold",
+            "School": "Evocation",
+            "Description": "A blast of cold air erupts from your hands."
+        },
+        {
+            "Name": "Creation",
+            "School": "Illusion",
+            "Description": "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range."
+        },
+        {
+            "Name": "Dominate Person",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a humanoid that you can see within range."
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range."
+        },
+        {
+            "Name": "Insect Plague",
+            "School": "Conjuration",
+            "Description": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range."
+        },
+        {
+            "Name": "Seeming",
+            "School": "Illusion",
+            "Description": "This spell allows you to change the appearance of any number of creatures that you can see within range."
+        },
+        {
+            "Name": "Telekinesis",
+            "School": "Transmutation",
+            "Description": "You gain the ability to move or manipulate creatures or objects by thought."
+        },
+        {
+            "Name": "Teleportation Circle",
+            "School": "Conjuration",
+            "Description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know."
+        },
+        {
+            "Name": "Wall of Stone",
+            "School": "Evocation",
+            "Description": "A nonmagical wall of solid stone springs into existence at a point you choose within range."
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+﻿{
+    "SorcererLevel3Spells": [
+        {
+            "Name": "Blink",
+            "School": "Transmutation",
+            "Description": "Roll a d20 at the end of each of your turns for the duration of the spell."
+        },
+        {
+            "Name": "Clairvoyance",
+            "School": "Divination",
+            "Description": "You create an invisible sensor within range in a location familiar to you."
+        },
+        {
+            "Name": "Counterspell",
+            "School": "Abjuration",
+            "Description": "You attempt to interrupt a creature in the process of casting a spell."
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range."
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose any creature, object, or magical effect within range."
+        },
+        {
+            "Name": "Fear",
+            "School": "Illusion",
+            "Description": "You project a phantasmal image of a creature's worst fears."
+        },
+        {
+            "Name": "Fireball",
+            "School": "Evocation",
+            "Description": "A bright streak flashes from your pointing finger to a point you choose within range."
+        },
+        {
+            "Name": "Fly",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature."
+        },
+        {
+            "Name": "Gaseous Form",
+            "School": "Transmutation",
+            "Description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration."
+        },
+        {
+            "Name": "Haste",
+            "School": "Transmutation",
+            "Description": "Choose a willing creature that you can see within range."
+        },
+        {
+            "Name": "Hypnotic Pattern",
+            "School": "Illusion",
+            "Description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range."
+        },
+        {
+            "Name": "Lightning Bolt",
+            "School": "Evocation",
+            "Description": "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose."
+        },
+        {
+            "Name": "Major Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube."
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+        },
+        {
+            "Name": "Sleet Storm",
+            "School": "Conjuration",
+            "Description": "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range."
+        },
+        {
+            "Name": "Slow",
+            "School": "Transmutation",
+            "Description": "You alter time around up to six creatures of your choice in a 40-foot cube within range."
+        },
+        {
+            "Name": "Stinking Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range."
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears."
+        },
+        {
+            "Name": "Water Breathing",
+            "School": "Transmutation",
+            "Description": "This spell gives a maximum of ten willing creatures within range the ability to breathe underwater until the spell ends."
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground."
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "Pack Name": "Entertainer's Pack",
+    "Contents": [
+        {
+            "Item": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Bedroll",
+            "Quantity": 1
+        },
+        {
+            "Item": "Costume (of your choice)",
+            "Quantity": 1
+        },
+        {
+            "Item": "Candles",
+            "Quantity": 5
+        },
+        {
+            "Item": "Tinderbox",
+            "Quantity": 1
+        },
+        {
+            "Item": "Rations (5 days)",
+            "Quantity": 5
+        },
+        {
+            "Item": "Waterskin",
+            "Quantity": 1
+        },
+        {
+            "Item": "Disguise Kit",
+            "Quantity": 1
+        }
+    ]
+}

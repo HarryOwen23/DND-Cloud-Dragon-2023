@@ -1,0 +1,56 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Anthropologist",
+            "Description": "You are a scholar of cultures, customs, and societies, fascinated by the diversity of human civilizations. You have traveled to distant lands, observing and studying the beliefs, traditions, and behaviors of various people.",
+            "Skill Proficiencies": [ "Insight", "Religion" ],
+            "Languages": [ "Two of your choice" ],
+            "Starting Equipment": [
+                "A set of traveler's clothes",
+                "A diary filled with your observations",
+                "A trinket from the culture you've studied",
+                "A pouch containing 10 gold pieces"
+            ],
+            "Feature": "Cultural Chameleon",
+            "Feature Description": "Before becoming an adventurer, you spent much of your adult life away from your homeland, living among people different from your kin. You came to understand these foreign cultures and the ways of their people, who eventually treated you as one of their own. One culture had more of an influence on you than any other, shaping your beliefs and customs. Choose a race whose culture you've adopted."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am endlessly curious and eager to learn about new cultures and traditions.",
+        "2. I am a patient observer, willing to spend hours watching and listening to better understand people.",
+        "3. I have a knack for picking up languages and dialects quickly, making me a capable communicator.",
+        "4. I am respectful of cultural differences and always try to adapt to local customs.",
+        "5. I find it difficult to connect with people who don't share my passion for anthropology.",
+        "6. I have a tendency to take extensive notes on everything I encounter, sometimes to the annoyance of others."
+    ],
+    "Ideals": [
+        "1. Understanding: My goal is to foster understanding and respect between cultures. (Good)",
+        "2. Knowledge: I believe that knowledge is the key to harmony and progress. (Neutral)",
+        "3. Preservation: It is my duty to preserve and document the traditions of endangered cultures. (Lawful)",
+        "4. Discovery: I am driven by the desire to uncover the world's hidden cultures and secrets. (Chaotic)",
+        "5. Isolation: I prefer the company of ancient texts and artifacts to that of living people. (Neutral)",
+        "6. Ambition: I aim to become the world's foremost authority on cultures and societies. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a mentor who inspired my love for anthropology, and I seek to make them proud.",
+        "2. I am haunted by the memory of a cultural misunderstanding that had disastrous consequences.",
+        "3. I am in possession of a rare artifact from a distant culture, and I feel a deep responsibility to protect it.",
+        "4. My fascination with a specific culture has led me to form a deep bond with one of its members.",
+        "5. I owe a debt to the academic community that sponsored my early expeditions, and I must repay it.",
+        "6. I have a rival in the field of anthropology who constantly challenges and mocks my work."
+    ],
+    "Flaws": [
+        "1. I can become overly absorbed in my studies, neglecting other important aspects of life.",
+        "2. I can be overly critical of those who misunderstand or disrespect the cultures I study.",
+        "3. I am hesitant to form close bonds with others, fearing that they will hinder my research.",
+        "4. I have a tendency to jump to conclusions based on incomplete observations.",
+        "5. I am easily frustrated when others don't share my passion for anthropology.",
+        "6. I am prone to taking risks and putting myself in dangerous situations to gather information."
+    ],
+    "Cultural Chameleon": {
+        "Race Influence": "Choose a race whose culture you've adopted."
+    },
+    "Adept Linguist": {
+        "Description": "You can communicate with humanoids who don't speak any language you know. You must observe the humanoids interacting with one another for at least 1 day, after which you learn a handful of important words, expressions, and gestures – enough to communicate on a rudimentary level."
+    }
+}

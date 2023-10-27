@@ -1,0 +1,856 @@
+﻿{
+    "VeryRareMagicItems": [
+        {
+            "Name": "Abracadabrus",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This mysterious item has a variety of magical effects, but its true nature is unpredictable."
+        },
+        {
+            "Name": "Absorbing Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tattoo absorbs and stores spells cast at the wearer, which can be later released."
+        },
+        {
+            "Name": "All-Purpose Tool",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This versatile tool can transform into various forms to serve a wide range of functions."
+        },
+        {
+            "Name": "Amethyst Lodestone",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This lodestone provides guidance and divination when attuned to it."
+        },
+        {
+            "Name": "Ammunition, +1, +2, or +3",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "This ammunition enhances the damage of ranged weapons when used."
+        },
+        {
+            "Name": "Amulet of the Black Skull",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This amulet grants dark powers and necromantic abilities to the wearer."
+        },
+        {
+            "Name": "Amulet of the Devout",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This amulet enhances the wearer's devotion and grants divine blessings."
+        },
+        {
+            "Name": "Amulet of the Planes",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This amulet allows the wearer to travel between different planes of existence."
+        },
+        {
+            "Name": "Animated Shield",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This shield can move and defend its wearer even without their input."
+        },
+        {
+            "Name": "Arcane Cannon",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical cannon can launch destructive energy projectiles."
+        },
+        {
+            "Name": "Arcane Grimoire",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This grimoire contains a wealth of arcane knowledge and spells."
+        },
+        {
+            "Name": "Arcane Propulsion Arm",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This mechanical arm grants its user enhanced mobility and combat abilities."
+        },
+        {
+            "Name": "Armor, +1, +2, or +3",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This magical armor provides increased protection and reduces the wearer's vulnerability to attacks."
+        },
+        {
+            "Name": "Arrow of Slaying",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "This arrow is specially designed to slay a particular type of creature."
+        },
+        {
+            "Name": "Bag of Devouring",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This bag has an insatiable hunger and can consume objects placed inside it."
+        },
+        {
+            "Name": "Barrier Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tattoo creates a protective barrier around the wearer when activated."
+        },
+        {
+            "Name": "Battle Standard of Infernal Power",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This banner grants infernal powers and commands over demons to its bearer."
+        },
+        {
+            "Name": "Belt of Giant Strength",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This belt enhances the wearer's strength to that of a giant."
+        },
+        {
+            "Name": "Blade of the Medusa",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This blade can petrify foes with its gaze and transform them into stone."
+        },
+        {
+            "Name": "Bloodaxe",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This axe is fueled by the blood of its foes and can channel their life force."
+        },
+        {
+            "Name": "Bloodwell Vial",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This vial contains a pool of blood that can heal and strengthen its user when consumed."
+        },
+        {
+            "Name": "Bobbing Lily Pad",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This lily pad grants the ability to walk on water and provides a place to rest upon any body of water."
+        },
+        {
+            "Name": "Bracelet of Rock Magic",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This bracelet can manipulate and control earth and stone with its wearer's will."
+        },
+        {
+            "Name": "Candle of Invocation",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This candle can be used to invoke powerful beings and request their aid."
+        },
+        {
+            "Name": "Carpet of Flying",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This flying carpet allows the user to soar through the air at will."
+        },
+        {
+            "Name": "Cauldron of Rebirth",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This cauldron can resurrect the dead and restore life to fallen creatures."
+        },
+        {
+            "Name": "Chronolometer",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This timekeeping device allows the user to manipulate time and glimpse into the future."
+        },
+        {
+            "Name": "Cloak of Arachnida",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This cloak grants the wearer spider-like abilities and control over arachnids."
+        },
+        {
+            "Name": "Conch of Teleportation",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This conch can be blown to instantly transport the user to a known location."
+        },
+        {
+            "Name": "Constantori's Portrait",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical portrait allows communication with its depicted subject, even across great distances."
+        },
+        {
+            "Name": "Crystal Ball",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This crystal ball can be used for scrying and divination."
+        },
+        {
+            "Name": "Crystalline Chronicle",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This book chronicles events and knowledge of the past, present, and future."
+        },
+        {
+            "Name": "Dancing Sword",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword can dance and attack foes on its own when commanded."
+        },
+        {
+            "Name": "Demon Armor",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This cursed armor is infused with demonic power and can corrupt its wearer."
+        },
+        {
+            "Name": "Devastation Orb",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This orb can unleash destructive energies capable of mass destruction."
+        },
+        {
+            "Name": "Dimensional Loop",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This loop allows the wearer to manipulate and traverse through different dimensions."
+        },
+        {
+            "Name": "Dispelling Stone",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This stone can dispel magical effects and enchantments when activated."
+        },
+        {
+            "Name": "Dragon Scale Mail",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This armor is crafted from dragon scales and provides protection against dragon-related threats."
+        },
+        {
+            "Name": "Dragon Vessel",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This vessel can harness and control dragon breath attacks when attuned."
+        },
+        {
+            "Name": "Dragonhide Belt",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This belt is made from dragonhide and grants resistance to a specific type of damage."
+        },
+        {
+            "Name": "Dragon's Wrath Weapon",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This weapon channels the fury of dragons, allowing the user to unleash devastating breath attacks."
+        },
+        {
+            "Name": "Dragon-Touched Focus",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical focus is imbued with dragon essence and enhances spellcasting."
+        },
+        {
+            "Name": "Duskcrusher",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This weapon is forged from dusk and shadows, allowing the user to manipulate darkness and silence."
+        },
+        {
+            "Name": "Dwarven Plate",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This plate armor is finely crafted by dwarven smiths and offers exceptional protection."
+        },
+        {
+            "Name": "Dwarven Thrower",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This throwing weapon returns to its wielder when thrown and deals extra damage to giants."
+        },
+        {
+            "Name": "Dyrrn's Tentacle Whip",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This tentacle whip is a creation of the aberrant mind and can ensnare and control foes."
+        },
+        {
+            "Name": "Efreeti Bottle",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This bottle can summon a powerful efreeti to grant the user wishes."
+        },
+        {
+            "Name": "Eldritch Staff",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff channels eldritch energies and enhances spellcasting."
+        },
+        {
+            "Name": "Far Gear",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This gear allows the wearer to see and interact with distant locations as if they were nearby."
+        },
+        {
+            "Name": "Figurine of Wondrous Power",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This figurine can summon a magical creature when activated."
+        },
+        {
+            "Name": "Fish Suit",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This suit grants the wearer aquatic abilities and the appearance of a fish."
+        },
+        {
+            "Name": "Flying Citadel Helm",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This helm can transform into a flying citadel, providing a mobile fortress for its user."
+        },
+        {
+            "Name": "Frost Brand",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This icy blade deals cold damage and extinguishes flames."
+        },
+        {
+            "Name": "Ghost Step Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tattoo grants the ability to become incorporeal and pass through solid objects."
+        },
+        {
+            "Name": "Guild Keyrune",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This keyrune symbolizes membership in a powerful guild and grants various benefits."
+        },
+        {
+            "Name": "Helm of Brilliance",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This helm radiates light and fire, providing both illumination and powerful fire-based abilities."
+        },
+        {
+            "Name": "Helm of Devil Command",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This helm allows the wearer to command and control devils."
+        },
+        {
+            "Name": "Heward's Hireling Armor",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This enchanted armor can summon spectral hirelings to assist its wearer."
+        },
+        {
+            "Name": "Horn of Valhalla",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This horn can summon a group of berserkers to aid the user in battle."
+        },
+        {
+            "Name": "Horseshoes of a Zephyr",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "These horseshoes allow the user to walk on air and clouds."
+        },
+        {
+            "Name": "Hunter's Coat",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This coat grants the wearer enhanced tracking and hunting abilities."
+        },
+        {
+            "Name": "Illusionist's Bracers",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "These bracers enhance the user's illusion spells and deceive the senses."
+        },
+        {
+            "Name": "Ingot of the Skold Rune",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This ingot bears the Skold Rune and grants its user power over cold and ice."
+        },
+        {
+            "Name": "Instrument of the Bards",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This musical instrument enhances the user's musical talents and spellcasting."
+        },
+        {
+            "Name": "Ioun Stone",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "These magical stones orbit the user and grant various benefits."
+        },
+        {
+            "Name": "Kyrzin's Ooze",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This vial contains a dangerous ooze that can be unleashed upon foes."
+        },
+        {
+            "Name": "Last Stand Armor",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This armor is designed for the last stand and provides extraordinary protection."
+        },
+        {
+            "Name": "Lifewell Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tattoo contains a well of life energy that can heal and rejuvenate the user."
+        },
+        {
+            "Name": "Living Armor",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This armor is alive and can regenerate and adapt to its wearer's needs."
+        },
+        {
+            "Name": "Lord's Ensemble",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This ensemble grants the wearer the appearance and authority of a lord or lady."
+        },
+        {
+            "Name": "Manual of Bodily Health",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This manual can permanently enhance the user's constitution and health."
+        },
+        {
+            "Name": "Manual of Gainful Exercise",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This manual can permanently enhance the user's strength and physical prowess."
+        },
+        {
+            "Name": "Manual of Golems",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This manual contains the knowledge to create and control golems."
+        },
+        {
+            "Name": "Manual of Quickness of Action",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This manual can permanently enhance the user's agility and speed."
+        },
+        {
+            "Name": "Mirror of Life Trapping",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This mirror can trap the souls of those who gaze into it, holding them captive."
+        },
+        {
+            "Name": "Mirror of Reflected Pasts",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This mirror can show past events and memories, allowing the user to witness history."
+        },
+        {
+            "Name": "Moon Sickle",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sickle is infused with the power of the moon and can harness lunar energy."
+        },
+        {
+            "Name": "Navigation Orb",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This orb assists the user in navigation and provides insights into sea travel."
+        },
+        {
+            "Name": "Nine Lives Stealer",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This weapon can steal the life force of foes and grant additional lives to its user."
+        },
+        {
+            "Name": "Nolzur's Marvelous Pigments",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "These pigments can create objects and creatures when painted."
+        },
+        {
+            "Name": "Oathbow",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This bow is bound to its wielder and becomes more powerful against a sworn enemy."
+        },
+        {
+            "Name": "Oil of Sharpness",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This oil can enhance the sharpness and effectiveness of weapons."
+        },
+        {
+            "Name": "Orb of the Veil",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This orb can manipulate shadows and conceal its user from sight."
+        },
+        {
+            "Name": "Ornithopter of Flying",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This ornithopter allows its user to fly like a bird."
+        },
+        {
+            "Name": "Pennant of the Vind Rune",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This pennant grants its bearer the favor of the Vind Rune and protection from harm."
+        },
+        {
+            "Name": "Peregrine Mask",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This mask allows the user to transform into a falcon and gain its abilities."
+        },
+        {
+            "Name": "Polymorph Blade",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This blade can transform into different shapes and grant various abilities."
+        },
+        {
+            "Name": "Potion of Flying",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion grants the ability to fly for a limited duration."
+        },
+        {
+            "Name": "Potion of Healing",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion can be consumed to heal wounds and restore vitality."
+        },
+        {
+            "Name": "Potion of Invisibility",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion renders the user invisible for a limited duration."
+        },
+        {
+            "Name": "Potion of Longevity",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion extends the user's lifespan and grants vitality."
+        },
+        {
+            "Name": "Potion of Mind Control",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion allows the user to control the thoughts and actions of others temporarily."
+        },
+        {
+            "Name": "Potion of Possibility",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion grants the user the ability to manipulate probability and chance."
+        },
+        {
+            "Name": "Potion of Speed",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion enhances the user's speed and reflexes for a limited duration."
+        },
+        {
+            "Name": "Potion of Vitality",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This potion grants increased vitality and resistance to fatigue."
+        },
+        {
+            "Name": "Reincarnation Dust",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This dust can be used to bring creatures back to life, but with a new form."
+        },
+        {
+            "Name": "Rhythm Maker's Drum",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This drum grants the user the power to control and manipulate rhythms and emotions."
+        },
+        {
+            "Name": "Ring of Red Fury",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Description": "This ring is imbued with the fury of flames, enhancing fire-based abilities."
+        },
+        {
+            "Name": "Ring of Regeneration",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Description": "This ring grants rapid regeneration and healing to its wearer."
+        },
+        {
+            "Name": "Ring of Shooting Stars",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Description": "This ring can summon shooting stars to strike foes and grant protection."
+        },
+        {
+            "Name": "Ring of Telekinesis",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Description": "This ring grants telekinetic abilities and control over objects with the power of the mind."
+        },
+        {
+            "Name": "Robe of Scintillating Colors",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This robe shimmers with vibrant colors and can create dazzling light displays."
+        },
+        {
+            "Name": "Robe of Stars",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This robe is adorned with stars and grants various celestial abilities."
+        },
+        {
+            "Name": "Rod of Absorption",
+            "Type": "Rod",
+            "Attunement": "Attuned",
+            "Description": "This rod can absorb and store spells cast at it, which can be later released."
+        },
+        {
+            "Name": "Rod of Alertness",
+            "Type": "Rod",
+            "Attunement": "Attuned",
+            "Description": "This rod enhances the user's perception and alertness, even during rest."
+        },
+        {
+            "Name": "Rod of Security",
+            "Type": "Rod",
+            "Attunement": "-",
+            "Description": "This rod can create a secure extradimensional space for its user to rest and recover."
+        },
+        {
+            "Name": "Rod of the Pact Keeper, +1, +2, +3",
+            "Type": "Rod",
+            "Attunement": "Attuned",
+            "Description": "This rod enhances the power of warlocks and their pact magic abilities."
+        },
+        {
+            "Name": "Rotor of Return",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This rotor can teleport the user back to a designated location."
+        },
+        {
+            "Name": "Ruidium Armor",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This armor is crafted from ruidium and provides protection against chaos and disruption."
+        },
+        {
+            "Name": "Ruidium Shield",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This shield is made from ruidium and grants resistance to chaos and disruption."
+        },
+        {
+            "Name": "Ruidium Weapon",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This weapon is forged from ruidium and deals extra damage to chaotic creatures."
+        },
+        {
+            "Name": "Sapphire Buckler",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This buckler is embedded with sapphires and grants resistance to cold damage."
+        },
+        {
+            "Name": "Scaled Ornament",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This ornament is made from dragon scales and enhances the wearer's charisma."
+        },
+        {
+            "Name": "Scimitar of Speed",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This scimitar allows the user to make lightning-fast strikes in combat."
+        },
+        {
+            "Name": "Shard of the Ise Rune",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This shard bears the Ise Rune and grants its user power over ice and cold."
+        },
+        {
+            "Name": "Shield, +1, +2, +3",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "These shields provide enhanced protection against attacks."
+        },
+        {
+            "Name": "Sling Bullets of Althemone",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "These magical sling bullets deal extra damage and have a homing effect on targets."
+        },
+        {
+            "Name": "Speaking Stone",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This stone allows communication over great distances when activated."
+        },
+        {
+            "Name": "Spear of Backbiting",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This spear can retaliate against attackers by reflecting damage back at them."
+        },
+        {
+            "Name": "Spell Gem",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This gem can store and release a spell when activated."
+        },
+        {
+            "Name": "Spell Scroll",
+            "Type": "Scroll",
+            "Attunement": "-",
+            "Description": "This scroll contains a single-use spell that can be cast by anyone who reads it."
+        },
+        {
+            "Name": "Spellguard Shield",
+            "Type": "Armor",
+            "Attunement": "Attuned",
+            "Description": "This shield grants protection against spells and spell-like effects."
+        },
+        {
+            "Name": "Staff of Dunamancy",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff harnesses the powers of dunamancy and can manipulate time and reality."
+        },
+        {
+            "Name": "Staff of Fate",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff is tied to the threads of fate and can alter destiny."
+        },
+        {
+            "Name": "Staff of Fire",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff can unleash fiery spells and create walls of fire."
+        },
+        {
+            "Name": "Staff of Frost",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff can cast frosty spells and create icy barriers."
+        },
+        {
+            "Name": "Staff of Power",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff is a symbol of great magical power and grants various spellcasting abilities."
+        },
+        {
+            "Name": "Staff of Striking",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff can land powerful blows and deliver stunning strikes in combat."
+        },
+        {
+            "Name": "Staff of Thunder and Lightning",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff can call down thunder and lightning to smite foes."
+        },
+        {
+            "Name": "Steel",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This steel weapon is masterfully crafted for exceptional performance in combat."
+        },
+        {
+            "Name": "Sword of Sharpness",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword can deliver devastatingly precise strikes that sever limbs."
+        },
+        {
+            "Name": "Sword of the Paruns",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword is bound to its wielder and enhances combat abilities."
+        },
+        {
+            "Name": "Timepiece of Travel",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This timepiece allows the user to manipulate time and travel to different eras."
+        },
+        {
+            "Name": "Tome of Clear Thought",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This tome can permanently enhance the user's intelligence and mental acuity."
+        },
+        {
+            "Name": "Tome of Leadership and Influence",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This tome can permanently enhance the user's charisma and leadership skills."
+        },
+        {
+            "Name": "Tome of Understanding",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This tome can permanently enhance the user's wisdom and insight."
+        },
+        {
+            "Name": "Voyager Staff",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff enhances the user's exploration and navigation abilities."
+        },
+        {
+            "Name": "Wand of Polymorph",
+            "Type": "Wand",
+            "Attunement": "Attuned",
+            "Description": "This wand can transform creatures into different forms."
+        },
+        {
+            "Name": "Wand of the War Mage",
+            "Type": "Wand",
+            "Attunement": "Attuned",
+            "Description": "This wand enhances spellcasting and accuracy with ranged spells."
+        },
+        {
+            "Name": "Watchful Helm",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This helm grants the wearer enhanced perception and vigilance."
+        },
+        {
+            "Name": "Weapon, +1, +2, or +3",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "These weapons are magically enhanced for improved combat effectiveness."
+        },
+        {
+            "Name": "Wheel of Stars",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This wheel can manipulate the stars and celestial bodies to influence events."
+        }
+    ]
+}

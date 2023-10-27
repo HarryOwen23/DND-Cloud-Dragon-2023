@@ -1,0 +1,39 @@
+﻿{
+    "WarlockLevel1Spells": [
+        {
+            "Name": "Charm Person",
+            "School": "Enchantment",
+            "Description": "You attempt to charm a humanoid you can see within range."
+        },
+        {
+            "Name": "Comprehend Languages",
+            "School": "Divination",
+            "Description": "For the duration, you understand the literal meaning of any spoken language that you hear."
+        },
+        {
+            "Name": "Expeditious Retreat",
+            "School": "Transmutation",
+            "Description": "This spell allows you to move at an incredible pace."
+        },
+        {
+            "Name": "Hellish Rebuke",
+            "School": "Evocation",
+            "Description": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames."
+        },
+        {
+            "Name": "Illusory Script",
+            "School": "Illusion",
+            "Description": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion."
+        },
+        {
+            "Name": "Protection from Evil and Good",
+            "School": "Abjuration",
+            "Description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures."
+        },
+        {
+            "Name": "Unseen Servant",
+            "School": "Conjuration",
+            "Description": "This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command."
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Light Armor": [
+        {
+            "Name": "Padded",
+            "Armor Class (AC)": "11 + Dex modifier",
+            "Strength": "-",
+            "Stealth": "Disadvantage",
+            "Weight": "8 lb.",
+            "Cost": "5 gp"
+        },
+        {
+            "Name": "Leather",
+            "Armor Class (AC)": "11 + Dex modifier",
+            "Strength": "-",
+            "Stealth": "-",
+            "Weight": "10 lb.",
+            "Cost": "10 gp"
+        },
+        {
+            "Name": "Studded Leather",
+            "Armor Class (AC)": "12 + Dex Modifier",
+            "Strength": "-",
+            "Stealth": "-",
+            "Weight": "13 lb.",
+            "Cost": "45 gp"
+        }
+    ]
+}

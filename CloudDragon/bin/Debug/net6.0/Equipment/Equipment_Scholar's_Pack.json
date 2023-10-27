@@ -1,0 +1,33 @@
+{
+    "Pack Name": "Scholar's Pack",
+    "Contents": [
+        {
+            "Item": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Book of Lore",
+            "Quantity": 1
+        },
+        {
+            "Item": "Ink Bottle",
+            "Quantity": 1
+        },
+        {
+            "Item": "Ink Pen",
+            "Quantity": 1
+        },
+        {
+            "Item": "Parchment",
+            "Quantity": 10
+        },
+        {
+            "Item": "Little Bag of Sand",
+            "Quantity": 1
+        },
+        {
+            "Item": "Small Knife",
+            "Quantity": 1
+        }
+    ]
+}

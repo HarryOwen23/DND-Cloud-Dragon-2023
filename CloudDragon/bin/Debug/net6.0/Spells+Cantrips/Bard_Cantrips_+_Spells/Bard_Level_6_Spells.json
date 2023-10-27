@@ -1,0 +1,39 @@
+﻿{
+    "6thLevelBardSpells": [
+        {
+            "Name": "Eyebite",
+            "School": "Necromancy",
+            "Description": "For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration."
+        },
+        {
+            "Name": "Find the Path",
+            "School": "Divination",
+            "Description": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence."
+        },
+        {
+            "Name": "Guards and Wards",
+            "School": "Abjuration",
+            "Description": "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares)."
+        },
+        {
+            "Name": "Irresistible Dance",
+            "School": "Enchantment",
+            "Description": "You create an illusory dance that forces the target to make a Wisdom saving throw."
+        },
+        {
+            "Name": "Mass Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you."
+        },
+        {
+            "Name": "Programmed Illusion",
+            "School": "Illusion",
+            "Description": "You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs."
+        },
+        {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has true sight, notices secret doors hidden by magic, and can see into the Ethereal Plane."
+        }
+    ]
+}

@@ -1,0 +1,532 @@
+﻿{
+    "CommonMagicalItems": [
+        {
+            "Name": "Armblade",
+            "Type": "Weapon",
+            "Attunement": "E:RLW",
+            "Description": "An armblade is a unique weapon that can be attached to a character's forearm. It requires attunement and grants the wielder the ability to make melee attacks with it."
+        },
+        {
+            "Name": "Armor of Gleaming",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This armor always appears clean and shiny, requiring no maintenance to keep its pristine appearance. It does not provide any additional protective properties."
+        },
+        {
+            "Name": "Bead of Nourishment",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This small bead can be swallowed as an action, providing nourishment equivalent to a day's worth of food."
+        },
+        {
+            "Name": "Bead of Refreshment",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This small bead can be swallowed as an action, providing refreshment equivalent to a day's worth of water."
+        },
+        {
+            "Name": "Boots of False Tracks",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "While wearing these boots, you can choose to leave tracks that mislead pursuers, making it difficult to follow your true trail."
+        },
+        {
+            "Name": "Bottle of Boundless Coffee",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical bottle produces an endless supply of hot, aromatic coffee. It can fill a small cup each time it is uncorked."
+        },
+        {
+            "Name": "Breathing Bubble",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "When activated, this bubble allows its wearer to breathe underwater or in other hostile environments for up to 1 hour."
+        },
+        {
+            "Name": "Candle of the Deep",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This enchanted candle burns brightly even underwater or in other submerged conditions."
+        },
+        {
+            "Name": "Cast-Off Armor",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This armor can be removed with a single command word, allowing the wearer to doff it quickly."
+        },
+        {
+            "Name": "Charlatan's Die",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This six-sided die can be rolled to determine the outcome of deceptions. When attuned, you can influence the result of the roll."
+        },
+        {
+            "Name": "Cleansing Stone",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This stone can purify food and water, removing toxins and contaminants."
+        },
+        {
+            "Name": "Cloak of Billowing",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This cloak billows dramatically even in the absence of wind, providing no functional advantage."
+        },
+        {
+            "Name": "Cloak of Many Fashions",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This cloak can change its appearance at will, allowing the wearer to alter its color and style."
+        },
+        {
+            "Name": "Clockwork Amulet",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This amulet contains a tiny clockwork device that can produce a ticking sound when activated."
+        },
+        {
+            "Name": "Clothes of Mending",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "These magical clothes automatically repair themselves, removing minor damage and stains."
+        },
+        {
+            "Name": "Coin of Delving",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This enchanted coin reveals the presence of hidden or concealed compartments in objects or structures."
+        },
+        {
+            "Name": "Cuddly Strixhaven Mascot",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This plush mascot from Strixhaven University is irresistibly cuddly and comforting."
+        },
+        {
+            "Name": "Dark Shard Amulet",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This amulet is made from a dark shard and grants the wearer darkvision when attuned."
+        },
+        {
+            "Name": "Dread Helm",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This menacing helmet can produce a haunting whispering sound when worn."
+        },
+        {
+            "Name": "Ear Horn of Hearing",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "When used, this horn increases the user's hearing range, allowing them to detect faint sounds more easily."
+        },
+        {
+            "Name": "Earring of Message",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "Two creatures each wearing one of these earrings can communicate telepathically with each other over a limited distance."
+        },
+        {
+            "Name": "Enduring Spellbook",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This spellbook is immune to fire, water, and other environmental hazards."
+        },
+        {
+            "Name": "Ersatz Eye",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "When attuned, this false eye provides vision and can be used to see through illusions."
+        },
+        {
+            "Name": "Everbright Lantern",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This lantern produces a bright, steady light that is not affected by wind or other conditions."
+        },
+        {
+            "Name": "Feather Token",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This token can transform into a feather when activated."
+        },
+        {
+            "Name": "Glamerweave",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This clothing can change its appearance to resemble any other set of clothing."
+        },
+        {
+            "Name": "Hat of Vermin",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This hat can produce harmless vermin like insects and rodents, which crawl out from under it."
+        },
+        {
+            "Name": "Hat of Wizardry",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This hat grants the wearer the ability to cast one cantrip while attuned."
+        },
+        {
+            "Name": "Heward's Handy Spice Pouch",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical pouch always contains a wide variety of fresh spices, enhancing the flavor of meals."
+        },
+        {
+            "Name": "Horn of Silent Alarm",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "When blown, this horn emits a sound that can alert others silently."
+        },
+        {
+            "Name": "Illuminator's Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tattoo can be attuned to and used to cast the light spell at will."
+        },
+        {
+            "Name": "Imbued Wood Focus",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This focus is carved from special wood and grants a bonus to spell attacks when used by spellcasters."
+        },
+        {
+            "Name": "Instrument of Illusions",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This musical instrument allows the attuned user to create minor visual illusions when played."
+        },
+        {
+            "Name": "Instrument of Scribing",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This musical instrument allows the attuned user to transcribe spells into a spellbook."
+        },
+        {
+            "Name": "Keycharm",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This charm can be attuned to and used to open locks more easily."
+        },
+        {
+            "Name": "Lantern of Tracking",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This lantern can reveal faint tracks or signs of passage when its light is focused on the ground."
+        },
+        {
+            "Name": "Lock of Trickery",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This lock can be difficult to pick and may mislead thieves."
+        },
+        {
+            "Name": "Masque Charm",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This charm grants the wearer a beautiful, featureless mask that can be used to disguise their face."
+        },
+        {
+            "Name": "Masquerade Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical tattoo grants the wearer the ability to cast disguise self while attuned."
+        },
+        {
+            "Name": "Medal of Muscle",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "Wearing this medal grants advantage on Strength checks."
+        },
+        {
+            "Name": "Medal of the Conch",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal allows the wearer to breathe underwater and communicate with aquatic creatures."
+        },
+        {
+            "Name": "Medal of the Horizonback",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal enhances the wearer's land speed and grants the ability to cast longstrider once per day."
+        },
+        {
+            "Name": "Medal of the Maze",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal provides guidance in labyrinthine environments and allows the wearer to cast find the path once per day."
+        },
+        {
+            "Name": "Medal of the Meat Pie",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal grants advantage on Charisma checks when negotiating for food or hospitality."
+        },
+        {
+            "Name": "Medal of the Wetlands",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal allows the wearer to traverse marshy terrain with ease and grants the ability to cast water walk once per day."
+        },
+        {
+            "Name": "Medal of Wit",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This medal grants advantage on Intelligence checks."
+        },
+        {
+            "Name": "Moodmark Paint",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This paint can be applied to change the color of objects or creatures, affecting their mood and demeanor."
+        },
+        {
+            "Name": "Moon-Touched Sword",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "This sword emits a dim light in a 15-foot radius, similar to moonlight, when drawn."
+        },
+        {
+            "Name": "Mystery Key",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This key can open a mysterious lock, but the nature of the lock and what lies behind it is unknown."
+        },
+        {
+            "Name": "Orb of Direction",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This crystal orb can reveal the cardinal directions and help the user navigate."
+        },
+        {
+            "Name": "Orb of Shielding",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This orb grants the wearer resistance to force damage while attuned."
+        },
+        {
+            "Name": "Orb of Time",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This glass orb can provide an estimate of the current time and date."
+        },
+        {
+            "Name": "Perfume of Bewitching",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This perfume can be used to enhance the user's Charisma-based checks when interacting with others."
+        },
+        {
+            "Name": "Pipe of Remembrance",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "When smoked, this pipe can evoke pleasant memories and grant the user advantage on Wisdom (Insight) checks."
+        },
+        {
+            "Name": "Pipe of Smoke Monsters",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This pipe can create illusions of smoke monsters when smoked."
+        },
+        {
+            "Name": "Pole of Angling",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This telescoping pole can be used for fishing and extends up to 10 feet in length."
+        },
+        {
+            "Name": "Pole of Collapsing",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This pole can be collapsed into a tiny form, making it easy to carry and conceal."
+        },
+        {
+            "Name": "Pot of Awakening",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical pot can awaken plants placed inside it."
+        },
+        {
+            "Name": "Potion of Climbing",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "When consumed, this potion grants the ability to climb surfaces for an hour without making checks."
+        },
+        {
+            "Name": "Potion of Healing",
+            "Type": "Potion",
+            "Attunement": "-",
+            "Description": "This common potion can be consumed to restore a small amount of hit points."
+        },
+        {
+            "Name": "Pressure Capsule",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This capsule can withstand extreme pressure and provides air to the user when submerged."
+        },
+        {
+            "Name": "Prosthetic Limb",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This prosthetic limb can be attached to replace a missing limb, granting mobility and functionality."
+        },
+        {
+            "Name": "Rope of Mending",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical rope can mend itself when damaged, restoring its integrity."
+        },
+        {
+            "Name": "Ruby of the War Mage",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This ruby can be affixed to a weapon and allows the wielder to use it as a spellcasting focus while attuned."
+        },
+        {
+            "Name": "Scribe's Pen",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This pen can be attuned to and grants advantage on Intelligence (History) checks when used for scribing."
+        },
+        {
+            "Name": "Sekolahian Worshipping Statuette",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This statuette represents the worship of Sekolah, the Sea Mother."
+        },
+        {
+            "Name": "Shield of Expression",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This shield displays various expressions and emotive faces, allowing the user to express themselves nonverbally."
+        },
+        {
+            "Name": "Shiftweave",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical clothing can change its appearance and style to match the wearer's desires."
+        },
+        {
+            "Name": "Smoldering Armor",
+            "Type": "Armor",
+            "Attunement": "-",
+            "Description": "This armor emits a faint, smoky haze when worn."
+        },
+        {
+            "Name": "Spell Scroll",
+            "Type": "Scroll",
+            "Attunement": "-",
+            "Description": "This scroll contains a single spell that can be cast when read."
+        },
+        {
+            "Name": "Spellshard",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This shard can store a spell and be used to cast it later."
+        },
+        {
+            "Name": "Spellwrought Tattoo",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This magical tattoo grants the wearer the ability to cast a specific spell once per day."
+        },
+        {
+            "Name": "Staff of Adornment",
+            "Type": "Staff",
+            "Attunement": "-",
+            "Description": "This staff can create simple decorative effects, such as flower blossoms or falling leaves."
+        },
+        {
+            "Name": "Staff of Birdcalls",
+            "Type": "Staff",
+            "Attunement": "-",
+            "Description": "This staff can mimic the sounds of various birds, allowing the user to communicate or create distractions."
+        },
+        {
+            "Name": "Staff of Flowers",
+            "Type": "Staff",
+            "Attunement": "-",
+            "Description": "This staff can create flowers and floral arrangements when used."
+        },
+        {
+            "Name": "Strixhaven Pennant",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This pennant displays the colors and emblem of Strixhaven University."
+        },
+        {
+            "Name": "Talking Doll",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This doll can be attuned to and used to send and receive messages through ventriloquism."
+        },
+        {
+            "Name": "Tankard of Sobriety",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This tankard prevents its user from becoming intoxicated while drinking from it."
+        },
+        {
+            "Name": "Thermal Cube",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This cube can maintain a consistent temperature, keeping its contents hot or cold as desired."
+        },
+        {
+            "Name": "Unbreakable Arrow",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "This arrow is unbreakable and can be reused indefinitely."
+        },
+        {
+            "Name": "Veteran's Cane",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This cane signifies a veteran's status and grants advantage on Charisma (Persuasion) checks when dealing with veterans."
+        },
+        {
+            "Name": "Vox Seeker",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This small device allows the user to send and receive messages over great distances, using vocal messages."
+        },
+        {
+            "Name": "Walloping Ammunition",
+            "Type": "Weapon",
+            "Attunement": "-",
+            "Description": "This ammunition can deal additional bludgeoning damage on a successful hit."
+        },
+        {
+            "Name": "Wand of Conducting",
+            "Type": "Wand",
+            "Attunement": "-",
+            "Description": "This wand can be used to direct lightning, creating harmless displays of electrical energy."
+        },
+        {
+            "Name": "Wand of Pyrotechnics",
+            "Type": "Wand",
+            "Attunement": "-",
+            "Description": "This wand can create dazzling pyrotechnic displays when activated."
+        },
+        {
+            "Name": "Wand of Scowls",
+            "Type": "Wand",
+            "Attunement": "-",
+            "Description": "This wand produces illusory scowling faces when used."
+        },
+        {
+            "Name": "Wand of Smiles",
+            "Type": "Wand",
+            "Attunement": "-",
+            "Description": "This wand produces illusory smiling faces when used."
+        },
+        {
+            "Name": "Wand Sheath",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This sheath can be attuned to and used to draw and sheathe wands as a free action."
+        }
+    ]
+}

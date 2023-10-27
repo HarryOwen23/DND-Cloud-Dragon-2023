@@ -1,0 +1,13 @@
+{
+    "Shields": [
+        {
+            "Name": "Shield",
+            "Armor Class (AC)": "+2",
+            "Strength": "-",
+            "Stealth": "-",
+            "Weight": "6 lb.",
+            "Cost": "10 gp"
+        }
+    ]
+}
+

@@ -1,0 +1,64 @@
+﻿{
+    "3rdLevelDruidSpells": [
+        {
+            "Name": "Call Lightning",
+            "School": "Conjuration",
+            "Description": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you."
+        },
+        {
+            "Name": "Conjure Animals",
+            "School": "Conjuration",
+            "Description": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range."
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range."
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose any creature, object, or magical effect within range."
+        },
+        {
+            "Name": "Meld into Stone",
+            "School": "Transmutation",
+            "Description": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration."
+        },
+        {
+            "Name": "Plant Growth",
+            "School": "Transmutation",
+            "Description": "This spell channels vitality into plants within a specific area."
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice."
+        },
+        {
+            "Name": "Sleet Storm",
+            "School": "Conjuration",
+            "Description": "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range."
+        },
+        {
+            "Name": "Speak with Plants",
+            "School": "Transmutation",
+            "Description": "You imbue plants within 30 feet of you with limited sentience and animation."
+        },
+        {
+            "Name": "Water Breathing",
+            "School": "Transmutation",
+            "Description": "This spell gives a maximum of ten willing creatures you can see within range the ability to breathe underwater."
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface, such as water, acid, mud, snow, quicksand, or lava, as if it were harmless solid ground."
+        },
+        {
+            "Name": "Wind Wall",
+            "School": "Evocation",
+            "Description": "A wall of strong wind rises from the ground at a point you choose within range."
+        }
+    ]
+}

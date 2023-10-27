@@ -1,0 +1,32 @@
+﻿{
+    "UnknownMagicItems": [
+        {
+            "Name": "Orcus Figurine",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Source": "CM",
+            "Description": "This figurine is associated with the demon lord Orcus."
+        },
+        {
+            "Name": "Radiance",
+            "Type": "Wand",
+            "Attunement": "Attuned",
+            "Source": "CM",
+            "Description": "This wand is called Radiance and has unique properties."
+        },
+        {
+            "Name": "Spider Staff",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Source": "LMP",
+            "Description": "This staff is connected to spiders in some way."
+        },
+        {
+            "Name": "Stonky's Ring",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Source": "CM",
+            "Description": "This ring is known as Stonky's Ring and has mysterious powers."
+        }
+    ]
+}

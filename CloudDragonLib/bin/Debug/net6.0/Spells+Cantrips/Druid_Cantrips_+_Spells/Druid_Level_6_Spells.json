@@ -1,0 +1,49 @@
+﻿{
+    "6thLevelDruidSpells": [
+        {
+            "Name": "Conjure Fey",
+            "School": "Conjuration",
+            "Description": "You summon a fey creature to an unoccupied space that you can see within range."
+        },
+        {
+            "Name": "Find the Path",
+            "School": "Divination",
+            "Description": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence."
+        },
+        {
+            "Name": "Heal",
+            "School": "Evocation",
+            "Description": "A surge of positive energy washes through the creature, causing it to regain 70 hit points."
+        },
+        {
+            "Name": "Heroes' Feast",
+            "School": "Conjuration",
+            "Description": "You bring forth a great feast, including magnificent food and drink."
+        },
+        {
+            "Name": "Move Earth",
+            "School": "Transmutation",
+            "Description": "Choose an area of terrain no larger than 40 feet on a side within range."
+        },
+        {
+            "Name": "Sunbeam",
+            "School": "Evocation",
+            "Description": "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-long line."
+        },
+        {
+            "Name": "Transport via Plants",
+            "School": "Conjuration",
+            "Description": "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence."
+        },
+        {
+            "Name": "Wall of Thorns",
+            "School": "Conjuration",
+            "Description": "You create a wall of tough, pliable, tangled brush bristling with needle-sharp thorns."
+        },
+        {
+            "Name": "Wind Walk",
+            "School": "Transmutation",
+            "Description": "You and up to ten willing creatures you can see within range assume a gaseous form for the duration."
+        }
+    ]
+}

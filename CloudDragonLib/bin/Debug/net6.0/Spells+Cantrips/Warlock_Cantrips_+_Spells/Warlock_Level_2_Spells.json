@@ -1,0 +1,53 @@
+﻿{
+    "WarlockLevel2Spells": [
+        {
+            "Name": "Darkness",
+            "School": "Evocation",
+            "Description": "Magical darkness spreads from a point you choose within range."
+        },
+        {
+            "Name": "Enthrall",
+            "School": "Enchantment",
+            "Description": "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw."
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "The target must succeed on a Wisdom saving throw or be paralyzed for the duration."
+        },
+        {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Description": "A creature you touch becomes invisible until the spell ends."
+        },
+        {
+            "Name": "Mirror Image",
+            "School": "Illusion",
+            "Description": "Three illusory duplicates of yourself appear in your space."
+        },
+        {
+            "Name": "Misty Step",
+            "School": "Conjuration",
+            "Description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
+        },
+        {
+            "Name": "Ray of Enfeeblement",
+            "School": "Necromancy",
+            "Description": "A black beam of enervating energy springs from your finger toward a creature within range."
+        },
+        {
+            "Name": "Shatter",
+            "School": "Evocation",
+            "Description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range."
+        },
+        {
+            "Name": "Spider Climb",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings."
+        },
+        {
+            "Name": "Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you."
+        }
+ 

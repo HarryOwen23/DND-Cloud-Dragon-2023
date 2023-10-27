@@ -1,0 +1,24 @@
+﻿{
+    "9thLevelClericSpells": [
+        {
+            "Name": "Astral Projection",
+            "School": "Necromancy",
+            "Description": "You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell fails and the casting is wasted if you are already on that plane)."
+        },
+        {
+            "Name": "Gate",
+            "School": "Conjuration",
+            "Description": "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence."
+        },
+        {
+            "Name": "Mass Heal",
+            "School": "Evocation",
+            "Description": "A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range."
+        },
+        {
+            "Name": "True Resurrection",
+            "School": "Necromancy",
+            "Description": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age."
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "Creature": "Wildfire Spirit",
+    "Creature Type": "Small elemental",
+    "Armor Class": "13 (natural armor)",
+    "Hit Points": "5 + five times your druid level",
+    "Speed": "30 ft",
+    "Fly Speed": "30 ft",
+    "STR": "10 (+0)",
+    "DEX": "14 (+2)",
+    "CON": "14 (+2)",
+    "INT": "13 (+1)",
+    "WIS": "15 (+2)",
+    "CHA": "11 (+0)",
+    "Damage Immunities": "Fire",
+    "Condition Immunities": [
+        "Charmed",
+        "Frightened",
+        "Grappled",
+        "Prone",
+        "Restrained"
+    ],
+    "Senses": "Darkvision 60 ft",
+    "Passive Perception": "12",
+    "Challenge": "-",
+    "Proficiency Bonus": "Equals your bonus",
+    "Actions": [
+        {
+            "Flame Seed": "Ranged Weapon Attack: your spell attack modifier to hit, range 60 ft, one target you can see. Hit: 1d6 + PB fire damage."
+        },
+        {
+            "Fiery Teleportation": "The spirit and each willing creature of your choice within 5 feet of it teleport up to 15 feet to unoccupied spaces you can see. Then each creature within 5 feet of the space that the spirit left must succeed on a Dexterity saving throw against your spell save DC or take 1d6 + PB fire damage."
+        }
+    ]
+}

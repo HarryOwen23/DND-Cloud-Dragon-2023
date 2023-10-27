@@ -1,0 +1,44 @@
+﻿{
+    "1stLevelPaladinSpells": [
+        {
+            "Name": "Bless",
+            "School": "Enchantment",
+            "Description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw."
+        },
+        {
+            "Name": "Command",
+            "School": "Enchantment",
+            "Description": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn."
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Detect Evil and Good",
+            "School": "Divination",
+            "Description": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located."
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you."
+        },
+        {
+            "Name": "Detect Poison and Disease",
+            "School": "Divination",
+            "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you."
+        },
+        {
+            "Name": "Divine Favor",
+            "School": "Evocation",
+            "Description": "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."
+        },
+        {
+            "Name": "Heroism",
+            "School": "Enchantment",
+            "Description": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points at the start of each of its turns."
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "Pack Name": "Diplomat's Pack",
+    "Contents": [
+        {
+            "Item": "Chest",
+            "Quantity": 1
+        },
+        {
+            "Item": "Fine Clothes",
+            "Quantity": 2
+        },
+        {
+            "Item": "Signet Ring",
+            "Quantity": 1
+        },
+        {
+            "Item": "Scroll of Pedigree",
+            "Quantity": 1
+        },
+        {
+            "Item": "Sealing Wax",
+            "Quantity": 1
+        },
+        {
+            "Item": "Ink Bottle",
+            "Quantity": 1
+        },
+        {
+            "Item": "Quill",
+            "Quantity": 1
+        },
+        {
+            "Item": "Parchment",
+            "Quantity": 1
+        },
+        {
+            "Item": "Case for Maps and Scrolls",
+            "Quantity": 1
+        },
+        {
+            "Item": "Fine Handkerchief",
+            "Quantity": 1
+        },
+        {
+            "Item": "Perfume Vial",
+            "Quantity": 1
+        },
+        {
+            "Item": "Sealing Wax",
+            "Quantity": 1
+        },
+        {
+            "Item": "Soap",
+            "Quantity": 1
+        }
+    ]
+}

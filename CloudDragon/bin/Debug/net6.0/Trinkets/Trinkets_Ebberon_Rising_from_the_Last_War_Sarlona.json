@@ -1,0 +1,36 @@
+{
+    "Sarlona Trinkets": [
+        {
+            "Dice Number": 1,
+            "Trinket": "A polished crystal sphere; when you clutch it in your fist, a telepathic voice recites a story in your mind"
+        },
+        {
+            "Dice Number": 2,
+            "Trinket": "A teardrop pendant made from polished shell; when you hold it, you see the image of a young Riedran man"
+        },
+        {
+            "Dice Number": 3,
+            "Trinket": "A six-sided crystal die; when you roll it, you feel a surge of emotion for six seconds"
+        },
+        {
+            "Dice Number": 4,
+            "Trinket": "A sealed vial filled with faintly luminescent blue mist"
+        },
+        {
+            "Dice Number": 5,
+            "Trinket": "A crystal disk engraved with a labyrinthine pattern"
+        },
+        {
+            "Dice Number": 6,
+            "Trinket": "A leather-bound collection of kalashtar poetry called Shards of the Light"
+        },
+        {
+            "Dice Number": 7,
+            "Trinket": "A sphere of polished crystal; when you hold it in your palm, you feel that it knows you and understands you"
+        },
+        {
+            "Dice Number": 8,
+            "Trinket": "A cup and ball toy; when you successfully catch the ball in the cup, you feel a momentary surge of joy"
+        }
+    ]
+}

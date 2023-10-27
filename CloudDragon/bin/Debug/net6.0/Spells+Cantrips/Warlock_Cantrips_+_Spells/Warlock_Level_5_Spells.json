@@ -1,0 +1,24 @@
+﻿{
+    "WarlockLevel5Spells": [
+        {
+            "Name": "Contact Other Plane",
+            "School": "Divination",
+            "Description": "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane."
+        },
+        {
+            "Name": "Dream",
+            "School": "Illusion",
+            "Description": "This spell shapes a creature's dreams."
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range."
+        },
+        {
+            "Name": "Scrying",
+            "School": "Divination",
+            "Description": "You can see and hear a particular creature you choose that is on the same plane of existence as you."
+        }
+    ]
+}

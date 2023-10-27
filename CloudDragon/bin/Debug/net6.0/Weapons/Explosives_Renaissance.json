@@ -1,0 +1,22 @@
+{
+    "Explosives": [
+        {
+            "Name": "Bomb",
+            "Cost": "150 gp",
+            "Weight": "1 lb.",
+            "Description": "As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take 3d6 fire damage."
+        },
+        {
+            "Name": "Gunpowder, keg",
+            "Cost": "250 gp",
+            "Weight": "20 lb.",
+            "Description": "Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Setting fire to a keg of gunpowder can cause it to explode, dealing 7d6 fire damage to creatures within 10 feet of it. A successful DC 12 Dexterity saving throw halves the damage."
+        },
+        {
+            "Name": "Gunpowder, powder horn",
+            "Cost": "35 gp",
+            "Weight": "2 lb.",
+            "Description": "Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Setting fire to a powder horn of gunpowder can cause it to explode, dealing 3d6 fire damage to creatures within 10 feet of it. A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
+        }
+    ]
+}

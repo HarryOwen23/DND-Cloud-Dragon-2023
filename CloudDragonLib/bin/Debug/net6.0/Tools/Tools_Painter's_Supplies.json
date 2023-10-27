@@ -1,0 +1,23 @@
+﻿{
+    "Painter's Supplies": {
+        "Description": "Proficiency with painter's supplies represents your ability to paint and draw. You also acquire an understanding of art history, which can aid you in examining works of art.",
+        "Components": {
+            "Painter's supplies": {
+                "Easel": true,
+                "Canvas": true,
+                "Paints": true,
+                "Brushes": true,
+                "Charcoal sticks": true,
+                "Palette": true
+            }
+        },
+        "Skills": {
+            "Arcana, History, Religion": "Your expertise aids you in uncovering lore of any sort that is attached to a work of art, such as the magical properties of a painting or the origins of a strange mural found in a dungeon.",
+            "Investigation, Perception": "When you inspect a painting or a similar work of visual art, your knowledge of the practices behind creating it can grant you additional insight."
+        },
+        "Activities": {
+            "Paint an accurate portrait": "DC 10",
+            "Create a painting with a hidden message": "DC 20"
+        }
+    }
+}

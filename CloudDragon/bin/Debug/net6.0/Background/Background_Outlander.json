@@ -1,0 +1,52 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Outlander",
+            "Description": "You grew up in the wilds, far from civilization, and you have survived and thrived in the natural world. You are at home in the untamed wilderness and have learned to live off the land.",
+            "Skill Proficiencies": [ "Athletics", "Survival" ],
+            "Tool Proficiencies": [],
+            "Languages": [],
+            "Starting Equipment": [
+                "A staff",
+                "A hunting trap",
+                "A set of traveler's clothes",
+                "A belt pouch containing 10 gold pieces"
+            ],
+            "Feature": "Wanderer",
+            "Feature Description": "You have an excellent memory for maps and geography. You can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided the land offers such resources."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am fiercely independent and value my freedom above all else.",
+        "2. I am curious about the world beyond the wilderness and am eager to explore it.",
+        "3. I have a deep respect for the natural world and its creatures.",
+        "4. I am slow to trust people from civilization, but once trust is earned, I am loyal.",
+        "5. I enjoy the thrill of the hunt and the challenges of survival.",
+        "6. I am wary of the trappings of civilization and prefer a simple, rustic life."
+    ],
+    "Ideals": [
+        "1. Nature. The natural world is sacred, and I must protect it. (Good)",
+        "2. Independence. I value freedom and self-reliance above all else. (Chaotic)",
+        "3. Community. I seek to build a close-knit community in the wilderness. (Lawful)",
+        "4. Survival. Life is harsh, and I must do whatever it takes to endure. (Neutral)",
+        "5. Dominance. The strongest rule the wilds, and I must prove my strength. (Evil)",
+        "6. Discovery. I am driven to explore new lands and uncover their secrets. (Any)"
+    ],
+    "Bonds": [
+        "1. I am dedicated to protecting my homeland from threats and invaders.",
+        "2. I have a close bond with the animals and creatures of the wilderness.",
+        "3. I owe a debt to a wise hermit or guide who taught me survival skills.",
+        "4. I am searching for a legendary location or hidden treasure in the wilderness.",
+        "5. I have a family or tribe that I am determined to reunite with.",
+        "6. I am on a quest to uncover the truth about a natural phenomenon or mystery."
+    ],
+    "Flaws": [
+        "1. I have a deep-seated fear of cities and crowded places.",
+        "2. I am uncomfortable with modern technology and inventions from civilization.",
+        "3. I have a tendency to be blunt and direct in my interactions with others.",
+        "4. I am fiercely protective of my territory and can become hostile to intruders.",
+        "5. I have difficulty understanding or relating to the customs and norms of civilization.",
+        "6. I am slow to forgive those who harm the natural world or its creatures."
+    ]
+}
+

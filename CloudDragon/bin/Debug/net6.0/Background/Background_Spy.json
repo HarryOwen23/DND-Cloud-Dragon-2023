@@ -1,0 +1,53 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Spy",
+            "Description": "You are a covert operative skilled in espionage, infiltration, and subterfuge. You have spent years working in the shadows, gathering information, and carrying out covert missions for a secretive organization or government agency.",
+            "Skill Proficiencies": [ "Deception", "Stealth" ],
+            "Tool Proficiencies": [ "Forgery Kit", "Disguise Kit" ],
+            "Languages": [],
+            "Starting Equipment": [
+                "A set of common clothes suitable for blending into urban environments",
+                "A disguise kit",
+                "A forgery kit",
+                "A small knife",
+                "A belt pouch containing 15 gold pieces"
+            ],
+            "Feature": "Covert Operative",
+            "Feature Description": "You have a network of contacts and informants in the world of espionage. You can use this network to gather information, gain access to secure locations, and receive assistance from other spies or operatives when needed."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am always cautious and alert, even in seemingly safe situations.",
+        "2. I have a knack for blending into crowds and going unnoticed.",
+        "3. I am skilled at reading people and can quickly determine their intentions.",
+        "4. I am comfortable lying and deceiving others to achieve my goals.",
+        "5. I am highly adaptable and can quickly adjust to new environments and situations.",
+        "6. I have a strong sense of duty and loyalty to my organization."
+    ],
+    "Ideals": [
+        "1. Loyalty. I am unwaveringly loyal to my organization and will do whatever it takes to protect its secrets. (Lawful)",
+        "2. Freedom. I fight for the cause of freedom and against oppressive regimes and organizations. (Chaotic)",
+        "3. Self-Preservation. My primary goal is to survive and thrive in the dangerous world of espionage. (Neutral)",
+        "4. Justice. I seek to uncover and expose corruption, wrongdoing, and injustice. (Good)",
+        "5. Power. I desire to gain personal power and influence through my actions as a spy. (Evil)",
+        "6. Knowledge. I value information and seek to uncover hidden truths and mysteries. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or handler who taught me the ways of espionage and to whom I owe a debt of gratitude.",
+        "2. I have a deep cover identity that I must protect at all costs.",
+        "3. I have a loved one or family member who is unaware of my life as a spy, and I must keep it a secret to protect them.",
+        "4. I have a longstanding rivalry with another spy or operative who always seems to be one step ahead of me.",
+        "5. I have a mission or objective that I have been pursuing for years, and I will not rest until it is accomplished.",
+        "6. I have a connection to a powerful and secretive organization that can provide me with resources and support."
+    ],
+    "Flaws": [
+        "1. I am paranoid and constantly suspicious of others, even my allies.",
+        "2. I am haunted by the moral compromises I have made in the name of espionage.",
+        "3. I have a tendency to go to extreme measures to maintain my cover and complete my missions.",
+        "4. I struggle with trust issues and find it difficult to open up to others.",
+        "5. I am known to disappear suddenly and without warning, leaving my allies in the dark.",
+        "6. I have made many enemies in the world of espionage, and they are always looking for a chance to exact revenge."
+    ]
+}
+

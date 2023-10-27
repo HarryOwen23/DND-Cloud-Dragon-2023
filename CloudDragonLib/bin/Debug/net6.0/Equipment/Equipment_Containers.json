@@ -1,0 +1,46 @@
+{
+    "Containers": [
+        {
+            "Name": "Backpack",
+            "Cost": "2 gp",
+            "Weight": "5 lb.",
+            "Description": "A common backpack for carrying various items and supplies."
+        },
+        {
+            "Name": "Bag of Holding",
+            "Cost": "500 gp",
+            "Weight": "15 lb.",
+            "Description": "A magical bag that can hold an extraordinary amount of items."
+        },
+        {
+            "Name": "Pouch",
+            "Cost": "5 sp",
+            "Weight": "1 lb.",
+            "Description": "A small pouch for carrying coins or small items."
+        },
+        {
+            "Name": "Chest",
+            "Cost": "5 gp",
+            "Weight": "25 lb.",
+            "Description": "A sturdy chest for storing valuable items or equipment."
+        },
+        {
+            "Name": "Barrel",
+            "Cost": "2 gp",
+            "Weight": "70 lb.",
+            "Description": "A large barrel suitable for holding liquids or bulk items."
+        },
+        {
+            "Name": "Sack",
+            "Cost": "1 cp",
+            "Weight": "0.5 lb.",
+            "Description": "A simple cloth sack for carrying small items or provisions."
+        },
+        {
+            "Name": "Scroll Case",
+            "Cost": "1 gp",
+            "Weight": "0.5 lb.",
+            "Description": "A cylindrical case designed to protect scrolls or important documents."
+        }
+    ]
+}

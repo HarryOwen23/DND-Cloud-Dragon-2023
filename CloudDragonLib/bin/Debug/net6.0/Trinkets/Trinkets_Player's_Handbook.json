@@ -1,0 +1,404 @@
+{
+    "Trinkets": [
+        {
+            "Dice Number": 1,
+            "Trinket": "A mummified goblin hand"
+        },
+        {
+            "Dice Number": 2,
+            "Trinket": "A piece of crystal that faintly glows in the moonlight"
+        },
+        {
+            "Dice Number": 3,
+            "Trinket": "A gold coin minted in an unknown land"
+        },
+        {
+            "Dice Number": 4,
+            "Trinket": "A diary written in a language you don't know"
+        },
+        {
+            "Dice Number": 5,
+            "Trinket": "A brass ring that never tarnishes"
+        },
+        {
+            "Dice Number": 6,
+            "Trinket": "An old chess piece made from glass"
+        },
+        {
+            "Dice Number": 7,
+            "Trinket": "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips"
+        },
+        {
+            "Dice Number": 8,
+            "Trinket": "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it"
+        },
+        {
+            "Dice Number": 9,
+            "Trinket": "A rope necklace from which dangles four mummified elf fingers"
+        },
+        {
+            "Dice Number": 10,
+            "Trinket": "The deed for a parcel of land in a realm unknown to you"
+        },
+        {
+            "Dice Number": 11,
+            "Trinket": "A 1-ounce block made from an unknown material"
+        },
+        {
+            "Dice Number": 12,
+            "Trinket": "A small cloth doll skewered with needles"
+        },
+        {
+            "Dice Number": 13,
+            "Trinket": "A tooth from an unknown beast"
+        },
+        {
+            "Dice Number": 14,
+            "Trinket": "An enormous scale, perhaps from a dragon"
+        },
+        {
+            "Dice Number": 15,
+            "Trinket": "A bright green feather"
+        },
+        {
+            "Dice Number": 16,
+            "Trinket": "An old divination card bearing your likeness"
+        },
+        {
+            "Dice Number": 17,
+            "Trinket": "A glass orb filled with moving smoke"
+        },
+        {
+            "Dice Number": 18,
+            "Trinket": "A 1-pound egg with a bright red shell"
+        },
+        {
+            "Dice Number": 19,
+            "Trinket": "A pipe that blows bubbles"
+        },
+        {
+            "Dice Number": 20,
+            "Trinket": "A glass jar containing a weird bit of flesh floating in pickling fluid"
+        },
+        {
+            "Dice Number": 21,
+            "Trinket": "A tiny gnome-crafted music box that plays a song you dimly remember from your childhood"
+        },
+        {
+            "Dice Number": 22,
+            "Trinket": "A small wooden statuette of a smug halfling"
+        },
+        {
+            "Dice Number": 23,
+            "Trinket": "A brass orb etched with strange runes"
+        },
+        {
+            "Dice Number": 24,
+            "Trinket": "A multicolored stone disk"
+        },
+        {
+            "Dice Number": 25,
+            "Trinket": "A tiny silver icon of a raven"
+        },
+        {
+            "Dice Number": 26,
+            "Trinket": "A bag containing forty-seven humanoid teeth, one of which is rotten"
+        },
+        {
+            "Dice Number": 27,
+            "Trinket": "A shard of obsidian that always feels warm to the touch"
+        },
+        {
+            "Dice Number": 28,
+            "Trinket": "A dragon's bony talon hanging from a plain leather necklace"
+        },
+        {
+            "Dice Number": 29,
+            "Trinket": "A pair of old socks"
+        },
+        {
+            "Dice Number": 30,
+            "Trinket": "A blank book whose pages refuse to hold ink, chalk, graphite, or any other substance or marking"
+        },
+        {
+            "Dice Number": 31,
+            "Trinket": "A silver badge in the shape of a five-pointed star"
+        },
+        {
+            "Dice Number": 32,
+            "Trinket": "A knife that belonged to a relative"
+        },
+        {
+            "Dice Number": 33,
+            "Trinket": "A glass vial filled with nail clippings"
+        },
+        {
+            "Dice Number": 34,
+            "Trinket": "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet"
+        },
+        {
+            "Dice Number": 35,
+            "Trinket": "A white, sequined glove sized for a human"
+        },
+        {
+            "Dice Number": 36,
+            "Trinket": "A vest with one hundred tiny pockets"
+        },
+        {
+            "Dice Number": 37,
+            "Trinket": "A small, weightless stone block"
+        },
+        {
+            "Dice Number": 38,
+            "Trinket": "A tiny sketch portrait of a goblin"
+        },
+        {
+            "Dice Number": 39,
+            "Trinket": "An empty glass vial that smells of perfume when opened"
+        },
+        {
+            "Dice Number": 40,
+            "Trinket": "A gemstone that looks like a lump of coal when examined by anyone but you"
+        },
+        {
+            "Dice Number": 41,
+            "Trinket": "A scrap of cloth from an old banner"
+        },
+        {
+            "Dice Number": 42,
+            "Trinket": "A rank insignia from a lost legionnaire"
+        },
+        {
+            "Dice Number": 43,
+            "Trinket": "A tiny silver bell without a clapper"
+        },
+        {
+            "Dice Number": 44,
+            "Trinket": "A mechanical canary inside a gnomish lamp"
+        },
+        {
+            "Dice Number": 45,
+            "Trinket": "A tiny chest carved to look like it has numerous feet on the bottom"
+        },
+        {
+            "Dice Number": 46,
+            "Trinket": "A dead sprite inside a clear glass bottle"
+        },
+        {
+            "Dice Number": 47,
+            "Trinket": "A metal can that has no opening but sounds as if it is filled with liquid, sand, spiders, or broken glass (your choice)"
+        },
+        {
+            "Dice Number": 48,
+            "Trinket": "A glass orb filled with water, in which swims a clockwork goldfish"
+        },
+        {
+            "Dice Number": 49,
+            "Trinket": "A silver spoon with an 'M' engraved on the handle"
+        },
+        {
+            "Dice Number": 50,
+            "Trinket": "A whistle made from gold-colored wood"
+        },
+        {
+            "Dice Number": 51,
+            "Trinket": "A dead scarab beetle the size of your hand"
+        },
+        {
+            "Dice Number": 52,
+            "Trinket": "Two toy soldiers, one with a missing head"
+        },
+        {
+            "Dice Number": 53,
+            "Trinket": "A small box filled with different-sized buttons"
+        },
+        {
+            "Dice Number": 54,
+            "Trinket": "A candle that can't be lit"
+        },
+        {
+            "Dice Number": 55,
+            "Trinket": "A tiny cage with no door"
+        },
+        {
+            "Dice Number": 56,
+            "Trinket": "An old key"
+        },
+        {
+            "Dice Number": 57,
+            "Trinket": "An indecipherable treasure map"
+        },
+        {
+            "Dice Number": 58,
+            "Trinket": "A hilt from a broken sword"
+        },
+        {
+            "Dice Number": 59,
+            "Trinket": "A rabbit's foot"
+        },
+        {
+            "Dice Number": 60,
+            "Trinket": "A glass eye"
+        },
+        {
+            "Dice Number": 61,
+            "Trinket": "A cameo carved in the likeness of a hideous person"
+        },
+        {
+            "Dice Number": 62,
+            "Trinket": "A silver skull the size of a coin"
+        },
+        {
+            "Dice Number": 63,
+            "Trinket": "An alabaster mask"
+        },
+        {
+            "Dice Number": 64,
+            "Trinket": "A pyramid of sticky black incense that smells very bad"
+        },
+        {
+            "Dice Number": 65,
+            "Trinket": "A nightcap that, when worn, gives you pleasant dreams"
+        },
+        {
+            "Dice Number": 66,
+            "Trinket": "A single caltrop made from bone"
+        },
+        {
+            "Dice Number": 67,
+            "Trinket": "A gold monocle frame without the lens"
+        },
+        {
+            "Dice Number": 68,
+            "Trinket": "A 1-inch cube, each side painted a different color"
+        },
+        {
+            "Dice Number": 69,
+            "Trinket": "A crystal knob from a door"
+        },
+        {
+            "Dice Number": 70,
+            "Trinket": "A small packet filled with pink dust"
+        },
+        {
+            "Dice Number": 71,
+            "Trinket": "A fragment of a beautiful song, written as musical notes on two pieces of parchment"
+        },
+        {
+            "Dice Number": 72,
+            "Trinket": "A silver teardrop earring made from a real teardrop"
+        },
+        {
+            "Dice Number": 73,
+            "Trinket": "The shell of an egg painted with scenes of human misery in disturbing detail"
+        },
+        {
+            "Dice Number": 74,
+            "Trinket": "A fan that, when unfolded, shows a sleeping cat"
+        },
+        {
+            "Dice Number": 75,
+            "Trinket": "A set of bone pipes"
+        },
+        {
+            "Dice Number": 76,
+            "Trinket": "A four-leaf clover pressed inside a book discussing manners and etiquette"
+        },
+        {
+            "Dice Number": 77,
+            "Trinket": "A sheet of parchment upon which is drawn a complex mechanical contraption"
+        },
+        {
+            "Dice Number": 78,
+            "Trinket": "An ornate scabbard that fits no blade you have found so far"
+        },
+        {
+            "Dice Number": 79,
+            "Trinket": "An invitation to a party where a murder happened"
+        },
+        {
+            "Dice Number": 80,
+            "Trinket": "A bronze pentacle with an etching of a rat's head in its center"
+        },
+        {
+            "Dice Number": 81,
+            "Trinket": "A purple handkerchief embroidered with the name of a powerful archmage"
+        },
+        {
+            "Dice Number": 82,
+            "Trinket": "Half of a floorplan for a temple, castle, or some other structure"
+        },
+        {
+            "Dice Number": 83,
+            "Trinket": "A bit of folded cloth that, when unfolded, turns into a stylish cap"
+        },
+        {
+            "Dice Number": 84,
+            "Trinket": "A receipt of deposit at a bank in a far-flung city"
+        },
+        {
+            "Dice Number": 85,
+            "Trinket": "A diary with seven missing pages"
+        },
+        {
+            "Dice Number": 86,
+            "Trinket": "An empty silver snuffbox bearing an inscription on the surface that says 'dreams'"
+        },
+        {
+            "Dice Number": 87,
+            "Trinket": "An iron holy symbol devoted to an unknown god"
+        },
+        {
+            "Dice Number": 88,
+            "Trinket": "A book that tells the story of a legendary hero's rise and fall, with the last chapter missing"
+        },
+        {
+            "Dice Number": 89,
+            "Trinket": "A vial of dragon blood"
+        },
+        {
+            "Dice Number": 90,
+            "Trinket": "An ancient arrow of elven design"
+        },
+        {
+            "Dice Number": 91,
+            "Trinket": "A needle that never bends"
+        },
+        {
+            "Dice Number": 92,
+            "Trinket": "An ornate brooch of dwarven design"
+        },
+        {
+            "Dice Number": 93,
+            "Trinket": "An empty wine bottle bearing a pretty label that says, 'The Wizard of Wines Winery, Red Dragon Crush, 331422-W'"
+        },
+        {
+            "Dice Number": 94,
+            "Trinket": "A mosaic tile with a multicolored, glazed surface"
+        },
+        {
+            "Dice Number": 95,
+            "Trinket": "A petrified mouse"
+        },
+        {
+            "Dice Number": 96,
+            "Trinket": "A black pirate flag adorned with a dragon's skull and crossbones"
+        },
+        {
+            "Dice Number": 97,
+            "Trinket": "A tiny mechanical crab or spider that moves about when it's not being observed"
+        },
+        {
+            "Dice Number": 98,
+            "Trinket": "A glass jar containing lard with a label that reads, 'Griffon Grease'"
+        },
+        {
+            "Dice Number": 99,
+            "Trinket": "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body"
+        },
+        {
+            "Dice Number": 100,
+            "Trinket": "A metal urn containing the ashes of a hero"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+﻿{
+    "2ndLevelClericSpells": [
+        {
+            "Name": "Aid",
+            "School": "Abjuration",
+            "Description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range."
+        },
+        {
+            "Name": "Augury",
+            "School": "Divination",
+            "Description": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity."
+        },
+        {
+            "Name": "Blindness/Deafness",
+            "School": "Necromancy",
+            "Description": "You can blind or deafen a foe."
+        },
+        {
+            "Name": "Calm Emotions",
+            "School": "Enchantment",
+            "Description": "You attempt to suppress strong emotions in a group of people."
+        },
+        {
+            "Name": "Continual Flame",
+            "School": "Evocation",
+            "Description": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch."
+        },
+        {
+            "Name": "Enhance Ability",
+            "School": "Transmutation",
+            "Description": "You touch a creature and bestow upon it a magical enhancement."
+        },
+        {
+            "Name": "Find Traps",
+            "School": "Divination",
+            "Description": "You sense the presence of any trap within range that is within line of sight."
+        },
+        {
+            "Name": "Gentle Repose",
+            "School": "Necromancy",
+            "Description": "You touch a corpse or other remains."
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "The target must succeed on a Wisdom saving throw or be paralyzed for the duration."
+        },
+        {
+            "Name": "Lesser Restoration",
+            "School": "Abjuration",
+            "Description": "You touch a creature and can end either one disease or one condition afflicting it."
+        },
+        {
+            "Name": "Locate Object",
+            "School": "Divination",
+            "Description": "You sense the direction to the object's location, as long as that object is within 1,000 feet of you."
+        },
+        {
+            "Name": "Prayer of Healing",
+            "School": "Evocation",
+            "Description": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Protection from Poison",
+            "School": "Abjuration",
+            "Description": "You touch a creature. If it is poisoned, you neutralize the poison."
+        },
+        {
+            "Name": "Silence",
+            "School": "Illusion",
+            "Description": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range."
+        },
+        {
+            "Name": "Spiritual Weapon",
+            "School": "Evocation",
+            "Description": "You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again."
+        },
+        {
+            "Name": "Warding Bond",
+            "School": "Abjuration",
+            "Description": "This spell wards a willing creature you touch and creates a mystic connection between you and the target."
+        },
+        {
+            "Name": "Zone of Truth",
+            "School": "Enchantment",
+            "Description": "You create a magical zone that guards against deception."
+        }
+    ]
+}

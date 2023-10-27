@@ -1,0 +1,29 @@
+﻿{
+    "WarlockLevel8Spells": [
+        {
+            "Name": "Demiplane",
+            "School": "Conjuration",
+            "Description": "You create a shadowy door on a flat solid surface that you can see within range."
+        },
+        {
+            "Name": "Dominate Monster",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a creature that you can see within range."
+        },
+        {
+            "Name": "Feeblemind",
+            "School": "Enchantment",
+            "Description": "You blast the mind of a creature that you can see within range."
+        },
+        {
+            "Name": "Glibness",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15."
+        },
+        {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range."
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+﻿{
+    "WizardCantrips": [
+        {
+            "Name": "Acid Splash",
+            "School": "Conjuration",
+            "Description": "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other."
+        },
+        {
+            "Name": "Chill Touch",
+            "School": "Necromancy",
+            "Description": "You create a ghostly, skeletal hand in the space of a creature within range."
+        },
+        {
+            "Name": "Dancing Lights",
+            "School": "Evocation",
+            "Description": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs."
+        },
+        {
+            "Name": "Fire Bolt",
+            "School": "Evocation",
+            "Description": "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target."
+        },
+        {
+            "Name": "Light",
+            "School": "Evocation",
+            "Description": "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
+        },
+        {
+            "Name": "Mage Hand",
+            "School": "Conjuration",
+            "Description": "A spectral, floating hand appears at a point you choose within range."
+        },
+        {
+            "Name": "Mending",
+            "School": "Transmutation",
+            "Description": "This spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin."
+        },
+        {
+            "Name": "Message",
+            "School": "Transmutation",
+            "Description": "You point your finger toward a creature within range and whisper a message."
+        },
+        {
+            "Name": "Minor Illusion",
+            "School": "Illusion",
+            "Description": "You create a sound or an image of an object within range that lasts for the duration."
+        },
+        {
+            "Name": "Poison Spray",
+            "School": "Conjuration",
+            "Description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm."
+        },
+        {
+            "Name": "Prestidigitation",
+            "School": "Transmutation",
+            "Description": "This spell is a minor magical trick that novice spellcasters use for practice."
+        },
+        {
+            "Name": "Ray of Frost",
+            "School": "Evocation",
+            "Description": "A frigid beam of blue-white light streaks toward a creature within range."
+        },
+        {
+            "Name": "Shocking Grasp",
+            "School": "Evocation",
+            "Description": "Lightning springs from your hand to deliver a shock to a creature you try to touch."
+        },
+        {
+            "Name": "True Strike",
+            "School": "Divination",
+            "Description": "You extend your hand and point a finger at a target in range."
+        }
+    ]
+}

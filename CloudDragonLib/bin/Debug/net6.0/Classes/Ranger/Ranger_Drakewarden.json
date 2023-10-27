@@ -1,0 +1,50 @@
+{
+    "Subclass Name": "Drakewarden",
+    "Subclass Features": [
+        {
+            "Feature Name": "Drake Companion",
+            "Feature Description": [
+                "At 3rd level, you gain a drake companion that accompanies you on your adventures.",
+                "Choose one of the following drake colors: Black, Blue, Green, Red, or White. Your drake companion is friendly to you and your companions and follows your commands. It gains proficiency in two skills as determined by its color. The drake's hit point maximum equals its normal hit points or four times your ranger level, whichever is higher. It also adds your proficiency bonus to its AC, attack rolls, and damage rolls. Your drake companion's attacks are considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks.",
+                "Your ranger level determines your drake companion's abilities, and it can use its Breath Weapon as detailed in the Player's Handbook.",
+                {
+                    "Ranger Level": [
+                        {
+                            "3rd": "Drake Companion (see Player's Handbook for statistics)",
+                            "7th": "Improved Breath Weapon (see Player's Handbook for statistics)",
+                            "11th": "Winged Drake (see Player's Handbook for statistics)",
+                            "15th": "Ancient Drake (see Player's Handbook for statistics)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Feature Name": "Bond of Fang and Scale",
+            "Feature Description": [
+                "Beginning at 7th level, you forge a powerful bond with your drake companion. While it is within 30 feet of you, you and your drake gain several benefits:",
+                {
+                    "Benefits": [
+                        "You gain advantage on saving throws against being frightened.",
+                        "If you are frightened, you can use your reaction to move to your drake's space.",
+                        "When you use your action to command your drake to take the Attack action, the drake can make one extra attack on top of its normal attacks."
+                    ]
+                }
+            ]
+        },
+        {
+            "Feature Name": "Drake's Breath",
+            "Feature Description": [
+                "Starting at 11th level, your drake companion's Breath Weapon becomes more potent. When your drake uses its Breath Weapon, all creatures in the area of effect have disadvantage on the saving throw, and the damage increases as noted in the Player's Handbook.",
+                "Additionally, when your drake uses its Breath Weapon, it can choose a number of creatures equal to your Wisdom modifier (minimum of one) that are unaffected by the damage."
+            ]
+        },
+        {
+            "Feature Name": "Draconic Strike",
+            "Feature Description": [
+                "At 15th level, your attacks are infused with the essence of dragons. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal extra damage to the target.",
+                "The extra damage is 1d6 of the damage type chosen by your drake companion's color (Black: Acid, Blue: Lightning, Green: Poison, Red: Fire, White: Cold)."
+            ]
+        }
+    ]
+}

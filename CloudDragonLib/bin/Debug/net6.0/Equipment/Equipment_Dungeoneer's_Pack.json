@@ -1,0 +1,45 @@
+{
+    "Pack Name": "Dungeoneer's Pack",
+    "Contents": [
+        {
+            "Item": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Crowbar",
+            "Quantity": 1
+        },
+        {
+            "Item": "Hammer",
+            "Quantity": 1
+        },
+        {
+            "Item": "Piton",
+            "Quantity": 10
+        },
+        {
+            "Item": "Torch",
+            "Quantity": 10
+        },
+        {
+            "Item": "Tinderbox",
+            "Quantity": 1
+        },
+        {
+            "Item": "Rations (10 days)",
+            "Quantity": 10
+        },
+        {
+            "Item": "Waterskin",
+            "Quantity": 1
+        },
+        {
+            "Item": "Rope, Hemp (50 feet)",
+            "Quantity": 2
+        },
+        {
+            "Item": "Mason's Tools",
+            "Quantity": 1
+        }
+    ]
+}

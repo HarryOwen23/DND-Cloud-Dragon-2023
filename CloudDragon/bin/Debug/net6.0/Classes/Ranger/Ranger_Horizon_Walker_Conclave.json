@@ -1,0 +1,38 @@
+{
+    "Subclass Name": "Horizon Walker",
+    "Subclass Features": [
+        {
+            "Feature Name": "Detect Portal",
+            "Feature Description": [
+                "At 3rd level, you gain the ability to magically sense the presence of planar portals. As an action, you can open your awareness to magically detect the presence of planar portals. You sense the distance and direction to the closest planar portal within 1 mile of you.",
+                "This feature reveals the presence of portals only. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses after finishing a long rest."
+            ]
+        },
+        {
+            "Feature Name": "Planar Warrior",
+            "Feature Description": [
+                "Starting at 3rd level, you learn to draw on the energy of the multiverse to augment your attacks. As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra 1d8 force damage from the attack.",
+                "When you reach 11th level in this class, the extra damage increases to 2d8."
+            ]
+        },
+        {
+            "Feature Name": "Ethereal Step",
+            "Feature Description": [
+                "Starting at 7th level, you can use your bonus action to magically step into the Ethereal Plane for a brief moment and then step back into your current plane. When you do so, you teleport up to 10 feet to an unoccupied space you can see.",
+                "Additionally, you gain resistance to force damage while in the Ethereal Plane."
+            ]
+        },
+        {
+            "Feature Name": "Distant Strike",
+            "Feature Description": [
+                "At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the Attack action, you can teleport up to 10 feet before each attack to an unoccupied space you can see. If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
+            ]
+        },
+        {
+            "Feature Name": "Spectral Defense",
+            "Feature Description": [
+                "Starting at 15th level, you gain the ability to slip through the planar boundaries to lessen the harm done to you. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that damage on this turn."
+            ]
+        }
+    ]
+}

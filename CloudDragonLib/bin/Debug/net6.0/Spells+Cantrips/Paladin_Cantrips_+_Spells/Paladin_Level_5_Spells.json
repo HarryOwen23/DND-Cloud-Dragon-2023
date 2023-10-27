@@ -1,0 +1,29 @@
+﻿{
+    "5thLevelPaladinSpells": [
+        {
+            "Name": "Banishing Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage."
+        },
+        {
+            "Name": "Circle of Power",
+            "School": "Abjuration",
+            "Description": "Divine energy radiates from you, providing protection to your allies. Creatures of your choice in the aura have advantage on saving throws against spells and other magical effects."
+        },
+        {
+            "Name": "Destructive Wave",
+            "School": "Evocation",
+            "Description": "You strike the ground with a mighty blow, creating a shockwave of energy. Each creature of your choice in a 30-foot radius must make a Constitution saving throw or take damage."
+        },
+        {
+            "Name": "Dispel Evil and Good",
+            "School": "Abjuration",
+            "Description": "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from other planes. Choose one of these creature types, and affected creatures have disadvantage on attack rolls against you."
+        },
+        {
+            "Name": "Geas",
+            "School": "Enchantment",
+            "Description": "You place a magical command on a creature you can see within range, forcing it to carry out some service or refrain from some action."
+        }
+    ]
+}

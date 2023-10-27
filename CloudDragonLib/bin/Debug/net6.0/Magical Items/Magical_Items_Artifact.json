@@ -1,0 +1,220 @@
+﻿{
+    "ArtifactsMagicItems": [
+        {
+            "Name": "Akmon, Hammer of Purphoros",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This warhammer is a divine weapon dedicated to the god Purphoros."
+        },
+        {
+            "Name": "Axe of the Dwarvish Lords",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This magical axe is a symbol of dwarven royalty and power."
+        },
+        {
+            "Name": "Baba Yaga's Mortar and Pestle",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical mortar and pestle are associated with the legendary witch Baba Yaga."
+        },
+        {
+            "Name": "Blade of Broken Mirrors",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword is crafted from shattered mirrors and has unique reflective properties."
+        },
+        {
+            "Name": "Book of Exalted Deeds",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This holy book embodies principles of goodness and virtue."
+        },
+        {
+            "Name": "Book of Vile Darkness",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This cursed book is a source of dark knowledge and power."
+        },
+        {
+            "Name": "Book of Vile Darkness (Variant)",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This variant of the Book of Vile Darkness possesses unique properties."
+        },
+        {
+            "Name": "Crook of Rao",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical staff is associated with the god Rao and promotes law and order."
+        },
+        {
+            "Name": "Dekella, Bident of Thassa",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This trident is dedicated to the sea god Thassa and has control over water."
+        },
+        {
+            "Name": "Demonomicon of Iggwilv",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This forbidden tome is a source of demonic lore and power."
+        },
+        {
+            "Name": "Ephixis, Bow of Nyela",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This bow is associated with the goddess Nyela and is a symbol of hunting prowess."
+        },
+        {
+            "Name": "Eye and Hand of Vecna",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "These artifacts are the remnants of the lich Vecna and grant dark powers."
+        },
+        {
+            "Name": "Grovelthrash",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sentient greataxe is a brutal weapon with a cruel personality."
+        },
+        {
+            "Name": "Iggwilv's Cauldron",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical cauldron is associated with the archmage Iggwilv and has various alchemical properties."
+        },
+        {
+            "Name": "Khrusor, Spear of Heliod",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This spear is dedicated to the sun god Heliod and radiates holy power."
+        },
+        {
+            "Name": "Lash of Shadows",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This whip is made of shadowstuff and can drain the life force of its victims."
+        },
+        {
+            "Name": "Luba's Tarokka of Souls",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This tarokka deck has the power to manipulate souls and fate."
+        },
+        {
+            "Name": "Mace of the Black Crown",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This mace is associated with dark rulers and can dominate the will of others."
+        },
+        {
+            "Name": "Mastix, Whip of Erebos",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This whip is dedicated to the god Erebos and has the power to instill fear."
+        },
+        {
+            "Name": "Mighty Servant of Leuk-o",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This magical servant can perform various tasks and commands."
+        },
+        {
+            "Name": "Orb of Dragonkind",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This orb can control dragons and is associated with dragonkind."
+        },
+        {
+            "Name": "Orrery Of The Wanderer",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This orrery has the power to predict celestial events and their effects."
+        },
+        {
+            "Name": "Ring of Winter",
+            "Type": "Ring",
+            "Attunement": "Attuned",
+            "Description": "This ring has control over ice and cold and is associated with a legendary archfey."
+        },
+        {
+            "Name": "Ruin's Wake",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This weapon is destructive and can lay waste to its surroundings."
+        },
+        {
+            "Name": "Ruinstone",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This stone is a fragment of a powerful artifact and has latent magical properties."
+        },
+        {
+            "Name": "Silken Spite",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This whip is made of shadow silk and has the power to ensnare and bind its targets."
+        },
+        {
+            "Name": "Staff of the Forgotten One",
+            "Type": "Staff",
+            "Attunement": "Attuned",
+            "Description": "This staff is associated with a forgotten deity and has mysterious powers."
+        },
+        {
+            "Name": "Stone of Golorr",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This stone is a sentient artifact with knowledge of secrets and hidden places."
+        },
+        {
+            "Name": "Sword of Kas",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword was once wielded by a powerful assassin and harbors dark energies."
+        },
+        {
+            "Name": "Sword of Zariel",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This sword is associated with the archduchess Zariel and is a symbol of her power."
+        },
+        {
+            "Name": "Teeth of Dahlver-Nar",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "These teeth are relics of a legendary sea monster and have aquatic powers."
+        },
+        {
+            "Name": "The Bloody End",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This axe is stained with the blood of countless foes and thirsts for more."
+        },
+        {
+            "Name": "The Infernal Machine Of Lum The Mad",
+            "Type": "Wondrous Item",
+            "Attunement": "Attuned",
+            "Description": "This infernal machine has bizarre and unpredictable effects."
+        },
+        {
+            "Name": "Wand of Orcus",
+            "Type": "Wand",
+            "Attunement": "Attuned",
+            "Description": "This wand is associated with the demon lord Orcus and can control undead."
+        },
+        {
+            "Name": "Will of the Talon",
+            "Type": "Weapon",
+            "Attunement": "Attuned",
+            "Description": "This greatsword is associated with the talon, a symbol of dark power."
+        },
+        {
+            "Name": "Wyrmskull Throne",
+            "Type": "Wondrous Item",
+            "Attunement": "-",
+            "Description": "This throne is made from the skull of a dragon and has commanding presence."
+        }
+    ]
+}

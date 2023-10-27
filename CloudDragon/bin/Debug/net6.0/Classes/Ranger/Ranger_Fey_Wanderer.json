@@ -1,0 +1,44 @@
+{
+    "Subclass Name": "Fey Wanderer",
+    "Subclass Features": [
+        {
+            "Feature Name": "Feywild Gift",
+            "Feature Description": [
+                "At 3rd level, you gain the ability to draw on the magic of the Feywild. You learn to speak, read, and write Sylvan. In addition, you gain the following benefits:",
+                {
+                    "Benefits": [
+                        "When you hit a creature with an attack roll and deal damage to it, you can also deal an extra 1d4 psychic damage to the target.",
+                        "You gain advantage on saving throws against being frightened."
+                    ]
+                }
+            ]
+        },
+        {
+            "Feature Name": "Feywild Magic",
+            "Feature Description": [
+                "Starting at 3rd level, your connection to the Feywild grants you the ability to cast certain spells. You can cast the Misty Step spell once per day without expending a spell slot. When you reach 7th level, you can also cast the Greater Invisibility spell once per day without expending a spell slot. Wisdom is your spellcasting ability for these spells.",
+                "Additionally, you learn an expanded spell list that includes various enchantment and illusion spells."
+            ]
+        },
+        {
+            "Feature Name": "Fey Wanderer's Blade",
+            "Feature Description": [
+                "At 7th level, you can use your bonus action to magically summon a blade into your free hand. This magic blade is a simple or martial melee weapon of your choice. You are proficient with it, and it counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+                "The blade disappears if it is more than 5 feet away from you for 1 minute or more. It also disappears if you use this feature again or dismiss the blade (no action required)."
+            ]
+        },
+        {
+            "Feature Name": "Feywild Passage",
+            "Feature Description": [
+                "Starting at 11th level, you can slip between the Feywild and the Material Plane. When you finish a short or long rest, you can choose a location you've been to before. While in the Feywild, you can use a bonus action to vanish from your current location and appear in the chosen location on the Material Plane, or vice versa. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once), and you regain all expended uses after finishing a long rest."
+            ]
+        },
+        {
+            "Feature Name": "Evasion of the Fey",
+            "Feature Description": [
+                "At 15th level, you gain the ability to move through the Feywild with incredible ease. You gain proficiency in Dexterity saving throws if you don't already have it. If you already have proficiency, you gain expertise in Dexterity saving throws."
+            ]
+        }
+    ]
+}
+

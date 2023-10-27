@@ -1,0 +1,103 @@
+{
+    "Archetype Name": "The Genie",
+    "Archetype Abilities": [
+        {
+            "Genie Kind": [
+                {
+                    "Dice Number": "1",
+                    "Kind": "Dao",
+                    "Element": "Earth"
+                },
+                {
+                    "Dice Number": "2",
+                    "Kind": "Djinni",
+                    "Element": "Air"
+                },
+                {
+                    "Dice Number": "3",
+                    "Kind": "Efreeti",
+                    "Element": "Fire"
+                },
+                {
+                    "Dice Number": "4",
+                    "Kind": "Marid",
+                    "Element": "Water"
+                }
+            ]
+        },
+        {
+            "Archetype Ability": "Expanded Spell List",
+            "Archetype Ability Description": [
+                "The Genie lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+                {
+                    "Genie Expanded Spells": [
+                        {
+                            "Spell Level": "1st",
+                            "Spells": [
+                                "Detect Evil and Good",
+                                "Cure Wounds"
+                            ]
+                        },
+                        {
+                            "Spell Level": "2nd",
+                            "Spells": [
+                                "Phantasmal Force",
+                                "Silence"
+                            ]
+                        },
+                        {
+                            "Spell Level": "3rd",
+                            "Spells": [
+                                "Create Food and Water",
+                                "Wind Wall"
+                            ]
+                        },
+                        {
+                            "Spell Level": "4th",
+                            "Spells": [
+                                "Phantom Steed",
+                                "Elemental Bane"
+                            ]
+                        },
+                        {
+                            "Spell Level": "5th",
+                            "Spells": [
+                                "Creation",
+                                "Etherealness"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Archetype Ability": "Genie's Vessel",
+            "Archetype Ability Description": [
+                "At 1st level, you acquire a magical vessel. Your vessel is a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.",
+                "While the vessel is on your person, you can use it as an additional spellcasting focus for your warlock spells. You gain a special benefit based on the type of vessel you choose, as detailed in the Genie's Vessel table.",
+                "If your vessel is destroyed, you can re-create it as part of a short or long rest, provided you have access to your spellbook, prayer book, or other equipment used as a spellcasting focus."
+            ]
+        },
+        {
+            "Archetype Ability": "Elemental Gift",
+            "Archetype Ability Description": [
+                "Starting at 6th level, when you finish a short or long rest, you can choose one of the following damage types: acid, cold, fire, lightning, or thunder. You gain resistance to that damage type until you choose a different one with this feature.",
+                "Additionally, you can invoke the power of your vessel to gain a special benefit based on its type, as detailed in the Genie's Vessel table."
+            ]
+        },
+        {
+            "Archetype Ability": "Sanctuary Vessel",
+            "Archetype Ability Description": [
+                "Starting at 10th level, you can now use your vessel as a sanctuary for your allies. While it is on your person, you can use your reaction to give one creature you can see within 60 feet of you temporary hit points equal to 2d10 + your warlock level. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+            ]
+        },
+        {
+            "Archetype Ability": "Eternal Vessel",
+            "Archetype Ability Description": [
+                "At 14th level, your vessel becomes an eternal symbol of your power. While you are conscious, you and any creature you choose within 60 feet of you can use your vessel as a portal to the Elemental Plane of your patron. The portal allows travel in both directions and is visible as a rippling curtain of radiant energy. To use the portal, one must step into it and move forward. Anything that enters the portal appears in the corresponding location on the Elemental Plane, and vice versa.",
+                "Once you use this feature, you can't use it again until you finish a long rest."
+            ]
+        }
+    ]
+}
+

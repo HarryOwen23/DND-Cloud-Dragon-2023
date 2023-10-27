@@ -1,0 +1,52 @@
+{
+    "Backgrounds": [
+        {
+            "Background Name": "Sailor",
+            "Description": "You are an experienced sailor who has spent a significant part of your life aboard ships. Whether a pirate, merchant sailor, or naval crew member, the sea is your home, and you're skilled in the ways of maritime life.",
+            "Skill Proficiencies": [ "Athletics", "Perception" ],
+            "Tool Proficiencies": [ "Navigator's Tools", "Vehicles (Water)" ],
+            "Languages": [],
+            "Starting Equipment": [
+                "A belaying pin (club)",
+                "50 feet of silk rope",
+                "A lucky charm (trinket)",
+                "A set of common clothes",
+                "A belt pouch containing 10 gold pieces"
+            ],
+            "Feature": "Ship's Passage",
+            "Feature Description": "You can secure free passage aboard a sailing ship for yourself and your companions. You are also able to gain work as a crew member on a ship or receive discounts on passage fares when traveling by sea."
+        }
+    ],
+    "Personality Traits": [
+        "1. I am accustomed to hard work and don't shy away from manual labor.",
+        "2. I enjoy the camaraderie of a ship's crew and easily make friends with fellow sailors.",
+        "3. I have a strong sense of duty and discipline instilled by life at sea.",
+        "4. I am superstitious and have many sailor's beliefs and rituals.",
+        "5. I am quick to tell sea stories and embellish my experiences for dramatic effect.",
+        "6. I have a deep love for the sea and can spend hours gazing at its expanse."
+    ],
+    "Ideals": [
+        "1. Freedom. The open sea represents true freedom, and I long for adventure and independence. (Chaotic)",
+        "2. Loyalty. I would never abandon my shipmates or crew, no matter the danger. (Good)",
+        "3. Ambition. I seek to rise through the ranks and become a respected captain one day. (Any)",
+        "4. Tradition. I adhere to the customs and superstitions of sailors. (Lawful)",
+        "5. Adventure. Life as a sailor is a thrilling and endless adventure. (Chaotic)",
+        "6. Wealth. I am driven by the desire for riches and treasure. (Any)"
+    ],
+    "Bonds": [
+        "1. My ship and its crew are like family to me, and I would do anything for them.",
+        "2. I have a sworn enemy or rival among pirates, sailors, or naval officers.",
+        "3. I am searching for a lost ship or a legendary maritime artifact.",
+        "4. I have a loved one or family waiting for my return from sea, and I must provide for them.",
+        "5. I am haunted by a shipwreck or maritime disaster in which I lost comrades.",
+        "6. I owe a life debt to a fellow sailor who saved my life at sea."
+    ],
+    "Flaws": [
+        "1. I have a tendency to be overly superstitious and fearful of ill omens.",
+        "2. I can be reckless and prone to taking unnecessary risks, especially during storms or battles at sea.",
+        "3. I am quick to anger when faced with insubordination or disrespect on a ship.",
+        "4. I am haunted by memories of a shipwreck or naval battle in which I lost comrades.",
+        "5. I have difficulty trusting those who are not fellow sailors and often view outsiders with suspicion.",
+        "6. I have a fear of drowning or a deep aversion to underwater environments."
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "Pack Name": "Explorer's Pack",
+    "Contents": [
+        {
+            "Item": "Backpack",
+            "Quantity": 1
+        },
+        {
+            "Item": "Bedroll",
+            "Quantity": 1
+        },
+        {
+            "Item": "Mess Kit",
+            "Quantity": 1
+        },
+        {
+            "Item": "Tinderbox",
+            "Quantity": 1
+        },
+        {
+            "Item": "Torches",
+            "Quantity": 10
+        },
+        {
+            "Item": "Rations (10 days)",
+            "Quantity": 10
+        },
+        {
+            "Item": "Waterskin",
+            "Quantity": 1
+        },
+        {
+            "Item": "50 feet of Hempen Rope",
+            "Quantity": 1
+        }
+    ]
+}
+

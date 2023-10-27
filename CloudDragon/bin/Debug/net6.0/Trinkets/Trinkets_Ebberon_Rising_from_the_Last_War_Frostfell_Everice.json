@@ -1,0 +1,36 @@
+{
+    "Frostfell and Everice Trinkets": [
+        {
+            "Dice Number": 1,
+            "Trinket": "A small prism carved from ice that doesn't melt"
+        },
+        {
+            "Dice Number": 2,
+            "Trinket": "A rusted iron coin, depicting a dwarf lord and the words 'Five Rex Undra'"
+        },
+        {
+            "Dice Number": 3,
+            "Trinket": "A pair of eight-sided dice carved from ice that doesn't melt"
+        },
+        {
+            "Dice Number": 4,
+            "Trinket": "A swatch of silvery fur that's cold to the touch, possibly from a winter wolf"
+        },
+        {
+            "Dice Number": 5,
+            "Trinket": "A snowball; it doesn't melt and can't be compressed into ice"
+        },
+        {
+            "Dice Number": 6,
+            "Trinket": "A tiny white dragon sculpted from ice that doesn't melt"
+        },
+        {
+            "Dice Number": 7,
+            "Trinket": "A key carved from ice that doesn't melt"
+        },
+        {
+            "Dice Number": 8,
+            "Trinket": "A single scale from a white dragon"
+        }
+    ]
+}

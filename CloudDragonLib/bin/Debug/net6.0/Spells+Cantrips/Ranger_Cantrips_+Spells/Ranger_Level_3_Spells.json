@@ -1,0 +1,49 @@
+﻿{
+    "RangerLevel3Spells": [
+        {
+            "Name": "Conjure Animals",
+            "School": "Conjuration",
+            "Description": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range."
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range."
+        },
+        {
+            "Name": "Nondetection",
+            "School": "Abjuration",
+            "Description": "For the duration, you hide a target that you touch from divination magic."
+        },
+        {
+            "Name": "Plant Growth",
+            "School": "Transmutation",
+            "Description": "This spell channels vitality into plants within a specific area."
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice."
+        },
+        {
+            "Name": "Speak with Plants",
+            "School": "Transmutation",
+            "Description": "You imbue plants within 30 feet of you with limited sentience and animation."
+        },
+        {
+            "Name": "Water Breathing",
+            "School": "Transmutation",
+            "Description": "This spell gives a creature the ability to breathe underwater."
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface, such as water, acid, mud, snow, quicksand, or lava."
+        },
+        {
+            "Name": "Wind Wall",
+            "School": "Evocation",
+            "Description": "A wall of strong wind rises from the ground at a point you choose within range."
+        }
+    ]
+}
