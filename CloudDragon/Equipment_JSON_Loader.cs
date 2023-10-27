@@ -10,6 +10,7 @@ namespace CloudDragon
     {
         public List<EquipmentCategory> EquipmentCategories { get; set; }
     }
+
     public class EquipmentCategory
     {
         [JsonPropertyName("Pack Name")]
@@ -18,6 +19,7 @@ namespace CloudDragon
         [JsonPropertyName("Contents")]
         public List<EquipmentItem> Contents { get; set; }
     }
+
     public class EquipmentItem
     {
         [JsonPropertyName("Item")]
@@ -26,9 +28,10 @@ namespace CloudDragon
         [JsonPropertyName("Quantity")]
         public int Quantity { get; set; }
     }
-    internal class EquipmentJsonLoader
+
+    internal class EquipmentJsonLoader : ILoader
     {
-        public static Equipment LoadEquipmentData(string jsonFilePath)
+        public Equipment LoadEquipmentData(string jsonFilePath)
         {
             try
             {
@@ -40,6 +43,21 @@ namespace CloudDragon
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
                 return null;
+            }
+        }
+
+        public void Load()
+        {
+            Console.WriteLine("Loading Equipment Data...");
+
+            string jsonFilePath = "EquipmentData.json";
+
+            var equipmentData = LoadEquipmentData(jsonFilePath);
+
+            if (equipmentData != null)
+            {
+                Console.WriteLine("Equipment Data Loaded Successfully!");
+                // You can access and process the equipment data here
             }
         }
     }
