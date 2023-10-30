@@ -25,13 +25,13 @@ namespace CloudDragon
 
     internal class TrinketJsonLoader
     {
-        public static Equipment LoadTrinketData(string jsonFilePath)
+        public static TrinketsData LoadTrinketData(string jsonFilePath)
         {
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                var TrinketData = JsonSerializer.Deserialize<Equipment>(jsonData);
-                return TrinketData;
+                var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
+                return trinketData;
             }
             catch (Exception e)
             {
