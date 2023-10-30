@@ -70,7 +70,7 @@ internal class EquipmentLoader : ILoader
     {
         Console.WriteLine("Loading Equipment Data ...");
 
-        // Define the paths to the JSON files for Arcane Focus and Burglar's Pack
+        // Define the paths to the JSON files 
         string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
         string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglar's _Pack.json";
         string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
@@ -103,8 +103,6 @@ internal class EquipmentLoader : ILoader
         var equipmentDataPreistsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathPreistsPack);
         var equipmentDataScholarsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathScholarsPack);
         var equipmentDataUsableItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathUsableItems);
-
-
 
 
         if (equipmentDataArcaneFocus != null)
