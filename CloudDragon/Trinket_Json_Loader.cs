@@ -230,10 +230,7 @@ namespace CloudDragon
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
             }
-
-
         }
+
     }
-    
-        
 }

@@ -25,32 +25,74 @@ namespace CloudDragon
     {
         public Dictionary<string, List<Armor>> ArmorCategories { get; set; }
     }
+
     internal class Armor_Json_Loader
     {
-        public ArmorData LoadArmorData()
+        public static ArmorData LoadArmorData(string jsonFilePath)
         {
-            // Read the JSON data from your files or strings
-            string heavyArmorJson = File.ReadAllText("heavy_armor.json");
-            string lightArmorJson = File.ReadAllText("light_armor.json");
-            string mediumArmorJson = File.ReadAllText("medium_armor.json");
-
-            // Deserialize the JSON into C# objects
-            ArmorCategory heavyArmor = JsonSerializer.Deserialize<ArmorCategory>(heavyArmorJson);
-            ArmorCategory lightArmor = JsonSerializer.Deserialize<ArmorCategory>(lightArmorJson);
-            ArmorCategory mediumArmor = JsonSerializer.Deserialize<ArmorCategory>(mediumArmorJson);
-
-            // Create an ArmorData object to store all categories
-            ArmorData armorData = new ArmorData
+            try
             {
-                ArmorCategories = new Dictionary<string, List<Armor>>
+                string jsonData = File.ReadAllText(jsonFilePath);
+                var armorCategory = JsonSerializer.Deserialize<ArmorCategory>(jsonData);
+                return new ArmorData
                 {
-                    { "Heavy Armor", heavyArmor.Armors },
-                    { "Light Armor", lightArmor.Armors },
-                    { "Medium Armor", mediumArmor.Armors }
-                }
-            };
+                    ArmorCategories = new Dictionary<string, List<Armor>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), armorCategory.Armors }
+                    }
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error loading JSON file: " + e.Message);
+                return null;
+            }
+        }
+    }
 
-            return armorData;
+    internal class ArmorLoader : ILoader
+    {
+        void ILoader.Load()
+        {
+            Console.WriteLine("Loading Armor Data ...");
+            // Define the paths to the JSON files
+            string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
+            string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
+            string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
+
+            var armorHeavy = Armor_Json_Loader.LoadArmorData(jsonFilePathArmorHeavy);
+            var armorMedium = Armor_Json_Loader.LoadArmorData(jsonFilePathArmorMedium);
+            var armorLight = Armor_Json_Loader.LoadArmorData(jsonFilePathArmorLight);
+
+            // Display the Armor data for Heavy Armor
+            if (armorHeavy != null)
+            {
+                Console.WriteLine("Heavy Armor:");
+                foreach (var armor in armorHeavy.ArmorCategories["Heavy Armor"])
+                {
+                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                }
+            }
+
+            // Display the Armor data for Medium Armor
+            if (armorMedium != null)
+            {
+                Console.WriteLine("Medium Armor:");
+                foreach (var armor in armorMedium.ArmorCategories["Medium Armor"])
+                {
+                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                }
+            }
+
+            // Display the Armor data for Light Armor
+            if (armorLight != null)
+            {
+                Console.WriteLine("Medium Armor:");
+                foreach (var armor in armorLight.ArmorCategories["Light Armor"])
+                {
+                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                }
+            }
         }
     }
 }
