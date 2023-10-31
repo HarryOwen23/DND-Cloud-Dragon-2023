@@ -166,11 +166,26 @@ namespace CloudDragon
         static void Main(string[] args)
         {
 
+            ILoader characterLoader = new CharacterLoader();
+            characterLoader.Load();
+
+            ILoader EquipmentLoader = new EquipmentLoader();
+            EquipmentLoader.Load();
+
+            ILoader ArmorLoader = new ArmorLoader();
+            ArmorLoader.Load();
+
             ILoader currencyLoader = new CurrencyLoader();
             currencyLoader.Load();
 
-            //ILoader characterLoader = new CharacterLoader();
-            //characterLoader.Load();
+            ILoader TrinketLoader = new TrinketLoader();
+            TrinketLoader.Load();
+
+            // //ILoader magicalItemsLoader = new magicalItemsLoader();
+            //magicalItemsLoader.Load();
+
+
+
 
         }
     }
