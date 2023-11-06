@@ -3,72 +3,72 @@
         {
             "Name": "Assassin's blood",
             "Type": "Ingested",
-            "Price per Dose": "150 gp"
+            "dosePrice": "150 gp"
         },
         {
             "Name": "Burnt Othur Fumes",
             "Type": "Inhaled",
-            "Price per Dose": "500 gp"
+            "dosePrice": "500 gp"
         },
         {
             "Name": "Carrion Crawler Mucus",
             "Type": "Contact",
-            "Price per Dose": "200 gp"
+            "dosePrice": "200 gp"
         },
         {
             "Name": "Drow Poison",
             "Type": "Injury",
-            "Price per Dose": "200 gp"
+            "dosePrice": "200 gp"
         },
         {
             "Name": "Essence of Ether",
             "Type": "Inhaled",
-            "Price per Dose": "300 gp"
+            "dosePrice": "300 gp"
         },
         {
             "Name": "Malice",
             "Type": "Inhaled",
-            "Price per Dose": "250 gp"
+            "dosePrice": "250 gp"
         },
         {
             "Name": "Midnight Tears",
             "Type": "Ingested",
-            "Price per Dose": "1,500 gp"
+            "dosePrice": "1,500 gp"
         },
         {
             "Name": "Oil of Taggit",
             "Type": "Contact",
-            "Price per Dose": "400 gp"
+            "dosePrice": "400 gp"
         },
         {
             "Name": "Pale Tincture",
             "Type": "Ingested",
-            "Price per Dose": "250 gp"
+            "dosePrice": "250 gp"
         },
         {
             "Name": "Purple Worm Poison",
             "Type": "Injury",
-            "Price per Dose": "2,000 gp"
+            "dosePrice": "2,000 gp"
         },
         {
             "Name": "Serpent Venom",
             "Type": "Injury",
-            "Price per Dose": "200 gp"
+            "dosePrice": "200 gp"
         },
         {
             "Name": "Torpor",
             "Type": "Ingested",
-            "Price per Dose": "600 gp"
+            "dosePrice": "600 gp"
         },
         {
             "Name": "Truth Serum",
             "Type": "Ingested",
-            "Price per Dose": "150 gp"
+            "dosePrice": "150 gp"
         },
         {
             "Name": "Wyvern Poison",
             "Type": "Injury",
-            "Price per Dose": "1,200 gp"
+            "dosePrice": "1,200 gp"
         }
     ]
 }

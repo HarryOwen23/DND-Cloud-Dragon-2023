@@ -8,21 +8,29 @@ namespace CloudDragon
 {
     public class Armor
     {
+        [JsonPropertyName("Name")]
         public string Name { get; set; }
+        [JsonPropertyName("Armor Class")]
         public string ArmorClass { get; set; }
+        [JsonPropertyName("Strength")]
         public string Strength { get; set; }
+        [JsonPropertyName("Stealth")]
         public string Stealth { get; set; }
+        [JsonPropertyName("Weight")]
         public string Weight { get; set; }
+        [JsonPropertyName("Cost")]
         public string Cost { get; set; }
     }
 
     public class ArmorCategory
     {
+        [JsonPropertyName("Armors")]
         public List<Armor> Armors { get; set; }
     }
 
     public class ArmorData
     {
+        [JsonPropertyName("Armor Categories")]
         public Dictionary<string, List<Armor>> ArmorCategories { get; set; }
     }
 

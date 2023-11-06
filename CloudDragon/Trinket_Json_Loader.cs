@@ -8,17 +8,22 @@ namespace CloudDragon
 {
     public class Trinket
     {
+        [JsonPropertyName("Dice Number")]
         public int DiceNumber { get; set; }
+
+        [JsonPropertyName("Trinket Description")]
         public string TrinketDescription { get; set; }
     }
 
     public class TrinketCategory
     {
+        [JsonPropertyName("Trinkets")]
         public List<Trinket> Trinkets { get; set; }
     }
 
     public class TrinketsData
     {
+        [JsonPropertyName("Trinket Categories")]
         public Dictionary<string, List<Trinket>> TrinketCategories { get; set; }
     }
 

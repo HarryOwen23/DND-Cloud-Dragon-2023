@@ -8,19 +8,25 @@ namespace CloudDragon
 {
     public class magicItems
     {
+        [JsonPropertyName("Name")]
         public string Name { get; set; }
+        [JsonPropertyName("Type")]
         public string Type { get; set; }
+        [JsonPropertyName("Attunement")]
         public string Attunement { get; set; }
+        [JsonPropertyName("Description")]
         public string Description{ get; set; }
     }
 
     public class MICategory
     {
+        [JsonPropertyName("magicalItems")]
         public List<magicItems> magicalItems { get; set; }
     }
 
     public class MagicalItemData
     {
+        [JsonPropertyName("miCategories")]
         public Dictionary<string, List<magicItems>> miCategories { get; set; }
     }
 
