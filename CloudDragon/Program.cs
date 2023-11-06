@@ -181,7 +181,7 @@ namespace CloudDragon
             ILoader TrinketLoader = new TrinketLoader();
             TrinketLoader.Load();
 
-            // //ILoader magicalItemsLoader = new magicalItemsLoader();
+             //ILoader magicalItemsLoader = new magicalItemsLoader();
             //magicalItemsLoader.Load();
 
 
