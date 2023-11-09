@@ -73,7 +73,7 @@ internal class EquipmentLoader : ILoader
         // Define the paths to the JSON files 
         string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
         string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglar's _Pack.json";
-        string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
+        // string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
         string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
         string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
         string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomat's_Pack.json";
@@ -90,7 +90,7 @@ internal class EquipmentLoader : ILoader
         // Load the equipment data using the EquipmentJsonLoader
         var equipmentDataArcaneFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathArcaneFocus);
         var equipmentDataBurglarPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathBurglarPack);
-        var equipmentDataClothes = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathClothes);
+        // var equipmentDataClothes = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathClothes);
         var equipmentDataCommonItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathCommonItems);
         var equipmentDataContainers = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathContainers);
         var equipmentDataDiplomatsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDiplomatsPack);

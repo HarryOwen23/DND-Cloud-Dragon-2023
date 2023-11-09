@@ -7,41 +7,41 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
-    public class poison
+    public class Poison
     {
         [JsonPropertyName("Name")]
         public string Name {  get; set; }
         [JsonPropertyName("Type")]
         public string Type { get; set; }
         [JsonPropertyName("Price per Dose")]
-        public string dosePrice { get; set; }
+        public string DosePrice { get; set; }
     }
 
-    public class poisonCat
+    public class PoisonCat
     {
         [JsonPropertyName("poisons")]
-        public List<poison> poisons { get; set; }
+        public List<Poison> Poisons { get; set; }
     }
 
-    public class poisonData
+    public class PoisonData
     {
         [JsonPropertyName("Poison Categories")]
-        public Dictionary<string, List<poison>> poisonCategories { get; set; }
+        public Dictionary<string, List<Poison>> PoisonCategories { get; set; }
     }
 
     internal class Poison_Json_Loader
     {
-        public static poisonData LoadPoisonData(string jsonFilePath)
+        public static PoisonData LoadPoisonData(string jsonFilePath)
         {
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                var poiCategory = JsonSerializer.Deserialize<poisonCat>(jsonData);
-                return new poisonData
+                var poiCategory = JsonSerializer.Deserialize<PoisonCat>(jsonData);
+                return new PoisonData
                 {
-                    poisonCategories = new Dictionary<string, List<poison>>
+                    PoisonCategories = new Dictionary<string, List<Poison>>
                     {
-                        {Path.GetFileNameWithoutExtension(jsonData), poiCategory.poisons }
+                        {Path.GetFileNameWithoutExtension(jsonData), poiCategory.Poisons }
                     }
                 };
             }
@@ -52,7 +52,7 @@ namespace CloudDragon
             }
         }
     }
-    internal class poisonLoader : ILoader
+    internal class PoisonLoader : ILoader
     {
         void ILoader.Load()
         {
@@ -65,9 +65,9 @@ namespace CloudDragon
             if (poisonstuff != null)
             {
                 Console.WriteLine("Poisons:");
-                foreach (var poi in poisonstuff.poisonCategories["Poisons"])
+                foreach (var poi in poisonstuff.PoisonCategories["Poisons"])
                 {
-                    Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.dosePrice} ");
+                    Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.DosePrice} ");
                 }
             }
         }

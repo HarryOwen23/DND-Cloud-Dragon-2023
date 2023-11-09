@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
-    public class magicItems
+    public class MagicItems
     {
         [JsonPropertyName("Name")]
         public string Name { get; set; }
@@ -21,13 +21,13 @@ namespace CloudDragon
     public class MICategory
     {
         [JsonPropertyName("magicalItems")]
-        public List<magicItems> magicalItems { get; set; }
+        public List<MagicItems> MagicalItems { get; set; }
     }
 
     public class MagicalItemData
     {
-        [JsonPropertyName("miCategories")]
-        public Dictionary<string, List<magicItems>> miCategories { get; set; }
+        [JsonPropertyName("Magical Item Categories")]
+        public Dictionary<string, List<MagicItems>> MiCategories { get; set; }
     }
 
     internal class Magical_Items_Json_Loader
@@ -40,9 +40,9 @@ namespace CloudDragon
                 var miCategory = JsonSerializer.Deserialize<MICategory>(jsonData);
                 return new MagicalItemData
                 {
-                    miCategories = new Dictionary<string, List<magicItems>>
+                    MiCategories = new Dictionary<string, List<MagicItems>>
                     {
-                        {Path.GetFileNameWithoutExtension(jsonData), miCategory.magicalItems }
+                        {Path.GetFileNameWithoutExtension(jsonData), miCategory.MagicalItems }
                     }
                 };
             }
@@ -81,7 +81,7 @@ namespace CloudDragon
             if (commonItems != null)
             {
                 Console.WriteLine("Common Magical Items:");
-                foreach (var magicitems in commonItems.miCategories["Common Magical Items"])
+                foreach (var magicitems in commonItems.MiCategories["Common Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -91,7 +91,7 @@ namespace CloudDragon
             if (uncommonItems != null)
             {
                 Console.WriteLine("Uncommon Magical Items:");
-                foreach (var magicitems in uncommonItems.miCategories["Uncommon Magical Items"])
+                foreach (var magicitems in uncommonItems.MiCategories["Uncommon Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -101,7 +101,7 @@ namespace CloudDragon
             if (rareItems != null)
             {
                 Console.WriteLine("Rare Magical Items:");
-                foreach (var magicitems in rareItems.miCategories["Rare Magical Items"])
+                foreach (var magicitems in rareItems.MiCategories["Rare Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -111,7 +111,7 @@ namespace CloudDragon
             if (veryrareItems != null)
             {
                 Console.WriteLine("Rare Magical Items:");
-                foreach (var magicitems in veryrareItems.miCategories["Rare Magical Items"])
+                foreach (var magicitems in veryrareItems.MiCategories["Rare Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -121,7 +121,7 @@ namespace CloudDragon
             if (legendaryItems != null)
             {
                 Console.WriteLine("Legendary Magical Items:");
-                foreach (var magicitems in legendaryItems.miCategories["Legendary Magical Items"])
+                foreach (var magicitems in legendaryItems.MiCategories["Legendary Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -131,7 +131,7 @@ namespace CloudDragon
             if (artifactItems != null)
             {
                 Console.WriteLine("Artifact Magical Items:");
-                foreach (var magicitems in artifactItems.miCategories["Artifact Magical Items"])
+                foreach (var magicitems in artifactItems.MiCategories["Artifact Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -141,7 +141,7 @@ namespace CloudDragon
             if (unknownItems != null)
             {
                 Console.WriteLine("Unknown Magical Items:");
-                foreach (var magicitems in unknownItems.miCategories["Unknown Magical Items"])
+                foreach (var magicitems in unknownItems.MiCategories["Unknown Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
@@ -151,7 +151,7 @@ namespace CloudDragon
             if (uniqueItems != null)
             {
                 Console.WriteLine("Unique Magical Items:");
-                foreach (var magicitems in uniqueItems.miCategories["Unique Magical Items"])
+                foreach (var magicitems in uniqueItems.MiCategories["Unique Magical Items"])
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }

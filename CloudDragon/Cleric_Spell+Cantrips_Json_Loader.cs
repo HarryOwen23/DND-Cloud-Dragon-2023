@@ -73,7 +73,7 @@ namespace CloudDragon
 
     internal class Cleric_Cantrips_Json_Loader
     {
-        public static ClericCantripData LoadbardCantripData(string jsonFilePath)
+        public static ClericCantripData LoadclericCantripData(string jsonFilePath)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace CloudDragon
 
     internal class Cleric_Spells_Json_Loader
     {
-        public static ClericSpellData LoadbardSpellData(string jsonFilePath)
+        public static ClericSpellData LoadclericSpellData(string jsonFilePath)
         {
             try
             {
@@ -127,10 +127,10 @@ namespace CloudDragon
             // Define the paths to the JSON files
             string jsonFilePathClericCantrip = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Cantrips.json";
 
-            var cantripsCleric = Cleric_Cantrips_Json_Loader.LoadbardCantripData(jsonFilePathClericCantrip);
+            var cantripsCleric = Cleric_Cantrips_Json_Loader.LoadclericCantripData(jsonFilePathClericCantrip);
 
 
-            // Display the Armor data for Cleric Cantrips
+            // Display the data for Cleric Cantrips
             if (cantripsCleric != null)
             {
                 Console.WriteLine("Cleric Cantrips:");
@@ -146,8 +146,8 @@ namespace CloudDragon
     {
         void ILoader.Load()
         {
-            Console.WriteLine("Loading Bard Spell Data");
-            // Define paths to the bard spell Json files
+            Console.WriteLine("Loading Cleric Spell Data");
+            // Define paths to the cleric spell Json files
             string jsonFilePathClericLevel1 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_1_Spells.json";
             string jsonFilePathClericLevel2 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_2_Spells.json";
             string jsonFilePathClericLevel3 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_3_Spells.json";
@@ -158,15 +158,15 @@ namespace CloudDragon
             string jsonFilePathClericLevel8 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_8_Spells.json";
             string jsonFilePathClericLevel9 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_9_Spells.json";
 
-            var level1clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel1);
-            var level2clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel2);
-            var level3clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel3);
-            var level4clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel4);
-            var level5clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel5);
-            var level6clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel6);
-            var level7clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel7);
-            var level8clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel8);
-            var level9clericspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathClericLevel9);
+            var level1clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel1);
+            var level2clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel2);
+            var level3clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel3);
+            var level4clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel4);
+            var level5clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel5);
+            var level6clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel6);
+            var level7clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel7);
+            var level8clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel8);
+            var level9clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel9);
 
 
             // Display the data for Level 1 spells
@@ -193,9 +193,9 @@ namespace CloudDragon
             if (level3clericspells != null)
             {
                 Console.WriteLine("Level 3 Cleric Spells:");
-                foreach (var bardSpell3 in level3clericspells.SpellCategories["Level 3 Cleric Spells"])
+                foreach (var clericSpell3 in level3clericspells.SpellCategories["Level 3 Cleric Spells"])
                 {
-                    Console.WriteLine($"- Name: {bardSpell3.Name}, School: {bardSpell3.School}, Description: {bardSpell3.Description} ");
+                    Console.WriteLine($"- Name: {clericSpell3.Name}, School: {clericSpell3.School}, Description: {clericSpell3.Description} ");
                 }
             }
 

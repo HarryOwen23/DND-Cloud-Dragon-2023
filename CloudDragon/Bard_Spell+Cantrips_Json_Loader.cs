@@ -200,7 +200,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 4 spells
-            if (level3bardspells != null)
+            if (level4bardspells != null)
             {
                 Console.WriteLine("Level 4 Bard Spells:");
                 foreach (var bardSpell4 in level4bardspells.SpellCategories["Level 4 Bard Spells"])
@@ -213,7 +213,7 @@ namespace CloudDragon
             if (level5bardspells != null)
             {
                 Console.WriteLine("Level 5 Bard Spells:");
-                foreach (var bardSpell5 in level4bardspells.SpellCategories["Level 5 Bard Spells"])
+                foreach (var bardSpell5 in level5bardspells.SpellCategories["Level 5 Bard Spells"])
                 {
                     Console.WriteLine($"- Name: {bardSpell5.Name}, School: {bardSpell5.School}, Description: {bardSpell5.Description} ");
                 }

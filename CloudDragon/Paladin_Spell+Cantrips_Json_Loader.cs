@@ -73,7 +73,7 @@ namespace CloudDragon
 
     internal class Paladin_Cantrips_Json_Loader
     {
-        public static PaladinCantripData LoadbardCantripData(string jsonFilePath)
+        public static PaladinCantripData LoadpaladinCantripData(string jsonFilePath)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace CloudDragon
 
     internal class Paladin_Spells_Json_Loader
     {
-        public static PaladinSpellData LoadbardSpellData(string jsonFilePath)
+        public static PaladinSpellData LoadpaladinSpellData(string jsonFilePath)
         {
             try
             {
@@ -127,10 +127,10 @@ namespace CloudDragon
             // Define the paths to the JSON files
             string jsonFilePathPaladinCantrip = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Cantrips.json";
 
-            var cantripsPaladin = Bard_Cantrips_Json_Loader.LoadbardCantripData(jsonFilePathPaladinCantrip);
+            var cantripsPaladin = Paladin_Cantrips_Json_Loader.LoadpaladinCantripData(jsonFilePathPaladinCantrip);
 
 
-            // Display the Armor data for Paladin Cantrips
+            // Display the data for Paladin Cantrips
             if (cantripsPaladin != null)
             {
                 Console.WriteLine("Paladin Cantrips:");
@@ -155,11 +155,11 @@ namespace CloudDragon
             string jsonFilePathPaladinLevel5 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_5_Spells.json";
 
 
-            var level1paladinspells = Paladin_Spells_Json_Loader.LoadbardSpellData(jsonFilePathPaladinLevel1);
-            var level2paladinspells = Paladin_Spells_Json_Loader.LoadbardSpellData(jsonFilePathPaladinLevel2);
-            var level3paladinspells = Paladin_Spells_Json_Loader.LoadbardSpellData(jsonFilePathPaladinLevel3);
-            var level4paladinspells = Paladin_Spells_Json_Loader.LoadbardSpellData(jsonFilePathPaladinLevel4);
-            var level5paladinspells = Paladin_Spells_Json_Loader.LoadbardSpellData(jsonFilePathPaladinLevel5);
+            var level1paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel1);
+            var level2paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel2);
+            var level3paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel3);
+            var level4paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel4);
+            var level5paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel5);
 
 
 
