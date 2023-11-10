@@ -181,12 +181,59 @@ namespace CloudDragon
             ILoader TrinketLoader = new TrinketLoader();
             TrinketLoader.Load();
 
-             //ILoader magicalItemsLoader = new magicalItemsLoader();
-            //magicalItemsLoader.Load();
+            ILoader MagicalItemLoader = new MagicalItemLoader();
+            MagicalItemLoader.Load();
 
+            ILoader BardCantripLoader = new BardCantripLoader();
+            BardCantripLoader.Load();
 
+            ILoader BardSpellLoader = new BardSpellLoader();
+            BardSpellLoader.Load();
 
+            ILoader ClericCantripLoader = new ClericCantripLoader();
+            ClericCantripLoader.Load();
 
+            ILoader ClericSpellLoader = new ClericSpellLoader();
+            ClericSpellLoader.Load();
+
+            ILoader DruidCantripLoader = new DruidCantripLoader();
+            DruidCantripLoader.Load();
+
+            ILoader DruidSpellLoader = new DruidSpellLoader();
+            DruidSpellLoader.Load();
+
+            ILoader PaladinCantripLoader = new PaladinCantripLoader();
+            PaladinCantripLoader.Load();
+
+            ILoader PaladinSpellLoader = new PaladinSpellLoader();
+            PaladinSpellLoader.Load();
+
+            ILoader RangerCantripLoader = new RangerCantripLoader();
+            RangerCantripLoader.Load();
+
+            ILoader RangerSpellLoader = new RangerSpellLoader();
+            RangerSpellLoader.Load();
+
+            ILoader SorcererCantripLoader = new SorcererCantripLoader();
+            RangerCantripLoader.Load();
+
+            ILoader SorcererSpellLoader = new SorcererSpellLoader();
+            SorcererSpellLoader.Load();
+
+            ILoader WarlockCantripLoader = new WarlockCantripLoader();
+            WarlockCantripLoader.Load();
+
+            ILoader WarlockSpellLoader = new WarlockSpellLoader();
+            WarlockSpellLoader.Load();
+
+            ILoader WizardCantripLoader = new WizardCantripLoader();
+            WizardCantripLoader.Load();
+
+            ILoader WizardSpellLoader = new WizardSpellLoader();
+            WizardSpellLoader.Load();
+
+            ILoader PoisonLoader = new PoisonLoader();
+            PoisonLoader.Load();
         }
     }
 }

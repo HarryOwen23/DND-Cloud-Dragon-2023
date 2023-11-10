@@ -1,30 +1,35 @@
 {
     "ModernFirearms": {
-        "Pistol, automatic": {
+        "PistolAutomatic": {
+            "Name": "Pistol, Automatic",
             "Cost": "-",
             "Damage": "2d6 piercing",
             "Weight": "3 lb.",
             "Properties": "Ammunition (range 50/150), reload (15 shots)"
         },
         "Revolver": {
+            "Name": "Revolver",
             "Cost": "-",
             "Damage": "2d8 piercing",
             "Weight": "3 lb.",
             "Properties": "Ammunition (range 40/120), reload (6 shots)"
         },
-        "Rifle, hunting": {
+        "RifleHunting": {
+            "Name": "Rifle, Hunting",
             "Cost": "-",
             "Damage": "2d10 piercing",
             "Weight": "8 lb.",
             "Properties": "Ammunition (range 80/240), reload (5 shots), two-handed"
         },
-        "Rifle, automatic": {
+        "RifleAutomatic": {
+            "Name": "Rifle, Automatic",
             "Cost": "-",
             "Damage": "2d8 piercing",
             "Weight": "8 lb.",
             "Properties": "Ammunition (range 80/240), burst fire, reload (30 shots), two-handed"
         },
         "Shotgun": {
+            "Name": "Shotgun",
             "Cost": "-",
             "Damage": "2d8 piercing",
             "Weight": "7 lb.",
@@ -32,7 +37,8 @@
         }
     },
     "Ammunition": {
-        "Bullets (10)": {
+        "Bullets(10)": {
+            "Name": "Bullets (10)",
             "Cost": "-",
             "Weight": "1 lb."
         }
