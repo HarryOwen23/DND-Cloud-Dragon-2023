@@ -90,7 +90,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -114,7 +114,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -144,118 +144,45 @@ namespace CloudDragon
 
     internal class ClericSpellLoader : ILoader
     {
+        private static void DisplayClericSpells(string spellLevel, Dictionary<string, List<ClericSpells>> spellCategories)
+        {
+            Console.WriteLine($"Level {spellLevel} Cleric Spells:");
+            foreach (var clericSpell in spellCategories[$"Level {spellLevel} Cleric Spells"])
+            {
+                Console.WriteLine($"- Name: {clericSpell.Name}, School: {clericSpell.School}, Description: {clericSpell.Description} ");
+            }
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Cleric Spell Data");
             // Define paths to the cleric spell Json files
-            string jsonFilePathClericLevel1 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_1_Spells.json";
-            string jsonFilePathClericLevel2 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_2_Spells.json";
-            string jsonFilePathClericLevel3 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_3_Spells.json";
-            string jsonFilePathClericLevel4 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_4_Spells.json";
-            string jsonFilePathClericLevel5 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_5_Spells.json";
-            string jsonFilePathClericLevel6 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_6_Spells.json";
-            string jsonFilePathClericLevel7 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_7_Spells.json";
-            string jsonFilePathClericLevel8 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_8_Spells.json";
-            string jsonFilePathClericLevel9 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_9_Spells.json";
-
-            var level1clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel1);
-            var level2clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel2);
-            var level3clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel3);
-            var level4clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel4);
-            var level5clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel5);
-            var level6clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel6);
-            var level7clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel7);
-            var level8clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel8);
-            var level9clericspells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericLevel9);
-
-
-            // Display the data for Level 1 spells
-            if (level1clericspells != null)
+            string[] jsonFilePaths = new string[]
             {
-                Console.WriteLine("Level 1 Cleric Spells:");
-                foreach (var clericSpell1 in level1clericspells.SpellCategories["Level 1 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell1.Name}, School: {clericSpell1.School}, Description: {clericSpell1.Description} ");
-                }
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_1_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_2_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_3_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_4_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_5_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_6_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_7_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_8_Spells.json",
+            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_9_Spells.json"
+            };
+
+            Dictionary<string, List<ClericSpells>>[] clericSpellData = new Dictionary<string, List<ClericSpells>>[jsonFilePaths.Length];
+
+            for (int i = 0; i < jsonFilePaths.Length; i++)
+            {
+                clericSpellData[i] = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePaths[i])?.SpellCategories;
             }
 
-            // Display the data for Level 2 spells
-            if (level2clericspells != null)
+            // Display cleric spell data for each level
+            for (int i = 0; i < clericSpellData.Length; i++)
             {
-                Console.WriteLine("Level 2 Cleric Spells:");
-                foreach (var clericSpell2 in level2clericspells.SpellCategories["Level 2 Cleric Spells"])
+                if (clericSpellData[i] != null)
                 {
-                    Console.WriteLine($"- Name: {clericSpell2.Name}, School: {clericSpell2.School}, Description: {clericSpell2.Description} ");
-                }
-            }
-
-            // Display the data for Level 3 spells
-            if (level3clericspells != null)
-            {
-                Console.WriteLine("Level 3 Cleric Spells:");
-                foreach (var clericSpell3 in level3clericspells.SpellCategories["Level 3 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell3.Name}, School: {clericSpell3.School}, Description: {clericSpell3.Description} ");
-                }
-            }
-
-            // Display the data for Level 4 spells
-            if (level4clericspells != null)
-            {
-                Console.WriteLine("Level 4 Cleric Spells:");
-                foreach (var clericSpell4 in level4clericspells.SpellCategories["Level 4 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell4.Name}, School: {clericSpell4.School}, Description: {clericSpell4.Description} ");
-                }
-            }
-
-            // Display the data for Level 5 spells
-            if (level5clericspells != null)
-            {
-                Console.WriteLine("Level 5 Cleric Spells:");
-                foreach (var clericSpell5 in level5clericspells.SpellCategories["Level 5 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell5.Name}, School: {clericSpell5.School}, Description: {clericSpell5.Description} ");
-                }
-            }
-
-            // Display the data for Level 6 spells
-            if (level6clericspells != null)
-            {
-                Console.WriteLine("Level 6 Cleric Spells:");
-                foreach (var clericSpell6 in level6clericspells.SpellCategories["Level 6 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell6.Name}, School: {clericSpell6.School}, Description: {clericSpell6.Description} ");
-                }
-            }
-
-            // Display the data for Level 7 spells
-            if (level7clericspells != null)
-            {
-                Console.WriteLine("Level 7 Cleric Spells:");
-                foreach (var clericSpell7 in level7clericspells.SpellCategories["Level 7 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell7.Name}, School: {clericSpell7.School}, Description: {clericSpell7.Description} ");
-                }
-            }
-
-            // Display the data for Level 8 spells
-            if (level8clericspells != null)
-            {
-                Console.WriteLine("Level 8 Cleric Spells:");
-                foreach (var clericSpell8 in level8clericspells.SpellCategories["Level 8 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell8.Name}, School: {clericSpell8.School}, Description: {clericSpell8.Description} ");
-                }
-            }
-
-            // Display the data for Level 9 spells
-            if (level9clericspells != null)
-            {
-                Console.WriteLine("Level 9 Cleric Spells:");
-                foreach (var clericSpell9 in level9clericspells.SpellCategories["Level 9 Cleric Spells"])
-                {
-                    Console.WriteLine($"- Name: {clericSpell9.Name}, School: {clericSpell9.School}, Description: {clericSpell9.Description} ");
+                    DisplayClericSpells((i + 1).ToString(), clericSpellData[i]);
                 }
             }
         }

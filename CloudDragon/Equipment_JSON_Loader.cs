@@ -9,7 +9,7 @@ namespace CloudDragon
 {
     public class Equipment
     {
-        public List<EquipmentCategory> EquipmentCategories { get; set; }
+        public List<EquipmentItem> EquipmentCategories { get; set; }
     }
 
     public class EquipmentCategory
@@ -47,18 +47,18 @@ namespace CloudDragon
 
     internal class EquipmentJsonLoader
     {
-        public static Equipment LoadEquipmentData(string jsonFilePath)
+        public static EquipmentCategory LoadEquipmentData(string jsonFilePath)
         {
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                var equipmentData = JsonSerializer.Deserialize<Equipment>(jsonData);
+                var equipmentData = JsonSerializer.Deserialize<EquipmentCategory>(jsonData);
                 return equipmentData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -72,19 +72,19 @@ internal class EquipmentLoader : ILoader
 
         // Define the paths to the JSON files 
         string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
-        string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglar's _Pack.json";
+        string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglars_Pack.json";
         // string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
         string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
         string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
-        string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomat's_Pack.json";
+        string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomat\'s_Pack.json";
         string jsonFilePathDragonlance = "Equipment\\Equipment_Dragonlance.json";
         string jsonFilePathDruidicFocus = "Equipment\\Equipment_Druidic_Focus.json";
-        string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneer's_Pack.json";
-        string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainer's_Pack.json";
-        string jsonFilePathExplorersPack = "Equipment\\Equipment_Explorer's _Pack";
+        string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneer\'s_Pack.json";
+        string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainer\'s_Pack.json";
+        string jsonFilePathExplorersPack = "Equipment\\Equipment_Explorers_Pack.json";
         string jsonFilePathHolySymbols = "Equipment\\Equipment_Holy_Symbols.json";
-        string jsonFilePathPreistsPack = "Equipment\\Equipment_Priest's_Pack.json";
-        string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholar's_Pack.json";
+        string jsonFilePathPreistsPack = "Equipment\\Equipment_Priest\'s_Pack.json";
+        string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholar\'s_Pack.json";
         string jsonFilePathUsableItems = "Equipment\\Equipment_Usable_Items.json";
 
         // Load the equipment data using the EquipmentJsonLoader
@@ -108,7 +108,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataArcaneFocus != null)
         {
             Console.WriteLine("Arcane Focus Equipment:");
-            foreach (var item in equipmentDataArcaneFocus.EquipmentCategories[0].ArcaneFocus)
+            foreach (var item in equipmentDataArcaneFocus.ArcaneFocus)
             {
                 Console.WriteLine($"- {item.Name}: {item.Cost}, {item.Description}");
             }
@@ -117,7 +117,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataBurglarPack != null)
         {
             Console.WriteLine("Burglar's Pack Equipment:");
-            var burglarPack = equipmentDataBurglarPack.EquipmentCategories[0];
+            var burglarPack = equipmentDataBurglarPack;
             Console.WriteLine($"Pack Name: {burglarPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in burglarPack.Contents)
@@ -138,19 +138,19 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataCommonItems != null)
         {
             Console.WriteLine("Common Items Equipment:");
-            var commonItems = equipmentDataCommonItems.EquipmentCategories[0];
+            var commonItems = equipmentDataCommonItems;
             Console.WriteLine($"Pack Name: {commonItems.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in commonItems.Contents)
             {
-                Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                Console.WriteLine($"- {item.Name}");
             }
         }
 
         if (equipmentDataContainers != null)
         {
             Console.WriteLine("Containers");
-            var containers = equipmentDataContainers.EquipmentCategories[0];
+            var containers = equipmentDataContainers;
             Console.WriteLine($"Pack Name: {containers.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in containers.Contents)
@@ -162,7 +162,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataDiplomatsPack != null)
         {
             Console.WriteLine("Diplomats Pack");
-            var diplomatsPack = equipmentDataDiplomatsPack.EquipmentCategories[0];
+            var diplomatsPack = equipmentDataDiplomatsPack;
             Console.WriteLine($"Pack Name: {diplomatsPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in diplomatsPack.Contents)
@@ -174,7 +174,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataDragonlance != null)
         {
             Console.WriteLine("Dragonlance");
-            var dragonlance = equipmentDataDragonlance.EquipmentCategories[0];
+            var dragonlance = equipmentDataDragonlance;
             Console.WriteLine($"Pack Name: {dragonlance.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in dragonlance.Contents)
@@ -186,7 +186,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataDruidicFocus != null)
         {
             Console.WriteLine("Druidic Focus Items");
-            var druidicFocus = equipmentDataDruidicFocus.EquipmentCategories[0];
+            var druidicFocus = equipmentDataDruidicFocus;
             Console.WriteLine($"Pack Name: {druidicFocus.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in druidicFocus.Contents)
@@ -198,7 +198,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataDungeoneersPack != null)
         {
             Console.WriteLine("Dungeoneers Pack");
-            var dungeoneersPack = equipmentDataDungeoneersPack.EquipmentCategories[0];
+            var dungeoneersPack = equipmentDataDungeoneersPack;
             Console.WriteLine($"Pack Name: {dungeoneersPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in dungeoneersPack.Contents)
@@ -210,7 +210,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataDungeoneersPack != null)
         {
             Console.WriteLine("Entertainers Pack");
-            var entertainersPack = equipmentDataEntertainersPack.EquipmentCategories[0];
+            var entertainersPack = equipmentDataEntertainersPack;
             Console.WriteLine($"Pack Name: {entertainersPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in entertainersPack.Contents)
@@ -222,7 +222,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataExplorersPack != null)
         {
             Console.WriteLine("Explorers Pack");
-            var explorersPack = equipmentDataExplorersPack.EquipmentCategories[0];
+            var explorersPack = equipmentDataExplorersPack;
             Console.WriteLine($"Pack Name: {explorersPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in explorersPack.Contents)
@@ -234,7 +234,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataHolySymbols != null)
         {
             Console.WriteLine("Holy Symbols");
-            var holySymbols = equipmentDataHolySymbols.EquipmentCategories[0];
+            var holySymbols = equipmentDataHolySymbols;
             Console.WriteLine($"Pack Name: {holySymbols.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in holySymbols.Contents)
@@ -246,7 +246,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataPreistsPack != null)
         {
             Console.WriteLine("Priest Pack");
-            var preistPack = equipmentDataPreistsPack.EquipmentCategories[0];
+            var preistPack = equipmentDataPreistsPack;
             Console.WriteLine($"Pack Name: {preistPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in preistPack.Contents)
@@ -258,7 +258,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataScholarsPack != null)
         {
             Console.WriteLine("Scholars Pack");
-            var scholarsPack = equipmentDataScholarsPack.EquipmentCategories[0];
+            var scholarsPack = equipmentDataScholarsPack;
             Console.WriteLine($"Pack Name: {scholarsPack.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in scholarsPack.Contents)
@@ -270,7 +270,7 @@ internal class EquipmentLoader : ILoader
         if (equipmentDataUsableItems != null)
         {
             Console.WriteLine("Usable Items");
-            var usableItems = equipmentDataUsableItems.EquipmentCategories[0];
+            var usableItems = equipmentDataUsableItems;
             Console.WriteLine($"Pack Name: {usableItems.PackName}");
             Console.WriteLine("Contents:");
             foreach (var item in usableItems.Contents)

@@ -1,34 +1,32 @@
 {
-    "FuturisticItems": {
-        "MartialRangedWeapons": {
-            "LaserPistol": {
-                "Name": "Laser Pistol",
-                "Cost": "-",
-                "Damage": "3d6 radiant",
-                "Weight": "2 lb.",
-                "Properties": "Ammunition (range 40/120), reload (50 shots)"
-            },
-            "AntimatterRifle": {
-                "Name": "Antimatter Rifle",
-                "Cost": "-",
-                "Damage": "6d8 necrotic",
-                "Weight": "10 lb.",
-                "Properties": "Ammunition (range 120/360), reload (2 shots), two-handed"
-            },
-            "LaserRifle": {
-                "Name": "Laser Rifle",
-                "Cost": "-",
-                "Damage": "3d8 radiant",
-                "Weight": "7 lb.",
-                "Properties": "Ammunition (range 100/300), reload (30 shots), two-handed"
-            }
+    "FuturisticFirearms": [
+        {
+            "Name": "Laser Pistol",
+            "Cost": "-",
+            "Damage": "3d6 radiant",
+            "Weight": "2 lb.",
+            "Properties": "Ammunition (range 40/120), reload (50 shots)"
         },
-        "Ammunition": {
-            "EnergyCell": {
-                "Name": "Energy Cell",
-                "Cost": "-",
-                "Weight": "5 oz."
-            }
+        {
+            "Name": "Antimatter Rifle",
+            "Cost": "-",
+            "Damage": "6d8 necrotic",
+            "Weight": "10 lb.",
+            "Properties": "Ammunition (range 120/360), reload (2 shots), two-handed"
+        },
+        {
+            "Name": "Laser Rifle",
+            "Cost": "-",
+            "Damage": "3d8 radiant",
+            "Weight": "7 lb.",
+            "Properties": "Ammunition (range 100/300), reload (30 shots), two-handed"
         }
-    }
+    ],
+    "Ammunition": [
+        {
+            "Name": "Energy Cell",
+            "Cost": "-",
+            "Weight": "5 oz."
+        }
+    ]
 }

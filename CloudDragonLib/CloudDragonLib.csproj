@@ -512,7 +512,7 @@
     <None Update="Equipment\Equipment_Arcane_Focus.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Burglar%27s _Pack.json">
+    <None Update="Equipment\Equipment_Burglars_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Equipment\Equipment_Clothes.json">
@@ -539,7 +539,7 @@
     <None Update="Equipment\Equipment_Entertainer%27s_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Explorer%27s _Pack.json">
+    <None Update="Equipment\Equipment_Explorers_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Equipment\Equipment_Holy_Symbols.json">

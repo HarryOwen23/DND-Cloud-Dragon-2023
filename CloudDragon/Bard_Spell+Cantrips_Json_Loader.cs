@@ -90,7 +90,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -114,7 +114,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -144,118 +144,45 @@ namespace CloudDragon
 
     internal class BardSpellLoader : ILoader
     {
+        private static void DisplayBardicSpells(string spellLevel, Dictionary<string, List<BardicSpells>> spellCategories)
+        {
+            Console.WriteLine($"Level {spellLevel} Bard Spells:");
+            foreach (var bardSpell in spellCategories[$"Level {spellLevel} Bard Spells"])
+            {
+                Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description} ");
+            }
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Bard Spell Data");
             // Define paths to the bard spell Json files
-            string jsonFilePathBardLevel1 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_1_Spells.json";
-            string jsonFilePathBardLevel2 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_2_Spells.json";
-            string jsonFilePathBardLevel3 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_3_Spells.json";
-            string jsonFilePathBardLevel4 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_4_Spells.json";
-            string jsonFilePathBardLevel5 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_5_Spells.json";
-            string jsonFilePathBardLevel6 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_6_Spells.json";
-            string jsonFilePathBardLevel7 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_7_Spells.json";
-            string jsonFilePathBardLevel8 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_8_Spells.json";
-            string jsonFilePathBardLevel9 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_9_Spells.json";
-
-            var level1bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel1);
-            var level2bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel2);
-            var level3bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel3);
-            var level4bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel4);
-            var level5bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel5);
-            var level6bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel6);
-            var level7bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel7);
-            var level8bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel8);
-            var level9bardspells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardLevel9);
-
-
-            // Display the Armor data for Level 1 spells
-            if (level1bardspells != null)
+            string[] jsonFilePaths = new string[]
             {
-                Console.WriteLine("Level 1 Bard Spells:");
-                foreach (var bardSpell1 in level1bardspells.SpellCategories["Level 1 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell1.Name}, School: {bardSpell1.School}, Description: {bardSpell1.Description} ");
-                }
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_1_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_2_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_3_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_4_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_5_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_6_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_7_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_8_Spells.json",
+            "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_9_Spells.json"
+            };
+
+            Dictionary<string, List<BardicSpells>>[] bardSpellData = new Dictionary<string, List<BardicSpells>>[jsonFilePaths.Length];
+
+            for (int i = 0; i < jsonFilePaths.Length; i++)
+            {
+                bardSpellData[i] = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePaths[i])?.SpellCategories;
             }
 
-            // Display the data for Level 2 spells
-            if (level2bardspells != null)
+            // Display bard spell data for each level
+            for (int i = 0; i < bardSpellData.Length; i++)
             {
-                Console.WriteLine("Level 2 Bard Spells:");
-                foreach (var bardSpell2 in level2bardspells.SpellCategories["Level 2 Bard Spells"])
+                if (bardSpellData[i] != null)
                 {
-                    Console.WriteLine($"- Name: {bardSpell2.Name}, School: {bardSpell2.School}, Description: {bardSpell2.Description} ");
-                }
-            }
-
-            // Display the data for Level 3 spells
-            if (level3bardspells != null)
-            {
-                Console.WriteLine("Level 3 Bard Spells:");
-                foreach (var bardSpell3 in level3bardspells.SpellCategories["Level 3 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell3.Name}, School: {bardSpell3.School}, Description: {bardSpell3.Description} ");
-                }
-            }
-
-            // Display the data for Level 4 spells
-            if (level4bardspells != null)
-            {
-                Console.WriteLine("Level 4 Bard Spells:");
-                foreach (var bardSpell4 in level4bardspells.SpellCategories["Level 4 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell4.Name}, School: {bardSpell4.School}, Description: {bardSpell4.Description} ");
-                }
-            }
-
-            // Display the data for Level 5 spells
-            if (level5bardspells != null)
-            {
-                Console.WriteLine("Level 5 Bard Spells:");
-                foreach (var bardSpell5 in level5bardspells.SpellCategories["Level 5 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell5.Name}, School: {bardSpell5.School}, Description: {bardSpell5.Description} ");
-                }
-            }
-
-            // Display the data for Level 6 spells
-            if (level6bardspells != null)
-            {
-                Console.WriteLine("Level 6 Bard Spells:");
-                foreach (var bardSpell6 in level6bardspells.SpellCategories["Level 6 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell6.Name}, School: {bardSpell6.School}, Description: {bardSpell6.Description} ");
-                }
-            }
-
-            // Display the data for Level 7 spells
-            if (level7bardspells != null)
-            {
-                Console.WriteLine("Level 7 Bard Spells:");
-                foreach (var bardSpell7 in level7bardspells.SpellCategories["Level 7 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell7.Name}, School: {bardSpell7.School}, Description: {bardSpell7.Description} ");
-                }
-            }
-
-            // Display the data for Level 8 spells
-            if (level8bardspells != null)
-            {
-                Console.WriteLine("Level 8 Bard Spells:");
-                foreach (var bardSpell8 in level8bardspells.SpellCategories["Level 8 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell8.Name}, School: {bardSpell8.School}, Description: {bardSpell8.Description} ");
-                }
-            }
-
-            // Display the data for Level 9 spells
-            if (level9bardspells != null)
-            {
-                Console.WriteLine("Level 9 Bard Spells:");
-                foreach (var bardSpell9 in level9bardspells.SpellCategories["Level 9 Bard Spells"])
-                {
-                    Console.WriteLine($"- Name: {bardSpell9.Name}, School: {bardSpell9.School}, Description: {bardSpell9.Description} ");
+                    DisplayBardicSpells((i + 1).ToString(), bardSpellData[i]);
                 }
             }
         }

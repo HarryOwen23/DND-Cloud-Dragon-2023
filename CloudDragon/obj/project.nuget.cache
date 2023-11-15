@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mSj0V8qc2/1ggtJzaVP80q4ZetP8DsDrOTtbqe+EVeBaXfgb8eeZTuIk/a/Uh4f6cOAo0l516chQjGRYU2P4og==",
+  "dgSpecHash": "pmjxAQuGIkcVoTzn9SI5jks03dWP5KR/mnf8qZkzkbF1DGC3eSXtCDUpwDXsB3Sjl1Hd9fLzYkYKVacni52PfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\CloudDragon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HarryOwen\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\HarryOwen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\HarryOwen\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\HarryOwen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\HarryOwen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+    "C:\\Users\\HarryOwen\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

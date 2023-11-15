@@ -91,7 +91,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
@@ -115,7 +115,7 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }

@@ -53,13 +53,22 @@ namespace CloudDragon
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                return null;
+                throw e;
             }
         }
     }
 
     internal class ArmorLoader : ILoader
     {
+        private static void DisplayArmorData(string armorType, Dictionary<string, List<Armor>> armorCategories)
+        {
+            Console.WriteLine($"{armorType} Armor:");
+            foreach (var armor in armorCategories[armorType])
+            {
+                Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+            }
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Armor Data ...");
@@ -75,31 +84,19 @@ namespace CloudDragon
             // Display the Armor data for Heavy Armor
             if (armorHeavy != null)
             {
-                Console.WriteLine("Heavy Armor:");
-                foreach (var armor in armorHeavy.ArmorCategories["Heavy Armor"])
-                {
-                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                }
+                DisplayArmorData("Heavy Armor", armorHeavy.ArmorCategories);
             }
 
             // Display the Armor data for Medium Armor
             if (armorMedium != null)
             {
-                Console.WriteLine("Medium Armor:");
-                foreach (var armor in armorMedium.ArmorCategories["Medium Armor"])
-                {
-                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                }
+                DisplayArmorData("Medium Armor", armorMedium.ArmorCategories);
             }
 
             // Display the Armor data for Light Armor
             if (armorLight != null)
             {
-                Console.WriteLine("Medium Armor:");
-                foreach (var armor in armorLight.ArmorCategories["Light Armor"])
-                {
-                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strenght: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                }
+                DisplayArmorData("Light Armor", armorLight.ArmorCategories);
             }
         }
     }
