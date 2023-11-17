@@ -331,12 +331,35 @@ namespace CloudDragon
             Console.WriteLine($"{category}:");
             foreach (var weapon in weapons)
             {
-                var properties = typeof(T).GetProperties();
-                var propertyValues = properties.Select(prop => $"{prop.Name}: {prop.GetValue(weapon)}");
-                Console.WriteLine($"- {string.Join(", ", propertyValues)}");
+                Console.WriteLine("- " + GetWeaponString(weapon));
             }
         }
+
+        private static string GetWeaponString<T>(T weapon)
+        {
+            var properties = typeof(T).GetProperties();
+            var propertyValues = properties.Select(prop =>
+            {
+                if (typeof(T) == typeof(MartialMeleeWeapon) || typeof(T) == typeof(MartialRangedWeapon) ||
+                    typeof(T) == typeof(SimpleMeleeWeapon) || typeof(T) == typeof(SimpleRangedWeapon) ||
+                    typeof(T) == typeof(Firearms))
+                {
+                    return $"{prop.Name}: {prop.GetValue(weapon)}";
+                }
+                else if (typeof(T) == typeof(Explosive))
+                {
+                    return prop.Name == "Cost" ? null : $"{prop.Name}: {prop.GetValue(weapon)}";
+                }
+                else
+                {
+                    return null;
+                }
+            });
+
+            return string.Join(", ", propertyValues.Where(p => p != null));
+        }
     }
+
 
     internal class MartialMeleeWeaponLoader : ILoader
     {

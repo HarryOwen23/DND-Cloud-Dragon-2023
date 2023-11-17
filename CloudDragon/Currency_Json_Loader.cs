@@ -36,7 +36,7 @@ namespace CloudDragon
         public string Description { get; set; }
     }
 
-    internal class Currency_Json_Loader
+    internal class CurrencyJsonLoader
     {
         public static Currency LoadCurrencyData(string jsonFilePathGems, string jsonFilePathCoins)
         {
@@ -45,15 +45,19 @@ namespace CloudDragon
                 string jsonDataGems = File.ReadAllText(jsonFilePathGems);
                 string jsonDataCoins = File.ReadAllText(jsonFilePathCoins);
 
-                var currencyDataGems= JsonSerializer.Deserialize<Currency>(jsonDataGems);
-                var currencyDataCoins= JsonSerializer.Deserialize<Currency>(jsonDataCoins);
+                var currencyDataGems = JsonSerializer.Deserialize<Currency>(jsonDataGems);
+                var currencyDataCoins = JsonSerializer.Deserialize<Currency>(jsonDataCoins);
 
-                return new Currency { Coins = currencyDataCoins.Coins, Gemstones = currencyDataGems.Gemstones};
+                // Perform null checks before accessing properties
+                var coins = currencyDataCoins?.Coins ?? new List<Coin>();
+                var gemstones = currencyDataGems?.Gemstones ?? new List<Gemstone>();
+
+                return new Currency { Coins = coins, Gemstones = gemstones };
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -62,16 +66,17 @@ namespace CloudDragon
     {
         void Load();
     }
+
     internal class CurrencyLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Cloud Dragon ....");
 
             string jsonFilePathGems = "Currency\\Currency_Gemstones.json";
             string jsonFilePathCoins = "Currency\\Currency_Coins.json";
 
-            var currencyData = Currency_Json_Loader.LoadCurrencyData(jsonFilePathGems, jsonFilePathCoins);
+            var currencyData = CurrencyJsonLoader.LoadCurrencyData(jsonFilePathGems, jsonFilePathCoins);
 
             if (currencyData != null)
             {
