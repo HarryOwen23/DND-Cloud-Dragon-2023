@@ -1,39 +1,24 @@
 ﻿{
-    "Currency_Coins": {
-        "Copper": {
-            "Cp": 1,
-            "Sp": "1/10",
-            "Ep": "1/50",
-            "Gp": "1/100",
-            "Pp": "1/1000"
+    "Currency_Coins": [
+        {
+            "Name": "Copper",
+            "Value": "1/100"
         },
-        "Silver": {
-            "Cp": 10,
-            "Sp": 1,
-            "Ep": "1/5",
-            "Gp": "1/10",
-            "Pp": "1/100"
+        {
+            "Name": "Silver",
+            "Value": "1/10"
         },
-        "Electrum": {
-            "Cp": 50,
-            "Sp": 5,
-            "Ep": 1,
-            "Gp": "1/2",
-            "Pp": "1/20"
+        {
+            "Name": "Electrum",
+            "Value": "1/2"
         },
-        "Gold": {
-            "Cp": 100,
-            "Sp": 10,
-            "Ep": 2,
-            "Gp": 1,
-            "Pp": "1/10"
+        {
+            "Name": "Gold",
+            "Value": "1"
         },
-        "Platinum": {
-            "Cp": 1000,
-            "Sp": 100,
-            "Ep": 50,
-            "Gp": 10,
-            "Pp": 1
+        {
+            "Name": "Platinum",
+            "Value": "10"
         }
-    }
+    ]
 }

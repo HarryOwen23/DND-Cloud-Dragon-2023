@@ -104,13 +104,14 @@ namespace CloudDragon
             var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
 
             // Display the Armor data for Heavy Armor
-            DisplayArmorData("Heavy Armor", armorHeavy.ArmorCategories);
+            DisplayArmorData("Heavy Armor", armorHeavy?.ArmorCategories);
 
             // Display the Armor data for Medium Armor
-            DisplayArmorData("Medium Armor", armorMedium.ArmorCategories);
+            DisplayArmorData("Medium Armor", armorMedium?.ArmorCategories);
 
             // Display the Armor data for Light Armor
-            DisplayArmorData("Light Armor", armorLight.ArmorCategories);
+            DisplayArmorData("Light Armor", armorLight?.ArmorCategories);
+
         }
     }
 }
