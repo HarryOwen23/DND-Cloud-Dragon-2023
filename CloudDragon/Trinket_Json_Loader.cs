@@ -13,18 +13,33 @@ namespace CloudDragon
 
         [JsonPropertyName("Trinket Description")]
         public string TrinketDescription { get; set; }
+
+        public Trinket()
+        {
+            TrinketDescription = string.Empty; // or any default value that makes sense
+        }
     }
 
     public class TrinketCategory
     {
         [JsonPropertyName("Trinkets")]
         public List<Trinket> Trinkets { get; set; }
+
+        public TrinketCategory()
+        {
+            Trinkets = new List<Trinket>();
+        }
     }
 
     public class TrinketsData
     {
         [JsonPropertyName("Trinket Categories")]
         public Dictionary<string, List<Trinket>> TrinketCategories { get; set; }
+
+        public TrinketsData()
+        {
+            TrinketCategories = new Dictionary<string, List<Trinket>>();
+        }
     }
 
 
@@ -34,14 +49,25 @@ namespace CloudDragon
         {
             try
             {
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
                 string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new TrinketsData();
+                }
+
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
                 return trinketData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -87,17 +113,34 @@ namespace CloudDragon
             var trinketsVanRitchen = TrinketJsonLoader.LoadTrinketData(jsonFilePathVanRitchen);
 
             // Display the trinket data for Acquisitions Incorporated
-            if (trinketsAcquisitionsIncorporated != null)
+            if (trinketsAcquisitionsIncorporated != null &&
+                trinketsAcquisitionsIncorporated.TrinketCategories != null &&
+                trinketsAcquisitionsIncorporated.TrinketCategories.ContainsKey("Acquisitions_Incorporated"))
             {
                 Console.WriteLine("Acquisitions Incorporated Trinkets:");
-                foreach (var trinket in trinketsAcquisitionsIncorporated.TrinketCategories["Acquisitions_Incorporated"])
+
+                var acquisitionsTrinkets = trinketsAcquisitionsIncorporated.TrinketCategories["Acquisitions_Incorporated"];
+
+                if (acquisitionsTrinkets != null)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    foreach (var trinket in acquisitionsTrinkets)
+                    {
+                        Console.WriteLine($"- Dice Number: {trinket?.DiceNumber}, Description: {trinket?.TrinketDescription}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Trinkets for Acquisitions Incorporated are null.");
                 }
             }
+            else
+            {
+                Console.WriteLine("Trinket data for Acquisitions Incorporated is null or the specified key is not present.");
+            }
+
 
             // Display the trinket data for Curse of Strahd
-            if (trinketsCurseofStrahd != null)
+            if (trinketsCurseofStrahd != null && trinketsCurseofStrahd.TrinketCategories != null && trinketsCurseofStrahd.TrinketCategories.ContainsKey("Curse_of_Strahd"))
             {
                 Console.WriteLine("Curse of Strahd Trinkets:");
                 foreach (var trinket in trinketsCurseofStrahd.TrinketCategories["Curse_of_Strahd"])
@@ -107,7 +150,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Aerenal
-            if (trinketsEbberonAerenal != null)
+            if (trinketsEbberonAerenal != null && trinketsEbberonAerenal.TrinketCategories != null && trinketsEbberonAerenal.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Aerenal"))
             {
                 Console.WriteLine("Eberron - Aerenal Trinkets:");
                 foreach (var trinket in trinketsEbberonAerenal.TrinketCategories["Eberron_Rising_from_the_Last_War_Aerenal"])

@@ -12,7 +12,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+        public string? Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -30,7 +30,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+        public int Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -48,7 +48,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+        public int Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -66,7 +66,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+        public int Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -88,7 +88,9 @@ namespace CloudDragon
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
-        public object Cost { get; internal set; }
+
+        [JsonPropertyName("Cost")]
+        public object? Cost { get; set; }
     }
 
     public class Firearms
@@ -97,7 +99,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+        public string Cost { get; set; } = string.Empty;
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -188,18 +190,27 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var martialMeleeCategory = JsonSerializer.Deserialize<MartialMeleeCategory>(jsonData);
-                return new MartialMeleeData
+
+                if (martialMeleeCategory != null)
                 {
-                    MartialMeleeCategories = new Dictionary<string, List<MartialMeleeWeapon>>
+                    return new MartialMeleeData
                     {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialMeleeCategory.MartialMeleeWeapons }
+                        MartialMeleeCategories = new Dictionary<string, List<MartialMeleeWeapon>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialMeleeCategory.MartialMeleeWeapons ?? new List<MartialMeleeWeapon>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new MartialMeleeData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -212,18 +223,27 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var martialRangeCategory = JsonSerializer.Deserialize<MartialRangedCategory>(jsonData);
-                return new MartialRangeData
+
+                if (martialRangeCategory != null)
                 {
-                    MartialRangedCategories = new Dictionary<string, List<MartialRangedWeapon>>
+                    return new MartialRangeData
                     {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialRangeCategory.MartialRangedWeapons }
+                        MartialRangedCategories = new Dictionary<string, List<MartialRangedWeapon>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialRangeCategory.MartialRangedWeapons ?? new List<MartialRangedWeapon>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new MartialRangeData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -236,18 +256,27 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var simpleMeleeCategory = JsonSerializer.Deserialize<SimpleMeleeCategory>(jsonData);
-                return new SimpleMeleeData
+
+                if (simpleMeleeCategory != null)
                 {
-                    SimpleMeleeCategories = new Dictionary<string, List<SimpleMeleeWeapon>>
+                    return new SimpleMeleeData
                     {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleMeleeCategory.SimpleMeleeWeapons }
+                        SimpleMeleeCategories = new Dictionary<string, List<SimpleMeleeWeapon>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleMeleeCategory.SimpleMeleeWeapons ?? new List<SimpleMeleeWeapon>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new SimpleMeleeData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -260,21 +289,31 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var simpleRangedCategory = JsonSerializer.Deserialize<SimpleRangedCategory>(jsonData);
-                return new SimpleRangedData
+
+                if (simpleRangedCategory != null)
                 {
-                    SimpleRangedCategories = new Dictionary<string, List<SimpleRangedWeapon>>
+                    return new SimpleRangedData
                     {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleRangedCategory.SimpleRangedWeapons }
+                        SimpleRangedCategories = new Dictionary<string, List<SimpleRangedWeapon>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleRangedCategory.SimpleRangedWeapons ?? new List<SimpleRangedWeapon>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new SimpleRangedData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
+
 
     internal class Explosive_Json_Loader
     {
@@ -284,18 +323,27 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var explosiveCategory = JsonSerializer.Deserialize<ExplosiveCategory>(jsonData);
-                return new ExplosiveData
+
+                if (explosiveCategory != null)
                 {
-                    ExplosiveCategories = new Dictionary<string, List<Explosive>>
+                    return new ExplosiveData
                     {
-                        {Path.GetFileNameWithoutExtension(jsonFilePath), explosiveCategory.Explosives }
+                        ExplosiveCategories = new Dictionary<string, List<Explosive>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), explosiveCategory.Explosives ?? new List<Explosive>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new ExplosiveData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -308,18 +356,27 @@ namespace CloudDragon
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
                 var firearmsCategory = JsonSerializer.Deserialize<FirearmsCategory>(jsonData);
-                return new FirearmsData
+
+                if (firearmsCategory != null)
                 {
-                    FirearmsCategories = new Dictionary<string, List<Firearms>>
+                    return new FirearmsData
                     {
-                        {Path.GetFileNameWithoutExtension(jsonFilePath), firearmsCategory.Firearm }
+                        FirearmsCategories = new Dictionary<string, List<Firearms>>
+                    {
+                        { Path.GetFileNameWithoutExtension(jsonFilePath), firearmsCategory.Firearm ?? new List<Firearms>() }
                     }
-                };
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the category is null.");
+                    return new FirearmsData(); // or handle it according to your application's logic
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }

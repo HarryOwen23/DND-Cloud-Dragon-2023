@@ -113,45 +113,49 @@ namespace CloudDragon
 
                 var cloudDragonData = JsonSerializer.Deserialize<List<Character_Class>>(jsonData);
 
-                // Access and display some properties
-                Console.WriteLine($"Class Name: {cloudDragonData[0].ClassName}");
-                Console.WriteLine($"Hit Dice: {cloudDragonData[0].HitDice}");
-                Console.WriteLine($"Proficiencies (Armor): {cloudDragonData[0].Proficiencies.Armor}");
-
-                // You can access other properties as needed
-
-                // Example: Loop through and display Fighting Styles
-                Console.WriteLine("Fighting Styles:");
-                foreach (var style in cloudDragonData[0].FightingStyles)
+                if (cloudDragonData != null && cloudDragonData.Count > 0)
                 {
-                    Console.WriteLine($"- {style.Name}: {style.Description}");
-                }
+                    // Access and display some properties
+                    Console.WriteLine($"Class Name: {cloudDragonData[0]?.ClassName}");
+                    Console.WriteLine($"Hit Dice: {cloudDragonData[0]?.HitDice}");
 
-                // Example: Loop through and display sub-archetypes and their features
-                Console.WriteLine("Sub-Archetypes:");
-                foreach (var subArchetype in cloudDragonData[0].SubArchetypes)
-                {
-                    Console.WriteLine($"- {subArchetype.ArchetypeName}");
+                    var proficienciesArmor = cloudDragonData[0]?.Proficiencies?.Armor;
+                    Console.WriteLine($"Proficiencies (Armor): {proficienciesArmor ?? "N/A"}");
 
-                    foreach (var feature in subArchetype.ArchetypeFeatures)
+                    // Loop through and display Fighting Styles
+                    Console.WriteLine("Fighting Styles:");
+                    foreach (var style in cloudDragonData[0]?.FightingStyles ?? Enumerable.Empty<FightingStyle>())
                     {
-                        Console.WriteLine($"  - {feature.FeatureName}");
+                        Console.WriteLine($"- {style?.Name}: {style?.Description}");
+                    }
 
-                        foreach (var description in feature.FeatureDescription)
+                    // Loop through and display sub-archetypes and their features
+                    Console.WriteLine("Sub-Archetypes:");
+                    foreach (var subArchetype in cloudDragonData[0]?.SubArchetypes ?? Enumerable.Empty<SubArchetype>())
+                    {
+                        Console.WriteLine($"- {subArchetype?.ArchetypeName}");
+
+                        foreach (var feature in subArchetype?.ArchetypeFeatures ?? Enumerable.Empty<ArchetypeFeature>())
                         {
-                            if (description is string desc)
+                            Console.WriteLine($"  - {feature?.FeatureName}");
+
+                            foreach (var description in feature?.FeatureDescription ?? Enumerable.Empty<object>())
                             {
-                                Console.WriteLine($"    - {desc}");
-                            }
-                            else if (description is List<object> descList)
-                            {
-                                foreach (var item in descList)
+                                if (description is string desc)
                                 {
-                                    Console.WriteLine($"    - {item}");
+                                    Console.WriteLine($"    - {desc}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"    - {description}");
                                 }
                             }
                         }
                     }
+                }
+                else
+                {
+                    Console.WriteLine("Deserialization failed or the list is empty.");
                 }
             }
             catch (Exception e)
@@ -160,7 +164,7 @@ namespace CloudDragon
             }
         }
     }
-    
+
     internal class Program
     {
         static void Main(string[] args)
