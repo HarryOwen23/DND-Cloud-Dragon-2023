@@ -11,7 +11,7 @@ namespace CloudDragon
         [JsonPropertyName("Name")]
         public string Name { get; set; }
 
-        [JsonPropertyName("Armor Class")]
+        [JsonPropertyName("Armor Class (AC)")]
         public string ArmorClass { get; set; }
 
         [JsonPropertyName("Strength")]
@@ -25,19 +25,42 @@ namespace CloudDragon
 
         [JsonPropertyName("Cost")]
         public string Cost { get; set; }
+
+        public Armor()
+        {
+            Name = string.Empty;
+            ArmorClass = string.Empty;
+            Strength = string.Empty;
+            Stealth = string.Empty;
+            Weight = string.Empty;
+            Cost = string.Empty;
+        }
     }
+
 
     public class ArmorCategory
     {
         [JsonPropertyName("Armors")]
         public List<Armor> Armors { get; set; }
+
+        public ArmorCategory()
+        {
+            Armors = new List<Armor>();
+        }
     }
 
     public class ArmorData
     {
         [JsonPropertyName("Armor Categories")]
-        public Dictionary<string, List<Armor>>? ArmorCategories { get; set; } // Add a question mark to indicate it can be null
+        public Dictionary<string, List<Armor>> ArmorCategories { get; set; }
+
+        public ArmorData()
+        {
+            ArmorCategories = new Dictionary<string, List<Armor>>();
+        }
     }
+
+
 
     internal class ArmorJsonLoader
     {
@@ -53,15 +76,15 @@ namespace CloudDragon
                     return new ArmorData
                     {
                         ArmorCategories = new Dictionary<string, List<Armor>>
-                        {
-                            { Path.GetFileNameWithoutExtension(jsonFilePath), armorCategory.Armors }
-                        }
+                {
+                    { Path.GetFileNameWithoutExtension(jsonFilePath), armorCategory.Armors }
+                }
                     };
                 }
                 else
                 {
                     Console.WriteLine($"Error loading JSON file: Invalid or empty data in {jsonFilePath}.");
-                    return null; // or throw an exception if appropriate
+                    return new ArmorData(); // Return an empty ArmorData instance
                 }
             }
             catch (Exception e)
@@ -70,48 +93,49 @@ namespace CloudDragon
                 throw;
             }
         }
-    }
 
-    internal class ArmorLoader : ILoader
-    {
-        private static void DisplayArmorData(string armorType, Dictionary<string, List<Armor>>? armorCategories)
+        internal class ArmorLoader : ILoader
         {
-            Console.WriteLine($"{armorType} Armor:");
-
-            if (armorCategories != null && armorCategories.TryGetValue(armorType, out var armors))
+            private static void DisplayArmorData(string armorType, Dictionary<string, List<Armor>>? armorCategories)
             {
-                foreach (var armor in armors)
+                Console.WriteLine($"{armorType} Armor:");
+
+                if (armorCategories != null && armorCategories.TryGetValue(armorType, out var armors))
                 {
-                    Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                    foreach (var armor in armors)
+                    {
+                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"No data found for {armorType} Armor.");
                 }
             }
-            else
+
+            public void Load()
             {
-                Console.WriteLine($"No data found for {armorType} Armor.");
+                Console.WriteLine("Loading Armor Data ...");
+                // Define the paths to the JSON files
+                string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
+                string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
+                string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
+
+                var armorHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
+                var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
+                var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
+
+
+                // Display the Armor data for Heavy Armor
+                DisplayArmorData("Heavy Armor", armorHeavy?.ArmorCategories);
+
+                // Display the Armor data for Medium Armor
+                DisplayArmorData("Medium Armor", armorMedium?.ArmorCategories);
+
+                // Display the Armor data for Light Armor
+                DisplayArmorData("Light Armor", armorLight?.ArmorCategories);
+
             }
-        }
-
-        public void Load()
-        {
-            Console.WriteLine("Loading Armor Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
-            string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
-            string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
-
-            var armorHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
-            var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
-            var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
-
-            // Display the Armor data for Heavy Armor
-            DisplayArmorData("Heavy Armor", armorHeavy?.ArmorCategories);
-
-            // Display the Armor data for Medium Armor
-            DisplayArmorData("Medium Armor", armorMedium?.ArmorCategories);
-
-            // Display the Armor data for Light Armor
-            DisplayArmorData("Light Armor", armorLight?.ArmorCategories);
-
         }
     }
 }

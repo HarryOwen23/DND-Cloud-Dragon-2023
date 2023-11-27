@@ -22,6 +22,7 @@ namespace CloudDragon
 
         [JsonPropertyName("Properties")]
         public string Properties { get; set; }
+
     }
 
     public class MartialRangedWeapon
