@@ -62,6 +62,13 @@ namespace CloudDragon
                 }
 
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
+
+                if (trinketData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default TrinketsData.");
+                    return new TrinketsData();
+                }
+
                 return trinketData;
             }
             catch (Exception e)
@@ -83,17 +90,17 @@ namespace CloudDragon
             string jsonFilePathCurseofStrahd = "Trinkets\\Trinkets_Curse_of_Strahd.json";
             string jsonFilePathEbberonAerenal = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json";
             string jsonFilePathEbberonArgonnessen = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Argonnessen.json";
-            string jsonFilePathEbberonFrostfell = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Argonnessen.json";
+            string jsonFilePathEbberonFrostfell = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Frostfell_Everice.json";
             string jsonFilePathEbberonKhyber = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Khyber.json";
             string jsonFilePathEbberonSarlona = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Sarlona.json";
-            string jsonFilePathEbberonXendrik = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Xen'drik.json";
+            string jsonFilePathEbberonXendrik = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Xendrik.json";
             string jsonFilePathElementalEvil = "Trinkets\\Trinkets_Elemental_Evil.json";
             string jsonFilePathIcewind = "Trinkets\\Trinkets_Icewind_Dale_Rime_of_the_Frostmaiden.json";
             string jsonFilePathLostLab = "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json";
-            string jsonFilePathMordenkainen = "Trinkets\\Trinkets_Mordenkainen's_Tome_of_Foes.json";
-            string jsonFilePathPlayersHandbook = "Trinkets\\Trinkets_Player's_Handbook.json";
+            string jsonFilePathMordenkainen = "Trinkets\\Trinkets_Mordenkainens_Tome_of_Foes.json";
+            string jsonFilePathPlayersHandbook = "Trinkets\\Trinkets_Players_Handbook.json";
             string jsonFilePathWildBeyond = "Trinkets\\Trinkets_The_Wild_Beyond_The_Witchlight.json";
-            string jsonFilePathVanRitchen = "Trinkets\\Trinkets_Van_Ritchen's_Guide_to_Ravenloft.json";
+            string jsonFilePathVanRitchen = "Trinkets\\Trinkets_Van_Ritchens_Guide_to_Ravenloft.json";
 
             // Load the equipment data using the EquipmentJsonLoader
             var trinketsAcquisitionsIncorporated = TrinketJsonLoader.LoadTrinketData(jsonFilePathAcquisitionsIncorperated);

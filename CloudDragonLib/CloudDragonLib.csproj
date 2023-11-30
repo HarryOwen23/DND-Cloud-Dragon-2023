@@ -893,7 +893,7 @@
     <None Update="Trinkets\Trinkets_Ebberon_Rising_from_the_Last_War_Sarlona.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Trinkets\Trinkets_Ebberon_Rising_from_the_Last_War_Xen%27drik.json">
+    <None Update="Trinkets\Trinkets_Ebberon_Rising_from_the_Last_War_Xendrik.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Trinkets\Trinkets_Elemental_Evil.json">
@@ -905,16 +905,16 @@
     <None Update="Trinkets\Trinkets_Lost_Laboratory_of_Kwalish.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Trinkets\Trinkets_Mordenkainen%27s_Tome_of_Foes.json">
+    <None Update="Trinkets\Trinkets_Mordenkainens_Tome_of_Foes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Trinkets\Trinkets_Player%27s_Handbook.json">
+    <None Update="Trinkets\Trinkets_Players_Handbook.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Trinkets\Trinkets_The_Wild_Beyond_The_Witchlight.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Trinkets\Trinkets_Van_Ritchen%27s_Guide_to_Ravenloft.json">
+    <None Update="Trinkets\Trinkets_Van_Ritchens_Guide_to_Ravenloft.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Weapons\Explosives_Modern.json">

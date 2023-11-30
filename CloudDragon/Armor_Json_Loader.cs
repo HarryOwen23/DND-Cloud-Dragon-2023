@@ -93,9 +93,10 @@ namespace CloudDragon
                 throw;
             }
         }
+    }
 
-        internal class ArmorLoader : ILoader
-        {
+       internal class ArmorLoader : ILoader
+       {
             private static void DisplayArmorData(string armorType, Dictionary<string, List<Armor>>? armorCategories)
             {
                 Console.WriteLine($"{armorType} Armor:");
@@ -136,6 +137,5 @@ namespace CloudDragon
                 DisplayArmorData("Light Armor", armorLight?.ArmorCategories);
 
             }
-        }
-    }
+       }
 }

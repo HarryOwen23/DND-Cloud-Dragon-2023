@@ -68,22 +68,22 @@ class raceModifier
         halflingGhostwiseRace.Add_ability_Bonuses("WIS", 1);
 
         // Gnome Races 
-        Races GnomeForestRace = new Races("Gnome (Forest)");
-        GnomeForestRace.Add_ability_Bonuses("DEX", 1);
-        GnomeForestRace.Add_ability_Bonuses("INT", 2);
+        Races gnomeForestRace = new Races("Gnome (Forest)");
+        gnomeForestRace.Add_ability_Bonuses("DEX", 1);
+        gnomeForestRace.Add_ability_Bonuses("INT", 2);
 
-        Races GnomeRockRace = new Races("Gnome (Rock)");
-        GnomeRockRace.Add_ability_Bonuses("CON", 1);
-        GnomeRockRace.Add_ability_Bonuses("INT", 2);
+        Races gnomeRockRace = new Races("Gnome (Rock)");
+        gnomeRockRace.Add_ability_Bonuses("CON", 1);
+        gnomeRockRace.Add_ability_Bonuses("INT", 2);
 
-        Races GnomeDeepRace = new Races("Gnome (Deep)");
-        GnomeRockRace.Add_ability_Bonuses("DEX", 1);
-        GnomeRockRace.Add_ability_Bonuses("INT", 2);
+        Races gnomeDeepRace = new Races("Gnome (Deep)");
+        gnomeDeepRace.Add_ability_Bonuses("DEX", 1);
+        gnomeDeepRace.Add_ability_Bonuses("INT", 2);
 
         // Orc Races 
-        Races OrcRace = new Races("Orc");
-        GnomeForestRace.Add_ability_Bonuses("STR", 2);
-        GnomeForestRace.Add_ability_Bonuses("CON", 1);
+        Races orcRace = new Races("Orc");
+        orcRace.Add_ability_Bonuses("STR", 2);
+        orcRace.Add_ability_Bonuses("CON", 1);
 
         Races halfOrcRace = new Races("Half Orc");
         halfOrcRace.Add_ability_Bonuses("STR", 2);
@@ -143,7 +143,7 @@ class raceModifier
         goliathRace.Add_ability_Bonuses("CON", 1);
 
         // Firbolg
-        Races firbolgRace = new Races("/");
+        Races firbolgRace = new Races("Firbolg");
         firbolgRace.Add_ability_Bonuses("STR", 1);
         firbolgRace.Add_ability_Bonuses("WIS", 2);
 
@@ -253,10 +253,12 @@ class raceModifier
         vedalkenRace.Add_ability_Bonuses("INT", 2);
         vedalkenRace.Add_ability_Bonuses("WIS", 1);
 
+
         // Leonin
         Races leoninRace = new Races("Leonin");
-        vedalkenRace.Add_ability_Bonuses("STR", 1);
-        vedalkenRace.Add_ability_Bonuses("CON", 2);
+        leoninRace.Add_ability_Bonuses("STR", 1);
+        leoninRace.Add_ability_Bonuses("CON", 2);
+
 
         // Satyr 
         Races SatyrRace = new Races("Satyr");
@@ -276,8 +278,5 @@ class raceModifier
         {
             Console.WriteLine(bonus.Key + ": " + bonus.Value);
         }
-
-        // Now, you can apply these ability score bonuses to your character's stats.
-        // You can implement the character's stats and additional logic based on your game's design.
     }
 }

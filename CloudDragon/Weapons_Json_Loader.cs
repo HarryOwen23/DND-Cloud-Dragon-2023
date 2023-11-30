@@ -396,25 +396,9 @@ namespace CloudDragon
         private static string GetWeaponString<T>(T weapon)
         {
             var properties = typeof(T).GetProperties();
-            var propertyValues = properties.Select(prop =>
-            {
-                if (typeof(T) == typeof(MartialMeleeWeapon) || typeof(T) == typeof(MartialRangedWeapon) ||
-                    typeof(T) == typeof(SimpleMeleeWeapon) || typeof(T) == typeof(SimpleRangedWeapon) ||
-                    typeof(T) == typeof(Firearms))
-                {
-                    return $"{prop.Name}: {prop.GetValue(weapon)}";
-                }
-                else if (typeof(T) == typeof(Explosive))
-                {
-                    return prop.Name == "Cost" ? null : $"{prop.Name}: {prop.GetValue(weapon)}";
-                }
-                else
-                {
-                    return null;
-                }
-            });
+            var propertyValues = properties.Select(prop => $"{prop.Name}: {prop.GetValue(weapon)}");
 
-            return string.Join(", ", propertyValues.Where(p => p != null));
+            return string.Join(", ", propertyValues);
         }
     }
 
@@ -425,7 +409,7 @@ namespace CloudDragon
         {
             Console.WriteLine("Loading Martial Melee Weapon Data ...");
             // Define the paths to the JSON files
-            string jsonFilePathMeleeMartial = "\\Weapons\\Martial_Weapons_Melee.json";
+            string jsonFilePathMeleeMartial = "Weapons\\Martial_Weapons_Melee.json";
 
             var martMelee = Martial_Melee_Weapons_Json_Loader.LoadMartialMeleeData(jsonFilePathMeleeMartial);
 

@@ -176,8 +176,8 @@ namespace CloudDragon
             ILoader EquipmentLoader = new EquipmentLoader();
             EquipmentLoader.Load();
 
-            ILoader ArmorLoader = new ArmorLoader();
-            ArmorLoader.Load();
+            ILoader armorLoader = new ArmorLoader();
+            armorLoader.Load();
 
             ILoader currencyLoader = new CurrencyLoader();
             currencyLoader.Load();
