@@ -81,6 +81,11 @@ namespace CloudDragon
 
     internal class TrinketLoader : ILoader
     {
+        private static bool FileExists(string filePath)
+        {
+            return File.Exists(filePath);
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Trinket Data ...");
@@ -167,10 +172,10 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Argonnessen
-            if (trinketsEbberonArgonnessen != null)
+            if (trinketsEbberonArgonnessen != null && trinketsEbberonArgonnessen.TrinketCategories.ContainsKey("Ebberon_Rising_from_the_Last_War_Argonnessen"))
             {
                 Console.WriteLine("Eberron - Argonnessen Trinkets:");
-                foreach (var trinket in trinketsEbberonArgonnessen.TrinketCategories["Eberron_Rising_from_the_Last_War_Argonnessen"])
+                foreach (var trinket in trinketsEbberonArgonnessen.TrinketCategories["Ebberon_Rising_from_the_Last_War_Argonnessen"])
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
@@ -180,7 +185,7 @@ namespace CloudDragon
             if (trinketsEbberonFrostfell != null)
             {
                 Console.WriteLine("Eberron - Frostfell Trinkets:");
-                foreach (var trinket in trinketsEbberonFrostfell.TrinketCategories["Eberron_Rising_from_the_Last_War_Frostfell"])
+                foreach (var trinket in trinketsEbberonFrostfell.TrinketCategories["Eberron_Rising_from_the_Last_War_Frostfell_Everice"])
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }

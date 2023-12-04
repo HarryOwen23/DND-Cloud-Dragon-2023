@@ -12,6 +12,43 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
+        public string? Cost { get; set; } 
+
+        [JsonPropertyName("Damage")]
+        public string? Damage { get; set; } 
+
+        [JsonPropertyName("Weight")]
+        public string? Weight { get; set; } 
+
+        [JsonPropertyName("Properties")]
+        public string? Properties { get; set; }
+    }
+
+    public class MartialRangedWeapon
+    {
+        [JsonPropertyName("Name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("Cost")]
+        public string? Cost { get; set; }
+
+        [JsonPropertyName("Damage")]
+        public string? Damage { get; set; }
+
+        [JsonPropertyName("Weight")]
+        public string? Weight { get; set; }
+
+        [JsonPropertyName("Properties")]
+        public string? Properties { get; set; }
+    }
+
+
+    public class SimpleMeleeWeapon
+    {
+        [JsonPropertyName("Name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("Cost")]
         public string? Cost { get; set; }
 
         [JsonPropertyName("Damage")]
@@ -25,58 +62,22 @@ namespace CloudDragon
 
     }
 
-    public class MartialRangedWeapon
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("Cost")]
-        public int Cost { get; set; }
-
-        [JsonPropertyName("Damage")]
-        public string Damage { get; set; }
-
-        [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
-
-        [JsonPropertyName("Properties")]
-        public string Properties { get; set; }
-    }
-
-    public class SimpleMeleeWeapon
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("Cost")]
-        public int Cost { get; set; }
-
-        [JsonPropertyName("Damage")]
-        public string Damage { get; set; }
-
-        [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
-
-        [JsonPropertyName("Properties")]
-        public string Properties { get; set; }
-    }
-
     public class SimpleRangedWeapon
     {
         [JsonPropertyName("Name")]
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public int Cost { get; set; }
+        public string? Cost { get; set; }
 
         [JsonPropertyName("Damage")]
-        public string Damage { get; set; }
+        public string? Damage { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
+        public string? Weight { get; set; }
 
         [JsonPropertyName("Properties")]
-        public string Properties { get; set; }
+        public string? Properties { get; set; }
     }
 
     public class Explosive
@@ -85,13 +86,13 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
+        public string? Weight { get; set; }
 
         [JsonPropertyName("Description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [JsonPropertyName("Cost")]
-        public object? Cost { get; set; }
+        public string? Cost { get; set; }
     }
 
     public class Firearms
@@ -100,16 +101,16 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string Cost { get; set; } = string.Empty;
+        public string? Cost { get; set; }
 
         [JsonPropertyName("Damage")]
-        public string Damage { get; set; }
+        public string? Damage { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
+        public string? Weight { get; set; }
 
         [JsonPropertyName("Properties")]
-        public string Properties { get; set; }
+        public string? Properties { get; set; }
     }
 
     public class MartialMeleeCategory
@@ -197,9 +198,9 @@ namespace CloudDragon
                     return new MartialMeleeData
                     {
                         MartialMeleeCategories = new Dictionary<string, List<MartialMeleeWeapon>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialMeleeCategory.MartialMeleeWeapons ?? new List<MartialMeleeWeapon>() }
-                    }
+                        {
+                            { Path.GetFileNameWithoutExtension(jsonFilePath), martialMeleeCategory.MartialMeleeWeapons ?? new List<MartialMeleeWeapon>() }
+                        }
                     };
                 }
                 else
@@ -207,6 +208,8 @@ namespace CloudDragon
                     Console.WriteLine("Deserialization failed or the category is null.");
                     return new MartialMeleeData(); // or handle it according to your application's logic
                 }
+
+
             }
             catch (Exception e)
             {
@@ -384,12 +387,15 @@ namespace CloudDragon
 
     internal class WeaponLoaderHelper
     {
-        public static void DisplayWeaponData<T>(string category, List<T> weapons)
+        public static void DisplayWeaponData<T>(string category, List<T>? weapons)
         {
             Console.WriteLine($"{category}:");
-            foreach (var weapon in weapons)
+            if (weapons != null)
             {
-                Console.WriteLine("- " + GetWeaponString(weapon));
+                foreach (var weapon in weapons)
+                {
+                    Console.WriteLine("- " + GetWeaponString(weapon));
+                }
             }
         }
 
@@ -401,7 +407,6 @@ namespace CloudDragon
             return string.Join(", ", propertyValues);
         }
     }
-
 
     internal class MartialMeleeWeaponLoader : ILoader
     {
