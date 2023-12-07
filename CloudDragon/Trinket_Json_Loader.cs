@@ -14,10 +14,6 @@ namespace CloudDragon
         [JsonPropertyName("Trinket Description")]
         public string TrinketDescription { get; set; }
 
-        public Trinket()
-        {
-            TrinketDescription = string.Empty; // or any default value that makes sense
-        }
     }
 
     public class TrinketCategory
@@ -25,10 +21,6 @@ namespace CloudDragon
         [JsonPropertyName("Trinkets")]
         public List<Trinket> Trinkets { get; set; }
 
-        public TrinketCategory()
-        {
-            Trinkets = new List<Trinket>();
-        }
     }
 
     public class TrinketsData
@@ -36,10 +28,6 @@ namespace CloudDragon
         [JsonPropertyName("Trinket Categories")]
         public Dictionary<string, List<Trinket>> TrinketCategories { get; set; }
 
-        public TrinketsData()
-        {
-            TrinketCategories = new Dictionary<string, List<Trinket>>();
-        }
     }
 
 
@@ -52,6 +40,12 @@ namespace CloudDragon
                 if (jsonFilePath == null)
                 {
                     throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new TrinketsData();
                 }
 
                 string jsonData = File.ReadAllText(jsonFilePath);
@@ -81,11 +75,6 @@ namespace CloudDragon
 
     internal class TrinketLoader : ILoader
     {
-        private static bool FileExists(string filePath)
-        {
-            return File.Exists(filePath);
-        }
-
         void ILoader.Load()
         {
             Console.WriteLine("Loading Trinket Data ...");
@@ -93,19 +82,19 @@ namespace CloudDragon
             // Define the paths to the JSON files
             string jsonFilePathAcquisitionsIncorperated = "Trinkets\\Trinkets_Acquisitions_Incorporated.json";
             string jsonFilePathCurseofStrahd = "Trinkets\\Trinkets_Curse_of_Strahd.json";
-            string jsonFilePathEbberonAerenal = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json";
-            string jsonFilePathEbberonArgonnessen = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Argonnessen.json";
-            string jsonFilePathEbberonFrostfell = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Frostfell_Everice.json";
-            string jsonFilePathEbberonKhyber = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Khyber.json";
-            string jsonFilePathEbberonSarlona = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Sarlona.json";
-            string jsonFilePathEbberonXendrik = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Xendrik.json";
+            string jsonFilePathEbberonAerenal = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Aerenal.json";
+            string jsonFilePathEbberonArgonnessen = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Argonnessen.json";
+            string jsonFilePathEbberonFrostfell = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Frostfell_Everice.json";
+            string jsonFilePathEbberonKhyber = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Khyber.json";
+            string jsonFilePathEbberonSarlona = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Sarlona.json";
+            string jsonFilePathEbberonXendrik = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Xendrik.json";
             string jsonFilePathElementalEvil = "Trinkets\\Trinkets_Elemental_Evil.json";
             string jsonFilePathIcewind = "Trinkets\\Trinkets_Icewind_Dale_Rime_of_the_Frostmaiden.json";
             string jsonFilePathLostLab = "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json";
             string jsonFilePathMordenkainen = "Trinkets\\Trinkets_Mordenkainens_Tome_of_Foes.json";
             string jsonFilePathPlayersHandbook = "Trinkets\\Trinkets_Players_Handbook.json";
             string jsonFilePathWildBeyond = "Trinkets\\Trinkets_The_Wild_Beyond_The_Witchlight.json";
-            string jsonFilePathVanRitchen = "Trinkets\\Trinkets_Van_Ritchens_Guide_to_Ravenloft.json";
+            string jsonFilePathVanRitchen = "Trinkets\\Trinkets_Van_Richtens_Guide_to_Ravenloft.json";
 
             // Load the equipment data using the EquipmentJsonLoader
             var trinketsAcquisitionsIncorporated = TrinketJsonLoader.LoadTrinketData(jsonFilePathAcquisitionsIncorperated);
@@ -125,31 +114,14 @@ namespace CloudDragon
             var trinketsVanRitchen = TrinketJsonLoader.LoadTrinketData(jsonFilePathVanRitchen);
 
             // Display the trinket data for Acquisitions Incorporated
-            if (trinketsAcquisitionsIncorporated != null &&
-                trinketsAcquisitionsIncorporated.TrinketCategories != null &&
-                trinketsAcquisitionsIncorporated.TrinketCategories.ContainsKey("Acquisitions_Incorporated"))
+            if (trinketsAcquisitionsIncorporated != null && trinketsAcquisitionsIncorporated.TrinketCategories.ContainsKey("Acquisitions_Incorporated"))
             {
                 Console.WriteLine("Acquisitions Incorporated Trinkets:");
-
-                var acquisitionsTrinkets = trinketsAcquisitionsIncorporated.TrinketCategories["Acquisitions_Incorporated"];
-
-                if (acquisitionsTrinkets != null)
+                foreach (var trinket in trinketsAcquisitionsIncorporated.TrinketCategories["Acquisitions_Incorporated"])
                 {
-                    foreach (var trinket in acquisitionsTrinkets)
-                    {
-                        Console.WriteLine($"- Dice Number: {trinket?.DiceNumber}, Description: {trinket?.TrinketDescription}");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Trinkets for Acquisitions Incorporated are null.");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
             }
-            else
-            {
-                Console.WriteLine("Trinket data for Acquisitions Incorporated is null or the specified key is not present.");
-            }
-
 
             // Display the trinket data for Curse of Strahd
             if (trinketsCurseofStrahd != null && trinketsCurseofStrahd.TrinketCategories != null && trinketsCurseofStrahd.TrinketCategories.ContainsKey("Curse_of_Strahd"))
@@ -182,7 +154,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Frostfell
-            if (trinketsEbberonFrostfell != null)
+            if (trinketsEbberonFrostfell != null && trinketsEbberonFrostfell.TrinketCategories.ContainsKey("Ebberon_Rising_from_the_Last_War_Frostfell_Everice"))
             {
                 Console.WriteLine("Eberron - Frostfell Trinkets:");
                 foreach (var trinket in trinketsEbberonFrostfell.TrinketCategories["Eberron_Rising_from_the_Last_War_Frostfell_Everice"])
@@ -192,7 +164,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Khyber
-            if (trinketsEbberonKhyber != null)
+            if (trinketsEbberonKhyber != null && trinketsEbberonKhyber.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Khyber"))
             {
                 Console.WriteLine("Eberron - Khyber Trinkets:");
                 foreach (var trinket in trinketsEbberonKhyber.TrinketCategories["Eberron_Rising_from_the_Last_War_Khyber"])
@@ -202,7 +174,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Sarlona
-            if (trinketsEbberonSarlona != null)
+            if (trinketsEbberonSarlona != null && trinketsEbberonSarlona.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Sarlona"))
             {
                 Console.WriteLine("Eberron - Sarlona Trinkets:");
                 foreach (var trinket in trinketsEbberonSarlona.TrinketCategories["Eberron_Rising_from_the_Last_War_Sarlona"])
@@ -212,17 +184,17 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Xendrik
-            if (trinketsEbberonXendrik != null)
+            if (trinketsEbberonXendrik != null && trinketsEbberonXendrik.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Xendrik"))
             {
                 Console.WriteLine("Eberron - Xendrik Trinkets:");
-                foreach (var trinket in trinketsEbberonXendrik.TrinketCategories["Eberron_Rising_from_the_Last_War_Xen'drik"])
+                foreach (var trinket in trinketsEbberonXendrik.TrinketCategories["Eberron_Rising_from_the_Last_War_Xendrik"])
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
             }
 
             // Display the trinket data for Elemental Evil
-            if (trinketsElementalEvil != null)
+            if (trinketsElementalEvil != null && trinketsElementalEvil.TrinketCategories.ContainsKey("Elemental_Evil"))
             {
                 Console.WriteLine("Elemental Evil Trinkets:");
                 foreach (var trinket in trinketsElementalEvil.TrinketCategories["Elemental_Evil"])
@@ -232,7 +204,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Icewind Dale: Rime of the Frostmaiden
-            if (trinketsIcewind != null)
+            if (trinketsIcewind != null && trinketsIcewind.TrinketCategories.ContainsKey("Icewind_Dale_Rime_of_the_Frostmaiden"))
             {
                 Console.WriteLine("Icewind Dale: Rime of the Frostmaiden Trinkets:");
                 foreach (var trinket in trinketsIcewind.TrinketCategories["Icewind_Dale_Rime_of_the_Frostmaiden"])
@@ -242,7 +214,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Lost Laboratory of Kwalish
-            if (trinketsLostLab != null)
+            if (trinketsLostLab != null && trinketsLostLab.TrinketCategories.ContainsKey("Lost_Laboratory_of_Kwalish"))
             {
                 Console.WriteLine("Lost Laboratory of Kwalish Trinkets:");
                 foreach (var trinket in trinketsLostLab.TrinketCategories["Lost_Laboratory_of_Kwalish"])
@@ -252,7 +224,7 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Mordenkainen's Tome of Foes
-            if (trinketsMordenkainen != null)
+            if (trinketsMordenkainen != null && trinketsMordenkainen.TrinketCategories.ContainsKey("Mordenkainen's_Tome_of_Foes"))
             {
                 Console.WriteLine("Mordenkainen's Tome of Foes Trinkets:");
                 foreach (var trinket in trinketsMordenkainen.TrinketCategories["Mordenkainen's_Tome_of_Foes"])
@@ -262,17 +234,17 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Player's Handbook
-            if (trinketsPlayersHandbook != null)
+            if (trinketsPlayersHandbook != null && trinketsPlayersHandbook.TrinketCategories.ContainsKey("Players_Handbook"))
             {
                 Console.WriteLine("Player's Handbook Trinkets:");
-                foreach (var trinket in trinketsPlayersHandbook.TrinketCategories["Player's_Handbook"])
+                foreach (var trinket in trinketsPlayersHandbook.TrinketCategories["Players_Handbook"])
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
             }
 
             // Display the trinket data for The Wild Beyond the Witchlight
-            if (trinketsWildBeyond != null)
+            if (trinketsWildBeyond != null && trinketsWildBeyond.TrinketCategories.ContainsKey("The_Wild_Beyond_The_Witchlight"))
             {
                 Console.WriteLine("The Wild Beyond the Witchlight Trinkets:");
                 foreach (var trinket in trinketsWildBeyond.TrinketCategories["The_Wild_Beyond_The_Witchlight"])
@@ -282,10 +254,10 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Van Richten's Guide to Ravenloft
-            if (trinketsVanRitchen != null)
+            if (trinketsVanRitchen != null && trinketsVanRitchen.TrinketCategories.ContainsKey("Van_Richtens_Guide_to_Ravenloft"))
             {
                 Console.WriteLine("Van Richten's Guide to Ravenloft Trinkets:");
-                foreach (var trinket in trinketsVanRitchen.TrinketCategories["Van_Richten's_Guide_to_Ravenloft"])
+                foreach (var trinket in trinketsVanRitchen.TrinketCategories["Van_Richtens_Guide_to_Ravenloft"])
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
                 }
