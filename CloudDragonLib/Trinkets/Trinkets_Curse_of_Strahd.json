@@ -1,203 +1,508 @@
 {
-    "Trinkets": [
+    "Curse of Strahd Trinkets": [
         {
-            "Dice Numbers": "1-2",
+            "Dice Number": 1,
             "Trinket": "A picture you drew as a child of your imaginary friend"
         },
+
         {
-            "Dice Numbers": "3-4",
+            "Dice Number": 2,
+            "Trinket": "A picture you drew as a child of your imaginary friend"
+        },
+
+        {
+            "Dice Number": 3,
             "Trinket": "A lock that opens when blood is dripped in its keyhole"
         },
+
         {
-            "Dice Numbers": "5-6",
+            "Dice Number": 4,
+            "Trinket": "A lock that opens when blood is dripped in its keyhole"
+        },
+
+        {
+            "Dice Number": 5,
             "Trinket": "Clothes stolen from a scarecrow"
         },
+
         {
-            "Dice Numbers": "7-8",
+            "Dice Number": 6,
+            "Trinket": "Clothes stolen from a scarecrow"
+        },
+
+        {
+            "Dice Number": 7,
             "Trinket": "A spinning top carved with four faces: happy, sad, wrathful, and dead"
         },
+
         {
-            "Dice Numbers": "9-10",
+            "Dice Number": 8,
+            "Trinket": "A spinning top carved with four faces: happy, sad, wrathful, and dead"
+        },
+
+        {
+            "Dice Number": 9,
             "Trinket": "The necklace of a sibling who died on the day you were born"
         },
+
         {
-            "Dice Numbers": "11-12",
+            "Dice Number": 10,
+            "Trinket": "The necklace of a sibling who died on the day you were born"
+        },
+
+        {
+            "Dice Number": 11,
             "Trinket": "A wig from someone executed by beheading"
         },
+
         {
-            "Dice Numbers": "13-14",
+            "Dice Number": 12,
+            "Trinket": "A wig from someone executed by beheading"
+        },
+
+        {
+            "Dice Number": 13,
             "Trinket": "The unopened letter to you from your dying father"
         },
+
         {
-            "Dice Numbers": "15-16",
+            "Dice Number": 14,
+            "Trinket": "The unopened letter to you from your dying father"
+        },
+
+        {
+            "Dice Number": 15,
             "Trinket": "A pocket watch that runs backward for an hour every midnight"
         },
+
         {
-            "Dice Numbers": "17-18",
+            "Dice Number": 16,
+            "Trinket": "A pocket watch that runs backward for an hour every midnight"
+        },
+
+        {
+            "Dice Number": 17,
             "Trinket": "A winter coat stolen from a dying soldier"
         },
+
         {
-            "Dice Numbers": "19-20",
+            "Dice Number": 18,
+            "Trinket": "A winter coat stolen from a dying soldier"
+        },
+
+        {
+            "Dice Number": 19,
             "Trinket": "A bottle of invisible ink that can only be read at sunset"
         },
+
         {
-            "Dice Numbers": "21-22",
+            "Dice Number": 20,
+            "Trinket": "A bottle of invisible ink that can only be read at sunset"
+        },
+
+
+        {
+            "Dice Number": 21,
             "Trinket": "A wineskin that refills when interred with a dead person for a night"
         },
+
         {
-            "Dice Numbers": "23-24",
+            "Dice Number": 22,
+            "Trinket": "A wineskin that refills when interred with a dead person for a night"
+        },
+
+        {
+            "Dice Number": 23,
             "Trinket": "A set of silverware used by a king for his last meal"
         },
+
         {
-            "Dice Numbers": "25-26",
+            "Dice Number": 24,
+            "Trinket": "A set of silverware used by a king for his last meal"
+        },
+
+        {
+            "Dice Number": 25,
             "Trinket": "A spyglass that always shows the world suffering a terrible storm"
         },
+
+
         {
-            "Dice Numbers": "27-28",
+            "Dice Number": 26,
+            "Trinket": "A spyglass that always shows the world suffering a terrible storm"
+        },
+
+        {
+            "Dice Number": 27,
             "Trinket": "A cameo with the profile's face scratched away"
         },
+
+
         {
-            "Dice Numbers": "29-30",
+            "Dice Number": 28,
+            "Trinket": "A cameo with the profile's face scratched away"
+        },
+
+        {
+            "Dice Number": 29,
             "Trinket": "A lantern with a black candle that never runs out and that burns with green flame"
         },
+
         {
-            "Dice Numbers": "31-32",
+            "Dice Number": 30,
+            "Trinket": "A lantern with a black candle that never runs out and that burns with green flame"
+        },
+
+        {
+            "Dice Number": 31,
             "Trinket": "A teacup from a child's tea set, stained with blood"
         },
+
         {
-            "Dice Numbers": "33-34",
+            "Dice Number": 32,
+            "Trinket": "A teacup from a child's tea set, stained with blood"
+        },
+
+        {
+            "Dice Number": 33,
             "Trinket": "A little black book that records your dreams, and yours alone, when you sleep"
         },
+
         {
-            "Dice Numbers": "35-36",
+            "Dice Number": 34,
+            "Trinket": "A little black book that records your dreams, and yours alone, when you sleep"
+        },
+
+        {
+            "Dice Number": 35,
             "Trinket": "A necklace formed of the interlinked holy symbols of a dozen deities"
         },
+
         {
-            "Dice Numbers": "37-38",
+            "Dice Number": 36,
+            "Trinket": "A necklace formed of the interlinked holy symbols of a dozen deities"
+        },
+
+        {
+            "Dice Number": 37,
             "Trinket": "A hangman's noose that feels heavier than it should"
         },
+
         {
-            "Dice Numbers": "39-40",
+            "Dice Number": 38,
+            "Trinket": "A hangman's noose that feels heavier than it should"
+        },
+
+        {
+            "Dice Number": 39,
             "Trinket": "A birdcage into which small birds fly but once inside never eat or leave"
         },
+
         {
-            "Dice Numbers": "41-42",
+            "Dice Number": 40,
+            "Trinket": "A birdcage into which small birds fly but once inside never eat or leave"
+        },
+
+        {
+            "Dice Number": 41,
             "Trinket": "A lepidopterist's box filled dead moths with skulllike patterns on their wings"
         },
+
         {
-            "Dice Numbers": "43-44",
+            "Dice Number": 42,
+            "Trinket": "A lepidopterist's box filled dead moths with skulllike patterns on their wings"
+        },
+
+        {
+            "Dice Number": 43,
             "Trinket": "A jar of pickled ghouls' tongues"
         },
+
         {
-            "Dice Numbers": "45-46",
+            "Dice Number": 44,
+            "Trinket": "A jar of pickled ghouls' tongues"
+        },
+
+        {
+            "Dice Number": 45,
             "Trinket": "The wooden hand of a notorious pirate"
         },
+
         {
-            "Dice Numbers": "47-48",
+            "Dice Number": 46,
+            "Trinket": "The wooden hand of a notorious pirate"
+        },
+
+        {
+            "Dice Number": 47,
             "Trinket": "An urn with the ashes of a dead relative"
         },
+
         {
-            "Dice Numbers": "49-50",
+            "Dice Number": 48,
+            "Trinket": "An urn with the ashes of a dead relative"
+        },
+
+
+        {
+            "Dice Number": 49,
             "Trinket": "A hand mirror backed with a bronze depiction of a medusa"
         },
+
         {
-            "Dice Numbers": "51-52",
+            "Dice Number": 50,
+            "Trinket": "A hand mirror backed with a bronze depiction of a medusa"
+        },
+
+        {
+            "Dice Number": 51,
             "Trinket": "Pallid leather gloves crafted with ivory fingernails"
         },
+
         {
-            "Dice Numbers": "53-54",
+            "Dice Number": 52,
+            "Trinket": "Pallid leather gloves crafted with ivory fingernails"
+        },
+
+        {
+            "Dice Number": 53,
             "Trinket": "Dice made from the knuckles of a notorious charlatan"
         },
+
         {
-            "Dice Numbers": "55-56",
+            "Dice Number": 54,
+            "Trinket": "Dice made from the knuckles of a notorious charlatan"
+        },
+
+        {
+            "Dice Number": 55,
             "Trinket": "A ring of keys for forgotten locks"
         },
+
         {
-            "Dice Numbers": "57-58",
+            "Dice Number": 56,
+            "Trinket": "A ring of keys for forgotten locks"
+        },
+
+        {
+            "Dice Number": 57,
             "Trinket": "Nails from the coffin of a murderer"
         },
+
         {
-            "Dice Numbers": "59-60",
+            "Dice Number": 58,
+            "Trinket": "Nails from the coffin of a murderer"
+        },
+
+        {
+            "Dice Number": 59,
             "Trinket": "A key to the family crypt"
         },
+
         {
-            "Dice Numbers": "61-62",
+            "Dice Number": 60,
+            "Trinket": "A key to the family crypt"
+        },
+
+        {
+            "Dice Number": 61,
             "Trinket": "A bouquet of funerary flowers that always looks and smells fresh"
         },
+
         {
-            "Dice Numbers": "63-64",
+            "Dice Number": 62,
+            "Trinket": "A bouquet of funerary flowers that always looks and smells fresh"
+        },
+
+        {
+            "Dice Number": 63,
             "Trinket": "A switch used to discipline you as a child"
         },
+
         {
-            "Dice Numbers": "65-66",
+            "Dice Number": 64,
+            "Trinket": "A switch used to discipline you as a child"
+        },
+
+        {
+            "Dice Number": 65,
             "Trinket": "A music box that plays by itself whenever someone holding it dances"
         },
+
         {
-            "Dice Numbers": "67-68",
+            "Dice Number": 66,
+            "Trinket": "A music box that plays by itself whenever someone holding it dances"
+        },
+
+        {
+            "Dice Number": 67,
             "Trinket": "A walking cane with an iron ferrule that strikes sparks on stone"
         },
+
+
         {
-            "Dice Numbers": "69-70",
+            "Dice Number": 68,
+            "Trinket": "A walking cane with an iron ferrule that strikes sparks on stone"
+        },
+
+        {
+            "Dice Number": 69,
             "Trinket": "A flag from a ship lost at sea"
         },
+
         {
-            "Dice Numbers": "71-72",
+            "Dice Number": 70,
+            "Trinket": "A flag from a ship lost at sea"
+        },
+
+        {
+            "Dice Number": 71,
             "Trinket": "Porcelain doll's head that always seems to be looking at you"
         },
+
         {
-            "Dice Numbers": "73-74",
+            "Dice Number": 72,
+            "Trinket": "Porcelain doll's head that always seems to be looking at you"
+        },
+
+        {
+            "Dice Number": 73,
             "Trinket": "A wolf's head wrought in silver that is also a whistle"
         },
+
         {
-            "Dice Numbers": "75-76",
+            "Dice Number": 74,
+            "Trinket": "A wolf's head wrought in silver that is also a whistle"
+        },
+
+        {
+            "Dice Number": 75,
             "Trinket": "A small mirror that shows a much older version of the viewer"
         },
+
         {
-            "Dice Numbers": "77-78",
+            "Dice Number": 76,
+            "Trinket": "A small mirror that shows a much older version of the viewer"
+        },
+
+        {
+            "Dice Number": 77,
             "Trinket": "Small, worn book of children's nursery rhymes"
         },
+
         {
-            "Dice Numbers": "79-80",
+            "Dice Number": 78,
+            "Trinket": "Small, worn book of children's nursery rhymes"
+        },
+
+        {
+            "Dice Number": 79,
             "Trinket": "A mummified raven claw"
         },
+
         {
-            "Dice Numbers": "81-82",
+            "Dice Number": 80,
+            "Trinket": "A mummified raven claw"
+        },
+
+        {
+            "Dice Number": 81,
             "Trinket": "A broken pendent of a silver dragon that's always cold to the touch"
         },
+
         {
-            "Dice Numbers": "83-84",
+            "Dice Number": 82,
+            "Trinket": "A broken pendent of a silver dragon that's always cold to the touch"
+        },
+
+        {
+            "Dice Number": 83,
             "Trinket": "A small locked box that quietly hums a lovely melody at night but you always forget it in the morning"
         },
+
         {
-            "Dice Numbers": "85-86",
+            "Dice Number": 84,
+            "Trinket": "A small locked box that quietly hums a lovely melody at night but you always forget it in the morning"
+        },
+
+        {
+            "Dice Number": 85,
             "Trinket": "An inkwell that makes one a little nauseous when staring at it"
         },
+
         {
-            "Dice Numbers": "87-88",
+            "Dice Number": 86,
+            "Trinket": "An inkwell that makes one a little nauseous when staring at it"
+        },
+
+        {
+            "Dice Number": 87,
             "Trinket": "An old little doll made from a dark, dense wood and missing a hand and a foot"
         },
+
         {
-            "Dice Numbers": "89-90",
+            "Dice Number": 88,
+            "Trinket": "An old little doll made from a dark, dense wood and missing a hand and a foot"
+        },
+
+        {
+            "Dice Number": 89,
             "Trinket": "A black executioner's hood"
         },
+
         {
-            "Dice Numbers": "91-92",
+            "Dice Number": 90,
+            "Trinket": "A black executioner's hood"
+        },
+
+        {
+            "Dice Number": 91,
             "Trinket": "A pouch made of flesh, with a sinew drawstring"
         },
+
         {
-            "Dice Numbers": "93-94",
+            "Dice Number": 92,
+            "Trinket": "A pouch made of flesh, with a sinew drawstring"
+        },
+
+        {
+            "Dice Number": 93,
             "Trinket": "A tiny spool of black thread that never runs out"
         },
+
         {
-            "Dice Numbers": "95-96",
+            "Dice Number": 94,
+            "Trinket": "A tiny spool of black thread that never runs out"
+        },
+
+        {
+            "Dice Number": 95,
             "Trinket": "A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
         },
+
         {
-            "Dice Numbers": "97-98",
+            "Dice Number": 96,
+            "Trinket": "A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
+        },
+
+        {
+            "Dice Number": 97,
             "Trinket": "A black wooden pipe that creates puffs of smoke that look like skulls"
         },
+
         {
-            "Dice Numbers": "99-100",
+            "Dice Number": 98,
+            "Trinket": "A black wooden pipe that creates puffs of smoke that look like skulls"
+        },
+
+        {
+            "Dice Number": 99,
+            "Trinket": "A vial of perfume, the scent of which only certain creatures can detect"
+        }
+
+
+        {
+            "Dice Number": 100,
             "Trinket": "A vial of perfume, the scent of which only certain creatures can detect"
         }
     ]

@@ -82,7 +82,7 @@ namespace CloudDragon
             // Define the paths to the JSON files
             string jsonFilePathAcquisitionsIncorperated = "Trinkets\\Trinkets_Acquisitions_Incorporated.json";
             string jsonFilePathCurseofStrahd = "Trinkets\\Trinkets_Curse_of_Strahd.json";
-            string jsonFilePathEbberonAerenal = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Aerenal.json";
+            string jsonFilePathEbberonAerenal = "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json";
             string jsonFilePathEbberonArgonnessen = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Argonnessen.json";
             string jsonFilePathEbberonFrostfell = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Frostfell_Everice.json";
             string jsonFilePathEbberonKhyber = "Trinkets\\Trinkets_Eberron_Rising_from_the_Last_War_Khyber.json";
@@ -96,7 +96,7 @@ namespace CloudDragon
             string jsonFilePathWildBeyond = "Trinkets\\Trinkets_The_Wild_Beyond_The_Witchlight.json";
             string jsonFilePathVanRitchen = "Trinkets\\Trinkets_Van_Richtens_Guide_to_Ravenloft.json";
 
-            // Load the equipment data using the EquipmentJsonLoader
+            // Load the trinket data using the TrinketJsonLoader
             var trinketsAcquisitionsIncorporated = TrinketJsonLoader.LoadTrinketData(jsonFilePathAcquisitionsIncorperated);
             var trinketsCurseofStrahd = TrinketJsonLoader.LoadTrinketData(jsonFilePathCurseofStrahd);
             var trinketsEbberonAerenal = TrinketJsonLoader.LoadTrinketData(jsonFilePathEbberonAerenal);

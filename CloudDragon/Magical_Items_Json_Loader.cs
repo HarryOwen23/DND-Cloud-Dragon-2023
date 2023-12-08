@@ -27,7 +27,7 @@ namespace CloudDragon
     public class MagicalItemData
     {
         [JsonPropertyName("Magical Item Categories")]
-        public Dictionary<string, List<MagicItems>> MiCategories { get; set; }
+        public List<MagicItems> MiCategories { get; set; }
     }
 
     internal class Magical_Items_Json_Loader
@@ -36,20 +36,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var miCategory = JsonSerializer.Deserialize<MICategory>(jsonData);
-                return new MagicalItemData
+                if (jsonFilePath == null)
                 {
-                    MiCategories = new Dictionary<string, List<MagicItems>>
-                    {
-                        {Path.GetFileNameWithoutExtension(jsonData), miCategory.MagicalItems }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new MagicalItemData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new MagicalItemData();
+                }
+
+                var magicalItemData = JsonSerializer.Deserialize<MagicalItemData>(jsonData);
+
+                if (magicalItemData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new MagicalItemData();
+                }
+
+                return magicalItemData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -77,81 +95,82 @@ namespace CloudDragon
             var uniqueItems = Magical_Items_Json_Loader.LoadMagicalItemData(jsonFilePathUnique);
             var artifactItems = Magical_Items_Json_Loader.LoadMagicalItemData(jsonFilePathArtifact);
 
+
             // Display the Armor data for common magical items
-            if (commonItems != null)
+            if (commonItems != null && commonItems.MiCategories != null)
             {
                 Console.WriteLine("Common Magical Items:");
-                foreach (var magicitems in commonItems.MiCategories["Common Magical Items"])
+                foreach (var magicitems in commonItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for uncommon magical items
-            if (uncommonItems != null)
+            if (uncommonItems != null && uncommonItems.MiCategories != null)
             {
                 Console.WriteLine("Uncommon Magical Items:");
-                foreach (var magicitems in uncommonItems.MiCategories["Uncommon Magical Items"])
+                foreach (var magicitems in uncommonItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for rare magical items
-            if (rareItems != null)
+            if (rareItems != null && rareItems.MiCategories != null)
             {
                 Console.WriteLine("Rare Magical Items:");
-                foreach (var magicitems in rareItems.MiCategories["Rare Magical Items"])
+                foreach (var magicitems in rareItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for very rare magical items
-            if (veryrareItems != null)
+            if (veryrareItems != null && veryrareItems.MiCategories != null)
             {
                 Console.WriteLine("Rare Magical Items:");
-                foreach (var magicitems in veryrareItems.MiCategories["Rare Magical Items"])
+                foreach (var magicitems in veryrareItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for legendary magical items
-            if (legendaryItems != null)
+            if (legendaryItems != null && legendaryItems.MiCategories != null)
             {
                 Console.WriteLine("Legendary Magical Items:");
-                foreach (var magicitems in legendaryItems.MiCategories["Legendary Magical Items"])
+                foreach (var magicitems in legendaryItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for artifact magical items
-            if (artifactItems != null)
+            if (artifactItems != null && artifactItems.MiCategories != null)
             {
                 Console.WriteLine("Artifact Magical Items:");
-                foreach (var magicitems in artifactItems.MiCategories["Artifact Magical Items"])
+                foreach (var magicitems in artifactItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for unknown magical items
-            if (unknownItems != null)
+            if (unknownItems != null && unknownItems.MiCategories != null)
             {
                 Console.WriteLine("Unknown Magical Items:");
-                foreach (var magicitems in unknownItems.MiCategories["Unknown Magical Items"])
+                foreach (var magicitems in unknownItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
             }
 
             // Display the Armor data for unique magical items
-            if (uniqueItems != null)
+            if (uniqueItems != null && uniqueItems.MiCategories != null)
             {
                 Console.WriteLine("Unique Magical Items:");
-                foreach (var magicitems in uniqueItems.MiCategories["Unique Magical Items"])
+                foreach (var magicitems in uniqueItems.MiCategories)
                 {
                     Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description} ");
                 }
