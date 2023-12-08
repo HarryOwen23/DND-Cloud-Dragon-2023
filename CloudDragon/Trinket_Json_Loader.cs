@@ -14,6 +14,9 @@ namespace CloudDragon
         [JsonPropertyName("Trinket")]
         public string Trinket { get; set; }
 
+        [JsonPropertyName("Dice_Numbers")]
+        public string Dice_Numbers { get; set; }
+
     }
 
     public class TrinketCategory
@@ -129,7 +132,7 @@ namespace CloudDragon
                 Console.WriteLine("Curse of Strahd Trinkets:");
                 foreach (var trinket in trinketsCurseofStrahd.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
+                    Console.WriteLine($"- Dice Number: {trinket.Dice_Numbers}, Description: {trinket.Trinket}");
                 }
             }
 
