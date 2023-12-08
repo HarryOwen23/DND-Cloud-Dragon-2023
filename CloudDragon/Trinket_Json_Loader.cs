@@ -6,27 +6,27 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
-    public class Trinket
+    public class Trinkettype
     {
         [JsonPropertyName("Dice Number")]
         public int DiceNumber { get; set; }
 
-        [JsonPropertyName("Trinket Description")]
-        public string TrinketDescription { get; set; }
+        [JsonPropertyName("Trinket")]
+        public string Trinket { get; set; }
 
     }
 
     public class TrinketCategory
     {
         [JsonPropertyName("Trinkets")]
-        public List<Trinket> Trinkets { get; set; }
+        public List<Trinkettype> Trinkets { get; set; }
 
     }
 
     public class TrinketsData
     {
-        [JsonPropertyName("Trinket Categories")]
-        public Dictionary<string, List<Trinket>> TrinketCategories { get; set; }
+        [JsonPropertyName("Acquisitions Incorporated Trinkets")]
+        public List<Trinkettype> TrinketCategories { get; set; }
 
     }
 
@@ -114,152 +114,152 @@ namespace CloudDragon
             var trinketsVanRitchen = TrinketJsonLoader.LoadTrinketData(jsonFilePathVanRitchen);
 
             // Display the trinket data for Acquisitions Incorporated
-            if (trinketsAcquisitionsIncorporated != null && trinketsAcquisitionsIncorporated.TrinketCategories.ContainsKey("Acquisitions_Incorporated"))
+            if (trinketsAcquisitionsIncorporated != null && trinketsAcquisitionsIncorporated.TrinketCategories != null)
             {
                 Console.WriteLine("Acquisitions Incorporated Trinkets:");
-                foreach (var trinket in trinketsAcquisitionsIncorporated.TrinketCategories["Acquisitions_Incorporated"])
+                foreach (var trinket in trinketsAcquisitionsIncorporated.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Curse of Strahd
-            if (trinketsCurseofStrahd != null && trinketsCurseofStrahd.TrinketCategories != null && trinketsCurseofStrahd.TrinketCategories.ContainsKey("Curse_of_Strahd"))
+            if (trinketsCurseofStrahd != null && trinketsCurseofStrahd.TrinketCategories != null)
             {
                 Console.WriteLine("Curse of Strahd Trinkets:");
-                foreach (var trinket in trinketsCurseofStrahd.TrinketCategories["Curse_of_Strahd"])
+                foreach (var trinket in trinketsCurseofStrahd.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Aerenal
-            if (trinketsEbberonAerenal != null && trinketsEbberonAerenal.TrinketCategories != null && trinketsEbberonAerenal.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Aerenal"))
+            if (trinketsEbberonAerenal != null && trinketsEbberonAerenal.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Aerenal Trinkets:");
-                foreach (var trinket in trinketsEbberonAerenal.TrinketCategories["Eberron_Rising_from_the_Last_War_Aerenal"])
+                foreach (var trinket in trinketsEbberonAerenal.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Argonnessen
-            if (trinketsEbberonArgonnessen != null && trinketsEbberonArgonnessen.TrinketCategories.ContainsKey("Ebberon_Rising_from_the_Last_War_Argonnessen"))
+            if (trinketsEbberonArgonnessen != null && trinketsEbberonArgonnessen.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Argonnessen Trinkets:");
-                foreach (var trinket in trinketsEbberonArgonnessen.TrinketCategories["Ebberon_Rising_from_the_Last_War_Argonnessen"])
+                foreach (var trinket in trinketsEbberonArgonnessen.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Frostfell
-            if (trinketsEbberonFrostfell != null && trinketsEbberonFrostfell.TrinketCategories.ContainsKey("Ebberon_Rising_from_the_Last_War_Frostfell_Everice"))
+            if (trinketsEbberonFrostfell != null && trinketsEbberonFrostfell.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Frostfell Trinkets:");
-                foreach (var trinket in trinketsEbberonFrostfell.TrinketCategories["Eberron_Rising_from_the_Last_War_Frostfell_Everice"])
+                foreach (var trinket in trinketsEbberonFrostfell.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Khyber
-            if (trinketsEbberonKhyber != null && trinketsEbberonKhyber.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Khyber"))
+            if (trinketsEbberonKhyber != null && trinketsEbberonKhyber.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Khyber Trinkets:");
-                foreach (var trinket in trinketsEbberonKhyber.TrinketCategories["Eberron_Rising_from_the_Last_War_Khyber"])
+                foreach (var trinket in trinketsEbberonKhyber.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Sarlona
-            if (trinketsEbberonSarlona != null && trinketsEbberonSarlona.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Sarlona"))
+            if (trinketsEbberonSarlona != null && trinketsEbberonSarlona.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Sarlona Trinkets:");
-                foreach (var trinket in trinketsEbberonSarlona.TrinketCategories["Eberron_Rising_from_the_Last_War_Sarlona"])
+                foreach (var trinket in trinketsEbberonSarlona.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Eberron - Xendrik
-            if (trinketsEbberonXendrik != null && trinketsEbberonXendrik.TrinketCategories.ContainsKey("Eberron_Rising_from_the_Last_War_Xendrik"))
+            if (trinketsEbberonXendrik != null && trinketsEbberonXendrik.TrinketCategories != null)
             {
                 Console.WriteLine("Eberron - Xendrik Trinkets:");
-                foreach (var trinket in trinketsEbberonXendrik.TrinketCategories["Eberron_Rising_from_the_Last_War_Xendrik"])
+                foreach (var trinket in trinketsEbberonXendrik.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Elemental Evil
-            if (trinketsElementalEvil != null && trinketsElementalEvil.TrinketCategories.ContainsKey("Elemental_Evil"))
+            if (trinketsElementalEvil != null && trinketsElementalEvil.TrinketCategories != null)
             {
                 Console.WriteLine("Elemental Evil Trinkets:");
-                foreach (var trinket in trinketsElementalEvil.TrinketCategories["Elemental_Evil"])
+                foreach (var trinket in trinketsElementalEvil.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Icewind Dale: Rime of the Frostmaiden
-            if (trinketsIcewind != null && trinketsIcewind.TrinketCategories.ContainsKey("Icewind_Dale_Rime_of_the_Frostmaiden"))
+            if (trinketsIcewind != null && trinketsIcewind.TrinketCategories != null)
             {
                 Console.WriteLine("Icewind Dale: Rime of the Frostmaiden Trinkets:");
-                foreach (var trinket in trinketsIcewind.TrinketCategories["Icewind_Dale_Rime_of_the_Frostmaiden"])
+                foreach (var trinket in trinketsIcewind.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Lost Laboratory of Kwalish
-            if (trinketsLostLab != null && trinketsLostLab.TrinketCategories.ContainsKey("Lost_Laboratory_of_Kwalish"))
+            if (trinketsLostLab != null && trinketsLostLab.TrinketCategories != null)
             {
                 Console.WriteLine("Lost Laboratory of Kwalish Trinkets:");
-                foreach (var trinket in trinketsLostLab.TrinketCategories["Lost_Laboratory_of_Kwalish"])
+                foreach (var trinket in trinketsLostLab.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Mordenkainen's Tome of Foes
-            if (trinketsMordenkainen != null && trinketsMordenkainen.TrinketCategories.ContainsKey("Mordenkainen's_Tome_of_Foes"))
+            if (trinketsMordenkainen != null && trinketsMordenkainen.TrinketCategories != null)
             {
                 Console.WriteLine("Mordenkainen's Tome of Foes Trinkets:");
-                foreach (var trinket in trinketsMordenkainen.TrinketCategories["Mordenkainen's_Tome_of_Foes"])
+                foreach (var trinket in trinketsMordenkainen.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Player's Handbook
-            if (trinketsPlayersHandbook != null && trinketsPlayersHandbook.TrinketCategories.ContainsKey("Players_Handbook"))
+            if (trinketsPlayersHandbook != null && trinketsPlayersHandbook.TrinketCategories != null)
             {
                 Console.WriteLine("Player's Handbook Trinkets:");
-                foreach (var trinket in trinketsPlayersHandbook.TrinketCategories["Players_Handbook"])
+                foreach (var trinket in trinketsPlayersHandbook.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for The Wild Beyond the Witchlight
-            if (trinketsWildBeyond != null && trinketsWildBeyond.TrinketCategories.ContainsKey("The_Wild_Beyond_The_Witchlight"))
+            if (trinketsWildBeyond != null && trinketsWildBeyond.TrinketCategories != null)
             {
                 Console.WriteLine("The Wild Beyond the Witchlight Trinkets:");
-                foreach (var trinket in trinketsWildBeyond.TrinketCategories["The_Wild_Beyond_The_Witchlight"])
+                foreach (var trinket in trinketsWildBeyond.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
             // Display the trinket data for Van Richten's Guide to Ravenloft
-            if (trinketsVanRitchen != null && trinketsVanRitchen.TrinketCategories.ContainsKey("Van_Richtens_Guide_to_Ravenloft"))
+            if (trinketsVanRitchen != null && trinketsVanRitchen.TrinketCategories != null)
             {
                 Console.WriteLine("Van Richten's Guide to Ravenloft Trinkets:");
-                foreach (var trinket in trinketsVanRitchen.TrinketCategories["Van_Richtens_Guide_to_Ravenloft"])
+                foreach (var trinket in trinketsVanRitchen.TrinketCategories)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.TrinketDescription}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
         }
