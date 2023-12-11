@@ -9,9 +9,7 @@
             "Components": "V, S",
             "Duration": "1 round",
             "Description": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
-            "Spell Lists": [ "
-                                 
-                                 ", "Sorcerer", "Warlock", "Wizard" ]
+            "Spell Lists": [ "Bard", "Sorcerer", "Warlock", "Wizard" ]
         },
         {
             "Name": "Dancing Lights",

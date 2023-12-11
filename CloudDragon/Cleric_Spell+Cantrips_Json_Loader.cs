@@ -62,35 +62,54 @@ namespace CloudDragon
     public class ClericCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public Dictionary<string, List<ClericCantrips>> CantripCategories { get; set; }
+        public List<ClericCantrips> CantripCategories { get; set; }
     }
 
     public class ClericSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public Dictionary<string, List<ClericSpells>> SpellCategories { get; set; }
+        public List<ClericSpells> SpellCategories { get; set; }
     }
 
     internal class Cleric_Cantrips_Json_Loader
     {
+        // BardCantripData
         public static ClericCantripData LoadclericCantripData(string jsonFilePath)
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var clericCantripCategory = JsonSerializer.Deserialize<ClericCantripcategory>(jsonData);
-                return new ClericCantripData
+                if (jsonFilePath == null)
                 {
-                    CantripCategories = new Dictionary<string, List<ClericCantrips>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), clericCantripCategory.Cantrips }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new ClericCantripData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new ClericCantripData();
+                }
+
+                var clericCantripData = JsonSerializer.Deserialize<ClericCantripData>(jsonData);
+
+                if (clericCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new ClericCantripData();
+                }
+
+                return clericCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -101,20 +120,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var clericSpellCategory = JsonSerializer.Deserialize<ClericSpellcategory>(jsonData);
-                return new ClericSpellData
+                if (jsonFilePath == null)
                 {
-                    SpellCategories = new Dictionary<string, List<ClericSpells>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), clericSpellCategory.Spells }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new ClericSpellData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new ClericSpellData();
+                }
+
+                var clericSpellData = JsonSerializer.Deserialize<ClericSpellData>(jsonData);
+
+                if (clericSpellData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new ClericSpellData();
+                }
+
+                return clericSpellData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -134,7 +171,7 @@ namespace CloudDragon
             if (cantripsCleric != null)
             {
                 Console.WriteLine("Cleric Cantrips:");
-                foreach (var clericCans in cantripsCleric.CantripCategories["Cleric Cantrips"])
+                foreach (var clericCans in cantripsCleric.CantripCategories)
                 {
                     Console.WriteLine($"- Name: {clericCans.Name}, Source: {clericCans.Source}, School: {clericCans.School}, Cast_Time: {clericCans.Cast_Time}, Components: {clericCans.Components}, Duration: {clericCans.Duration}, Description: {clericCans.Description}, Spell_Lists: {clericCans.Spell_Lists} ");
                 }
@@ -144,45 +181,110 @@ namespace CloudDragon
 
     internal class ClericSpellLoader : ILoader
     {
-        private static void DisplayClericSpells(string spellLevel, Dictionary<string, List<ClericSpells>> spellCategories)
-        {
-            Console.WriteLine($"Level {spellLevel} Cleric Spells:");
-            foreach (var clericSpell in spellCategories[$"Level {spellLevel} Cleric Spells"])
-            {
-                Console.WriteLine($"- Name: {clericSpell.Name}, School: {clericSpell.School}, Description: {clericSpell.Description} ");
-            }
-        }
-
         void ILoader.Load()
         {
-            Console.WriteLine("Loading Cleric Spell Data");
-            // Define paths to the cleric spell Json files
-            string[] jsonFilePaths = new string[]
-            {
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_1_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_2_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_3_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_4_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_5_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_6_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_7_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_8_Spells.json",
-            "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_9_Spells.json"
-            };
+            Console.WriteLine("Loading Trinket Data ...");
 
-            Dictionary<string, List<ClericSpells>>[] clericSpellData = new Dictionary<string, List<ClericSpells>>[jsonFilePaths.Length];
+            // Define the paths to the JSON files
+            string jsonFilePathClericSpellsLevel1 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_1_Spells.json";
+            string jsonFilePathClericSpellsLevel2 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_2_Spells.json";
+            string jsonFilePathClericSpellsLevel3 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_3_Spells.json";
+            string jsonFilePathClericSpellsLevel4 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_4_Spells.json";
+            string jsonFilePathClericSpellsLevel5 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_5_Spells.json";
+            string jsonFilePathClericSpellsLevel6 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_6_Spells.json";
+            string jsonFilePathClericSpellsLevel7 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_7_Spells.json";
+            string jsonFilePathClericSpellsLevel8 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_8_Spells.json";
+            string jsonFilePathClericSpellsLevel9 = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Level_9_Spells.json";
 
-            for (int i = 0; i < jsonFilePaths.Length; i++)
+            // Load the cleric spell data using the Bard spell JsonLoader
+            var clericLevel1Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel1);
+            var clericLevel2Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel2);
+            var clericLevel3Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel3);
+            var clericLevel4Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel4);
+            var clericLevel5Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel5);
+            var clericLevel6Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel6);
+            var clericLevel7Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel7);
+            var clericLevel8Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel8);
+            var clericLevel9Spells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpellsLevel9);
+
+            if (clericLevel1Spells != null && clericLevel1Spells.SpellCategories != null)
             {
-                clericSpellData[i] = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePaths[i])?.SpellCategories;
+                Console.WriteLine("Level 1 Cleric Spells:");
+                foreach (var spell in clericLevel1Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
             }
 
-            // Display cleric spell data for each level
-            for (int i = 0; i < clericSpellData.Length; i++)
+            if (clericLevel2Spells != null && clericLevel2Spells.SpellCategories != null)
             {
-                if (clericSpellData[i] != null)
+                Console.WriteLine("Level 2 Cleric Spells:");
+                foreach (var spell in clericLevel2Spells.SpellCategories)
                 {
-                    DisplayClericSpells((i + 1).ToString(), clericSpellData[i]);
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel3Spells != null && clericLevel3Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 3 Cleric Spells:");
+                foreach (var spell in clericLevel3Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel4Spells != null && clericLevel4Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 4 Cleric Spells:");
+                foreach (var spell in clericLevel4Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel5Spells != null && clericLevel5Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 5 Cleric Spells:");
+                foreach (var spell in clericLevel5Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel6Spells != null && clericLevel6Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 6 Cleric Spells:");
+                foreach (var spell in clericLevel6Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel7Spells != null && clericLevel7Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 7 Cleric Spells:");
+                foreach (var spell in clericLevel7Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel8Spells != null && clericLevel8Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 8 Cleric Spells:");
+                foreach (var spell in clericLevel8Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                }
+            }
+
+            if (clericLevel9Spells != null && clericLevel9Spells.SpellCategories != null)
+            {
+                Console.WriteLine("Level 9 Cleric Spells:");
+                foreach (var spell in clericLevel9Spells.SpellCategories)
+                {
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
         }
