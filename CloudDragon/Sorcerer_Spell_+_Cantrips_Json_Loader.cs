@@ -63,13 +63,13 @@ namespace CloudDragon
     public class SorcererCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public Dictionary<string, List<SorcererCantrips>> CantripCategories { get; set; }
+        public List<SorcererCantrips> CantripCategories { get; set; }
     }
 
     public class SorcererSpellData
 {
         [JsonPropertyName("Spell Categories")]
-        public Dictionary<string, List<SorcererSpells>> SpellCategories { get; set; }
+        public List<SorcererSpells> SpellCategories { get; set; }
     }
 
     internal class Sorcerer_Cantrips_Json_Loader
@@ -78,20 +78,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var sorcererCantripCategory = JsonSerializer.Deserialize<SorcererCantripcategory>(jsonData);
-                return new SorcererCantripData
+                if (jsonFilePath == null)
                 {
-                    CantripCategories = new Dictionary<string, List<SorcererCantrips>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), sorcererCantripCategory.Cantrips }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new SorcererCantripData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new SorcererCantripData();
+                }
+
+                var sorcererCantripData = JsonSerializer.Deserialize<SorcererCantripData>(jsonData);
+
+                if (sorcererCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new SorcererCantripData();
+                }
+
+                return sorcererCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -102,20 +120,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var sorcererSpellCategory = JsonSerializer.Deserialize<SorcererSpellcategory>(jsonData);
-                return new SorcererSpellData
+                if (jsonFilePath == null)
                 {
-                    SpellCategories = new Dictionary<string, List<SorcererSpells>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), sorcererSpellCategory.Spells }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new SorcererSpellData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new SorcererSpellData();
+                }
+
+                var sorcererCantripData = JsonSerializer.Deserialize<SorcererSpellData>(jsonData);
+
+                if (sorcererCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new SorcererSpellData();
+                }
+
+                return sorcererCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -135,7 +171,7 @@ namespace CloudDragon
             if (cantripsSorcerer != null)
             {
                 Console.WriteLine("Sorcerer Cantrips:");
-                foreach (var sorcererCans in cantripsSorcerer.CantripCategories["Sorcerer Cantrips"])
+                foreach (var sorcererCans in cantripsSorcerer.CantripCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererCans.Name}, Source: {sorcererCans.Source}, School: {sorcererCans.School}, Cast_Time: {sorcererCans.Cast_Time}, Components: {sorcererCans.Components}, Duration: {sorcererCans.Duration}, Description: {sorcererCans.Description}, Spell_Lists: {sorcererCans.Spell_Lists} ");
                 }
@@ -171,90 +207,90 @@ namespace CloudDragon
 
 
             // Display the data for Level 1 spells
-            if (level1sorcererspells != null)
+            if (level1sorcererspells != null && level1sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Sorcerer Spells:");
-                foreach (var sorcererSpell1 in level1sorcererspells.SpellCategories["Level 1 Sorcerer Spells"])
+                foreach (var sorcererSpell1 in level1sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell1.Name}, School: {sorcererSpell1.School}, Description: {sorcererSpell1.Description} ");
                 }
             }
 
             // Display the data for Level 2 spells
-            if (level2sorcererspells != null)
+            if (level2sorcererspells != null && level2sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Sorcerer Spells:");
-                foreach (var sorcererSpell2 in level2sorcererspells.SpellCategories["Level 2 Sorcerer Spells"])
+                foreach (var sorcererSpell2 in level2sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell2.Name}, School: {sorcererSpell2.School}, Description: {sorcererSpell2.Description} ");
                 }
             }
 
             // Display the data for Level 3 spells
-            if (level3sorcererspells != null)
+            if (level3sorcererspells != null && level3sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Sorcerer Spells:");
-                foreach (var sorcererSpell3 in level3sorcererspells.SpellCategories["Level 3 Sorcerer Spells"])
+                foreach (var sorcererSpell3 in level3sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell3.Name}, School: {sorcererSpell3.School}, Description: {sorcererSpell3.Description} ");
                 }
             }
 
             // Display the data for Level 4 spells
-            if (jsonFilePathSorcererLevel4 != null)
+            if (level4sorcererspells != null && level4sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Sorcerer Spells:");
-                foreach (var sorcererSpell4 in level4sorcererspells.SpellCategories["Level 4 Sorcerer Spells"])
+                foreach (var sorcererSpell4 in level4sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell4.Name}, School: {sorcererSpell4.School}, Description: {sorcererSpell4.Description} ");
                 }
             }
 
             // Display the data for Level 5 spells
-            if (level5sorcererspells != null)
+            if (level5sorcererspells != null && level5sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Sorcerer Spells:");
-                foreach (var sorcererSpell5 in level5sorcererspells.SpellCategories["Level 5 Sorcerer Spells"])
+                foreach (var sorcererSpell5 in level5sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell5.Name}, School: {sorcererSpell5.School} , Description:  {sorcererSpell5.Description} ");
                 }
             }
 
             // Display the data for Level 6 spells
-            if (level6sorcererspells != null)
+            if (level6sorcererspells != null && level6sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 6 Sorcerer Spells:");
-                foreach (var sorcererSpell6 in level6sorcererspells.SpellCategories["Level 6 Sorcerer Spells"])
+                foreach (var sorcererSpell6 in level6sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell6.Name}, School: {sorcererSpell6.School}, Description: {sorcererSpell6.Description} ");
                 }
             }
 
             // Display the data for Level 7 spells
-            if (level7sorcererspells != null)
+            if (level7sorcererspells != null && level7sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 7 Sorcerer Spells:");
-                foreach (var sorcererSpell7 in level7sorcererspells.SpellCategories["Level 7 Sorcerer Spells"])
+                foreach (var sorcererSpell7 in level7sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell7.Name}, School: {sorcererSpell7.School}, Description: {sorcererSpell7.Description} ");
                 }
             }
 
             // Display the data for Level 8 spells
-            if (level8sorcererspells != null)
+            if (level8sorcererspells != null && level8sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 8 Sorcerer Spells:");
-                foreach (var sorcererSpell8 in level8sorcererspells.SpellCategories["Level 8 Sorcerer Spells"])
+                foreach (var sorcererSpell8 in level8sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell8.Name}, School: {sorcererSpell8.School}, Description: {sorcererSpell8.Description} ");
                 }
             }
 
             // Display the data for Level 9 spells
-            if (level9sorcererspells != null)
+            if (level9sorcererspells != null && level9sorcererspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 9 Sorcerer Spells:");
-                foreach (var sorcererSpell9 in level9sorcererspells.SpellCategories["Level 9 Sorcerer Spells"])
+                foreach (var sorcererSpell9 in level9sorcererspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {sorcererSpell9.Name}, School: {sorcererSpell9.School}, Description: {sorcererSpell9.Description} ");
                 }

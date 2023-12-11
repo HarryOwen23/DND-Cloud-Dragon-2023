@@ -62,13 +62,13 @@ namespace CloudDragon
     public class RangerCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public Dictionary<string, List<RangerCantrips>> CantripCategories { get; set; }
+        public List<RangerCantrips> CantripCategories { get; set; }
     }
 
     public class RangerSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public Dictionary<string, List<RangerSpells>> SpellCategories { get; set; }
+        public List<RangerSpells> SpellCategories { get; set; }
     }
 
     internal class Ranger_Cantrips_Json_Loader
@@ -77,20 +77,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var rangerCantripCategory = JsonSerializer.Deserialize<RangerCantripcategory>(jsonData);
-                return new RangerCantripData
+                if (jsonFilePath == null)
                 {
-                    CantripCategories = new Dictionary<string, List<RangerCantrips>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), rangerCantripCategory.Cantrips }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new RangerCantripData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new RangerCantripData();
+                }
+
+                var rangerCantripData = JsonSerializer.Deserialize<RangerCantripData>(jsonData);
+
+                if (rangerCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new RangerCantripData();
+                }
+
+                return rangerCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -101,20 +119,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var rangerSpellCategory = JsonSerializer.Deserialize<RangerSpellcategory>(jsonData);
-                return new RangerSpellData
+                if (jsonFilePath == null)
                 {
-                    SpellCategories = new Dictionary<string, List<RangerSpells>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), rangerSpellCategory.Spells }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new RangerSpellData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new RangerSpellData();
+                }
+
+                var rangerSpellData = JsonSerializer.Deserialize<RangerSpellData>(jsonData);
+
+                if (rangerSpellData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new RangerSpellData();
+                }
+
+                return rangerSpellData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -134,9 +170,9 @@ namespace CloudDragon
             if (cantripsRanger != null)
             {
                 Console.WriteLine("Ranger Cantrips:");
-                foreach (var palaCans in cantripsRanger.CantripCategories["Ranger Cantrips"])
+                foreach (var rangerCans in cantripsRanger.CantripCategories)
                 {
-                    Console.WriteLine($"- Name: {palaCans.Name}, Source: {palaCans.Source}, School: {palaCans.School}, Cast_Time: {palaCans.Cast_Time}, Components: {palaCans.Components}, Duration: {palaCans.Duration}, Description: {palaCans.Description}, Spell_Lists: {palaCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {rangerCans.Name}, Source: {rangerCans.Source}, School: {rangerCans.School}, Cast_Time: {rangerCans.Cast_Time}, Components: {rangerCans.Components}, Duration: {rangerCans.Duration}, Description: {rangerCans.Description}, Spell_Lists: {rangerCans.Spell_Lists} ");
                 }
             }
         }
@@ -167,7 +203,7 @@ namespace CloudDragon
             if (level1rangerspells != null)
             {
                 Console.WriteLine("Level 1 Ranger Spells:");
-                foreach (var rangerSpell1 in level1rangerspells.SpellCategories["Level 1 Ranger Spells"])
+                foreach (var rangerSpell1 in level1rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell1.Name}, School: {rangerSpell1.School}, Description: {rangerSpell1.Description} ");
                 }
@@ -177,7 +213,7 @@ namespace CloudDragon
             if (level2rangerspells != null)
             {
                 Console.WriteLine("Level 2 Ranger Spells:");
-                foreach (var rangerSpell2 in level2rangerspells.SpellCategories["Level 2 Ranger Spells"])
+                foreach (var rangerSpell2 in level2rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell2.Name}, School: {rangerSpell2.School}, Description: {rangerSpell2.Description} ");
                 }
@@ -187,7 +223,7 @@ namespace CloudDragon
             if (level3rangerspells != null)
             {
                 Console.WriteLine("Level 3 Ranger Spells:");
-                foreach (var rangerSpell3 in level3rangerspells.SpellCategories["Level 3 Ranger Spells"])
+                foreach (var rangerSpell3 in level3rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell3.Name}, School: {rangerSpell3.School}, Description: {rangerSpell3.Description} ");
                 }
@@ -197,7 +233,7 @@ namespace CloudDragon
             if (level4rangerspells != null)
             {
                 Console.WriteLine("Level 4 Ranger Spells:");
-                foreach (var rangerSpell4 in level4rangerspells.SpellCategories["Level 4 Ranger Spells"])
+                foreach (var rangerSpell4 in level4rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell4.Name}, School: {rangerSpell4.School}, Description: {rangerSpell4.Description} ");
                 }
@@ -207,7 +243,7 @@ namespace CloudDragon
             if (level5rangerspells != null)
             {
                 Console.WriteLine("Level 5 Ranger Spells:");
-                foreach (var rangerSpell5 in level5rangerspells.SpellCategories["Level 5 Ranger Spells"])
+                foreach (var rangerSpell5 in level5rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell5.Name}, School: {rangerSpell5.School} , Description:  {rangerSpell5.Description} ");
                 }

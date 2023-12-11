@@ -62,59 +62,96 @@ namespace CloudDragon
     public class DruidCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public Dictionary<string, List<DruidicCantrips>> CantripCategories { get; set; }
+        public  List<DruidicCantrips> CantripCategories { get; set; }
     }
 
     public class DruidSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public Dictionary<string, List<DruidicSpells>> SpellCategories { get; set; }
+        public List<DruidicSpells> SpellCategories { get; set; }
     }
 
     internal class Druid_Cantrips_Json_Loader
     {
+        // DruidCantripData
         public static DruidCantripData LoaddruidCantripData(string jsonFilePath)
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var druidCantripCategory = JsonSerializer.Deserialize<DruidCantripcategory>(jsonData);
-                return new DruidCantripData
+                if (jsonFilePath == null)
                 {
-                    CantripCategories = new Dictionary<string, List<DruidicCantrips>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), druidCantripCategory.Cantrips }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new DruidCantripData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new DruidCantripData();
+                }
+
+                var druidCantripData = JsonSerializer.Deserialize<DruidCantripData>(jsonData);
+
+                if (druidCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new DruidCantripData();
+                }
+
+                return druidCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
 
     internal class Druid_Spells_Json_Loader
     {
-        public static DruidSpellData LoadbardSpellData(string jsonFilePath)
+        public static DruidSpellData LoaddruidSpellData(string jsonFilePath)
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var druidSpellCategory = JsonSerializer.Deserialize<DruidSpellcategory>(jsonData);
-                return new DruidSpellData
+                if (jsonFilePath == null)
                 {
-                    SpellCategories = new Dictionary<string, List<DruidicSpells>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), druidSpellCategory.Spells }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new DruidSpellData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new DruidSpellData();
+                }
+
+                var druidSpellData = JsonSerializer.Deserialize<DruidSpellData>(jsonData);
+
+                if (druidSpellData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new DruidSpellData();
+                }
+
+                return druidSpellData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -134,7 +171,7 @@ namespace CloudDragon
             if (cantripsDruid != null)
             {
                 Console.WriteLine("Druid Cantrips:");
-                foreach (var druidCans in cantripsDruid.CantripCategories["Druid Cantrips"])
+                foreach (var druidCans in cantripsDruid.CantripCategories)
                 {
                     Console.WriteLine($"- Name: {druidCans.Name}, Source: {druidCans.Source}, School: {druidCans.School}, Cast_Time: {druidCans.Cast_Time}, Components: {druidCans.Components}, Duration: {druidCans.Duration}, Description: {druidCans.Description}, Spell_Lists: {druidCans.Spell_Lists} ");
                 }
@@ -158,104 +195,95 @@ namespace CloudDragon
             string jsonFilePathDruidLevel8 = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Level_8_Spells.json";
             string jsonFilePathDruidLevel9 = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Level_9_Spells.json";
 
-            var level1druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel1);
-            var level2druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel2);
-            var level3druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel3);
-            var level4druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel4);
-            var level5druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel5);
-            var level6druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel6);
-            var level7druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel7);
-            var level8druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel8);
-            var level9druidspells = Druid_Spells_Json_Loader.LoadbardSpellData(jsonFilePathDruidLevel9);
+            var druidLevel1Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel1);
+            var druidLevel2Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel2);
+            var druidLevel3Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel3);
+            var druidLevel4Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel4);
+            var druidLevel5Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel5);
+            var druidLevel6Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel6);
+            var druidLevel7Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel7);
+            var druidLevel8Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel8);
+            var druidLevel9Spells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidLevel9);
 
 
-            // Display the data for Level 1 spells
-            if (level1druidspells != null)
+            if (druidLevel1Spells != null && druidLevel1Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Druid Spells:");
-                foreach (var druidSpell1 in level1druidspells.SpellCategories["Level 1 Druid Spells"])
+                foreach (var spell in druidLevel1Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell1.Name}, School: {druidSpell1.School}, Description: {druidSpell1.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 2 spells
-            if (level2druidspells != null)
+            if (druidLevel2Spells != null && druidLevel2Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Druid Spells:");
-                foreach (var druidSpell2 in level2druidspells.SpellCategories["Level 2 Druid Spells"])
+                foreach (var spell in druidLevel2Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell2.Name}, School: {druidSpell2.School}, Description: {druidSpell2.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 3 spells
-            if (level3druidspells != null)
+            if (druidLevel3Spells != null && druidLevel3Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Druid Spells:");
-                foreach (var druidSpell3 in level3druidspells.SpellCategories["Level 3 Druid Spells"])
+                foreach (var spell in druidLevel3Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell3.Name}, School: {druidSpell3.School}, Description: {druidSpell3.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 4 spells
-            if (level4druidspells != null)
+            if (druidLevel4Spells != null && druidLevel4Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Druid Spells:");
-                foreach (var druidSpell4 in level4druidspells.SpellCategories["Level 4 Druid Spells"])
+                foreach (var spell in druidLevel4Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell4.Name}, School: {druidSpell4.School}, Description: {druidSpell4.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 5 spells
-            if (level5druidspells != null)
+            if (druidLevel5Spells != null && druidLevel5Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Druid Spells:");
-                foreach (var druidSpell5 in level5druidspells.SpellCategories["Level 5 Druid Spells"])
+                foreach (var spell in druidLevel5Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell5.Name}, School: {druidSpell5.School}, Description: {druidSpell5.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 6 spells
-            if (level6druidspells != null)
+            if (druidLevel6Spells != null && druidLevel6Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 6 Druid Spells:");
-                foreach (var bardSpell6 in level6druidspells.SpellCategories["Level 6 Druid Spells"])
+                foreach (var spell in druidLevel6Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {bardSpell6.Name}, School: {bardSpell6.School}, Description: {bardSpell6.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 7 spells
-            if (level7druidspells != null)
+            if (druidLevel7Spells != null && druidLevel7Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 7 Druid Spells:");
-                foreach (var druidSpell7 in level7druidspells.SpellCategories["Level 7 Druid Spells"])
+                foreach (var spell in druidLevel7Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell7.Name}, School: {druidSpell7.School}, Description: {druidSpell7.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 8 spells
-            if (level8druidspells != null)
+            if (druidLevel8Spells != null && druidLevel8Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 8 Druid Spells:");
-                foreach (var druidSpell8 in level8druidspells.SpellCategories["Level 8 Druid Spells"])
+                foreach (var spell in druidLevel8Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell8.Name}, School: {druidSpell8.School}, Description: {druidSpell8.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
 
-            // Display the data for Level 9 spells
-            if (level9druidspells != null)
+            if (druidLevel9Spells != null && druidLevel9Spells.SpellCategories != null)
             {
                 Console.WriteLine("Level 9 Druid Spells:");
-                foreach (var druidSpell9 in level9druidspells.SpellCategories["Level 9 Druid Spells"])
+                foreach (var spell in druidLevel9Spells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {druidSpell9.Name}, School: {druidSpell9.School}, Description: {druidSpell9.Description} ");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
                 }
             }
         }

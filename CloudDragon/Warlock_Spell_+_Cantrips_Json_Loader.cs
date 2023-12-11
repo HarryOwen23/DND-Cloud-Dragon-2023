@@ -63,13 +63,13 @@ namespace CloudDragon
     public class WarlockCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public Dictionary<string, List<WarlockCantrips>> CantripCategories { get; set; }
+        public List<WarlockCantrips> CantripCategories { get; set; }
     }
 
     public class WarlockSpellData
 {
         [JsonPropertyName("Spell Categories")]
-        public Dictionary<string, List<WarlockSpells>> SpellCategories { get; set; }
+        public List<WarlockSpells> SpellCategories { get; set; }
     }
 
     internal class Warlock_Cantrips_Json_Loader
@@ -78,20 +78,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var warlockCantripCategory = JsonSerializer.Deserialize<WarlockCantripcategory>(jsonData);
-                return new WarlockCantripData
+                if (jsonFilePath == null)
                 {
-                    CantripCategories = new Dictionary<string, List<WarlockCantrips>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), warlockCantripCategory.Cantrips }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new WarlockCantripData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new WarlockCantripData();
+                }
+
+                var warlockCantripData = JsonSerializer.Deserialize<WarlockCantripData>(jsonData);
+
+                if (warlockCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new WarlockCantripData();
+                }
+
+                return warlockCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -102,20 +120,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var warlockSpellCategory = JsonSerializer.Deserialize<WarlockSpellcategory>(jsonData);
-                return new WarlockSpellData
+                if (jsonFilePath == null)
                 {
-                    SpellCategories = new Dictionary<string, List<WarlockSpells>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), warlockSpellCategory.Spells }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new WarlockSpellData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new WarlockSpellData();
+                }
+
+                var warlockCantripData = JsonSerializer.Deserialize<WarlockSpellData>(jsonData);
+
+                if (warlockCantripData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new WarlockSpellData();
+                }
+
+                return warlockCantripData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -135,7 +171,7 @@ namespace CloudDragon
             if (cantripsWarlock != null)
             {
                 Console.WriteLine("Warlock Cantrips:");
-                foreach (var warlockCans in cantripsWarlock.CantripCategories["Warlock Cantrips"])
+                foreach (var warlockCans in cantripsWarlock.CantripCategories)
                 {
                     Console.WriteLine($"- Name: {warlockCans.Name}, Source: {warlockCans.Source}, School: {warlockCans.School}, Cast_Time: {warlockCans.Cast_Time}, Components: {warlockCans.Components}, Duration: {warlockCans.Duration}, Description: {warlockCans.Description}, Spell_Lists: {warlockCans.Spell_Lists} ");
                 }
@@ -174,7 +210,7 @@ namespace CloudDragon
             if (level1warlockspells != null)
             {
                 Console.WriteLine("Level 1 Warlock Spells:");
-                foreach (var warlockSpell1 in level1warlockspells.SpellCategories["Level 1 Warlock Spells"])
+                foreach (var warlockSpell1 in level1warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell1.Name}, School: {warlockSpell1.School}, Description: {warlockSpell1.Description} ");
                 }
@@ -184,7 +220,7 @@ namespace CloudDragon
             if (level2warlockspells != null)
             {
                 Console.WriteLine("Level 2 Warlock Spells:");
-                foreach (var warlockSpell2 in level2warlockspells.SpellCategories["Level 2 Warlock Spells"])
+                foreach (var warlockSpell2 in level2warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell2.Name}, School: {warlockSpell2.School}, Description: {warlockSpell2.Description} ");
                 }
@@ -194,7 +230,7 @@ namespace CloudDragon
             if (level3warlockspells != null)
             {
                 Console.WriteLine("Level 3 Warlock Spells:");
-                foreach (var warlockSpell3 in level3warlockspells.SpellCategories["Level 3 Warlock Spells"])
+                foreach (var warlockSpell3 in level3warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell3.Name}, School: {warlockSpell3.School} , Description:  {warlockSpell3.Description} ");
                 }
@@ -204,7 +240,7 @@ namespace CloudDragon
             if (level4warlockspells != null)
             {
                 Console.WriteLine("Level 4 Warlock Spells:");
-                foreach (var warlockSpell4 in level4warlockspells.SpellCategories["Level 4 Warlock Spells"])
+                foreach (var warlockSpell4 in level4warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell4.Name}, School: {warlockSpell4.School}, Description: {warlockSpell4.Description} ");
                 }
@@ -214,7 +250,7 @@ namespace CloudDragon
             if (level5warlockspells != null)
             {
                 Console.WriteLine("Level 5 Warlock Spells:");
-                foreach (var warlockSpell5 in level5warlockspells.SpellCategories["Level 5 Warlock Spells"])
+                foreach (var warlockSpell5 in level5warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell5.Name}, School: {warlockSpell5.School} , Description:  {warlockSpell5.Description} ");
                 }
@@ -224,7 +260,7 @@ namespace CloudDragon
             if (level6warlockspells != null)
             {
                 Console.WriteLine("Level 6 Warlock Spells:");
-                foreach (var warlockSpell6 in level6warlockspells.SpellCategories["Level 6 Warlock Spells"])
+                foreach (var warlockSpell6 in level6warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell6.Name}, School: {warlockSpell6.School}  , Description:   {warlockSpell6.Description} ");
                 }
@@ -234,7 +270,7 @@ namespace CloudDragon
             if (level7warlockspells != null)
             {
                 Console.WriteLine("Level 7 Warlock Spells:");
-                foreach (var warlockSpell7 in level7warlockspells.SpellCategories["Level 7 Warlock Spells"])
+                foreach (var warlockSpell7 in level7warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell7.Name}, School: {warlockSpell7.School} , Description:  {warlockSpell7.Description} ");
                 }
@@ -244,7 +280,7 @@ namespace CloudDragon
             if (level8warlockspells != null)
             {
                 Console.WriteLine("Level 8 Warlock Spells:");
-                foreach (var warlockSpell8 in level8warlockspells.SpellCategories["Level 8 Warlock Spells"])
+                foreach (var warlockSpell8 in level8warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell8.Name}, School: {warlockSpell8.School}, Description: {warlockSpell8.Description} ");
                 }
@@ -254,7 +290,7 @@ namespace CloudDragon
             if (level9warlockspells != null)
             {
                 Console.WriteLine("Level 9 Warlock Spells:");
-                foreach (var warlockSpell9 in level9warlockspells.SpellCategories["Level 9 Warlock Spells"])
+                foreach (var warlockSpell9 in level9warlockspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {warlockSpell9.Name}, School: {warlockSpell9.School}, Description: {warlockSpell9.Description} ");
                 }
