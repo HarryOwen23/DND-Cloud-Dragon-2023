@@ -168,7 +168,7 @@ namespace CloudDragon
 
 
             // Display the data for Cleric Cantrips
-            if (cantripsCleric != null)
+            if (cantripsCleric != null && cantripsCleric.CantripCategories != null)
             {
                 Console.WriteLine("Cleric Cantrips:");
                 foreach (var clericCans in cantripsCleric.CantripCategories)

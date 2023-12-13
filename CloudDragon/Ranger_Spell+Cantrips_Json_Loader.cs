@@ -167,7 +167,7 @@ namespace CloudDragon
 
 
             // Display the Ranger data for Ranger Cantrips
-            if (cantripsRanger != null)
+            if (cantripsRanger != null && cantripsRanger.CantripCategories != null)
             {
                 Console.WriteLine("Ranger Cantrips:");
                 foreach (var rangerCans in cantripsRanger.CantripCategories)
@@ -200,7 +200,7 @@ namespace CloudDragon
 
 
             // Display the data for Level 1 spells
-            if (level1rangerspells != null)
+            if (level1rangerspells != null && level1rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Ranger Spells:");
                 foreach (var rangerSpell1 in level1rangerspells.SpellCategories)
@@ -210,7 +210,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 2 spells
-            if (level2rangerspells != null)
+            if (level2rangerspells != null && level1rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Ranger Spells:");
                 foreach (var rangerSpell2 in level2rangerspells.SpellCategories)
@@ -220,7 +220,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 3 spells
-            if (level3rangerspells != null)
+            if (level3rangerspells != null && level3rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Ranger Spells:");
                 foreach (var rangerSpell3 in level3rangerspells.SpellCategories)
@@ -230,7 +230,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 4 spells
-            if (level4rangerspells != null)
+            if (level4rangerspells != null && level4rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Ranger Spells:");
                 foreach (var rangerSpell4 in level4rangerspells.SpellCategories)
@@ -240,7 +240,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 5 spells
-            if (level5rangerspells != null)
+            if (level5rangerspells != null && level5rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Ranger Spells:");
                 foreach (var rangerSpell5 in level5rangerspells.SpellCategories)

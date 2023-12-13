@@ -15,7 +15,7 @@ namespace CloudDragon
     public class EquipmentCategory
     {
         [JsonPropertyName("Arcane Focus")]
-public List<EquipmentItem>? ArcaneFocus { get; set; }
+        public List<EquipmentItem> ArcaneFocus { get; set; }
 
         [JsonPropertyName("Pack Name")]
         public string PackName { get; set; }

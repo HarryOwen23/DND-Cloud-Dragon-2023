@@ -26,7 +26,7 @@ namespace CloudDragon
     public class PoisonData
     {
         [JsonPropertyName("Poison Categories")]
-        public Dictionary<string, List<Poison>> PoisonCategories { get; set; }
+        public List<Poison> PoisonCategories { get; set; }
     }
 
     internal class Poison_Json_Loader
@@ -35,20 +35,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var poiCategory = JsonSerializer.Deserialize<PoisonCat>(jsonData);
-                return new PoisonData
+                if (jsonFilePath == null)
                 {
-                    PoisonCategories = new Dictionary<string, List<Poison>>
-                    {
-                        {Path.GetFileNameWithoutExtension(jsonData), poiCategory.Poisons }
-                    }
-                };
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new PoisonData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new PoisonData();
+                }
+
+                var poisonData = JsonSerializer.Deserialize<PoisonData>(jsonData);
+
+                if (poisonData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new PoisonData();
+                }
+
+                return poisonData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw e;
+                throw;
             }
         }
     }
@@ -65,7 +83,7 @@ namespace CloudDragon
             if (poisonstuff != null)
             {
                 Console.WriteLine("Poisons:");
-                foreach (var poi in poisonstuff.PoisonCategories["Poisons"])
+                foreach (var poi in poisonstuff.PoisonCategories)
                 {
                     Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.DosePrice} ");
                 }

@@ -138,15 +138,15 @@ namespace CloudDragon
                     return new WarlockSpellData();
                 }
 
-                var warlockCantripData = JsonSerializer.Deserialize<WarlockSpellData>(jsonData);
+                var warlockSpellData = JsonSerializer.Deserialize<WarlockSpellData>(jsonData);
 
-                if (warlockCantripData == null)
+                if (warlockSpellData == null)
                 {
                     Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
                     return new WarlockSpellData();
                 }
 
-                return warlockCantripData;
+                return warlockSpellData;
             }
             catch (Exception e)
             {
@@ -168,7 +168,7 @@ namespace CloudDragon
 
 
             // Display the data for Warlock Cantrips
-            if (cantripsWarlock != null)
+            if (cantripsWarlock != null && cantripsWarlock.CantripCategories != null)
             {
                 Console.WriteLine("Warlock Cantrips:");
                 foreach (var warlockCans in cantripsWarlock.CantripCategories)
@@ -207,7 +207,7 @@ namespace CloudDragon
 
 
             // Display the data for Level 1 spells
-            if (level1warlockspells != null)
+            if (level1warlockspells != null && level1warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Warlock Spells:");
                 foreach (var warlockSpell1 in level1warlockspells.SpellCategories)
@@ -217,7 +217,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 2 spells
-            if (level2warlockspells != null)
+            if (level2warlockspells != null && level2warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Warlock Spells:");
                 foreach (var warlockSpell2 in level2warlockspells.SpellCategories)
@@ -227,7 +227,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 3 spells
-            if (level3warlockspells != null)
+            if (level3warlockspells != null && level3warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Warlock Spells:");
                 foreach (var warlockSpell3 in level3warlockspells.SpellCategories)
@@ -237,7 +237,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 4 spells
-            if (level4warlockspells != null)
+            if (level4warlockspells != null && level4warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Warlock Spells:");
                 foreach (var warlockSpell4 in level4warlockspells.SpellCategories)
@@ -247,7 +247,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 5 spells
-            if (level5warlockspells != null)
+            if (level5warlockspells != null && level5warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Warlock Spells:");
                 foreach (var warlockSpell5 in level5warlockspells.SpellCategories)
@@ -257,7 +257,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 6 spells
-            if (level6warlockspells != null)
+            if (level6warlockspells != null && level6warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 6 Warlock Spells:");
                 foreach (var warlockSpell6 in level6warlockspells.SpellCategories)
@@ -267,7 +267,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 7 spells
-            if (level7warlockspells != null)
+            if (level7warlockspells != null && level7warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 7 Warlock Spells:");
                 foreach (var warlockSpell7 in level7warlockspells.SpellCategories)
@@ -277,7 +277,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 8 spells
-            if (level8warlockspells != null)
+            if (level8warlockspells != null && level8warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 8 Warlock Spells:");
                 foreach (var warlockSpell8 in level8warlockspells.SpellCategories)
@@ -287,7 +287,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 9 spells
-            if (level9warlockspells != null)
+            if (level9warlockspells != null && level9warlockspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 9 Warlock Spells:");
                 foreach (var warlockSpell9 in level9warlockspells.SpellCategories)

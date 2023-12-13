@@ -168,7 +168,7 @@ namespace CloudDragon
 
 
             // Display the data for Sorcerer Cantrips
-            if (cantripsSorcerer != null)
+            if (cantripsSorcerer != null && cantripsSorcerer.CantripCategories != null)
             {
                 Console.WriteLine("Sorcerer Cantrips:");
                 foreach (var sorcererCans in cantripsSorcerer.CantripCategories)

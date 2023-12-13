@@ -2,7 +2,7 @@
     "Light Armor": [
         {
             "Name": "Padded",
-            "Armor Class (AC)": "11 + Dex modifier",
+            "Armor Class(AC)": "11 + Dex modifier",
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "8 lb.",

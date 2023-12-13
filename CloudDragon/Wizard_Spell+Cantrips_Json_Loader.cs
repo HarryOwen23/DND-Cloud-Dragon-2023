@@ -168,7 +168,7 @@ namespace CloudDragon
 
 
             // Display the data for Wizard Cantrips
-            if (cantripsWizard != null)
+            if (cantripsWizard != null && cantripsWizard.CantripCategories != null)
             {
                 Console.WriteLine("Wizard Cantrips:");
                 foreach (var wizardCans in cantripsWizard.CantripCategories)
@@ -207,7 +207,7 @@ namespace CloudDragon
 
 
             // Display the data for Level 1 spells
-            if (level1wizardspells != null)
+            if (level1wizardspells != null && level1wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Wizard Spells:");
                 foreach (var wizardSpell1 in level1wizardspells.SpellCategories)
@@ -217,7 +217,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 2 spells
-            if (level2wizardspells != null)
+            if (level2wizardspells != null && level2wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Wizard Spells:");
                 foreach (var wizardSpell2 in level2wizardspells.SpellCategories)
@@ -227,7 +227,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 3 spells
-            if (level3wizardspells != null)
+            if (level3wizardspells != null && level3wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Wizard Spells:");
                 foreach (var wizardSpell3 in level3wizardspells.SpellCategories)
@@ -237,7 +237,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 4 spells
-            if (level4wizardspells != null)
+            if (level4wizardspells != null && level4wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Wizard Spells:");
                 foreach (var wizardSpell4 in level4wizardspells.SpellCategories)
@@ -247,7 +247,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 5 spells
-            if (level5wizardspells != null)
+            if (level5wizardspells != null && level5wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Wizard Spells:");
                 foreach (var wizardSpell5 in level5wizardspells.SpellCategories)
@@ -257,7 +257,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 6 spells
-            if (level6wizardspells != null)
+            if (level6wizardspells != null && level6wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 6 Wizard Spells:");
                 foreach (var wizardSpell6 in level6wizardspells.SpellCategories)
@@ -267,7 +267,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 7 spells
-            if (level7wizardspells != null)
+            if (level7wizardspells != null && level7wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 7 Wizard Spells:");
                 foreach (var wizardSpell7 in level7wizardspells.SpellCategories)
@@ -277,7 +277,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 8 spells
-            if (level8wizardspells != null)
+            if (level8wizardspells != null && level8wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 8 Wizard Spells:");
                 foreach (var wizardSpell8 in level8wizardspells.SpellCategories)
@@ -287,7 +287,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 9 spells
-            if (level9wizardspells != null)
+            if (level9wizardspells != null && level9wizardspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 9 Wizard Spells:");
                 foreach (var wizardSpell9 in level9wizardspells.SpellCategories)

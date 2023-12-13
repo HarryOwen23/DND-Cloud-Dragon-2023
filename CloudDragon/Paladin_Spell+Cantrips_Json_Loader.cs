@@ -167,7 +167,7 @@ namespace CloudDragon
 
 
             // Display the data for Paladin Cantrips
-            if (cantripsPaladin != null)
+            if (cantripsPaladin != null && cantripsPaladin.CantripCategories != null)
             {
                 Console.WriteLine("Paladin Cantrips:");
                 foreach (var palaCans in cantripsPaladin.CantripCategories)
@@ -200,7 +200,7 @@ namespace CloudDragon
 
 
             // Display the data for Level 1 spells
-            if (level1paladinspells != null)
+            if (level1paladinspells != null && level1paladinspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 1 Paladin Spells:");
                 foreach (var paladinSpell1 in level1paladinspells.SpellCategories)
@@ -210,7 +210,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 2 spells
-            if (level2paladinspells != null)
+            if (level2paladinspells != null && level2paladinspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Paladin Spells:");
                 foreach (var paladinSpell2 in level2paladinspells.SpellCategories)
@@ -220,7 +220,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 3 spells
-            if (level3paladinspells != null)
+            if (level3paladinspells != null && level3paladinspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 3 Paladin Spells:");
                 foreach (var paladinSpell3 in level3paladinspells.SpellCategories)
@@ -230,7 +230,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 4 spells
-            if (level4paladinspells != null)
+            if (level4paladinspells != null && level4paladinspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 4 Paladin Spells:");
                 foreach (var paladinSpell4 in level4paladinspells.SpellCategories)
@@ -240,7 +240,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 5 spells
-            if (level5paladinspells != null)
+            if (level5paladinspells != null && level5paladinspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 5 Paladin Spells:");
                 foreach (var paladinSpell5 in level5paladinspells.SpellCategories)

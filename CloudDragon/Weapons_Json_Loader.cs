@@ -36,10 +36,10 @@ namespace CloudDragon
         public string? Damage { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string? Weight { get; set; }
+        public string Weight { get; set; }
 
         [JsonPropertyName("Properties")]
-        public string? Properties { get; set; }
+        public string Properties { get; set; }
     }
 
 
@@ -68,16 +68,16 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string? Cost { get; set; }
+        public string Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string? Damage { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string? Weight { get; set; }
+        public string Weight { get; set; }
 
         [JsonPropertyName("Properties")]
-        public string? Properties { get; set; }
+        public string Properties { get; set; }
     }
 
     public class Explosive
@@ -89,10 +89,10 @@ namespace CloudDragon
         public string? Weight { get; set; }
 
         [JsonPropertyName("Description")]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string? Cost { get; set; }
+        public string Cost { get; set; }
     }
 
     public class Firearms
@@ -101,16 +101,16 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string? Cost { get; set; }
+        public string Cost { get; set; }
 
         [JsonPropertyName("Damage")]
-        public string? Damage { get; set; }
+        public string Damage { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string? Weight { get; set; }
+        public string Weight { get; set; }
 
         [JsonPropertyName("Properties")]
-        public string? Properties { get; set; }
+        public string Properties { get; set; }
     }
 
     public class MartialMeleeCategory
@@ -152,69 +152,77 @@ namespace CloudDragon
     public class MartialMeleeData
     {
         [JsonPropertyName("Martial Melee Weapon Categories")]
-        public Dictionary<string, List<MartialMeleeWeapon>> MartialMeleeCategories { get; set; }
+        public List<MartialMeleeWeapon> MartialMeleeCategories { get; set; }
     }
 
     public class MartialRangeData
     {
         [JsonPropertyName("Martial Ranged Weapon Categories")]
-        public Dictionary<string, List<MartialRangedWeapon>> MartialRangedCategories { get; set; }
+        public List<MartialRangedWeapon> MartialRangedCategories { get; set; }
     }
 
     public class SimpleMeleeData
     {
         [JsonPropertyName("Simple Melee Weapon Categories")]
-        public Dictionary<string, List<SimpleMeleeWeapon>> SimpleMeleeCategories { get; set; }
+        public List<SimpleMeleeWeapon> SimpleMeleeCategories { get; set; }
     }
 
     public class SimpleRangedData
     {
         [JsonPropertyName("Simple Ranged Weapon Categories")]
-        public Dictionary<string, List<SimpleRangedWeapon>> SimpleRangedCategories { get; set; }
+        public List<SimpleRangedWeapon> SimpleRangedCategories { get; set; }
     }
 
     public class ExplosiveData
     {
         [JsonPropertyName("Explosive Categories")]
-        public Dictionary<string, List<Explosive>> ExplosiveCategories { get; set; }
+        public List<Explosive> ExplosiveCategories { get; set; }
     }
     public class FirearmsData
     {
         [JsonPropertyName("Firearms Categories")]
-        public Dictionary<string, List<Firearms>> FirearmsCategories { get; set; }
+        public  List<Firearms> FirearmsCategories { get; set; }
     }
 
     internal class Martial_Melee_Weapons_Json_Loader
     {
+        // martialMeleeCategory
         public static MartialMeleeData LoadMartialMeleeData(string jsonFilePath)
         {
             try
             {
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new MartialMeleeData();
+                }
+
                 string jsonData = File.ReadAllText(jsonFilePath);
-                var martialMeleeCategory = JsonSerializer.Deserialize<MartialMeleeCategory>(jsonData);
 
-                if (martialMeleeCategory != null)
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    return new MartialMeleeData
-                    {
-                        MartialMeleeCategories = new Dictionary<string, List<MartialMeleeWeapon>>
-                        {
-                            { Path.GetFileNameWithoutExtension(jsonFilePath), martialMeleeCategory.MartialMeleeWeapons ?? new List<MartialMeleeWeapon>() }
-                        }
-                    };
-                }
-                else
-                {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new MartialMeleeData(); // or handle it according to your application's logic
+                    return new MartialMeleeData();
                 }
 
+                var martialMeleelData = JsonSerializer.Deserialize<MartialMeleeData>(jsonData);
 
+                if (martialMeleelData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MartialMeleeData.");
+                    return new MartialMeleeData();
+                }
+
+                return martialMeleelData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -225,29 +233,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var martialRangeCategory = JsonSerializer.Deserialize<MartialRangedCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (martialRangeCategory != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new MartialRangeData
-                    {
-                        MartialRangedCategories = new Dictionary<string, List<MartialRangedWeapon>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), martialRangeCategory.MartialRangedWeapons ?? new List<MartialRangedWeapon>() }
-                    }
-                    };
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new MartialRangeData();
                 }
-                else
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new MartialRangeData(); // or handle it according to your application's logic
+                    return new MartialRangeData();
                 }
+
+                var martialRangedData = JsonSerializer.Deserialize<MartialRangeData>(jsonData);
+
+                if (martialRangedData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default MartialRangedData.");
+                    return new MartialRangeData();
+                }
+
+                return martialRangedData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -258,29 +275,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var simpleMeleeCategory = JsonSerializer.Deserialize<SimpleMeleeCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (simpleMeleeCategory != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new SimpleMeleeData
-                    {
-                        SimpleMeleeCategories = new Dictionary<string, List<SimpleMeleeWeapon>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleMeleeCategory.SimpleMeleeWeapons ?? new List<SimpleMeleeWeapon>() }
-                    }
-                    };
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new SimpleMeleeData();
                 }
-                else
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new SimpleMeleeData(); // or handle it according to your application's logic
+                    return new SimpleMeleeData();
                 }
+
+                var simpleMeleeData = JsonSerializer.Deserialize<SimpleMeleeData>(jsonData);
+
+                if (simpleMeleeData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default SimpleMeleeData.");
+                    return new SimpleMeleeData();
+                }
+
+                return simpleMeleeData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -291,29 +317,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var simpleRangedCategory = JsonSerializer.Deserialize<SimpleRangedCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (simpleRangedCategory != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new SimpleRangedData
-                    {
-                        SimpleRangedCategories = new Dictionary<string, List<SimpleRangedWeapon>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), simpleRangedCategory.SimpleRangedWeapons ?? new List<SimpleRangedWeapon>() }
-                    }
-                    };
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new SimpleRangedData();
                 }
-                else
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new SimpleRangedData(); // or handle it according to your application's logic
+                    return new SimpleRangedData();
                 }
+
+                var simpleRangedData = JsonSerializer.Deserialize<SimpleRangedData>(jsonData);
+
+                if (simpleRangedData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default SimpleRangedData.");
+                    return new SimpleRangedData();
+                }
+
+                return simpleRangedData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -325,29 +360,38 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var explosiveCategory = JsonSerializer.Deserialize<ExplosiveCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (explosiveCategory != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new ExplosiveData
-                    {
-                        ExplosiveCategories = new Dictionary<string, List<Explosive>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), explosiveCategory.Explosives ?? new List<Explosive>() }
-                    }
-                    };
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new ExplosiveData();
                 }
-                else
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new ExplosiveData(); // or handle it according to your application's logic
+                    return new ExplosiveData();
                 }
+
+                var explosiveData = JsonSerializer.Deserialize<ExplosiveData>(jsonData);
+
+                if (explosiveData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default ExplosiveData.");
+                    return new ExplosiveData();
+                }
+
+                return explosiveData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
@@ -358,53 +402,39 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var firearmsCategory = JsonSerializer.Deserialize<FirearmsCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (firearmsCategory != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new FirearmsData
-                    {
-                        FirearmsCategories = new Dictionary<string, List<Firearms>>
-                    {
-                        { Path.GetFileNameWithoutExtension(jsonFilePath), firearmsCategory.Firearm ?? new List<Firearms>() }
-                    }
-                    };
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new FirearmsData();
                 }
-                else
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine("Deserialization failed or the category is null.");
-                    return new FirearmsData(); // or handle it according to your application's logic
+                    return new FirearmsData();
                 }
+
+                var firearmsData = JsonSerializer.Deserialize<FirearmsData>(jsonData);
+
+                if (firearmsData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default FirearmsData.");
+                    return new FirearmsData();
+                }
+
+                return firearmsData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
-        }
-    }
-
-    internal class WeaponLoaderHelper
-    {
-        public static void DisplayWeaponData<T>(string category, List<T>? weapons)
-        {
-            Console.WriteLine($"{category}:");
-            if (weapons != null)
-            {
-                foreach (var weapon in weapons)
-                {
-                    Console.WriteLine("- " + GetWeaponString(weapon));
-                }
-            }
-        }
-
-        private static string GetWeaponString<T>(T weapon)
-        {
-            var properties = typeof(T).GetProperties();
-            var propertyValues = properties.Select(prop => $"{prop.Name}: {prop.GetValue(weapon)}");
-
-            return string.Join(", ", propertyValues);
         }
     }
 
@@ -419,9 +449,13 @@ namespace CloudDragon
             var martMelee = Martial_Melee_Weapons_Json_Loader.LoadMartialMeleeData(jsonFilePathMeleeMartial);
 
             // Display the data for Martial Melee Weapons
-            if (martMelee != null)
+            if (martMelee != null && martMelee.MartialMeleeCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Martial Melee Weapons", martMelee.MartialMeleeCategories["Martial Melee Weapons"]);
+                Console.WriteLine("Martial Melee Weapons:");
+                foreach (var martmeweapons in martMelee.MartialMeleeCategories)
+                {
+                    Console.WriteLine($"- Name: {martmeweapons.Name}, Cost: {martmeweapons.Cost}, Damage: {martmeweapons.Damage}, Weight: {martmeweapons.Weight}, Properties: {martmeweapons.Properties}");
+                }
             }
         }
     }
@@ -437,9 +471,13 @@ namespace CloudDragon
             var martRange = Martial_Ranged_Weapons_Json_Loader.LoadMartialRangedData(jsonFilePathRangedMartial);
 
             // Display the data for Martial Ranged Weapons 
-            if (martRange != null)
+            if (martRange != null && martRange.MartialRangedCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Martial Ranged Weapons", martRange.MartialRangedCategories["Martial Ranged Weapons"]);
+                Console.WriteLine("Martial Ranged Weapons::");
+                foreach (var martRaweapons in martRange.MartialRangedCategories)
+                {
+                    Console.WriteLine($"- Name: {martRaweapons.Name}, Cost: {martRaweapons.Cost}, Damage: {martRaweapons.Damage}, Weight: {martRaweapons.Weight}, Properties: {martRaweapons.Properties}");
+                }
             }
         }
     }
@@ -455,9 +493,13 @@ namespace CloudDragon
             var simpMelee = Simple_Melee_Weapons_Json_Loader.LoadSimpleMeleeData(jsonFilePathMeleSimplel);
 
             // Display the data for Simple Melee Weapons 
-            if (simpMelee != null)
+            if (simpMelee != null && simpMelee.SimpleMeleeCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Simple Melee Weapons", simpMelee.SimpleMeleeCategories["Simple Weapons"]);
+                Console.WriteLine("Simple Melee Weapons:");
+                foreach (var simpleMeweapons in simpMelee.SimpleMeleeCategories)
+                {
+                    Console.WriteLine($"- Name: {simpleMeweapons.Name}, Cost: {simpleMeweapons.Cost}, Damage: {simpleMeweapons.Damage}, Weight: {simpleMeweapons.Weight}, Properties: {simpleMeweapons.Properties}");
+                }
             }
         }
     }
@@ -473,9 +515,13 @@ namespace CloudDragon
             var simpRang = Simple_Ranged_Weapons_Json_Loader.LoadSimpleRangedData(jsonFilePathRangedSimple);
 
             // Display the data for Simple Melee Weapons 
-            if (simpRang != null)
+            if (simpRang != null && simpRang.SimpleRangedCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Simple Ranged Weapons", simpRang.SimpleRangedCategories["Simple Weapons"]);
+                Console.WriteLine("Simple Ranged Weapons:");
+                foreach (var simRaweapons in simpRang.SimpleRangedCategories)
+                {
+                    Console.WriteLine($"- Name: {simRaweapons.Name}, Cost: {simRaweapons.Cost}, Damage: {simRaweapons.Damage}, Weight: {simRaweapons.Weight}, Properties: {simRaweapons.Properties}");
+                }
             }
         }
     }
@@ -492,14 +538,22 @@ namespace CloudDragon
             var renexplosive = Explosive_Json_Loader.LoadExplosiveData(jsonFilePathExplosiveRenaissance);
             var modexplosive = Explosive_Json_Loader.LoadExplosiveData(jsonFilePathExplosiveModern);
 
-            if (renexplosive != null)
+            if (renexplosive != null && renexplosive.ExplosiveCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Renaissance Explosive", renexplosive.ExplosiveCategories["Explosives"]);
+                Console.WriteLine("Renaissance Explosives:");
+                foreach (var renExplode in renexplosive.ExplosiveCategories)
+                {
+                    Console.WriteLine($"- Name: {renExplode.Name}, Cost: {renExplode.Cost}, Weight: {renExplode.Weight}, Description: {renExplode.Description}");
+                }
             }
 
-            if (modexplosive != null)
+            if (modexplosive != null && modexplosive.ExplosiveCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Modern Explosive", modexplosive.ExplosiveCategories["Explosives"]);
+                Console.WriteLine("Modern Explosives:");
+                foreach (var modExplode in modexplosive.ExplosiveCategories)
+                {
+                    Console.WriteLine($"- Name: {modExplode.Name}, Cost: {modExplode.Cost}, Weight: {modExplode.Weight}, Description: {modExplode.Description}");
+                }
             }
         }
     }
@@ -518,19 +572,31 @@ namespace CloudDragon
             var modFirearms = Firearms_Json_Loader.LoadFirearmsData(jsonFilePathFirearmsModern);
             var futFirearms = Firearms_Json_Loader.LoadFirearmsData(jsonFilePathFirearmsFuture);
 
-            if (renFirearms != null)
+            if (renFirearms != null && renFirearms.FirearmsCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Fire Renaissance Weapons", renFirearms.FirearmsCategories["RenaissanceFirearms"]);
+                Console.WriteLine("Rennaissance Firearms:");
+                foreach (var renFire in renFirearms.FirearmsCategories)
+                {
+                    Console.WriteLine($"- Name: {renFire.Name}, Cost: {renFire.Cost}, Damage: {renFire.Damage}, Weight: {renFire.Weight}, Properties: {renFire.Properties}");
+                }
             }
 
-            if (modFirearms != null)
+            if (modFirearms != null && modFirearms.FirearmsCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Fire Modern Weapons", modFirearms.FirearmsCategories["ModernFirearms"]);
+                Console.WriteLine("Modern Firearms:");
+                foreach (var modFire in modFirearms.FirearmsCategories)
+                {
+                    Console.WriteLine($"- Name: {modFire.Name}, Cost: {modFire.Cost}, Damage: {modFire.Damage}, Weight: {modFire.Weight}, Properties: {modFire.Properties}");
+                }
             }
 
-            if (futFirearms != null)
+            if (futFirearms != null && futFirearms.FirearmsCategories != null)
             {
-                WeaponLoaderHelper.DisplayWeaponData("Fire Futuristic Weapons", futFirearms.FirearmsCategories["FuturisticFirearms"]);
+                Console.WriteLine("Futuristic Firearms:");
+                foreach (var futFire in futFirearms.FirearmsCategories)
+                {
+                    Console.WriteLine($"- Name: {futFire.Name}, Cost: {futFire.Cost}, Damage: {futFire.Damage}, Weight: {futFire.Weight}, Properties: {futFire.Properties}");
+                }
             }
         }
     }

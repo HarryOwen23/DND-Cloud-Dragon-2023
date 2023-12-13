@@ -168,7 +168,7 @@ namespace CloudDragon
 
 
             // Display the Armor data for Druid Cantrips
-            if (cantripsDruid != null)
+            if (cantripsDruid != null && cantripsDruid.CantripCategories != null)
             {
                 Console.WriteLine("Druid Cantrips:");
                 foreach (var druidCans in cantripsDruid.CantripCategories)

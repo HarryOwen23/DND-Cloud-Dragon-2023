@@ -26,15 +26,6 @@ namespace CloudDragon
         [JsonPropertyName("Cost")]
         public string Cost { get; set; }
 
-        public Armor()
-        {
-            Name = string.Empty;
-            ArmorClass = string.Empty;
-            Strength = string.Empty;
-            Stealth = string.Empty;
-            Weight = string.Empty;
-            Cost = string.Empty;
-        }
     }
 
 
@@ -52,12 +43,7 @@ namespace CloudDragon
     public class ArmorData
     {
         [JsonPropertyName("Armor Categories")]
-        public Dictionary<string, List<Armor>> ArmorCategories { get; set; }
-
-        public ArmorData()
-        {
-            ArmorCategories = new Dictionary<string, List<Armor>>();
-        }
+        public List<Armor> ArmorCategories { get; set; }
     }
 
 
@@ -68,24 +54,33 @@ namespace CloudDragon
         {
             try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
-                var armorCategory = JsonSerializer.Deserialize<ArmorCategory>(jsonData);
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
 
-                if (armorCategory?.Armors != null)
+                if (!File.Exists(jsonFilePath))
                 {
-                    return new ArmorData
-                    {
-                        ArmorCategories = new Dictionary<string, List<Armor>>
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new ArmorData();
+                }
+
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
                 {
-                    { Path.GetFileNameWithoutExtension(jsonFilePath), armorCategory.Armors }
+                    return new ArmorData();
                 }
-                    };
-                }
-                else
+
+                var armorData = JsonSerializer.Deserialize<ArmorData>(jsonData);
+
+                if (armorData == null)
                 {
-                    Console.WriteLine($"Error loading JSON file: Invalid or empty data in {jsonFilePath}.");
-                    return new ArmorData(); // Return an empty ArmorData instance
+                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    return new ArmorData();
                 }
+
+                return armorData;
             }
             catch (Exception e)
             {
@@ -97,23 +92,6 @@ namespace CloudDragon
 
        internal class ArmorLoader : ILoader
        {
-            private static void DisplayArmorData(string armorType, Dictionary<string, List<Armor>>? armorCategories)
-            {
-                Console.WriteLine($"{armorType} Armor:");
-
-                if (armorCategories != null && armorCategories.TryGetValue(armorType, out var armors))
-                {
-                    foreach (var armor in armors)
-                    {
-                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"No data found for {armorType} Armor.");
-                }
-            }
-
             public void Load()
             {
                 Console.WriteLine("Loading Armor Data ...");
@@ -126,16 +104,33 @@ namespace CloudDragon
                 var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
                 var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
 
+                // Display the data for Light Armor
+                if (armorLight != null && armorLight.ArmorCategories != null)
+                {
+                    Console.WriteLine("Light Armor:");
+                    foreach (var armor in armorLight.ArmorCategories)
+                    {
+                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                    }
+                }
 
-                // Display the Armor data for Heavy Armor
-                DisplayArmorData("Heavy Armor", armorHeavy?.ArmorCategories);
+                if (armorMedium != null && armorMedium.ArmorCategories != null)
+                {
+                    Console.WriteLine("Medium Armor:");
+                    foreach (var armor in armorMedium.ArmorCategories)
+                    {
+                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                    }
+                }
 
-                // Display the Armor data for Medium Armor
-                DisplayArmorData("Medium Armor", armorMedium?.ArmorCategories);
-
-                // Display the Armor data for Light Armor
-                DisplayArmorData("Light Armor", armorLight?.ArmorCategories);
-
+                if (armorHeavy != null && armorHeavy.ArmorCategories != null)
+                {
+                    Console.WriteLine("Heavy Armor:");
+                    foreach (var armor in armorHeavy.ArmorCategories)
+                    {
+                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
+                    }
+                }
             }
        }
 }
