@@ -74,13 +74,13 @@ namespace CloudDragon
     {
         void ILoader.Load()
         {
-            Console.WriteLine("Loading Magical Item Data ...");
+            Console.WriteLine("Loading Poison Data ...");
             string jsonFilePathpoison = "Poisons\\Poisons.json";
 
             var poisonstuff = Poison_Json_Loader.LoadPoisonData(jsonFilePathpoison);
 
             // Display the Poison data
-            if (poisonstuff.PoisonCategories != null) // Check if PoisonCategories is not null
+            if (poisonstuff.PoisonCategories != null && poisonstuff.PoisonCategories != null) 
             {
                 Console.WriteLine("Poisons:");
                 foreach (var poi in poisonstuff.PoisonCategories)
@@ -88,11 +88,6 @@ namespace CloudDragon
                     Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.DosePrice} ");
                 }
             }
-            else
-            {
-                Console.WriteLine("No poison data found.");
-            }
         }
     }
-
 }
