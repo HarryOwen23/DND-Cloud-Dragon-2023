@@ -79,14 +79,18 @@ namespace CloudDragon
 
             var poisonstuff = Poison_Json_Loader.LoadPoisonData(jsonFilePathpoison);
 
-            // Display the Armor data for common magical items
-            if (poisonstuff != null)
+            // Display the Poison data
+            if (poisonstuff.PoisonCategories != null) // Check if PoisonCategories is not null
             {
                 Console.WriteLine("Poisons:");
                 foreach (var poi in poisonstuff.PoisonCategories)
                 {
                     Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.DosePrice} ");
                 }
+            }
+            else
+            {
+                Console.WriteLine("No poison data found.");
             }
         }
     }

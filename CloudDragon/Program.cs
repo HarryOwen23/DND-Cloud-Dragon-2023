@@ -212,14 +212,11 @@ namespace CloudDragon
             ILoader PaladinSpellLoader = new PaladinSpellLoader();
             PaladinSpellLoader.Load();
 
-            ILoader RangerCantripLoader = new RangerCantripLoader();
-            RangerCantripLoader.Load();
-
             ILoader RangerSpellLoader = new RangerSpellLoader();
             RangerSpellLoader.Load();
 
             ILoader SorcererCantripLoader = new SorcererCantripLoader();
-            RangerCantripLoader.Load();
+            SorcererCantripLoader.Load();
 
             ILoader SorcererSpellLoader = new SorcererSpellLoader();
             SorcererSpellLoader.Load();

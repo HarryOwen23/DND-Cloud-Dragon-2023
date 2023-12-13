@@ -191,7 +191,7 @@ namespace CloudDragon
             string jsonFilePathWizardLevel4 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_4_Spells.json";
             string jsonFilePathWizardLevel5 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_5_Spells.json";
             string jsonFilePathWizardLevel6 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_6_Spells.json";
-            string jsonFilePathWizardLevel7 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Waizard_Level_7_Spells.json";
+            string jsonFilePathWizardLevel7 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_7_Spells.json";
             string jsonFilePathWizardLevel8 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_8_Spells.json";
             string jsonFilePathWizardLevel9 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Level_9_Spells.json";
 
