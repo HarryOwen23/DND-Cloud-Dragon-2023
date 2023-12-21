@@ -53,17 +53,42 @@ namespace CloudDragon
         {
             try
             {
+                if (jsonFilePath == null)
+                {
+                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+                }
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    Console.WriteLine($"File not found: {jsonFilePath}");
+                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+                }
+
                 string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+                }
+
                 var equipmentData = JsonSerializer.Deserialize<EquipmentCategory>(jsonData);
+
+                if (equipmentData == null)
+                {
+                    Console.WriteLine("Deserialization returned null. Returning default EquipmentCategory.");
+                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+                }
+
                 return equipmentData;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception object
+                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
+
 
     internal class EquipmentLoader : ILoader
     {
