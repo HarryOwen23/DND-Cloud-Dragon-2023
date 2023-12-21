@@ -187,14 +187,9 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Clothes.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Common_Items.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Containers.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Diplomat's_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Dragonlance.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Druidic_Focus.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Dungeoneer's_Pack.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Entertainer's_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Holy_Symbols.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Priest's_Pack.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Scholar's_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Usable_Items.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items._Common.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items_Artifact.json
@@ -335,3 +330,8 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Trinkets\Trinkets_Mordenkainens_Tome_of_Foes.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Trinkets\Trinkets_Players_Handbook.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Trinkets\Trinkets_Van_Ritchens_Guide_to_Ravenloft.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Diplomats_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Dungeoneers_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Entertainers_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Priests_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Scholars_Pack.json

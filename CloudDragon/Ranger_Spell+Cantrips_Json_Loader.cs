@@ -104,7 +104,7 @@ namespace CloudDragon
             }
 
             // Display the data for Level 2 spells
-            if (level2rangerspells != null && level1rangerspells.SpellCategories != null)
+            if (level2rangerspells != null && level2rangerspells.SpellCategories != null)
             {
                 Console.WriteLine("Level 2 Ranger Spells:");
                 foreach (var rangerSpell2 in level2rangerspells.SpellCategories)

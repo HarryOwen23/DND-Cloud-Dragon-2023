@@ -7,24 +7,22 @@ using CloudDragon;
 
 namespace CloudDragon
 {
-    public class Equipment
+    public class EquipmentData
     {
-        public List<EquipmentItem> EquipmentCategories { get; set; }
+        [JsonPropertyName("ArcaneFocus")]
+        public EquipmentCategory ArcaneFocus { get; set; }
+
+        [JsonPropertyName("PackName")]
+        public EquipmentCategory PackName { get; set; }
+
+        [JsonPropertyName("Contents")]
+        public EquipmentCategory Contents { get; set; }
     }
 
     public class EquipmentCategory
     {
-        [JsonPropertyName("Arcane Focus")]
-        public List<EquipmentItem> ArcaneFocus { get; set; }
-
-        [JsonPropertyName("Pack Name")]
-        public string PackName { get; set; }
-
-        [JsonPropertyName("Contents")]
-        public List<EquipmentItem> Contents { get; set; }
-
-        [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
+        [JsonPropertyName("Items")]
+        public List<EquipmentItem> Items { get; set; }
     }
 
     public class EquipmentItem
@@ -43,11 +41,15 @@ namespace CloudDragon
 
         [JsonPropertyName("Quantity")]
         public int Quantity { get; set; }
+
+        [JsonPropertyName("Weight")]
+        public string Weight { get; set; }
     }
+
 
     internal class EquipmentJsonLoader
     {
-        public static EquipmentCategory? LoadEquipmentData(string jsonFilePath)
+        public static EquipmentCategory LoadEquipmentData(string jsonFilePath)
         {
             try
             {
@@ -72,24 +74,24 @@ namespace CloudDragon
             // Define the paths to the JSON files 
             string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
             string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglars_Pack.json";
-            // string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
+            string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
             string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
             string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
-            string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomat\'s_Pack.json";
+            string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomats_Pack.json";
             string jsonFilePathDragonlance = "Equipment\\Equipment_Dragonlance.json";
             string jsonFilePathDruidicFocus = "Equipment\\Equipment_Druidic_Focus.json";
-            string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneer\'s_Pack.json";
-            string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainer\'s_Pack.json";
+            string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneers_Pack.json";
+            string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainers_Pack.json";
             string jsonFilePathExplorersPack = "Equipment\\Equipment_Explorers_Pack.json";
             string jsonFilePathHolySymbols = "Equipment\\Equipment_Holy_Symbols.json";
-            string jsonFilePathPreistsPack = "Equipment\\Equipment_Priest\'s_Pack.json";
-            string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholar\'s_Pack.json";
+            string jsonFilePathPreistsPack = "Equipment\\Equipment_Priests_Pack.json";
+            string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholars_Pack.json";
             string jsonFilePathUsableItems = "Equipment\\Equipment_Usable_Items.json";
 
             // Load the equipment data using the EquipmentJsonLoader
             var equipmentDataArcaneFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathArcaneFocus);
             var equipmentDataBurglarPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathBurglarPack);
-            // var equipmentDataClothes = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathClothes);
+            var equipmentDataClothes = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathClothes);
             var equipmentDataCommonItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathCommonItems);
             var equipmentDataContainers = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathContainers);
             var equipmentDataDiplomatsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDiplomatsPack);
@@ -103,189 +105,133 @@ namespace CloudDragon
             var equipmentDataScholarsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathScholarsPack);
             var equipmentDataUsableItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathUsableItems);
 
-
-            if (equipmentDataArcaneFocus != null)
+            if (equipmentDataArcaneFocus != null && equipmentDataArcaneFocus.Items != null)
             {
                 Console.WriteLine("Arcane Focus Equipment:");
-                foreach (var item in equipmentDataArcaneFocus.ArcaneFocus)
+                foreach (var magicitem in equipmentDataArcaneFocus.Items)
                 {
-                    Console.WriteLine($"- {item.Name}: {item.Cost}, {item.Description}");
+                    Console.WriteLine($"- {magicitem.Name}: {magicitem.Cost}, {magicitem.Description}");
                 }
             }
 
-            if (equipmentDataBurglarPack != null)
+            if (equipmentDataBurglarPack != null && equipmentDataBurglarPack.Items != null)
             {
                 Console.WriteLine("Burglar's Pack Equipment:");
-                var burglarPack = equipmentDataBurglarPack;
-                Console.WriteLine($"Pack Name: {burglarPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in burglarPack.Contents)
+                foreach (var buritem in equipmentDataBurglarPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {buritem.Quantity}x {buritem.Item}");
                 }
             }
 
-            //if (equipmentDataClothes != null)
-            //{
-            //    Console.WriteLine("Clothes:");
-            //    foreach (var item in equipmentDataClothes.EquipmentCategories[0].Clothes)
-            //    {
-            //        Console.WriteLine($"- {item.Name}: {item.Cost}, {item.Weight}");
-            //    }
-            //}
-
-            if (equipmentDataCommonItems != null)
+            if (equipmentDataCommonItems != null && equipmentDataCommonItems.Items != null)
             {
                 Console.WriteLine("Common Items Equipment:");
-                var commonItems = equipmentDataCommonItems;
-                Console.WriteLine($"Pack Name: {commonItems.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in commonItems.Contents)
+                foreach (var comitem in equipmentDataCommonItems.Items)
                 {
-                    Console.WriteLine($"- {item.Name}");
+                    Console.WriteLine($" Name: {comitem.Name}  Cost:{comitem.Cost} Description:{comitem.Description}");
                 }
             }
 
-            if (equipmentDataContainers != null)
+
+            if (equipmentDataContainers != null && equipmentDataContainers.Items != null)
             {
                 Console.WriteLine("Containers");
-                var containers = equipmentDataContainers;
-                Console.WriteLine($"Pack Name: {containers.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in containers.Contents)
+                foreach (var containers in equipmentDataContainers.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($" Name: {containers.Name}, Cost: {containers.Cost}, Weight{containers.Weight}, Description{containers.Description}");
                 }
             }
 
-            if (equipmentDataDiplomatsPack != null)
+            if (equipmentDataDiplomatsPack != null && equipmentDataDiplomatsPack.Items != null)
             {
                 Console.WriteLine("Diplomats Pack");
-                var diplomatsPack = equipmentDataDiplomatsPack;
-                Console.WriteLine($"Pack Name: {diplomatsPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in diplomatsPack.Contents)
+                foreach (var dipPack in equipmentDataDiplomatsPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {dipPack.Quantity}x {dipPack.Item}");
                 }
             }
 
-            if (equipmentDataDragonlance != null)
+            if (equipmentDataDragonlance != null && equipmentDataDragonlance.Items != null)
             {
                 Console.WriteLine("Dragonlance");
-                var dragonlance = equipmentDataDragonlance;
-                Console.WriteLine($"Pack Name: {dragonlance.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in dragonlance.Contents)
+                foreach (var dragonItems in equipmentDataDragonlance.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {dragonItems.Name}x {dragonItems.Description}");
                 }
             }
 
-            if (equipmentDataDruidicFocus != null)
+            if (equipmentDataDruidicFocus != null && equipmentDataDruidicFocus.Items != null)
             {
                 Console.WriteLine("Druidic Focus Items");
-                var druidicFocus = equipmentDataDruidicFocus;
-                Console.WriteLine($"Pack Name: {druidicFocus.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in druidicFocus.Contents)
+                foreach (var druidItem in equipmentDataDruidicFocus.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {druidItem.Quantity}x {druidItem.Item}");
                 }
             }
 
-            if (equipmentDataDungeoneersPack != null)
+            if (equipmentDataDungeoneersPack != null && equipmentDataDungeoneersPack.Items != null)
             {
                 Console.WriteLine("Dungeoneers Pack");
-                var dungeoneersPack = equipmentDataDungeoneersPack;
-                Console.WriteLine($"Pack Name: {dungeoneersPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in dungeoneersPack.Contents)
+                foreach (var dungeonItem in equipmentDataDungeoneersPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {dungeonItem.Quantity}x {dungeonItem.Item}");
                 }
             }
 
-            if (equipmentDataDungeoneersPack != null)
+            if (equipmentDataEntertainersPack != null && equipmentDataEntertainersPack.Items != null)
             {
-                Console.WriteLine("Entertainers Pack");
-                var entertainersPack = equipmentDataDungeoneersPack; // Corrected variable name
-                Console.WriteLine($"Pack Name: {entertainersPack.PackName}");
-
-                // Additional null check for Contents
-                if (entertainersPack.Contents != null)
+                Console.WriteLine("Contents:");
+                foreach (var entertainItem in equipmentDataEntertainersPack.Items)
                 {
-                    Console.WriteLine("Contents:");
-                    foreach (var item in entertainersPack.Contents)
-                    {
-                        Console.WriteLine($"- {item.Quantity}x {item.Item}");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Contents are null.");
+                    Console.WriteLine($"- {entertainItem.Quantity}x {entertainItem.Item}");
                 }
             }
 
-            if (equipmentDataExplorersPack != null)
+            if (equipmentDataExplorersPack != null && equipmentDataExplorersPack.Items != null)
             {
                 Console.WriteLine("Explorers Pack");
-                var explorersPack = equipmentDataExplorersPack;
-                Console.WriteLine($"Pack Name: {explorersPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in explorersPack.Contents)
+                foreach (var explorerItem in equipmentDataExplorersPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {explorerItem.Quantity}x {explorerItem.Item}");
                 }
             }
 
-            if (equipmentDataHolySymbols != null)
+            if (equipmentDataHolySymbols != null && equipmentDataHolySymbols.Items != null)
             {
                 Console.WriteLine("Holy Symbols");
-                var holySymbols = equipmentDataHolySymbols;
-                Console.WriteLine($"Pack Name: {holySymbols.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in holySymbols.Contents)
+                foreach (var holyItem in equipmentDataHolySymbols.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {holyItem.Quantity}x {holyItem.Item}");
                 }
             }
 
-            if (equipmentDataPreistsPack != null)
+            if (equipmentDataPreistsPack != null && equipmentDataPreistsPack.Items != null)
             {
                 Console.WriteLine("Priest Pack");
-                var preistPack = equipmentDataPreistsPack;
-                Console.WriteLine($"Pack Name: {preistPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in preistPack.Contents)
+                foreach (var priestItem in equipmentDataPreistsPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {priestItem.Quantity}x {priestItem.Item}");
                 }
             }
 
-            if (equipmentDataScholarsPack != null)
+            if (equipmentDataScholarsPack != null && equipmentDataScholarsPack.Items != null)
             {
                 Console.WriteLine("Scholars Pack");
-                var scholarsPack = equipmentDataScholarsPack;
-                Console.WriteLine($"Pack Name: {scholarsPack.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in scholarsPack.Contents)
+                foreach (var scholarsItem in equipmentDataScholarsPack.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {scholarsItem.Quantity}x {scholarsItem.Item}");
                 }
             }
 
-            if (equipmentDataUsableItems != null)
+            if (equipmentDataUsableItems != null && equipmentDataUsableItems.Items != null)
             {
                 Console.WriteLine("Usable Items");
-                var usableItems = equipmentDataUsableItems;
-                Console.WriteLine($"Pack Name: {usableItems.PackName}");
-                Console.WriteLine("Contents:");
-                foreach (var item in usableItems.Contents)
+                foreach (var usableItem in equipmentDataUsableItems.Items)
                 {
-                    Console.WriteLine($"- {item.Quantity}x {item.Item}");
+                    Console.WriteLine($"- {usableItem.Quantity}x {usableItem.Item}");
                 }
             }
+
         }
     }
 }

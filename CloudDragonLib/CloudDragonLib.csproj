@@ -524,7 +524,7 @@
     <None Update="Equipment\Equipment_Containers.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Diplomat%27s_Pack.json">
+    <None Update="Equipment\Equipment_Diplomats_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Equipment\Equipment_Dragonlance.json">
@@ -533,10 +533,10 @@
     <None Update="Equipment\Equipment_Druidic_Focus.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Dungeoneer%27s_Pack.json">
+    <None Update="Equipment\Equipment_Dungeoneers_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Entertainer%27s_Pack.json">
+    <None Update="Equipment\Equipment_Entertainers_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Equipment\Equipment_Explorers_Pack.json">
@@ -545,10 +545,10 @@
     <None Update="Equipment\Equipment_Holy_Symbols.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Priest%27s_Pack.json">
+    <None Update="Equipment\Equipment_Priests_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Equipment\Equipment_Scholar%27s_Pack.json">
+    <None Update="Equipment\Equipment_Scholars_Pack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Equipment\Equipment_Usable_Items.json">
