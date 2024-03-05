@@ -91,73 +91,42 @@ namespace CloudDragon
         }
     }
 
-       internal class ArmorLoader : ILoader
-       {
-            public void Load()
+    internal class ArmorLoader : ILoader
+    {
+        private void DisplayArmorCategory(List<Armor> armorCategories, string categoryTitle)
+        {
+            if (armorCategories != null)
             {
-                Console.WriteLine("Loading Armor Data ...");
-                // Define the paths to the JSON files
-                string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
-                string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
-                string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
-
-                var armorHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
-                var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
-                var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
-
-                // Perform null checks before accessing properties
-                var heavyCheck = armorHeavy?.ArmorCategories ?? new List<Armor>();
-                var mediumCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
-                var lightCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
-
-                // You can then iterate over heavyCheck as needed
-                foreach (var armor in heavyCheck)
+                Console.WriteLine($"{categoryTitle} Armor:");
+                foreach (var armor in armorCategories)
                 {
-                    // Access properties with null checks
-                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
-                }
-
-                // You can then iterate over heavyCheck as needed
-                foreach (var armor in mediumCheck)
-                {
-                    // Access properties with null checks
-                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
-                }
-
-                // You can then iterate over heavyCheck as needed
-                foreach (var armor in lightCheck)
-                {
-                    // Access properties with null checks
-                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
-                }
-
-            // Display the data for Light Armor
-            if (armorLight != null && armorLight.ArmorCategories != null)
-                {
-                    Console.WriteLine("Light Armor:");
-                    foreach (var armor in armorLight.ArmorCategories)
-                    {
-                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                    }
-                }
-
-                if (armorMedium != null && armorMedium.ArmorCategories != null)
-                {
-                    Console.WriteLine("Medium Armor:");
-                    foreach (var armor in armorMedium.ArmorCategories)
-                    {
-                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                    }
-                }
-
-                if (armorHeavy != null && armorHeavy.ArmorCategories != null)
-                {
-                    Console.WriteLine("Heavy Armor:");
-                    foreach (var armor in armorHeavy.ArmorCategories)
-                    {
-                        Console.WriteLine($"- Name: {armor.Name}, ArmorClass: {armor.ArmorClass}, Strength: {armor.Strength}, Stealth: {armor.Stealth}, Weight: {armor.Weight}, Cost: {armor.Cost} ");
-                    }
+                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost}");
                 }
             }
-       }
+        }
+
+        public void Load()
+        {
+            Console.WriteLine("Loading Armor Data ...");
+
+            // Define the paths to the JSON files
+            string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
+            string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
+            string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
+
+            var armorHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
+            var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
+            var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
+
+            // Perform null checks before accessing properties
+            var heavyCheck = armorHeavy?.ArmorCategories ?? new List<Armor>();
+            var mediumCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
+            var lightCheck = armorLight?.ArmorCategories ?? new List<Armor>();
+
+            // Display armor categories using the shared method
+            DisplayArmorCategory(heavyCheck, "Heavy");
+            DisplayArmorCategory(mediumCheck, "Medium");
+            DisplayArmorCategory(lightCheck, "Light");
+        }
+    }
 }
