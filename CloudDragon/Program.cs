@@ -99,6 +99,37 @@ namespace CloudDragon
         public List<object> FeatureDescription { get; set; }
     }
 
+    // Add class for class spells + cantrips 
+    public class PaladinSpellsCantrips
+    {
+        [JsonPropertyName("Name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("Source")]
+        public string Source { get; set; }
+
+        [JsonPropertyName("School")]
+        public string School { get; set; }
+
+        [JsonPropertyName("Casting Time")]
+        public string Cast_Time { get; set; }
+
+        [JsonPropertyName("Range")]
+        public string Range { get; set; }
+
+        [JsonPropertyName("Components")]
+        public string Components { get; set; }
+
+        [JsonPropertyName("Duration")]
+        public string Duration { get; set; }
+
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
+
+        [JsonPropertyName("Spell Lists")]
+        public string Spell_Lists { get; set; }
+    }
+
     internal class CharacterLoader : ILoader
     {
         void ILoader.Load()

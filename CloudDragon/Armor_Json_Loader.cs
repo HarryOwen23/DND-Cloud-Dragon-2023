@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -76,7 +77,7 @@ namespace CloudDragon
 
                 if (armorData == null)
                 {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
+                    Console.WriteLine("Deserialization returned null. Returning default ArmorData.");
                     return new ArmorData();
                 }
 
@@ -104,8 +105,34 @@ namespace CloudDragon
                 var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
                 var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
 
-                // Display the data for Light Armor
-                if (armorLight != null && armorLight.ArmorCategories != null)
+                // Perform null checks before accessing properties
+                var heavyCheck = armorHeavy?.ArmorCategories ?? new List<Armor>();
+                var mediumCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
+                var lightCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
+
+                // You can then iterate over heavyCheck as needed
+                foreach (var armor in heavyCheck)
+                {
+                    // Access properties with null checks
+                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
+                }
+
+                // You can then iterate over heavyCheck as needed
+                foreach (var armor in mediumCheck)
+                {
+                    // Access properties with null checks
+                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
+                }
+
+                // You can then iterate over heavyCheck as needed
+                foreach (var armor in lightCheck)
+                {
+                    // Access properties with null checks
+                    Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost} ");
+                }
+
+            // Display the data for Light Armor
+            if (armorLight != null && armorLight.ArmorCategories != null)
                 {
                     Console.WriteLine("Light Armor:");
                     foreach (var armor in armorLight.ArmorCategories)

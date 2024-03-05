@@ -208,7 +208,7 @@ namespace CloudDragon
                 Console.WriteLine("Contents:");
                 foreach (var entertainItem in equipmentDataEntertainersPack.Items)
                 {
-                    Console.WriteLine($"- {entertainItem.Quantity}x {entertainItem.Item}");
+                    Console.WriteLine($"- {entertainItem.Quantity}x, {entertainItem.Item}");
                 }
             }
 
@@ -217,7 +217,7 @@ namespace CloudDragon
                 Console.WriteLine("Explorers Pack");
                 foreach (var explorerItem in equipmentDataExplorersPack.Items)
                 {
-                    Console.WriteLine($"- {explorerItem.Quantity}x {explorerItem.Item}");
+                    Console.WriteLine($"- {explorerItem.Quantity}x, {explorerItem.Item}");
                 }
             }
 
@@ -226,7 +226,7 @@ namespace CloudDragon
                 Console.WriteLine("Holy Symbols");
                 foreach (var holyItem in equipmentDataHolySymbols.Items)
                 {
-                    Console.WriteLine($"- {holyItem.Quantity}x {holyItem.Item}");
+                    Console.WriteLine($"- {holyItem.Quantity}x, {holyItem.Item}");
                 }
             }
 
@@ -253,7 +253,7 @@ namespace CloudDragon
                 Console.WriteLine("Usable Items");
                 foreach (var usableItem in equipmentDataUsableItems.Items)
                 {
-                    Console.WriteLine($"- {usableItem.Quantity}x {usableItem.Item}");
+                    Console.WriteLine($"- {usableItem.Quantity}x, {usableItem.Item}");
                 }
             }
 
