@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -26,9 +25,7 @@ namespace CloudDragon
 
         [JsonPropertyName("Cost")]
         public string Cost { get; set; }
-
     }
-
 
     public class ArmorCategory
     {
@@ -44,10 +41,8 @@ namespace CloudDragon
     public class ArmorData
     {
         [JsonPropertyName("Armor Categories")]
-        public List<Armor> ArmorCategories { get; set; }
+        public List<ArmorCategory> ArmorCategories { get; set; }
     }
-
-
 
     internal class ArmorJsonLoader
     {
@@ -70,9 +65,11 @@ namespace CloudDragon
 
                 if (string.IsNullOrEmpty(jsonData))
                 {
+                    Console.WriteLine($"Empty or null JSON data in file: {jsonFilePath}");
                     return new ArmorData();
                 }
 
+                Console.WriteLine($"Loaded JSON data from file: {jsonFilePath}");
                 var armorData = JsonSerializer.Deserialize<ArmorData>(jsonData);
 
                 if (armorData == null)
@@ -91,14 +88,17 @@ namespace CloudDragon
         }
     }
 
+
     internal class ArmorLoader : ILoader
     {
-        private void DisplayArmorCategory(List<Armor> armorCategories, string categoryTitle)
+        private void DisplayArmorCategory(IEnumerable<Armor> armorList, string categoryTitle)
         {
-            if (armorCategories != null)
+            Console.WriteLine($"Displaying {categoryTitle} Armor...");
+
+            if (armorList != null)
             {
                 Console.WriteLine($"{categoryTitle} Armor:");
-                foreach (var armor in armorCategories)
+                foreach (var armor in armorList)
                 {
                     Console.WriteLine($"- Name: {armor?.Name}, ArmorClass: {armor?.ArmorClass}, Strength: {armor?.Strength}, Stealth: {armor?.Stealth}, Weight: {armor?.Weight}, Cost: {armor?.Cost}");
                 }
@@ -114,14 +114,14 @@ namespace CloudDragon
             string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
             string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
 
-            var armorHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
-            var armorMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
-            var armorLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
+            var armorDataHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
+            var armorDataMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
+            var armorDataLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
 
             // Perform null checks before accessing properties
-            var heavyCheck = armorHeavy?.ArmorCategories ?? new List<Armor>();
-            var mediumCheck = armorMedium?.ArmorCategories ?? new List<Armor>();
-            var lightCheck = armorLight?.ArmorCategories ?? new List<Armor>();
+            var heavyCheck = armorDataHeavy?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
+            var mediumCheck = armorDataMedium?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
+            var lightCheck = armorDataLight?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
 
             // Display armor categories using the shared method
             DisplayArmorCategory(heavyCheck, "Heavy");
@@ -129,4 +129,5 @@ namespace CloudDragon
             DisplayArmorCategory(lightCheck, "Light");
         }
     }
+
 }
