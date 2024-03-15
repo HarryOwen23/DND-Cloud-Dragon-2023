@@ -328,3 +328,4 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\n
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Equipment\Equipment_Entertainers_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Equipment\Equipment_Priests_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Equipment\Equipment_Scholars_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\obj\Debug\net6.0\CloudDragonLib.sourcelink.json

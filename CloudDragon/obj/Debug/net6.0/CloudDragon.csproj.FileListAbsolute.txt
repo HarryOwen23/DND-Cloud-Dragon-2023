@@ -12,7 +12,6 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.AssemblyInfoInputs.cache
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.AssemblyInfo.cs
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.csproj.CoreCompileInputs.cache
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.csproj.CopyComplete
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.dll
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\refint\CloudDragon.dll
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.pdb
@@ -335,3 +334,5 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Entertainers_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Priests_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Scholars_Pack.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.sourcelink.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDra.076C37D0.Up2Date
