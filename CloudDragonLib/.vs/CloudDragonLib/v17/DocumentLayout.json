@@ -3,25 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\armor\\armor_medium.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:armor\\armor_medium.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\trinket_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\armor\\armor_light.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:armor\\armor_light.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\armor\\armor_heavy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:armor\\armor_heavy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\armor_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\currency_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\trinkets\\trinkets_lost_laboratory_of_kwalish.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:trinkets\\trinkets_lost_laboratory_of_kwalish.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,80 +33,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Armor_Medium.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Medium.json",
-              "RelativeDocumentMoniker": "Armor\\Armor_Medium.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Medium.json",
-              "RelativeToolTip": "Armor\\Armor_Medium.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-19T08:39:43.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Armor_Light.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Light.json",
-              "RelativeDocumentMoniker": "Armor\\Armor_Light.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Light.json",
-              "RelativeToolTip": "Armor\\Armor_Light.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Trinkets_Lost_Laboratory_of_Kwalish.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
+              "RelativeDocumentMoniker": "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
+              "RelativeToolTip": "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-19T08:39:40.345Z",
+              "WhenOpened": "2024-03-19T16:44:05.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Armor_Heavy.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Heavy.json",
-              "RelativeDocumentMoniker": "Armor\\Armor_Heavy.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Armor\\Armor_Heavy.json",
-              "RelativeToolTip": "Armor\\Armor_Heavy.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-19T08:39:21.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Armor_Json_Loader.cs",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Armor_Json_Loader.cs",
-              "RelativeDocumentMoniker": "..\\CloudDragon\\Armor_Json_Loader.cs",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Armor_Json_Loader.cs",
-              "RelativeToolTip": "..\\CloudDragon\\Armor_Json_Loader.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGAAAAAFAAAA",
+              "DocumentIndex": 0,
+              "Title": "Trinket_Json_Loader.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Trinket_Json_Loader.cs",
+              "RelativeDocumentMoniker": "..\\CloudDragon\\Trinket_Json_Loader.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Trinket_Json_Loader.cs",
+              "RelativeToolTip": "..\\CloudDragon\\Trinket_Json_Loader.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAAAAwN0AAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T17:18:02.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Program.cs",
-              "RelativeDocumentMoniker": "..\\CloudDragon\\Program.cs",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Program.cs",
-              "RelativeToolTip": "..\\CloudDragon\\Program.cs",
-              "ViewState": "AQIAAMQAAAAAAAAAAAAwwNEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T08:08:14.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Currency_Json_Loader.cs",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Currency_Json_Loader.cs",
-              "RelativeDocumentMoniker": "..\\CloudDragon\\Currency_Json_Loader.cs",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Currency_Json_Loader.cs",
-              "RelativeToolTip": "..\\CloudDragon\\Currency_Json_Loader.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA9wEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T11:01:05.249Z",
+              "WhenOpened": "2024-03-19T08:48:27.923Z",
               "EditorCaption": ""
             }
           ]
