@@ -130,79 +130,79 @@ namespace CloudDragon
         public string Spell_Lists { get; set; }
     }
 
-    internal class CharacterLoader : ILoader
-    {
-        void ILoader.Load()
-        {
-            Console.WriteLine("Loading Cloud Dragon ....");
+    //internal class CharacterLoader : ILoader
+    //{
+    //    void ILoader.Load()
+    //    {
+    //        Console.WriteLine("Loading Cloud Dragon ....");
 
-            string jsonFilePath = "path_to_your_json_file.json";
+    //        string jsonFilePath = "path_to_your_json_file.json";
 
-            try
-            {
-                string jsonData = File.ReadAllText(jsonFilePath);
+    //        try
+    //        {
+    //            string jsonData = File.ReadAllText(jsonFilePath);
 
-                var cloudDragonData = JsonSerializer.Deserialize<List<Character_Class>>(jsonData);
+    //            var cloudDragonData = JsonSerializer.Deserialize<List<Character_Class>>(jsonData);
 
-                if (cloudDragonData != null && cloudDragonData.Count > 0)
-                {
-                    // Access and display some properties
-                    Console.WriteLine($"Class Name: {cloudDragonData[0]?.ClassName}");
-                    Console.WriteLine($"Hit Dice: {cloudDragonData[0]?.HitDice}");
+    //            if (cloudDragonData != null && cloudDragonData.Count > 0)
+    //            {
+    //                // Access and display some properties
+    //                Console.WriteLine($"Class Name: {cloudDragonData[0]?.ClassName}");
+    //                Console.WriteLine($"Hit Dice: {cloudDragonData[0]?.HitDice}");
 
-                    var proficienciesArmor = cloudDragonData[0]?.Proficiencies?.Armor;
-                    Console.WriteLine($"Proficiencies (Armor): {proficienciesArmor ?? "N/A"}");
+    //                var proficienciesArmor = cloudDragonData[0]?.Proficiencies?.Armor;
+    //                Console.WriteLine($"Proficiencies (Armor): {proficienciesArmor ?? "N/A"}");
 
-                    // Loop through and display Fighting Styles
-                    Console.WriteLine("Fighting Styles:");
-                    foreach (var style in cloudDragonData[0]?.FightingStyles ?? Enumerable.Empty<FightingStyle>())
-                    {
-                        Console.WriteLine($"- {style?.Name}: {style?.Description}");
-                    }
+    //                // Loop through and display Fighting Styles
+    //                Console.WriteLine("Fighting Styles:");
+    //                foreach (var style in cloudDragonData[0]?.FightingStyles ?? Enumerable.Empty<FightingStyle>())
+    //                {
+    //                    Console.WriteLine($"- {style?.Name}: {style?.Description}");
+    //                }
 
-                    // Loop through and display sub-archetypes and their features
-                    Console.WriteLine("Sub-Archetypes:");
-                    foreach (var subArchetype in cloudDragonData[0]?.SubArchetypes ?? Enumerable.Empty<SubArchetype>())
-                    {
-                        Console.WriteLine($"- {subArchetype?.ArchetypeName}");
+    //                // Loop through and display sub-archetypes and their features
+    //                Console.WriteLine("Sub-Archetypes:");
+    //                foreach (var subArchetype in cloudDragonData[0]?.SubArchetypes ?? Enumerable.Empty<SubArchetype>())
+    //                {
+    //                    Console.WriteLine($"- {subArchetype?.ArchetypeName}");
 
-                        foreach (var feature in subArchetype?.ArchetypeFeatures ?? Enumerable.Empty<ArchetypeFeature>())
-                        {
-                            Console.WriteLine($"  - {feature?.FeatureName}");
+    //                    foreach (var feature in subArchetype?.ArchetypeFeatures ?? Enumerable.Empty<ArchetypeFeature>())
+    //                    {
+    //                        Console.WriteLine($"  - {feature?.FeatureName}");
 
-                            foreach (var description in feature?.FeatureDescription ?? Enumerable.Empty<object>())
-                            {
-                                if (description is string desc)
-                                {
-                                    Console.WriteLine($"    - {desc}");
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"    - {description}");
-                                }
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Deserialization failed or the list is empty.");
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-            }
-        }
-    }
+    //                        foreach (var description in feature?.FeatureDescription ?? Enumerable.Empty<object>())
+    //                        {
+    //                            if (description is string desc)
+    //                            {
+    //                                Console.WriteLine($"    - {desc}");
+    //                            }
+    //                            else
+    //                            {
+    //                                Console.WriteLine($"    - {description}");
+    //                            }
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("Deserialization failed or the list is empty.");
+    //            }
+    //        }
+    //        catch (Exception e)
+    //        {
+    //            Console.WriteLine("Error loading JSON file: " + e.Message);
+    //        }
+    //    }
+    //}
 
     internal class Program
     {
         static void Main(string[] args)
         {
 
-            ILoader characterLoader = new CharacterLoader();
-            characterLoader.Load();
+            //ILoader characterLoader = new CharacterLoader();
+            //characterLoader.Load();
 
             ILoader EquipmentLoader = new EquipmentLoader();
             EquipmentLoader.Load();

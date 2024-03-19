@@ -40,6 +40,16 @@ namespace CloudDragon
 
     public class ArmorData
     {
+
+        [JsonPropertyName("Heavy Armor")]
+        public List<Armor> HeavyArmor { get; set; }
+
+        [JsonPropertyName("Medium Armor")]
+        public List<Armor> MediumArmor { get; set; }
+
+        [JsonPropertyName("Light Armor")]
+        public List<Armor> LightArmor { get; set; }
+
         [JsonPropertyName("Armor Categories")]
         public List<ArmorCategory> ArmorCategories { get; set; }
     }
@@ -65,11 +75,9 @@ namespace CloudDragon
 
                 if (string.IsNullOrEmpty(jsonData))
                 {
-                    Console.WriteLine($"Empty or null JSON data in file: {jsonFilePath}");
                     return new ArmorData();
                 }
 
-                Console.WriteLine($"Loaded JSON data from file: {jsonFilePath}");
                 var armorData = JsonSerializer.Deserialize<ArmorData>(jsonData);
 
                 if (armorData == null)
@@ -87,7 +95,6 @@ namespace CloudDragon
             }
         }
     }
-
 
     internal class ArmorLoader : ILoader
     {
@@ -109,25 +116,19 @@ namespace CloudDragon
         {
             Console.WriteLine("Loading Armor Data ...");
 
-            // Define the paths to the JSON files
-            string jsonFilePathArmorHeavy = "Armor\\Armor_Heavy.json";
-            string jsonFilePathArmorMedium = "Armor\\Armor_Medium.json";
-            string jsonFilePathArmorLight = "Armor\\Armor_Light.json";
+            string baseDirectory = Directory.GetCurrentDirectory();
+            string jsonFilePathArmorHeavy = Path.Combine(baseDirectory, "Armor", "Armor_Heavy.json");
+            string jsonFilePathArmorMedium = Path.Combine(baseDirectory, "Armor", "Armor_Medium.json");
+            string jsonFilePathArmorLight = Path.Combine(baseDirectory, "Armor", "Armor_Light.json");
 
             var armorDataHeavy = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorHeavy);
             var armorDataMedium = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorMedium);
             var armorDataLight = ArmorJsonLoader.LoadArmorData(jsonFilePathArmorLight);
 
-            // Perform null checks before accessing properties
-            var heavyCheck = armorDataHeavy?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
-            var mediumCheck = armorDataMedium?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
-            var lightCheck = armorDataLight?.ArmorCategories?.SelectMany(category => category.Armors) ?? Enumerable.Empty<Armor>();
-
             // Display armor categories using the shared method
-            DisplayArmorCategory(heavyCheck, "Heavy");
-            DisplayArmorCategory(mediumCheck, "Medium");
-            DisplayArmorCategory(lightCheck, "Light");
+            DisplayArmorCategory(armorDataHeavy?.HeavyArmor, "Heavy");
+            DisplayArmorCategory(armorDataMedium?.MediumArmor, "Medium");
+            DisplayArmorCategory(armorDataLight?.LightArmor, "Light");
         }
     }
-
 }
