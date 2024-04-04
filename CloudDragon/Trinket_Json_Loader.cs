@@ -14,8 +14,8 @@ namespace CloudDragon
         [JsonPropertyName("Trinket")]
         public string Trinket { get; set; }
 
-        [JsonPropertyName("Dice Numbers")]
-        public string DiceNumbers { get; set; }
+        [JsonPropertyName("Dice_Range")]
+        public string DiceRange { get; set; }
     }
 
     public class TrinketCategory
@@ -268,9 +268,10 @@ namespace CloudDragon
                 Console.WriteLine("Lost Laboratory of Kwalish Trinkets:");
                 foreach (var trinket in trinketsLostLab.LostLabTrinkets)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumbers}, Description: {trinket.Trinket}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
+
 
             // Display the trinket data for Mordenkainen's Tome of Foes
             if (trinketsMordenkainen != null && trinketsMordenkainen.MordenkainenTrinkets != null)
