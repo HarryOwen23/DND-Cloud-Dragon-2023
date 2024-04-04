@@ -6,8 +6,12 @@
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\trinket_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\trinkets\\trinkets_lost_laboratory_of_kwalish.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:trinkets\\trinkets_lost_laboratory_of_kwalish.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\trinkets\\trinkets_curse_of_strahd.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:trinkets\\trinkets_curse_of_strahd.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\trinkets\\trinkets_ebberon_rising_from_the_last_war_aerenal.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:trinkets\\trinkets_ebberon_rising_from_the_last_war_aerenal.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +21,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -33,16 +41,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Trinkets_Lost_Laboratory_of_Kwalish.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
-              "RelativeDocumentMoniker": "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
-              "RelativeToolTip": "Trinkets\\Trinkets_Lost_Laboratory_of_Kwalish.json",
-              "ViewState": "AQIAAJMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json",
+              "RelativeDocumentMoniker": "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json",
+              "RelativeToolTip": "Trinkets\\Trinkets_Ebberon_Rising_from_the_Last_War_Aerenal.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-19T16:44:05.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T07:45:57.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Trinkets_Curse_of_Strahd.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Curse_of_Strahd.json",
+              "RelativeDocumentMoniker": "Trinkets\\Trinkets_Curse_of_Strahd.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Curse_of_Strahd.json",
+              "RelativeToolTip": "Trinkets\\Trinkets_Curse_of_Strahd.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-04T07:43:31.638Z"
             },
             {
               "$type": "Document",
@@ -52,7 +71,7 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Trinket_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Trinket_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Trinket_Json_Loader.cs",
-              "ViewState": "AQIAANYAAAAAAAAAAAAAwN0AAABTAAAA",
+              "ViewState": "AQIAAKsAAAAAAAAAAAArwLUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T08:48:27.923Z",
               "EditorCaption": ""

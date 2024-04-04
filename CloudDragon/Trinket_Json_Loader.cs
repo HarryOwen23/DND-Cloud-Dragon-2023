@@ -14,8 +14,8 @@ namespace CloudDragon
         [JsonPropertyName("Trinket")]
         public string Trinket { get; set; }
 
-        [JsonPropertyName("Dice_Numbers")]
-        public string Dice_Numbers { get; set; }
+        [JsonPropertyName("Dice Numbers")]
+        public string DiceNumbers { get; set; }
     }
 
     public class TrinketCategory
@@ -36,7 +36,7 @@ namespace CloudDragon
         public List<Trinkettype> EbberonAerenaTrinkets { get; set; }
 
         [JsonPropertyName("Eberron - Argonnessen Trinkets")]
-        public List<Trinkettype> EbberonArgonnessenTrinkets { get; set; }
+        public List<Trinkettype> EberronArgonnessenTrinkets { get; set; }
 
         [JsonPropertyName("Eberron - Frostfell Trinkets")]
         public List<Trinkettype> EbberonFrostfellTrinkets { get; set; }
@@ -96,7 +96,13 @@ namespace CloudDragon
                     return new TrinketsData();
                 }
 
+                // Debugging: Log JSON data to verify it's loaded correctly
+                Console.WriteLine($"JSON Data: {jsonData}");
+
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
+
+                // Debugging: Log deserialized data to verify it's loaded correctly
+                Console.WriteLine($"Deserialized Data: {trinketData}");
 
                 if (trinketData == null)
                 {
@@ -137,7 +143,6 @@ namespace CloudDragon
             string jsonFilePathPlayersHandbook = Path.Combine(baseDirectory, "Trinkets", "Trinkets_Players_Handbook.json");
             string jsonFilePathWildBeyond = Path.Combine(baseDirectory, "Trinkets", "Trinkets_The_Wild_Beyond_The_Witchlight.json");
             string jsonFilePathVanRitchen = Path.Combine(baseDirectory, "Trinkets", "Trinkets_Van_Ritchens_Guide_to_Ravenloft.json");
-            // Define paths for other trinket JSON files similarly
 
             // Load the trinket data using the TrinketJsonLoader
             var trinketsAcquisitionsIncorporated = TrinketJsonLoader.LoadTrinketData(jsonFilePathAcquisitionsIncorperated);
@@ -156,7 +161,6 @@ namespace CloudDragon
             var trinketsWildBeyond = TrinketJsonLoader.LoadTrinketData(jsonFilePathWildBeyond);
             var trinketsVanRitchen = TrinketJsonLoader.LoadTrinketData(jsonFilePathVanRitchen);
 
-            // Load other trinket data similarly
 
             // Display the trinket data for Acquisitions Incorporated
             if (trinketsAcquisitionsIncorporated != null && trinketsAcquisitionsIncorporated.AcquisitionsIncorporatedTrinkets != null)
@@ -174,7 +178,7 @@ namespace CloudDragon
                 Console.WriteLine("Curse of Strahd Trinkets:");
                 foreach (var trinket in trinketsCurseofStrahd.CurseOfStrahdTrinkets)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.Dice_Numbers}, Description: {trinket.Trinket}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
             }
 
@@ -189,10 +193,10 @@ namespace CloudDragon
             }
 
             // Display the trinket data for Eberron - Argonnessen
-            if (trinketsEbberonArgonnessen != null && trinketsEbberonArgonnessen.EbberonArgonnessenTrinkets != null)
+            if (trinketsEbberonArgonnessen != null && trinketsEbberonArgonnessen.EberronArgonnessenTrinkets != null)
             {
                 Console.WriteLine("Eberron - Argonnessen Trinkets:");
-                foreach (var trinket in trinketsEbberonArgonnessen.EbberonArgonnessenTrinkets)
+                foreach (var trinket in trinketsEbberonArgonnessen.EberronArgonnessenTrinkets)
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
@@ -264,7 +268,7 @@ namespace CloudDragon
                 Console.WriteLine("Lost Laboratory of Kwalish Trinkets:");
                 foreach (var trinket in trinketsLostLab.LostLabTrinkets)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.Dice_Numbers}, Description: {trinket.Trinket}");
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumbers}, Description: {trinket.Trinket}");
                 }
             }
 
