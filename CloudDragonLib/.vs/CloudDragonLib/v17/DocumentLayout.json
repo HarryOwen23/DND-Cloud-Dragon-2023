@@ -4,10 +4,6 @@
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\trinket_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\trinkets\\trinkets_curse_of_strahd.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:trinkets\\trinkets_curse_of_strahd.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,20 +29,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Trinkets_Curse_of_Strahd.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Curse_of_Strahd.json",
-              "RelativeDocumentMoniker": "Trinkets\\Trinkets_Curse_of_Strahd.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Trinkets\\Trinkets_Curse_of_Strahd.json",
-              "RelativeToolTip": "Trinkets\\Trinkets_Curse_of_Strahd.json",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAAAPkAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-04T07:43:31.638Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -56,7 +43,7 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Trinket_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Trinket_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Trinket_Json_Loader.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAAwJYAAABvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T08:48:27.923Z",
               "EditorCaption": ""

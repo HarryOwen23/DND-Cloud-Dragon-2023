@@ -2,252 +2,202 @@
     "Curse of Strahd Trinkets": [
         {
             "Dice_Numbers": "1-2",
-            "Dice_Range": [ 1, 2 ],
             "Trinket": "A picture you drew as a child of your imaginary friend"
         },
         {
             "Dice_Numbers": "3-4",
-            "Dice_Range": [ 3, 4 ],
             "Trinket": "A lock that opens when blood is dripped in its keyhole"
         },
         {
             "Dice_Numbers": "5-6",
-            "Dice_Range": [ 5, 6 ],
             "Trinket": "Clothes stolen from a scarecrow"
         },
         {
             "Dice_Numbers": "7-8",
-            "Dice_Range": [ 7, 8 ],
             "Trinket": "A spinning top carved with four faces: happy, sad, wrathful, and dead"
         },
         {
             "Dice_Numbers": "9-10",
-            "Dice_Range": [ 9, 10 ],
             "Trinket": "The necklace of a sibling who died on the day you were born"
         },
         {
             "Dice_Numbers": "11-12",
-            "Dice_Range": [ 11, 12 ],
             "Trinket": "A wig from someone executed by beheading"
         },
         {
             "Dice_Numbers": "13-14",
-            "Dice_Range": [ 13, 14 ],
             "Trinket": "The unopened letter to you from your dying father"
         },
         {
             "Dice_Numbers": "15-16",
-            "Dice_Range": [ 15, 16 ],
             "Trinket": "A pocket watch that runs backward for an hour every midnight"
         },
         {
             "Dice_Numbers": "17-18",
-            "Dice_Range": [ 17, 18 ],
             "Trinket": "A winter coat stolen from a dying soldier"
         },
         {
             "Dice_Numbers": "19-20",
-            "Dice_Range": [ 19, 20 ],
             "Trinket": "A bottle of invisible ink that can only be read at sunset"
         },
         {
             "Dice_Numbers": "21-22",
-            "Dice_Range": [ 21, 22 ],
             "Trinket": "A wineskin that refills when interred with a dead person for a night"
         },
         {
             "Dice_Numbers": "23-24",
-            "Dice_Range": [ 23, 24 ],
             "Trinket": "A set of silverware used by a king for his last meal"
         },
         {
             "Dice_Numbers": "25-26",
-            "Dice_Range": [ 25, 26 ],
             "Trinket": "A spyglass that always shows the world suffering a terrible storm"
         },
         {
             "Dice_Numbers": "27-28",
-            "Dice_Range": [ 27, 28 ],
             "Trinket": "A cameo with the profile's face scratched away"
         },
         {
             "Dice_Numbers": "29-30",
-            "Dice_Range": [ 29, 30 ],
             "Trinket": "A lantern with a black candle that never runs out and that burns with green flame"
         },
         {
             "Dice_Numbers": "31-32",
-            "Dice_Range": [ 31, 32 ],
             "Trinket": "A teacup from a child's tea set, stained with blood"
         },
         {
             "Dice_Numbers": "33-34",
-            "Dice_Range": [ 33, 34 ],
             "Trinket": "A little black book that records your dreams, and yours alone, when you sleep"
         },
         {
             "Dice_Numbers": "35-36",
-            "Dice_Range": [ 35, 36 ],
             "Trinket": "A necklace formed of the interlinked holy symbols of a dozen deities"
         },
         {
             "Dice_Numbers": "37-38",
-            "Dice_Range": [ 37, 38 ],
             "Trinket": "A hangman's noose that feels heavier than it should"
         },
         {
             "Dice_Numbers": "39-40",
-            "Dice_Range": [ 39, 40 ],
             "Trinket": "A birdcage into which small birds fly but once inside never eat or leave"
         },
         {
             "Dice_Numbers": "41-42",
-            "Dice_Range": [ 41, 42 ],
             "Trinket": "A lepidopterist's box filled dead moths with skulllike patterns on their wings"
         },
         {
             "Dice_Numbers": "43-44",
-            "Dice_Range": [ 43, 44 ],
             "Trinket": "A jar of pickled ghouls' tongues"
         },
         {
             "Dice_Numbers": "45-46",
-            "Dice_Range": [ 45, 46 ],
             "Trinket": "The wooden hand of a notorious pirate"
         },
         {
             "Dice_Numbers": "47-48",
-            "Dice_Range": [ 47, 48 ],
             "Trinket": "An urn with the ashes of a dead relative"
         },
         {
             "Dice_Numbers": "49-50",
-            "Dice_Range": [ 49, 50 ],
             "Trinket": "A hand mirror backed with a bronze depiction of a medusa"
         },
         {
             "Dice_Numbers": "51-52",
-            "Dice_Range": [ 51, 52 ],
             "Trinket": "Pallid leather gloves crafted with ivory fingernails"
         },
         {
             "Dice_Numbers": "53-54",
-            "Dice_Range": [ 53, 54 ],
             "Trinket": "Dice made from the knuckles of a notorious charlatan"
         },
         {
             "Dice_Numbers": "55-56",
-            "Dice_Range": [ 55, 56 ],
             "Trinket": "A ring of keys for forgotten locks"
         },
         {
             "Dice_Numbers": "57-58",
-            "Dice_Range": [ 57, 58 ],
             "Trinket": "Nails from the coffin of a murderer"
         },
         {
             "Dice_Numbers": "59-60",
-            "Dice_Range": [ 59, 60 ],
             "Trinket": "A key to the family crypt"
         },
         {
             "Dice_Numbers": "61-62",
-            "Dice_Range": [ 61, 62 ],
             "Trinket": "A bouquet of funerary flowers that always looks and smells fresh"
         },
         {
             "Dice_Numbers": "63-64",
-            "Dice_Range": [ 63, 64 ],
             "Trinket": "A switch used to discipline you as a child"
         },
         {
             "Dice_Numbers": "65-66",
-            "Dice_Range": [ 65, 66 ],
             "Trinket": "A music box that plays by itself whenever someone holding it dances"
         },
         {
             "Dice_Numbers": "67-68",
-            "Dice_Range": [ 67, 68 ],
             "Trinket": "A walking cane with an iron ferrule that strikes sparks on stone"
         },
         {
             "Dice_Numbers": "69-70",
-            "Dice_Range": [ 69, 70 ],
             "Trinket": "A flag from a ship lost at sea"
         },
         {
             "Dice_Numbers": "71-72",
-            "Dice_Range": [ 71, 72 ],
             "Trinket": "Porcelain doll's head that always seems to be looking at you"
         },
         {
             "Dice_Numbers": "73-74",
-            "Dice_Range": [ 73, 74 ],
             "Trinket": "A wolf's head wrought in silver that is also a whistle"
         },
         {
             "Dice_Numbers": "75-76",
-            "Dice_Range": [ 75, 76 ],
             "Trinket": "A small mirror that shows a much older version of the viewer"
         },
         {
             "Dice_Numbers": "77-78",
-            "Dice_Range": [ 77, 78 ],
             "Trinket": "Small, worn book of children's nursery rhymes"
         },
         {
             "Dice_Numbers": "79-80",
-            "Dice_Range": [ 79, 80 ],
             "Trinket": "A mummified raven claw"
         },
         {
             "Dice_Numbers": "81-82",
-            "Dice_Range": [ 81, 82 ],
             "Trinket": "A broken pendent of a silver dragon that's always cold to the touch"
         },
         {
             "Dice_Numbers": "83-84",
-            "Dice_Range": [ 83, 84 ],
             "Trinket": "A small locked box that quietly hums a lovely melody at night but you always forget it in the morning"
         },
         {
             "Dice_Numbers": "85-86",
-            "Dice_Range": [ 85, 86 ],
             "Trinket": "An inkwell that makes one a little nauseous when staring at it"
         },
         {
             "Dice_Numbers": "87-88",
-            "Dice_Range": [ 87, 88 ],
             "Trinket": "An old little doll made from a dark, dense wood and missing a hand and a foot"
         },
         {
             "Dice_Numbers": "89-90",
-            "Dice_Range": [ 89, 90 ],
             "Trinket": "A black executioner's hood"
         },
         {
             "Dice_Numbers": "91-92",
-            "Dice_Range": [ 91, 92 ],
             "Trinket": "A pouch made of flesh, with a sinew drawstring"
         },
         {
             "Dice_Numbers": "93-94",
-            "Dice_Range": [ 93, 94 ],
             "Trinket": "A tiny spool of black thread that never runs out"
         },
         {
             "Dice_Numbers": "95-96",
-            "Dice_Range": [ 95, 96 ],
             "Trinket": "A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
         },
         {
             "Dice_Numbers": "97-98",
-            "Dice_Range": [ 97, 98 ],
             "Trinket": "A black wooden pipe that creates puffs of smoke that look like skulls"
         },
         {
             "Dice_Numbers": "99-100",
-            "Dice_Range": [ 99, 100 ],
             "Trinket": "A vial of perfume, the scent of which only certain creatures can detect"
         }
     ]
