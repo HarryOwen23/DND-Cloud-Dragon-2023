@@ -60,20 +60,24 @@ namespace CloudDragon
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
 
                 // Debugging: Log deserialized data to verify it's loaded correctly
-                var allTrinkets = new[] { trinketData.AcquisitionsIncorporatedTrinkets};
-                
-                foreach (var eachTrinket in allTrinkets)
-                {
-                    if(eachTrinket != null)
-                        Console.WriteLine($"Writing out {eachTrinket}");
-                        foreach (var trinket in eachTrinket)
-                            Console.WriteLine($"{trinket.DiceNumber}, {trinket.Trinket}");
-                }
-
                 if (trinketData == null)
                 {
                     Console.WriteLine("Deserialization returned null. Returning default TrinketsData.");
                     return new TrinketsData();
+                }
+
+                if (trinketData.AcquisitionsIncorporatedTrinkets == null)
+                {
+                    Console.WriteLine("AcquisitionsIncorporatedTrinkets is null. Returning default TrinketsData.");
+                    return new TrinketsData();
+                }
+
+                // Debugging: Log deserialized data to verify it's loaded correctly
+                Console.WriteLine($"Trinket Data Count: {trinketData.AcquisitionsIncorporatedTrinkets.Count}");
+
+                foreach (var trinket in trinketData.AcquisitionsIncorporatedTrinkets)
+                {
+                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }
 
                 return trinketData;
@@ -85,6 +89,7 @@ namespace CloudDragon
             }
         }
     }
+
 
     internal class TrinketLoader : ILoader
     {
