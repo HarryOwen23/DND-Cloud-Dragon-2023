@@ -15,8 +15,6 @@ namespace CloudDragon
         public string Trinket { get; set; }
     }
 
-
-
     public class TrinketCategory
     {
         [JsonPropertyName("Trinkets")]
@@ -59,25 +57,22 @@ namespace CloudDragon
 
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
 
-                // Debugging: Log deserialized data to verify it's loaded correctly
                 if (trinketData == null)
                 {
                     Console.WriteLine("Deserialization returned null. Returning default TrinketsData.");
                     return new TrinketsData();
                 }
 
+                // Ensure that the Trinkets list is initialized
                 if (trinketData.AcquisitionsIncorporatedTrinkets == null)
                 {
-                    Console.WriteLine("AcquisitionsIncorporatedTrinkets is null. Returning default TrinketsData.");
-                    return new TrinketsData();
+                    trinketData.AcquisitionsIncorporatedTrinkets = new List<Trinkettype>();
                 }
 
                 // Debugging: Log deserialized data to verify it's loaded correctly
-                Console.WriteLine($"Trinket Data Count: {trinketData.AcquisitionsIncorporatedTrinkets.Count}");
-
                 foreach (var trinket in trinketData.AcquisitionsIncorporatedTrinkets)
                 {
-                    Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
+                    Console.WriteLine($"{trinket.DiceNumber}, {trinket.Trinket}");
                 }
 
                 return trinketData;
@@ -89,7 +84,6 @@ namespace CloudDragon
             }
         }
     }
-
 
     internal class TrinketLoader : ILoader
     {
