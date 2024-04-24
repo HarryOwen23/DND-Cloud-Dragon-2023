@@ -77,7 +77,8 @@ namespace CloudDragon
         void ILoader.Load()
         {
             Console.WriteLine("Loading Magical Item Data ...");
-            string jsonFilePathCommon = "Magical Items\\Magical_Items._Common.json";
+
+            string jsonFilePathCommon = "Magical Items\\Magical_Items_Common.json";
             string jsonFilePathUncommon = "Magical Items\\Magical_Items_Uncommon.json";
             string jsonFilePathRare = "Magical Items\\Magical_Items_Rare.json";
             string jsonFilePathVeryRare = "Magical Items\\Magical_Items_Very_Rare.json";

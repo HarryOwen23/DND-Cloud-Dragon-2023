@@ -190,7 +190,6 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Druidic_Focus.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Holy_Symbols.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Usable_Items.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items._Common.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items_Artifact.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items_Legendary.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items_Rare.json
@@ -336,3 +335,4 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Scholars_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.sourcelink.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDra.076C37D0.Up2Date
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items_Common.json
