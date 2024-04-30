@@ -23,14 +23,14 @@ namespace CloudDragon
 
     public class TrinketsData
     {
-        [JsonPropertyName("Acquisitions Incorporated Trinkets")]
-        public List<Trinkettype> AcquisitionsIncorporatedTrinkets { get; set; }
+        [JsonPropertyName("Trinkets")]
+        public List<Trinkettype> Trinkets { get; set; }
 
     }
 
     internal class TrinketJsonLoader
     {
-        public static TrinketsData LoadTrinketData(string jsonFilePath)
+        public static List<Trinkettype> LoadTrinketData(string jsonFilePath)
         {
             try
             {
@@ -42,14 +42,14 @@ namespace CloudDragon
                 if (!File.Exists(jsonFilePath))
                 {
                     Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new TrinketsData();
+                    return null;
                 }
 
                 string jsonData = File.ReadAllText(jsonFilePath);
 
                 if (string.IsNullOrEmpty(jsonData))
                 {
-                    return new TrinketsData();
+                    return null;
                 }
 
                 // Debugging: Log JSON data to verify it's loaded correctly
@@ -60,22 +60,18 @@ namespace CloudDragon
                 if (trinketData == null)
                 {
                     Console.WriteLine("Deserialization returned null. Returning default TrinketsData.");
-                    return new TrinketsData();
+                    return null;
                 }
 
-                // Ensure that the Trinkets list is initialized
-                if (trinketData.AcquisitionsIncorporatedTrinkets == null)
-                {
-                    trinketData.AcquisitionsIncorporatedTrinkets = new List<Trinkettype>();
-                }
+               
 
                 // Debugging: Log deserialized data to verify it's loaded correctly
-                foreach (var trinket in trinketData.AcquisitionsIncorporatedTrinkets)
+                foreach (var trinket in trinketData.Trinkets)
                 {
                     Console.WriteLine($"{trinket.DiceNumber}, {trinket.Trinket}");
                 }
 
-                return trinketData;
+                return trinketData.Trinkets;
             }
             catch (Exception e)
             {
@@ -100,10 +96,10 @@ namespace CloudDragon
 
 
             // Display the trinket data for Acquisitions Incorporated
-            if (trinketsAcquisitionsIncorporated != null && trinketsAcquisitionsIncorporated.AcquisitionsIncorporatedTrinkets != null)
+            if (trinketsAcquisitionsIncorporated != null)
             {
                 Console.WriteLine("Acquisitions Incorporated Trinkets:");
-                foreach (var trinket in trinketsAcquisitionsIncorporated.AcquisitionsIncorporatedTrinkets)
+                foreach (var trinket in trinketsAcquisitionsIncorporated)
                 {
                     Console.WriteLine($"- Dice Number: {trinket.DiceNumber}, Description: {trinket.Trinket}");
                 }

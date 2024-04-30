@@ -205,6 +205,9 @@ namespace CloudDragon
             //ILoader characterLoader = new CharacterLoader();
             //characterLoader.Load();
 
+            ILoader trinketLoader = new TrinketLoader();
+            trinketLoader.Load();
+
             ILoader EquipmentLoader = new EquipmentLoader();
             EquipmentLoader.Load();
 
