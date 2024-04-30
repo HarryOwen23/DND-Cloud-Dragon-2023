@@ -53,7 +53,7 @@ namespace CloudDragon
                 }
 
                 // Debugging: Log JSON data to verify it's loaded correctly
-                Console.WriteLine($"JSON Data: {jsonData}");
+                //Console.WriteLine($"JSON Data: {jsonData}");
 
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
 
