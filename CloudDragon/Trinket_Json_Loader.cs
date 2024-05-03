@@ -63,8 +63,6 @@ namespace CloudDragon
                     return null;
                 }
 
-               
-
                 // Debugging: Log deserialized data to verify it's loaded correctly
                 foreach (var trinket in trinketData.Trinkets)
                 {
