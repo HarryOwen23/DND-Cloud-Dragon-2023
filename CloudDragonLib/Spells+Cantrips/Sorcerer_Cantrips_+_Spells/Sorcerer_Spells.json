@@ -1,0 +1,640 @@
+{
+    "SorcererSpells": [
+        {
+            "Name": "Burning Hands",
+            "School": "Evocation",
+            "Description": "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips.",
+            "Level": 1
+        },
+        {
+            "Name": "Charm Person",
+            "School": "Enchantment",
+            "Description": "You attempt to charm a humanoid you can see within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Color Spray",
+            "School": "Illusion",
+            "Description": "A dazzling array of flashing, colored light springs from your hand.",
+            "Level": 1
+        },
+        {
+            "Name": "Comprehend Languages",
+            "School": "Divination",
+            "Description": "For the duration, you understand the literal meaning of any spoken language that you hear.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you.",
+            "Level": 1
+        },
+        {
+            "Name": "Disguise Self",
+            "School": "Illusion",
+            "Description": "You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different.",
+            "Level": 1
+        },
+        {
+            "Name": "Expeditious Retreat",
+            "School": "Transmutation",
+            "Description": "This spell allows you to move at an incredible pace.",
+            "Level": 1
+        },
+        {
+            "Name": "False Life",
+            "School": "Necromancy",
+            "Description": "You bolster yourself with a necromantic facsimile of life.",
+            "Level": 1
+        },
+        {
+            "Name": "Feather Fall",
+            "School": "Transmutation",
+            "Description": "Choose up to five falling creatures within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Fog Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of fog centered on a point within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Jump",
+            "School": "Transmutation",
+            "Description": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
+            "Level": 1
+        },
+        {
+            "Name": "Mage Armor",
+            "School": "Abjuration",
+            "Description": "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends.",
+            "Level": 1
+        },
+        {
+            "Name": "Magic Missile",
+            "School": "Evocation",
+            "Description": "You create three glowing darts of magical force.",
+            "Level": 1
+        },
+        {
+            "Name": "Shield",
+            "School": "Abjuration",
+            "Description": "An invisible barrier of magical force appears and protects you.",
+            "Level": 1
+        },
+        {
+            "Name": "Silent Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube.",
+            "Level": 1
+        },
+        {
+            "Name": "Sleep",
+            "School": "Enchantment",
+            "Description": "This spell sends creatures into a magical slumber.",
+            "Level": 1
+        },
+        {
+            "Name": "Thunderwave",
+            "School": "Evocation",
+            "Description": "A wave of thunderous force sweeps out from you.",
+            "Level": 1
+        },
+        {
+            "Name": "Alter Self",
+            "School": "Transmutation",
+            "Description": "You assume a different form.",
+            "Level": 2
+        },
+        {
+            "Name": "Blindness/Deafness",
+            "School": "Necromancy",
+            "Description": "You can blind or deafen a foe.",
+            "Level": 2
+        },
+        {
+            "Name": "Blur",
+            "School": "Illusion",
+            "Description": "Your body becomes blurred, shifting and wavering to all who can see you.",
+            "Level": 2
+        },
+        {
+            "Name": "Darkness",
+            "School": "Evocation",
+            "Description": "Magical darkness spreads from a point you choose within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Darkvision",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature to grant it the ability to see in the dark.",
+            "Level": 2
+        },
+        {
+            "Name": "Detect Thoughts",
+            "School": "Divination",
+            "Description": "You gain insight into the thinking of one creature.",
+            "Level": 2
+        },
+        {
+            "Name": "Enhance Ability",
+            "School": "Transmutation",
+            "Description": "You touch a creature and bestow upon it a magical enhancement.",
+            "Level": 2
+        },
+        {
+            "Name": "Enlarge/Reduce",
+            "School": "Transmutation",
+            "Description": "You cause a creature or object you can see within range to grow larger or smaller for the duration.",
+            "Level": 2
+        },
+        {
+            "Name": "Gust of Wind",
+            "School": "Evocation",
+            "Description": "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose.",
+            "Level": 2
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "The target must succeed on a Wisdom saving throw or be paralyzed for the duration.",
+            "Level": 2
+        },
+        {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Description": "A creature you touch becomes invisible until the spell ends.",
+            "Level": 2
+        },
+        {
+            "Name": "Knock",
+            "School": "Transmutation",
+            "Description": "Choose an object that you can see within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Levitate",
+            "School": "Transmutation",
+            "Description": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there.",
+            "Level": 2
+        },
+        {
+            "Name": "Mirror Image",
+            "School": "Illusion",
+            "Description": "Three illusory duplicates of yourself appear in your space.",
+            "Level": 2
+        },
+        {
+            "Name": "Misty Step",
+            "School": "Conjuration",
+            "Description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
+            "Level": 2
+        },
+        {
+            "Name": "Scorching Ray",
+            "School": "Evocation",
+            "Description": "You create three rays of fire and hurl them at targets within range.",
+            "Level": 2
+        },
+        {
+            "Name": "See Invisibility",
+            "School": "Divination",
+            "Description": "For the duration, you see invisible creatures and objects as if they were visible.",
+            "Level": 2
+        },
+        {
+            "Name": "Shatter",
+            "School": "Evocation",
+            "Description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Spider Climb",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free.",
+            "Level": 2
+        },
+        {
+            "Name": "Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you.",
+            "Level": 2
+        },
+        {
+            "Name": "Web",
+            "School": "Conjuration",
+            "Description": "You conjure a mass of thick, sticky webbing at a point of your choice within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Blink",
+            "School": "Transmutation",
+            "Description": "Roll a d20 at the end of each of your turns for the duration of the spell.",
+            "Level": 3
+        },
+        {
+            "Name": "Clairvoyance",
+            "School": "Divination",
+            "Description": "You create an invisible sensor within range in a location familiar to you.",
+            "Level": 3
+        },
+        {
+            "Name": "Counterspell",
+            "School": "Abjuration",
+            "Description": "You attempt to interrupt a creature in the process of casting a spell.",
+            "Level": 3
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose any creature, object, or magical effect within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Fear",
+            "School": "Illusion",
+            "Description": "You project a phantasmal image of a creature's worst fears.",
+            "Level": 3
+        },
+        {
+            "Name": "Fireball",
+            "School": "Evocation",
+            "Description": "A bright streak flashes from your pointing finger to a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Fly",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature.",
+            "Level": 3
+        },
+        {
+            "Name": "Gaseous Form",
+            "School": "Transmutation",
+            "Description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration.",
+            "Level": 3
+        },
+        {
+            "Name": "Haste",
+            "School": "Transmutation",
+            "Description": "Choose a willing creature that you can see within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Hypnotic Pattern",
+            "School": "Illusion",
+            "Description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Lightning Bolt",
+            "School": "Evocation",
+            "Description": "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose.",
+            "Level": 3
+        },
+        {
+            "Name": "Major Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube.",
+            "Level": 3
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
+            "Level": 3
+        },
+        {
+            "Name": "Sleet Storm",
+            "School": "Conjuration",
+            "Description": "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Slow",
+            "School": "Transmutation",
+            "Description": "You alter time around up to six creatures of your choice in a 40-foot cube within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Stinking Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears.",
+            "Level": 3
+        },
+        {
+            "Name": "Water Breathing",
+            "School": "Transmutation",
+            "Description": "This spell gives a maximum of ten willing creatures within range the ability to breathe underwater until the spell ends.",
+            "Level": 3
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground.",
+            "Level": 3
+        },
+        {
+            "Name": "Banishment",
+            "School": "Abjuration",
+            "Description": "You attempt to send one creature that you can see within range to another plane of existence.",
+            "Level": 4
+        },
+        {
+            "Name": "Blight",
+            "School": "Necromancy",
+            "Description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it.",
+            "Level": 4
+        },
+        {
+            "Name": "Confusion",
+            "School": "Enchantment",
+            "Description": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled actions.",
+            "Level": 4
+        },
+        {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Description": "You teleport yourself from your current location to any other spot within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Dominate Beast",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a beast that you can see within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Greater Invisibility",
+            "School": "Illusion",
+            "Description": "You or a creature you touch becomes invisible until the spell ends.",
+            "Level": 4
+        },
+        {
+            "Name": "Ice Storm",
+            "School": "Evocation",
+            "Description": "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Polymorph",
+            "School": "Transmutation",
+            "Description": "This spell transforms a creature that you can see within range into a new form.",
+            "Level": 4
+        },
+        {
+            "Name": "Stoneskin",
+            "School": "Abjuration",
+            "Description": "This spell turns the flesh of a willing creature you touch as hard as stone.",
+            "Level": 4
+        },
+        {
+            "Name": "Wall of Fire",
+            "School": "Evocation",
+            "Description": "You create a wall of fire on a solid surface within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Animate Objects",
+            "School": "Transmutation",
+            "Description": "Objects come to life at your command.",
+            "Level": 5
+        },
+        {
+            "Name": "Cloudkill",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Cone of Cold",
+            "School": "Evocation",
+            "Description": "A blast of cold air erupts from your hands.",
+            "Level": 5
+        },
+        {
+            "Name": "Creation",
+            "School": "Illusion",
+            "Description": "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Dominate Person",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a humanoid that you can see within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Insect Plague",
+            "School": "Conjuration",
+            "Description": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Seeming",
+            "School": "Illusion",
+            "Description": "This spell allows you to change the appearance of any number of creatures that you can see within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Telekinesis",
+            "School": "Transmutation",
+            "Description": "You gain the ability to move or manipulate creatures or objects by thought.",
+            "Level": 5
+        },
+        {
+            "Name": "Teleportation Circle",
+            "School": "Conjuration",
+            "Description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know.",
+            "Level": 5
+        },
+        {
+            "Name": "Wall of Stone",
+            "School": "Evocation",
+            "Description": "A nonmagical wall of solid stone springs into existence at a point you choose within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Chain Lightning",
+            "School": "Evocation",
+            "Description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range.",
+            "Level": 6
+        },
+        {
+            "Name": "Circle of Death",
+            "School": "Necromancy",
+            "Description": "A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range.",
+            "Level": 6
+        },
+        {
+            "Name": "Disintegrate",
+            "School": "Transmutation",
+            "Description": "A thin green ray springs from your pointing finger to a target that you can see within range.",
+            "Level": 6
+        },
+        {
+            "Name": "Eyebite",
+            "School": "Necromancy",
+            "Description": "For the spell's duration, your eyes become an inky void imbued with dread power.",
+            "Level": 6
+        },
+        {
+            "Name": "Globe of Invulnerability",
+            "School": "Abjuration",
+            "Description": "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you.",
+            "Level": 6
+        },
+        {
+            "Name": "Mass Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you.",
+            "Level": 6
+        },
+        {
+            "Name": "Move Earth",
+            "School": "Transmutation",
+            "Description": "Choose an area of terrain no larger than 40 feet on a side within range.",
+            "Level": 6
+        },
+        {
+            "Name": "Sunbeam",
+            "School": "Evocation",
+            "Description": "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-line.",
+            "Level": 6
+        },
+        {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are.",
+            "Level": 6
+        },
+        {
+            "Name": "Delayed Blast Fireball",
+            "School": "Evocation",
+            "Description": "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-line.",
+            "Level": 7
+        },
+        {
+            "Name": "Etherealness",
+            "School": "Transmutation",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are.",
+            "Level": 7
+        },
+        {
+            "Name": "Finger of Death",
+            "School": "Necromancy",
+            "Description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain.",
+            "Level": 7
+        },
+        {
+            "Name": "Fire Storm",
+            "School": "Evocation",
+            "Description": "A storm made up of sheets of roaring flame appears in a location you choose within range.",
+            "Level": 7
+        },
+        {
+            "Name": "Plane Shift",
+            "School": "Conjuration",
+            "Description": "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence.",
+            "Level": 7
+        },
+        {
+            "Name": "Prismatic Spray",
+            "School": "Evocation",
+            "Description": "Eight multicolored rays of light flash from your hand.",
+            "Level": 7
+        },
+        {
+            "Name": "Reverse Gravity",
+            "School": "Transmutation",
+            "Description": "This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range.",
+            "Level": 7
+        },
+        {
+            "Name": "Teleport",
+            "School": "Conjuration",
+            "Description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range.",
+            "Level": 7
+        },
+        {
+            "Name": "Dominate Monster",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a creature that you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Earthquake",
+            "School": "Evocation",
+            "Description": "You create a seismic disturbance at a point on the ground that you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Incendiary Cloud",
+            "School": "Conjuration",
+            "Description": "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded.",
+            "Level": 8
+        },
+        {
+            "Name": "Sunburst",
+            "School": "Evocation",
+            "Description": "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Gate",
+            "School": "Conjuration",
+            "Description": "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence.",
+            "Level": 9
+        },
+        {
+            "Name": "Meteor Swarm",
+            "School": "Evocation",
+            "Description": "Blazing orbs of fire plummet to the ground at four different points you can see within range.",
+            "Level": 9
+        },
+        {
+            "Name": "Power Word Kill",
+            "School": "Enchantment",
+            "Description": "You utter a word of power that can compel one creature you can see within range to die instantly.",
+            "Level": 9
+        },
+        {
+            "Name": "Time Stop",
+            "School": "Transmutation",
+            "Description": "You briefly stop the flow of time for everyone but yourself.",
+            "Level": 9
+        },
+        {
+            "Name": "Wish",
+            "School": "Conjuration",
+            "Description": "Desire is the most powerful spell a mortal creature can cast.",
+            "Level": 9
+        }
+    ]
+}

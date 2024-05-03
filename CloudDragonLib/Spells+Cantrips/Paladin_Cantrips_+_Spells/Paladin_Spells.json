@@ -1,0 +1,196 @@
+{
+    "PaladinSpells": [
+        {
+            "Name": "Bless",
+            "School": "Enchantment",
+            "Description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
+            "Level": 1
+        },
+        {
+            "Name": "Command",
+            "School": "Enchantment",
+            "Description": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn.",
+            "Level": 1
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Evil and Good",
+            "School": "Divination",
+            "Description": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Poison and Disease",
+            "School": "Divination",
+            "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you.",
+            "Level": 1
+        },
+        {
+            "Name": "Divine Favor",
+            "School": "Evocation",
+            "Description": "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
+            "Level": 1
+        },
+        {
+            "Name": "Heroism",
+            "School": "Enchantment",
+            "Description": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points at the start of each of its turns.",
+            "Level": 1
+        },
+        {
+            "Name": "Aid",
+            "School": "Abjuration",
+            "Description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.",
+            "Level": 2
+        },
+        {
+            "Name": "Branding Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike.",
+            "Level": 2
+        },
+        {
+            "Name": "Find Steed",
+            "School": "Conjuration",
+            "Description": "You summon a loyal steed that serves you as a mount, allowing you to travel at a fast pace.",
+            "Level": 2
+        },
+        {
+            "Name": "Lesser Restoration",
+            "School": "Abjuration",
+            "Description": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.",
+            "Level": 2
+        },
+        {
+            "Name": "Locate Object",
+            "School": "Divination",
+            "Description": "Describe or name an object that is familiar to you. You sense the direction to the object's location as long as that object is within 1,000 feet of you.",
+            "Level": 2
+        },
+        {
+            "Name": "Magic Weapon",
+            "School": "Transmutation",
+            "Description": "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls.",
+            "Level": 2
+        },
+        {
+            "Name": "Protection from Poison",
+            "School": "Abjuration",
+            "Description": "You touch a creature. If it is poisoned, you neutralize the poison.",
+            "Level": 2
+        },
+        {
+            "Name": "Zone of Truth",
+            "School": "Enchantment",
+            "Description": "You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Blinding Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with a bright light, and the attack deals an extra 3d8 radiant damage.",
+            "Level": 3
+        },
+        {
+            "Name": "Create Food and Water",
+            "School": "Conjuration",
+            "Description": "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours.",
+            "Level": 3
+        },
+        {
+            "Name": "Crusader's Mantle",
+            "School": "Evocation",
+            "Description": "Holy power radiates from you in an aura with a 30-foot radius, awakening boldness in friendly creatures. The aura moves with you, centered on you.",
+            "Level": 3
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends.",
+            "Level": 3
+        },
+        {
+            "Name": "Magic Circle",
+            "School": "Abjuration",
+            "Description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Aura of Life",
+            "School": "Abjuration",
+            "Description": "A life-affirming energy surrounds you, protecting your allies. Each non-hostile creature in the aura gains resistance to necrotic damage and cannot have its hit points reduced below 1.",
+            "Level": 4
+        },
+        {
+            "Name": "Aura of Purity",
+            "School": "Abjuration",
+            "Description": "The air shimmers with holy energy in a 30-foot radius around you. Affected creatures have advantage on saving throws against disease, poison, and the frightened condition.",
+            "Level": 4
+        },
+        {
+            "Name": "Aura of the Guardian",
+            "School": "Abjuration",
+            "Description": "When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage instead.",
+            "Level": 4
+        },
+        {
+            "Name": "Banishment",
+            "School": "Abjuration",
+            "Description": "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished.",
+            "Level": 4
+        },
+        {
+            "Name": "Death Ward",
+            "School": "Abjuration",
+            "Description": "You touch a creature and grant it a measure of protection from death. The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point and the spell ends.",
+            "Level": 4
+        },
+        {
+            "Name": "Banishing Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage.",
+            "Level": 5
+        },
+        {
+            "Name": "Circle of Power",
+            "School": "Abjuration",
+            "Description": "Divine energy radiates from you, providing protection to your allies. Creatures of your choice in the aura have advantage on saving throws against spells and other magical effects.",
+            "Level": 5
+        },
+        {
+            "Name": "Destructive Wave",
+            "School": "Evocation",
+            "Description": "You strike the ground with a mighty blow, creating a shockwave of energy. Each creature of your choice in a 30-foot radius must make a Constitution saving throw or take damage.",
+            "Level": 5
+        },
+        {
+            "Name": "Dispel Evil and Good",
+            "School": "Abjuration",
+            "Description": "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from other planes. Choose one of these creature types, and affected creatures have disadvantage on attack rolls against you.",
+            "Level": 5
+        },
+        {
+            "Name": "Geas",
+            "School": "Enchantment",
+            "Description": "You place a magical command on a creature you can see within range, forcing it to carry out some service or refrain from some action.",
+            "Level": 5
+        }
+    ]
+}

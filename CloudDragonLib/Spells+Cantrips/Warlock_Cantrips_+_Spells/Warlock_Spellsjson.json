@@ -1,0 +1,346 @@
+{
+    "WarlockSpells": [
+        {
+            "Name": "Charm Person",
+            "School": "Enchantment",
+            "Description": "You attempt to charm a humanoid you can see within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Comprehend Languages",
+            "School": "Divination",
+            "Description": "For the duration, you understand the literal meaning of any spoken language that you hear.",
+            "Level": 1
+        },
+        {
+            "Name": "Expeditious Retreat",
+            "School": "Transmutation",
+            "Description": "This spell allows you to move at an incredible pace.",
+            "Level": 1
+        },
+        {
+            "Name": "Hellish Rebuke",
+            "School": "Evocation",
+            "Description": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames.",
+            "Level": 1
+        },
+        {
+            "Name": "Illusory Script",
+            "School": "Illusion",
+            "Description": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion.",
+            "Level": 1
+        },
+        {
+            "Name": "Protection from Evil and Good",
+            "School": "Abjuration",
+            "Description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures.",
+            "Level": 1
+        },
+        {
+            "Name": "Unseen Servant",
+            "School": "Conjuration",
+            "Description": "This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command.",
+            "Level": 1
+        },
+        {
+            "Name": "Darkness",
+            "School": "Evocation",
+            "Description": "Magical darkness spreads from a point you choose within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Enthrall",
+            "School": "Enchantment",
+            "Description": "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw.",
+            "Level": 2
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "The target must succeed on a Wisdom saving throw or be paralyzed for the duration.",
+            "Level": 2
+        },
+        {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Description": "A creature you touch becomes invisible until the spell ends.",
+            "Level": 2
+        },
+        {
+            "Name": "Mirror Image",
+            "School": "Illusion",
+            "Description": "Three illusory duplicates of yourself appear in your space.",
+            "Level": 2
+        },
+        {
+            "Name": "Misty Step",
+            "School": "Conjuration",
+            "Description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
+            "Level": 2
+        },
+        {
+            "Name": "Ray of Enfeeblement",
+            "School": "Necromancy",
+            "Description": "A black beam of enervating energy springs from your finger toward a creature within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Shatter",
+            "School": "Evocation",
+            "Description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Spider Climb",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings.",
+            "Level": 2
+        },
+        {
+            "Name": "Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you.",
+            "Level": 2
+        },
+        {
+            "Name": "Counterspell",
+            "School": "Abjuration",
+            "Description": "You attempt to interrupt a creature in the process of casting a spell.",
+            "Level": 3
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends.",
+            "Level": 3
+        },
+        {
+            "Name": "Fear",
+            "School": "Illusion",
+            "Description": "You project a phantasmal image of a creature's worst fears.",
+            "Level": 3
+        },
+        {
+            "Name": "Fly",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration.",
+            "Level": 3
+        },
+        {
+            "Name": "Gaseous Form",
+            "School": "Transmutation",
+            "Description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud.",
+            "Level": 3
+        },
+        {
+            "Name": "Hypnotic Pattern",
+            "School": "Illusion",
+            "Description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Magic Circle",
+            "School": "Abjuration",
+            "Description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Major Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube.",
+            "Level": 3
+        },
+        {
+            "Name": "Remove Curse",
+            "School": "Abjuration",
+            "Description": "At your touch, all curses affecting one creature or object end.",
+            "Level": 3
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears.",
+            "Level": 3
+        },
+        {
+            "Name": "Vampiric Touch",
+            "School": "Necromancy",
+            "Description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds.",
+            "Level": 3
+        },
+        {
+            "Name": "Banishment",
+            "School": "Abjuration",
+            "Description": "You attempt to send one creature that you can see within range to another plane of existence.",
+            "Level": 4
+        },
+        {
+            "Name": "Blight",
+            "School": "Necromancy",
+            "Description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it.",
+            "Level": 4
+        },
+        {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Description": "You teleport yourself from your current location to any other spot within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Hallucinatory Terrain",
+            "School": "Illusion",
+            "Description": "You make natural terrain in a 150-foot cube in range look, sound, and even smell like some other sort of natural terrain.",
+            "Level": 4
+        },
+        {
+            "Name": "Contact Other Plane",
+            "School": "Divination",
+            "Description": "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane.",
+            "Level": 5
+        },
+        {
+            "Name": "Dream",
+            "School": "Illusion",
+            "Description": "This spell shapes a creature's dreams.",
+            "Level": 5
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Scrying",
+            "School": "Divination",
+            "Description": "You can see and hear a particular creature you choose that is on the same plane of existence as you.",
+            "Level": 5
+        },
+        {
+            "Name": "Circle of Death",
+            "School": "Necromancy",
+            "Description": "A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range.",
+            "Level": 6
+        },
+        {
+            "Name": "Conjure Fey",
+            "School": "Conjuration",
+            "Description": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower.",
+            "Level": 6
+        },
+        {
+            "Name": "Create Undead",
+            "School": "Necromancy",
+            "Description": "You can cast this spell only at night.",
+            "Level": 6
+        },
+        {
+            "Name": "Eyebite",
+            "School": "Necromancy",
+            "Description": "Each creature in a 60-foot cone must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration.",
+            "Level": 6
+        },
+        {
+            "Name": "Flesh to Stone",
+            "School": "Transmutation",
+            "Description": "You attempt to turn one creature that you can see within range into stone.",
+            "Level": 6
+        },
+        {
+            "Name": "Mass Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you.",
+            "Level": 6
+        },
+        {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are.",
+            "Level": 6
+        },
+        {
+            "Name": "Etherealness",
+            "School": "Transmutation",
+            "Description": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane.",
+            "Level": 7
+        },
+        {
+            "Name": "Finger of Death",
+            "School": "Necromancy",
+            "Description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain.",
+            "Level": 7
+        },
+        {
+            "Name": "Forcecage",
+            "School": "Evocation",
+            "Description": "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range.",
+            "Level": 7
+        },
+        {
+            "Name": "Plane Shift",
+            "School": "Conjuration",
+            "Description": "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence.",
+            "Level": 7
+        },
+        {
+            "Name": "Demiplane",
+            "School": "Conjuration",
+            "Description": "You create a shadowy door on a flat solid surface that you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Dominate Monster",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a creature that you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Feeblemind",
+            "School": "Enchantment",
+            "Description": "You blast the mind of a creature that you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Glibness",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15.",
+            "Level": 8
+        },
+        {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range.",
+            "Level": 8
+        },
+        {
+            "Name": "Astral Projection",
+            "School": "Necromancy",
+            "Description": "You and up to eight willing creatures within range project your astral bodies into the Astral Plane.",
+            "Level": 9
+        },
+        {
+            "Name": "Foresight",
+            "School": "Divination",
+            "Description": "You touch a willing creature and bestow a limited ability to see into the immediate future.",
+            "Level": 9
+        },
+        {
+            "Name": "Imprisonment",
+            "School": "Abjuration",
+            "Description": "You create a magical restraint to hold a creature that you can see within range.",
+            "Level": 9
+        },
+        {
+            "Name": "Power Word Kill",
+            "School": "Enchantment",
+            "Description": "You utter a word of power that can compel one creature you can see within range to die instantly.",
+            "Level": 9
+        },
+        {
+            "Name": "True Polymorph",
+            "School": "Transmutation",
+            "Description": "Choose one creature or nonmagical object that you can see within range.",
+            "Level": 9
+        }
+    ]
+}

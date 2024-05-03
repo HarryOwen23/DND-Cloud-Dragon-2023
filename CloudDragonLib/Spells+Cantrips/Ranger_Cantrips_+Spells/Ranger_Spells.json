@@ -1,0 +1,226 @@
+{
+    "RangerSpells": [
+        {
+            "Name": "Alarm",
+            "School": "Abjuration",
+            "Description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube.",
+            "Level": 1
+        },
+        {
+            "Name": "Animal Friendship",
+            "School": "Enchantment",
+            "Description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Poison and Disease",
+            "School": "Divination",
+            "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you.",
+            "Level": 1
+        },
+        {
+            "Name": "Fog Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of fog centered on a point within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Goodberry",
+            "School": "Transmutation",
+            "Description": "Up to ten berries appear in your hand and are infused with magic for the duration.",
+            "Level": 1
+        },
+        {
+            "Name": "Hunter's Mark",
+            "School": "Divination",
+            "Description": "You choose a creature you can see within range and mystically mark it as your quarry.",
+            "Level": 1
+        },
+        {
+            "Name": "Jump",
+            "School": "Transmutation",
+            "Description": "You touch a creature, and the creature's jump distance is tripled until the spell ends.",
+            "Level": 1
+        },
+        {
+            "Name": "Longstrider",
+            "School": "Transmutation",
+            "Description": "You touch a creature, and the target's speed increases by 10 feet until the spell ends.",
+            "Level": 1
+        },
+        {
+            "Name": "Speak with Animals",
+            "School": "Divination",
+            "Description": "You gain the ability to comprehend and verbally communicate with beasts for the duration.",
+            "Level": 1
+        },
+        {
+            "Name": "Animal Messenger",
+            "School": "Enchantment",
+            "Description": "You compel a Tiny beast to travel to a destination you choose and deliver a message.",
+            "Level": 2
+        },
+        {
+            "Name": "Barkskin",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance.",
+            "Level": 2
+        },
+        {
+            "Name": "Darkvision",
+            "School": "Transmutation",
+            "Description": "You touch a willing creature to grant it the ability to see in darkness.",
+            "Level": 2
+        },
+        {
+            "Name": "Find Traps",
+            "School": "Divination",
+            "Description": "You sense the presence of any trap within range that is within line of sight.",
+            "Level": 2
+        },
+        {
+            "Name": "Lesser Restoration",
+            "School": "Abjuration",
+            "Description": "You touch a creature and can end either one disease or one condition afflicting it.",
+            "Level": 2
+        },
+        {
+            "Name": "Locate Animals or Plants",
+            "School": "Divination",
+            "Description": "You describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles.",
+            "Level": 2
+        },
+        {
+            "Name": "Locate Object",
+            "School": "Divination",
+            "Description": "You sense the direction of an object's location as long as that object is within 1,000 feet of you.",
+            "Level": 2
+        },
+        {
+            "Name": "Pass without Trace",
+            "School": "Abjuration",
+            "Description": "A veil of shadows and silence radiates from you, masking you and your companions from detection.",
+            "Level": 2
+        },
+        {
+            "Name": "Protection from Poison",
+            "School": "Abjuration",
+            "Description": "You touch a creature. If it is poisoned, you neutralize the poison.",
+            "Level": 2
+        },
+        {
+            "Name": "Silence",
+            "School": "Illusion",
+            "Description": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Spike Growth",
+            "School": "Transmutation",
+            "Description": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns.",
+            "Level": 2
+        },
+        {
+            "Name": "Conjure Animals",
+            "School": "Conjuration",
+            "Description": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Daylight",
+            "School": "Evocation",
+            "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Nondetection",
+            "School": "Abjuration",
+            "Description": "For the duration, you hide a target that you touch from divination magic.",
+            "Level": 3
+        },
+        {
+            "Name": "Plant Growth",
+            "School": "Transmutation",
+            "Description": "This spell channels vitality into plants within a specific area.",
+            "Level": 3
+        },
+        {
+            "Name": "Protection from Energy",
+            "School": "Abjuration",
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice.",
+            "Level": 3
+        },
+        {
+            "Name": "Speak with Plants",
+            "School": "Transmutation",
+            "Description": "You imbue plants within 30 feet of you with limited sentience and animation.",
+            "Level": 3
+        },
+        {
+            "Name": "Water Breathing",
+            "School": "Transmutation",
+            "Description": "This spell gives a creature the ability to breathe underwater.",
+            "Level": 3
+        },
+        {
+            "Name": "Water Walk",
+            "School": "Transmutation",
+            "Description": "This spell grants the ability to move across any liquid surface, such as water, acid, mud, snow, quicksand, or lava.",
+            "Level": 3
+        },
+        {
+            "Name": "Wind Wall",
+            "School": "Evocation",
+            "Description": "A wall of strong wind rises from the ground at a point you choose within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Conjure Woodland Beings",
+            "School": "Conjuration",
+            "Description": "You summon fey creatures that appear in unoccupied spaces that you can see within range.",
+            "Level": 4
+        },
+        {
+            "Name": "Freedom of Movement",
+            "School": "Abjuration",
+            "Description": "The target can freely move and ignore difficult terrain, and magical effects can't reduce the target's speed or cause the target to be restrained.",
+            "Level": 4
+        },
+        {
+            "Name": "Locate Creature",
+            "School": "Divination",
+            "Description": "You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you.",
+            "Level": 4
+        },
+        {
+            "Name": "Stoneskin",
+            "School": "Abjuration",
+            "Description": "You touch a creature and grant it resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+            "Level": 4
+        },
+        {
+            "Name": "Commune with Nature",
+            "School": "Divination",
+            "Description": "You briefly become one with nature and gain knowledge of the surrounding territory.",
+            "Level": 5
+        },
+        {
+            "Name": "Tree Stride",
+            "School": "Conjuration",
+            "Description": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet.",
+            "Level": 5
+        }
+    ]
+}
