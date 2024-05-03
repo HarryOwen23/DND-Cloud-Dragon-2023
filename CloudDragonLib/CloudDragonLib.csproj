@@ -554,121 +554,16 @@
     <None Update="Equipment\Equipment_Usable_Items.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Magical Items\Magical_Items_Common.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Artifact.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Legendary.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Rare.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Uncommon.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Unique.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Unknown.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Magical Items\Magical_Items_Very_Rare.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Poisons\Poisons.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_1_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_2_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_3_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_4_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_5_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_6_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_7_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_8_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Level_9_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_1_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_2_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_3_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_4_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_5_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_6_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_7_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_8_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Level_9_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Cantrips.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_1_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_2_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_3_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_4_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_5_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_6_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_7_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_8_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Level_9_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Cantrips.json">

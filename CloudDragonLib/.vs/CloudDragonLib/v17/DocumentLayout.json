@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\magical items\\magical_items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:magical items\\magical_items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\magical items\\magical_items_artifact.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:magical items\\magical_items_artifact.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\spells\u002Bcantrips\\druid_cantrips_\u002B_spells\\druid_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:spells\u002Bcantrips\\druid_cantrips_\u002B_spells\\druid_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Magical_Items_Artifact.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Magical Items\\Magical_Items_Artifact.json",
-              "RelativeDocumentMoniker": "Magical Items\\Magical_Items_Artifact.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Magical Items\\Magical_Items_Artifact.json",
-              "RelativeToolTip": "Magical Items\\Magical_Items_Artifact.json",
-              "ViewState": "AQIAAMQAAAAAAAAAAAAhwNkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-03T12:53:21.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Magical_Items.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Magical Items\\Magical_Items.json",
-              "RelativeDocumentMoniker": "Magical Items\\Magical_Items.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Magical Items\\Magical_Items.json",
-              "RelativeToolTip": "Magical Items\\Magical_Items.json",
-              "ViewState": "AQIAAE4UAAAAAAAAAAAhwGcUAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-03T08:58:00.856Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -61,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Druid_Spells.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Druid_Cantrips_\u002B_Spells\\Druid_Spells.json",
+              "RelativeDocumentMoniker": "Spells\u002BCantrips\\Druid_Cantrips_\u002B_Spells\\Druid_Spells.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Druid_Cantrips_\u002B_Spells\\Druid_Spells.json",
+              "RelativeToolTip": "Spells\u002BCantrips\\Druid_Cantrips_\u002B_Spells\\Druid_Spells.json",
+              "ViewState": "AQIAADYCAAAAAAAAAAAAAD4CAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-03T15:52:15.636Z",
+              "EditorCaption": ""
             }
           ]
         }

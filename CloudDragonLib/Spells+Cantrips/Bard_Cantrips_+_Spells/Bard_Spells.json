@@ -1,0 +1,622 @@
+﻿{
+    "BardSpells": [
+        {
+            "Name": "Animal Friendship",
+            "School": "Enchantment",
+            "Description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range, and it must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration.",
+            "Level": 1
+        },
+        {
+            "Name": "Bane",
+            "School": "Enchantment",
+            "Description": "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
+            "Level": 1
+        },
+        {
+            "Name": "Charm Person",
+            "School": "Enchantment",
+            "Description": "You attempt to charm a humanoid you can see within range. The target must make a Wisdom saving throw, and it does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it.",
+            "Level": 1
+        },
+        {
+            "Name": "Comprehend Languages",
+            "School": "Divination",
+            "Description": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written.",
+            "Level": 1
+        },
+        {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+            "Level": 1
+        },
+        {
+            "Name": "Detect Magic",
+            "School": "Divination",
+            "Description": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
+            "Level": 1
+        },
+        {
+            "Name": "Disguise Self",
+            "School": "Illusion",
+            "Description": "You make yourself--including your clothing, armor, weapons, and other belongings on your person--look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs.",
+            "Level": 1
+        },
+        {
+            "Name": "Faerie Fire",
+            "School": "Evocation",
+            "Description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.",
+            "Level": 1
+        },
+        {
+            "Name": "Feather Fall",
+            "School": "Transmutation",
+            "Description": "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
+            "Level": 1
+        },
+        {
+            "Name": "Healing Word",
+            "School": "Evocation",
+            "Description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+            "Level": 1
+        },
+        {
+            "Name": "Heroism",
+            "School": "Enchantment",
+            "Description": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns.",
+            "Level": 1
+        },
+        {
+            "Name": "Hideous Laughter",
+            "School": "Enchantment",
+            "Description": "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration.",
+            "Level": 1
+        },
+        {
+            "Name": "Identify",
+            "School": "Divination",
+            "Description": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are.",
+            "Level": 1
+        },
+        {
+            "Name": "Illusory Script",
+            "School": "Illusion",
+            "Description": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text.",
+            "Level": 1
+        },
+        {
+            "Name": "Longstrider",
+            "School": "Transmutation",
+            "Description": "You touch a creature. The target's speed increases by 10 feet until the spell ends.",
+            "Level": 1
+        },
+        {
+            "Name": "Silent Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted.",
+            "Level": 1
+        },
+        {
+            "Name": "Sleep",
+            "School": "Enchantment",
+            "Description": "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).",
+            "Level": 1
+        },
+        {
+            "Name": "Speak with Animals",
+            "School": "Divination",
+            "Description": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day.",
+            "Level": 1
+        },
+        {
+            "Name": "Thunderwave",
+            "School": "Evocation",
+            "Description": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.",
+            "Level": 1
+        },
+        {
+            "Name": "Unseen Servant",
+            "School": "Conjuration",
+            "Description": "This spell creates an invisible, mindless, shapeless, and spectral force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range.",
+            "Level": 1
+        },
+        {
+            "Name": "Animal Messenger",
+            "School": "Enchantment",
+            "Description": "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as 'a man or woman dressed in the uniform of the town guard' or 'a red-haired dwarf wearing a pointed hat.'",
+            "Level": 2
+        },
+        {
+            "Name": "Blindness/Deafness",
+            "School": "Necromancy",
+            "Description": "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.",
+            "Level": 2
+        },
+        {
+            "Name": "Calm Emotions",
+            "School": "Enchantment",
+            "Description": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes.",
+            "Level": 2
+        },
+        {
+            "Name": "Detect Thoughts",
+            "School": "Divination",
+            "Description": "For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you.",
+            "Level": 2
+        },
+        {
+            "Name": "Enhance Ability",
+            "School": "Transmutation",
+            "Description": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.",
+            "Level": 2
+        },
+        {
+            "Name": "Enthrall",
+            "School": "Enchantment",
+            "Description": "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw.",
+            "Level": 2
+        },
+        {
+            "Name": "Heat Metal",
+            "School": "Transmutation",
+            "Description": "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot.",
+            "Level": 2
+        },
+        {
+            "Name": "Hold Person",
+            "School": "Enchantment",
+            "Description": "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration.",
+            "Level": 2
+        },
+        {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Description": "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
+            "Level": 2
+        },
+        {
+            "Name": "Knock",
+            "School": "Transmutation",
+            "Description": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
+            "Level": 2
+        },
+        {
+            "Name": "Lesser Restoration",
+            "School": "Abjuration",
+            "Description": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.",
+            "Level": 2
+        },
+        {
+            "Name": "Locate Animals or Plants",
+            "School": "Divination",
+            "Description": "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+            "Level": 2
+        },
+        {
+            "Name": "Locate Object",
+            "School": "Divination",
+            "Description": "Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you.",
+            "Level": 2
+        },
+        {
+            "Name": "Magic Mouth",
+            "School": "Illusion",
+            "Description": "You implant a message within an object in range, a message that is uttered when a trigger condition is met.",
+            "Level": 2
+        },
+        {
+            "Name": "See Invisibility",
+            "School": "Divination",
+            "Description": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane.",
+            "Level": 2
+        },
+        {
+            "Name": "Shatter",
+            "School": "Evocation",
+            "Description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one.",
+            "Level": 2
+        },
+        {
+            "Name": "Silence",
+            "School": "Illusion",
+            "Description": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you.",
+            "Level": 2
+        },
+        {
+            "Name": "Zone of Truth",
+            "School": "Enchantment",
+            "Description": "You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range.",
+            "Level": 2
+        },
+        {
+            "Name": "Bestow Curse",
+            "School": "Necromancy",
+            "Description": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options.",
+            "Level": 3
+        },
+        {
+            "Name": "Clairvoyance",
+            "School": "Divination",
+            "Description": "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees).",
+            "Level": 3
+        },
+        {
+            "Name": "Dispel Magic",
+            "School": "Abjuration",
+            "Description": "Choose any creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability.",
+            "Level": 3
+        },
+        {
+            "Name": "Fear",
+            "School": "Illusion",
+            "Description": "You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.",
+            "Level": 3
+        },
+        {
+            "Name": "Glyph of Warding",
+            "School": "Abjuration",
+            "Description": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph.",
+            "Level": 3
+        },
+        {
+            "Name": "Hypnotic Pattern",
+            "School": "Illusion",
+            "Description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes.",
+            "Level": 3
+        },
+        {
+            "Name": "Major Image",
+            "School": "Illusion",
+            "Description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration.",
+            "Level": 3
+        },
+        {
+            "Name": "Nondetection",
+            "School": "Abjuration",
+            "Description": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension.",
+            "Level": 3
+        },
+        {
+            "Name": "Plant Growth",
+            "School": "Transmutation",
+            "Description": "This spell channels vitality into plants within a specific area. There are two possible uses for the spell, granting either immediate or long-term benefits.",
+            "Level": 3
+        },
+        {
+            "Name": "Sending",
+            "School": "Evocation",
+            "Description": "You send a short message of twenty-five words or less to a creature with which you are familiar.",
+            "Level": 3
+        },
+        {
+            "Name": "Speak with Dead",
+            "School": "Necromancy",
+            "Description": "You grant the semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can't be undead.",
+            "Level": 3
+        },
+        {
+            "Name": "Speak with Plants",
+            "School": "Transmutation",
+            "Description": "You imbue plants within 30 feet of you with limited sentience and animation, giving them the ability to communicate with you and follow simple commands.",
+            "Level": 3
+        },
+        {
+            "Name": "Stinking Cloud",
+            "School": "Conjuration",
+            "Description": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners and is heavily obscured.",
+            "Level": 3
+        },
+        {
+            "Name": "Tiny Hut",
+            "School": "Evocation",
+            "Description": "A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.",
+            "Level": 3
+        },
+        {
+            "Name": "Tongues",
+            "School": "Divination",
+            "Description": "This spell grants the creature you touch the ability to understand any spoken language it hears.",
+            "Level": 3
+        },
+        {
+            "Name": "Compulsion",
+            "School": "Enchantment",
+            "Description": "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed.",
+            "Level": 4
+        },
+        {
+            "Name": "Confusion",
+            "School": "Enchantment",
+            "Description": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action.",
+            "Level": 4
+        },
+        {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Description": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired.",
+            "Level": 4
+        },
+        {
+            "Name": "Freedom of Movement",
+            "School": "Abjuration",
+            "Description": "For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.",
+            "Level": 4
+        },
+        {
+            "Name": "Greater Invisibility",
+            "School": "Illusion",
+            "Description": "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
+            "Level": 4
+        },
+        {
+            "Name": "Hallucinatory Terrain",
+            "School": "Illusion",
+            "Description": "You make natural terrain in a 150-foot cube in range look, sound, and even smell like some other sort of natural terrain.",
+            "Level": 4
+        },
+        {
+            "Name": "Locate Creature",
+            "School": "Divination",
+            "Description": "Describe or name a creature that is familiar to you. The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once.",
+            "Level": 4
+        },
+        {
+            "Name": "Polymorph",
+            "School": "Transmutation",
+            "Description": "This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect.",
+            "Level": 4
+        },
+        {
+            "Name": "Animate Objects",
+            "School": "Transmutation",
+            "Description": "Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, and Huge targets count as eight objects.",
+            "Level": 5
+        },
+        {
+            "Name": "Awaken",
+            "School": "Transmutation",
+            "Description": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant.",
+            "Level": 5
+        },
+        {
+            "Name": "Dominate Person",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration.",
+            "Level": 5
+        },
+        {
+            "Name": "Dream",
+            "School": "Illusion",
+            "Description": "This spell shapes a creature's dreams. Choose a creature known to you as the target of this spell.",
+            "Level": 5
+        },
+        {
+            "Name": "Geas",
+            "School": "Enchantment",
+            "Description": "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide.",
+            "Level": 5
+        },
+        {
+            "Name": "Greater Restoration",
+            "School": "Abjuration",
+            "Description": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one of the following effects on the target.",
+            "Level": 5
+        },
+        {
+            "Name": "Hold Monster",
+            "School": "Enchantment",
+            "Description": "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration.",
+            "Level": 5
+        },
+        {
+            "Name": "Legend Lore",
+            "School": "Divination",
+            "Description": "Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named.",
+            "Level": 5
+        },
+        {
+            "Name": "Mass Cure Wounds",
+            "School": "Evocation",
+            "Description": "A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point.",
+            "Level": 5
+        },
+        {
+            "Name": "Mislead",
+            "School": "Illusion",
+            "Description": "You become invisible at the same time that an illusory double of you appears where you are standing.",
+            "Level": 5
+        },
+        {
+            "Name": "Modify Memory",
+            "School": "Enchantment",
+            "Description": "You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw.",
+            "Level": 5
+        },
+        {
+            "Name": "Planar Binding",
+            "School": "Abjuration",
+            "Description": "With this spell, you attempt to bind a celestial, an elemental, a fey, or a fiend to your service.",
+            "Level": 5
+        },
+        {
+            "Name": "Raise Dead",
+            "School": "Necromancy",
+            "Description": "You return a dead creature you touch to life, provided that it has been dead no longer than 10 days.",
+            "Level": 5
+        },
+        {
+            "Name": "Scrying",
+            "School": "Divination",
+            "Description": "You can see and hear a particular creature you choose that is on the same plane of existence as you.",
+            "Level": 5
+        },
+        {
+            "Name": "Seeming",
+            "School": "Illusion",
+            "Description": "This spell allows you to change the appearance of any number of creatures that you can see within range.",
+            "Level": 5
+        },
+        {
+            "Name": "Teleportation Circle",
+            "School": "Conjuration",
+            "Description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you.",
+            "Level": 5
+        },
+        {
+            "Name": "Eyebite",
+            "School": "Necromancy",
+            "Description": "For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration.",
+            "Level": 6
+        },
+        {
+            "Name": "Find the Path",
+            "School": "Divination",
+            "Description": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence.",
+            "Level": 6
+        },
+        {
+            "Name": "Guards and Wards",
+            "School": "Abjuration",
+            "Description": "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares).",
+            "Level": 6
+        },
+        {
+            "Name": "Irresistible Dance",
+            "School": "Enchantment",
+            "Description": "You create an illusory dance that forces the target to make a Wisdom saving throw.",
+            "Level": 6
+        },
+        {
+            "Name": "Mass Suggestion",
+            "School": "Enchantment",
+            "Description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you.",
+            "Level": 6
+        },
+        {
+            "Name": "Programmed Illusion",
+            "School": "Illusion",
+            "Description": "You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs.",
+            "Level": 6
+        },
+        {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has true sight, notices secret doors hidden by magic, and can see into the Ethereal Plane.",
+            "Level": 6
+        },
+        {
+            "Name": "Arcane Sword",
+            "School": "Evocation",
+            "Description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
+            "Level": 7
+        },
+        {
+            "Name": "Etherealness",
+            "School": "Transmutation",
+            "Description": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell.",
+            "Level": 7
+        },
+        {
+            "Name": "Forcecage",
+            "School": "Evocation",
+            "Description": "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range.",
+            "Level": 7
+        },
+        {
+            "Name": "Magnificent Mansion",
+            "School": "Conjuration",
+            "Description": "You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located.",
+            "Level": 7
+        },
+        {
+            "Name": "Mirage Arcane",
+            "School": "Illusion",
+            "Description": "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain.",
+            "Level": 7
+        },
+        {
+            "Name": "Project Image",
+            "School": "Illusion",
+            "Description": "You create an illusory duplicate of yourself that lasts for the duration.",
+            "Level": 7
+        },
+        {
+            "Name": "Regenerate",
+            "School": "Transmutation",
+            "Description": "You touch a creature and stimulate its natural healing ability. The target regains 4d8 + 15 hit points.",
+            "Level": 7
+        },
+        {
+            "Name": "Resurrection",
+            "School": "Necromancy",
+            "Description": "You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead.",
+            "Level": 7
+        },
+        {
+            "Name": "Symbol",
+            "School": "Abjuration",
+            "Description": "When you cast this spell, you inscribe a harmful glyph either on a surface (such as a section of floor, a wall, or a table) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph.",
+            "Level": 7
+        },
+        {
+            "Name": "Teleport",
+            "School": "Conjuration",
+            "Description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select.",
+            "Level": 7
+        },
+        {
+            "Name": "Dominate Monster",
+            "School": "Enchantment",
+            "Description": "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration.",
+            "Level": 8
+        },
+        {
+            "Name": "Feeblemind",
+            "School": "Enchantment",
+            "Description": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality.",
+            "Level": 8
+        },
+        {
+            "Name": "Glibness",
+            "School": "Transmutation",
+            "Description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15."
+        },
+        {
+            "Name": "Mind Blank",
+            "School": "Abjuration",
+            "Description": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition.",
+            "Level": 8
+        },
+        {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is stunned.",
+            "Level": 8
+        },
+        {
+            "Name": "Foresight",
+            "School": "Divination",
+            "Description": "You touch a willing creature and bestow a limited ability to see into the immediate future.",
+            "Level": 9
+        },
+        {
+            "Name": "Power Word Kill",
+            "School": "Enchantment",
+            "Description": "You utter a word of power that can compel one creature you can see within range to die instantly. If the creature you choose has 100 hit points or fewer, it dies.",
+            "Level": 9
+        },
+        {
+            "Name": "True Polymorph",
+            "School": "Transmutation",
+            "Description": "Choose one creature or non-magical object that you can see within range. You transform the creature into a different creature or object of your choice.",
+            "Level": 9
+        }
+
+    ]
+}
