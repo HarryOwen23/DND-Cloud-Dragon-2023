@@ -16,6 +16,9 @@ namespace CloudDragon
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
+
+        [JsonPropertyName("Level")]
+        public int Level { get; set; }
     }
 
     public class RangerSpellcategory
@@ -78,20 +81,9 @@ namespace CloudDragon
         {
             Console.WriteLine("Loading Ranger Spell Data");
             // Define paths to the Ranger spell Json files
-            string jsonFilePathRangerLevel1 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Level_1_Spells.json";
-            string jsonFilePathRangerLevel2 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Level_2_Spells.json";
-            string jsonFilePathRangerLevel3 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Level_3_Spells.json";
-            string jsonFilePathRangerLevel4 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Level_4_Spells.json";
-            string jsonFilePathRangerLevel5 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Level_5_Spells.json";
-
+            string jsonFilePathRangerLevel1 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Spells.json";
 
             var level1rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel1);
-            var level2rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel2);
-            var level3rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel3);
-            var level4rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel4);
-            var level5rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel5);
-
-
 
             // Display the data for Level 1 spells
             if (level1rangerspells != null && level1rangerspells.SpellCategories != null)
@@ -100,46 +92,6 @@ namespace CloudDragon
                 foreach (var rangerSpell1 in level1rangerspells.SpellCategories)
                 {
                     Console.WriteLine($"- Name: {rangerSpell1.Name}, School: {rangerSpell1.School}, Description: {rangerSpell1.Description} ");
-                }
-            }
-
-            // Display the data for Level 2 spells
-            if (level2rangerspells != null && level2rangerspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 2 Ranger Spells:");
-                foreach (var rangerSpell2 in level2rangerspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {rangerSpell2.Name}, School: {rangerSpell2.School}, Description: {rangerSpell2.Description} ");
-                }
-            }
-
-            // Display the data for Level 3 spells
-            if (level3rangerspells != null && level3rangerspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 3 Ranger Spells:");
-                foreach (var rangerSpell3 in level3rangerspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {rangerSpell3.Name}, School: {rangerSpell3.School}, Description: {rangerSpell3.Description} ");
-                }
-            }
-
-            // Display the data for Level 4 spells
-            if (level4rangerspells != null && level4rangerspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 4 Ranger Spells:");
-                foreach (var rangerSpell4 in level4rangerspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {rangerSpell4.Name}, School: {rangerSpell4.School}, Description: {rangerSpell4.Description} ");
-                }
-            }
-
-            // Display the data for Level 5 spells
-            if (level5rangerspells != null && level5rangerspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 5 Ranger Spells:");
-                foreach (var rangerSpell5 in level5rangerspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {rangerSpell5.Name}, School: {rangerSpell5.School} , Description:  {rangerSpell5.Description} ");
                 }
             }
         }

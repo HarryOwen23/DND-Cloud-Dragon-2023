@@ -3,8 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\spells\u002Bcantrips\\warlock_cantrips_\u002B_spells\\warlock_spellsjson.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:spells\u002Bcantrips\\warlock_cantrips_\u002B_spells\\warlock_spellsjson.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\paladin_spell\u002Bcantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\ranger_spell\u002Bcantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\druid_spell_\u002B_cantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +19,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +39,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ranger_Spell\u002BCantrips_Json_Loader.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
+              "RelativeDocumentMoniker": "..\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
+              "RelativeToolTip": "..\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T16:29:03.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Warlock_Spellsjson.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Warlock_Cantrips_\u002B_Spells\\Warlock_Spellsjson.json",
-              "RelativeDocumentMoniker": "Spells\u002BCantrips\\Warlock_Cantrips_\u002B_Spells\\Warlock_Spellsjson.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Warlock_Cantrips_\u002B_Spells\\Warlock_Spellsjson.json",
-              "RelativeToolTip": "Spells\u002BCantrips\\Warlock_Cantrips_\u002B_Spells\\Warlock_Spellsjson.json",
-              "ViewState": "AQIAADgBAAAAAAAAAAAAAFcBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-03T16:19:43.488Z",
+              "Title": "Paladin_Spell\u002BCantrips_Json_Loader.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
+              "RelativeDocumentMoniker": "..\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
+              "RelativeToolTip": "..\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAADgvzAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T16:27:38.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
+              "RelativeDocumentMoniker": "..\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
+              "RelativeToolTip": "..\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
+              "ViewState": "AQIAALYAAAAAAAAAAAAqwMMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T16:25:44.878Z",
               "EditorCaption": ""
             }
           ]

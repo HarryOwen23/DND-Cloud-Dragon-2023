@@ -45,6 +45,9 @@ namespace CloudDragon
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
+
+        [JsonPropertyName("Level")]
+        public int Level { get; set; }
     }
 
     public class PaladinCantripcategory
@@ -184,19 +187,9 @@ namespace CloudDragon
         {
             Console.WriteLine("Loading Bard Spell Data");
             // Define paths to the Paladin spell Json files
-            string jsonFilePathPaladinLevel1 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_1_Spells.json";
-            string jsonFilePathPaladinLevel2 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_2_Spells.json";
-            string jsonFilePathPaladinLevel3 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_3_Spells.json";
-            string jsonFilePathPaladinLevel4 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_4_Spells.json";
-            string jsonFilePathPaladinLevel5 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Level_5_Spells.json";
-
+            string jsonFilePathPaladinLevel1 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Spells.json";
 
             var level1paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel1);
-            var level2paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel2);
-            var level3paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel3);
-            var level4paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel4);
-            var level5paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel5);
-
 
 
             // Display the data for Level 1 spells
@@ -205,49 +198,10 @@ namespace CloudDragon
                 Console.WriteLine("Level 1 Paladin Spells:");
                 foreach (var paladinSpell1 in level1paladinspells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {paladinSpell1.Name}, School: {paladinSpell1.School}, Description: {paladinSpell1.Description} ");
+                    Console.WriteLine($"- Name: {paladinSpell1.Name}, School: {paladinSpell1.School}, Description: {paladinSpell1.Description}, Level: {paladinSpell1.Level} ");
                 }
             }
 
-            // Display the data for Level 2 spells
-            if (level2paladinspells != null && level2paladinspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 2 Paladin Spells:");
-                foreach (var paladinSpell2 in level2paladinspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {paladinSpell2.Name}, School: {paladinSpell2.School}, Description: {paladinSpell2.Description} ");
-                }
-            }
-
-            // Display the data for Level 3 spells
-            if (level3paladinspells != null && level3paladinspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 3 Paladin Spells:");
-                foreach (var paladinSpell3 in level3paladinspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {paladinSpell3.Name}, School: {paladinSpell3.School}, Description: {paladinSpell3.Description} ");
-                }
-            }
-
-            // Display the data for Level 4 spells
-            if (level4paladinspells != null && level4paladinspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 4 Paladin Spells:");
-                foreach (var paladinSpell4 in level4paladinspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {paladinSpell4.Name}, School: {paladinSpell4.School}, Description: {paladinSpell4.Description} ");
-                }
-            }
-
-            // Display the data for Level 5 spells
-            if (level5paladinspells != null && level5paladinspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 5 Paladin Spells:");
-                foreach (var paladinSpell5 in level5paladinspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {paladinSpell5.Name}, School: {paladinSpell5.School}, Description: {paladinSpell5.Description} ");
-                }
-            }
         }
     }
 }
