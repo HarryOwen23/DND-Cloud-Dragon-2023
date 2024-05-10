@@ -578,33 +578,6 @@
     <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_1_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_2_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_3_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_4_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_5_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_6_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_7_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_8_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Level_9_Spells.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Tools\Tools_Alchemist%27s_Supplies.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

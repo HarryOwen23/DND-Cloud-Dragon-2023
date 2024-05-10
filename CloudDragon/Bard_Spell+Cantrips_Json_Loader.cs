@@ -45,6 +45,9 @@ namespace CloudDragon
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
+
+        [JsonPropertyName("Level")]
+        public int Level { get; set; }
     }
 
     public class BardCantripcategory
@@ -186,115 +189,26 @@ namespace CloudDragon
             Console.WriteLine($"Level {spellLevel} Bard Spells:");
             foreach (var bardSpell in spellCategories)
             {
-                Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description} ");
+                Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description}, Level: {bardSpell.Level} ");
             }
         }
         void ILoader.Load()
         {
             Console.WriteLine("Loading Bard Spell Data");
-            string jsonFilePathBardSpellsLevel1 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_1_Spells.json";
-            string jsonFilePathBardSpellsLevel2 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_2_Spells.json";
-            string jsonFilePathBardSpellsLevel3 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_3_Spells.json";
-            string jsonFilePathBardSpellsLevel4 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_4_Spells.json";
-            string jsonFilePathBardSpellsLevel5 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_5_Spells.json";
-            string jsonFilePathBardSpellsLevel6 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_6_Spells.json";
-            string jsonFilePathBardSpellsLevel7 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_7_Spells.json";
-            string jsonFilePathBardSpellsLevel8 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_8_Spells.json";
-            string jsonFilePathBardSpellsLevel9 = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Level_9_Spells.json";
+            string jsonFilePathBardSpells = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Spells.json";
 
             // Load the bard spell data using the Bard spell JsonLoader
-            var bardLevel1Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel1);
-            var bardLevel2Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel2);
-            var bardLevel3Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel3);
-            var bardLevel4Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel4);
-            var bardLevel5Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel5);
-            var bardLevel6Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel6);
-            var bardLevel7Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel7);
-            var bardLevel8Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel8);
-            var bardLevel9Spells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpellsLevel9);
+            var bardSpells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpells);
 
-            if (bardLevel1Spells != null && bardLevel1Spells.SpellCategories != null)
+            if (bardSpells != null && bardSpells.SpellCategories != null)
             {
-                Console.WriteLine("Level 1 Bard Spells:");
-                foreach (var spell in bardLevel1Spells.SpellCategories)
+                Console.WriteLine("Bard Spells:");
+                foreach (var spell in bardSpells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
                 }
             }
-
-            if (bardLevel2Spells != null && bardLevel2Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 2 Bard Spells:");
-                foreach (var spell in bardLevel2Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel3Spells != null && bardLevel3Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 3 Bard Spells:");
-                foreach (var spell in bardLevel3Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel4Spells != null && bardLevel4Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 4 Bard Spells:");
-                foreach (var spell in bardLevel4Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel5Spells != null && bardLevel5Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 5 Bard Spells:");
-                foreach (var spell in bardLevel5Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel6Spells != null && bardLevel6Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 6 Bard Spells:");
-                foreach (var spell in bardLevel6Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel7Spells != null && bardLevel7Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 7 Bard Spells:");
-                foreach (var spell in bardLevel7Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel8Spells != null && bardLevel8Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 8 Bard Spells:");
-                foreach (var spell in bardLevel8Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
-            if (bardLevel9Spells != null && bardLevel9Spells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 9 Bard Spells:");
-                foreach (var spell in bardLevel9Spells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}");
-                }
-            }
-
         }
-        
+
     }
 }
