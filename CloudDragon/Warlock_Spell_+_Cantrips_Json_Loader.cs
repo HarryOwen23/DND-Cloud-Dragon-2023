@@ -46,6 +46,9 @@ namespace CloudDragon
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
+
+        [JsonPropertyName("Level")]
+        public int Level { get; set; }
     }
 
     public class WarlockCantripcategory
@@ -185,25 +188,10 @@ namespace CloudDragon
         {
             Console.WriteLine("Loading Warlock Spell Data");
             // Define paths to the Warlock spell Json files
-            string jsonFilePathWarlockLevel1 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_1_Spells.json";
-            string jsonFilePathWarlockLevel2 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_2_Spells.json";
-            string jsonFilePathWarlockLevel3 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_3_Spells.json";
-            string jsonFilePathWarlockLevel4 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_4_Spells.json";
-            string jsonFilePathWarlockLevel5 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_5_Spells.json";
-            string jsonFilePathWarlockLevel6 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_6_Spells.json";
-            string jsonFilePathWarlockLevel7 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_7_Spells.json";
-            string jsonFilePathWarlockLevel8 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_8_Spells.json";
-            string jsonFilePathWarlockLevel9 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Level_9_Spells.json";
+            string jsonFilePathWarlockLevel1 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Spells.json";
+            
 
             var level1warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel1);
-            var level2warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel2);
-            var level3warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel3);
-            var level4warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel4);
-            var level5warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel5);
-            var level6warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel6);
-            var level7warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel7);
-            var level8warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel8);
-            var level9warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel9);
 
 
             // Display the data for Level 1 spells
@@ -212,87 +200,7 @@ namespace CloudDragon
                 Console.WriteLine("Level 1 Warlock Spells:");
                 foreach (var warlockSpell1 in level1warlockspells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {warlockSpell1.Name}, School: {warlockSpell1.School}, Description: {warlockSpell1.Description} ");
-                }
-            }
-
-            // Display the data for Level 2 spells
-            if (level2warlockspells != null && level2warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 2 Warlock Spells:");
-                foreach (var warlockSpell2 in level2warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell2.Name}, School: {warlockSpell2.School}, Description: {warlockSpell2.Description} ");
-                }
-            }
-
-            // Display the data for Level 3 spells
-            if (level3warlockspells != null && level3warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 3 Warlock Spells:");
-                foreach (var warlockSpell3 in level3warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell3.Name}, School: {warlockSpell3.School} , Description:  {warlockSpell3.Description} ");
-                }
-            }
-
-            // Display the data for Level 4 spells
-            if (level4warlockspells != null && level4warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 4 Warlock Spells:");
-                foreach (var warlockSpell4 in level4warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell4.Name}, School: {warlockSpell4.School}, Description: {warlockSpell4.Description} ");
-                }
-            }
-
-            // Display the data for Level 5 spells
-            if (level5warlockspells != null && level5warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 5 Warlock Spells:");
-                foreach (var warlockSpell5 in level5warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell5.Name}, School: {warlockSpell5.School} , Description:  {warlockSpell5.Description} ");
-                }
-            }
-
-            // Display the data for Level 6 spells
-            if (level6warlockspells != null && level6warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 6 Warlock Spells:");
-                foreach (var warlockSpell6 in level6warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell6.Name}, School: {warlockSpell6.School}  , Description:   {warlockSpell6.Description} ");
-                }
-            }
-
-            // Display the data for Level 7 spells
-            if (level7warlockspells != null && level7warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 7 Warlock Spells:");
-                foreach (var warlockSpell7 in level7warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell7.Name}, School: {warlockSpell7.School} , Description:  {warlockSpell7.Description} ");
-                }
-            }
-
-            // Display the data for Level 8 spells
-            if (level8warlockspells != null && level8warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 8 Warlock Spells:");
-                foreach (var warlockSpell8 in level8warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell8.Name}, School: {warlockSpell8.School}, Description: {warlockSpell8.Description} ");
-                }
-            }
-
-            // Display the data for Level 9 spells
-            if (level9warlockspells != null && level9warlockspells.SpellCategories != null)
-            {
-                Console.WriteLine("Level 9 Warlock Spells:");
-                foreach (var warlockSpell9 in level9warlockspells.SpellCategories)
-                {
-                    Console.WriteLine($"- Name: {warlockSpell9.Name}, School: {warlockSpell9.School}, Description: {warlockSpell9.Description} ");
+                    Console.WriteLine($"- Name: {warlockSpell1.Name}, School: {warlockSpell1.School}, Description: {warlockSpell1.Description}, Level: {warlockSpell1.Level} ");
                 }
             }
         }

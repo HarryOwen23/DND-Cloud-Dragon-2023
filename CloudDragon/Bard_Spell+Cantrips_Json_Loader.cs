@@ -184,14 +184,14 @@ namespace CloudDragon
 
     internal class BardSpellLoader : ILoader
     {
-        private static void DisplayBardicSpells(string spellLevel, List<BardicSpells> spellCategories)
-        {
-            Console.WriteLine($"Level {spellLevel} Bard Spells:");
-            foreach (var bardSpell in spellCategories)
-            {
-                Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description}, Level: {bardSpell.Level} ");
-            }
-        }
+        //private static void DisplayBardicSpells(string spellLevel, List<BardicSpells> spellCategories)
+        //{
+        //    Console.WriteLine($"Level {spellLevel} Bard Spells:");
+        //    foreach (var bardSpell in spellCategories)
+        //    {
+        //        Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description}, Level: {bardSpell.Level} ");
+        //    }
+        //}
         void ILoader.Load()
         {
             Console.WriteLine("Loading Bard Spell Data");
