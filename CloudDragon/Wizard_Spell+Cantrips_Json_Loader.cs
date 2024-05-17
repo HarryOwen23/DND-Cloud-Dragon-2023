@@ -161,7 +161,7 @@ namespace CloudDragon
 
     internal class WizardCantripLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Wizard Cantrip Data ...");
             // Define the paths to the JSON files

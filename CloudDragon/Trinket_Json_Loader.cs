@@ -81,7 +81,7 @@ namespace CloudDragon
 
     internal class TrinketLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Trinket Data ...");
 

@@ -77,7 +77,7 @@ namespace CloudDragon
 
     internal class RangerSpellLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Ranger Spell Data");
             // Define paths to the Ranger spell Json files

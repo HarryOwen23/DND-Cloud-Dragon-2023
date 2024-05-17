@@ -80,23 +80,21 @@ namespace CloudDragon
 
     internal class MagicalItemLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Magical Item Data ...");
 
-            string jsonFilePathCommon = "Magical Items\\Magical_Items.json";
-            
+            string jsonFilePathMagItems = "Magical Items\\Magical_Items.json";
 
-            var commonItems = Magical_Items_Json_Loader.LoadMagicalItemData(jsonFilePathCommon);
+            var mag_Items = Magical_Items_Json_Loader.LoadMagicalItemData(jsonFilePathMagItems);
 
-
-            // Display the Armor data for common magical items
-            if (commonItems != null && commonItems.MiCategories != null)
+            // Display the data for magical items
+            if (mag_Items != null && mag_Items.MiCategories != null)
             {
-                Console.WriteLine("Common Magical Items:");
-                foreach (var magicitems in commonItems.MiCategories)
+                Console.WriteLine(" Magical Items:");
+                foreach (var magicitems in mag_Items.MiCategories)
                 {
-                    Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description}, Rarity {magicitems.Rarity} ");
+                    Console.WriteLine($"- Name: {magicitems.Name}, Type: {magicitems.Type}, Attunement: {magicitems.Attunement}, Description: {magicitems.Description}, Rarity {magicitems.Rarity}");
                 }
             }
         }

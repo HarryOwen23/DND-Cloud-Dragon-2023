@@ -161,7 +161,7 @@ namespace CloudDragon
 
     internal class WarlockCantripLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Warlock Cantrip Data ...");
             // Define the paths to the JSON files

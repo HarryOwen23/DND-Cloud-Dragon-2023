@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
+    // Class to represent Bardic Cantrips
     public class BardicCantrips
     {
         [JsonPropertyName("Name")]
@@ -18,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -33,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public string SpellLists { get; set; }
     }
+
+    // Class to represent Bardic Spells
     public class BardicSpells
     {
         [JsonPropertyName("Name")]
@@ -50,165 +53,137 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class BardCantripcategory
+    // Class to represent categories of Bardic Cantrips
+    public class BardCantripCategory
     {
         [JsonPropertyName("Cantrips")]
         public List<BardicCantrips> Cantrips { get; set; }
     }
 
-    public class BardSpellcategory
+    // Class to represent categories of Bardic Spells
+    public class BardSpellCategory
     {
         [JsonPropertyName("Spells")]
         public List<BardicSpells> Spells { get; set; }
     }
 
+    // Class to represent Bard Cantrip Data
     public class BardCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<BardicCantrips> CantripCategories { get; set; }
+        public List<BardCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Bard Spell Data
     public class BardSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public List<BardicSpells> SpellCategories { get; set; }
+        public List<BardSpellCategory> SpellCategories { get; set; }
     }
 
-    internal class Bard_Cantrips_Json_Loader
+    // Class to load Bard Cantrip JSON data
+    internal class BardCantripsJsonLoader
     {
-        // BardCantripData
-        public static BardCantripData LoadbardCantripData(string jsonFilePath)
+        public static BardCantripData LoadBardCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new BardCantripData();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new BardCantripData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new BardCantripData();
-                }
-
-                var bardCantripData = JsonSerializer.Deserialize<BardCantripData>(jsonData);
-
-                if (bardCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new BardCantripData();
-                }
-
-                return bardCantripData;
+                return JsonSerializer.Deserialize<BardCantripData>(jsonData) ?? new BardCantripData();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
-    internal class Bard_Spells_Json_Loader
+    // Class to load Bard Spell JSON data
+    internal class BardSpellsJsonLoader
     {
-        public static BardSpellData LoadbardSpellData(string jsonFilePath)
+        public static BardSpellData LoadBardSpellData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new BardSpellData();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new BardSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new BardSpellData();
-                }
-
-                var bardSpellData = JsonSerializer.Deserialize<BardSpellData>(jsonData);
-
-                if (bardSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new BardSpellData();
-                }
-
-                return bardSpellData;
+                return JsonSerializer.Deserialize<BardSpellData>(jsonData) ?? new BardSpellData();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
             }
         }
     }
 
+    // Loader class for Bard Cantrips
     internal class BardCantripLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathBardCantrip = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Cantrips.json";
+
+        public void Load()
         {
             Console.WriteLine("Loading Bard Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathBardCantrip = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Cantrips.json";
+            var cantripsBard = BardCantripsJsonLoader.LoadBardCantripData(JsonFilePathBardCantrip);
 
-            var cantripsBard = Bard_Cantrips_Json_Loader.LoadbardCantripData(jsonFilePathBardCantrip);
-
-
-            // Display the data for Bard Cantrips
-            if (cantripsBard != null && cantripsBard.CantripCategories != null)
+            if (cantripsBard?.CantripCategories != null)
             {
                 Console.WriteLine("Bard Cantrips:");
-                foreach (var bardCans in cantripsBard.CantripCategories)
+                foreach (var category in cantripsBard.CantripCategories)
                 {
-                    Console.WriteLine($"- Name: {bardCans.Name}, Source: {bardCans.Source}, School: {bardCans.School}, Cast_Time: {bardCans.Cast_Time}, Components: {bardCans.Components}, Duration: {bardCans.Duration}, Description: {bardCans.Description}, Spell_Lists: {bardCans.Spell_Lists} ");
+                    foreach (var cantrip in category.Cantrips)
+                    {
+                        Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
+                    }
                 }
             }
         }
     }
 
+    // Loader class for Bard Spells
     internal class BardSpellLoader : ILoader
     {
-        //private static void DisplayBardicSpells(string spellLevel, List<BardicSpells> spellCategories)
-        //{
-        //    Console.WriteLine($"Level {spellLevel} Bard Spells:");
-        //    foreach (var bardSpell in spellCategories)
-        //    {
-        //        Console.WriteLine($"- Name: {bardSpell.Name}, School: {bardSpell.School}, Description: {bardSpell.Description}, Level: {bardSpell.Level} ");
-        //    }
-        //}
-        void ILoader.Load()
+        private const string JsonFilePathBardSpells = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Spells.json";
+
+        public void Load()
         {
-            Console.WriteLine("Loading Bard Spell Data");
-            string jsonFilePathBardSpells = "Spells+Cantrips\\Bard_Cantrips_+_Spells\\Bard_Spells.json";
+            Console.WriteLine("Loading Bard Spell Data ...");
+            var bardSpells = BardSpellsJsonLoader.LoadBardSpellData(JsonFilePathBardSpells);
 
-            // Load the bard spell data using the Bard spell JsonLoader
-            var bardSpells = Bard_Spells_Json_Loader.LoadbardSpellData(jsonFilePathBardSpells);
-
-            if (bardSpells != null && bardSpells.SpellCategories != null)
+            if (bardSpells?.SpellCategories != null)
             {
                 Console.WriteLine("Bard Spells:");
-                foreach (var spell in bardSpells.SpellCategories)
+                foreach (var category in bardSpells.SpellCategories)
                 {
-                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+                    foreach (var spell in category.Spells)
+                    {
+                        Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+                    }
                 }
             }
         }
-
     }
 }

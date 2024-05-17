@@ -76,7 +76,6 @@ namespace CloudDragon
 
     internal class Cleric_Cantrips_Json_Loader
     {
-        // BardCantripData
         public static ClericCantripData LoadclericCantripData(string jsonFilePath)
         {
             try
@@ -161,7 +160,7 @@ namespace CloudDragon
 
     internal class ClericCantripLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Cleric Cantrip Data ...");
             // Define the paths to the JSON files
@@ -184,7 +183,7 @@ namespace CloudDragon
 
     internal class ClericSpellLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Trinket Data ...");
 

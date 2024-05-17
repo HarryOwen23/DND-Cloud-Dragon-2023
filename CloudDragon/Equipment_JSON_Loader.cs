@@ -99,7 +99,6 @@ namespace CloudDragon
             // Define the paths to the JSON files 
             string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
             string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglars_Pack.json";
-            string jsonFilePathClothes = "Equipment\\Equipment_Clothes.json";
             string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
             string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
             string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomats_Pack.json";
@@ -116,7 +115,6 @@ namespace CloudDragon
             // Load the equipment data using the EquipmentJsonLoader
             var equipmentDataArcaneFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathArcaneFocus);
             var equipmentDataBurglarPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathBurglarPack);
-            var equipmentDataClothes = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathClothes);
             var equipmentDataCommonItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathCommonItems);
             var equipmentDataContainers = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathContainers);
             var equipmentDataDiplomatsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDiplomatsPack);

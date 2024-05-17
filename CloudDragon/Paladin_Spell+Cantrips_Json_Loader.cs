@@ -160,7 +160,7 @@ namespace CloudDragon
 
     internal class PaladinCantripLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Paladin Cantrip Data ...");
             // Define the paths to the JSON files
@@ -183,7 +183,7 @@ namespace CloudDragon
 
     internal class PaladinSpellLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Bard Spell Data");
             // Define paths to the Paladin spell Json files

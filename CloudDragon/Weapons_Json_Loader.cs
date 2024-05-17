@@ -440,6 +440,11 @@ namespace CloudDragon
 
     internal class MartialMeleeWeaponLoader : ILoader
     {
+        public void Load()
+        {
+            throw new NotImplementedException();
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Martial Melee Weapon Data ...");
@@ -462,6 +467,11 @@ namespace CloudDragon
 
     internal class MartialRangedWeaponLoader : ILoader
     {
+        public void Load()
+        {
+            throw new NotImplementedException();
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Martial Ranged Weapon Data ...");
@@ -484,7 +494,7 @@ namespace CloudDragon
 
     internal class SimpleMeleeWeaponLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Simple Melee Weapon Data ...");
             // Define the paths to the JSON files
@@ -506,7 +516,7 @@ namespace CloudDragon
 
     internal class SimpleRangedWeaponLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Ranged Melee Weapon Data ...");
             // Define the paths to the JSON files
@@ -528,7 +538,7 @@ namespace CloudDragon
 
     internal class ExplosiveLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Explosive Weapon Data ...");
             // Define the paths to the JSON files
@@ -560,7 +570,7 @@ namespace CloudDragon
 
     internal class FirearmsLoader : ILoader
     {
-        void ILoader.Load()
+        public void Load()
         {
             Console.WriteLine("Loading Firearms Data ...");
             // Define the paths to the JSON files#
