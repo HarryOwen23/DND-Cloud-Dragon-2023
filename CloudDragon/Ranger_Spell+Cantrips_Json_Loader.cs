@@ -21,9 +21,9 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class RangerSpellcategory
+    public class RangerSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("RangerSpells")]
         public List<RangerSpells> Spells { get; set; }
     }
 
@@ -33,65 +33,53 @@ namespace CloudDragon
         public List<RangerSpells> SpellCategories { get; set; }
     }
 
-    internal class Ranger_Spells_Json_Loader
+    // Class to load Paladin Spell JSON data
+    internal class RangerSpellsJsonLoader
     {
-        public static RangerSpellData LoadRangerSpellData(string jsonFilePath)
+        public static RangerSpellCategory LoadRangerSpellData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new RangerSpellCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new RangerSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new RangerSpellData();
-                }
-
-                var rangerSpellData = JsonSerializer.Deserialize<RangerSpellData>(jsonData);
-
-                if (rangerSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new RangerSpellData();
-                }
-
-                return rangerSpellData;
+                return JsonSerializer.Deserialize<RangerSpellCategory>(jsonData) ?? new RangerSpellCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
             }
         }
     }
 
+    // Loader class for Ranger Spells
     internal class RangerSpellLoader : ILoader
     {
+        private const string JsonFilePathRangerSpells = "Spells+Cantrips\\Ranger_Cantrips_+_Spells\\Ranger_Spells.json";
+
         public void Load()
         {
-            Console.WriteLine("Loading Ranger Spell Data");
-            // Define paths to the Ranger spell Json files
-            string jsonFilePathRangerLevel1 = "Spells+Cantrips\\Ranger_Cantrips_+Spells\\Ranger_Spells.json";
+            Console.WriteLine("Loading Ranger Spell Data ...");
+            var rangerSpells = RangerSpellsJsonLoader.LoadRangerSpellData(JsonFilePathRangerSpells);
 
-            var level1rangerspells = Ranger_Spells_Json_Loader.LoadRangerSpellData(jsonFilePathRangerLevel1);
-
-            // Display the data for Level 1 spells
-            if (level1rangerspells != null && level1rangerspells.SpellCategories != null)
+            if (rangerSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Ranger Spells:");
-                foreach (var rangerSpell1 in level1rangerspells.SpellCategories)
+                Console.WriteLine("Cleric Spells:");
+                foreach (var spell in rangerSpells.Spells)
                 {
-                    Console.WriteLine($"- Name: {rangerSpell1.Name}, School: {rangerSpell1.School}, Description: {rangerSpell1.Description} ");
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
         }

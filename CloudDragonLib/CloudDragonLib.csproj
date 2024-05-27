@@ -554,28 +554,55 @@
     <None Update="Equipment\Equipment_Usable_Items.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Magical Items\Magical_Items.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Poisons\Poisons.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Cantrips.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Cantrips.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Spells+Cantrips\Ranger_Cantrips_+Spells\Ranger_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Sorcerer_Cantrips_+_Spells\Sorcerer_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Spells+Cantrips\Sorcerer_Cantrips_+_Spells\Sorcerer_Spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Spells+Cantrips\Warlock_Cantrips_+_Spells\Warlock_Cantrips.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Spells+Cantrips\Warlock_Cantrips_+_Spells\Warlock_Spellsjson.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Cantrips.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Tools\Tools_Alchemist%27s_Supplies.json">

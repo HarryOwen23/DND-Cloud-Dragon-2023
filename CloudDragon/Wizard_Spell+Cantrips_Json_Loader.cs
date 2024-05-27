@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CloudDragon;
 
 namespace CloudDragon
 {
+    // Class to represent Wizard Cantrips
     public class WizardCantrips
     {
         [JsonPropertyName("Name")]
@@ -19,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -34,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
+
+    // Class to represent Wizard Spells
     public class WizardSpells
     {
         [JsonPropertyName("Name")]
@@ -51,159 +53,134 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class WizardCantripcategory
+    // Class to represent categories of Wizard Cantrips
+    public class WizardCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
+        [JsonPropertyName("WizardCantrips")]
         public List<WizardCantrips> Cantrips { get; set; }
     }
 
-    public class WizardSpellcategory
+    // Class to represent categories of Wizard Spells
+    public class WizardSpellCategory
     {
-        [JsonPropertyName("Spells")]
-        public List<WizardSpells> Spells { get; set; }
+        [JsonPropertyName("WizardSpells")]
+        public List<WarlockSpells> Spells { get; set; }
     }
 
+    // Class to represent Wizard Cantrip Data
     public class WizardCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<WizardCantrips> CantripCategories { get; set; }
+        public List<WizardCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Wizard Spell Data
     public class WizardSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public List<WizardSpells> SpellCategories { get; set; }
+        public List<WizardSpellCategory> SpellCategories { get; set; }
     }
 
-    internal class Wizard_Cantrips_Json_Loader
+    // Class to load Wizard Warlock JSON data
+    internal class WizardCantripsJsonLoader
     {
-        public static WizardCantripData LoadwizardCantripData(string jsonFilePath)
+        public static WizardCantripCategory LoadWizardCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new WizardCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new WizardCantripData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new WizardCantripData();
-                }
-
-                var wizardCantripData = JsonSerializer.Deserialize<WizardCantripData>(jsonData);
-
-                if (wizardCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new WizardCantripData();
-                }
-
-                return wizardCantripData;
+                return JsonSerializer.Deserialize<WizardCantripCategory>(jsonData) ?? new WizardCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
-            }
-            }
-    }
-
-    internal class Wizard_Spells_Json_Loader
-    {
-        public static WizardSpellData LoadwizardSpellData(string jsonFilePath)
-        {
-            try
-            {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new WizardSpellData();
-                }
-
-                string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new WizardSpellData();
-                }
-
-                var wizardSpellData = JsonSerializer.Deserialize<WizardSpellData>(jsonData);
-
-                if (wizardSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new WizardSpellData();
-                }
-
-                return wizardSpellData;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
             }
         }
     }
 
+    // Class to load Wizard Spell JSON data
+    internal class WizardSpellsJsonLoader
+    {
+        public static WizardSpellCategory LoadWizardSpellData(string jsonFilePath)
+        {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new WizardSpellCategory();
+            }
+
+            try
+            {
+                string jsonData = File.ReadAllText(jsonFilePath);
+                return JsonSerializer.Deserialize<WizardSpellCategory>(jsonData) ?? new WizardSpellCategory();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
+            }
+        }
+    }
+
+    // Loader class for Wizard Cantrips
     internal class WizardCantripLoader : ILoader
     {
+        private const string JsonFilePathWizardCantrip = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Cantrips.json";
+
         public void Load()
         {
             Console.WriteLine("Loading Wizard Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathWizardCantrip = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Cantrips.json";
+            var warlockcantrips = WizardCantripsJsonLoader.LoadWizardCantripData(JsonFilePathWizardCantrip);
 
-            var cantripsWizard = Wizard_Cantrips_Json_Loader.LoadwizardCantripData(jsonFilePathWizardCantrip);
-
-
-            // Display the data for Wizard Cantrips
-            if (cantripsWizard != null && cantripsWizard.CantripCategories != null)
+            if (warlockcantrips?.Cantrips != null)
             {
                 Console.WriteLine("Wizard Cantrips:");
-                foreach (var wizardCans in cantripsWizard.CantripCategories)
+                foreach (var cantrip in warlockcantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {wizardCans.Name}, Source: {wizardCans.Source}, School: {wizardCans.School}, Cast_Time: {wizardCans.Cast_Time}, Components: {wizardCans.Components}, Duration: {wizardCans.Duration}, Description: {wizardCans.Description}, Spell_Lists: {wizardCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Wizard Spells
     internal class WizardSpellLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathWizardSpells = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Spells.json";
+
+        public void Load()
         {
-            Console.WriteLine("Loading Wizard Spell Data");
-            // Define paths to the Wizard spell Json files
-            string jsonFilePathWizardLevel1 = "Spells+Cantrips\\Wizard_Cantrips_+_Spells\\Wizard_Spells.json";
+            Console.WriteLine("Loading Wizard Spell Data ...");
+            var warlockSpells = WizardSpellsJsonLoader.LoadWizardSpellData(JsonFilePathWizardSpells);
 
-
-            var level1wizardspells = Wizard_Spells_Json_Loader.LoadwizardSpellData(jsonFilePathWizardLevel1);
-
-
-            // Display the data for Level 1 spells
-            if (level1wizardspells != null && level1wizardspells.SpellCategories != null)
+            if (warlockSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Wizard Spells:");
-                foreach (var wizardSpell1 in level1wizardspells.SpellCategories)
+                Console.WriteLine("Wizard Spells:");
+                foreach (var spell in warlockSpells.Spells)
                 {
-                    Console.WriteLine($"- Name: {wizardSpell1.Name}, School: {wizardSpell1.School}, Description: {wizardSpell1.Description}, Level: {wizardSpell1.Level} ");
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
-
         }
     }
 }

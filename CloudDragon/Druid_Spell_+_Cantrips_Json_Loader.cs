@@ -6,7 +6,8 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
-    public class DruidicCantrips
+    // Class to represent Druid Cantrips
+    public class DruidCantrips
     {
         [JsonPropertyName("Name")]
         public string Name { get; set; }
@@ -18,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -33,9 +34,11 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
-    public class DruidicSpells
+
+    // Class to represent Druid Spells
+    public class DruidSpells
     {
         [JsonPropertyName("Name")]
         public string Name { get; set; }
@@ -50,157 +53,132 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class DruidCantripcategory
+    // Class to represent categories of Druid Cantrips
+    public class DruidCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
-        public List<DruidicCantrips> Cantrips { get; set; }
+        [JsonPropertyName("DruidCantrips")]
+        public List<DruidCantrips> Cantrips { get; set; }
     }
 
-    public class DruidSpellcategory
+    // Class to represent categories of Druid Spells
+    public class DruidSpellCategory
     {
-        [JsonPropertyName("Spells")]
-        public List<DruidicSpells> Spells { get; set; }
+        [JsonPropertyName("DruidSpells")]
+        public List<ClericSpells> Spells { get; set; }
     }
 
+    // Class to represent Cleric Cantrip Data
     public class DruidCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public  List<DruidicCantrips> CantripCategories { get; set; }
+        public List<DruidCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Cleric Spell Data
     public class DruidSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public List<DruidicSpells> SpellCategories { get; set; }
+        public List<DruidSpellCategory> SpellCategories { get; set; }
     }
 
-    internal class Druid_Cantrips_Json_Loader
+    // Class to load Cleric Cantrip JSON data
+    internal class DruidCantripsJsonLoader
     {
-        // DruidCantripData
-        public static DruidCantripData LoaddruidCantripData(string jsonFilePath)
+        public static DruidCantripCategory LoadDruidCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new DruidCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new DruidCantripData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new DruidCantripData();
-                }
-
-                var druidCantripData = JsonSerializer.Deserialize<DruidCantripData>(jsonData);
-
-                if (druidCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new DruidCantripData();
-                }
-
-                return druidCantripData;
+                return JsonSerializer.Deserialize<DruidCantripCategory>(jsonData) ?? new DruidCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
-    internal class Druid_Spells_Json_Loader
+    // Class to load Cleric Spell JSON data
+    internal class DruidSpellsJsonLoader
     {
-        public static DruidSpellData LoaddruidSpellData(string jsonFilePath)
+        public static DruidSpellCategory LoadDruidSpellData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new DruidSpellCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new DruidSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new DruidSpellData();
-                }
-
-                var druidSpellData = JsonSerializer.Deserialize<DruidSpellData>(jsonData);
-
-                if (druidSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new DruidSpellData();
-                }
-
-                return druidSpellData;
+                return JsonSerializer.Deserialize<DruidSpellCategory>(jsonData) ?? new DruidSpellCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
             }
         }
     }
 
+    // Loader class for Druid Cantrips
     internal class DruidCantripLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathDruidCantrip = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Cantrips.json";
+
+        public void Load()
         {
             Console.WriteLine("Loading Druid Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathDruidCantrip = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Cantrips.json";
+            var druidcantrips = DruidCantripsJsonLoader.LoadDruidCantripData(JsonFilePathDruidCantrip);
 
-            var cantripsDruid = Druid_Cantrips_Json_Loader.LoaddruidCantripData(jsonFilePathDruidCantrip);
-
-
-            // Display the Armor data for Druid Cantrips
-            if (cantripsDruid != null && cantripsDruid.CantripCategories != null)
+            if (druidcantrips?.Cantrips != null)
             {
                 Console.WriteLine("Druid Cantrips:");
-                foreach (var druidCans in cantripsDruid.CantripCategories)
+                foreach (var cantrip in druidcantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {druidCans.Name}, Source: {druidCans.Source}, School: {druidCans.School}, Cast_Time: {druidCans.Cast_Time}, Components: {druidCans.Components}, Duration: {druidCans.Duration}, Description: {druidCans.Description}, Spell_Lists: {druidCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Druid Spells
     internal class DruidSpellLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathDruidSpells = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Spells.json";
+
+        public void Load()
         {
-            Console.WriteLine("Loading Druid Spell Data");
-            // Define paths to the druid spell Json files
-            string jsonFilePathDruidSpells = "Spells+Cantrips\\Druid_Cantrips_+_Spells\\Druid_Spells.json";
-            
+            Console.WriteLine("Loading Druid Spell Data ...");
+            var druidSpells = DruidSpellsJsonLoader.LoadDruidSpellData(JsonFilePathDruidSpells);
 
-            var druidLevelSpells = Druid_Spells_Json_Loader.LoaddruidSpellData(jsonFilePathDruidSpells);
-
-
-
-            if (druidLevelSpells != null && druidLevelSpells.SpellCategories != null)
+            if (druidSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Druid Spells:");
-                foreach (var spell in druidLevelSpells.SpellCategories)
+                Console.WriteLine("Druid Spells:");
+                foreach (var spell in druidSpells.Spells)
                 {
+
                     Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
         }

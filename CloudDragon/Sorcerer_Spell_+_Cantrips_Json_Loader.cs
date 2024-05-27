@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CloudDragon;
 
 namespace CloudDragon
 {
+    // Class to represent Sorcerer Cantrips
     public class SorcererCantrips
     {
         [JsonPropertyName("Name")]
@@ -19,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -34,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
+
+    // Class to represent Sorcerer Spells
     public class SorcererSpells
     {
         [JsonPropertyName("Name")]
@@ -51,158 +53,134 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class SorcererCantripcategory
+    // Class to represent categories of Sorcerer Cantrips
+    public class SorcererCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
+        [JsonPropertyName("SorcererCantrips")]
         public List<SorcererCantrips> Cantrips { get; set; }
     }
 
-    public class SorcererSpellcategory
+    // Class to represent categories of Sorcerer Spells
+    public class SorcererSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("SorcererSpells")]
         public List<SorcererSpells> Spells { get; set; }
     }
 
+    // Class to represent Sorcerer Cantrip Data
     public class SorcererCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<SorcererCantrips> CantripCategories { get; set; }
+        public List<SorcererCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Sorcerer Spell Data
     public class SorcererSpellData
-{
-        [JsonPropertyName("Spell Categories")]
-        public List<SorcererSpells> SpellCategories { get; set; }
-    }
-
-    internal class Sorcerer_Cantrips_Json_Loader
-{
-        public static SorcererCantripData LoadsorcererCantripData(string jsonFilePath)
-        {
-            try
-            {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new SorcererCantripData();
-                }
-
-                string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new SorcererCantripData();
-                }
-
-                var sorcererCantripData = JsonSerializer.Deserialize<SorcererCantripData>(jsonData);
-
-                if (sorcererCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new SorcererCantripData();
-                }
-
-                return sorcererCantripData;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
-            }
-        }
-    }
-
-    internal class Sorcerer_Spells_Json_Loader
     {
-        public static SorcererSpellData LoadsorcererSpellData(string jsonFilePath)
+        [JsonPropertyName("Spell Categories")]
+        public List<SorcererSpellCategory> SpellCategories { get; set; }
+    }
+
+    // Class to load Sorcerer Sorcerer JSON data
+    internal class SorcererCantripsJsonLoader
+    {
+        public static SorcererCantripCategory LoadSorcererCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new SorcererCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new SorcererSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new SorcererSpellData();
-                }
-
-                var sorcererCantripData = JsonSerializer.Deserialize<SorcererSpellData>(jsonData);
-
-                if (sorcererCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new SorcererSpellData();
-                }
-
-                return sorcererCantripData;
+                return JsonSerializer.Deserialize<SorcererCantripCategory>(jsonData) ?? new SorcererCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
+    // Class to load Sorcerer Spell JSON data
+    internal class SorcererSpellsJsonLoader
+    {
+        public static SorcererSpellCategory LoadSorcererSpellData(string jsonFilePath)
+        {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new SorcererSpellCategory();
+            }
+
+            try
+            {
+                string jsonData = File.ReadAllText(jsonFilePath);
+                return JsonSerializer.Deserialize<SorcererSpellCategory>(jsonData) ?? new SorcererSpellCategory();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
+            }
+        }
+    }
+
+    // Loader class for Sorcerer Cantrips
     internal class SorcererCantripLoader : ILoader
     {
+        private const string JsonFilePathSorcererCantrip = "Spells+Cantrips\\Sorcerer_Cantrips_+_Spells\\Sorcerer_Cantrips.json";
+
         public void Load()
         {
             Console.WriteLine("Loading Sorcerer Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathSorcererCantrip = "Spells+Cantrips\\Sorcerer_Cantrips_+_Spells\\Sorcerer_Cantrips.json";
+            var sorcerercantrips = SorcererCantripsJsonLoader.LoadSorcererCantripData(JsonFilePathSorcererCantrip);
 
-            var cantripsSorcerer = Sorcerer_Cantrips_Json_Loader.LoadsorcererCantripData(jsonFilePathSorcererCantrip);
-
-
-            // Display the data for Sorcerer Cantrips
-            if (cantripsSorcerer != null && cantripsSorcerer.CantripCategories != null)
+            if (sorcerercantrips?.Cantrips != null)
             {
                 Console.WriteLine("Sorcerer Cantrips:");
-                foreach (var sorcererCans in cantripsSorcerer.CantripCategories)
+                foreach (var cantrip in sorcerercantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {sorcererCans.Name}, Source: {sorcererCans.Source}, School: {sorcererCans.School}, Cast_Time: {sorcererCans.Cast_Time}, Components: {sorcererCans.Components}, Duration: {sorcererCans.Duration}, Description: {sorcererCans.Description}, Spell_Lists: {sorcererCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Sorcerer Spells
     internal class SorcererSpellLoader : ILoader
     {
-        void ILoader.Load()
-        {
-            Console.WriteLine("Loading Sorcerer Spell Data");
-            // Define paths to the sorcerer spell Json files
-            string jsonFilePathSorcererLevel1 = "Spells+Cantrips\\Sorcerer_Cantrips_+_Spells\\Sorcerer_Spells.json";
-            
-            var level1sorcererspells = Sorcerer_Spells_Json_Loader.LoadsorcererSpellData(jsonFilePathSorcererLevel1);
+        private const string JsonFilePathSorcererSpells = "Spells+Cantrips\\Sorcerer_Cantrips_+_Spells\\Sorcerer_Spells.json";
 
-            // Display the data for Level 1 spells
-            if (level1sorcererspells != null && level1sorcererspells.SpellCategories != null)
+        public void Load()
+        {
+            Console.WriteLine("Loading Sorcerer Spell Data ...");
+            var sorcererSpells = SorcererSpellsJsonLoader.LoadSorcererSpellData(JsonFilePathSorcererSpells);
+
+            if (sorcererSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Sorcerer Spells:");
-                foreach (var sorcererSpell1 in level1sorcererspells.SpellCategories)
+                Console.WriteLine("Sorcerer Spells:");
+                foreach (var spell in sorcererSpells.Spells)
                 {
-                    Console.WriteLine($"- Name: {sorcererSpell1.Name}, School: {sorcererSpell1.School}, Description: {sorcererSpell1.Description}, Level: {sorcererSpell1.Level} ");
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
-
-            
         }
     }
 }

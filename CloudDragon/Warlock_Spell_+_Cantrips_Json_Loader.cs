@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CloudDragon;
 
 namespace CloudDragon
 {
+    // Class to represent Warlock Cantrips
     public class WarlockCantrips
     {
         [JsonPropertyName("Name")]
@@ -19,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -34,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
+
+    // Class to represent Warlock Spells
     public class WarlockSpells
     {
         [JsonPropertyName("Name")]
@@ -51,156 +53,132 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class WarlockCantripcategory
+    // Class to represent categories of Warlock Cantrips
+    public class WarlockCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
+        [JsonPropertyName("WarlockCantrips")]
         public List<WarlockCantrips> Cantrips { get; set; }
     }
 
-    public class WarlockSpellcategory
+    // Class to represent categories of Warlock Spells
+    public class WarlockSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("WarlockSpells")]
         public List<WarlockSpells> Spells { get; set; }
     }
 
+    // Class to represent Warlock Cantrip Data
     public class WarlockCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<WarlockCantrips> CantripCategories { get; set; }
+        public List<WarlockCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Warlock Spell Data
     public class WarlockSpellData
-{
-        [JsonPropertyName("Spell Categories")]
-        public List<WarlockSpells> SpellCategories { get; set; }
-    }
-
-    internal class Warlock_Cantrips_Json_Loader
-{
-        public static WarlockCantripData LoadwarlockCantripData(string jsonFilePath)
-        {
-            try
-            {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new WarlockCantripData();
-                }
-
-                string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new WarlockCantripData();
-                }
-
-                var warlockCantripData = JsonSerializer.Deserialize<WarlockCantripData>(jsonData);
-
-                if (warlockCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new WarlockCantripData();
-                }
-
-                return warlockCantripData;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw;
-            }
-        }
-    }
-
-    internal class Warlock_Spells_Json_Loader
     {
-        public static WarlockSpellData LoadwarlockSpellData(string jsonFilePath)
+        [JsonPropertyName("Spell Categories")]
+        public List<WarlockSpellCategory> SpellCategories { get; set; }
+    }
+
+    // Class to load Warlock Warlock JSON data
+    internal class WarlockCantripsJsonLoader
+    {
+        public static WarlockCantripCategory LoadWarlockCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new WarlockCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new WarlockSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new WarlockSpellData();
-                }
-
-                var warlockSpellData = JsonSerializer.Deserialize<WarlockSpellData>(jsonData);
-
-                if (warlockSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new WarlockSpellData();
-                }
-
-                return warlockSpellData;
+                return JsonSerializer.Deserialize<WarlockCantripCategory>(jsonData) ?? new WarlockCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
+    // Class to load Warlock Spell JSON data
+    internal class WarlockSpellsJsonLoader
+    {
+        public static WarlockSpellCategory LoadWarlockSpellData(string jsonFilePath)
+        {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new WarlockSpellCategory();
+            }
+
+            try
+            {
+                string jsonData = File.ReadAllText(jsonFilePath);
+                return JsonSerializer.Deserialize<WarlockSpellCategory>(jsonData) ?? new WarlockSpellCategory();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
+            }
+        }
+    }
+
+    // Loader class for Warlock Cantrips
     internal class WarlockCantripLoader : ILoader
     {
+        private const string JsonFilePathWarlockCantrip = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Cantrips.json";
+
         public void Load()
         {
             Console.WriteLine("Loading Warlock Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathWarlockCantrip = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Cantrips.json";
+            var warlockcantrips = WarlockCantripsJsonLoader.LoadWarlockCantripData(JsonFilePathWarlockCantrip);
 
-            var cantripsWarlock = Warlock_Cantrips_Json_Loader.LoadwarlockCantripData(jsonFilePathWarlockCantrip);
-
-
-            // Display the data for Warlock Cantrips
-            if (cantripsWarlock != null && cantripsWarlock.CantripCategories != null)
+            if (warlockcantrips?.Cantrips != null)
             {
                 Console.WriteLine("Warlock Cantrips:");
-                foreach (var warlockCans in cantripsWarlock.CantripCategories)
+                foreach (var cantrip in warlockcantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {warlockCans.Name}, Source: {warlockCans.Source}, School: {warlockCans.School}, Cast_Time: {warlockCans.Cast_Time}, Components: {warlockCans.Components}, Duration: {warlockCans.Duration}, Description: {warlockCans.Description}, Spell_Lists: {warlockCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Warlock Spells
     internal class WarlockSpellLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathWarlockSpells = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Spells.json";
+
+        public void Load()
         {
-            Console.WriteLine("Loading Warlock Spell Data");
-            // Define paths to the Warlock spell Json files
-            string jsonFilePathWarlockLevel1 = "Spells+Cantrips\\Warlock_Cantrips_+_Spells\\Warlock_Spells.json";
-            
+            Console.WriteLine("Loading Warlock Spell Data ...");
+            var warlockSpells = WarlockSpellsJsonLoader.LoadWarlockSpellData(JsonFilePathWarlockSpells);
 
-            var level1warlockspells = Warlock_Spells_Json_Loader.LoadwarlockSpellData(jsonFilePathWarlockLevel1);
-
-
-            // Display the data for Level 1 spells
-            if (level1warlockspells != null && level1warlockspells.SpellCategories != null)
+            if (warlockSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Warlock Spells:");
-                foreach (var warlockSpell1 in level1warlockspells.SpellCategories)
+                Console.WriteLine("Warlock Spells:");
+                foreach (var spell in warlockSpells.Spells)
                 {
-                    Console.WriteLine($"- Name: {warlockSpell1.Name}, School: {warlockSpell1.School}, Description: {warlockSpell1.Description}, Level: {warlockSpell1.Level} ");
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
         }

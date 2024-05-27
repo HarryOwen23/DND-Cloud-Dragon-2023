@@ -34,7 +34,7 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string SpellLists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
 
     // Class to represent Bardic Spells
@@ -56,14 +56,14 @@ namespace CloudDragon
     // Class to represent categories of Bardic Cantrips
     public class BardCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
+        [JsonPropertyName("BardCantrips")]
         public List<BardicCantrips> Cantrips { get; set; }
     }
 
     // Class to represent categories of Bardic Spells
     public class BardSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("BardSpells")]
         public List<BardicSpells> Spells { get; set; }
     }
 
@@ -84,7 +84,7 @@ namespace CloudDragon
     // Class to load Bard Cantrip JSON data
     internal class BardCantripsJsonLoader
     {
-        public static BardCantripData LoadBardCantripData(string jsonFilePath)
+        public static BardCantripCategory LoadBardCantripData(string jsonFilePath)
         {
             if (string.IsNullOrWhiteSpace(jsonFilePath))
             {
@@ -94,13 +94,13 @@ namespace CloudDragon
             if (!File.Exists(jsonFilePath))
             {
                 Console.WriteLine($"File not found: {jsonFilePath}");
-                return new BardCantripData();
+                return new BardCantripCategory();
             }
 
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                return JsonSerializer.Deserialize<BardCantripData>(jsonData) ?? new BardCantripData();
+                return JsonSerializer.Deserialize<BardCantripCategory>(jsonData) ?? new BardCantripCategory();
             }
             catch (Exception ex)
             {
@@ -113,7 +113,7 @@ namespace CloudDragon
     // Class to load Bard Spell JSON data
     internal class BardSpellsJsonLoader
     {
-        public static BardSpellData LoadBardSpellData(string jsonFilePath)
+        public static BardSpellCategory LoadBardSpellData(string jsonFilePath)
         {
             if (string.IsNullOrWhiteSpace(jsonFilePath))
             {
@@ -123,13 +123,13 @@ namespace CloudDragon
             if (!File.Exists(jsonFilePath))
             {
                 Console.WriteLine($"File not found: {jsonFilePath}");
-                return new BardSpellData();
+                return new BardSpellCategory();
             }
 
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                return JsonSerializer.Deserialize<BardSpellData>(jsonData) ?? new BardSpellData();
+                return JsonSerializer.Deserialize<BardSpellCategory>(jsonData) ?? new BardSpellCategory();
             }
             catch (Exception ex)
             {
@@ -147,18 +147,16 @@ namespace CloudDragon
         public void Load()
         {
             Console.WriteLine("Loading Bard Cantrip Data ...");
-            var cantripsBard = BardCantripsJsonLoader.LoadBardCantripData(JsonFilePathBardCantrip);
+            var bardcantrips = BardCantripsJsonLoader.LoadBardCantripData(JsonFilePathBardCantrip);
 
-            if (cantripsBard?.CantripCategories != null)
+            if (bardcantrips?.Cantrips != null)
             {
                 Console.WriteLine("Bard Cantrips:");
-                foreach (var category in cantripsBard.CantripCategories)
+                foreach (var cantrip in bardcantrips.Cantrips)
                 {
-                    foreach (var cantrip in category.Cantrips)
-                    {
-                        Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
-                    }
+                   Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+                
             }
         }
     }
@@ -173,15 +171,14 @@ namespace CloudDragon
             Console.WriteLine("Loading Bard Spell Data ...");
             var bardSpells = BardSpellsJsonLoader.LoadBardSpellData(JsonFilePathBardSpells);
 
-            if (bardSpells?.SpellCategories != null)
+            if (bardSpells?.Spells != null)
             {
                 Console.WriteLine("Bard Spells:");
-                foreach (var category in bardSpells.SpellCategories)
+                foreach (var spell in bardSpells.Spells)
                 {
-                    foreach (var spell in category.Spells)
-                    {
-                        Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
-                    }
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
         }

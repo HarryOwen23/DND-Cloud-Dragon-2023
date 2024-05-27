@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
+    // Class to represent Paladin Cantrips
     public class PaladinCantrips
     {
         [JsonPropertyName("Name")]
@@ -18,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -33,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
+
+    // Class to represent Paladin Spells
     public class PaladinSpells
     {
         [JsonPropertyName("Name")]
@@ -50,158 +53,134 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class PaladinCantripcategory
+    // Class to represent categories of Paladin Cantrips
+    public class PaladinCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
+        [JsonPropertyName("PaladinCantrips")]
         public List<PaladinCantrips> Cantrips { get; set; }
     }
 
-    public class PaladinSpellcategory
+    // Class to represent categories of Paladin Spells
+    public class PaladinSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("PaladinSpells")]
         public List<PaladinSpells> Spells { get; set; }
     }
 
+    // Class to represent Paladin Cantrip Data
     public class PaladinCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<PaladinCantrips> CantripCategories { get; set; }
+        public List<PaladinCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Paladin Spell Data
     public class PaladinSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public List<PaladinSpells> SpellCategories { get; set; }
+        public List<PaladinSpellCategory> SpellCategories { get; set; }
     }
 
-    internal class Paladin_Cantrips_Json_Loader
+    // Class to load Paladin Paladin JSON data
+    internal class PaladinCantripsJsonLoader
     {
-        public static PaladinCantripData LoadpaladinCantripData(string jsonFilePath)
+        public static PaladinCantripCategory LoadPaladinCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new PaladinCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new PaladinCantripData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new PaladinCantripData();
-                }
-
-                var paladinCantripData = JsonSerializer.Deserialize<PaladinCantripData>(jsonData);
-
-                if (paladinCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new PaladinCantripData();
-                }
-
-                return paladinCantripData;
+                return JsonSerializer.Deserialize<PaladinCantripCategory>(jsonData) ?? new PaladinCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
-    internal class Paladin_Spells_Json_Loader
+    // Class to load Paladin Spell JSON data
+    internal class PaladinSpellsJsonLoader
     {
-        public static PaladinSpellData LoadpaladinSpellData(string jsonFilePath)
+        public static PaladinSpellCategory LoadPaladinSpellData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new PaladinSpellCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new PaladinSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new PaladinSpellData();
-                }
-
-                var paladinSpellData = JsonSerializer.Deserialize<PaladinSpellData>(jsonData);
-
-                if (paladinSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new PaladinSpellData();
-                }
-
-                return paladinSpellData;
+                return JsonSerializer.Deserialize<PaladinSpellCategory>(jsonData) ?? new PaladinSpellCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
             }
         }
     }
 
+    // Loader class for Paladin Cantrips
     internal class PaladinCantripLoader : ILoader
     {
+        private const string JsonFilePathPaladinCantrip = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Cantrips.json";
+
         public void Load()
         {
             Console.WriteLine("Loading Paladin Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathPaladinCantrip = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Cantrips.json";
+            var paladincantrips = PaladinCantripsJsonLoader.LoadPaladinCantripData(JsonFilePathPaladinCantrip);
 
-            var cantripsPaladin = Paladin_Cantrips_Json_Loader.LoadpaladinCantripData(jsonFilePathPaladinCantrip);
-
-
-            // Display the data for Paladin Cantrips
-            if (cantripsPaladin != null && cantripsPaladin.CantripCategories != null)
+            if (paladincantrips?.Cantrips != null)
             {
                 Console.WriteLine("Paladin Cantrips:");
-                foreach (var palaCans in cantripsPaladin.CantripCategories)
+                foreach (var cantrip in paladincantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {palaCans.Name}, Source: {palaCans.Source}, School: {palaCans.School}, Cast_Time: {palaCans.Cast_Time}, Components: {palaCans.Components}, Duration: {palaCans.Duration}, Description: {palaCans.Description}, Spell_Lists: {palaCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Paladin Spells
     internal class PaladinSpellLoader : ILoader
     {
+        private const string JsonFilePathPaladinSpells = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Spells.json";
+
         public void Load()
         {
-            Console.WriteLine("Loading Bard Spell Data");
-            // Define paths to the Paladin spell Json files
-            string jsonFilePathPaladinLevel1 = "Spells+Cantrips\\Paladin_Cantrips_+_Spells\\Paladin_Spells.json";
+            Console.WriteLine("Loading Paladin Spell Data ...");
+            var palaSpells = PaladinSpellsJsonLoader.LoadPaladinSpellData(JsonFilePathPaladinSpells);
 
-            var level1paladinspells = Paladin_Spells_Json_Loader.LoadpaladinSpellData(jsonFilePathPaladinLevel1);
-
-
-            // Display the data for Level 1 spells
-            if (level1paladinspells != null && level1paladinspells.SpellCategories != null)
+            if (palaSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Paladin Spells:");
-                foreach (var paladinSpell1 in level1paladinspells.SpellCategories)
+                Console.WriteLine("Paladin Spells:");
+                foreach (var spell in palaSpells.Spells)
                 {
-                    Console.WriteLine($"- Name: {paladinSpell1.Name}, School: {paladinSpell1.School}, Description: {paladinSpell1.Description}, Level: {paladinSpell1.Level} ");
+
+                    Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
-
         }
     }
 }

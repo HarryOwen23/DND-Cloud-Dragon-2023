@@ -250,3 +250,12 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Equipment\Equipment_Scholars_Pack.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDragon.sourcelink.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\obj\Debug\net6.0\CloudDra.076C37D0.Up2Date
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Bard_Cantrips_+_Spells\Bard_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Ranger_Cantrips_+Spells\Ranger_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Sorcerer_Cantrips_+_Spells\Sorcerer_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Warlock_Cantrips_+_Spells\Warlock_Spellsjson.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Spells.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Magical Items\Magical_Items.json

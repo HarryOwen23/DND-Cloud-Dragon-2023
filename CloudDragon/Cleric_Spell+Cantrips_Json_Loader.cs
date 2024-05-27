@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CloudDragon
 {
+    // Class to represent Bardic Cantrips
     public class ClericCantrips
     {
         [JsonPropertyName("Name")]
@@ -18,7 +19,7 @@ namespace CloudDragon
         public string School { get; set; }
 
         [JsonPropertyName("Casting Time")]
-        public string Cast_Time { get; set; }
+        public string CastTime { get; set; }
 
         [JsonPropertyName("Range")]
         public string Range { get; set; }
@@ -33,8 +34,10 @@ namespace CloudDragon
         public string Description { get; set; }
 
         [JsonPropertyName("Spell Lists")]
-        public string Spell_Lists { get; set; }
+        public List<string> SpellLists { get; set; }
     }
+
+    // Class to represent Bardic Spells
     public class ClericSpells
     {
         [JsonPropertyName("Name")]
@@ -50,160 +53,134 @@ namespace CloudDragon
         public int Level { get; set; }
     }
 
-    public class ClericCantripcategory
+    // Class to represent categories of Bardic Cantrips
+    public class ClericCantripCategory
     {
-        [JsonPropertyName("Cantrips")]
-        public List<ClericCantrips> Cantrips { get; set; }
+        [JsonPropertyName("ClericCantrips")]
+        public List<BardicCantrips> Cantrips { get; set; }
     }
 
-    public class ClericSpellcategory
+    // Class to represent categories of Bardic Spells
+    public class ClericSpellCategory
     {
-        [JsonPropertyName("Spells")]
+        [JsonPropertyName("ClericSpells")]
         public List<ClericSpells> Spells { get; set; }
     }
 
+    // Class to represent Cleric Cantrip Data
     public class ClericCantripData
     {
         [JsonPropertyName("Cantrip Categories")]
-        public List<ClericCantrips> CantripCategories { get; set; }
+        public List<ClericCantripCategory> CantripCategories { get; set; }
     }
 
+    // Class to represent Cleric Spell Data
     public class ClericSpellData
     {
         [JsonPropertyName("Spell Categories")]
-        public List<ClericSpells> SpellCategories { get; set; }
+        public List<ClericSpellCategory> SpellCategories { get; set; }
     }
 
-    internal class Cleric_Cantrips_Json_Loader
+    // Class to load Bard Cantrip JSON data
+    internal class ClericCantripsJsonLoader
     {
-        public static ClericCantripData LoadclericCantripData(string jsonFilePath)
+        public static ClericCantripCategory LoadClericCantripData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new ClericCantripCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new ClericCantripData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new ClericCantripData();
-                }
-
-                var clericCantripData = JsonSerializer.Deserialize<ClericCantripData>(jsonData);
-
-                if (clericCantripData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new ClericCantripData();
-                }
-
-                return clericCantripData;
+                return JsonSerializer.Deserialize<ClericCantripCategory>(jsonData) ?? new ClericCantripCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
 
-    internal class Cleric_Spells_Json_Loader
+    // Class to load Bard Spell JSON data
+    internal class ClericSpellsJsonLoader
     {
-        public static ClericSpellData LoadclericSpellData(string jsonFilePath)
+        public static ClericSpellCategory LoadBardSpellData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new ClericSpellCategory();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new ClericSpellData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new ClericSpellData();
-                }
-
-                var clericSpellData = JsonSerializer.Deserialize<ClericSpellData>(jsonData);
-
-                if (clericSpellData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new ClericSpellData();
-                }
-
-                return clericSpellData;
+                return JsonSerializer.Deserialize<ClericSpellCategory>(jsonData) ?? new ClericSpellCategory();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
+                throw;
             }
         }
     }
 
+    // Loader class for Cleric Cantrips
     internal class ClericCantripLoader : ILoader
     {
+        private const string JsonFilePathClericCantrip = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Cantrips.json";
+
         public void Load()
         {
             Console.WriteLine("Loading Cleric Cantrip Data ...");
-            // Define the paths to the JSON files
-            string jsonFilePathClericCantrip = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Cantrips.json";
+            var clericcantrips = ClericCantripsJsonLoader.LoadClericCantripData(JsonFilePathClericCantrip);
 
-            var cantripsCleric = Cleric_Cantrips_Json_Loader.LoadclericCantripData(jsonFilePathClericCantrip);
-
-
-            // Display the data for Cleric Cantrips
-            if (cantripsCleric != null && cantripsCleric.CantripCategories != null)
+            if (clericcantrips?.Cantrips != null)
             {
                 Console.WriteLine("Cleric Cantrips:");
-                foreach (var clericCans in cantripsCleric.CantripCategories)
+                foreach (var cantrip in clericcantrips.Cantrips)
                 {
-                    Console.WriteLine($"- Name: {clericCans.Name}, Source: {clericCans.Source}, School: {clericCans.School}, Cast_Time: {clericCans.Cast_Time}, Components: {clericCans.Components}, Duration: {clericCans.Duration}, Description: {clericCans.Description}, Spell_Lists: {clericCans.Spell_Lists} ");
+                    Console.WriteLine($"- Name: {cantrip.Name}, Source: {cantrip.Source}, School: {cantrip.School}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
                 }
+
             }
         }
     }
 
+    // Loader class for Cleric Spells
     internal class ClericSpellLoader : ILoader
     {
+        private const string JsonFilePathClericSpells = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Spells.json";
+
         public void Load()
         {
-            Console.WriteLine("Loading Trinket Data ...");
+            Console.WriteLine("Loading Cleric Spell Data ...");
+            var clericSpells = ClericSpellsJsonLoader.LoadBardSpellData(JsonFilePathClericSpells);
 
-            // Define the paths to the JSON files
-            string jsonFilePathClericSpells = "Spells+Cantrips\\Cleric_Cantrips_+_Spells\\Cleric_Spells";
-            
-
-            // Load the cleric spell data using the Bard spell JsonLoader
-            var clericLevelSpells = Cleric_Spells_Json_Loader.LoadclericSpellData(jsonFilePathClericSpells);
-
-            if (clericLevelSpells != null && clericLevelSpells.SpellCategories != null)
+            if (clericSpells?.Spells != null)
             {
-                Console.WriteLine("Level 1 Cleric Spells:");
-                foreach (var spell in clericLevelSpells.SpellCategories)
+                Console.WriteLine("Cleric Spells:");
+                foreach (var spell in clericSpells.Spells)
                 {
+
                     Console.WriteLine($"- Name: {spell.Name}, School: {spell.School}, Description: {spell.Description}, Level: {spell.Level}");
+
                 }
             }
-
-     
         }
     }
 }
