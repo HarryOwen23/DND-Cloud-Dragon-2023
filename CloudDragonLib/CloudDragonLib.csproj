@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\Debug\net6.0\Magical Items\**" />
+    <EmbeddedResource Remove="bin\Debug\net6.0\Magical Items\**" />
+    <None Remove="bin\Debug\net6.0\Magical Items\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
@@ -734,6 +740,10 @@
     <None Update="Weapons\Weapon_Properties.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0\" />
   </ItemGroup>
 
 </Project>

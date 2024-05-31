@@ -92,6 +92,11 @@ namespace CloudDragon
 
     internal class EquipmentLoader : ILoader
     {
+        public void Load()
+        {
+            throw new NotImplementedException();
+        }
+
         void ILoader.Load()
         {
             Console.WriteLine("Loading Equipment Data ...");

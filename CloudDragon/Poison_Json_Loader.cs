@@ -10,14 +10,16 @@ namespace CloudDragon
     public class Poison
     {
         [JsonPropertyName("Name")]
-        public string Name {  get; set; }
+        public string Name { get; set; }
+
         [JsonPropertyName("Type")]
         public string Type { get; set; }
-        [JsonPropertyName("Price per Dose")]
+
+        [JsonPropertyName("dosePrice")]
         public string DosePrice { get; set; }
     }
 
-    public class PoisonCat
+    public class PoisonCategory
     {
         [JsonPropertyName("poisons")]
         public List<Poison> Poisons { get; set; }
@@ -26,66 +28,54 @@ namespace CloudDragon
     public class PoisonData
     {
         [JsonPropertyName("Poison Categories")]
-        public List<Poison> PoisonCategories { get; set; }
+        public List<PoisonCategory> PoisonCategories { get; set; }
     }
 
-    internal class Poison_Json_Loader
+    internal class PoisonJsonLoader
     {
         public static PoisonData LoadPoisonData(string jsonFilePath)
         {
+            if (string.IsNullOrWhiteSpace(jsonFilePath))
+            {
+                throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null or empty.");
+            }
+
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"File not found: {jsonFilePath}");
+                return new PoisonData();
+            }
+
             try
             {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new PoisonData();
-                }
-
                 string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new PoisonData();
-                }
-
-                var poisonData = JsonSerializer.Deserialize<PoisonData>(jsonData);
-
-                if (poisonData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default MagicalItemData.");
-                    return new PoisonData();
-                }
-
-                return poisonData;
+                return JsonSerializer.Deserialize<PoisonData>(jsonData) ?? new PoisonData();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
+                Console.WriteLine($"Error loading JSON file: {ex.Message}");
                 throw;
             }
         }
     }
     internal class PoisonLoader : ILoader
     {
-        void ILoader.Load()
+        private const string JsonFilePathPoison = "Poisons\\Poisons.json";
+
+        public void Load()
         {
             Console.WriteLine("Loading Poison Data ...");
-            string jsonFilePathpoison = "Poisons\\Poisons.json";
+            var poisonData = PoisonJsonLoader.LoadPoisonData(JsonFilePathPoison);
 
-            var poisonstuff = Poison_Json_Loader.LoadPoisonData(jsonFilePathpoison);
-
-            // Display the Poison data
-            if (poisonstuff.PoisonCategories != null && poisonstuff.PoisonCategories != null) 
+            if (poisonData?.PoisonCategories != null)
             {
                 Console.WriteLine("Poisons:");
-                foreach (var poi in poisonstuff.PoisonCategories)
+                foreach (var category in poisonData.PoisonCategories)
                 {
-                    Console.WriteLine($"- Name: {poi.Name}, Type: {poi.Type}, Price per Dose: {poi.DosePrice} ");
+                    foreach (var poison in category.Poisons)
+                    {
+                        Console.WriteLine($"- Name: {poison.Name}, Type: {poison.Type}, Price per Dose: {poison.DosePrice}");
+                    }
                 }
             }
         }
