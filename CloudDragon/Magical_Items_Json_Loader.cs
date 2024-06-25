@@ -9,19 +9,19 @@ namespace CloudDragon
     // Class to represent Magic Items
     public class MagicItems
     {
-        [JsonPropertyName("name")]
+        [JsonPropertyName("Name")]
         public string Name { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonPropertyName("Type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("attunement")]
+        [JsonPropertyName("Attunement")]
         public string Attunement { get; set; }
 
-        [JsonPropertyName("description")]
+        [JsonPropertyName("Description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("rarity")]
+        [JsonPropertyName("Rarity")]
         public string Rarity { get; set; }
     }
 

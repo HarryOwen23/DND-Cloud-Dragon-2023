@@ -52,9 +52,6 @@ namespace CloudDragon
                     return null;
                 }
 
-                // Debugging: Log JSON data to verify it's loaded correctly
-                //Console.WriteLine($"JSON Data: {jsonData}");
-
                 var trinketData = JsonSerializer.Deserialize<TrinketsData>(jsonData);
 
                 if (trinketData == null)
@@ -84,8 +81,6 @@ namespace CloudDragon
 
             // Load the trinket data using the TrinketJsonLoader
             var trinketsAcquisitionsIncorporated = TrinketJsonLoader.LoadTrinketData(jsonFilePathAcquisitionsIncorperated);
-            
-
 
             // Display the trinket data for Acquisitions Incorporated
             if (trinketsAcquisitionsIncorporated != null)
