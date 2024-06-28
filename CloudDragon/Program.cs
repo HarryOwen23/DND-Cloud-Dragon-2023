@@ -202,9 +202,6 @@ namespace CloudDragon
         static void Main(string[] args)
         {
 
-            //ILoader characterLoader = new CharacterLoader();
-            //characterLoader.Load();
-
             ILoader trinketLoader = new TrinketLoader();
             trinketLoader.Load();
 

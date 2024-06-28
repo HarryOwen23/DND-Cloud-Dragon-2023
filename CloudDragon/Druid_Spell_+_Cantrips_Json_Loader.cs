@@ -81,7 +81,7 @@ namespace CloudDragon
         public List<DruidSpellCategory> SpellCategories { get; set; }
     }
 
-    // Class to load Cleric Cantrip JSON data
+    // Class to load Druid Cantrip JSON data
     internal class DruidCantripsJsonLoader
     {
         public static DruidCantripCategory LoadDruidCantripData(string jsonFilePath)

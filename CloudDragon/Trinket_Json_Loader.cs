@@ -10,7 +10,7 @@ namespace CloudDragon
     {
         [JsonPropertyName("Dice Number")]
         public int DiceNumber { get; set; }
-
+        
         [JsonPropertyName("Trinket")]
         public string Trinket { get; set; }
     }
