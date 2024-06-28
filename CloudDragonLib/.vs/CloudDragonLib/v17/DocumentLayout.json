@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Druid_Spell_\u002B_Cantrips_Json_Loader.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAIwKEAAAAFAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAEwJUAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T16:16:34.569Z",
               "EditorCaption": ""
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Background_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Background_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Background_Json_Loader.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAASwFcAAAA0AAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAqwFcAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T16:11:36.622Z",
               "EditorCaption": ""
@@ -73,8 +73,7 @@
               "RelativeToolTip": "..\\CloudDragon\\Program.cs",
               "ViewState": "AQIAAMQAAAAAAAAAAAAswMoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T19:11:48.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T19:11:48.83Z"
             }
           ]
         }

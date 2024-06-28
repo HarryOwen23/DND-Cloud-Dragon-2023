@@ -82,15 +82,15 @@ namespace CloudDragon
 
         public void Load()
         {
-            Console.WriteLine("Loading Druid Cantrip Data ...");
+            Console.WriteLine("Loading Acolyte Background Data ...");
             var acolyteBackground = JsonFilePathAcolyteBackground.LoadBackgroundData(JsonFilePathAcolyteBackground);
 
-            if (acolyteBackground?.Cantrips != null)
+            if (acolyteBackground?.Backgrounds != null)
             {
                 Console.WriteLine("Acolyte:");
-                foreach (var cantrip in acolyteBackground.Cantrips)
+                foreach (var backgrounds in acolyteBackground.Backgrounds)
                 {
-                    Console.WriteLine($"- Background Name: {cantrip.Name}, Description: {cantrip.Source}, Skill Proficiencies: {cantrip.Skill_Proficiencies}, CastTime: {cantrip.CastTime}, Components: {cantrip.Components}, Duration: {cantrip.Duration}, Description: {cantrip.Description}, SpellLists: {cantrip.SpellLists}");
+                    Console.WriteLine($"- Background Name: {backgrounds.Background_Name}, Description: {backgrounds.Source}, Skill Proficiencies: {backgrounds.Skill_Proficiencies}, Languages: {backgrounds.Languages}, Starting Equipment: {backgrounds.Starting_Equipment}, Feature: {backgrounds.Feature}, Feature Description: {backgrounds.Feature_Description}, Personality Traits: {backgrounds.Personality_Traits},  Ideals: {backgrounds.Ideals}, Bonds: {backgrounds.Bonds}, Flaws: {backgrounds.Flaws} ");
                 }
 
             }
