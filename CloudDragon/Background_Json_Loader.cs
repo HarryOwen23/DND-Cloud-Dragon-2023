@@ -31,13 +31,13 @@ namespace CloudDragon
 
         [JsonPropertyName("Personality Traits")]
         public List<string> Personality_Traits { get; set; }
-        
+
         [JsonPropertyName("Ideals")]
         public List<string> Ideals { get; set; }
-        
+
         [JsonPropertyName("Bonds")]
         public List<string> Bonds { get; set; }
-        
+
         [JsonPropertyName("Flaws")]
         public List<string> Flaws { get; set; }
     }
@@ -46,7 +46,6 @@ namespace CloudDragon
         [JsonPropertyName("Backgrounds")]
         public List<Background> BackgroundCategories { get; set; }
     }
-
 
     internal class Background_Json_Loader
     {
@@ -78,22 +77,24 @@ namespace CloudDragon
     // Loader class for Backgrounds
     internal class BackgroundLoader : ILoader
     {
-        private const string JsonFilePathAcolyteBackground = "Background\\\\Background_Acolyte.json";
+        private const string JsonFilePathBackground = "Background\\Backgrounds.json";
+
 
         public void Load()
         {
-            Console.WriteLine("Loading Acolyte Background Data ...");
-            var acolyteBackground = JsonFilePathAcolyteBackground.LoadBackgroundData(JsonFilePathAcolyteBackground);
+            Console.WriteLine("Loading Background Data ...");
+            var allBackground = Background_Json_Loader.LoadBackgroundData(JsonFilePathBackground);
 
-            if (acolyteBackground?.Backgrounds != null)
+            if (allBackground?.BackgroundCategories != null)
             {
-                Console.WriteLine("Acolyte:");
-                foreach (var backgrounds in acolyteBackground.Backgrounds)
+                Console.WriteLine("Backgrounds:");
+                foreach (var background in allBackground.BackgroundCategories)
                 {
-                    Console.WriteLine($"- Background Name: {backgrounds.Background_Name}, Description: {backgrounds.Source}, Skill Proficiencies: {backgrounds.Skill_Proficiencies}, Languages: {backgrounds.Languages}, Starting Equipment: {backgrounds.Starting_Equipment}, Feature: {backgrounds.Feature}, Feature Description: {backgrounds.Feature_Description}, Personality Traits: {backgrounds.Personality_Traits},  Ideals: {backgrounds.Ideals}, Bonds: {backgrounds.Bonds}, Flaws: {backgrounds.Flaws} ");
+                    Console.WriteLine($"- Background Name: {background.Background_Name}, Description: {background.Description}, Skill Proficiencies: {background.Skill_Proficiencies}, Languages: {string.Join(", ", background.Languages)}, Starting Equipment: {string.Join(", ", background.Starting_Equipment)}, Feature: {background.Feature}, Feature Description: {background.Feature_Description}, Personality Traits: {string.Join(", ", background.Personality_Traits)}, Ideals: {string.Join(", ", background.Ideals)}, Bonds: {string.Join(", ", background.Bonds)}, Flaws: {string.Join(", ", background.Flaws)}");
                 }
-
             }
+
         }
     }
+
 }
