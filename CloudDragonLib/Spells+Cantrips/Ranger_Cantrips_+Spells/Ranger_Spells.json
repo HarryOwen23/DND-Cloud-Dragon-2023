@@ -4,533 +4,403 @@
             "Name": "Absorb Elements",
             "School": "Abjuration",
             "Description": "You capture some of the incoming energy, lessening its effect on you and storing it for your next melee attack.",
-            "Level": 1,
-            "Duration": "1 round"
+            "Level": 1
         },
         {
             "Name": "Alarm",
             "School": "Abjuration",
             "Description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube.",
-            "Level": 1,
-            "Duration": "8 hours"
+            "Level": 1
         },
         {
             "Name": "Animal Friendship",
             "School": "Enchantment",
             "Description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range.",
-            "Level": 1,
-            "Duration": "24 hours"
+            "Level": 1
         },
         {
             "Name": "Beast Bond",
             "School": "Divination",
             "Description": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Cure Wounds",
             "School": "Evocation",
             "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier.",
-            "Level": 1,
-            "Duration": "Instantaneous"
+            "Level": 1
         },
         {
             "Name": "Detect Magic",
             "School": "Divination",
             "Description": "For the duration, you sense the presence of magic within 30 feet of you.",
-            "Level": 1,
-            "Duration": "Concentration, up to 10 minutes"
+            "Level": 1
         },
         {
             "Name": "Detect Poison and Disease",
             "School": "Divination",
             "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you.",
-            "Level": 1,
-            "Duration": "Concentration, up to 10 minutes"
+            "Level": 1
         },
         {
             "Name": "Ensnaring Strike",
             "School": "Conjuration",
             "Description": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Entangle",
             "School": "Conjuration",
             "Description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Fog Cloud",
             "School": "Conjuration",
             "Description": "You create a 20-foot-radius sphere of fog centered on a point within range.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 1
         },
         {
             "Name": "Goodberry",
             "School": "Transmutation",
             "Description": "Up to ten berries appear in your hand and are infused with magic for the duration.",
-            "Level": 1,
-            "Duration": "Instantaneous"
+            "Level": 1
         },
         {
             "Name": "Hail of Thorns",
             "School": "Conjuration",
             "Description": "The next time you hit a creature with a ranged weapon attack before this spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Hunter's Mark",
             "School": "Divination",
             "Description": "You choose a creature you can see within range and mystically mark it as your quarry.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 1
         },
         {
             "Name": "Jump",
             "School": "Transmutation",
             "Description": "You touch a creature, and the creature's jump distance is tripled until the spell ends.",
-            "Level": 1,
-            "Duration": "1 minute"
+            "Level": 1
         },
         {
             "Name": "Longstrider",
             "School": "Transmutation",
             "Description": "You touch a creature, and the target's speed increases by 10 feet until the spell ends.",
-            "Level": 1,
-            "Duration": "1 hour"
+            "Level": 1
         },
         {
             "Name": "Searing Smite",
             "School": "Evocation",
             "Description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with white-hot intensity.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Snare",
             "School": "Abjuration",
             "Description": "As you cast this spell, you use the rope to create a circle with a 5-foot radius on the ground or the floor.",
-            "Level": 1,
-            "Duration": "Until dispelled or triggered"
+            "Level": 1
         },
         {
             "Name": "Speak with Animals",
             "School": "Divination",
             "Description": "You gain the ability to comprehend and verbally communicate with beasts for the duration.",
-            "Level": 1,
-            "Duration": "10 minutes"
+            "Level": 1
         },
         {
             "Name": "Sudden Awakening (UA)",
             "School": "Enchantment",
             "Description": "You imbue a creature within range with a moment of heightened awareness.",
-            "Level": 1,
-            "Duration": "Instantaneous"
+            "Level": 1
         },
         {
             "Name": "Wild Cunning (UA)",
             "School": "Transmutation",
             "Description": "You imbue nature itself with the ability to aid you in your endeavors.",
-            "Level": 1,
-            "Duration": "Instantaneous"
+            "Level": 1
         },
         {
             "Name": "Zephyr Strike",
             "School": "Transmutation",
             "Description": "You move like the wind.",
-            "Level": 1,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 1
         },
         {
             "Name": "Aid",
             "School": "Abjuration",
             "Description": "Your spell bolsters your allies with toughness and resolve.",
-            "Level": 2,
-            "Duration": "8 hours"
+            "Level": 2
         },
         {
             "Name": "Air Bubble",
             "School": "Conjuration",
             "Description": "A bubble of air surrounds the head of a willing creature you touch.",
-            "Level": 2,
-            "Duration": "24 hours"
+            "Level": 2
         },
         {
             "Name": "Animal Messenger",
             "School": "Enchantment",
             "Description": "You use an animal to deliver a message.",
-            "Level": 2,
-            "Duration": "24 hours"
+            "Level": 2
         },
         {
             "Name": "Barkskin",
             "School": "Transmutation",
             "Description": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 2
         },
         {
             "Name": "Beast Sense",
             "School": "Divination",
             "Description": "You can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 2
         },
         {
             "Name": "Cordon of Arrows",
             "School": "Transmutation",
             "Description": "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area.",
-            "Level": 2,
-            "Duration": "8 hours"
+            "Level": 2
         },
         {
             "Name": "Darkvision",
             "School": "Transmutation",
             "Description": "You touch a willing creature to grant it the ability to see in darkness.",
-            "Level": 2,
-            "Duration": "8 hours"
+            "Level": 2
         },
         {
             "Name": "Enhance Ability",
             "School": "Transmutation",
             "Description": "You touch a creature and bestow upon it a magical enhancement.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 2
         },
         {
             "Name": "Find Traps",
             "School": "Divination",
             "Description": "You sense the presence of any trap within range that is within line of sight.",
-            "Level": 2,
-            "Duration": "Instantaneous"
+            "Level": 2
         },
         {
             "Name": "Gust of Wind",
             "School": "Evocation",
             "Description": "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 2
         },
         {
             "Name": "Healing Spirit",
             "School": "Conjuration",
             "Description": "You call forth a nature spirit to soothe the wounded.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 2
         },
         {
             "Name": "Lesser Restoration",
             "School": "Abjuration",
             "Description": "You touch a creature and can end either one disease or one condition afflicting it.",
-            "Level": 2,
-            "Duration": "Instantaneous"
+            "Level": 2
         },
         {
             "Name": "Locate Animals or Plants",
             "School": "Divination",
             "Description": "You describe or name a specific kind of beast or plant.",
-            "Level": 2,
-            "Duration": "Instantaneous"
+            "Level": 2
         },
         {
             "Name": "Locate Object",
             "School": "Divination",
             "Description": "You sense the direction of the object's location, as long as that object is within 1,000 feet of you and in motion.",
-            "Level": 2,
-            "Duration": "Concentration, up to 10 minutes"
+            "Level": 2
         },
         {
             "Name": "Magic Weapon",
             "School": "Transmutation",
             "Description": "You touch a nonmagical weapon.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 2
         },
         {
             "Name": "Pass Without Trace",
             "School": "Abjuration",
             "Description": "A veil of shadows and silence radiates from you, masking you and your companions from detection.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 2
         },
         {
             "Name": "Protection from Poison",
             "School": "Abjuration",
             "Description": "You touch a creature.",
-            "Level": 2,
-            "Duration": "1 hour"
+            "Level": 2
         },
         {
             "Name": "Silence",
             "School": "Illusion",
             "Description": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range.",
-            "Level": 2,
-            "Duration": "Concentration, up to 10 minutes"
+            "Level": 2
         },
         {
             "Name": "Spike Growth",
             "School": "Transmutation",
             "Description": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns.",
-            "Level": 2,
-            "Duration": "Concentration, up to 10 minutes"
+            "Level": 2
         },
         {
-            "Name": "Summon Beast",
-            "School": "Conjuration",
-            "Description": "You summon a fey spirit to an unoccupied space that you can see within range.",
-            "Level": 2,
-            "Duration": "Concentration, up to 1 hour"
+            "Name": "Warding Bond",
+            "School": "Abjuration",
+            "Description": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends.",
+            "Level": 2
         },
         {
-            "Name": "Ashardalon's Stride",
+            "Name": "Alter Self",
             "School": "Transmutation",
-            "Description": "You tap into the elemental forces of fire and air to gain enhanced mobility.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 minute"
+            "Description": "You assume a different form.",
+            "Level": 3
         },
         {
             "Name": "Conjure Animals",
             "School": "Conjuration",
             "Description": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 3
         },
         {
             "Name": "Conjure Barrage",
             "School": "Conjuration",
-            "Description": "You throw a nonmagical weapon into the air to create a cone of identical weapons that shoot forward and then disappear.",
-            "Level": 3,
-            "Duration": "Instantaneous"
+            "Description": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear.",
+            "Level": 3
         },
         {
             "Name": "Daylight",
             "School": "Evocation",
             "Description": "A 60-foot-radius sphere of light spreads out from a point you choose within range.",
-            "Level": 3,
-            "Duration": "1 hour"
+            "Level": 3
         },
         {
             "Name": "Elemental Weapon",
             "School": "Transmutation",
             "Description": "You touch a nonmagical weapon.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 3
         },
         {
             "Name": "Flame Arrows",
             "School": "Transmutation",
             "Description": "You touch a quiver containing arrows or bolts.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 hour"
-        },
-        {
-            "Name": "Flame Stride (UA)",
-            "School": "Transmutation",
-            "Description": "You gain the ability to move through the air.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 minute"
-        },
-        {
-            "Name": "Freedom of the Waves (HB)",
-            "School": "Conjuration",
-            "Description": "You create a magical barrier of water that protects you and allows you to swim freely.",
-            "Level": 3,
-            "Duration": "Instantaneous"
+            "Level": 3
         },
         {
             "Name": "Lightning Arrow",
             "School": "Transmutation",
-            "Description": "The next time you make a ranged weapon attack during the spell's duration, your weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 minute"
-        },
-        {
-            "Name": "Meld into Stone",
-            "School": "Transmutation",
-            "Description": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration.",
-            "Level": 3,
-            "Duration": "8 hours"
+            "Description": "The next time you make a ranged weapon attack during the spell's duration, the weapon or ammunition transforms into a bolt of lightning.",
+            "Level": 3
         },
         {
             "Name": "Nondetection",
             "School": "Abjuration",
             "Description": "For the duration, you hide a target that you touch from divination magic.",
-            "Level": 3,
-            "Duration": "8 hours"
+            "Level": 3
         },
         {
             "Name": "Plant Growth",
             "School": "Transmutation",
             "Description": "This spell channels vitality into plants within a specific area.",
-            "Level": 3,
-            "Duration": "Instantaneous"
+            "Level": 3
         },
         {
             "Name": "Protection from Energy",
             "School": "Abjuration",
-            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 hour"
-        },
-        {
-            "Name": "Revivify",
-            "School": "Necromancy",
-            "Description": "You touch a creature that has died within the last minute.",
-            "Level": 3,
-            "Duration": "Instantaneous"
+            "Description": "For the duration, the willing creature you touch has resistance to one damage type of your choice.",
+            "Level": 3
         },
         {
             "Name": "Speak with Plants",
             "School": "Transmutation",
             "Description": "You imbue plants within 30 feet of you with limited sentience and animation.",
-            "Level": 3,
-            "Duration": "10 minutes"
-        },
-        {
-            "Name": "Summon Fey",
-            "School": "Conjuration",
-            "Description": "You summon a fey creature to an unoccupied space that you can see within range.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 3
         },
         {
             "Name": "Water Breathing",
             "School": "Transmutation",
             "Description": "This spell grants up to ten willing creatures you can see within range the ability to breathe underwater until the spell ends.",
-            "Level": 3,
-            "Duration": "24 hours"
+            "Level": 3
         },
         {
             "Name": "Water Walk",
             "School": "Transmutation",
-            "Description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat).",
-            "Level": 3,
-            "Duration": "1 hour"
+            "Description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground.",
+            "Level": 3
         },
         {
             "Name": "Wind Wall",
             "School": "Evocation",
             "Description": "A wall of strong wind rises from the ground at a point you choose within range.",
-            "Level": 3,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 3
         },
         {
             "Name": "Conjure Woodland Beings",
             "School": "Conjuration",
             "Description": "You summon fey creatures that appear in unoccupied spaces that you can see within range.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 4
         },
         {
-            "Name": "Dominate Beast",
-            "School": "Enchantment",
-            "Description": "You attempt to beguile a beast that you can see within range.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 minute"
+            "Name": "Divination",
+            "School": "Divination",
+            "Description": "Your magic and an offering put you in contact with a god or a god's servants.",
+            "Level": 4
         },
         {
             "Name": "Freedom of Movement",
             "School": "Abjuration",
             "Description": "You touch a willing creature.",
-            "Level": 4,
-            "Duration": "1 hour"
+            "Level": 4
         },
         {
             "Name": "Grasping Vine",
             "School": "Conjuration",
             "Description": "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 4
         },
         {
             "Name": "Guardian of Nature",
             "School": "Transmutation",
-            "Description": "You transform yourself into a powerful guardian.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 minute"
+            "Description": "You call upon nature to grant you supernatural might.",
+            "Level": 4
         },
         {
             "Name": "Locate Creature",
             "School": "Divination",
-            "Description": "You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 hour"
+            "Description": "Describe or name a creature that is familiar to you.",
+            "Level": 4
         },
         {
             "Name": "Stoneskin",
             "School": "Abjuration",
             "Description": "This spell turns the flesh of a willing creature you touch as hard as stone.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 hour"
-        },
-        {
-            "Name": "Summon Elemental",
-            "School": "Conjuration",
-            "Description": "You call forth an elemental servant.",
-            "Level": 4,
-            "Duration": "Concentration, up to 1 hour"
+            "Level": 4
         },
         {
             "Name": "Commune with Nature",
             "School": "Divination",
             "Description": "You briefly become one with nature and gain knowledge of the surrounding territory.",
-            "Level": 5,
-            "Duration": "Instantaneous"
+            "Level": 5
         },
         {
             "Name": "Conjure Volley",
             "School": "Conjuration",
-            "Description": "You create a rain of magical projectiles that strike up to four creatures of your choice that you can see within range.",
-            "Level": 5,
-            "Duration": "Instantaneous"
-        },
-        {
-            "Name": "Freedom of the Winds (HB)",
-            "School": "Abjuration",
-            "Description": "You gain the ability to move through the air, allowing you to fly at a speed equal to your walking speed for the duration.",
-            "Level": 5,
-            "Duration": "Concentration, up to 10 minutes"
-        },
-        {
-            "Name": "Greater Restoration",
-            "School": "Abjuration",
-            "Description": "You imbue a creature you touch with positive energy to undo a debilitating effect.",
-            "Level": 5,
-            "Duration": "Instantaneous"
-        },
-        {
-            "Name": "Steel Wind Strike",
-            "School": "Conjuration",
-            "Description": "You flourish the weapon used in the casting and then vanish to strike like the wind.",
-            "Level": 5,
-            "Duration": "Instantaneous"
+            "Description": "You fire a piece of nonmagical ammunition from a ranged weapon or throw a nonmagical weapon into the air to create a volley of identical weapons that shoot forward and then disappear.",
+            "Level": 5
         },
         {
             "Name": "Swift Quiver",
             "School": "Transmutation",
             "Description": "You transmute your quiver so it produces an endless supply of nonmagical ammunition.",
-            "Level": 5,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 5
         },
         {
             "Name": "Tree Stride",
             "School": "Conjuration",
             "Description": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet.",
-            "Level": 5,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 5
         },
         {
-            "Name": "Wrath Of Nature",
+            "Name": "Wrath of Nature",
             "School": "Evocation",
             "Description": "You call out to the spirits of nature to rouse them against your enemies.",
-            "Level": 5,
-            "Duration": "Concentration, up to 1 minute"
+            "Level": 5
         }
     ]
 }

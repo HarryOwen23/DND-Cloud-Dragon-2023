@@ -1,0 +1,79 @@
+﻿{
+    "Languages": [
+        {
+            "Name": "Common",
+            "Description": "The most widely spoken language in the world of D&D, Common is the language of humans and many other races.",
+            "Speakers": [ "Humans", "Half-Elves", "Half-Orcs", "Halflings" ]
+        },
+        {
+            "Name": "Dwarvish",
+            "Description": "The language of the dwarves, known for its runic script and harsh, guttural sounds.",
+            "Speakers": [ "Dwarves" ]
+        },
+        {
+            "Name": "Elvish",
+            "Description": "A fluid language with intricate script, spoken by the elves.",
+            "Speakers": [ "Elves", "Half-Elves" ]
+        },
+        {
+            "Name": "Giant",
+            "Description": "The language of giants, featuring a simple script and powerful words.",
+            "Speakers": [ "Giants", "Ogres" ]
+        },
+        {
+            "Name": "Gnomish",
+            "Description": "A language with a lot of compound words and technical terms, spoken by gnomes.",
+            "Speakers": [ "Gnomes" ]
+        },
+        {
+            "Name": "Goblin",
+            "Description": "The harsh and guttural language of goblins, hobgoblins, and bugbears.",
+            "Speakers": [ "Goblins", "Hobgoblins", "Bugbears" ]
+        },
+        {
+            "Name": "Halfling",
+            "Description": "A simple and practical language spoken by halflings, with a lot of idioms.",
+            "Speakers": [ "Halflings" ]
+        },
+        {
+            "Name": "Orc",
+            "Description": "The brutal and straightforward language of orcs, full of harsh consonants.",
+            "Speakers": [ "Orcs", "Half-Orcs" ]
+        },
+        {
+            "Name": "Draconic",
+            "Description": "An ancient and powerful language spoken by dragons and their kin.",
+            "Speakers": [ "Dragons", "Dragonborn", "Kobolds" ]
+        },
+        {
+            "Name": "Infernal",
+            "Description": "The language of devils, with a complex and dark script.",
+            "Speakers": [ "Devils", "Tieflings" ]
+        },
+        {
+            "Name": "Abyssal",
+            "Description": "The chaotic language of demons, featuring harsh and guttural sounds.",
+            "Speakers": [ "Demons" ]
+        },
+        {
+            "Name": "Celestial",
+            "Description": "The beautiful and harmonious language of celestial beings.",
+            "Speakers": [ "Celestials" ]
+        },
+        {
+            "Name": "Sylvan",
+            "Description": "The language of the fey, known for its lyrical and musical quality.",
+            "Speakers": [ "Fey", "Elves" ]
+        },
+        {
+            "Name": "Undercommon",
+            "Description": "A drow language used in the Underdark, with influences from several languages.",
+            "Speakers": [ "Drow", "Other Underdark inhabitants" ]
+        },
+        {
+            "Name": "Primordial",
+            "Description": "The ancient language of elementals, with several dialects including Auran, Aquan, Ignan, and Terran.",
+            "Speakers": [ "Elementals" ]
+        }
+    ]
+}
