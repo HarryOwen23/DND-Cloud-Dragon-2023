@@ -15,13 +15,13 @@ namespace CloudDragon
         public string? Cost { get; set; } 
 
         [JsonPropertyName("Damage")]
-        public string? Damage { get; set; } 
+        public string Damage { get; set; } 
 
         [JsonPropertyName("Weight")]
-        public string? Weight { get; set; } 
+        public string Weight { get; set; } 
 
         [JsonPropertyName("Properties")]
-        public string? Properties { get; set; }
+        public string Properties { get; set; }
     }
 
     public class MartialRangedWeapon
@@ -30,10 +30,10 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string? Cost { get; set; }
+        public string Cost { get; set; }
 
         [JsonPropertyName("Damage")]
-        public string? Damage { get; set; }
+        public string Damage { get; set; }
 
         [JsonPropertyName("Weight")]
         public string Weight { get; set; }
@@ -49,7 +49,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Cost")]
-        public string? Cost { get; set; }
+        public string Cost { get; set; }
 
         [JsonPropertyName("Damage")]
         public string Damage { get; set; }
@@ -71,7 +71,7 @@ namespace CloudDragon
         public string Cost { get; set; }
 
         [JsonPropertyName("Damage")]
-        public string? Damage { get; set; }
+        public string Damage { get; set; }
 
         [JsonPropertyName("Weight")]
         public string Weight { get; set; }
@@ -86,7 +86,7 @@ namespace CloudDragon
         public string Name { get; set; }
 
         [JsonPropertyName("Weight")]
-        public string? Weight { get; set; }
+        public string Weight { get; set; }
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }

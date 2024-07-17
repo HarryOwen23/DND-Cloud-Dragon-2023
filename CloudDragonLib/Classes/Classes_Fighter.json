@@ -66,14 +66,38 @@
         "Class Features": [
             {
                 "Feature": "Second Wind",
-                "Description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+                "Level": 1,
+                "Description": [
+                    "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+                    "Gain more uses of Second Wind as you level up."
+                ]
+            },
+            {
+                "Feature": "Weapon Mastery",
+                "Level": 1,
+                "Description": [
+                    "Choose three weapons. You gain use of their mastery properties.",
+                    "You may change your chosen weapons each Long Rest.",
+                    "Gain access to more mastery properties as you level up."
+                ]
+            },
+            {
+                "Feature": "Tactical Mind",
+                "Level": 2,
+                "Description": [
+                    "Expend a use of Second Wind to add 1d10 to a failed ability check. If you still fail, the use of Second Wind isn’t expended."
+                ]
             },
             {
                 "Feature": "Action Surge",
-                "Description": "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action."
+                "Level": 2,
+                "Description": [
+                    "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action."
+                ]
             },
             {
                 "Feature": "Martial Archetype",
+                "Level": 3,
                 "Description": [
                     "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
                     {
@@ -84,7 +108,7 @@
                             "Cavalier",
                             "Champion",
                             "Echo Knight",
-                            "Elderitch Knigh",
+                            "Eldritch Knight",
                             "Psi Warrior",
                             "Rune Knight",
                             "Samurai"
@@ -94,18 +118,55 @@
             },
             {
                 "Feature": "Ability Score Improvement",
-                "Description": "When reaching 4th, 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or 2 ability scores by 1."
+                "Level": 4,
+                "Description": [
+                    "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+                ]
             },
             {
                 "Feature": "Extra Attack",
+                "Level": 5,
                 "Description": [
-                    "Beginning at 5th level, you can attack twice, instead of once, whenever you take the attack action on your turn.",
+                    "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
                     "The number of attacks increases to three when you reach 11th level and to four times when you reach 20th level in this class."
                 ]
             },
             {
+                "Feature": "Tactical Shift",
+                "Level": 5,
+                "Description": [
+                    "Move half your Speed without provoking Opportunity Attacks when you use Second Wind as a Bonus Action."
+                ]
+            },
+            {
                 "Feature": "Indomitable",
-                "Description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+                "Level": 9,
+                "Description": [
+                    "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.",
+                    "You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+                    "Add your Fighter level to rerolls made with Indomitable."
+                ]
+            },
+            {
+                "Feature": "Tactical Master",
+                "Level": 9,
+                "Description": [
+                    "Replace a weapon’s mastery property with Push, Sap, or Slow for that attack."
+                ]
+            },
+            {
+                "Feature": "Studied Attacks",
+                "Level": 13,
+                "Description": [
+                    "Get Advantage on attacks against a target creature after you miss an attack."
+                ]
+            },
+            {
+                "Feature": "Epic Boon",
+                "Level": 19,
+                "Description": [
+                    "At 19th level, you choose one Epic Boon feat or another feat of your choice."
+                ]
             }
         ]
     }

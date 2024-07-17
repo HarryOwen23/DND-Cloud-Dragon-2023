@@ -11,8 +11,4 @@
     <ProjectReference Include="..\CloudDragonLib\CloudDragonLib.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Language\" />
-  </ItemGroup>
-
 </Project>
