@@ -49,6 +49,42 @@
             "Level": 1
         },
         {
+            "Name": "Protection from Evil and Good",
+            "School": "Abjuration",
+            "Description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.",
+            "Level": 1
+        },
+        {
+            "Name": "Purify Food and Drink",
+            "School": "Transmutation",
+            "Description": "All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
+            "Level": 1
+        },
+        {
+            "Name": "Searing Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals an extra 1d6 fire damage.",
+            "Level": 1
+        },
+        {
+            "Name": "Shield of Faith",
+            "School": "Abjuration",
+            "Description": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
+            "Level": 1
+        },
+        {
+            "Name": "Thunderous Smite",
+            "School": "Evocation",
+            "Description": "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target.",
+            "Level": 1
+        },
+        {
+            "Name": "Wrathful Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a Wisdom saving throw or be frightened of you until the spell ends.",
+            "Level": 1
+        },
+        {
             "Name": "Aid",
             "School": "Abjuration",
             "Description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.",
@@ -97,6 +133,12 @@
             "Level": 2
         },
         {
+            "Name": "Aura of Vitality",
+            "School": "Evocation",
+            "Description": "Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points.",
+            "Level": 3
+        },
+        {
             "Name": "Blinding Smite",
             "School": "Evocation",
             "Description": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with a bright light, and the attack deals an extra 3d8 radiant damage.",
@@ -127,9 +169,27 @@
             "Level": 3
         },
         {
+            "Name": "Elemental Weapon",
+            "School": "Transmutation",
+            "Description": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
+            "Level": 3
+        },
+        {
             "Name": "Magic Circle",
             "School": "Abjuration",
             "Description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range.",
+            "Level": 3
+        },
+        {
+            "Name": "Remove Curse",
+            "School": "Abjuration",
+            "Description": "You touch an object or a creature. If it is cursed, any curse affecting it is ended.",
+            "Level": 3
+        },
+        {
+            "Name": "Revivify",
+            "School": "Necromancy",
+            "Description": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point.",
             "Level": 3
         },
         {
@@ -163,6 +223,18 @@
             "Level": 4
         },
         {
+            "Name": "Locate Creature",
+            "School": "Divination",
+            "Description": "Describe or name a creature that is familiar to you. You sense the direction to the creature's location as long as that creature is within 1,000 feet of you.",
+            "Level": 4
+        },
+        {
+            "Name": "Staggering Smite",
+            "School": "Evocation",
+            "Description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with force, and the attack deals an extra 4d6 force damage.",
+            "Level": 4
+        },
+        {
             "Name": "Banishing Smite",
             "School": "Evocation",
             "Description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage.",
@@ -190,6 +262,12 @@
             "Name": "Geas",
             "School": "Enchantment",
             "Description": "You place a magical command on a creature you can see within range, forcing it to carry out some service or refrain from some action.",
+            "Level": 5
+        },
+        {
+            "Name": "Raise Dead",
+            "School": "Necromancy",
+            "Description": "You return a dead creature you touch to life, provided that it has been dead no longer than 10 days. If the creature's soul is both willing and at liberty to rejoin the body, the creature returns to life with 1 hit point.",
             "Level": 5
         }
     ]

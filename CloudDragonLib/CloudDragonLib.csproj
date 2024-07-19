@@ -101,7 +101,7 @@
     <None Update="Classes\Classes_Monk.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Classes\Classes_Rouge.json">
+    <None Update="Classes\Classes_Rogue.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Classes\Classes_Sorcerer.json">
