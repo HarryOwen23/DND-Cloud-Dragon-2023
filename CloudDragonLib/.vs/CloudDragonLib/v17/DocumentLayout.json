@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\classes_fighter.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\classes_fighter.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\cleric\\cleric_twilight_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\cleric\\cleric_twilight_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\cleric\\cleric_trickery_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\cleric\\cleric_trickery_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\cleric\\cleric_tempest_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\cleric\\cleric_tempest_domain.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,14 +47,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Classes_Fighter.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Fighter.json",
-              "RelativeDocumentMoniker": "Classes\\Classes_Fighter.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Fighter.json",
-              "RelativeToolTip": "Classes\\Classes_Fighter.json",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAqwHIAAAARAAAA",
+              "Title": "Cleric_Twilight_Domain.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Twilight_Domain.json",
+              "RelativeDocumentMoniker": "Classes\\Cleric\\Cleric_Twilight_Domain.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Twilight_Domain.json",
+              "RelativeToolTip": "Classes\\Cleric\\Cleric_Twilight_Domain.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-18T11:05:13.755Z",
+              "WhenOpened": "2024-07-19T16:01:11.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cleric_Tempest_Domain.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Tempest_Domain.json",
+              "RelativeDocumentMoniker": "Classes\\Cleric\\Cleric_Tempest_Domain.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Tempest_Domain.json",
+              "RelativeToolTip": "Classes\\Cleric\\Cleric_Tempest_Domain.json",
+              "ViewState": "AQIAADsAAAAAAAAAAAAiwFEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T15:59:27.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cleric_Trickery_Domain.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Trickery_Domain.json",
+              "RelativeDocumentMoniker": "Classes\\Cleric\\Cleric_Trickery_Domain.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Cleric\\Cleric_Trickery_Domain.json",
+              "RelativeToolTip": "Classes\\Cleric\\Cleric_Trickery_Domain.json",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAiwEwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T15:59:26.974Z",
               "EditorCaption": ""
             }
           ]
