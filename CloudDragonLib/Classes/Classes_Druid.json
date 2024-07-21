@@ -49,9 +49,29 @@
             "Description": "At 3rd level, you choose a circle that binds you to the natural world, shaping your spellcasting and granting you features. Choose from the following circles:"
         },
         {
+            "Level": 4,
+            "Feature": "Wild Shape Improvement",
+            "Description": "At 4th level, you can transform into a beast with a challenge rating as high as 1 (you can’t transform into a beast that can fly or swim)."
+        },
+        {
+            "Level": 4,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 4,
+            "Feature": "Cantrip Versatility (Optional)",
+            "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class’s Spellcasting feature with another cantrip from the druid spell list."
+        },
+        {
             "Level": 5,
             "Feature": "Wild Resurgence",
             "Description": "Starting at 5th level, you can expend a spell slot to regain one use of Wild Shape. Additionally, you can expend a use of Wild Shape to restore one level 1 spell slot during a long rest."
+        },
+        {
+            "Level": 6,
+            "Feature": "Druid Subclass Feature",
+            "Description": "At 6th level, you gain a feature granted by your Druid Subclass."
         },
         {
             "Level": 7,
@@ -59,9 +79,69 @@
             "Description": "At 7th level, you choose between Potent Spellcasting or Primal Strike. Potent Spellcasting allows you to add your Wisdom modifier to the damage dealt by your Druid cantrips. Primal Strike allows your attacks to deal an extra 1d8 Cold, Fire, Lightning, or Thunder damage once per turn."
         },
         {
+            "Level": 8,
+            "Feature": "Wild Shape Improvement",
+            "Description": "At 8th level, you can transform into a beast with a challenge rating as high as 1 (you can transform into a beast that can fly or swim)."
+        },
+        {
+            "Level": 8,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 8,
+            "Feature": "Cantrip Versatility (Optional)",
+            "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class’s Spellcasting feature with another cantrip from the druid spell list."
+        },
+        {
+            "Level": 10,
+            "Feature": "Druid Subclass Feature",
+            "Description": "At 10th level, you gain a feature granted by your Druid Subclass."
+        },
+        {
+            "Level": 12,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 12,
+            "Feature": "Cantrip Versatility (Optional)",
+            "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class’s Spellcasting feature with another cantrip from the druid spell list."
+        },
+        {
+            "Level": 14,
+            "Feature": "Druid Subclass Feature",
+            "Description": "At 14th level, you gain a feature granted by your Druid Subclass."
+        },
+        {
+            "Level": 16,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 16,
+            "Feature": "Cantrip Versatility (Optional)",
+            "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class’s Spellcasting feature with another cantrip from the druid spell list."
+        },
+        {
             "Level": 18,
             "Feature": "Beast Spells",
             "Description": "Starting at 18th level, you can cast spells while in Wild Shape form."
+        },
+        {
+            "Level": 18,
+            "Feature": "Timeless Body",
+            "Description": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+        },
+        {
+            "Level": 19,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 19,
+            "Feature": "Cantrip Versatility (Optional)",
+            "Description": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class’s Spellcasting feature with another cantrip from the druid spell list."
         },
         {
             "Level": 19,

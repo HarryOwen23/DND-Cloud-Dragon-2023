@@ -2,12 +2,14 @@
     "Archetype Name": "Arcane Archer",
     "Archetype Features": [
         {
+            "Level": 3,
             "Archetype Feature": "Arcane Archer Lore",
             "Archetype Feature Description": [
                 "At 3rd level, you learn magical theory or some of the secrets of nature – typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the Arcana or the Nature skill, and you choose to learn either the Prestidigitation or Druidcraft cantrip."
             ]
         },
         {
+            "Level": 3,
             "Archetype Feature": "Arcane Shot",
             "Archetype Feature Description": [
                 "At 3rd level, you learn to unleash special magical effects with some of your shots. When you gain this feature, you learn two Arcane Shot options of your choice (see Arcane Shot Options below).",
@@ -16,26 +18,9 @@
             ]
         },
         {
-            "Archetype Feature": "Magic Arrow",
+            "Level": 3,
+            "Archetype Feature": "Arcane Shot Options",
             "Archetype Feature Description": [
-                "At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target."
-            ]
-        },
-        {
-            "Archetype Feature": "Curving Shot",
-            "Archetype Feature Description": [
-                "At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
-            ]
-        },
-        {
-            "Archetype Feature": "Ever-Ready Shot",
-            "Archetype Feature Description": [
-                "Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it."
-            ]
-        },
-        {
-            "Arcane Shot Options": "Arcane Shot Options",
-            "Arcane Shot Options Description": [
                 "The Arcane Shot feature lets you choose options for it at certain levels. The options are presented here in alphabetical order. They are all magical effects, and each one is associated with one of the schools of magic.",
                 "If an option requires a saving throw, your Arcane Shot save DC equals 8 + your proficiency bonus + your Intelligence modifier."
             ],
@@ -88,6 +73,27 @@
                         "The psychic damage increases to 4d6 when you reach 18th level in this class."
                     ]
                 }
+            ]
+        },
+        {
+            "Level": 7,
+            "Archetype Feature": "Magic Arrow",
+            "Archetype Feature Description": [
+                "At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target."
+            ]
+        },
+        {
+            "Level": 7,
+            "Archetype Feature": "Curving Shot",
+            "Archetype Feature Description": [
+                "At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
+            ]
+        },
+        {
+            "Level": 15,
+            "Archetype Feature": "Ever-Ready Shot",
+            "Archetype Feature Description": [
+                "Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it."
             ]
         }
     ]

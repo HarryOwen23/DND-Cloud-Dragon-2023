@@ -164,6 +164,9 @@
     <None Update="Classes\Druid\Druid_Circle_Moon.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Classes\Druid\Druid_Circle_Sea.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Classes\Druid\Druid_Circle_Shepherd.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

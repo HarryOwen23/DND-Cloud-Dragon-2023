@@ -9,6 +9,7 @@
     },
     "Path Abilities": [
         {
+            "Level": 3,
             "Path Ability": "Battlerager Armor",
             "Path Ability Description": [
                 "When you choose this path at 3rd level, you gain the ability to use spiked armor as a weapon.",
@@ -17,18 +18,21 @@
             ]
         },
         {
+            "Level": 6,
             "Path Ability": "Reckless Abandon",
             "Path Ability Description": [
-                "Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
+                "Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). These temporary hit points vanish if any remain when your rage ends."
             ]
         },
         {
+            "Level": 10,
             "Path Ability": "Battlerager Charge",
             "Path Ability Description": [
                 "Beginning at 10th level, you can take the Dash action as a bonus action while you are raging."
             ]
         },
         {
+            "Level": 14,
             "Path Ability": "Spiked Retribution",
             "Path Ability Description": [
                 "Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't incapacitated, and are wearing spiked armor."

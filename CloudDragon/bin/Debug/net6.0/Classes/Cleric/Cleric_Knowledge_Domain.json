@@ -1,8 +1,8 @@
 [
     {
         "Domain Name": "Knowledge Domain",
-        "Domain Ability": "Knowledge Domain Spells",
-        "Domain Ability Description": [
+        "Archetype Feature": "Knowledge Domain Spells",
+        "Archetype Feature Description": [
             {
                 "1st Level Spells": [
                     "Command",
@@ -36,21 +36,24 @@
         ]
     },
     {
-        "Domain Ability": "Blessings of Knowledge",
-        "Domain Ability Description": [
+        "Level": 1,
+        "Archetype Feature": "Blessings of Knowledge",
+        "Archetype Feature Description": [
             "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion.",
             "Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
         ]
     },
     {
-        "Domain Ability": "Channel Divinity: Knowledge of the Ages",
-        "Domain Ability Description": [
+        "Level": 2,
+        "Archetype Feature": "Channel Divinity: Knowledge of the Ages",
+        "Archetype Feature Description": [
             "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
         ]
     },
     {
-        "Domain Ability": "Channel Divinity: Read Thoughts",
-        "Domain Ability Description": [
+        "Level": 6,
+        "Archetype Feature": "Channel Divinity: Read Thoughts",
+        "Archetype Feature Description": [
             "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
             "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
             "If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
@@ -58,14 +61,16 @@
         ]
     },
     {
-        "Domain Ability": "Potent Spellcasting",
-        "Domain Ability Description": [
+        "Level": 8,
+        "Archetype Feature": "Potent Spellcasting",
+        "Archetype Feature Description": [
             "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
         ]
     },
     {
-        "Domain Ability": "Visions of the Past",
-        "Domain Ability Description": [
+        "Level": 17,
+        "Archetype Feature": "Visions of the Past",
+        "Archetype Feature Description": [
             "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
             "Once you use this feature, you can't use it again until you finish a short or long rest.",
             {

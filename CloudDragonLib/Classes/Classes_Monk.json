@@ -49,6 +49,11 @@
             "Description": "When you reach 3rd level, you commit yourself to a monastic tradition. Some of the monastic traditions include:"
         },
         {
+            "Level": 4,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
             "Level": 5,
             "Feature": "Stunning Strike",
             "Description": "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 Focus Point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the start of your next turn. On a successful save, the target's speed is halved until the start of your next turn, and the next attack roll against the target has advantage. You can use this feature once per turn."
@@ -57,6 +62,16 @@
             "Level": 5,
             "Feature": "Empowered Strike",
             "Description": "Starting at 5th level, you can choose to deal Force damage instead of Bludgeoning damage with your unarmed strikes."
+        },
+        {
+            "Level": 6,
+            "Feature": "Ki-Empowered Strikes",
+            "Description": "Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+        },
+        {
+            "Level": 7,
+            "Feature": "Evasion",
+            "Description": "Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a successful save, and only half damage on a failed save."
         },
         {
             "Level": 10,
@@ -69,14 +84,29 @@
             "Description": "Starting at 10th level, you can end the charmed, frightened, or poisoned condition affecting you at the end of your turn. Additionally, you no longer need food or drink."
         },
         {
+            "Level": 11,
+            "Feature": "Slow Fall",
+            "Description": "Starting at 11th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
+        },
+        {
             "Level": 13,
             "Feature": "Deflect Energy",
             "Description": "Starting at 13th level, your Deflect Attacks feature now applies to all damage types."
         },
         {
+            "Level": 14,
+            "Feature": "Diamond Soul",
+            "Description": "At 14th level, your mastery of ki allows you to be proficient in all saving throws. Additionally, you can spend 1 Focus Point to reroll a failed saving throw."
+        },
+        {
             "Level": 15,
             "Feature": "Perfect Focus",
             "Description": "At 15th level, if you start a combat encounter with fewer than 4 Focus Points and don't use Uncanny Metabolism, you regain up to 4 Focus Points when you roll initiative."
+        },
+        {
+            "Level": 16,
+            "Feature": "Ability Score Improvement",
+            "Description": "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
         },
         {
             "Level": 18,

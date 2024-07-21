@@ -41,7 +41,6 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\n
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Druid.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Fighter.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Monk.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Rouge.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Sorcerer.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Warlock.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Wizard.json
@@ -222,3 +221,4 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\n
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Magical Items\Magical_Items.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Background\Backgrounds.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Language\Language.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragonLib\bin\Debug\net6.0\Classes\Classes_Rogue.json

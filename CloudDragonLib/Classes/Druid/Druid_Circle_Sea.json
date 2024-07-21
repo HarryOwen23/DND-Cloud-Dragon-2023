@@ -1,0 +1,65 @@
+{
+    "Archetype Name": "Circle of the Sea",
+    "Archetype Features": [
+        {
+            "Level": 3,
+            "Archetype Feature": "Circle Spells",
+            "Archetype Feature Description": {
+                "3rd Level Spells": [
+                    "Fog Cloud",
+                    "Gust of Wind",
+                    "Ray of Frost",
+                    "Shatter",
+                    "Thunderwave"
+                ],
+                "5th Level Spells": [
+                    "Sleet Storm",
+                    "Lightning Bolt"
+                ],
+                "7th Level Spells": [
+                    "Control Water",
+                    "Ice Storm"
+                ],
+                "9th Level Spells": [
+                    "Conjure Elemental",
+                    "Hold Monster"
+                ]
+            }
+        },
+        {
+            "Level": 3,
+            "Archetype Feature": "Wrath of the Sea",
+            "Archetype Feature Description": [
+                "As a Bonus Action, you can expend a use of your Wild Shape to manifest an aura that takes the form of ocean spray that surrounds you. The aura lasts for 10 minutes. It ends early if you have the Incapacitated condition, dismiss it (no action required), or manifest the aura again.",
+                "At the end of each of your turns, you can choose another creature you can see within 10 feet of yourself. The target must succeed on a Constitution saving throw against your Spell Save DC or take Thunder damage and, if the creature is Large or smaller, be pushed up to 15 feet away from you. To determine this damage, roll a number of d6s equal to your Wisdom modifier (minimum of one die)."
+            ]
+        },
+        {
+            "Level": 7,
+            "Archetype Feature": "Aquatic Affinity",
+            "Archetype Feature Description": [
+                "You always have the Water Breathing spell prepared.",
+                "You gain a Swim Speed equal to your Speed. If you use Wild Shape to assume a form that lacks a Swim Speed, that form gains your Swim Speed."
+            ]
+        },
+        {
+            "Level": 10,
+            "Archetype Feature": "Stormborn",
+            "Archetype Feature Description": [
+                "Your Wrath of the Sea confers two more benefits while active:",
+                [
+                    "Flight: You gain a Fly Speed equal to your Speed.",
+                    "Resistance: You have resistance to Cold, Lightning, and Thunder damage."
+                ]
+            ]
+        },
+        {
+            "Level": 14,
+            "Archetype Feature": "Oceanic Gift",
+            "Archetype Feature Description": [
+                "Whenever you use Wrath of the Sea, you can manifest the aura around one willing creature within 60 feet of you rather than manifesting it around yourself. The creature gains all the benefits of the aura and uses your Spell Save DC and Wisdom modifier for it.",
+                "In addition, you can manifest the aura around both the other creature and yourself if you expend two uses of your Wild Shape, instead of one, when manifesting the aura."
+            ]
+        }
+    ]
+}

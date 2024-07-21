@@ -1,9 +1,10 @@
 {
-    "Way Name": "Way of the Ascendant Dragon",
-    "Way Abilities": [
+    "Archetype Name": "Way of the Ascendant Dragon",
+    "Archetype Features": [
         {
-            "Way Ability": "Ascendant Dragon Origin",
-            "Beast Origin": [
+            "Level": 1,
+            "Archetype Feature": "Ascendant Dragon Origin",
+            "Archetype Feature Description": [
                 {
                     "Dice Number": "1",
                     "Origin": "You honed your abilities by observing a dragon and aligning your ki with their world-altering power."
@@ -31,9 +32,10 @@
             ]
         },
         {
-            "Way Ability": "Draconic Disciple",
-            "Way Ability Description": [
-                "At 3rd level, you can channel draconic power to magnify your presence and imbue your unarmed strikes with the essence of a dragon’s breath. You gain the following benefits:",
+            "Level": 3,
+            "Archetype Feature": "Draconic Disciple",
+            "Archetype Feature Description": [
+                "You can channel draconic power to magnify your presence and imbue your unarmed strikes with the essence of a dragon’s breath. You gain the following benefits:",
                 {
                     "Draconic Presence": "If you fail a Charisma (Intimidation) or Charisma (Persuasion) check, you can use your reaction to reroll the check, as you tap into the mighty presence of dragons. Once this feature turns a failure into a success, you can’t use it again until you finish a long rest."
                 },
@@ -46,50 +48,50 @@
             ]
         },
         {
-            "Way Ability": "Breath of the Dragon",
-            "Way Ability Description": [
-                "At 3rd level, you can channel destructive waves of energy, like those created by the dragons you emulate. When you take the Attack action on your turn, you can replace one of the attacks with an exhalation of draconic energy in either a 20-foot cone or a 30-foot line that is 5 feet wide (your choice). Choose a damage type: acid, cold, fire, lightning, or poison. Each creature in that area must make a Dexterity saving throw against your ki save DC, taking damage of the chosen type equal to two rolls of your Martial Arts die on a failed save, or half as much damage on a successful one.",
+            "Level": 3,
+            "Archetype Feature": "Breath of the Dragon",
+            "Archetype Feature Description": [
+                "You can channel destructive waves of energy, like those created by the dragons you emulate. When you take the Attack action on your turn, you can replace one of the attacks with an exhalation of draconic energy in either a 20-foot cone or a 30-foot line that is 5 feet wide (your choice). Choose a damage type: acid, cold, fire, lightning, or poison. Each creature in that area must make a Dexterity saving throw against your ki save DC, taking damage of the chosen type equal to two rolls of your Martial Arts die on a failed save, or half as much damage on a successful one.",
                 "At 11th level, the damage of this feature increases to three rolls of your Martial Arts die.",
                 "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. While you have no uses available, you can spend 2 ki points to use this feature again."
             ]
         },
         {
-            "Way Ability": "Wings Unfurled",
-            "Way Ability Description": [
-                "At 6th level when you use your Step of the Wind, you can unfurl spectral draconic wings from your back that vanish at the end of your turn. While the wings exist, you have a flying speed equal to your walking speed.",
+            "Level": 6,
+            "Archetype Feature": "Wings Unfurled",
+            "Archetype Feature Description": [
+                "When you use your Step of the Wind, you can unfurl spectral draconic wings from your back that vanish at the end of your turn. While the wings exist, you have a flying speed equal to your walking speed.",
                 "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             ]
         },
         {
-            "Way Ability": "Aspect of the Wyrm",
-            "Way Ability Description": [
-                "At 11th level, the power of your draconic spirit now radiates from you, warding your allies or inspiring fear in your enemies. As a bonus action, you can create an aura of draconic power that radiates 10 feet from you for 1 minute. For the duration, you gain one of the following effects of your choice:",
-                [
-                    {
-                        "Frightful Presence": "When you create this aura, and as a bonus action on subsequent turns, you can choose a creature within the aura. The target must succeed on a Wisdom saving throw against your ki save DC or become frightened of you for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
-                    },
-                    {
-                        "Resistance": "Choose a damage type when you activate this aura: acid, cold, fire, lightning, or poison. You and your allies within the aura have resistance to that damage."
-                    }
-                ],
+            "Level": 11,
+            "Archetype Feature": "Aspect of the Wyrm",
+            "Archetype Feature Description": [
+                "The power of your draconic spirit now radiates from you, warding your allies or inspiring fear in your enemies. As a bonus action, you can create an aura of draconic power that radiates 10 feet from you for 1 minute. For the duration, you gain one of the following effects of your choice:",
+                {
+                    "Frightful Presence": "When you create this aura, and as a bonus action on subsequent turns, you can choose a creature within the aura. The target must succeed on a Wisdom saving throw against your ki save DC or become frightened of you for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
+                },
+                {
+                    "Resistance": "Choose a damage type when you activate this aura: acid, cold, fire, lightning, or poison. You and your allies within the aura have resistance to that damage."
+                },
                 "Once you create this aura, you can’t create it again until you finish a long rest, unless you expend 3 ki points to create it again."
             ]
         },
         {
-            "Way Ability": "Ascendant Aspect",
-            "Way Ability Description": [
-                "At 17th level, your draconic spirit reaches its peak. You gain the following benefits:",
-                [
-                    {
-                        "Augment Breath": "When you use your Breath of the Dragon, you can spend 1 ki point to augment its shape and power. The exhalation of draconic energy becomes either a 60-foot cone or a 90-foot line that is 5 feet wide (your choice), and each creature in that area takes damage equal to four rolls of your Martial Arts die on a failed save, or half as much damage on a successful one."
-                    },
-                    {
-                        "Blindsight": " You gain blindsight out to 10 feet. Within that range, you can effectively see anything that isn’t behind total cover, even if you’re blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you."
-                    },
-                    {
-                        "Explosive Fury": "When you activate your Aspect of the Wyrm, draconic fury explodes from you. Choose any number of creatures you can see in your aura. Each of those creatures must succeed on a Dexterity saving throw against your ki save DC or take 3d10 acid, cold, fire, lightning, or poison damage (your choice)."
-                    }
-                ]
+            "Level": 17,
+            "Archetype Feature": "Ascendant Aspect",
+            "Archetype Feature Description": [
+                "Your draconic spirit reaches its peak. You gain the following benefits:",
+                {
+                    "Augment Breath": "When you use your Breath of the Dragon, you can spend 1 ki point to augment its shape and power. The exhalation of draconic energy becomes either a 60-foot cone or a 90-foot line that is 5 feet wide (your choice), and each creature in that area takes damage equal to four rolls of your Martial Arts die on a failed save, or half as much damage on a successful one."
+                },
+                {
+                    "Blindsight": "You gain blindsight out to 10 feet. Within that range, you can effectively see anything that isn’t behind total cover, even if you’re blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you."
+                },
+                {
+                    "Explosive Fury": "When you activate your Aspect of the Wyrm, draconic fury explodes from you. Choose any number of creatures you can see in your aura. Each of those creatures must succeed on a Dexterity saving throw against your ki save DC or take 3d10 acid, cold, fire, lightning, or poison damage (your choice)."
+                }
             ]
         }
     ]

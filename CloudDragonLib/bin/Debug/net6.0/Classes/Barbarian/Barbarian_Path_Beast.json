@@ -2,8 +2,10 @@
     "Path Name": "Path of the Beast",
     "Path Abilities": [
         {
+            "Level": 3,
             "Path Ability": "Origin of the Beast",
-            "Beast Origin": [
+            "Path Ability Description": [
+                "When you choose this path at 3rd level, determine your origin from the following options. Roll a d4 or choose one:",
                 {
                     "Dice Number": "1",
                     "Origin": "One of your parents is a lycanthrope, and you've inherited some of their curse."
@@ -23,9 +25,10 @@
             ]
         },
         {
+            "Level": 3,
             "Path Ability": "Form of the Beast",
             "Path Ability Description": [
-                "Starting when you choose this path at 3rd level, when you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.",
+                "Starting at 3rd level, when you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it.",
                 "You choose the weapon’s form each time you rage:",
                 {
                     "Bite": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
@@ -39,10 +42,11 @@
             ]
         },
         {
+            "Level": 6,
             "Path Ability": "Bestial Soul",
             "Path Ability Description": [
                 "Beginning at 6th level, the feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
-                "You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
+                "You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish another short or long rest:",
                 [
                     "You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
                     "You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
@@ -51,24 +55,26 @@
             ]
         },
         {
+            "Level": 10,
             "Path Ability": "Infectious Fury",
             "Path Ability Description": [
-                "At 10th level, when you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
+                "At 10th level, when you hit a creature with your natural weapons while you are raging, you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
                 [
                     {
                         "Fury Option": "The target must use its reaction to make a melee attack against another creature of your choice that you can see."
                     },
                     {
-                        "Fury Option": "Target takes 2d12 psychic damage."
+                        "Fury Option": "The target takes 2d12 psychic damage."
                     }
                 ],
                 "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             ]
         },
         {
+            "Level": 14,
             "Path Ability": "Call the Hunt",
             "Path Ability Description": [
-                "At 14th level, the beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a d6 and gain a bonus to the damage equal to the number rolled.",
+                "At 14th level, the beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a d6 and gain a bonus to the damage equal to the number rolled.",
                 "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             ]
         }
