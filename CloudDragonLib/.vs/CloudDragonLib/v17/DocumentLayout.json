@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\paladin\\paladin_oath_redemption.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\paladin\\paladin_oath_redemption.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\wizard\\arcane_tradition_evocation.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\wizard\\arcane_tradition_evocation.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\paladin\\paladin_oath_oathbreaker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\paladin\\paladin_oath_oathbreaker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\paladin\\paladin_oath_glory.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\paladin\\paladin_oath_glory.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\wizard\\arcane_tradition_enchantment.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\wizard\\arcane_tradition_enchantment.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,40 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Paladin_Oath_Redemption.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Redemption.json",
-              "RelativeDocumentMoniker": "Classes\\Paladin\\Paladin_Oath_Redemption.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Redemption.json",
-              "RelativeToolTip": "Classes\\Paladin\\Paladin_Oath_Redemption.json",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAiwGgAAAAAAAAA",
+              "Title": "Arcane_Tradition_Evocation.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Evocation.json",
+              "RelativeDocumentMoniker": "Classes\\Wizard\\Arcane_Tradition_Evocation.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Evocation.json",
+              "RelativeToolTip": "Classes\\Wizard\\Arcane_Tradition_Evocation.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-21T11:19:08.699Z",
+              "WhenOpened": "2024-07-21T12:30:27.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Paladin_Oath_Oathbreaker.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Oathbreaker.json",
-              "RelativeDocumentMoniker": "Classes\\Paladin\\Paladin_Oath_Oathbreaker.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Oathbreaker.json",
-              "RelativeToolTip": "Classes\\Paladin\\Paladin_Oath_Oathbreaker.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAAAAAA",
+              "Title": "Arcane_Tradition_Enchantment.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
+              "RelativeDocumentMoniker": "Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
+              "RelativeToolTip": "Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-21T11:18:32.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Paladin_Oath_Glory.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Glory.json",
-              "RelativeDocumentMoniker": "Classes\\Paladin\\Paladin_Oath_Glory.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Paladin\\Paladin_Oath_Glory.json",
-              "RelativeToolTip": "Classes\\Paladin\\Paladin_Oath_Glory.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-21T11:17:55.89Z",
+              "WhenOpened": "2024-07-21T12:29:58.192Z",
               "EditorCaption": ""
             }
           ]

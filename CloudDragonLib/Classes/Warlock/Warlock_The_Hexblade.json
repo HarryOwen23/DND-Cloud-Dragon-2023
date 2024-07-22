@@ -1,39 +1,56 @@
 {
     "Archetype Name": "The Hexblade",
-    "Archetype Abilities": [
+    "Archetype Features": [
         {
-            "Archetype Ability": "Expanded Spell List",
-            "Archetype Ability Description": [
+            "Level": 1,
+            "Archetype Feature": "Expanded Spell List",
+            "Archetype Feature Description": [
                 "The Hexblade lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
                 {
                     "Hexblade Expanded Spells": [
                         {
                             "Spell Level": "1st",
-                            "Spells": [ "Shield", "Wrathful Smite" ]
+                            "Spells": [
+                                "Shield",
+                                "Wrathful Smite"
+                            ]
                         },
                         {
                             "Spell Level": "2nd",
-                            "Spells": [ "Blur", "Brandishing Smite" ]
+                            "Spells": [
+                                "Blur",
+                                "Branding Smite"
+                            ]
                         },
                         {
                             "Spell Level": "3rd",
-                            "Spells": [ "Blink", "Elemental Weapon" ]
+                            "Spells": [
+                                "Blink",
+                                "Elemental Weapon"
+                            ]
                         },
                         {
                             "Spell Level": "4th",
-                            "Spells": [ "Phantasmal Killer", "Staggering Smite" ]
+                            "Spells": [
+                                "Phantasmal Killer",
+                                "Staggering Smite"
+                            ]
                         },
                         {
                             "Spell Level": "5th",
-                            "Spells": [ "Banishing Smite", "Teleportation Circle" ]
+                            "Spells": [
+                                "Banishing Smite",
+                                "Cone of Cold"
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "Archetype Ability": "Hexblade's Curse",
-            "Archetype Ability Description": [
+            "Level": 1,
+            "Archetype Feature": "Hexblade's Curse",
+            "Archetype Feature Description": [
                 "Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated.",
                 "Until the curse ends, you gain the following benefits:",
                 [
@@ -42,27 +59,37 @@
                     "If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point).",
                     "You can't use this feature again until you finish a short or long rest."
                 ]
-             ]
-        },
-        {
-            "Archetype Ability": "Hex Warrior",
-            "Archetype Ability Description": [
-                "Starting at 1st level, you gain the ability to channel your will into your weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls.",
-                "This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type."
             ]
         },
         {
-            "Archetype Ability": "Accursed Specter",
-            "Archetype Ability Description": [
-                "Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a specter, the statistics for which are in the Monster Manual.",
-                "When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands and can't attack anyone other than the creature you designate. If your concentration is broken, the specter doesn't disappear. Instead, you lose control of it, it becomes hostile toward you and your companions, and it might attack. An hour later, it disappears, and its soul takes its rightful place in the afterlife."
+            "Level": 1,
+            "Archetype Feature": "Hex Warrior",
+            "Archetype Feature Description": [
+                "At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.",
+                "The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type."
             ]
         },
         {
-            "Archetype Ability": "Master of Hexes",
-            "Archetype Ability Description": [
-                "Starting at 10th level, you can use your Hexblade's Curse to hamper the attacks of another creature. When you place a Hexblade's Curse on a creature, you can choose one creature you can see within 30 feet of you. The cursed target has disadvantage on attack rolls against the chosen creature until the curse ends.",
-                "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+            "Level": 6,
+            "Archetype Feature": "Accursed Specter",
+            "Archetype Feature Description": [
+                "Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it in your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a specter. When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).",
+                "The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.",
+                "Once you bind a specter with this feature, you can't use the feature again until you finish a long rest."
+            ]
+        },
+        {
+            "Level": 10,
+            "Archetype Feature": "Armor of Hexes",
+            "Archetype Feature Description": [
+                "At 10th level, your hex grows more powerful. If the target cursed by your Hexblade’s Curse hits you with an attack roll, you can use your reaction to roll a d6. On a 4 or higher, the attack instead misses you, regardless of its roll."
+            ]
+        },
+        {
+            "Level": 14,
+            "Archetype Feature": "Master of Hexes",
+            "Archetype Feature Description": [
+                "Starting at 14th level, you can spread your Hexblade's Curse from a slain creature to another creature. When the creature cursed by your Hexblade's Curse dies, you can apply the curse to a different creature you can see within 30 feet of you, provided you aren't incapacitated. When you apply the curse in this way, you don't regain hit points from the death of the previously cursed creature."
             ]
         }
     ]

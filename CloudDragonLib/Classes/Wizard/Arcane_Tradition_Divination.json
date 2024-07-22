@@ -1,40 +1,46 @@
-[
-    {
-        "Arcane_Tradition": "School of Divination",
-        "Arcane_Tradition_Description": "The School of Divination focuses on seeing glimpses of the future and manipulating fate.",
-        "Tradition_Abilities": [
-            {
-                "Tradition_Abilitiy": "Divination Savant",
-                "Arcane_Tradition_Description": [
-                    "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Divination spell into your spellbook is halved."
-                ]
-            },
-            {
-                "Tradition_Abilitiy": "Portent",
-                "Arcane_Tradition_Description": [
-                    "Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn. Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls."
-                ]
-            },
-            {
-                "Tradition_Ability": "Expert Divination",
-                "Arcane_Tradition_Description": "Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level."
-            },
-            {
-                "Tradition_Ability": "The Third Eye",
-                "Arcane_Tradition_Description": [
-                    "Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can't use the feature again until you finish a short or long rest.",
+{
+    "Archetype Name": "School of Divination",
+    "Archetype Features": [
+        {
+            "Level": 3,
+            "Archetype Feature": "Divination Savant",
+            "Archetype Feature Description": [
+                "Beginning when you select this school at 3rd level, the gold and time you must spend to copy a Divination spell into your spellbook is halved."
+            ]
+        },
+        {
+            "Level": 3,
+            "Archetype Feature": "Portent",
+            "Archetype Feature Description": [
+                "Starting at 3rd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn. Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls."
+            ]
+        },
+        {
+            "Level": 6,
+            "Archetype Feature": "Expert Divination",
+            "Archetype Feature Description": [
+                "Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level."
+            ]
+        },
+        {
+            "Level": 10,
+            "Archetype Feature": "The Third Eye",
+            "Archetype Feature Description": [
+                "Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can't use the feature again until you finish a short or long rest.",
+                [
                     "Darkvision. You gain darkvision out to a range of 60 feet.",
                     "Ethereal Sight. You can see into the Ethereal Plane within 60 feet of you.",
                     "Greater Comprehension. You can read any language.",
                     "See Invisibility. You can see invisible creatures and objects within 10 feet of you that are within line of sight."
                 ]
-            },
-            {
-                "Tradition_Ability": "Greater Portent",
-                "Arcane_Tradition_Description": [
-                    "Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two."
-                ]
-            }
-        ]
-    }
-]
+            ]
+        },
+        {
+            "Level": 14,
+            "Archetype Feature": "Greater Portent",
+            "Archetype Feature Description": [
+                "Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two."
+            ]
+        }
+    ]
+}
