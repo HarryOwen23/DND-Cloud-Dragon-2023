@@ -1,35 +1,40 @@
 {
-    "Subclass Name": "Phantom",
-    "Subclass Features": [
+    "Archetype Name": "Phantom",
+    "Archetype Features": [
         {
-            "Feature Name": "Whispers of the Dead",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Whispers of the Dead",
+            "Archetype Feature Description": [
                 "When you choose this archetype at 3rd level, you gain the ability to connect with the spirits of the dead. During a short or long rest, you can choose a creature that has died within the last 24 hours and spend 1 hour in meditation. At the end of the rest, you temporarily gain a fragment of the creature's spirit. This fragment grants you the benefits of one skill or tool proficiency the creature had in life. You retain this proficiency until you use this feature again to choose a different proficiency. If the creature had no such proficiency, you gain proficiency with one skill or tool of your choice.",
                 "In addition, you can use your Sneak Attack with an attack even if you have advantage on the attack roll, but only if the attack doesn't have disadvantage due to an effect or feature of the target, and if you don't have disadvantage on the attack roll."
             ]
         },
         {
-            "Feature Name": "Tokens of the Departed",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Tokens of the Departed",
+            "Archetype Feature Description": [
                 "At 3rd level, you gain the ability to harvest tokens from the spirits you encounter. When a life ends in your presence, you can use your reaction to create a token from the creature's departing spirit. You can have a number of tokens equal to your proficiency bonus at one time. The token is a Tiny object and has no value. You can use these tokens to bolster your abilities.",
                 "Whenever you make an ability check, an attack roll, or a saving throw, you can spend one of your tokens to roll an additional d6 and add the number rolled to your roll. You can wait until after you roll the d20 before deciding to use the token, but must decide before the DM says whether the roll succeeds or fails. You can use only one token on a roll."
             ]
         },
         {
-            "Feature Name": "Ghost Walk",
-            "Feature Description": [
+            "Level": 9,
+            "Archetype Feature": "Ghost Walk",
+            "Archetype Feature Description": [
                 "Starting at 9th level, you gain the ability to pass through the realm of the dead. You can cast Etherealness without expending a spell slot. You can use this feature once, and you regain the ability to do so when you finish a long rest."
             ]
         },
         {
-            "Feature Name": "Tokens of the Grave",
-            "Feature Description": [
+            "Level": 13,
+            "Archetype Feature": "Tokens of the Grave",
+            "Archetype Feature Description": [
                 "At 13th level, your tokens of the departed gain an additional ability. When you use a token to roll a d6 and add the number rolled to an ability check, an attack roll, or a saving throw and the roll results in a 6, you can roll the d6 again and add the result to the roll."
             ]
         },
         {
-            "Feature Name": "Death Knell",
-            "Feature Description": [
+            "Level": 17,
+            "Archetype Feature": "Death Knell",
+            "Archetype Feature Description": [
                 "Starting at 17th level, you can use your action to force a creature you can see within 30 feet of you to make a Constitution saving throw against your spell save DC. On a failed save, the creature takes 10d10 necrotic damage. If this damage reduces the creature to 0 hit points, its soul is torn from its body and is trapped in one of your tokens of the departed, provided you have one from that creature. The creature can only be restored to life by a true resurrection or similar magic, and only if its soul is released from the token."
             ]
         }

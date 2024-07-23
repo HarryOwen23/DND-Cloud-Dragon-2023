@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\wizard\\arcane_tradition_evocation.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\wizard\\arcane_tradition_evocation.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\classes_monk.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\classes_monk.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\wizard\\arcane_tradition_enchantment.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\wizard\\arcane_tradition_enchantment.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\classes\\classes_fighter.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:classes\\classes_fighter.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,27 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Arcane_Tradition_Evocation.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Evocation.json",
-              "RelativeDocumentMoniker": "Classes\\Wizard\\Arcane_Tradition_Evocation.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Evocation.json",
-              "RelativeToolTip": "Classes\\Wizard\\Arcane_Tradition_Evocation.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAALAAAA",
+              "Title": "Classes_Monk.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Monk.json",
+              "RelativeDocumentMoniker": "Classes\\Classes_Monk.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Monk.json",
+              "RelativeToolTip": "Classes\\Classes_Monk.json",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAqwI0AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-21T12:30:27.317Z",
+              "WhenOpened": "2024-07-23T08:06:53.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Arcane_Tradition_Enchantment.json",
-              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
-              "RelativeDocumentMoniker": "Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
-              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
-              "RelativeToolTip": "Classes\\Wizard\\Arcane_Tradition_Enchantment.json",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAiwCgAAAAAAAAA",
+              "Title": "Classes_Fighter.json",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Fighter.json",
+              "RelativeDocumentMoniker": "Classes\\Classes_Fighter.json",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Classes\\Classes_Fighter.json",
+              "RelativeToolTip": "Classes\\Classes_Fighter.json",
+              "ViewState": "AQIAAO8AAAAAAAAAAAAAAA4BAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-21T12:29:58.192Z",
+              "WhenOpened": "2024-07-22T11:31:59.884Z",
               "EditorCaption": ""
             }
           ]

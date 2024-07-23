@@ -1,86 +1,71 @@
-﻿[
-    {
-        "Class Name": "Ranger",
-        "Hit Dice": "1d10 per ranger level",
-        "Hit Points at 1st Level": "10 + your Constitution modifier",
-        "Hit Points at Higher Levels": "1d10 (or 6) + your Constitution modifier per ranger level after 1st",
-        "Armor": "Light armor, medium armor, shields",
-        "Weapons": "Simple weapons, martial weapons",
-        "Tools": "None",
-        "Saving Throws": "Strength, Dexterity",
-        "Skills": "Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival",
-        "Equipment": [
-            "(a) scale mail or (b) leather armor",
-            "(a) two shortswords or (b) two simple melee weapons",
-            "(a) a dungeoneer's pack or (b) an explorer's pack",
-            "A longbow and a quiver of 20 arrows"
-        ],
-        "Class Features": [
-            {
-                "Level": 1,
-                "Favored Enemy": {
-                    "Class Feature Description": [
-                        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-                        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
-                        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-                        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-                        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
-                    ]
-                },
-                "Favored Foe (Optional)": {
-                    "Class Feature Description": [
-                        "This 1st-level feature replaces the Favored Enemy feature and works with the Foe Slayer feature. You gain no benefit from the replaced feature and don't qualify for anything in the game that requires it.",
-                        "When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell)",
-                        "The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you increase that damage by 1d4.",
-                        "You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-                        "This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level."
-                    ]
-                },
-                "Hunter's Mark": {
+﻿{
+    "Class Name": "Ranger",
+    "Hit Dice": "1d10 per ranger level",
+    "Hit Points at 1st Level": "10 + your Constitution modifier",
+    "Hit Points at Higher Levels": "1d10 (or 6) + your Constitution modifier per ranger level after 1st",
+    "Armor": "Light armor, medium armor, shields",
+    "Weapons": "Simple weapons, martial weapons",
+    "Tools": "None",
+    "Saving Throws": "Strength, Dexterity",
+    "Skills": "Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival",
+    "Equipment": [
+        "(a) scale mail or (b) leather armor",
+        "(a) two shortswords or (b) two simple melee weapons",
+        "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+        "A longbow and a quiver of 20 arrows"
+    ],
+    "Class Features": [
+        {
+            "Level": 1,
+            "Class Features": [
+                {
+                    "Feature": "Favored Enemy",
                     "Class Feature Description": [
                         "You always have the Hunter’s Mark spell prepared.",
-                        "You can cast Hunter’s Mark twice per Long Rest without expending a spell slot. This number increases as you level up."
+                        "You can cast Hunter’s Mark twice per Long Rest without expending a spell slot. This number increases as you level up.",
+                        "Choose a type of favored enemy: beasts, fey, humanoids, monstrosities, or undead. You gain a +2 bonus to damage rolls with weapon attacks against creatures of the chosen type. You also have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+                        "You learn one language of your choice that is spoken by your favored enemies."
                     ]
                 },
-                "Weapon Mastery": {
+                {
+                    "Feature": "Weapon Mastery",
                     "Class Feature Description": [
                         "You can use the weapon mastery properties for two weapons of your choice.",
                         "Swap these out when you complete a Long Rest."
                     ]
                 },
-                "Spellcasting": {
+                {
+                    "Feature": "Spellcasting",
                     "Class Feature Description": [
-                        "By the time you reach 1st level, you have learned to use the magical essence of nature to cast spells, much as a druid does.",
-                        "The Ranger table shows how many spell slots you have to cast your ranger spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-                        "For example, if you know the 1st-level spell Animal Friendship and have a 1st-level and a 2nd-level spell slot available, you can cast Animal Friendship using either slot.",
-                        "You know two 1st-level spells of your choice from the ranger spell list.",
-                        "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
-                        "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots.",
-                        "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
-                        "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
-                        "Spell attack modifier = your proficiency bonus + your Wisdom modifier",
-                        "You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals."
-                    ]
+                        "By the time you reach 1st level, you have learned to use the magical essence of nature to cast spells, similar to a druid.",
+                        "You can use a Druidic Focus as a spellcasting focus.",
+                        "You have a number of spell slots based on your level. You prepare the list of ranger spells that are available for you to cast, choosing from the ranger spell list. You can switch out one prepared spell per day."
+                    ],
+                    "Spell Save DC": "8 + proficiency bonus + Wisdom modifier",
+                    "Spell Attack Modifier": "proficiency bonus + Wisdom modifier"
                 }
-            },
-            {
-                "Level": 2,
-                "Deft Explorer": {
+            ]
+        },
+        {
+            "Level": 2,
+            "Class Features": [
+                {
+                    "Feature": "Deft Explorer",
                     "Class Feature Description": [
                         "Gain Expertise in one skill and learn two languages.",
-                        "You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit when you reach 6th level and 10th level in this class."
+                        "Deft Explorer from Tasha’s Cauldron of Everything was broken out into 3 features in the 2024 PHB: Deft Explorer (formerly just the 'Canny' benefit), Roving and Tireless."
                     ]
                 },
-                "Fighting Style": {
+                {
+                    "Feature": "Fighting Style",
                     "Class Feature Description": [
-                        "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+                        "Fighting Styles are now a type of feat.",
+                        "Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
+                        "You can still select Druidic Warrior instead of a Fighting Style."
                     ],
                     "Fighting Styles": [
                         {
                             "Archery": "You gain a +2 bonus to attack rolls you make with ranged weapons."
-                        },
-                        {
-                            "BlindFighting": "You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you."
                         },
                         {
                             "Defense": "While you are wearing armor, you gain a +1 bonus to AC."
@@ -89,191 +74,231 @@
                             "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
                         },
                         {
-                            "GreatWeaponFighting": "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."
-                        },
-                        {
-                            "Interception": "When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
-                        },
-                        {
-                            "Protection": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
-                        },
-                        {
-                            "SuperiorTechnique": "You learn one maneuver of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice.)\n\nYou gain one superiority die, which is a d6 (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
-                        },
-                        {
-                            "ThrownWeaponFighting": "You can draw a weapon that has the thrown property as part of the attack you make with the weapon.\n\nIn addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll."
-                        },
-                        {
-                            "TwoWeaponFighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
-                        },
-                        {
-                            "UnarmedFighting": "Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.\n\nAt the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you."
+                            "Two-Weapon Fighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
                         }
                     ]
-                },
-                "Spells": {
-                    "Class Feature Description": [
-                        "At 2nd level, you gain the ability to cast spells.",
-                        "The Ranger table shows how many spell slots you have to cast your ranger spells of 1st level and higher.",
-                        "To cast one of these spells, you must expend a slot of the spell's level or higher.",
-                        "You regain all expended spell slots when you finish a long rest."
-                    ]
                 }
-            },
-            {
-                "Level": 3,
-                "Subclass": {
+            ]
+        },
+        {
+            "Level": 3,
+            "Class Features": [
+                {
+                    "Feature": "Subclass",
                     "Class Feature Description": [
-                        "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter or Beast Master. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+                        "At 3rd level, you choose an archetype that you strive to emulate, such as Hunter, Beast Master, etc.",
+                        "Gain features at 3rd, 7th, 11th, and 15th levels."
                     ]
                 },
-                "Primal Awareness": {
+                {
+                    "Feature": "Primal Awareness",
                     "Class Feature Description": [
-                        "You can focus your awareness through the interconnections of nature: you can cast detect magic without expending a spell slot a number of times equal to your proficiency bonus per long rest.",
-                        "Starting at 3rd level, you can use your action to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number."
+                        "You can cast Detect Magic without expending a spell slot a number of times equal to your proficiency bonus per long rest.",
+                        "Sense the presence of certain creature types within 1 mile for 1 minute per spell slot level expended."
                     ]
                 }
-            },
-            {
-                "Level": 4,
-                "Ability Score Improvement": {
+            ]
+        },
+        {
+            "Level": 4,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
                     "Class Feature Description": [
-                        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+                        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
                     ]
                 }
-            },
-            {
-                "Level": 5,
-                "Extra Attack": {
+            ]
+        },
+        {
+            "Level": 5,
+            "Class Features": [
+                {
+                    "Feature": "Extra Attack",
                     "Class Feature Description": [
                         "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
                     ]
                 }
-            },
-            {
-                "Level": 6,
-                "Favored Enemy Improvement": {
+            ]
+        },
+        {
+            "Level": 6,
+            "Class Features": [
+                {
+                    "Feature": "Favored Enemy Improvement",
                     "Class Feature Description": [
-                        "You choose an additional favored enemy, as well as an associated language."
+                        "Choose an additional favored enemy and associated language."
                     ]
                 },
-                "Deft Explorer Improvement": {
+                {
+                    "Feature": "Roving",
                     "Class Feature Description": [
-                        "You gain the benefits of Roving: Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed."
+                        "Gain 10 feet of Speed, as well as a Climb speed and Swim speed."
                     ]
                 }
-            },
-            {
-                "Level": 7,
-                "Subclass Feature": {
+            ]
+        },
+        {
+            "Level": 7,
+            "Class Features": [
+                {
+                    "Feature": "Subclass Feature",
                     "Class Feature Description": [
-                        "You gain a feature from your Ranger Archetype."
+                        "Gain a feature from your Ranger archetype."
                     ]
                 }
-            },
-            {
-                "Level": 8,
-                "Ability Score Improvement": {
+            ]
+        },
+        {
+            "Level": 8,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
                     "Class Feature Description": [
-                        "You gain another ability score improvement."
+                        "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+                    ]
+                }
+            ]
+        },
+        {
+            "Level": 9,
+            "Class Features": [
+                {
+                    "Feature": "Expertise",
+                    "Class Feature Description": [
+                        "You gain Expertise in two additional skills."
+                    ]
+                }
+            ]
+        },
+        {
+            "Level": 10,
+            "Class Features": [
+                {
+                    "Feature": "Tireless",
+                    "Class Feature Description": [
+                        "Use an action to gain Temporary Hit Points.",
+                        "You can now reduce Exhaustion by 1 level by taking a Short Rest."
                     ]
                 },
-                "Land's Stride": {
+                {
+                    "Feature": "Nature's Veil",
                     "Class Feature Description": [
-                        "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-                        "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the Entangle spell."
+                        "Use a bonus action to become invisible until the start of your next turn. You can use this feature a number of times equal to your Wisdom modifier per long rest."
                     ]
                 }
-            },
-            {
-                "Level": 9,
-                "Use Magic Device": {
+            ]
+        },
+        {
+            "Level": 11,
+            "Class Features": [
+                {
+                    "Feature": "Subclass Feature",
                     "Class Feature Description": [
-                        "You have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you.",
-                        "You ignore all class, race, and level requirements on the use of magic items."
+                        "Gain a feature from your Ranger archetype."
                     ]
                 }
-            },
-            {
-                "Level": 10,
-                "Deft Explorer Improvement": {
+            ]
+        },
+        {
+            "Level": 12,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
                     "Class Feature Description": [
-                        "You gain the benefits of Tireless: As an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier. You can use this special action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\n\nIn addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1."
-                    ]
-                },
-                "Nature's Veil": {
-                    "Class Feature Description": [
-                        "You draw on the powers of nature to hide yourself from view briefly.",
-                        "As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                        "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
                     ]
                 }
-            },
-            {
-                "Level": 11,
-                "Subclass Feature": {
+            ]
+        },
+        {
+            "Level": 13,
+            "Class Features": [
+                {
+                    "Feature": "Relentless Hunter",
                     "Class Feature Description": [
-                        "You gain a feature from your Ranger Archetype."
+                        "Damage no longer threatens to break your Concentration on Hunter’s Mark."
                     ]
                 }
-            },
-            {
-                "Level": 12,
-                "Ability Score Improvement": {
+            ]
+        },
+        {
+            "Level": 14,
+            "Class Features": [
+                {
+                    "Feature": "Nature's Veil",
                     "Class Feature Description": [
-                        "You gain another ability score improvement."
+                        "Use a Bonus Action to become Invisible until the end of your next turn.",
+                        "Number of uses is tied to your Wisdom modifier."
                     ]
                 }
-            },
-            {
-                "Level": 14,
-                "Favored Enemy Improvement": {
+            ]
+        },
+        {
+            "Level": 15,
+            "Class Features": [
+                {
+                    "Feature": "Subclass Feature",
                     "Class Feature Description": [
-                        "You choose an additional favored enemy, as well as an associated language."
+                        "Gain a feature from your Ranger archetype."
                     ]
                 }
-            },
-            {
-                "Level": 15,
-                "Subclass Feature": {
+            ]
+        },
+        {
+            "Level": 16,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
                     "Class Feature Description": [
-                        "You gain a feature from your Ranger Archetype."
+                        "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
                     ]
                 }
-            },
-            {
-                "Level": 16,
-                "Ability Score Improvement": {
+            ]
+        },
+        {
+            "Level": 17,
+            "Class Features": [
+                {
+                    "Feature": "Precise Hunter",
                     "Class Feature Description": [
-                        "You gain another ability score improvement."
+                        "Get Advantage on attack rolls against the creature currently marked by Hunter’s Mark."
                     ]
                 }
-            },
-            {
-                "Level": 18,
-                "Feral Senses": {
+            ]
+        },
+        {
+            "Level": 18,
+            "Class Features": [
+                {
+                    "Feature": "Feral Senses",
                     "Class Feature Description": [
-                        "You gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it.",
-                        "You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't blinded or deafened."
+                        "You gain Blindsight out to 30 feet."
                     ]
                 }
-            },
-            {
-                "Level": 19,
-                "Ability Score Improvement": {
+            ]
+        },
+        {
+            "Level": 19,
+            "Class Features": [
+                {
+                    "Feature": "Epic Boon",
                     "Class Feature Description": [
-                        "You gain another ability score improvement."
+                        "Gain an Epic Boon feat or another feat of your choice."
                     ]
                 }
-            },
-            {
-                "Level": 20,
-                "Foe Slayer": {
+            ]
+        },
+        {
+            "Level": 20,
+            "Class Features": [
+                {
+                    "Feature": "Foe Slayer",
                     "Class Feature Description": [
-                        "At 20th level, you become an unparalleled hunter of your enemies.",
-                        "Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+                        "Hunter’s Mark now deals an additional 1d10 damage instead of 1d6."
                     ]
                 }
-            }
-        ]
-    }
-]
+            ]
+        }
+    ]
+}

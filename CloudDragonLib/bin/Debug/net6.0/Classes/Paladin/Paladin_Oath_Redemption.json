@@ -1,9 +1,10 @@
 ﻿{
-    "Oath Name": "Oath of Redemption",
-    "Oath Abilities": [
+    "Archetype Name": "Oath of Redemption",
+    "Archetype Features": [
         {
-            "Oath Ability": "Tenets of Redemption",
-            "Oath Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Tenets of Redemption",
+            "Archetype Feature Description": [
                 "The tenets of the Oath of Redemption hold a paladin to a high standard of peace and justice.",
                 [
                     {
@@ -22,8 +23,9 @@
             ]
         },
         {
-            "Oath Ability": "Oath Spells",
-            "Oath Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Oath Spells",
+            "Archetype Feature Description": [
                 {
                     "3rd Level Spells": [
                         "Sanctuary",
@@ -57,9 +59,10 @@
             ]
         },
         {
-            "Oath Ability": "Channel Divinity",
-            "Oath Ability Description": [
-                "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+            "Level": 3,
+            "Archetype Feature": "Channel Divinity",
+            "Archetype Feature Description": [
+                "When you take this oath at 3rd level, you gain the following two Channel Divinity options:",
                 [
                     {
                         "Emissary of Peace": "You can use your Channel Divinity to augment your presence with divine power. As a bonus action, you grant yourself a +5 bonus to Charisma (Persuasion) checks for the next 10 minutes."
@@ -71,27 +74,30 @@
             ]
         },
         {
-            "Oath Ability": "Aura of the Guardian",
-            "Oath Ability Description": [
-                "Starting at 7th level, you can shield your allies from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage, instead of that creature taking it. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.",
+            "Level": 7,
+            "Archetype Feature": "Aura of the Guardian",
+            "Archetype Feature Description": [
+                "Starting at 7th level, you can shield your allies from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage instead of the creature. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.",
                 "At 18th level, the range of this aura increases to 30 feet."
             ]
         },
         {
-            "Oath Ability": "Protective Spirit",
-            "Oath Ability Description": [
+            "Level": 15,
+            "Archetype Feature": "Protective Spirit",
+            "Archetype Feature Description": [
                 "Starting at 15th level, a holy presence mends your wounds in combat. You regain hit points equal to 1d6 + half your paladin level if you end your turn in combat with fewer than half of your hit points remaining and you aren’t incapacitated."
             ]
         },
         {
-            "Oath Ability": "Emissary of Redemption",
-            "Oath Ability Description": [
-                "At 20th level, you become an avatar of peace, which gives you the following benefits.",
+            "Level": 20,
+            "Archetype Feature": "Emissary of Redemption",
+            "Archetype Feature Description": [
+                "At 20th level, you become an avatar of peace, which gives you the following benefits:",
                 [
                     "You have resistance to all damage dealt by other creatures (their attacks, spells, and other effects).",
                     "Whenever a creature damages you, it takes radiant damage equal to half the amount it dealt to you."
                 ],
-                "If you attack a creature, cast a spell on it, or deal damage to it by any means but this feature, neither benefit works against that creature until you finish a long rest."
+                "If you attack a creature, cast a spell on it, or deal damage to it by any means other than this feature, neither benefit works against that creature until you finish a long rest."
             ]
         }
     ]

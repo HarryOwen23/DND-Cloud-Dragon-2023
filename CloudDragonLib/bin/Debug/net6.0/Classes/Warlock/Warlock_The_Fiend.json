@@ -1,9 +1,10 @@
 {
     "Archetype Name": "The Fiend",
-    "Archetype Abilities": [
+    "Archetype Features": [
         {
-            "Archetype Ability": "Expanded Spell List",
-            "Archetype Ability Description": [
+            "Level": 1,
+            "Archetype Feature": "Expanded Spell List",
+            "Archetype Feature Description": [
                 "The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
                 {
                     "Fiend Expanded Spells": [
@@ -47,29 +48,33 @@
             ]
         },
         {
-            "Archetype Ability": "Dark One's Blessing",
-            "Archetype Ability Description": [
+            "Level": 1,
+            "Archetype Feature": "Dark One's Blessing",
+            "Archetype Feature Description": [
                 "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1)."
             ]
         },
         {
-            "Archetype Ability": "Fiendish Resilience",
-            "Archetype Ability Description": [
+            "Level": 6,
+            "Archetype Feature": "Fiendish Resilience",
+            "Archetype Feature Description": [
                 "Starting at 6th level, you can draw on the power of your patron to resist defeat. You gain resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder. You can change your choice whenever you finish a long rest.",
                 "Additionally, you can choose to have advantage on saving throws against spells and magical effects that deal damage of the chosen type."
             ]
         },
         {
-            "Archetype Ability": "Hurl Through Hell",
-            "Archetype Ability Description": [
+            "Level": 10,
+            "Archetype Feature": "Hurl Through Hell",
+            "Archetype Feature Description": [
                 "Starting at 10th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.",
                 "At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.",
                 "Once you use this feature, you can't use it again until you finish a long rest."
             ]
         },
         {
-            "Archetype Ability": "Fiendish Form",
-            "Archetype Ability Description": [
+            "Level": 14,
+            "Archetype Feature": "Fiendish Form",
+            "Archetype Feature Description": [
                 "At 14th level, you gain the ability to transform into a fiendish form. As a bonus action, you can assume a fiendish form for 1 minute. During this time, you gain the following benefits:",
                 "- You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
                 "- You can see in magical and nonmagical darkness up to 120 feet.",

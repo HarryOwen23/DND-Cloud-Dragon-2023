@@ -1,9 +1,10 @@
 {
-    "Subclass Name": "Beast Master Conclave",
-    "Subclass Features": [
+    "Archetype Name": "Beast Master Conclave",
+    "Archetype Features": [
         {
-            "Feature Name": "Ranger's Companion",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Ranger's Companion",
+            "Archetype Feature Description": [
                 "At 3rd level, you gain a beast companion that accompanies you on your adventures.",
                 "Choose a beast that is no larger than Medium and has a challenge rating of 1/4 or lower. This beast is friendly to you and your companions and follows your commands. You can choose from the following options or another beast that your DM approves:",
                 {
@@ -22,7 +23,7 @@
                 "Your beast companion gains proficiency in two skills, as well as proficiency in saving throws as determined by its statistics. Its hit point maximum equals its normal hit points or four times your ranger level, whichever is higher. It also adds your proficiency bonus to its AC, attack rolls, and damage rolls. Your companion's attacks are considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks.",
                 "Your ranger level determines the beast's abilities:",
                 {
-                    "Ranger Level": [
+                    "Ranger Level Abilities": [
                         {
                             "3rd": "Beast of the Land (see Player's Handbook for statistics)",
                             "4th": "Beast of the Land (see Player's Handbook for statistics)",
@@ -38,22 +39,26 @@
             ]
         },
         {
-            "Feature Name": "Exceptional Training",
-            "Feature Description": [
-                "Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command your beast to take the Dash, Disengage, Dodge, or Help action on its turn. Your beast companion can use its reaction to make a melee attack against a creature that attacks it.",
+            "Level": 7,
+            "Archetype Feature": "Exceptional Training",
+            "Archetype Feature Description": [
+                "Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command your beast to take the Dash, Disengage, Dodge, or Help action on its turn.",
+                "Your beast companion can use its reaction to make a melee attack against a creature that attacks it.",
                 "If you are incapacitated or absent, your beast companion acts on its own, focusing on protecting you and itself. It never requires your command to use its reaction, such as when making an opportunity attack."
             ]
         },
         {
-            "Feature Name": "Bestial Fury",
-            "Feature Description": [
+            "Level": 11,
+            "Archetype Feature": "Bestial Fury",
+            "Archetype Feature Description": [
                 "Starting at 11th level, your beast companion can make two attacks when you command it to use the Attack action, and it adds its proficiency bonus to its damage rolls.",
                 "Additionally, when you use the Extra Attack feature, your beast companion can make one attack immediately after you take the Attack action."
             ]
         },
         {
-            "Feature Name": "Share Spells",
-            "Feature Description": [
+            "Level": 15,
+            "Archetype Feature": "Share Spells",
+            "Archetype Feature Description": [
                 "Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.",
                 "Additionally, when you cast a spell with a range of touch, your beast companion can deliver the spell as if it had cast the spell. Your beast companion must use its reaction to deliver the spell when you cast it, and it must use its own movement to reach the target of the spell. If the spell requires an attack roll, you use your attack modifier for the roll."
             ]

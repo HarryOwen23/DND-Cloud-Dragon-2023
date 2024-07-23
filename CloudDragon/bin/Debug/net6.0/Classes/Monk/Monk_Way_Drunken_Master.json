@@ -1,22 +1,25 @@
 ﻿{
-    "Way Name": "Way of the Drunken Master",
-    "Way Abilities": [
+    "Archetype Name": "Way of the Drunken Master",
+    "Archetype Features": [
         {
-            "Way Ability": "Bonus Proficiencies",
-            "Way Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Bonus Proficiencies",
+            "Archetype Feature Description": [
                 "When you choose this tradition at 3rd level, you gain proficiency in the Performance skill if you don't already have it. Your martial arts technique mixes combat training with the precision of a dancer and the antics of a jester. You also gain proficiency with brewer's supplies if you don't already have it."
             ]
         },
         {
-            "Way Ability": "Drunken Technique",
-            "Way Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Drunken Technique",
+            "Archetype Feature Description": [
                 "At 3rd level, you learn how to twist and turn quickly as part of your Flurry of Blows. Whenever you use Flurry of Blows, you gain the benefit of the Disengage action, and your walking speed increases by 10 feet until the end of the current turn."
             ]
         },
         {
-            "Way Ability": "Tipsy Sway",
-            "Way Ability Description": [
-                "Starting at 6th level, you can move in sudden, swaying ways. You gain the following benefits.",
+            "Level": 6,
+            "Archetype Feature": "Tipsy Sway",
+            "Archetype Feature Description": [
+                "Starting at 6th level, you can move in sudden, swaying ways. You gain the following benefits:",
                 [
                     {
                         "Leap To Your Feet": "When you're prone, you can stand up by spending 5 feet of movement, rather than half your speed."
@@ -28,14 +31,16 @@
             ]
         },
         {
-            "Way Ability": "Drunkard's Luck",
-            "Way Ability Description": [
+            "Level": 11,
+            "Archetype Feature": "Drunkard's Luck",
+            "Archetype Feature Description": [
                 "Starting at 11th level, you always seem to get a lucky bounce at the right moment. When you make an ability check, an attack roll, or a saving throw and have disadvantage, you can spend 2 ki points to cancel the disadvantage for that roll."
             ]
         },
         {
-            "Way Ability": "Intoxicated Frenzy",
-            "Way Ability Description": [
+            "Level": 17,
+            "Archetype Feature": "Intoxicated Frenzy",
+            "Archetype Feature Description": [
                 "At 17th level, you gain the ability to make an overwhelming number of attacks against a group of enemies. When you use your Flurry of Blows, you can make up to three additional attacks with it (up to a total of five Flurry of Blows attacks), provided that each Flurry of Blows attack targets a different creature this turn."
             ]
         }

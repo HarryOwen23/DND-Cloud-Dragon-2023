@@ -1,39 +1,45 @@
 {
-    "Subclass Name": "Inquisitive",
-    "Subclass Features": [
+    "Archetype Name": "Inquisitive",
+    "Archetype Features": [
         {
-            "Feature Name": "Ear for Deceit",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Ear for Deceit",
+            "Archetype Feature Description": [
                 "When you choose this archetype at 3rd level, you develop a keen ear for picking out lies. Whenever you make a Wisdom (Insight) check to determine whether a creature is lying, treat a roll of 7 or lower on the d20 as an 8."
             ]
         },
         {
-            "Feature Name": "Eye for Detail",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Eye for Detail",
+            "Archetype Feature Description": [
                 "Starting at 3rd level, you can use a bonus action to make a Wisdom (Perception) check to spot a hidden creature or object, or to make an Intelligence (Investigation) check to uncover or decipher clues. The DC for such checks is reduced by an amount equal to your Intelligence modifier (minimum of 1)."
             ]
         },
         {
-            "Feature Name": "Insightful Fighting",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Insightful Fighting",
+            "Archetype Feature Description": [
                 "At 3rd level, you gain the ability to decipher an opponent's tactics and develop a counterstrategy. If you make an Intelligence (Investigation) check to assess a creature's tactics or if you succeed on a Wisdom (Insight) check to discern a creature's motives and capabilities, you can use your Sneak Attack against that creature, even if you don't have advantage on the attack roll, but not if you have disadvantage on it."
             ]
         },
         {
-            "Feature Name": "Steady Eye",
-            "Feature Description": [
+            "Level": 9,
+            "Archetype Feature": "Steady Eye",
+            "Archetype Feature Description": [
                 "Starting at 9th level, you have advantage on any Wisdom (Perception) or Intelligence (Investigation) check if you moved no more than half your speed on your turn."
             ]
         },
         {
-            "Feature Name": "Unerring Eye",
-            "Feature Description": [
+            "Level": 13,
+            "Archetype Feature": "Unerring Eye",
+            "Archetype Feature Description": [
                 "At 13th level, your senses have become unnaturally keen. You can no longer be surprised, and you gain blindsight with a range of 10 feet. If you already have blindsight, its range increases by 10 feet."
             ]
         },
         {
-            "Feature Name": "Eye for Weakness",
-            "Feature Description": [
+            "Level": 17,
+            "Archetype Feature": "Eye for Weakness",
+            "Archetype Feature Description": [
                 "Starting at 17th level, you can use your Insightful Fighting to exploit your enemies' weaknesses with incredible precision. Once on each of your turns, when you make a Sneak Attack against a creature, you can choose to have the attack target one of the creature's vulnerabilities, if it has any. If the creature has multiple vulnerabilities, you choose one. The target takes extra damage equal to half your Sneak Attack damage."
             ]
         }

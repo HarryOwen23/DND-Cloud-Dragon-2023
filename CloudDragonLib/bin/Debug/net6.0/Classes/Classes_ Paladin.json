@@ -30,12 +30,7 @@
                 {
                     "Feature": "Spellcasting",
                     "Class Feature Description": [
-                        "By 1st level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does."
-                    ]
-                },
-                {
-                    "Feature": "Preparing and Casting Spells",
-                    "Class Feature Description": [
+                        "By 1st level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
                         "The Paladin table shows how many spell slots you have to cast your paladin spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
                         "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. The number of prepared spells is a fixed number listed in the Paladin table. The spells must be of a level for which you have spell slots.",
                         "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
@@ -55,6 +50,11 @@
                     ]
                 },
                 {
+                    "Feature": "Fighting Styles",
+                    "Class Feature Description": [
+                        "Fighting Styles are now feats, and some have seen minor tweaks.",
+                        "Blessed Warrior from Tasha’s Cauldron of Everything has been made a default option."
+                    ],
                     "Fighting Styles": [
                         {
                             "Archery": "You gain a +2 bonus to attack rolls you make with ranged weapons."
@@ -78,16 +78,16 @@
                             "Protection": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
                         },
                         {
-                            "SuperiorTechnique": "You learn one maneuver of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice.)\n\nYou gain one superiority die, which is a d6 (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+                            "SuperiorTechnique": "You learn one maneuver of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice). You gain one superiority die, which is a d6 (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
                         },
                         {
-                            "ThrownWeaponFighting": "You can draw a weapon that has the thrown property as part of the attack you make with the weapon.\n\nIn addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll."
+                            "ThrownWeaponFighting": "You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll."
                         },
                         {
                             "TwoWeaponFighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
                         },
                         {
-                            "UnarmedFighting": "Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.\n\nAt the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you."
+                            "UnarmedFighting": "Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8. At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you."
                         },
                         {
                             "CloseQuartersShooter": "When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
@@ -106,10 +106,10 @@
             "Level": 2,
             "Class Features": [
                 {
-                    "Feature": "Paladin’s Smite",
+                    "Feature": "Divine Smite",
                     "Class Feature Description": [
-                        "Always have the Divine Smite spell prepared.",
-                        "Can be used with Unarmed Strikes.",
+                        "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.",
+                        "Divine Smite can now be used with Unarmed Strikes.",
                         "Requires a Bonus Action, which you can take immediately after hitting a creature with an attack."
                     ]
                 }
@@ -125,11 +125,8 @@
                 {
                     "Feature": "Sacred Oath",
                     "Class Feature Description": [
-                        "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature.",
-                        "Oath of Devotion: Subclass features last longer and have a reduced action cost. Divine Smite also now grants cover to you and your allies.",
-                        "Oath of Glory: Peerless athlete has a longer duration and your aura ability has a larger radius.",
-                        "Oath of the Ancients: Aura of Warding now affects specific damage types rather than spell damage. Duration of subclass features has been increased.",
-                        "Oath of Vengeance: Oath of Vengeance's subclass features grant enhanced abilities for tracking and a longer duration."
+                        "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level.",
+                        "The Oath of Devotion, Oath of the Ancients, and Oath of Vengeance are options available to you. Each of these oaths provides a suite of features, including unique spells and abilities."
                     ]
                 },
                 {
@@ -139,7 +136,9 @@
                         "Channel Divinity: Abjure Enemy",
                         "As an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being frightened. Fiends and undead have disadvantage on this saving throw. On a failed save, the creature is frightened for 1 minute or until it takes damage. While frightened, the creature’s speed is 0, and it can’t benefit from any bonus to its speed. On a successful save, the creature’s speed is halved for 1 minute or until the creature takes damage.",
                         "Channel Divinity: Vow of Enmity",
-                        "As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls unconscious."
+                        "As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls unconscious.",
+                        "Channel Divinity: Divine Sense",
+                        "As an action, you can use your Channel Divinity to sense the presence of strong evil or good. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover."
                     ]
                 }
             ]
@@ -163,6 +162,10 @@
                 {
                     "Feature": "Extra Attack",
                     "Class Feature Description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+                },
+                {
+                    "Feature": "Faithful Steed",
+                    "Class Feature Description": "Always have Find Steed prepared, which you can cast once per Long Rest without using a spell slot."
                 }
             ]
         },
@@ -176,11 +179,110 @@
             ]
         },
         {
+            "Level": 7,
+            "Class Features": [
+                {
+                    "Feature": "Oath Feature",
+                    "Class Feature Description": "You gain a feature from your Sacred Oath."
+                }
+            ]
+        },
+        {
+            "Level": 8,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
+                    "Class Feature Description": "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+                }
+            ]
+        },
+        {
+            "Level": 9,
+            "Class Features": [
+                {
+                    "Feature": "Abjure Foes",
+                    "Class Feature Description": [
+                        "Use Channel Divinity to potentially cause a number of creatures equal to your Charisma modifier to become Frightened of you.",
+                        "While Frightened this way, they can only use limited actions."
+                    ]
+                }
+            ]
+        },
+        {
             "Level": 10,
             "Class Features": [
                 {
                     "Feature": "Aura of Courage",
-                    "Class Feature Description": "Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious."
+                    "Class Feature Description": "Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious. If an ally with the Frightened condition enters your aura, the condition no longer has any effect."
+                }
+            ]
+        },
+        {
+            "Level": 11,
+            "Class Features": [
+                {
+                    "Feature": "Radiant Strikes",
+                    "Class Feature Description": "Your Divine Smite feature now works with Unarmed Strikes."
+                }
+            ]
+        },
+        {
+            "Level": 12,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
+                    "Class Feature Description": "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+                }
+            ]
+        },
+        {
+            "Level": 13,
+            "Class Features": [
+                {
+                    "Feature": "Cleansing Touch",
+                    "Class Feature Description": [
+                        "Starting at 13th level, you can use your action to end one spell on yourself or on one willing creature that you touch.",
+                        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
+                    ]
+                }
+            ]
+        },
+        {
+            "Level": 14,
+            "Class Features": [
+                {
+                    "Feature": "Restoring Touch",
+                    "Class Feature Description": [
+                        "Spend 5 Hit Points from your Lay on Hands pool to remove selected conditions.",
+                        "Can remove multiple conditions by spending more points."
+                    ]
+                }
+            ]
+        },
+        {
+            "Level": 15,
+            "Class Features": [
+                {
+                    "Feature": "Oath Feature",
+                    "Class Feature Description": "You gain a feature from your Sacred Oath."
+                }
+            ]
+        },
+        {
+            "Level": 16,
+            "Class Features": [
+                {
+                    "Feature": "Ability Score Improvement",
+                    "Class Feature Description": "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+                }
+            ]
+        },
+        {
+            "Level": 17,
+            "Class Features": [
+                {
+                    "Feature": "Improved Cleansing Touch",
+                    "Class Feature Description": "Starting at 17th level, your Cleansing Touch ability can be used as a Bonus Action instead of an Action."
                 }
             ]
         },
@@ -192,9 +294,24 @@
                     "Class Feature Description": "At 18th level, the range of your auras increase to 30 feet."
                 }
             ]
+        },
+        {
+            "Level": 19,
+            "Class Features": [
+                {
+                    "Feature": "Epic Boon",
+                    "Class Feature Description": "Choose one Epic Boon feat, or another feat of your choice."
+                }
+            ]
+        },
+        {
+            "Level": 20,
+            "Class Features": [
+                {
+                    "Feature": "Oath Feature",
+                    "Class Feature Description": "You gain a feature from your Sacred Oath."
+                }
+            ]
         }
-    ],
-    "Divine Smite": {
-        "Effect": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend."
-    }
+    ]
 }

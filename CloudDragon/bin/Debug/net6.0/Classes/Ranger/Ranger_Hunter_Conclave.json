@@ -1,9 +1,10 @@
 {
-    "Subclass Name": "Hunter",
-    "Subclass Features": [
+    "Archetype Name": "Hunter Conclave",
+    "Archetype Features": [
         {
-            "Feature Name": "Hunter's Prey",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Hunter's Prey",
+            "Archetype Feature Description": [
                 "At 3rd level, you gain one of the following features of your choice:",
                 {
                     "Colossus Slayer": [
@@ -23,8 +24,9 @@
             ]
         },
         {
-            "Feature Name": "Defensive Tactics",
-            "Feature Description": [
+            "Level": 7,
+            "Archetype Feature": "Defensive Tactics",
+            "Archetype Feature Description": [
                 "At 7th level, you gain one of the following features of your choice:",
                 {
                     "Escape the Horde": [
@@ -44,8 +46,9 @@
             ]
         },
         {
-            "Feature Name": "Multiattack",
-            "Feature Description": [
+            "Level": 11,
+            "Archetype Feature": "Multiattack",
+            "Archetype Feature Description": [
                 "At 11th level, you gain one of the following features of your choice:",
                 {
                     "Volley": [
@@ -60,8 +63,9 @@
             ]
         },
         {
-            "Feature Name": "Superior Hunter's Defense",
-            "Feature Description": [
+            "Level": 15,
+            "Archetype Feature": "Superior Hunter's Defense",
+            "Archetype Feature Description": [
                 "At 15th level, you gain one of the following features of your choice:",
                 {
                     "Evasion": [

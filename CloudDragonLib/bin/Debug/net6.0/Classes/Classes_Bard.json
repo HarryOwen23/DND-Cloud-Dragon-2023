@@ -108,9 +108,21 @@
             ]
         },
         {
+            "Level": 4,
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
             "Level": 5,
             "Class Feature": "Font of Inspiration",
             "Class Feature Description": "Beginning at 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest. You can expend a spell slot to regain one use of Bardic Inspiration."
+        },
+        {
+            "Level": 6,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": [
+                "At 6th level, you gain an additional feature from your Bard College. Specific features vary depending on the Bard College chosen:"
+            ]
         },
         {
             "Level": 7,
@@ -121,49 +133,87 @@
             ]
         },
         {
+            "Level": 8,
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
             "Level": 9,
             "Class Feature": "Expertise",
-            "Class Feature Description": "You can choose another two skill proficiencies to gain the benefits of Expertise."
+            "Class Feature Description": "At 9th level, you can choose another two skill proficiencies to gain Expertise in."
         },
         {
             "Level": 10,
             "Class Feature": "Magical Secrets",
             "Class Feature Description": [
-                "At 10th level, you can learn two spells of your choice from any class’s spell list. They count as bard spells for you.",
-                "You can select spells from the Cleric, Druid, and Wizard spell lists in addition to the Bard spell list whenever your number of prepared spells increases.",
-                "You can use this feature again when you reach 14th level and 18th level, learning two additional spells each time."
+                "At 10th level, you gain the ability to learn spells from other classes.",
+                "You can select spells from the Cleric, Druid, and Wizard spell lists in addition to Bard spells whenever your number of Prepared Spells increases."
+            ]
+        },
+        {
+            "Level": 11,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": [
+                "At 11th level, you gain another feature from your Bard College. Specific features vary depending on the Bard College chosen:"
+            ]
+        },
+        {
+            "Level": 12,
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 13,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": [
+                "At 13th level, you gain an additional feature from your Bard College. Specific features vary depending on the Bard College chosen:"
+            ]
+        },
+        {
+            "Level": 14,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": "At 14th level, you gain another feature from your Bard College. Specific features vary depending on the Bard College chosen."
+        },
+        {
+            "Level": 15,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": [
+                "At 15th level, you gain a final feature from your Bard College. Specific features vary depending on the Bard College chosen:"
+            ]
+        },
+        {
+            "Level": 16,
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 17,
+            "Class Feature": "Bard College Feature",
+            "Class Feature Description": [
+                "At 17th level, you gain a further feature from your Bard College. Specific features vary depending on the Bard College chosen:"
             ]
         },
         {
             "Level": 18,
             "Class Feature": "Superior Inspiration",
             "Class Feature Description": [
-                "At 18th level, you regain up to two uses of Bardic Inspiration when you roll initiative if you have no uses remaining."
+                "At 18th level, you regain up to 2 uses of Bardic Inspiration when you roll initiative if you have no uses left.",
+                "You can gain back up to 2 uses of Bardic Inspiration instead of 1."
             ]
         },
         {
             "Level": 19,
-            "Class Feature": "Epic Boon",
-            "Class Feature Description": "At 19th level, choose one Epic Boon feat or another feat of your choice."
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
         },
         {
             "Level": 20,
             "Class Feature": "Words of Creation",
             "Class Feature Description": [
-                "At 20th level, you always have the Power Word Heal and Power Word Kill spells prepared.",
-                "You can possibly target a second creature with either of these spells."
+                "At 20th level, your mastery of bardic magic allows you to wield the power of creation with ease.",
+                "You always have Power Word Heal and Power Word Kill spells prepared.",
+                "You can possibly target a second creature with either spell."
             ]
         }
-    ],
-    "Spell Slots per Spell Level": {
-        "1st": 2,
-        "2nd": 3,
-        "3rd": 4,
-        "4th": 3,
-        "5th": 2,
-        "6th": 1,
-        "7th": 1,
-        "8th": 1,
-        "9th": 1
-    }
+    ]
 }

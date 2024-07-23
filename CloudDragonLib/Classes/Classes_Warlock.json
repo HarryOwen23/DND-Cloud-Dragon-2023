@@ -1,129 +1,168 @@
 ﻿{
-    "Class Name": "Sorcerer",
-    "HitDice": "1d6 per sorcerer level",
-    "HitPoints": {
-        "At 1st Level": "6 + your Constitution modifier",
-        "At Higher Levels": "1d6 (or 4) + your Constitution modifier per sorcerer level after 1st"
+    "Class Name": "Warlock",
+    "Hit Dice": "1d8 per warlock level",
+    "Hit Points": {
+        "At 1st Level": "8 + your Constitution modifier",
+        "At Higher Levels": "1d8 (or 5) + your Constitution modifier per warlock level after 1st"
     },
     "Proficiencies": {
-        "Armor": "None",
-        "Weapons": "Daggers, darts, slings, quarterstaffs",
+        "Armor": "Light armor",
+        "Weapons": "Simple weapons",
         "Tools": "None",
-        "Saving Throws": "Constitution, Charisma",
-        "Skills": "Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion"
+        "Saving Throws": "Wisdom, Charisma",
+        "Skills": "Choose two from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion"
     },
     "Starting Equipment": [
         "(a) a light crossbow and 20 bolts or (b) any simple weapon",
         "(a) a component pouch or (b) an arcane focus",
-        "(a) a dungeoneer's pack or (b) an explorer's pack",
-        "Two daggers"
+        "(a) a scholar's pack or (b) a dungeoneer's pack",
+        "Leather armor, any simple weapon, and two daggers"
     ],
     "Class Features": [
         {
             "Level": 1,
-            "Feature": "Spellcasting",
-            "Description": "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+            "Feature": "Otherworldly Patron",
+            "Description": "At 1st level, you have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 3rd, 6th, 10th, and 14th level."
+        },
+        {
+            "Level": 1,
+            "Feature": "Pact Magic",
+            "Description": "Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See Chapter 10 for the general rules of spellcasting and Chapter 11 for the Warlock spell list."
         },
         {
             "Level": 1,
             "Feature": "Cantrips",
-            "Description": "You know four cantrips of your choice from the sorcerer spell list. You learn additional sorcerer cantrips of your choice at higher levels."
+            "Description": "You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels."
         },
         {
             "Level": 1,
             "Feature": "Spell Slots",
-            "Description": "You have a number of spell slots as shown in the Sorcerer table. You regain all expended spell slots when you finish a long rest."
+            "Description": "The Warlock table shows how many spell slots you have to cast your warlock spells of 1st level and higher. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest."
         },
         {
             "Level": 1,
             "Feature": "Spells Known of 1st Level and Higher",
-            "Description": "You know two 1st-level spells of your choice from the sorcerer spell list. The Spells Known column of the Sorcerer table shows when you learn more sorcerer spells of your choice."
+            "Description": "At 1st level, you know two 1st-level spells of your choice from the warlock spell list. The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice."
         },
         {
             "Level": 1,
             "Feature": "Spellcasting Ability",
-            "Description": "Charisma is your spellcasting ability for your sorcerer spells."
+            "Description": "Charisma is your spellcasting ability for your warlock spells."
         },
         {
             "Level": 1,
             "Feature": "Spellcasting Focus",
-            "Description": "You can use an arcane focus as a spellcasting focus for your sorcerer spells."
+            "Description": "You can use an arcane focus as a spellcasting focus for your warlock spells."
         },
         {
             "Level": 1,
-            "Feature": "Innate Sorcery",
-            "Description": "Use a Bonus Action to surge in power for 1 minute. While active, your Sorcerer spell save DC increases by +1, and you have Advantage on attack rolls for Sorcery spells. Two uses per Long Rest."
+            "Feature": "Eldritch Invocations",
+            "Description": "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability. You can select one invocation at level 1, including former Pact Boons. You gain more invocations as you level up."
         },
         {
             "Level": 2,
-            "Feature": "Font of Magic",
-            "Description": "You tap into a deep wellspring of magic within yourself, represented by sorcery points. You have 2 sorcery points, and gain more as you reach higher levels."
-        },
-        {
-            "Level": 2,
-            "Feature": "Metamagic",
-            "Description": "You gain the ability to twist your spells to suit your needs, choosing from a variety of Metamagic options. You gain more Metamagic options as you level up."
+            "Feature": "Magical Cunning",
+            "Description": "Once per Long Rest, you can complete a 1-minute ritual to restore half of your maximum Pact Magic spell slots. At level 20, this feature restores all Pact Magic spell slots."
         },
         {
             "Level": 3,
-            "Feature": "Sorcerous Origin",
-            "Description": "Choose a sorcerous origin that grants you features at 1st, 6th, 14th, and 18th levels."
+            "Feature": "Otherworldly Patron Feature",
+            "Description": "At 3rd level, your otherworldly patron grants you a feature."
         },
         {
             "Level": 4,
             "Feature": "Ability Score Improvement",
-            "Description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. Cannot increase an ability score above 20."
+            "Description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 4,
+            "Feature": "Eldritch Versatility (Optional)",
+            "Description": "When you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the warlock spell list. Additionally, whenever you gain a level in this class, you can replace one eldritch invocation you know with another invocation that you could learn at that level."
+        },
+        {
+            "Level": 5,
+            "Feature": "Mystic Arcanum (6th Level)",
+            "Description": "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the warlock spell list as this arcanum. You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again."
+        },
+        {
+            "Level": 6,
+            "Feature": "Otherworldly Patron Feature",
+            "Description": "At 6th level, you gain a feature granted by your Otherworldly Patron."
+        },
+        {
+            "Level": 7,
+            "Feature": "Mystic Arcanum (7th Level)",
+            "Description": "At 13th level, you gain a 7th-level spell slot from your Mystic Arcanum feature."
         },
         {
             "Level": 8,
             "Feature": "Ability Score Improvement",
-            "Description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. Cannot increase an ability score above 20."
+            "Description": "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 9,
+            "Feature": "Contact Patron",
+            "Description": "Once per Long Rest, you can use the Contact Other Plane spell to communicate with your patron. You automatically succeed in the saving throw for the spell."
+        },
+        {
+            "Level": 10,
+            "Feature": "Otherworldly Patron Feature",
+            "Description": "At 10th level, you gain a feature granted by your Otherworldly Patron."
+        },
+        {
+            "Level": 11,
+            "Feature": "Mystic Arcanum (9th Level)",
+            "Description": "At 17th level, you gain a 9th-level spell slot from your Mystic Arcanum feature."
         },
         {
             "Level": 12,
             "Feature": "Ability Score Improvement",
-            "Description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. Cannot increase an ability score above 20."
+            "Description": "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 13,
+            "Feature": "Mystic Arcanum (7th Level)",
+            "Description": "At 13th level, you gain a 7th-level spell slot from your Mystic Arcanum feature."
+        },
+        {
+            "Level": 14,
+            "Feature": "Otherworldly Patron Feature",
+            "Description": "At 14th level, you gain a feature granted by your Otherworldly Patron."
+        },
+        {
+            "Level": 15,
+            "Feature": "Mystic Arcanum (8th Level)",
+            "Description": "At 15th level, you gain an 8th-level spell slot from your Mystic Arcanum feature."
         },
         {
             "Level": 16,
             "Feature": "Ability Score Improvement",
-            "Description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. Cannot increase an ability score above 20."
+            "Description": "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+        },
+        {
+            "Level": 17,
+            "Feature": "Mystic Arcanum (9th Level)",
+            "Description": "At 17th level, you gain a 9th-level spell slot from your Mystic Arcanum feature."
+        },
+        {
+            "Level": 18,
+            "Feature": "Lifedrinker",
+            "Description": "At 18th level, when you hit a creature with your Pact Weapon, the creature takes extra necrotic damage equal to your Charisma modifier."
         },
         {
             "Level": 19,
             "Feature": "Ability Score Improvement",
-            "Description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. Cannot increase an ability score above 20."
-        },
-        {
-            "Level": 4,
-            "Feature": "Sorcerous Versatility (Optional)",
-            "Description": "When you reach a level in this class that grants the Ability Score Improvement feature, you can choose to replace one of your Metamagic options or one of your cantrips."
-        },
-        {
-            "Level": 5,
-            "Feature": "Magical Guidance (Optional)",
-            "Description": "At 5th level, you can spend sorcery points to reroll failed ability checks."
-        },
-        {
-            "Level": 5,
-            "Feature": "Sorcerous Restoration",
-            "Description": "Regain expended Sorcery Points equal to half your Sorcerer level after a Short Rest once per day."
-        },
-        {
-            "Level": 7,
-            "Feature": "Sorcery Incarnate",
-            "Description": "Regain uses of Innate Sorcery by spending 2 Sorcery Points."
+            "Description": "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
         },
         {
             "Level": 19,
             "Feature": "Epic Boon",
-            "Description": "Choose one Epic Boon feat, or another feat of your choice."
+            "Description": "At 19th level, choose one Epic Boon feat or another feat of your choice."
         },
         {
             "Level": 20,
-            "Feature": "Arcane Apotheosis",
-            "Description": "While active, Innate Sorcery allows you to use one Metamagic option for free each turn."
+            "Feature": "Eldritch Master",
+            "Description": "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended Pact Magic spell slots. Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
         }
-
     ]
 }

@@ -1,17 +1,19 @@
 {
-    "Subclass Name": "Soulknife",
-    "Subclass Features": [
+    "Archetype Name": "Soulknife",
+    "Archetype Features": [
         {
-            "Feature Name": "Psionic Power",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Psionic Power",
+            "Archetype Feature Description": [
                 "Starting at 3rd level, you gain the ability to manifest a psychic blade. This blade is a melee weapon with the finesse and thrown properties, and it has a normal range of 30 feet and a long range of 60 feet. It deals 1d6 psychic damage on a hit.",
                 "You can use your Dexterity modifier instead of Strength for attack and damage rolls with this weapon. If you make a ranged attack with this weapon, you don't add your ability modifier to the damage.",
                 "The psychic blade disappears if it is ever more than 30 feet away from you for 1 minute or more. It also disappears if you manifest another psychic blade."
             ]
         },
         {
-            "Feature Name": "Psionic Enhancement",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Psionic Enhancement",
+            "Archetype Feature Description": [
                 "At 3rd level, you gain the ability to infuse your psychic blade with psionic energy. You can spend psi points to enhance your blade in the following ways:",
                 {
                     "Enhancements": [
@@ -23,21 +25,24 @@
             ]
         },
         {
-            "Feature Name": "Soul Blades",
-            "Feature Description": [
+            "Level": 9,
+            "Archetype Feature": "Soul Blades",
+            "Archetype Feature Description": [
                 "Starting at 9th level, you can manifest two psychic blades at once. You can make two attacks with them when you take the Attack action on your turn, using your bonus action for the second attack.",
                 "When you make a ranged attack with these blades, you can throw both of them, making separate attack rolls for each. Both blades use the same damage roll."
             ]
         },
         {
-            "Feature Name": "Rend Mind",
-            "Feature Description": [
+            "Level": 13,
+            "Archetype Feature": "Rend Mind",
+            "Archetype Feature Description": [
                 "At 13th level, your psychic blades become even deadlier. When you hit a creature with both of your psychic blades on the same turn, you can force the target to make an Intelligence saving throw against your psi save DC. On a failed save, the target takes an extra 6d6 psychic damage and is stunned until the end of its next turn."
             ]
         },
         {
-            "Feature Name": "Soul Sever",
-            "Feature Description": [
+            "Level": 17,
+            "Archetype Feature": "Soul Sever",
+            "Archetype Feature Description": [
                 "Starting at 17th level, your psychic blades can sever a creature's soul. When you reduce a creature to 0 hit points with a melee attack using your psychic blades, you can choose to deal psychic damage equal to your rogue level, and the target's soul is severed. The creature can't be revived by anything short of a wish spell."
             ]
         }

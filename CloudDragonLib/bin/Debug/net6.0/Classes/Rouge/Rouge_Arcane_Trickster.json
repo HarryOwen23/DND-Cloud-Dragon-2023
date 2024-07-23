@@ -1,9 +1,10 @@
 {
-    "Subclass Name": "Arcane Trickster",
-    "Subclass Features": [
+    "Archetype Name": "Arcane Trickster",
+    "Archetype Features": [
         {
-            "Feature Name": "Spellcasting",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Spellcasting",
+            "Archetype Feature Description": [
                 "When you reach 3rd level, you gain the ability to cast spells.",
                 "Cantrips: You learn two cantrips of your choice from the wizard spell list. You learn an additional wizard cantrip of your choice at 10th level.",
                 "Spells Known: You know three 1st-level wizard spells of your choice, two of which you must choose from the enchantment and illusion spells on the wizard spell list.",
@@ -12,8 +13,9 @@
             ]
         },
         {
-            "Feature Name": "Mage Hand Legerdemain",
-            "Feature Description": [
+            "Level": 3,
+            "Archetype Feature": "Mage Hand Legerdemain",
+            "Archetype Feature Description": [
                 "Starting at 3rd level, when you cast Mage Hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it:",
                 "- You can stow one object the hand is holding in a container worn or carried by another creature.",
                 "- You can retrieve an object in a container worn or carried by another creature.",
@@ -23,20 +25,23 @@
             ]
         },
         {
-            "Feature Name": "Magical Ambush",
-            "Feature Description": [
+            "Level": 9,
+            "Archetype Feature": "Magical Ambush",
+            "Archetype Feature Description": [
                 "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
             ]
         },
         {
-            "Feature Name": "Versatile Trickster",
-            "Feature Description": [
+            "Level": 13,
+            "Archetype Feature": "Versatile Trickster",
+            "Archetype Feature Description": [
                 "At 13th level, you gain the ability to distract targets with your Mage Hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
             ]
         },
         {
-            "Feature Name": "Spell Thief",
-            "Feature Description": [
+            "Level": 17,
+            "Archetype Feature": "Spell Thief",
+            "Archetype Feature Description": [
                 "Starting at 17th level, you can use your reaction to absorb the magical energy of a spell, causing your Mage Hand to glow with stolen power. When a creature casts a spell of 1st level or higher while you have the Mage Hand active, you can use your reaction to make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. If you succeed, you automatically learn the spell, and you can cast it using your spell slots. The spell remains in your mind until you use this feature again to replace it with another spell. If you fail the check, the spell has no effect on you."
             ]
         }

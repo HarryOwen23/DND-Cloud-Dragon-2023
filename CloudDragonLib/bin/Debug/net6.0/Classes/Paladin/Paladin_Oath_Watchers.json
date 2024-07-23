@@ -1,9 +1,10 @@
 ﻿{
-    "Oath Name": "Oath of the Watchers",
-    "Oath Abilities": [
+    "Archetype Name": "Oath of the Watchers",
+    "Archetype Features": [
         {
-            "Oath Ability": "Tenets of the Watchers",
-            "Oath Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Tenets of the Watchers",
+            "Archetype Feature Description": [
                 "A paladin who assumes the Oath of the Watchers swears to safeguard mortal realms from otherworldly threats.",
                 [
                     {
@@ -19,8 +20,9 @@
             ]
         },
         {
-            "Oath Ability": "Oath Spells",
-            "Oath Ability Description": [
+            "Level": 3,
+            "Archetype Feature": "Oath Spells",
+            "Archetype Feature Description": [
                 {
                     "3rd Level Spells": [
                         "Alarm",
@@ -54,9 +56,10 @@
             ]
         },
         {
-            "Oath Ability": "Channel Divinity",
-            "Oath Ability Description": [
-                "When you take this oath at 3rd level, you gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
+            "Level": 3,
+            "Archetype Feature": "Channel Divinity",
+            "Archetype Feature Description": [
+                "When you take this oath at 3rd level, you gain the following two Channel Divinity options:",
                 [
                     {
                         "Watcher's Will": "You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
@@ -71,21 +74,24 @@
             ]
         },
         {
-            "Oath Ability": "Aura of the Sentinel",
-            "Oath Ability Description": [
+            "Level": 7,
+            "Archetype Feature": "Aura of the Sentinel",
+            "Archetype Feature Description": [
                 "At 7th level, you emit an aura of alertness while you aren't incapacitated. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.",
                 "At 18th level, the range of this aura increases to 30 feet."
             ]
         },
         {
-            "Oath Ability": "Vigilant Rebuke",
-            "Oath Ability Description": [
-                "At 15th level, you've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, a Wisdom, or a Charisma saving throw, you can use your reaction to deal 2d8 + your Charisma modifier force damage to the creature that forced the saving throw."
+            "Level": 15,
+            "Archetype Feature": "Vigilant Rebuke",
+            "Archetype Feature Description": [
+                "At 15th level, you've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, Wisdom, or Charisma saving throw, you can use your reaction to deal 2d8 + your Charisma modifier force damage to the creature that forced the saving throw."
             ]
         },
         {
-            "Oath Ability": "Mortal Bulwark",
-            "Oath Ability Description": [
+            "Level": 20,
+            "Archetype Feature": "Mortal Bulwark",
+            "Archetype Feature Description": [
                 "At 20th level, you manifest a spark of divine power in defense of the mortal realms. As a bonus action, you gain the following benefits for 1 minute:",
                 [
                     "You gain truesight with a range of 120 feet.",
