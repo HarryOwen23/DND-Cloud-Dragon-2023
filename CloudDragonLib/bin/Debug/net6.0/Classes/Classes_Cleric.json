@@ -1,13 +1,17 @@
 ﻿{
     "Class Name": "Cleric",
     "Hit Dice": "1d8 per cleric level",
-    "At 1st Level": "8 + your Constitution modifier",
-    "At Higher Levels": "1d8 (or 5) + your Constitution modifier per cleric level after 1st",
-    "Armor": "Light armor, medium armor, shields",
-    "Weapons": "All simple weapons",
-    "Tools": "None",
-    "Saving Throws": "Wisdom, Charisma",
-    "Skills": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
+    "Hit Points": {
+        "At 1st Level": "8 + your Constitution modifier",
+        "At Higher Levels": "1d8 (or 5) + your Constitution modifier per cleric level after 1st"
+    },
+    "Proficiencies": {
+        "Armor": "Light armor, medium armor, shields",
+        "Weapons": "All simple weapons",
+        "Tools": "None",
+        "Saving Throws": "Wisdom, Charisma",
+        "Skills": "Choose two from History, Insight, Medicine, Persuasion, and Religion"
+    },
     "Equipment": [
         "(a) a mace or (b) a warhammer (if proficient)",
         "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
@@ -102,10 +106,24 @@
             ]
         },
         {
+            "Level": 4,
+            "Class Feature": "Ability Score Improvement",
+            "Class Feature Description": [
+                "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+            ]
+        },
+        {
             "Level": 5,
             "Class Feature": "Sear Undead",
             "Class Feature Description": [
                 "Replaces Destroy Undead, instead deals Radiant damage to every Undead, regardless of CR, that fails their saving throw against your Turn Undead."
+            ]
+        },
+        {
+            "Level": 6,
+            "Class Feature": "Channel Divinity: Improved Effect",
+            "Class Feature Description": [
+                "At 6th level, the effects of your Channel Divinity improve. You can use your Channel Divinity to grant a creature within 30 feet of you temporary hit points equal to 2d8 + your cleric level."
             ]
         },
         {
@@ -118,10 +136,45 @@
             ]
         },
         {
+            "Level": 8,
+            "Class Feature": "Divine Domain Feature",
+            "Class Feature Description": [
+                "At 8th level, you gain an additional feature granted by your Divine Domain. Specific features depend on the chosen domain."
+            ]
+        },
+        {
+            "Level": 9,
+            "Class Feature": "Divine Domain Feature",
+            "Class Feature Description": [
+                "At 9th level, you gain an additional feature granted by your Divine Domain. Specific features depend on the chosen domain."
+            ]
+        },
+        {
             "Level": 10,
             "Class Feature": "Divine Intervention",
             "Class Feature Description": [
                 "As a Magic action, choose any Cleric spell of level 5 or lower that doesn’t require a reaction. You can cast it without spending components or a spell slot. Restores after Long Rest."
+            ]
+        },
+        {
+            "Level": 11,
+            "Class Feature": "Improved Divine Intervention",
+            "Class Feature Description": [
+                "At 11th level, when you use Divine Intervention, you can call upon a celestial being to assist you. The celestial grants you and your allies within 30 feet advantage on saving throws for 1 minute."
+            ]
+        },
+        {
+            "Level": 12,
+            "Class Feature": "Divine Domain Feature",
+            "Class Feature Description": [
+                "At 12th level, you gain an additional feature granted by your Divine Domain. Specific features depend on the chosen domain."
+            ]
+        },
+        {
+            "Level": 13,
+            "Class Feature": "Supreme Healing",
+            "Class Feature Description": [
+                "Starting at 13th level, your healing spells are more effective. When you restore hit points with a cleric spell, you can add an additional 2d8 hit points to the restored amount."
             ]
         },
         {
@@ -130,6 +183,34 @@
             "Class Feature Description": [
                 "- Divine Strikes: Damage increases to 2d8.",
                 "- Potent Spellcasting: When you deal damage with a Cleric cantrip, you can grant yourself or another Temporary Hit Points."
+            ]
+        },
+        {
+            "Level": 15,
+            "Class Feature": "Holy Aura",
+            "Class Feature Description": [
+                "At 15th level, you can use your Channel Divinity to create an aura that lasts for 1 minute. You and your allies within 10 feet of you have advantage on saving throws and are resistant to all damage types except Psychic."
+            ]
+        },
+        {
+            "Level": 16,
+            "Class Feature": "Divine Domain Feature",
+            "Class Feature Description": [
+                "At 16th level, you gain an additional feature granted by your Divine Domain. Specific features depend on the chosen domain."
+            ]
+        },
+        {
+            "Level": 17,
+            "Class Feature": "Divine Domain Feature",
+            "Class Feature Description": [
+                "At 17th level, you gain an additional feature granted by your Divine Domain. Specific features depend on the chosen domain."
+            ]
+        },
+        {
+            "Level": 18,
+            "Class Feature": "Greater Divine Intervention",
+            "Class Feature Description": [
+                "You can cast Wish when selecting a spell for Divine Intervention. After using this feature in this way, you cannot use Divine Intervention again for 2d4 days."
             ]
         },
         {
