@@ -28,21 +28,17 @@ namespace CloudDragon
     // Class to represent categories of Magic Items
     public class MICategory
     {
-        [JsonPropertyName("magicalItems")]
+        [JsonPropertyName("MagicalItems")]
         public List<MagicItems> MagicalItems { get; set; }
     }
 
-    // Class to represent Magical Item Data
-    public class MagicalItemData
-    {
-        [JsonPropertyName("magicalItemCategories")]
-        public List<MICategory> MiCategories { get; set; }
-    }
+
+
 
     // Class to load Magical Item JSON data
     internal class MagicalItemsJsonLoader
     {
-        public static MagicalItemData LoadMagicalItemData(string jsonFilePath)
+        public static MICategory LoadMagicalItemData(string jsonFilePath)
         {
             if (string.IsNullOrWhiteSpace(jsonFilePath))
             {
@@ -52,13 +48,13 @@ namespace CloudDragon
             if (!File.Exists(jsonFilePath))
             {
                 Console.WriteLine($"File not found: {jsonFilePath}");
-                return new MagicalItemData();
+                return new MICategory();
             }
 
             try
             {
                 string jsonData = File.ReadAllText(jsonFilePath);
-                return JsonSerializer.Deserialize<MagicalItemData>(jsonData) ?? new MagicalItemData();
+                return JsonSerializer.Deserialize<MICategory>(jsonData) ?? new MICategory();
             }
             catch (Exception ex)
             {
@@ -78,15 +74,12 @@ namespace CloudDragon
             Console.WriteLine("Loading Magical Item Data ...");
             var magItems = MagicalItemsJsonLoader.LoadMagicalItemData(JsonFilePathMagItems);
 
-            if (magItems?.MiCategories != null)
+            if (magItems.MagicalItems.Count > 0)
             {
                 Console.WriteLine("Magical Items:");
-                foreach (var category in magItems.MiCategories)
+                foreach (var magicItem in magItems.MagicalItems)
                 {
-                    foreach (var magicItem in category.MagicalItems)
-                    {
-                        Console.WriteLine($"- Name: {magicItem.Name}, Type: {magicItem.Type}, Attunement: {magicItem.Attunement}, Description: {magicItem.Description}, Rarity: {magicItem.Rarity}");
-                    }
+                    Console.WriteLine($"- Name: {magicItem.Name}, Type: {magicItem.Type}, Attunement: {magicItem.Attunement}, Description: {magicItem.Description}, Rarity: {magicItem.Rarity}");
                 }
             }
         }

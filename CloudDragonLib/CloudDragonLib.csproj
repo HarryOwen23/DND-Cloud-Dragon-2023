@@ -497,7 +497,7 @@
     <None Update="Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Spells+Cantrips\Ranger_Cantrips_+Spells\Ranger_Spells.json">
+    <None Update="Spells+Cantrips\Ranger_Cantrips_+_Spells\Ranger_Spells.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Spells+Cantrips\Sorcerer_Cantrips_+_Spells\Sorcerer_Cantrips.json">

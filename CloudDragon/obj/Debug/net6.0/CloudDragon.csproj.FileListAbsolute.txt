@@ -221,7 +221,6 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Cleric_Cantrips_+_Spells\Cleric_Spells.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Druid_Cantrips_+_Spells\Druid_Spells.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Paladin_Cantrips_+_Spells\Paladin_Spells.json
-C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Ranger_Cantrips_+Spells\Ranger_Spells.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Sorcerer_Cantrips_+_Spells\Sorcerer_Spells.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Warlock_Cantrips_+_Spells\Warlock_Spellsjson.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Wizard_Cantrips_+_Spells\Wizard_Spells.json
@@ -230,3 +229,4 @@ C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Language\Language.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Classes\Classes_Rogue.json
 C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Classes\Druid\Druid_Circle_Sea.json
+C:\Users\HarryOwen\source\repos\DND-Cloud-Dragon-2023\CloudDragon\bin\Debug\net6.0\Spells+Cantrips\Ranger_Cantrips_+_Spells\Ranger_Spells.json
