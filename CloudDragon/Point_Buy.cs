@@ -10,38 +10,44 @@ namespace CloudDragon
     {
         private const int StartingStatPoints = 27;
         private const int BaseAbilityScore = 8;
-        private readonly Dictionary<int, int> PointCostTable = new Dictionary<int, int>
+        private readonly Dictionary<int, int> PointCostTable = new()
         {
-          { 8, 0 },
-          { 9, 1 },
-          { 10, 2 },
-          { 11, 3 },
-          { 12, 4 },
-          { 13, 5 },
-          { 14, 7 },
-          { 15, 9 }
+            { 8, 0 },
+            { 9, 1 },
+            { 10, 2 },
+            { 11, 3 },
+            { 12, 4 },
+            { 13, 5 },
+            { 14, 7 },
+            { 15, 9 }
         };
         public Dictionary<string, int> AbilityScores { get; private set; }
         public int RemainingPoints { get; private set; }
 
         public Point_Buyer()
         {
-            AbilityScores = new Dictionary<string, int>();
+            AbilityScores = new Dictionary<string, int>
             {
-                //add in the stats + BaseAbilityScore
+                { "Strength", BaseAbilityScore },
+                { "Dexterity", BaseAbilityScore },
+                { "Constitution", BaseAbilityScore },
+                { "Intelligence", BaseAbilityScore },
+                { "Wisdom", BaseAbilityScore },
+                { "Charisma", BaseAbilityScore }
             };
             RemainingPoints = StartingStatPoints;
         }
+
         public bool SetAbilityScore(string abilityName, int score)
         {
             if (!AbilityScores.ContainsKey(abilityName))
             {
-                throw new ArgumentException("The ability name is invalid. Please Try again");
+                throw new ArgumentException("The ability name is invalid. Please try again.");
             }
 
             if (!PointCostTable.ContainsKey(score))
             {
-                throw new ArgumentException("The ability score is invalid. Please Try again");
+                throw new ArgumentException("The ability score is invalid. Please try again.");
             }
 
             int currentScore = AbilityScores[abilityName];
