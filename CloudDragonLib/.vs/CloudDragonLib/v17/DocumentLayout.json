@@ -3,17 +3,21 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\paladin_spell\u002Bcantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\spells\u002Bcantrips\\paladin_cantrips_\u002B_spells\\paladin_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:spells\u002Bcantrips\\paladin_cantrips_\u002B_spells\\paladin_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\character_stats_dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:character_stats_dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\ranger_spell\u002Bcantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\paladin_spell\u002Bcantrips_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\magical_items_json_loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\spells\u002Bcantrips\\paladin_cantrips_\u002B_spells\\paladin_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:spells\u002Bcantrips\\paladin_cantrips_\u002B_spells\\paladin_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\magical items\\magical_items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -24,29 +28,29 @@
       "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:spells\u002Bcantrips\\ranger_cantrips_\u002B_spells\\ranger_spells.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\bin\\debug\\net6.0\\language\\language.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:bin\\debug\\net6.0\\language\\language.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\bin\\debug\\net6.0\\magical items\\magical_items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:bin\\debug\\net6.0\\magical items\\magical_items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\bin\\debug\\net6.0\\equipment\\equipment_burglars_pack.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:bin\\debug\\net6.0\\equipment\\equipment_burglars_pack.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragonlib\\bin\\debug\\net6.0\\equipment\\equipment_arcane_focus.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|solutionrelative:bin\\debug\\net6.0\\equipment\\equipment_arcane_focus.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\point_standard_array.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023\\clouddragon\\point_buy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Language\\Language.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\Language\\Language.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Equipment\\Equipment_Burglars_Pack.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\Equipment\\Equipment_Burglars_Pack.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Equipment\\Equipment_Arcane_Focus.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\Equipment\\Equipment_Arcane_Focus.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Magical Items\\Magical_Items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\Magical Items\\Magical_Items.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,19 +85,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Character_Stats_Dice.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Character_Stats_Dice.cs",
+              "RelativeDocumentMoniker": "Character_Stats_Dice.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Character_Stats_Dice.cs",
+              "RelativeToolTip": "Character_Stats_Dice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T14:54:17.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Paladin_Spell\u002BCantrips_Json_Loader.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Paladin_Spell\u002BCantrips_Json_Loader.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAowAsAAAAiAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAewKcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:16:33.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T18:16:33.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Paladin_Spells.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Paladin_Cantrips_\u002B_Spells\\Paladin_Spells.json",
               "RelativeDocumentMoniker": "Spells\u002BCantrips\\Paladin_Cantrips_\u002B_Spells\\Paladin_Spells.json",
@@ -101,12 +117,11 @@
               "RelativeToolTip": "Spells\u002BCantrips\\Paladin_Cantrips_\u002B_Spells\\Paladin_Spells.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T18:16:20.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T18:16:20.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Magical_Items.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Magical Items\\Magical_Items.json",
               "RelativeDocumentMoniker": "Magical Items\\Magical_Items.json",
@@ -114,8 +129,7 @@
               "RelativeToolTip": "Magical Items\\Magical_Items.json",
               "ViewState": "AQIAAFwUAAAAAAAAAAAAAGYUAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T18:03:14.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T18:03:14.108Z"
             },
             {
               "$type": "Document",
@@ -125,27 +139,26 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Magical_Items_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Magical_Items_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Magical_Items_Json_Loader.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAewE8AAAAnAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAMwCoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T17:54:31.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:54:31.983Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Ranger_Spell\u002BCantrips_Json_Loader.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Ranger_Spell\u002BCantrips_Json_Loader.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA9wDkAAAANAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T17:50:35.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Program.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Program.cs",
@@ -153,12 +166,11 @@
               "RelativeToolTip": "..\\CloudDragon\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T17:50:26.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:50:26.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Ranger_Spells.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\Spells\u002BCantrips\\Ranger_Cantrips_\u002B_Spells\\Ranger_Spells.json",
               "RelativeDocumentMoniker": "Spells\u002BCantrips\\Ranger_Cantrips_\u002B_Spells\\Ranger_Spells.json",
@@ -166,12 +178,11 @@
               "RelativeToolTip": "Spells\u002BCantrips\\Ranger_Cantrips_\u002B_Spells\\Ranger_Spells.json",
               "ViewState": "AQIAAIMBAAAAAAAAAAAvwI8BAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T17:48:23.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:48:23.394Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Language.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Language\\Language.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\Language\\Language.json",
@@ -179,12 +190,11 @@
               "RelativeToolTip": "bin\\Debug\\net6.0\\Language\\Language.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T17:47:33.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:47:33.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Equipment_Burglars_Pack.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Equipment\\Equipment_Burglars_Pack.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\Equipment\\Equipment_Burglars_Pack.json",
@@ -192,12 +202,11 @@
               "RelativeToolTip": "bin\\Debug\\net6.0\\Equipment\\Equipment_Burglars_Pack.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T17:47:13.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:47:13.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Equipment_Arcane_Focus.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Equipment\\Equipment_Arcane_Focus.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\Equipment\\Equipment_Arcane_Focus.json",
@@ -205,12 +214,11 @@
               "RelativeToolTip": "bin\\Debug\\net6.0\\Equipment\\Equipment_Arcane_Focus.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T17:46:56.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:46:56.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Magical_Items.json",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\bin\\Debug\\net6.0\\Magical Items\\Magical_Items.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\Magical Items\\Magical_Items.json",
@@ -218,12 +226,11 @@
               "RelativeToolTip": "bin\\Debug\\net6.0\\Magical Items\\Magical_Items.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T17:46:38.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:46:38.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "Point_Standard_Array.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Point_Standard_Array.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Point_Standard_Array.cs",
@@ -231,12 +238,11 @@
               "RelativeToolTip": "..\\CloudDragon\\Point_Standard_Array.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAgwBMAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:33:55.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T08:33:55.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Point_Buy.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Point_Buy.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Point_Buy.cs",
@@ -244,8 +250,7 @@
               "RelativeToolTip": "..\\CloudDragon\\Point_Buy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:13:55.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T08:13:55.014Z"
             }
           ]
         }
