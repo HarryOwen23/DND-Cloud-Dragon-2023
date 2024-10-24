@@ -1,266 +1,266 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using CloudDragon;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Text.Json;
+//using System.Text.Json.Serialization;
+//using CloudDragon;
 
-namespace CloudDragon
-{
-    public class EquipmentData
-    {
-        [JsonPropertyName("ArcaneFocus")]
-        public EquipmentCategory ArcaneFocus { get; set; }
+//namespace CloudDragon
+//{
+//    public class EquipmentData
+//    {
+//        [JsonPropertyName("ArcaneFocus")]
+//        public EquipmentCategory ArcaneFocus { get; set; }
 
-        [JsonPropertyName("PackName")]
-        public EquipmentCategory PackName { get; set; }
+//        [JsonPropertyName("PackName")]
+//        public EquipmentCategory PackName { get; set; }
 
-        [JsonPropertyName("Contents")]
-        public EquipmentCategory Contents { get; set; }
-    }
+//        [JsonPropertyName("Contents")]
+//        public EquipmentCategory Contents { get; set; }
+//    }
 
-    public class EquipmentCategory
-    {
-        [JsonPropertyName("Items")]
-        public List<EquipmentItem> Items { get; set; }
-    }
+//    public class EquipmentCategory
+//    {
+//        [JsonPropertyName("Items")]
+//        public List<EquipmentItem> Items { get; set; }
+//    }
 
-    public class EquipmentItem
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
+//    public class EquipmentItem
+//    {
+//        [JsonPropertyName("Name")]
+//        public string Name { get; set; }
 
-        [JsonPropertyName("Cost")]
-        public string Cost { get; set; }
+//        [JsonPropertyName("Cost")]
+//        public string Cost { get; set; }
 
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
+//        [JsonPropertyName("Description")]
+//        public string Description { get; set; }
 
-        [JsonPropertyName("Item")]
-        public string Item { get; set; }
+//        [JsonPropertyName("Item")]
+//        public string Item { get; set; }
 
-        [JsonPropertyName("Quantity")]
-        public int Quantity { get; set; }
+//        [JsonPropertyName("Quantity")]
+//        public int Quantity { get; set; }
 
-        [JsonPropertyName("Weight")]
-        public string Weight { get; set; }
-    }
-
-
-    internal class EquipmentJsonLoader
-    {
-        public static EquipmentCategory LoadEquipmentData(string jsonFilePath)
-        {
-            try
-            {
-                if (jsonFilePath == null)
-                {
-                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
-                }
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    Console.WriteLine($"File not found: {jsonFilePath}");
-                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
-                }
-
-                string jsonData = File.ReadAllText(jsonFilePath);
-
-                if (string.IsNullOrEmpty(jsonData))
-                {
-                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
-                }
-
-                var equipmentData = JsonSerializer.Deserialize<EquipmentCategory>(jsonData);
-
-                if (equipmentData == null)
-                {
-                    Console.WriteLine("Deserialization returned null. Returning default EquipmentCategory.");
-                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
-                }
-
-                return equipmentData;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading JSON file: " + e.Message);
-                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
-            }
-        }
-    }
+//        [JsonPropertyName("Weight")]
+//        public string Weight { get; set; }
+//    }
 
 
-    internal class EquipmentLoader : ILoader
-    {
-        public void Load()
-        {
-            throw new NotImplementedException();
-        }
+//    internal class EquipmentJsonLoader
+//    {
+//        public static EquipmentCategory LoadEquipmentData(string jsonFilePath)
+//        {
+//            try
+//            {
+//                if (jsonFilePath == null)
+//                {
+//                    throw new ArgumentNullException(nameof(jsonFilePath), "File path cannot be null.");
+//                }
 
-        void ILoader.Load()
-        {
-            Console.WriteLine("Loading Equipment Data ...");
+//                if (!File.Exists(jsonFilePath))
+//                {
+//                    Console.WriteLine($"File not found: {jsonFilePath}");
+//                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+//                }
 
-            // Define the paths to the JSON files 
-            string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
-            string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglars_Pack.json";
-            string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
-            string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
-            string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomats_Pack.json";
-            string jsonFilePathDragonlance = "Equipment\\Equipment_Dragonlance.json";
-            string jsonFilePathDruidicFocus = "Equipment\\Equipment_Druidic_Focus.json";
-            string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneers_Pack.json";
-            string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainers_Pack.json";
-            string jsonFilePathExplorersPack = "Equipment\\Equipment_Explorers_Pack.json";
-            string jsonFilePathHolySymbols = "Equipment\\Equipment_Holy_Symbols.json";
-            string jsonFilePathPreistsPack = "Equipment\\Equipment_Priests_Pack.json";
-            string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholars_Pack.json";
-            string jsonFilePathUsableItems = "Equipment\\Equipment_Usable_Items.json";
+//                string jsonData = File.ReadAllText(jsonFilePath);
 
-            // Load the equipment data using the EquipmentJsonLoader
-            var equipmentDataArcaneFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathArcaneFocus);
-            var equipmentDataBurglarPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathBurglarPack);
-            var equipmentDataCommonItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathCommonItems);
-            var equipmentDataContainers = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathContainers);
-            var equipmentDataDiplomatsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDiplomatsPack);
-            var equipmentDataDragonlance = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDragonlance);
-            var equipmentDataDruidicFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDruidicFocus);
-            var equipmentDataDungeoneersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDungeoneersPack);
-            var equipmentDataEntertainersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathEntertainersPack);
-            var equipmentDataExplorersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathExplorersPack);
-            var equipmentDataHolySymbols = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathHolySymbols);
-            var equipmentDataPreistsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathPreistsPack);
-            var equipmentDataScholarsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathScholarsPack);
-            var equipmentDataUsableItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathUsableItems);
+//                if (string.IsNullOrEmpty(jsonData))
+//                {
+//                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+//                }
 
-            if (equipmentDataArcaneFocus != null && equipmentDataArcaneFocus.Items != null)
-            {
-                Console.WriteLine("Arcane Focus Equipment:");
-                foreach (var magicitem in equipmentDataArcaneFocus.Items)
-                {
-                    Console.WriteLine($"- {magicitem.Name}: {magicitem.Cost}, {magicitem.Description}");
-                }
-            }
+//                var equipmentData = JsonSerializer.Deserialize<EquipmentCategory>(jsonData);
 
-            if (equipmentDataBurglarPack != null && equipmentDataBurglarPack.Items != null)
-            {
-                Console.WriteLine("Burglar's Pack Equipment:");
-                foreach (var buritem in equipmentDataBurglarPack.Items)
-                {
-                    Console.WriteLine($"- {buritem.Quantity}x {buritem.Item}");
-                }
-            }
+//                if (equipmentData == null)
+//                {
+//                    Console.WriteLine("Deserialization returned null. Returning default EquipmentCategory.");
+//                    return new EquipmentCategory { Items = new List<EquipmentItem>() };
+//                }
 
-            if (equipmentDataCommonItems != null && equipmentDataCommonItems.Items != null)
-            {
-                Console.WriteLine("Common Items Equipment:");
-                foreach (var comitem in equipmentDataCommonItems.Items)
-                {
-                    Console.WriteLine($" Name: {comitem.Name}  Cost:{comitem.Cost} Description:{comitem.Description}");
-                }
-            }
+//                return equipmentData;
+//            }
+//            catch (Exception e)
+//            {
+//                Console.WriteLine("Error loading JSON file: " + e.Message);
+//                throw; // Use 'throw;' without specifying the exception to re-throw the caught exception.
+//            }
+//        }
+//    }
 
 
-            if (equipmentDataContainers != null && equipmentDataContainers.Items != null)
-            {
-                Console.WriteLine("Containers");
-                foreach (var containers in equipmentDataContainers.Items)
-                {
-                    Console.WriteLine($" Name: {containers.Name}, Cost: {containers.Cost}, Weight{containers.Weight}, Description{containers.Description}");
-                }
-            }
+//    internal class EquipmentLoader : ILoader
+//    {
+//        public void Load()
+//        {
+//            throw new NotImplementedException();
+//        }
 
-            if (equipmentDataDiplomatsPack != null && equipmentDataDiplomatsPack.Items != null)
-            {
-                Console.WriteLine("Diplomats Pack");
-                foreach (var dipPack in equipmentDataDiplomatsPack.Items)
-                {
-                    Console.WriteLine($"- {dipPack.Quantity}x {dipPack.Item}");
-                }
-            }
+//        void ILoader.Load()
+//        {
+//            Console.WriteLine("Loading Equipment Data ...");
 
-            if (equipmentDataDragonlance != null && equipmentDataDragonlance.Items != null)
-            {
-                Console.WriteLine("Dragonlance");
-                foreach (var dragonItems in equipmentDataDragonlance.Items)
-                {
-                    Console.WriteLine($"- {dragonItems.Name}x {dragonItems.Description}");
-                }
-            }
+//            // Define the paths to the JSON files 
+//            string jsonFilePathArcaneFocus = "Equipment\\Equipment_Arcane_Focus.json";
+//            string jsonFilePathBurglarPack = "Equipment\\Equipment_Burglars_Pack.json";
+//            string jsonFilePathCommonItems = "Equipment\\Equipment_Common_Items.json";
+//            string jsonFilePathContainers = "Equipment\\Equipment_Containers.json";
+//            string jsonFilePathDiplomatsPack = "Equipment\\Equipment_Diplomats_Pack.json";
+//            string jsonFilePathDragonlance = "Equipment\\Equipment_Dragonlance.json";
+//            string jsonFilePathDruidicFocus = "Equipment\\Equipment_Druidic_Focus.json";
+//            string jsonFilePathDungeoneersPack = "Equipment\\Equipment_Dungeoneers_Pack.json";
+//            string jsonFilePathEntertainersPack = "Equipment\\Equipment_Entertainers_Pack.json";
+//            string jsonFilePathExplorersPack = "Equipment\\Equipment_Explorers_Pack.json";
+//            string jsonFilePathHolySymbols = "Equipment\\Equipment_Holy_Symbols.json";
+//            string jsonFilePathPreistsPack = "Equipment\\Equipment_Priests_Pack.json";
+//            string jsonFilePathScholarsPack = "Equipment\\Equipment_Scholars_Pack.json";
+//            string jsonFilePathUsableItems = "Equipment\\Equipment_Usable_Items.json";
 
-            if (equipmentDataDruidicFocus != null && equipmentDataDruidicFocus.Items != null)
-            {
-                Console.WriteLine("Druidic Focus Items");
-                foreach (var druidItem in equipmentDataDruidicFocus.Items)
-                {
-                    Console.WriteLine($"- {druidItem.Quantity}x {druidItem.Item}");
-                }
-            }
+//            // Load the equipment data using the EquipmentJsonLoader
+//            var equipmentDataArcaneFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathArcaneFocus);
+//            var equipmentDataBurglarPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathBurglarPack);
+//            var equipmentDataCommonItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathCommonItems);
+//            var equipmentDataContainers = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathContainers);
+//            var equipmentDataDiplomatsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDiplomatsPack);
+//            var equipmentDataDragonlance = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDragonlance);
+//            var equipmentDataDruidicFocus = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDruidicFocus);
+//            var equipmentDataDungeoneersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathDungeoneersPack);
+//            var equipmentDataEntertainersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathEntertainersPack);
+//            var equipmentDataExplorersPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathExplorersPack);
+//            var equipmentDataHolySymbols = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathHolySymbols);
+//            var equipmentDataPreistsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathPreistsPack);
+//            var equipmentDataScholarsPack = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathScholarsPack);
+//            var equipmentDataUsableItems = EquipmentJsonLoader.LoadEquipmentData(jsonFilePathUsableItems);
 
-            if (equipmentDataDungeoneersPack != null && equipmentDataDungeoneersPack.Items != null)
-            {
-                Console.WriteLine("Dungeoneers Pack");
-                foreach (var dungeonItem in equipmentDataDungeoneersPack.Items)
-                {
-                    Console.WriteLine($"- {dungeonItem.Quantity}x {dungeonItem.Item}");
-                }
-            }
+//            if (equipmentDataArcaneFocus != null && equipmentDataArcaneFocus.Items != null)
+//            {
+//                Console.WriteLine("Arcane Focus Equipment:");
+//                foreach (var magicitem in equipmentDataArcaneFocus.Items)
+//                {
+//                    Console.WriteLine($"- {magicitem.Name}: {magicitem.Cost}, {magicitem.Description}");
+//                }
+//            }
 
-            if (equipmentDataEntertainersPack != null && equipmentDataEntertainersPack.Items != null)
-            {
-                Console.WriteLine("Contents:");
-                foreach (var entertainItem in equipmentDataEntertainersPack.Items)
-                {
-                    Console.WriteLine($"- {entertainItem.Quantity}x, {entertainItem.Item}");
-                }
-            }
+//            if (equipmentDataBurglarPack != null && equipmentDataBurglarPack.Items != null)
+//            {
+//                Console.WriteLine("Burglar's Pack Equipment:");
+//                foreach (var buritem in equipmentDataBurglarPack.Items)
+//                {
+//                    Console.WriteLine($"- {buritem.Quantity}x {buritem.Item}");
+//                }
+//            }
 
-            if (equipmentDataExplorersPack != null && equipmentDataExplorersPack.Items != null)
-            {
-                Console.WriteLine("Explorers Pack");
-                foreach (var explorerItem in equipmentDataExplorersPack.Items)
-                {
-                    Console.WriteLine($"- {explorerItem.Quantity}x, {explorerItem.Item}");
-                }
-            }
+//            if (equipmentDataCommonItems != null && equipmentDataCommonItems.Items != null)
+//            {
+//                Console.WriteLine("Common Items Equipment:");
+//                foreach (var comitem in equipmentDataCommonItems.Items)
+//                {
+//                    Console.WriteLine($" Name: {comitem.Name}  Cost:{comitem.Cost} Description:{comitem.Description}");
+//                }
+//            }
 
-            if (equipmentDataHolySymbols != null && equipmentDataHolySymbols.Items != null)
-            {
-                Console.WriteLine("Holy Symbols");
-                foreach (var holyItem in equipmentDataHolySymbols.Items)
-                {
-                    Console.WriteLine($"- {holyItem.Quantity}x, {holyItem.Item}");
-                }
-            }
 
-            if (equipmentDataPreistsPack != null && equipmentDataPreistsPack.Items != null)
-            {
-                Console.WriteLine("Priest Pack");
-                foreach (var priestItem in equipmentDataPreistsPack.Items)
-                {
-                    Console.WriteLine($"- {priestItem.Quantity}x {priestItem.Item}");
-                }
-            }
+//            if (equipmentDataContainers != null && equipmentDataContainers.Items != null)
+//            {
+//                Console.WriteLine("Containers");
+//                foreach (var containers in equipmentDataContainers.Items)
+//                {
+//                    Console.WriteLine($" Name: {containers.Name}, Cost: {containers.Cost}, Weight{containers.Weight}, Description{containers.Description}");
+//                }
+//            }
 
-            if (equipmentDataScholarsPack != null && equipmentDataScholarsPack.Items != null)
-            {
-                Console.WriteLine("Scholars Pack");
-                foreach (var scholarsItem in equipmentDataScholarsPack.Items)
-                {
-                    Console.WriteLine($"- {scholarsItem.Quantity}x {scholarsItem.Item}");
-                }
-            }
+//            if (equipmentDataDiplomatsPack != null && equipmentDataDiplomatsPack.Items != null)
+//            {
+//                Console.WriteLine("Diplomats Pack");
+//                foreach (var dipPack in equipmentDataDiplomatsPack.Items)
+//                {
+//                    Console.WriteLine($"- {dipPack.Quantity}x {dipPack.Item}");
+//                }
+//            }
 
-            if (equipmentDataUsableItems != null && equipmentDataUsableItems.Items != null)
-            {
-                Console.WriteLine("Usable Items");
-                foreach (var usableItem in equipmentDataUsableItems.Items)
-                {
-                    Console.WriteLine($"- {usableItem.Quantity}x, {usableItem.Item}");
-                }
-            }
+//            if (equipmentDataDragonlance != null && equipmentDataDragonlance.Items != null)
+//            {
+//                Console.WriteLine("Dragonlance");
+//                foreach (var dragonItems in equipmentDataDragonlance.Items)
+//                {
+//                    Console.WriteLine($"- {dragonItems.Name}x {dragonItems.Description}");
+//                }
+//            }
 
-        }
-    }
-}
+//            if (equipmentDataDruidicFocus != null && equipmentDataDruidicFocus.Items != null)
+//            {
+//                Console.WriteLine("Druidic Focus Items");
+//                foreach (var druidItem in equipmentDataDruidicFocus.Items)
+//                {
+//                    Console.WriteLine($"- {druidItem.Quantity}x {druidItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataDungeoneersPack != null && equipmentDataDungeoneersPack.Items != null)
+//            {
+//                Console.WriteLine("Dungeoneers Pack");
+//                foreach (var dungeonItem in equipmentDataDungeoneersPack.Items)
+//                {
+//                    Console.WriteLine($"- {dungeonItem.Quantity}x {dungeonItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataEntertainersPack != null && equipmentDataEntertainersPack.Items != null)
+//            {
+//                Console.WriteLine("Contents:");
+//                foreach (var entertainItem in equipmentDataEntertainersPack.Items)
+//                {
+//                    Console.WriteLine($"- {entertainItem.Quantity}x, {entertainItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataExplorersPack != null && equipmentDataExplorersPack.Items != null)
+//            {
+//                Console.WriteLine("Explorers Pack");
+//                foreach (var explorerItem in equipmentDataExplorersPack.Items)
+//                {
+//                    Console.WriteLine($"- {explorerItem.Quantity}x, {explorerItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataHolySymbols != null && equipmentDataHolySymbols.Items != null)
+//            {
+//                Console.WriteLine("Holy Symbols");
+//                foreach (var holyItem in equipmentDataHolySymbols.Items)
+//                {
+//                    Console.WriteLine($"- {holyItem.Quantity}x, {holyItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataPreistsPack != null && equipmentDataPreistsPack.Items != null)
+//            {
+//                Console.WriteLine("Priest Pack");
+//                foreach (var priestItem in equipmentDataPreistsPack.Items)
+//                {
+//                    Console.WriteLine($"- {priestItem.Quantity}x {priestItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataScholarsPack != null && equipmentDataScholarsPack.Items != null)
+//            {
+//                Console.WriteLine("Scholars Pack");
+//                foreach (var scholarsItem in equipmentDataScholarsPack.Items)
+//                {
+//                    Console.WriteLine($"- {scholarsItem.Quantity}x {scholarsItem.Item}");
+//                }
+//            }
+
+//            if (equipmentDataUsableItems != null && equipmentDataUsableItems.Items != null)
+//            {
+//                Console.WriteLine("Usable Items");
+//                foreach (var usableItem in equipmentDataUsableItems.Items)
+//                {
+//                    Console.WriteLine($"- {usableItem.Quantity}x, {usableItem.Item}");
+//                }
+//            }
+
+//        }
+//    }
+//}
 

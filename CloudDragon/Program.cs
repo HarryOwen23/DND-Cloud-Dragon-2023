@@ -1,153 +1,153 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using CloudDragon;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Text.Json;
+//using System.Text.Json.Serialization;
+//using CloudDragon;
 
-namespace CloudDragon
-{
-    public class Character_Class
-    {
-        [JsonPropertyName("Class Name")]
-        public string ClassName { get; set; }
+//namespace CloudDragon
+//{
+//    public class Character_Class
+//    {
+//        [JsonPropertyName("Class Name")]
+//        public string ClassName { get; set; }
 
-        [JsonPropertyName("HitDice")]
-        public string HitDice { get; set; }
+//        [JsonPropertyName("HitDice")]
+//        public string HitDice { get; set; }
 
-        [JsonPropertyName("HitPoints")]
-        public HitPoints HitPoints { get; set; }
+//        [JsonPropertyName("HitPoints")]
+//        public HitPoints HitPoints { get; set; }
 
-        [JsonPropertyName("Proficiencies")]
-        public Proficiencies Proficiencies { get; set; }
+//        [JsonPropertyName("Proficiencies")]
+//        public Proficiencies Proficiencies { get; set; }
 
-        [JsonPropertyName("Starting Equipment")]
-        public List<string> StartingEquipment { get; set; }
+//        [JsonPropertyName("Starting Equipment")]
+//        public List<string> StartingEquipment { get; set; }
 
-        [JsonPropertyName("Fighting Styles")]
-        public List<FightingStyle> FightingStyles { get; set; }
+//        [JsonPropertyName("Fighting Styles")]
+//        public List<FightingStyle> FightingStyles { get; set; }
 
-        [JsonPropertyName("Class Features")]
-        public List<ClassFeature> ClassFeatures { get; set; }
+//        [JsonPropertyName("Class Features")]
+//        public List<ClassFeature> ClassFeatures { get; set; }
 
-        // Add a list of sub-archetypes
-        [JsonPropertyName("SubArchetypes")]
-        public List<SubArchetype> SubArchetypes { get; set; }
-    }
+//        // Add a list of sub-archetypes
+//        [JsonPropertyName("SubArchetypes")]
+//        public List<SubArchetype> SubArchetypes { get; set; }
+//    }
 
-    public class HitPoints
-    {
-        [JsonPropertyName("At 1st Level")]
-        public string At1stLevel { get; set; }
+//    public class HitPoints
+//    {
+//        [JsonPropertyName("At 1st Level")]
+//        public string At1stLevel { get; set; }
 
-        [JsonPropertyName("At Higher Levels")]
-        public string AtHigherLevels { get; set; }
-    }
+//        [JsonPropertyName("At Higher Levels")]
+//        public string AtHigherLevels { get; set; }
+//    }
 
-    public class Proficiencies
-    {
-        [JsonPropertyName("Armor")]
-        public string Armor { get; set; }
+//    public class Proficiencies
+//    {
+//        [JsonPropertyName("Armor")]
+//        public string Armor { get; set; }
 
-        [JsonPropertyName("Weapons")]
-        public string Weapons { get; set; }
+//        [JsonPropertyName("Weapons")]
+//        public string Weapons { get; set; }
 
-        [JsonPropertyName("Tools")]
-        public string Tools { get; set; }
+//        [JsonPropertyName("Tools")]
+//        public string Tools { get; set; }
 
-        [JsonPropertyName("Saving Throws")]
-        public string SavingThrows { get; set; }
+//        [JsonPropertyName("Saving Throws")]
+//        public string SavingThrows { get; set; }
 
-        [JsonPropertyName("Skills")]
-        public string Skills { get; set; }
-    }
+//        [JsonPropertyName("Skills")]
+//        public string Skills { get; set; }
+//    }
 
-    public class FightingStyle
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
+//    public class FightingStyle
+//    {
+//        [JsonPropertyName("Name")]
+//        public string Name { get; set; }
 
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
-    }
+//        [JsonPropertyName("Description")]
+//        public string Description { get; set; }
+//    }
 
-    public class ClassFeature
-    {
-        [JsonPropertyName("Feature")]
-        public string Feature { get; set; }
+//    public class ClassFeature
+//    {
+//        [JsonPropertyName("Feature")]
+//        public string Feature { get; set; }
 
-        [JsonPropertyName("Description")]
-        public object Description { get; set; } // The description field can contain either a string or an array of strings
-    }
+//        [JsonPropertyName("Description")]
+//        public object Description { get; set; } // The description field can contain either a string or an array of strings
+//    }
 
-    // Add a class for sub-archetypes
-    public class SubArchetype
-    {
-        [JsonPropertyName("Archetype Name")]
-        public string ArchetypeName { get; set; }
+//    // Add a class for sub-archetypes
+//    public class SubArchetype
+//    {
+//        [JsonPropertyName("Archetype Name")]
+//        public string ArchetypeName { get; set; }
 
-        [JsonPropertyName("Archetype Features")]
-        public List<ArchetypeFeature> ArchetypeFeatures { get; set; }
-    }
+//        [JsonPropertyName("Archetype Features")]
+//        public List<ArchetypeFeature> ArchetypeFeatures { get; set; }
+//    }
 
-    // Add a class for archetype features
-    public class ArchetypeFeature
-    {
-        [JsonPropertyName("Archetype Feature")]
-        public string FeatureName { get; set; }
+//    // Add a class for archetype features
+//    public class ArchetypeFeature
+//    {
+//        [JsonPropertyName("Archetype Feature")]
+//        public string FeatureName { get; set; }
 
-        [JsonPropertyName("Archetype Feature Description")]
-        public List<object> FeatureDescription { get; set; }
-    }
+//        [JsonPropertyName("Archetype Feature Description")]
+//        public List<object> FeatureDescription { get; set; }
+//    }
 
-    // Add class for class spells + cantrips 
-    public class PaladinSpellsCantrips
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
+//    // Add class for class spells + cantrips 
+//    public class PaladinSpellsCantrips
+//    {
+//        [JsonPropertyName("Name")]
+//        public string Name { get; set; }
 
-        [JsonPropertyName("Source")]
-        public string Source { get; set; }
+//        [JsonPropertyName("Source")]
+//        public string Source { get; set; }
 
-        [JsonPropertyName("School")]
-        public string School { get; set; }
+//        [JsonPropertyName("School")]
+//        public string School { get; set; }
 
-        [JsonPropertyName("Casting Time")]
-        public string CastTime { get; set; }
+//        [JsonPropertyName("Casting Time")]
+//        public string CastTime { get; set; }
 
-        [JsonPropertyName("Range")]
-        public string Range { get; set; }
+//        [JsonPropertyName("Range")]
+//        public string Range { get; set; }
 
-        [JsonPropertyName("Components")]
-        public string Components { get; set; }
+//        [JsonPropertyName("Components")]
+//        public string Components { get; set; }
 
-        [JsonPropertyName("Duration")]
-        public string Duration { get; set; }
+//        [JsonPropertyName("Duration")]
+//        public string Duration { get; set; }
 
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
+//        [JsonPropertyName("Description")]
+//        public string Description { get; set; }
 
-        [JsonPropertyName("Spell Lists")]
-        public List<string> SpellLists { get; set; }
+//        [JsonPropertyName("Spell Lists")]
+//        public List<string> SpellLists { get; set; }
 
-        [JsonPropertyName("Level")]
-        public int Level { get; set; }
-    }
+//        [JsonPropertyName("Level")]
+//        public int Level { get; set; }
+//    }
 
-    public class RangerSpellsCantrips
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
+//    public class RangerSpellsCantrips
+//    {
+//        [JsonPropertyName("Name")]
+//        public string Name { get; set; }
 
-        [JsonPropertyName("School")]
-        public string School { get; set; }
+//        [JsonPropertyName("School")]
+//        public string School { get; set; }
 
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
+//        [JsonPropertyName("Description")]
+//        public string Description { get; set; }
 
-        [JsonPropertyName("Level")]
-        public int Level { get; set; }
-    }
+//        [JsonPropertyName("Level")]
+//        public int Level { get; set; }
+//    }
 
     //internal class CharacterLoader : ILoader
     //{
@@ -215,76 +215,76 @@ namespace CloudDragon
     //    }
     //}
 
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
 
-            ILoader trinketLoader = new TrinketLoader();
-            trinketLoader.Load();
+    //        ILoader trinketLoader = new TrinketLoader();
+    //        trinketLoader.Load();
 
-            ILoader EquipmentLoader = new EquipmentLoader();
-            EquipmentLoader.Load();
+    //        ILoader EquipmentLoader = new EquipmentLoader();
+    //        EquipmentLoader.Load();
 
-            ILoader armorLoader = new ArmorLoader();
-            armorLoader.Load();
+    //        ILoader armorLoader = new ArmorLoader();
+    //        armorLoader.Load();
 
-            ILoader currencyLoader = new CurrencyLoader();
-            currencyLoader.Load();
+    //        ILoader currencyLoader = new CurrencyLoader();
+    //        currencyLoader.Load();
 
-            ILoader TrinketLoader = new TrinketLoader();
-            TrinketLoader.Load();
+    //        ILoader TrinketLoader = new TrinketLoader();
+    //        TrinketLoader.Load();
 
-            ILoader MagicalItemLoader = new MagicalItemLoader();
-            MagicalItemLoader.Load();
+    //        ILoader MagicalItemLoader = new MagicalItemLoader();
+    //        MagicalItemLoader.Load();
 
-            ILoader BardCantripLoader = new BardCantripLoader();
-            BardCantripLoader.Load();
+    //        ILoader BardCantripLoader = new BardCantripLoader();
+    //        BardCantripLoader.Load();
 
-            ILoader BardSpellLoader = new BardSpellLoader();
-            BardSpellLoader.Load();
+    //        ILoader BardSpellLoader = new BardSpellLoader();
+    //        BardSpellLoader.Load();
 
-            ILoader ClericCantripLoader = new ClericCantripLoader();
-            ClericCantripLoader.Load();
+    //        ILoader ClericCantripLoader = new ClericCantripLoader();
+    //        ClericCantripLoader.Load();
 
-            ILoader ClericSpellLoader = new ClericSpellLoader();
-            ClericSpellLoader.Load();
+    //        ILoader ClericSpellLoader = new ClericSpellLoader();
+    //        ClericSpellLoader.Load();
 
-            ILoader DruidCantripLoader = new DruidCantripLoader();
-            DruidCantripLoader.Load();
+    //        ILoader DruidCantripLoader = new DruidCantripLoader();
+    //        DruidCantripLoader.Load();
 
-            ILoader DruidSpellLoader = new DruidSpellLoader();
-            DruidSpellLoader.Load();
+    //        ILoader DruidSpellLoader = new DruidSpellLoader();
+    //        DruidSpellLoader.Load();
 
-            ILoader PaladinCantripLoader = new PaladinCantripLoader();
-            PaladinCantripLoader.Load();
+    //        ILoader PaladinCantripLoader = new PaladinCantripLoader();
+    //        PaladinCantripLoader.Load();
 
-            ILoader PaladinSpellLoader = new PaladinSpellLoader();
-            PaladinSpellLoader.Load();
+    //        ILoader PaladinSpellLoader = new PaladinSpellLoader();
+    //        PaladinSpellLoader.Load();
 
-            ILoader RangerSpellLoader = new RangerSpellLoader();
-            RangerSpellLoader.Load();
+    //        ILoader RangerSpellLoader = new RangerSpellLoader();
+    //        RangerSpellLoader.Load();
 
-            ILoader SorcererCantripLoader = new SorcererCantripLoader();
-            SorcererCantripLoader.Load();
+    //        ILoader SorcererCantripLoader = new SorcererCantripLoader();
+    //        SorcererCantripLoader.Load();
 
-            ILoader SorcererSpellLoader = new SorcererSpellLoader();
-            SorcererSpellLoader.Load();
+    //        ILoader SorcererSpellLoader = new SorcererSpellLoader();
+    //        SorcererSpellLoader.Load();
 
-            ILoader WarlockCantripLoader = new WarlockCantripLoader();
-            WarlockCantripLoader.Load();
+    //        ILoader WarlockCantripLoader = new WarlockCantripLoader();
+    //        WarlockCantripLoader.Load();
 
-            ILoader WarlockSpellLoader = new WarlockSpellLoader();
-            WarlockSpellLoader.Load();
+    //        ILoader WarlockSpellLoader = new WarlockSpellLoader();
+    //        WarlockSpellLoader.Load();
 
-            ILoader WizardCantripLoader = new WizardCantripLoader();
-            WizardCantripLoader.Load();
+    //        ILoader WizardCantripLoader = new WizardCantripLoader();
+    //        WizardCantripLoader.Load();
 
-            ILoader WizardSpellLoader = new WizardSpellLoader();
-            WizardSpellLoader.Load();
+    //        ILoader WizardSpellLoader = new WizardSpellLoader();
+    //        WizardSpellLoader.Load();
 
-            ILoader PoisonLoader = new PoisonLoader();
-            PoisonLoader.Load();
-        }
-    }
-}
+    //        ILoader PoisonLoader = new PoisonLoader();
+    //        PoisonLoader.Load();
+    //    }
+    //}
+//}
