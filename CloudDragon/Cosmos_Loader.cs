@@ -1,46 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Azure.Cosmos;
+﻿using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.Threading.Tasks;
 
-namespace CloudDragon
+public class Cosmos_Loader
 {
-    public class Cosmos_Loader : IDisposable
+    private CosmosClient _client;
+    private Database _database;
+    private Container _container;
+
+    // Constructor to initialize the Cosmos Client using configuration
+    public Cosmos_Loader(IConfiguration configuration)
     {
-        private CosmosClient cosmosClient;
-        private Database database;
-        private Container container;
+        var cosmosSettings = configuration.GetSection("CosmosDb");
+        string endpointUri = cosmosSettings["EndpointURI"];
+        string primaryKey = cosmosSettings["PrimaryKey"];
+        string databaseId = cosmosSettings["DatabaseId"];
+        string containerId = cosmosSettings["ContainerId"];
 
-        public async Task InitializeAsync()
+        _client = new CosmosClient(endpointUri, primaryKey);
+        _database = _client.GetDatabase(databaseId);
+        _container = _database.GetContainer(containerId);
+    }
+
+    // Method to retrieve an item by ID
+    public async Task<dynamic> GetItemByIdAsync(string id, string partitionKeyValue)
+    {
+        try
         {
-            var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            var cosmosDbSettings = configuration.GetSection("CosmosDb");
-            string connectionString = cosmosDbSettings["ConnectionString"];
-            string databaseId = cosmosDbSettings["DatabaseId"];
-            string containerId = cosmosDbSettings["ContainerId"];
-            string partitionKeyPath = cosmosDbSettings["PartitionKeyPath"];
-
-            cosmosClient = new CosmosClient(connectionString, new CosmosClientOptions()
-            {
-                ApplicationRegion = Regions.EastUS2,
-            });
-
-            database = await cosmosClient.CreateDatabaseAsync(databaseId);
-            container = await database.CreateContainerAsync(containerId, partitionKeyPath);
+            ItemResponse<dynamic> response = await _container.ReadItemAsync<dynamic>(id, new PartitionKey(partitionKeyValue));
+            return response.Resource;
         }
-
-        public void Dispose()
+        catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
         {
-            cosmosClient?.Dispose();
+            Console.WriteLine($"Item with ID '{id}' not found.");
+            return null;
+        }
+    }
+
+    // Method to query all items (for debugging purposes)
+    public async Task QueryAllItemsAsync()
+    {
+        var query = _container.GetItemQueryIterator<dynamic>("SELECT * FROM c");
+        while (query.HasMoreResults)
+        {
+            foreach (var item in await query.ReadNextAsync())
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
