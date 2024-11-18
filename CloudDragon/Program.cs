@@ -67,12 +67,16 @@ public class Program
 public class PartitionKeysConfig
 {
     public string ClassFighter { get; set; }
+
+    // public string ClassBarbarian { get; set; }
     public SubclassesConfig Subclasses { get; set; }
 }
 
 public class ItemIdsConfig
 {
     public string ClassFighter { get; set; }
+    // public string ClassBarbarian { get; set; }
+
     public SubclassesConfig Subclasses { get; set; }
 }
 
@@ -88,4 +92,26 @@ public class SubclassesConfig
     public string PsiWarrior { get; set; }
     public string RuneKnight { get; set; }
     public string Samurai { get; set; }
+
+    // Barbarian Subclasses 
+
+    // Bard Subclasses
+
+    // Rogue Subclasses
+
+    // Wizard Subclasses
+
+    // Cleric Subclasses
+
+    // Sorcerer Subclasses
+
+    // Warlock Subclasses
+
+    // Druid Subclasses
+
+    // Ranger Subclasses
+
+    // Paladin Subclasses
+
+
 }
