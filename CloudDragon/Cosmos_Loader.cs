@@ -36,6 +36,11 @@ public class Cosmos_Loader
             Console.WriteLine($"Item with ID '{id}' not found.");
             return null;
         }
+        catch (CosmosException ex)
+        {
+            Console.WriteLine($"Unexpected cosmos error occured. {ex.Message}");
+            return null;
+        }
     }
 
     // Method to query all items (for debugging purposes)
@@ -50,4 +55,6 @@ public class Cosmos_Loader
             }
         }
     }
+
+
 }
