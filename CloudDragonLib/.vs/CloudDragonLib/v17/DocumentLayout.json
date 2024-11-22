@@ -19,7 +19,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -28,10 +28,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -47,7 +43,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -57,7 +53,7 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\appsettings.json",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\appsettings.json",
               "RelativeToolTip": "..\\CloudDragon\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-18T11:51:05.614Z",
               "EditorCaption": ""
@@ -70,9 +66,10 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Program.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Program.cs",
               "RelativeToolTip": "..\\CloudDragon\\Program.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAA1wCMAAAB1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T08:43:27.896Z"
+              "WhenOpened": "2024-10-24T08:43:27.896Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,10 +79,14 @@
               "RelativeDocumentMoniker": "..\\CloudDragon\\Cosmos_Loader.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\Cosmos_Loader.cs",
               "RelativeToolTip": "..\\CloudDragon\\Cosmos_Loader.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAlwCoAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T18:21:24.55Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",

@@ -123,11 +123,11 @@
             },
             "Microsoft.Azure.Cosmos": {
               "target": "Package",
-              "version": "[3.44.1, )"
+              "version": "[3.46.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
@@ -135,7 +135,7 @@
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
