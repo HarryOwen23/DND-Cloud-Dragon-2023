@@ -14,7 +14,6 @@ public class Cosmos_Loader
     {
         var cosmosSettings = configuration.GetSection("CosmosDb");
         string endpointUri = cosmosSettings["EndpointURI"];
-        string connectionString = cosmosSettings["ConnectionString"];
         string primaryKey = cosmosSettings["PrimaryKey"];
         string databaseId = cosmosSettings["DatabaseId"];
         string containerId = cosmosSettings["ContainerId"];
@@ -56,6 +55,5 @@ public class Cosmos_Loader
             }
         }
     }
-
 
 }
