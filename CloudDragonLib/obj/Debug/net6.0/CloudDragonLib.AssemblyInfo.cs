@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb991cb685c5067910a38735bf6326e334ced234")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caffae3cefe430b39ad4db52aaefe1ebe05579e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
