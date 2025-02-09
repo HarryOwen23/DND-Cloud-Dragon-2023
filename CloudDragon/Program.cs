@@ -8,40 +8,56 @@ public class Program
 {
     private static async Task Main(string[] args)
     {
-        // Set up configuration to read from appsettings.json
         IConfiguration configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
 
-        // Initialize Cosmos Loader with configuration
         Cosmos_Loader cosmosLoader = new Cosmos_Loader(configuration);
 
-        // Debugging: Query and list all items from all containers
-        Console.WriteLine("\nQuerying all items in all containers (for debugging purposes)...");
+        Console.WriteLine("\nQuerying all items from all containers...");
         await cosmosLoader.QueryAllItemsFromAllContainersAsync();
 
-        // Example: Retrieve and display specific items from different containers
-        await RetrieveAndDisplayItemAsync(cosmosLoader, "Heavy Armor", "Armor", "Heavy_Armor");
-        await RetrieveAndDisplayItemAsync(cosmosLoader, "Acolyte Background", "Backgrounds", "acolyte_background");
     }
 
-    // Method to retrieve and display an item from a specific container
-    private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, string itemName, string containerName, string itemId)
+    private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, IConfiguration config, string containerName, string itemKey)
     {
-        Console.WriteLine($"\nRetrieving {itemName} from container '{containerName}'...");
+        var containerConfig = config.GetSection($"CosmosDb:Containers:{containerName}");
 
-        // Assuming the partition key is the same as the itemId for simplicity
-        var item = await cosmosLoader.GetItemByIdAsync(containerName, itemId, itemId);
-
-        if (item != null)
+        if (containerConfig.Exists())
         {
-            Console.WriteLine($"{itemName}:");
-            Console.WriteLine(item);
+            var partitionKeyPath = containerConfig["PartitionKey"];
+            var itemId = containerConfig.GetSection($"ItemIds:{itemKey}").Value;
+
+            if (string.IsNullOrEmpty(itemId) || string.IsNullOrEmpty(partitionKeyPath))
+            {
+                Console.WriteLine($"Missing Item ID or Partition Key for '{itemKey}' in '{containerName}'.");
+                return;
+            }
+
+            // Use itemId as the partition key value
+            string partitionKeyValue = itemId;
+
+            Console.WriteLine($"\nRetrieving '{itemKey}' from '{containerName}'...");
+            Console.WriteLine($"Using Item ID: '{itemId}' and Partition Key: '{partitionKeyValue}'");
+
+            var item = await cosmosLoader.GetItemByIdAsync(containerName, itemId, partitionKeyValue);
+
+            if (item != null)
+            {
+                Console.WriteLine($"Found '{itemKey}':");
+                Console.WriteLine(item);
+            }
+            else
+            {
+                Console.WriteLine($"'{itemKey}' not found in '{containerName}'. Verify item ID and partition key.");
+            }
         }
         else
         {
-            Console.WriteLine($"{itemName} not found in '{containerName}'.");
+            Console.WriteLine($"Container '{containerName}' is not defined in appsettings.json or does NOT exist in Cosmos DB.");
         }
     }
 }
+
+

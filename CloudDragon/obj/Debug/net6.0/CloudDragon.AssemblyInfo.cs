@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac95705781372fdabb53bc9f9747d1e56f210f12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67c3dfc5514101aa4e879c10792997a33e5f5a61")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
