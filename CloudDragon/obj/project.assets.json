@@ -4699,11 +4699,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\CloudDragon.csproj",
+      "projectUniqueName": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragon\\CloudDragon.csproj",
       "projectName": "CloudDragon",
-      "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\CloudDragon.csproj",
+      "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragon\\CloudDragon.csproj",
       "packagesPath": "C:\\Users\\HarryOwen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragon\\obj\\",
+      "outputPath": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragon\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HarryOwen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4721,8 +4721,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj": {
-              "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj"
+            "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj": {
+              "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj"
             }
           }
         }

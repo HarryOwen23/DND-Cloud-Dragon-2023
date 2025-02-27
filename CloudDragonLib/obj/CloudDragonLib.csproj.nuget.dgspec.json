@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj": {}
+    "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj": {
+    "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj",
+        "projectUniqueName": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj",
         "projectName": "CloudDragonLib",
-        "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\CloudDragonLib.csproj",
+        "projectPath": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\CloudDragonLib.csproj",
         "packagesPath": "C:\\Users\\HarryOwen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023\\CloudDragonLib\\obj\\",
+        "outputPath": "C:\\Users\\HarryOwen\\source\\repos\\DND\\CloudDragonLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HarryOwen\\AppData\\Roaming\\NuGet\\NuGet.Config",
