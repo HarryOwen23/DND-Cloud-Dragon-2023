@@ -1,0 +1,18 @@
+# Ignore appsettings.json to prevent exposing secrets
+
+
+# Ignore Visual Studio and build artifacts
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Ignore IDE files
+*.vscode/
+
+# Ignore log files
+logs/
+*.log

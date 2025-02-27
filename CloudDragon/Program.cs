@@ -1,290 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.IO;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 using CloudDragon;
 
-namespace CloudDragon
+public class Program
 {
-    public class Character_Class
+    private static async Task Main(string[] args)
     {
-        [JsonPropertyName("Class Name")]
-        public string ClassName { get; set; }
+        IConfiguration configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
 
-        [JsonPropertyName("HitDice")]
-        public string HitDice { get; set; }
+        Cosmos_Loader cosmosLoader = new Cosmos_Loader(configuration);
 
-        [JsonPropertyName("HitPoints")]
-        public HitPoints HitPoints { get; set; }
-
-        [JsonPropertyName("Proficiencies")]
-        public Proficiencies Proficiencies { get; set; }
-
-        [JsonPropertyName("Starting Equipment")]
-        public List<string> StartingEquipment { get; set; }
-
-        [JsonPropertyName("Fighting Styles")]
-        public List<FightingStyle> FightingStyles { get; set; }
-
-        [JsonPropertyName("Class Features")]
-        public List<ClassFeature> ClassFeatures { get; set; }
-
-        // Add a list of sub-archetypes
-        [JsonPropertyName("SubArchetypes")]
-        public List<SubArchetype> SubArchetypes { get; set; }
+        Console.WriteLine("\nQuerying all items from all containers...");
+        await cosmosLoader.QueryAllItemsFromAllContainersAsync();
+        
     }
 
-    public class HitPoints
+    private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, IConfiguration config, string containerName, string itemKey)
     {
-        [JsonPropertyName("At 1st Level")]
-        public string At1stLevel { get; set; }
+        var containerConfig = config.GetSection($"CosmosDb:Containers:{containerName}");
 
-        [JsonPropertyName("At Higher Levels")]
-        public string AtHigherLevels { get; set; }
-    }
-
-    public class Proficiencies
-    {
-        [JsonPropertyName("Armor")]
-        public string Armor { get; set; }
-
-        [JsonPropertyName("Weapons")]
-        public string Weapons { get; set; }
-
-        [JsonPropertyName("Tools")]
-        public string Tools { get; set; }
-
-        [JsonPropertyName("Saving Throws")]
-        public string SavingThrows { get; set; }
-
-        [JsonPropertyName("Skills")]
-        public string Skills { get; set; }
-    }
-
-    public class FightingStyle
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
-    }
-
-    public class ClassFeature
-    {
-        [JsonPropertyName("Feature")]
-        public string Feature { get; set; }
-
-        [JsonPropertyName("Description")]
-        public object Description { get; set; } // The description field can contain either a string or an array of strings
-    }
-
-    // Add a class for sub-archetypes
-    public class SubArchetype
-    {
-        [JsonPropertyName("Archetype Name")]
-        public string ArchetypeName { get; set; }
-
-        [JsonPropertyName("Archetype Features")]
-        public List<ArchetypeFeature> ArchetypeFeatures { get; set; }
-    }
-
-    // Add a class for archetype features
-    public class ArchetypeFeature
-    {
-        [JsonPropertyName("Archetype Feature")]
-        public string FeatureName { get; set; }
-
-        [JsonPropertyName("Archetype Feature Description")]
-        public List<object> FeatureDescription { get; set; }
-    }
-
-    // Add class for class spells + cantrips 
-    public class PaladinSpellsCantrips
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("Source")]
-        public string Source { get; set; }
-
-        [JsonPropertyName("School")]
-        public string School { get; set; }
-
-        [JsonPropertyName("Casting Time")]
-        public string CastTime { get; set; }
-
-        [JsonPropertyName("Range")]
-        public string Range { get; set; }
-
-        [JsonPropertyName("Components")]
-        public string Components { get; set; }
-
-        [JsonPropertyName("Duration")]
-        public string Duration { get; set; }
-
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
-
-        [JsonPropertyName("Spell Lists")]
-        public List<string> SpellLists { get; set; }
-
-        [JsonPropertyName("Level")]
-        public int Level { get; set; }
-    }
-
-    public class RangerSpellsCantrips
-    {
-        [JsonPropertyName("Name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("School")]
-        public string School { get; set; }
-
-        [JsonPropertyName("Description")]
-        public string Description { get; set; }
-
-        [JsonPropertyName("Level")]
-        public int Level { get; set; }
-    }
-
-    //internal class CharacterLoader : ILoader
-    //{
-    //    void ILoader.Load()
-    //    {
-    //        Console.WriteLine("Loading Cloud Dragon ....");
-
-    //        string jsonFilePath = "path_to_your_json_file.json";
-
-    //        try
-    //        {
-    //            string jsonData = File.ReadAllText(jsonFilePath);
-
-    //            var cloudDragonData = JsonSerializer.Deserialize<List<Character_Class>>(jsonData);
-
-    //            if (cloudDragonData != null && cloudDragonData.Count > 0)
-    //            {
-    //                // Access and display some properties
-    //                Console.WriteLine($"Class Name: {cloudDragonData[0]?.ClassName}");
-    //                Console.WriteLine($"Hit Dice: {cloudDragonData[0]?.HitDice}");
-
-    //                var proficienciesArmor = cloudDragonData[0]?.Proficiencies?.Armor;
-    //                Console.WriteLine($"Proficiencies (Armor): {proficienciesArmor ?? "N/A"}");
-
-    //                // Loop through and display Fighting Styles
-    //                Console.WriteLine("Fighting Styles:");
-    //                foreach (var style in cloudDragonData[0]?.FightingStyles ?? Enumerable.Empty<FightingStyle>())
-    //                {
-    //                    Console.WriteLine($"- {style?.Name}: {style?.Description}");
-    //                }
-
-    //                // Loop through and display sub-archetypes and their features
-    //                Console.WriteLine("Sub-Archetypes:");
-    //                foreach (var subArchetype in cloudDragonData[0]?.SubArchetypes ?? Enumerable.Empty<SubArchetype>())
-    //                {
-    //                    Console.WriteLine($"- {subArchetype?.ArchetypeName}");
-
-    //                    foreach (var feature in subArchetype?.ArchetypeFeatures ?? Enumerable.Empty<ArchetypeFeature>())
-    //                    {
-    //                        Console.WriteLine($"  - {feature?.FeatureName}");
-
-    //                        foreach (var description in feature?.FeatureDescription ?? Enumerable.Empty<object>())
-    //                        {
-    //                            if (description is string desc)
-    //                            {
-    //                                Console.WriteLine($"    - {desc}");
-    //                            }
-    //                            else
-    //                            {
-    //                                Console.WriteLine($"    - {description}");
-    //                            }
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //            else
-    //            {
-    //                Console.WriteLine("Deserialization failed or the list is empty.");
-    //            }
-    //        }
-    //        catch (Exception e)
-    //        {
-    //            Console.WriteLine("Error loading JSON file: " + e.Message);
-    //        }
-    //    }
-    //}
-
-    internal class Program
-    {
-        static void Main(string[] args)
+        if (containerConfig.Exists())
         {
+            var partitionKeyPath = containerConfig["PartitionKey"];
+            var itemId = containerConfig.GetSection($"ItemIds:{itemKey}").Value;
 
-            ILoader trinketLoader = new TrinketLoader();
-            trinketLoader.Load();
+            if (string.IsNullOrEmpty(itemId) || string.IsNullOrEmpty(partitionKeyPath))
+            {
+                Console.WriteLine($"Missing Item ID or Partition Key for '{itemKey}' in '{containerName}'.");
+                return;
+            }
 
-            ILoader EquipmentLoader = new EquipmentLoader();
-            EquipmentLoader.Load();
+            // Use itemId as the partition key value
+            string partitionKeyValue = itemId;
 
-            ILoader armorLoader = new ArmorLoader();
-            armorLoader.Load();
+            Console.WriteLine($"\nRetrieving '{itemKey}' from '{containerName}'...");
+            Console.WriteLine($"Using Item ID: '{itemId}' and Partition Key: '{partitionKeyValue}'");
 
-            ILoader currencyLoader = new CurrencyLoader();
-            currencyLoader.Load();
+            var item = await cosmosLoader.GetItemByIdAsync(containerName, itemId, partitionKeyValue);
 
-            ILoader TrinketLoader = new TrinketLoader();
-            TrinketLoader.Load();
-
-            ILoader MagicalItemLoader = new MagicalItemLoader();
-            MagicalItemLoader.Load();
-
-            ILoader BardCantripLoader = new BardCantripLoader();
-            BardCantripLoader.Load();
-
-            ILoader BardSpellLoader = new BardSpellLoader();
-            BardSpellLoader.Load();
-
-            ILoader ClericCantripLoader = new ClericCantripLoader();
-            ClericCantripLoader.Load();
-
-            ILoader ClericSpellLoader = new ClericSpellLoader();
-            ClericSpellLoader.Load();
-
-            ILoader DruidCantripLoader = new DruidCantripLoader();
-            DruidCantripLoader.Load();
-
-            ILoader DruidSpellLoader = new DruidSpellLoader();
-            DruidSpellLoader.Load();
-
-            ILoader PaladinCantripLoader = new PaladinCantripLoader();
-            PaladinCantripLoader.Load();
-
-            ILoader PaladinSpellLoader = new PaladinSpellLoader();
-            PaladinSpellLoader.Load();
-
-            ILoader RangerSpellLoader = new RangerSpellLoader();
-            RangerSpellLoader.Load();
-
-            ILoader SorcererCantripLoader = new SorcererCantripLoader();
-            SorcererCantripLoader.Load();
-
-            ILoader SorcererSpellLoader = new SorcererSpellLoader();
-            SorcererSpellLoader.Load();
-
-            ILoader WarlockCantripLoader = new WarlockCantripLoader();
-            WarlockCantripLoader.Load();
-
-            ILoader WarlockSpellLoader = new WarlockSpellLoader();
-            WarlockSpellLoader.Load();
-
-            ILoader WizardCantripLoader = new WizardCantripLoader();
-            WizardCantripLoader.Load();
-
-            ILoader WizardSpellLoader = new WizardSpellLoader();
-            WizardSpellLoader.Load();
-
-            ILoader PoisonLoader = new PoisonLoader();
-            PoisonLoader.Load();
+            if (item != null)
+            {
+                Console.WriteLine($"Found '{itemKey}':");
+                Console.WriteLine(item);
+            }
+            else
+            {
+                Console.WriteLine($"'{itemKey}' not found in '{containerName}'. Verify item ID and partition key.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Container '{containerName}' is not defined in appsettings.json or does NOT exist in Cosmos DB.");
         }
     }
 }
+
+
