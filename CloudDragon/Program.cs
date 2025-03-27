@@ -17,7 +17,7 @@ public class Program
 
         Console.WriteLine("\nQuerying all items from all containers...");
         await cosmosLoader.QueryAllItemsFromAllContainersAsync();
-
+        
     }
 
     private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, IConfiguration config, string containerName, string itemKey)
