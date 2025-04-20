@@ -3,14 +3,21 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using CloudDragon;
+using DotNetEnv;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
+
 
 public class Program
 {
     private static async Task Main(string[] args)
     {
+        // Load environment variables from .env file 
+        Env.Load();
+
         IConfiguration configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddEnvironmentVariables() // Now this will work
             .Build();
 
         Cosmos_Loader cosmosLoader = new Cosmos_Loader(configuration);
