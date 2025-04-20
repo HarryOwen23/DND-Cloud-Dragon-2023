@@ -1,5 +1,8 @@
-using CloudDragon.Equipment;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using Newtonsoft.Json;
+using CloudDragonLib.Models;
 
 namespace CloudDragon.Equipment
 {

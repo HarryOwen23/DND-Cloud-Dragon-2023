@@ -1,14 +1,23 @@
-using CloudDragonApi.Models; 
+using System;
+using System.Collections.Generic;
+using CloudDragonLib.Models;
+
 namespace CloudDragon.Equipment
 {
     public class EquipmentService
     {
-        public bool Equip(Character character, EquipmentItem item)
+        public bool Equip(Character character, EquipmentItem item, bool overwrite = false)
         {
             character.Equipped ??= new Dictionary<string, EquipmentItem>();
 
             if (character.Equipped.ContainsKey(item.Slot))
-                throw new InvalidOperationException($"Slot '{item.Slot}' is already occupied.");
+            {
+                if (!overwrite)
+                    throw new InvalidOperationException($"Slot '{item.Slot}' is already occupied.");
+
+                // Unequip current item in slot
+                Unequip(character, item.Slot);
+            }
 
             character.Equipped[item.Slot] = item;
             character.CarriedWeight += item.Weight;
@@ -21,17 +30,21 @@ namespace CloudDragon.Equipment
 
         public bool Unequip(Character character, string slot)
         {
-            if (character.Equipped == null || !character.Equipped.ContainsKey(slot))
+            if (character.Equipped == null || !character.Equipped.TryGetValue(slot, out var item))
                 return false;
 
-            var item = character.Equipped[slot];
-            character.CarriedWeight -= item.Weight;
             character.Equipped.Remove(slot);
+            character.CarriedWeight = Math.Max(0, character.CarriedWeight - item.Weight);
 
             if (slot == "Armor")
                 character.AC = 10;
 
             return true;
+        }
+
+        public bool IsItemEquipped(Character character, string itemId)
+        {
+            return character.Equipped?.Values.Any(i => i.Id == itemId) ?? false;
         }
     }
 }
