@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776cb614ba902172f5033797daefb5e6d8b57ec1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7843fa73fc8f6ba6bb0277f5aa48d97d947ea2a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudDragonLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

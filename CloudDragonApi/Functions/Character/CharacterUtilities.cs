@@ -168,21 +168,43 @@ namespace CloudDragonApi.Character
                 PartitionKey = "{id}")] Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
+                containerName: "Feats",
+                Connection = "CosmosDBConnection")] IEnumerable<dynamic> feats,
+            [CosmosDB(
+                databaseName: "CloudDragonDB",
                 containerName: "Characters",
                 Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
             ILogger log)
         {
             var body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
-            string featName = input?.feat;
+            string featId = input?.feat;
 
-            if (character == null || string.IsNullOrEmpty(featName))
+            if (character == null || string.IsNullOrEmpty(featId))
                 return new BadRequestObjectResult(new { success = false, error = "Invalid request." });
 
-            character.Inventory.Add(new Item { Name = featName, Type = "Feat" });
+            var feat = feats.FirstOrDefault(f => f.id == featId);
+            if (feat == null)
+                return new NotFoundObjectResult(new { success = false, error = "Feat not found." });
+
+            character.Inventory.Add(new Item { Name = feat.name, Type = "Feat" });
+
+            if (feat.bonus != null)
+            {
+                foreach (var bonus in feat.bonus)
+                {
+                    string stat = bonus.name;
+                    int value = bonus.value;
+                    if (!character.Stats.ContainsKey(stat))
+                        character.Stats[stat] = value;
+                    else
+                        character.Stats[stat] += value;
+                }
+            }
+
             await characterOut.AddAsync(character);
 
-            return new OkObjectResult(new { success = true, feat = featName });
+            return new OkObjectResult(new { success = true, feat = feat.name });
         }
     }
-} 
+}

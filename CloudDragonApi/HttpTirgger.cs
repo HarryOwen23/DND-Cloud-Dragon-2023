@@ -1,11 +1,27 @@
-import azure.functions as func
-import logging
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
-app = func.FunctionApp()
-
-[Function("HttpFunction")]
-public IActionResult Run(
-    [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
+namespace CloudDragonApi
 {
-    return new OkObjectResult($"Welcome to Azure Functions, {req.Query["name"]}!");
+    public static class HealthCheckFunction
+    {
+        [FunctionName("HealthCheck")]
+        public static IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "health")] HttpRequest req,
+            ILogger log)
+        {
+            log.LogInformation("HealthCheck triggered.");
+
+            return new OkObjectResult(new
+            {
+                success = true,
+                message = "CloudDragon API is up and running!",
+                version = "1.0.0", // You can increment this
+                timestamp = DateTime.UtcNow
+            });
+        }
+    }
 }

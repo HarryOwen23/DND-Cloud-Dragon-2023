@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CloudDragonApi.Services;
 
 namespace CloudDragonApi.Combat
 {
@@ -42,6 +43,7 @@ namespace CloudDragonApi.Combat
             string actionType = input?.action;
             string targetId = input?.targetId;
             string ability = input?.ability ?? "Strength";
+            string coverType = input?.coverType;
 
             if (string.IsNullOrEmpty(actionType))
                 return new BadRequestObjectResult(new { success = false, error = "Missing action type." });
@@ -53,79 +55,80 @@ namespace CloudDragonApi.Combat
             switch ((string)actionType)
             {
                 case "attack":
-                    var target = session.Combatants.FirstOrDefault(c => c.Id == (string)targetId);
-                    if (target == null)
-                        return new NotFoundObjectResult(new { success = false, error = "Target not found in session." });
-
-                    // Get ability mod
-                    int abilityMod = 0;
-                    if (attacker.Stats?.TryGetValue((string)ability, out var statScore) == true)
-                        abilityMod = (int)Math.Floor((statScore - 10) / 2.0);
-
-                    // Get equipped weapon
-                    var weapon = attacker.Equipped?.Values.FirstOrDefault(e => e.Type == "Weapon");
-                    if (weapon == null)
-                        return new BadRequestObjectResult(new { success = false, error = "No weapon equipped." });
-
-                    // Roll to hit
-                    var rng = new Random();
-                    int roll = rng.Next(1, 21);
-                    int totalToHit = roll + abilityMod;
-
-                    bool hit = totalToHit >= target.AC;
-
-                    // Damage (if hit)
-                    string damageRoll = weapon.Damage ?? "1d4";
-                    int damage = hit ? RollDamage(damageRoll, rng) : 0;
-
-                    // Optional: Apply damage to target HP (if tracked)
-
-                    await sessionOut.AddAsync(session);
-
-                    return new OkObjectResult(new
                     {
-                        success = true,
-                        action = "attack",
-                        attacker = attacker.Name,
-                        target = target.Name,
-                        roll,
-                        modifier = abilityMod,
-                        totalToHit,
-                        targetAC = target.AC,
-                        hit,
-                        damage,
-                        weapon = weapon.Name
-                    });
+                        if (string.IsNullOrEmpty(targetId))
+                            return new BadRequestObjectResult(new { success = false, error = "Missing target for attack." });
+
+                        var defender = session.Combatants.FirstOrDefault(c => c.Id == (string)targetId);
+                        if (defender == null)
+                            return new NotFoundObjectResult(new { success = false, error = "Target not found in session." });
+
+                        int attackModifier = GetAbilityModifier(attacker, ability);
+
+                        var (hit, roll, total) = CombatActionService.ResolveAttackRoll(attacker, defender, attackModifier);
+
+                        int damage = 0;
+                        if (hit)
+                        {
+                            var weapon = attacker.Equipped?.Values.FirstOrDefault(e => e.Type == "Weapon");
+                            string damageDice = weapon?.Damage ?? "1d4";
+                            damage = CombatActionService.RollDamage(damageDice);
+                            CombatActionService.ApplyDamage(defender, damage);
+                        }
+
+                        await sessionOut.AddAsync(session);
+
+                        return new OkObjectResult(new
+                        {
+                            success = true,
+                            action = "attack",
+                            attacker = attacker.Name,
+                            defender = defender.Name,
+                            roll,
+                            total,
+                            attackModifier,
+                            targetAC = defender.AC,
+                            hit,
+                            damage
+                        });
+                    }
 
                 case "dodge":
-                    attacker.Conditions.Add("Dodging");
-                    await sessionOut.AddAsync(session);
-                    return new OkObjectResult(new { success = true, message = $"{attacker.Name} is dodging." });
+                    {
+                        CombatActionService.HandleDodge(attacker);
+                        await sessionOut.AddAsync(session);
+                        return new OkObjectResult(new { success = true, message = $"{attacker.Name} is dodging." });
+                    }
 
-                case "cast":
-                    return new OkObjectResult(new { success = true, message = $"{attacker.Name} casts a spell." });
+                case "take-cover":
+                    {
+                        if (string.IsNullOrEmpty(coverType))
+                            return new BadRequestObjectResult(new { success = false, error = "Cover type missing." });
+
+                        CombatActionService.ApplyCoverBonus(attacker, coverType);
+                        await sessionOut.AddAsync(session);
+                        return new OkObjectResult(new { success = true, message = $"{attacker.Name} takes {coverType} cover." });
+                    }
 
                 case "custom":
-                    string description = input?.description ?? "Performs an action.";
-                    return new OkObjectResult(new { success = true, message = $"{attacker.Name} does a custom action: {description}" });
+                    {
+                        string description = input?.description ?? "Performs a custom action.";
+                        return new OkObjectResult(new { success = true, message = $"{attacker.Name} does: {description}" });
+                    }
 
                 default:
                     return new BadRequestObjectResult(new { success = false, error = $"Unknown action: {actionType}" });
             }
         }
 
-        private static int RollDamage(string diceNotation, Random rng)
+        private static int GetAbilityModifier(Character character, string ability)
         {
-            // Basic "NdX" parser, e.g. 2d6 or 1d8
-            var parts = diceNotation.ToLower().Split('d');
-            if (parts.Length != 2 || !int.TryParse(parts[0], out var numDice) || !int.TryParse(parts[1], out var dieSize))
-                return rng.Next(1, 5); // fallback to 1d4
+            character.Stats ??= new Dictionary<string, int>();
 
-            int total = 0;
-            for (int i = 0; i < numDice; i++)
-                total += rng.Next(1, dieSize + 1);
+            if (character.Stats.TryGetValue(ability, out var statScore))
+                return (int)Math.Floor((statScore - 10) / 2.0);
 
-            return total;
+            return 0;
         }
     }
 }
