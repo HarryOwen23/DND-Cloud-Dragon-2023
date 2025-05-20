@@ -17,6 +17,19 @@ public class Cosmos_Loader
         string primaryKey = cosmosSettings["PrimaryKey"];
         string databaseId = cosmosSettings["DatabaseId"];
 
+        string envEndpoint = configuration["COSMOSDB_ENDPOINT"];
+        string envPrimaryKey = configuration["COSMOSDB_PRIMARY_KEY"];
+
+        if (!string.IsNullOrEmpty(envEndpoint))
+        {
+            endpointUri = envEndpoint;
+        }
+
+        if (!string.IsNullOrEmpty(envPrimaryKey))
+        {
+            primaryKey = envPrimaryKey;
+        }
+
         _client = new CosmosClient(endpointUri, primaryKey);
         _database = _client.GetDatabase(databaseId);
         _containers = new Dictionary<string, Container>();
