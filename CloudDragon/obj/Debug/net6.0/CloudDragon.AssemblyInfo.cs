@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7843fa73fc8f6ba6bb0277f5aa48d97d947ea2a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69cea2201f63e03fd607a664edeeedae147e73d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudDragon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
