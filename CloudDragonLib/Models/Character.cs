@@ -36,6 +36,7 @@ namespace CloudDragonLib.Models
             }
         }
         private int _level;
+        public string Personality;
 
         // Character mechanics
         public Dictionary<string, int> Stats { get; set; } = new();
@@ -52,6 +53,7 @@ namespace CloudDragonLib.Models
 
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
+        public string? Appearance { get; set; }
+        public string? Backstory { get; set; }
     }
 }
