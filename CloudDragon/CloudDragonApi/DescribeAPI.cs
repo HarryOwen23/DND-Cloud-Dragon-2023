@@ -1,20 +1,32 @@
-[FunctionName("DescribeApi")]
-public static IActionResult DescribeApi(
-    [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
-    ILogger log)
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+
+namespace CloudDragonApi.Functions
 {
-    return new OkObjectResult(new
+    public static class DescribeApiFunction
     {
-        success = true,
-        endpoints = new[]
+        [FunctionName("DescribeApi")]
+        public static IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
+            ILogger log)
         {
-            "POST /character",
-            "GET /character/{id}",
-            "PATCH /character/{id}",
-            "POST /combat",
-            "POST /combat/{id}/advance",
-            "POST /character/{id}/inventory",
-            "GET /conditions"
+            return new OkObjectResult(new
+            {
+                success = true,
+                endpoints = new[]
+                {
+                    "POST /character",
+                    "GET /character/{id}",
+                    "PATCH /character/{id}",
+                    "POST /combat",
+                    "POST /combat/{id}/advance",
+                    "POST /character/{id}/inventory",
+                    "GET /conditions"
+                }
+            });
         }
-    });
+    }
 }

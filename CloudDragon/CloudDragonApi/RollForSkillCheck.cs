@@ -36,6 +36,8 @@ namespace CloudDragonApi
             try
             {
                 input = JsonConvert.DeserializeObject<SkillCheckInput>(requestBody);
+                if (input == null)
+                    throw new JsonException("Deserialized input is null.");
             }
             catch (JsonException ex)
             {
@@ -44,12 +46,12 @@ namespace CloudDragonApi
             }
 
             var rng = new Random();
-            int roll = rng.Next(1, 21); // Simulate d20
+            int roll = rng.Next(1, 21); // d20
             int total = roll + input.Modifier;
-            bool success = total >= input.Dc;
+            bool passed = total >= input.Dc;
 
-            log.LogInformation("Skill check roll: {Roll}, Modifier: {Modifier}, Total: {Total}, DC: {DC}, Success: {Success}",
-                roll, input.Modifier, total, input.Dc, success);
+            log.LogInformation("Skill check: roll={Roll}, modifier={Modifier}, total={Total}, dc={Dc}, success={Success}",
+                roll, input.Modifier, total, input.Dc, passed);
 
             return new OkObjectResult(new
             {
@@ -60,7 +62,7 @@ namespace CloudDragonApi
                     modifier = input.Modifier,
                     dc = input.Dc,
                     total,
-                    success
+                    passed
                 }
             });
         }

@@ -1,23 +1,23 @@
+using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Microsoft.Azure.Functions.Worker.Http;
 using CloudDragonLib;
-using System;
-using System.Collections.Generic;
 
 namespace CloudDragonApi
 {
-    public static class ProcessJson
+    public static class ProcessJsonFunction
     {
         [FunctionName("ProcessJson")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "process-json")] HttpRequestData req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "process-json")] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("ProcessJson triggered");
@@ -75,12 +75,10 @@ namespace CloudDragonApi
             catch (Exception ex)
             {
                 log.LogError(ex, "Error during processing.");
-                return new BadRequestObjectResult(new
-                {
-                    success = false,
-                    error = ex.Message
-                });
+                return new BadRequestObjectResult(new { success = false, error = ex.Message });
             }
         }
     }
 }
+// This function processes JSON payloads for different types of character stat generation.
+// It supports "point-buy" and "roll-stats" types.

@@ -16,14 +16,14 @@ namespace CloudDragonApi
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "roll-stats")] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("RollForStatsFunction triggered.");
+            log.LogInformation("RollStats endpoint triggered.");
 
             try
             {
                 var roller = new Character_Stats_Dice();
                 var statBlock = roller.RollStats();
 
-                log.LogInformation("Stat block rolled successfully.");
+                log.LogInformation("Stats rolled successfully.");
 
                 return new OkObjectResult(new
                 {
@@ -33,11 +33,11 @@ namespace CloudDragonApi
             }
             catch (Exception ex)
             {
-                log.LogError(ex, "Error rolling stats.");
+                log.LogError(ex, "An error occurred while rolling stats.");
                 return new BadRequestObjectResult(new
                 {
                     success = false,
-                    error = "Failed to roll stats. " + ex.Message
+                    error = $"Failed to roll stats: {ex.Message}"
                 });
             }
         }
