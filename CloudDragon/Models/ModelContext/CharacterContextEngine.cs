@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using CloudDragonApi.Services;
 using CharacterModel = CloudDragonLib.Models.Character;
-using System.Threading.Tasks;
 
 public class CharacterContextEngine
 {
@@ -17,24 +17,61 @@ public class CharacterContextEngine
 
     public async Task<CharacterModel> BuildAndStoreCharacterAsync(CharacterModel character)
     {
-        // Only generate if fields are missing
-        if (string.IsNullOrWhiteSpace(character.Backstory) || string.IsNullOrWhiteSpace(character.Appearance))
-        {
-            string prompt = BuildFlavorfulPrompt(character);
-            string generated = await _llmService.GenerateAsync(prompt);
-
-            // For now, assign all to backstory (can later split appearance)
-            character.Backstory ??= generated.Trim();
-        }
-
+        await GenerateMissingFieldsAsync(character);
         await _repository.SaveAsync(character);
         return character;
+    }
+
+    public async Task<CharacterModel> GenerateMissingFieldsAsync(CharacterModel character)
+    {
+        if (string.IsNullOrWhiteSpace(character.Appearance))
+            character.Appearance = await GenerateAppearanceAsync(character);
+
+        if (string.IsNullOrWhiteSpace(character.Personality))
+            character.Personality = await GeneratePersonalityAsync(character);
+
+        if (string.IsNullOrWhiteSpace(character.Backstory))
+            character.Backstory = await GenerateBackstoryAsync(character);
+
+        if (string.IsNullOrWhiteSpace(character.FlavorText))
+            character.FlavorText = await GenerateFlavorQuoteAsync(character);
+
+        return character;
+    }
+
+    public async Task<string> GenerateAppearanceAsync(CharacterModel character)
+    {
+        string prompt = _promptBuilder.BuildPrompt(character) +
+            "\nWrite a vivid physical description of this character. Focus on unique traits, attire, and demeanor.";
+
+        return await _llmService.GenerateAsync(prompt);
+    }
+
+    public async Task<string> GeneratePersonalityAsync(CharacterModel character)
+    {
+        string prompt = _promptBuilder.BuildPrompt(character) +
+            "\nDescribe this character's personality. Include quirks, virtues, flaws, and behavioral tendencies.";
+
+        return await _llmService.GenerateAsync(prompt);
+    }
+
+    public async Task<string> GenerateBackstoryAsync(CharacterModel character)
+    {
+        string prompt = BuildFlavorfulPrompt(character);
+        return await _llmService.GenerateAsync(prompt);
+    }
+
+    public async Task<string> GenerateFlavorQuoteAsync(CharacterModel character)
+    {
+        string prompt = _promptBuilder.BuildPrompt(character) +
+            "\nWrite a short, iconic quote that reflects this character's essence — something they might say in a dramatic moment.";
+
+        return await _llmService.GenerateAsync(prompt);
     }
 
     private string BuildFlavorfulPrompt(CharacterModel character)
     {
         string context = _promptBuilder.BuildPrompt(character);
-
         return
             "You are a storyteller and world-builder for a Dungeons & Dragons campaign.\n" +
             "Using the context below, write a compelling and flavorful backstory for the character.\n" +

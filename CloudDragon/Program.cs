@@ -7,6 +7,7 @@ using CloudDragonApi.Services;
 using DotNetEnv;
 using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using CharacterModel = CloudDragonLib.Models.Character;
+using System.Collections.Generic;
 
 public partial class Program
 {
@@ -31,30 +32,76 @@ public partial class Program
         var character = new CharacterModel
         {
             Id = Guid.NewGuid().ToString(),
-            Name = "Garrick Husty",
-            Race = "Human",
-            Class = "Fighter",
-            Level = 1,
-            Appearance = "Plain-looking teen with untamed brown hair, hazel eyes, and bandages completely wrapped around his right arm to hide its appearance",
-            Personality = "A young, shy swordsman haunted by nightmares of a man in armor",
-            Backstory = @"Garrick Husty was raised in the stone-cold halls of an orphanage..."
+            Name = Prompt("Enter character name: "),
+            Race = Prompt("Enter character race: "),
+            Class = Prompt("Enter character class: "),
+            Level = int.TryParse(Prompt("Enter level (default 1): "), out var lvl) ? lvl : 1
         };
 
-        Console.WriteLine("Generating backstory for Garrick Husty...\n");
+        string appearanceInput = Prompt("Enter appearance (or type 'generate'): ");
+        character.Appearance = string.Equals(appearanceInput, "generate", StringComparison.OrdinalIgnoreCase)
+            ? await engine.GenerateAppearanceAsync(character)
+            : appearanceInput;
 
-        var result = await engine.BuildAndStoreCharacterAsync(character);
+        string personalityInput = Prompt("Enter personality (or type 'generate'): ");
+        character.Personality = string.Equals(personalityInput, "generate", StringComparison.OrdinalIgnoreCase)
+            ? await engine.GeneratePersonalityAsync(character)
+            : personalityInput;
 
-        Console.WriteLine("Character Created:");
-        Console.WriteLine($"ID: {result.Id}");
-        Console.WriteLine($"Name: {result.Name}");
-        Console.WriteLine($"Race: {result.Race}");
-        Console.WriteLine($"Class: {result.Class}");
-        Console.WriteLine($"Level: {result.Level}");
-        Console.WriteLine($"Appearance: {result.Appearance}");
-        Console.WriteLine($"Personality: {result.Personality}");
-        Console.WriteLine($"\n Backstory:\n{result.Backstory}");
+        string backstoryInput = Prompt("Enter backstory (or type 'generate'): ");
+        character.Backstory = string.Equals(backstoryInput, "generate", StringComparison.OrdinalIgnoreCase)
+            ? await engine.GenerateBackstoryAsync(character)
+            : backstoryInput;
 
-        await RetrieveAndDisplayItemAsync(cosmosLoader, configuration, "Characters", result.Id);
+        string flavorInput = Prompt("Enter flavor quote (or type 'generate'): ");
+        character.FlavorText = string.Equals(flavorInput, "generate", StringComparison.OrdinalIgnoreCase)
+            ? await engine.GenerateFlavorQuoteAsync(character)
+            : flavorInput;
+
+        string statsChoice = Prompt("Do you want to enter stats manually or generate? (enter/generate): ");
+        if (string.Equals(statsChoice, "generate", StringComparison.OrdinalIgnoreCase))
+        {
+            character.Stats = await engine.GenerateStatsAsync(character);
+        }
+        else
+        {
+            character.Stats = new Dictionary<string, int>();
+            string[] attributes = { "STR", "DEX", "CON", "INT", "WIS", "CHA" };
+            foreach (var attr in attributes)
+            {
+                int value = int.TryParse(Prompt($"Enter value for {attr}: "), out var v) ? v : 10;
+                character.Stats[attr] = value;
+            }
+        }
+
+        Console.WriteLine("\nReview your character:");
+        Console.WriteLine($"Name: {character.Name}, Race: {character.Race}, Class: {character.Class}, Level: {character.Level}");
+        Console.WriteLine($"Appearance: {character.Appearance}");
+        Console.WriteLine($"Personality: {character.Personality}");
+        Console.WriteLine($"Flavor Quote: {character.FlavorText}");
+        Console.WriteLine($"Backstory: {character.Backstory}");
+        Console.WriteLine("Stats:");
+        foreach (var stat in character.Stats)
+            Console.WriteLine($"  {stat.Key}: {stat.Value}");
+
+        if (Prompt("Save character? (yes/no): ").Trim().ToLower() == "yes")
+        {
+            await repository.SaveAsync(character);
+            Console.WriteLine("Character saved.");
+        }
+        else
+        {
+            Console.WriteLine("Character not saved.");
+            return;
+        }
+
+        await RetrieveAndDisplayItemAsync(cosmosLoader, configuration, "Characters", character.Id);
+    }
+
+    private static string Prompt(string message)
+    {
+        Console.Write(message);
+        return Console.ReadLine();
     }
 
     private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, IConfiguration config, string containerName, string itemKey)

@@ -27,6 +27,10 @@ public class Character
     [ModelField("The character's core attributes such as strength, dexterity, etc.")]
     public Dictionary<string, int> Stats { get; set; } = new();
 
+    [ModelField("A quote that reflects this character's essence.")]
+    public string? FlavorText { get; set; }
+
+
 
     // Any fields not relevant for prompt generation (like CosmosDB metadata, timestamps, etc.) can be left unannotated
 }
