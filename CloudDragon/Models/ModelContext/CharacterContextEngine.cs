@@ -69,6 +69,23 @@ public class CharacterContextEngine
         return await _llmService.GenerateAsync(prompt);
     }
 
+    public async Task<Dictionary<string, int>> GenerateStatsAsync(CharacterModel character)
+    {
+        var stats = new Dictionary<string, int>
+        {
+            ["STR"] = RollStat(),
+            ["DEX"] = RollStat(),
+            ["CON"] = RollStat(),
+            ["INT"] = RollStat(),
+            ["WIS"] = RollStat(),
+            ["CHA"] = RollStat()
+        };
+
+        return await Task.FromResult(stats); // keep async-compatible signature
+
+        int RollStat() => new Random().Next(8, 16); // adjust range as desired
+    }
+
     private string BuildFlavorfulPrompt(CharacterModel character)
     {
         string context = _promptBuilder.BuildPrompt(character);

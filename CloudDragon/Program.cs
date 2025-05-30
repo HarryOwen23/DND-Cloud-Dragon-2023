@@ -7,6 +7,7 @@ using CloudDragonApi.Services;
 using DotNetEnv;
 using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using CharacterModel = CloudDragonLib.Models.Character;
+using CloudDragonLib.Models;
 using System.Collections.Generic;
 
 public partial class Program
@@ -38,11 +39,18 @@ public partial class Program
             Level = int.TryParse(Prompt("Enter level (default 1): "), out var lvl) ? lvl : 1
         };
 
+        // Optional age input
+        string ageInput = Prompt("Enter character age (or leave blank): ");
+        if (int.TryParse(ageInput, out int age))
+        character.Age = age;
+
+        // Optional appearance input
         string appearanceInput = Prompt("Enter appearance (or type 'generate'): ");
         character.Appearance = string.Equals(appearanceInput, "generate", StringComparison.OrdinalIgnoreCase)
             ? await engine.GenerateAppearanceAsync(character)
             : appearanceInput;
 
+        // Optional personality, backstory, and flavor text inputs
         string personalityInput = Prompt("Enter personality (or type 'generate'): ");
         character.Personality = string.Equals(personalityInput, "generate", StringComparison.OrdinalIgnoreCase)
             ? await engine.GeneratePersonalityAsync(character)
@@ -53,6 +61,7 @@ public partial class Program
             ? await engine.GenerateBackstoryAsync(character)
             : backstoryInput;
 
+        // Optional flavor text input
         string flavorInput = Prompt("Enter flavor quote (or type 'generate'): ");
         character.FlavorText = string.Equals(flavorInput, "generate", StringComparison.OrdinalIgnoreCase)
             ? await engine.GenerateFlavorQuoteAsync(character)
@@ -76,6 +85,7 @@ public partial class Program
 
         Console.WriteLine("\nReview your character:");
         Console.WriteLine($"Name: {character.Name}, Race: {character.Race}, Class: {character.Class}, Level: {character.Level}");
+        Console.WriteLine($"Age: {(character.Age.HasValue ? character.Age.Value.ToString() : "Unspecified")}");
         Console.WriteLine($"Appearance: {character.Appearance}");
         Console.WriteLine($"Personality: {character.Personality}");
         Console.WriteLine($"Flavor Quote: {character.FlavorText}");

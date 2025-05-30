@@ -42,6 +42,19 @@ public class Cosmos_Loader
         }
     }
 
+    public async Task UpsertItemAsync(string containerName, object item, string partitionKey)
+    {
+        if (_containers.ContainsKey(containerName))
+        {
+            var container = _containers[containerName];
+            await container.UpsertItemAsync(item, new PartitionKey(partitionKey));
+        }
+        else
+        {
+            Console.WriteLine($"Container '{containerName}' not found in registered containers.");
+        }
+    }
+
     public async Task<dynamic> GetItemByIdAsync(string containerName, string itemId, string partitionKeyValue)
     {
         if (_containers.ContainsKey(containerName))

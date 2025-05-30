@@ -1,5 +1,6 @@
 using System;
-using CloudDragonLib.Models;
+using System.Collections.Generic;
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragonApi.Services
 {
@@ -12,7 +13,7 @@ namespace CloudDragonApi.Services
             return rng.Next(1, 21);
         }
 
-        public static (int roll, int total, bool success) RollSavingThrow(Character target, string ability, int dc)
+        public static (int roll, int total, bool success) RollSavingThrow(CharacterModel target, string ability, int dc)
         {
             target.Stats ??= new Dictionary<string, int>();
 
@@ -27,7 +28,7 @@ namespace CloudDragonApi.Services
             return (roll, total, success);
         }
 
-        public static (int roll, int total, bool hit) RollAttack(Character attacker, int targetAC, int attackModifier = 0)
+        public static (int roll, int total, bool hit) RollAttack(CharacterModel attacker, int targetAC, int attackModifier = 0)
         {
             int roll = RollD20();
             int total = roll + attackModifier;
@@ -39,7 +40,7 @@ namespace CloudDragonApi.Services
         public static int RollDamage(string damageDice)
         {
             if (string.IsNullOrWhiteSpace(damageDice))
-                return 1; // fallback minimal
+                return 1;
 
             var parts = damageDice.ToLower().Split('d');
             if (parts.Length != 2 || !int.TryParse(parts[0], out var numDice) || !int.TryParse(parts[1], out var dieSize))
@@ -53,3 +54,4 @@ namespace CloudDragonApi.Services
         }
     }
 }
+//         prompt += "\nWrite a detailed backstory for this character. Include their origins, key life events, and motivations.";

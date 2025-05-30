@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragonApi.Services
 {

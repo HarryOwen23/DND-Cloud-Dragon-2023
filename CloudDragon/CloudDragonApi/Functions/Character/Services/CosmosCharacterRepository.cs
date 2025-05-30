@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
-using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
+
 
 namespace CloudDragonApi.Services
 {
@@ -13,15 +14,15 @@ namespace CloudDragonApi.Services
             _cosmosLoader = cosmosLoader;
         }
 
-        public async Task<Character> GetAsync(string id)
+        public async Task<CharacterModel> GetAsync(string id)
         {
             var raw = await _cosmosLoader.GetItemByIdAsync(ContainerName, id, id);
             return raw != null
-                ? Newtonsoft.Json.JsonConvert.DeserializeObject<Character>(raw.ToString())
+                ? Newtonsoft.Json.JsonConvert.DeserializeObject<CharacterModel>(raw.ToString())
                 : null;
         }
 
-        public async Task SaveAsync(Character character)
+        public async Task SaveAsync(CharacterModel  character)
         {
             await _cosmosLoader.UpsertItemAsync(ContainerName, character, character.Id);
         }
