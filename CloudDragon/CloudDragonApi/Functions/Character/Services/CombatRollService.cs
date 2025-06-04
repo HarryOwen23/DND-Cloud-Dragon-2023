@@ -54,4 +54,3 @@ namespace CloudDragonApi.Services
         }
     }
 }
-//         prompt += "\nWrite a detailed backstory for this character. Include their origins, key life events, and motivations.";

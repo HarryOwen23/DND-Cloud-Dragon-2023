@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 
-// a class created to provide RNG for individual dnd stats 
-public class Character_Stats_Dice
+/// <summary>
+/// Generates random DND character ability scores using 4d6 drop lowest.
+/// </summary>
+public class CharacterStatsDice
 {
-    // Private readonly class to retrieve the 
-	private readonly static stats rng = new Random(DateTime.Now.Millisecond);
+    private static readonly Random rng = new();
 
-	// The public variables stats are created
-	public int Strength { get; }
+    public int Strength { get; }
     public int Dexterity { get; }
     public int Constitution { get; }
     public int Intelligence { get; }
@@ -17,40 +16,35 @@ public class Character_Stats_Dice
     public int Charisma { get; }
     public int Hitpoints { get; }
 
-    
-    public CharStats (int Str, int Dex, int Con, int Int, int Wis, int Cha)
+    public CharacterStatsDice(int str, int dex, int con, int intel, int wis, int cha)
     {
-        Strength = Str;
-        Dexterity = Dex;
-        Constitution = Con;
-        Intelligence = Int;
-        Wisdom = Wis;
-        Charisma = Cha;
-        // HP variable will relate to Modifier variable  
-        HP = 10 + Modifier(Con);
+        Strength = str;
+        Dexterity = dex;
+        Constitution = con;
+        Intelligence = intel;
+        Wisdom = wis;
+        Charisma = cha;
+        Hitpoints = 10 + Modifier(con);
     }
 
-    // Modifier variable 
-    public static Modifier(int score) => (int)Math.Floor((score - 10) * 0.5);
+    public static int Modifier(int score) => (int)Math.Floor((score - 10) / 2.0);
 
-    // Variable RollD6 is created as an RNG
     private static int RollD6() => rng.Next(1, 7);
 
-    // Store dice roll results
-    public static int AbilityScore() =>
-        // Will roll 4 times and total highest 3
-        new[] { RollD6(), RollD6(), RollD6(), RollD6() }
-        .OrderByDescending(d => d)
-        .Take(3)
-        .Sum();
-
-    // Character Generator Function 
-    public static CharGen Generate()
+    public static int AbilityScore()
     {
-        return new CharGen(
+        return Enumerable.Range(0, 4)
+            .Select(_ => RollD6())
+            .OrderByDescending(d => d)
+            .Take(3)
+            .Sum();
+    }
+
+    public static CharacterStatsDice Generate()
+    {
+        return new CharacterStatsDice(
             AbilityScore(), AbilityScore(),
             AbilityScore(), AbilityScore(),
-            AbilityScore(), AbilityScore()
-        );
+            AbilityScore(), AbilityScore());
     }
 }

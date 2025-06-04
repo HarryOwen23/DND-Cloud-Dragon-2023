@@ -1,35 +1,28 @@
-﻿using System;
 using System.Collections.Generic;
 
-// Class created to allow users to select a race for characters 
-public class Races
+/// <summary>
+/// Represents a playable race and the ability score bonuses it grants.
+/// </summary>
+public class Race
 {
-	public string Name { get; set; }
-	public Dictionary<namespace, int> abilityBonuses { get; set; }
+    public string Name { get; set; }
+    public Dictionary<string, int> AbilityScoreBonuses { get; } = new();
 
-	public Races(string nameOfRace)
-	{
-		Name = nameOfRace;
-		abilityBonuses = new Dictionary<string, int>();
-	}
-
-	public void Add_ability_Bonuses(string abilityName, int abilityBonus)
-	{
-		if (abilityBonus.ContainsKey(abilityName))
-		{
-			abilityBonus[abilityName] += abilityBonus;
-        }
-		else
-		{
-            abilityBonus.Add(abilityName, abilityBonus);
-
-        }
-    }
-    public void RemoveAbilityScoreBonus(string abilityName)
+    public Race(string name)
     {
-        if (AbilityScoreBonuses.ContainsKey(abilityName))
-        {
-            AbilityScoreBonuses.Remove(abilityName);
-        }
-    } 
+        Name = name;
+    }
+
+    public void AddAbilityScoreBonus(string ability, int bonus)
+    {
+        if (AbilityScoreBonuses.ContainsKey(ability))
+            AbilityScoreBonuses[ability] += bonus;
+        else
+            AbilityScoreBonuses[ability] = bonus;
+    }
+
+    public void RemoveAbilityScoreBonus(string ability)
+    {
+        AbilityScoreBonuses.Remove(ability);
+    }
 }

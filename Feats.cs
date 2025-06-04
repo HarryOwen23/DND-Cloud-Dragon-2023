@@ -1,14 +1,16 @@
-﻿using System;
+using System;
 
-public class Feats
+/// <summary>
+/// Represents a single feat with a name and description.
+/// </summary>
+public class Feat
 {
-	public string featName { get; set; }
-	public string Description { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
 
-	public Feats(string featName, string description)
-	{
-		Name = featName;
-		Description = description;
-	}
+    public Feat(string name, string description)
+    {
+        Name = name;
+        Description = description;
+    }
 }
-
