@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudDragonLib", "CloudDrag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDragon", "..\CloudDragon\CloudDragon.csproj", "{7098CF1C-AAA5-4A47-9F76-960BF334576D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDragon.Tests", "..\CloudDragon.Tests\CloudDragon.Tests.csproj", "{3669C13A-7E42-4CF0-8970-56D4E33CA536}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,12 @@ Global
 		{7098CF1C-AAA5-4A47-9F76-960BF334576D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7098CF1C-AAA5-4A47-9F76-960BF334576D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7098CF1C-AAA5-4A47-9F76-960BF334576D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7098CF1C-AAA5-4A47-9F76-960BF334576D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+                {7098CF1C-AAA5-4A47-9F76-960BF334576D}.Release|Any CPU.Build.0 = Release|Any CPU
+                {3669C13A-7E42-4CF0-8970-56D4E33CA536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+                {3669C13A-7E42-4CF0-8970-56D4E33CA536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+                {3669C13A-7E42-4CF0-8970-56D4E33CA536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+                {3669C13A-7E42-4CF0-8970-56D4E33CA536}.Release|Any CPU.Build.0 = Release|Any CPU
+        EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
