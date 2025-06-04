@@ -1,18 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CloudDragonLib.Models;
 
 namespace CloudDragonLib.Models
 {
     public class Character
     {
+        // Identity
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
 
-        // Single class mode (default)
-        public string Class { get; set; }
-        public string Subclass { get; set; }
+        // Single-class mode (default)
+        public string ClassName { get; set; }        public string Subclass { get; set; }
 
         // Multiclassing (optional)
         public Dictionary<string, int> Classes { get; set; } = new();
@@ -21,7 +20,7 @@ namespace CloudDragonLib.Models
         // Race and Level
         public string Race { get; set; }
 
-        // This will dynamically reflect total level based on whether multiclassing is active
+        // Dynamically calculated level
         public int Level
         {
             get
@@ -36,7 +35,12 @@ namespace CloudDragonLib.Models
             }
         }
         private int _level;
-        public string Personality;
+
+        // Personality and flavor
+        public string Personality { get; set; }
+        public string? Appearance { get; set; }
+        public string? Backstory { get; set; }
+        public string? FlavorText { get; set; }
 
         // Character mechanics
         public Dictionary<string, int> Stats { get; set; } = new();
@@ -45,15 +49,18 @@ namespace CloudDragonLib.Models
         public int AC { get; set; } = 10;
         public float CarriedWeight { get; set; } = 0;
 
-
-        // Spellcasting 
+        // Spellcasting
         public Dictionary<int, int> SpellSlots { get; set; } = new(); // Key: Spell Level, Value: Slots Remaining
         public List<string> PreparedSpells { get; set; } = new();
         public List<string> CastedSpells { get; set; } = new();
 
-
+        // Metadata
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public string? Appearance { get; set; }
-        public string? Backstory { get; set; }
+
+        // Convenience: get most prominent class
+        public string PrimaryClass =>
+            Classes != null && Classes.Count > 0
+                ? Classes.OrderByDescending(c => c.Value).First().Key
+                : ClassName;
     }
 }

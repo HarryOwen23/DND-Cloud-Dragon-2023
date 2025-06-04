@@ -30,17 +30,16 @@ public class McpPromptBuilder
 
     public string BuildFlavorQuotePrompt(Character character)
     {
-        return $"""
-        Write a short, poetic flavor quote for a Dungeons & Dragons character card.
-        The quote should reflect the character’s essence and fantasy theme.
+        return
+            $@"Write a short, poetic flavor quote for a Dungeons & Dragons character card.
+            The quote should reflect the character’s essence and fantasy theme.
 
-        Name: {character.Name}
-        Race: {character.Race}
-        Class: {character.Class}
-        Personality: {character.Personality}
+            Name: {character.Name}
+            Race: {character.Race}
+            Class: {character.Class}
+            Personality: {character.Personality}
 
-        Limit it to 30 words. Make it evocative and suitable for card-based storytelling games like Magic: The Gathering.
-        """;
+            Limit it to 30 words. Make it evocative and suitable for card-based storytelling games like Magic: The Gathering.";
     }
 
 }

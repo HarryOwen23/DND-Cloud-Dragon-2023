@@ -6,7 +6,7 @@ using System.Linq;
 public class Character_Stats_Dice
 {
     // Private readonly class to retrieve the 
-	private readonly static stats rng new Random(DateTime.Now.Millisecond);
+	private readonly static stats rng = new Random(DateTime.Now.Millisecond);
 
 	// The public variables stats are created
 	public int Strength { get; }
@@ -36,7 +36,7 @@ public class Character_Stats_Dice
     // Variable RollD6 is created as an RNG
     private static int RollD6() => rng.Next(1, 7);
 
-    // Storring variable Dice
+    // Store dice roll results
     public static int AbilityScore() =>
         // Will roll 4 times and total highest 3
         new[] { RollD6(), RollD6(), RollD6(), RollD6() }

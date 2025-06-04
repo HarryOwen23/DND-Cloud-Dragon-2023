@@ -5,9 +5,9 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragonApi.Services
 {
-    public static class CharacterValidationService
+    public static class MulticlassValidationService
     {
-        public static List<string> ValidateCharacter(Character character)
+        public static List<string> ValidateMulticlass(CharacterModel character)
         {
             var errors = new List<string>();
 
@@ -17,61 +17,35 @@ namespace CloudDragonApi.Services
                 return errors;
             }
 
-            // Validate basic fields
-            if (string.IsNullOrWhiteSpace(character.Name))
-                errors.Add("Name is missing.");
+            // If not multiclassing, skip validation
+            if (character.Classes == null || character.Classes.Count == 0)
+                return errors;
 
-            if (string.IsNullOrWhiteSpace(character.Race))
-                errors.Add("Race is missing.");
-
-            if (string.IsNullOrWhiteSpace(character.Class))
-                errors.Add("Class is missing.");
-
-            // Validate stats
-            if (character.Stats == null || character.Stats.Count != 6)
-                errors.Add("Stats must have exactly 6 attributes.");
-            else
+            // Validate total levels match character level
+            int totalClassLevels = character.Classes.Values.Sum();
+            if (totalClassLevels != character.Level)
             {
-                foreach (var stat in character.Stats)
-                {
-                    if (stat.Value < 1 || stat.Value > 30)
-                        errors.Add($"Stat {stat.Key} has invalid value {stat.Value} (must be between 1 and 30).");
-                }
+                errors.Add($"Total class levels ({totalClassLevels}) do not match character level ({character.Level}).");
             }
 
-            // Validate level
-            if (character.Level <= 0 || character.Level > 20)
-                errors.Add("Level must be between 1 and 20.");
-
-            // Validate AC
-            if (character.AC < 10 || character.AC > 30)
-                errors.Add("Armor Class (AC) seems invalid.");
-
-            // Validate carried weight
-            if (character.CarriedWeight < 0)
-                errors.Add("Carried weight cannot be negative.");
-
-            // Validate inventory
-            if (character.Inventory == null)
-                errors.Add("Inventory is missing.");
-
-            // Validate multiclass logic
-            if (character.Classes != null)
+            // Validate each class has a valid name and level > 0
+            foreach (var kvp in character.Classes)
             {
-                int totalLevels = character.Classes.Values.Sum();
-                if (totalLevels != character.Level)
-                    errors.Add("Multiclass levels do not add up to total character level.");
+                string className = kvp.Key?.Trim();
+                int level = kvp.Value;
+
+                if (string.IsNullOrWhiteSpace(className))
+                    errors.Add("A class name is missing or empty.");
+
+                if (level <= 0)
+                    errors.Add($"Class '{className}' has invalid level {level} (must be > 0).");
+
+                if (level > 20)
+                    errors.Add($"Class '{className}' exceeds maximum level (20).");
             }
 
-            // Validate spell slots if caster
-            if (character.SpellSlots != null)
-            {
-                foreach (var slot in character.SpellSlots)
-                {
-                    if (slot.Key < 1 || slot.Key > 9 || slot.Value < 0)
-                        errors.Add($"Invalid spell slot entry: Level {slot.Key} = {slot.Value}.");
-                }
-            }
+            // Future: add class-specific rules like prerequisites
+            // e.g., Require INT ≥ 13 for Wizard, STR ≥ 13 for Fighter
 
             return errors;
         }
