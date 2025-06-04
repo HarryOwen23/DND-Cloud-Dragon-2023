@@ -4,6 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using CloudDragonApi;
 using CloudDragonApi.Models;
 using System.Linq;
 
@@ -27,8 +28,13 @@ namespace CloudDragonApi.Functions.Combat
             string id,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(EndCombatSession));
+
             if (session == null)
+            {
+                log.LogWarning("Combat session {Id} not found", id);
                 return new NotFoundObjectResult(new { success = false, error = "Combat session not found." });
+            }
 
             // Soft delete: flag or rename it
             session.Name += " (ENDED)";
@@ -43,6 +49,7 @@ namespace CloudDragonApi.Functions.Combat
 
             await sessionOut.AddAsync(session);
 
+            log.LogInformation("Combat session {Id} ended", session.Id);
             return new OkObjectResult(new
             {
                 success = true,

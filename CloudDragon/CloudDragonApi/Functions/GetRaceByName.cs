@@ -6,6 +6,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using CloudDragonApi;
 
 namespace CloudDragonApi.Races
 {
@@ -17,13 +18,18 @@ namespace CloudDragonApi.Races
             string name,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(GetRaceByName));
+
             var populator = new RacesPopulator();
             var races = await populator.Populate("races.json");
             var match = races.FirstOrDefault(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
             if (match == null)
+            {
+                log.LogWarning("Race not found: {Name}", name);
                 return new NotFoundObjectResult(new { success = false, error = "Race not found." });
-
+            }
+            log.LogInformation("Returning race {Race}", match.Name);
             return new OkObjectResult(new { success = true, race = match });
         }
     }
