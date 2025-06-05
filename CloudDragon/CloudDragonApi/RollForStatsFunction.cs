@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using CloudDragonLib;
 using System;
 using System.Threading.Tasks;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -23,6 +24,8 @@ namespace CloudDragonApi
                 var roller = new Character_Stats_Dice();
                 var statBlock = roller.RollStats();
 
+                DebugLogger.Log($"Generated stat block: {string.Join(",", statBlock)}");
+
                 log.LogInformation("Stats rolled successfully.");
 
                 return new OkObjectResult(new
@@ -34,6 +37,7 @@ namespace CloudDragonApi
             catch (Exception ex)
             {
                 log.LogError(ex, "An error occurred while rolling stats.");
+                DebugLogger.Log($"Error rolling stats: {ex.Message}");
                 return new BadRequestObjectResult(new
                 {
                     success = false,

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CharacterModel = CloudDragonLib.Models.Character;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Services
 {
@@ -10,7 +11,9 @@ namespace CloudDragonApi.Services
 
         public static int RollD20()
         {
-            return rng.Next(1, 21);
+            int roll = rng.Next(1, 21);
+            DebugLogger.Log($"Rolled d20: {roll}");
+            return roll;
         }
 
         public static (int roll, int total, bool success) RollSavingThrow(CharacterModel target, string ability, int dc)
@@ -24,6 +27,7 @@ namespace CloudDragonApi.Services
             int roll = RollD20();
             int total = roll + modifier;
             bool success = total >= dc;
+            DebugLogger.Log($"Saving throw for {ability}: roll={roll}, modifier={modifier}, total={total}, dc={dc}, success={success}");
 
             return (roll, total, success);
         }
@@ -33,6 +37,7 @@ namespace CloudDragonApi.Services
             int roll = RollD20();
             int total = roll + attackModifier;
             bool hit = total >= targetAC;
+            DebugLogger.Log($"Attack roll: roll={roll}, attackModifier={attackModifier}, total={total}, targetAC={targetAC}, hit={hit}");
 
             return (roll, total, hit);
         }
@@ -48,7 +53,13 @@ namespace CloudDragonApi.Services
 
             int total = 0;
             for (int i = 0; i < numDice; i++)
-                total += rng.Next(1, dieSize + 1);
+            {
+                int part = rng.Next(1, dieSize + 1);
+                total += part;
+                DebugLogger.Log($"Damage dice {i + 1}/{numDice}: {part}");
+            }
+
+            DebugLogger.Log($"Total damage for {damageDice}: {total}");
 
             return total;
         }
