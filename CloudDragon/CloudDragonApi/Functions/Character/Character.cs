@@ -53,6 +53,15 @@ namespace CloudDragonLib.Models
         [ModelField("The backstory of the character.")]
         public string? Backstory { get; set; }
 
+        [ModelField("The character's personal goals or ambitions.")]
+        public string? Goals { get; set; }
+
+        [ModelField("Friends, allies or organizations the character is connected to.")]
+        public string? Allies { get; set; }
+
+        [ModelField("Secrets the character hides from others.")]
+        public string? Secrets { get; set; }
+
         [ModelField("A quote that reflects this character's essence.")]
         public string? FlavorText { get; set; }
 

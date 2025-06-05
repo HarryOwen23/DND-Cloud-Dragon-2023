@@ -6,14 +6,17 @@ A DND related project for Elastacloud + beyond.
 
 This is an open source project created to provide support with building for both DND and other ideas.
 Things it can be used for: 
- - Character creation 
- - Campaign Assistance
- - Document different ideas user's would have in mind
- - World building help
+- Character creation
+- Campaign Assistance
+- Document different ideas user's would have in mind
+- World building help
+- Standard array and point-buy ability score tools
+- File-based combat session persistence
 
- <h2 align="left">Getting Started </h2>
+<h2 align="left">Getting Started </h2>
 
- 
+Use the Azure Functions API to generate ability scores and manage combat.
+`/roll-stats` rolls 4d6 drop lowest, while `/standard-array` returns the standard array.
 
  <h2 align="left">Hopes for the project</h2>
 
@@ -41,4 +44,5 @@ dotnet test CloudDragonLib/CloudDragonLib.sln
 ```
 
 This command builds the solution and runs all unit tests including `CloudDragon.Tests`.
+Additional tests verify the new standard array method and character generation features.
 

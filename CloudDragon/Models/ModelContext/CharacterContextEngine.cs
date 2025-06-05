@@ -31,8 +31,17 @@ namespace CloudDragonApi.Services
             if (string.IsNullOrWhiteSpace(character.Personality))
                 character.Personality = await GeneratePersonalityAsync(character);
 
-            if (string.IsNullOrWhiteSpace(character.Backstory))
-                character.Backstory = await GenerateBackstoryAsync(character);
+           if (string.IsNullOrWhiteSpace(character.Backstory))
+               character.Backstory = await GenerateBackstoryAsync(character);
+
+            if (string.IsNullOrWhiteSpace(character.Goals))
+                character.Goals = await GenerateGoalsAsync(character);
+
+            if (string.IsNullOrWhiteSpace(character.Allies))
+                character.Allies = await GenerateAlliesAsync(character);
+
+            if (string.IsNullOrWhiteSpace(character.Secrets))
+                character.Secrets = await GenerateSecretsAsync(character);
 
             if (string.IsNullOrWhiteSpace(character.FlavorText))
                 character.FlavorText = await GenerateFlavorQuoteAsync(character);
@@ -59,6 +68,27 @@ namespace CloudDragonApi.Services
         public async Task<string> GenerateBackstoryAsync(CharacterModel character)
         {
             string prompt = BuildFlavorfulPrompt(character);
+            return await _llmService.GenerateAsync(prompt);
+        }
+
+        public async Task<string> GenerateGoalsAsync(CharacterModel character)
+        {
+            string prompt = _promptBuilder.BuildPrompt(character) +
+                "\nList this character's primary goals or ambitions in a short paragraph.";
+            return await _llmService.GenerateAsync(prompt);
+        }
+
+        public async Task<string> GenerateAlliesAsync(CharacterModel character)
+        {
+            string prompt = _promptBuilder.BuildPrompt(character) +
+                "\nBriefly describe any notable allies or organizations connected to this character.";
+            return await _llmService.GenerateAsync(prompt);
+        }
+
+        public async Task<string> GenerateSecretsAsync(CharacterModel character)
+        {
+            string prompt = _promptBuilder.BuildPrompt(character) +
+                "\nReveal a secret this character keeps hidden from most people.";
             return await _llmService.GenerateAsync(prompt);
         }
 
