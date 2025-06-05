@@ -6,7 +6,7 @@ using System.Linq;
 /// </summary>
 public class CharacterStatsDice
 {
-    private static readonly Random rng = new();
+    private static readonly Random rng = Random.Shared;
 
     public int Strength { get; }
     public int Dexterity { get; }

@@ -7,7 +7,7 @@ namespace CloudDragonApi.Services
 {
     public static class CombatRollService
     {
-        private static readonly Random rng = new();
+        private static readonly Random rng = Random.Shared;
 
         public static int RollD20()
         {

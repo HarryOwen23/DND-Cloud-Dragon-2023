@@ -38,11 +38,10 @@ namespace CloudDragonApi.Functions.Combat
                     return new BadRequestObjectResult(new { success = false, error = "Invalid session data." });
 
                 // Roll initiative for each combatant
-                var rng = new Random();
                 session.Combatants ??= new List<Combatant>();
                 foreach (var c in session.Combatants)
                 {
-                    c.Initiative = rng.Next(1, 21) + c.InitiativeModifier;
+                    c.Initiative = Random.Shared.Next(1, 21) + c.InitiativeModifier;
                     c.Conditions ??= new List<string>();
                 }
 

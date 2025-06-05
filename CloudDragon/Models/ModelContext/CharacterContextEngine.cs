@@ -83,7 +83,7 @@ public class CharacterContextEngine
 
         return await Task.FromResult(stats); // keep async-compatible signature
 
-        int RollStat() => new Random().Next(8, 16); // adjust range as desired
+        int RollStat() => Random.Shared.Next(8, 16); // adjust range as desired
     }
 
     private string BuildFlavorfulPrompt(CharacterModel character)
