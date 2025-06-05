@@ -4,23 +4,30 @@ using System.Linq;
 
 namespace CloudDragonLib.Models
 {
+    [ModelContext]
     public class Character
     {
         // Identity
         public string Id { get; set; } = Guid.NewGuid().ToString();
+
+        [ModelField("The full name of the character.")]
         public string Name { get; set; }
 
-        // Single-class mode (default)
-        public string ClassName { get; set; }        public string Subclass { get; set; }
+        [ModelField("The race of the character, such as Elf, Dwarf, or Human.")]
+        public string Race { get; set; }
+
+        [ModelField("The age of the character.")]
+        public int? Age { get; set; }
+
+        [ModelField("The class of the character, such as Ranger, Wizard, or Paladin.")]
+        public string Class { get; set; }
+        public string Subclass { get; set; }
 
         // Multiclassing (optional)
         public Dictionary<string, int> Classes { get; set; } = new();
         public Dictionary<string, string> Subclasses { get; set; } = new();
 
-        // Race and Level
-        public string Race { get; set; }
-
-        // Dynamically calculated level
+        [ModelField("The level of the character.")]
         public int Level
         {
             get
@@ -37,12 +44,20 @@ namespace CloudDragonLib.Models
         private int _level;
 
         // Personality and flavor
-        public string Personality { get; set; }
+        [ModelField("The character's personality traits, goals, or quirks.")]
+        public string? Personality { get; set; }
+
+        [ModelField("A physical description of the character's appearance.")]
         public string? Appearance { get; set; }
+
+        [ModelField("The backstory of the character.")]
         public string? Backstory { get; set; }
+
+        [ModelField("A quote that reflects this character's essence.")]
         public string? FlavorText { get; set; }
 
         // Character mechanics
+        [ModelField("The character's core attributes such as strength, dexterity, etc.")]
         public Dictionary<string, int> Stats { get; set; } = new();
         public Dictionary<string, EquipmentItem> Equipped { get; set; } = new();
         public List<Item> Inventory { get; set; } = new();
@@ -61,6 +76,6 @@ namespace CloudDragonLib.Models
         public string PrimaryClass =>
             Classes != null && Classes.Count > 0
                 ? Classes.OrderByDescending(c => c.Value).First().Key
-                : ClassName;
+                : Class;
     }
 }
