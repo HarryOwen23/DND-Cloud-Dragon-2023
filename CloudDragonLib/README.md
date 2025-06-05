@@ -1,32 +1,19 @@
-<h1 align="center">DND-Cloud-Dragon (Name is a work in progress)</h1>
+# DND-Cloud-Dragon
 
-A DND related project for Elastacloud + beyond. 
+Libraries and data for the DND-Cloud-Dragon tools live here. The project provides utilities for building characters, equipment lists, feats and more.
 
-<h2 align="left">About</h2>
+## About
 
-This is an open source project created to provide support with building for both DND and other ideas.
-Things it can be used for: 
- - Character creation 
- - Campaign Assistance
- - Document different ideas user's would have in mind
- - World building help
+This portion of the repository contains the core library code used by the sample Azure Functions API and tests.
 
- <h2 align="left">Getting Started </h2>
+## Getting Started
 
- 
+Build the solution and run tests with the .NET SDK:
 
- <h2 align="left">Hopes for the project</h2>
+```bash
+dotnet test CloudDragonLib.sln
+```
 
-<p>With DND-Cloud-Dragon-2023, I hope to make an accessible tool to help dnd players make character building a nice and spicy experience!</p>
-<p>The tool will also be used for DM's to help with world builing for their campaigns.</p>
-<p>Massive thanks to all who want to contribute to the repo!</p>
+## Contributing
 
-<h2 align="left">Future Updates</h2>
-
-<h2 align="left">Disclaimer</h2>
-
-
-<h2 align="left">Credits</h2>
-
-
-<h3 align="left">Special Thanks</h3>
+Pull requests are welcome. Please ensure any new features include appropriate tests.

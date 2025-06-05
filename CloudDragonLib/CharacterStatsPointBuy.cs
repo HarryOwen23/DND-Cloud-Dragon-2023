@@ -4,7 +4,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Provides a simple implementation of the standard 27 point buy system.
 /// </summary>
-public class Character_Stats_Point_Buy
+public class CharacterStatsPointBuy
 {
     private static readonly string[] AbilityNames = {"STR", "DEX", "CON", "INT", "WIS", "CHA"};
 

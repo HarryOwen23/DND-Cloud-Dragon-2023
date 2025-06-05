@@ -6,7 +6,7 @@ public class PointBuyBuilderTests
     [Fact]
     public void GenerateStats_returns_stats_for_valid_input()
     {
-        var builder = new Character_Stats_Point_Buy();
+        var builder = new CharacterStatsPointBuy();
         var input = new Dictionary<string, int>
         {
             ["STR"] = 8,
@@ -29,7 +29,7 @@ public class PointBuyBuilderTests
     [Fact]
     public void GenerateStats_invalid_total_throws()
     {
-        var builder = new Character_Stats_Point_Buy();
+        var builder = new CharacterStatsPointBuy();
         var input = new Dictionary<string, int>
         {
             ["STR"] = 15,
