@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CloudDragonLib;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -21,6 +22,7 @@ namespace CloudDragonApi
             ILogger log)
         {
             log.LogInformation("ProcessJson triggered");
+            DebugLogger.Log("ProcessJson received a request");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             if (string.IsNullOrWhiteSpace(requestBody))
@@ -33,6 +35,7 @@ namespace CloudDragonApi
             try
             {
                 payload = JsonConvert.DeserializeObject<JObject>(requestBody);
+                DebugLogger.Log("Payload parsed successfully");
             }
             catch (JsonException ex)
             {
@@ -44,6 +47,7 @@ namespace CloudDragonApi
             if (string.IsNullOrEmpty(type))
             {
                 log.LogWarning("Missing 'type' in JSON payload.");
+                DebugLogger.Log("Missing 'type' in request payload");
                 return new BadRequestObjectResult(new { success = false, error = "Missing 'type' in JSON payload." });
             }
 
@@ -57,11 +61,13 @@ namespace CloudDragonApi
 
                         var builder = new Character_Stats_Point_Buy();
                         var resultStats = builder.GenerateStats(stats);
+                        DebugLogger.Log("Point-buy stats generated");
                         return new OkObjectResult(new { success = true, data = resultStats });
 
                     case "roll-stats":
                         var roller = new Character_Stats_Dice();
                         var statBlock = roller.RollStats();
+                        DebugLogger.Log("Stats rolled successfully");
                         return new OkObjectResult(new { success = true, data = statBlock });
 
                     default:
@@ -75,6 +81,7 @@ namespace CloudDragonApi
             catch (Exception ex)
             {
                 log.LogError(ex, "Error during processing.");
+                DebugLogger.Log($"ProcessJson failed: {ex.Message}");
                 return new BadRequestObjectResult(new { success = false, error = ex.Message });
             }
         }

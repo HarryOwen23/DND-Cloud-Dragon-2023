@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Services
 {
@@ -28,6 +29,7 @@ namespace CloudDragonApi.Services
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
+            DebugLogger.Log($"Retrieving spell slots for character {character.Id}");
             return new OkObjectResult(new { success = true, spellSlots = character.SpellSlots });
         }
         [FunctionName("UseSpellSlot")]
@@ -57,6 +59,7 @@ namespace CloudDragonApi.Services
                 return new BadRequestObjectResult(new { success = false, error = "No available spell slots at that level." });
 
             character.SpellSlots[level]--;
+            DebugLogger.Log($"Character {character.Id} used a level {level} spell slot. Remaining: {character.SpellSlots[level]}");
 
             await characterOut.AddAsync(character);
             return new OkObjectResult(new { success = true, remaining = character.SpellSlots[level] });
@@ -86,6 +89,8 @@ namespace CloudDragonApi.Services
             {
                 character.SpellSlots[key] = GetMaxSpellSlots(character.Level, key);
             }
+
+            DebugLogger.Log($"Character {character.Id} completed long rest. Slots reset.");
 
             await characterOut.AddAsync(character);
             return new OkObjectResult(new { success = true, spellSlots = character.SpellSlots });

@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -49,6 +50,8 @@ namespace CloudDragonApi
             int roll = rng.Next(1, 21); // d20
             int total = roll + input.Modifier;
             bool passed = total >= input.Dc;
+
+            DebugLogger.Log($"Skill check roll={roll}, modifier={input.Modifier}, dc={input.Dc}, total={total}, passed={passed}");
 
             log.LogInformation("Skill check: roll={Roll}, modifier={Modifier}, total={Total}, dc={Dc}, success={Success}",
                 roll, input.Modifier, total, input.Dc, passed);
