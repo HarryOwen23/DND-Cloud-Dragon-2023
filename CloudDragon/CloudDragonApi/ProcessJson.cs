@@ -51,7 +51,7 @@ namespace CloudDragonApi
                         var stats = payload["stats"]?.ToObject<Dictionary<string, int>>();
                         if (stats == null) throw new ArgumentException("Missing or invalid 'stats' for point-buy.");
 
-                        var builder = new Character_Stats_Point_Buy();
+                        var builder = new CharacterStatsPointBuy();
                         var resultStats = builder.GenerateStats(stats);
                         DebugLogger.Log("Point-buy stats generated");
                         return new OkObjectResult(new { success = true, data = resultStats });
