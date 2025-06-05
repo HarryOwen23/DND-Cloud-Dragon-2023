@@ -19,6 +19,9 @@ namespace CloudDragonLib.Models
         [ModelField("The age of the character.")]
         public int? Age { get; set; }
 
+        [ModelField("The character's background, such as Acolyte or Soldier.")]
+        public string? Background { get; set; }
+
         [ModelField("The class of the character, such as Ranger, Wizard, or Paladin.")]
         public string Class { get; set; }
         public string Subclass { get; set; }

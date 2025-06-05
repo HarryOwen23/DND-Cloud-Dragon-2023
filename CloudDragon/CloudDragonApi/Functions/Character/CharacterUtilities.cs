@@ -121,7 +121,7 @@ namespace CloudDragonApi.Character
             if (background == null)
                 return new NotFoundObjectResult(new { success = false, error = "Background not found." });
 
-            character.Race = background.name;
+            character.Background = background.name;
             await characterOut.AddAsync(character);
 
             return new OkObjectResult(new { success = true, background = background.name });
