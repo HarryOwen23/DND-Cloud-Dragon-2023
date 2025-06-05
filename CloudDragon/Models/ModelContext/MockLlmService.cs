@@ -1,16 +1,19 @@
 using System.Threading.Tasks;
 
-public class MockLlmService : ILlmService
+namespace CloudDragonApi.Services
 {
-    public Task<string> GenerateAsync(string prompt)
+    public class MockLlmService : ILlmService
     {
-        // Simple mock: just echoes the prompt back with a pretend "backstory".
-        var response =
-            "[MOCK BACKSTORY GENERATED]\n" +
-            "This character has a mysterious past tied to ancient ruins and forgotten lore.\n" +
-            "Prompt used:\n" +
-            prompt;
+        public Task<string> GenerateAsync(string prompt)
+        {
+            // Simple mock: just echoes the prompt back with a pretend "backstory".
+            var response =
+                "[MOCK BACKSTORY GENERATED]\n" +
+                "This character has a mysterious past tied to ancient ruins and forgotten lore.\n" +
+                "Prompt used:\n" +
+                prompt;
 
-        return Task.FromResult(response);
+            return Task.FromResult(response);
+        }
     }
 }

@@ -1,4 +1,9 @@
-public interface ILlmService
+using System.Threading.Tasks;
+
+namespace CloudDragonApi.Services
 {
-    Task<string> GenerateAsync(string prompt);
+    public interface ILlmService
+    {
+        Task<string> GenerateAsync(string prompt);
+    }
 }
