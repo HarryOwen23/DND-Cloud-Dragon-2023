@@ -69,10 +69,9 @@ public static class CombatFunctions
             if (session == null || string.IsNullOrWhiteSpace(session.Name))
                 return new BadRequestObjectResult(new { success = false, error = "Invalid session data." });
 
-            var rng = new Random();
             session.Combatants.ForEach(c =>
             {
-                c.Initiative = rng.Next(1, 21) + c.InitiativeModifier;
+                c.Initiative = Random.Shared.Next(1, 21) + c.InitiativeModifier;
             });
 
             session.Combatants = session.Combatants

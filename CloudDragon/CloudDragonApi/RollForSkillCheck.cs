@@ -46,8 +46,7 @@ namespace CloudDragonApi
                 return new BadRequestObjectResult(new { success = false, error = "Invalid JSON format." });
             }
 
-            var rng = new Random();
-            int roll = rng.Next(1, 21); // d20
+            int roll = Random.Shared.Next(1, 21); // d20
             int total = roll + input.Modifier;
             bool passed = total >= input.Dc;
 
