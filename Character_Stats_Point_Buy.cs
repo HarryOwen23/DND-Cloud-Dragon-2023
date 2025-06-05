@@ -1,77 +1,69 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-public class Character_Stats_Point_Buy
+/// <summary>
+/// Simple console utility for allocating ability scores using the standard
+/// 27-point buy system.
+/// </summary>
+public class CharacterStatsPointBuy
 {
-    // String array is set 
-    static void Main()
+    private static readonly string[] AbilityNames = {"STR", "DEX", "CON", "INT", "WIS", "CHA"};
+
+    public static void Main()
     {
-        string[] abilityScores = { "Str", "Dex", "Con", "Int", "Wis", "Cha" }
-        
-        // boolean to allow editing 
-        bool editing = true;
+        var stats = new int[AbilityNames.Length];
+        for (int i = 0; i < stats.Length; i++)
+            stats[i] = 8;
 
-        int[] CharStats = { 8, 8, 8, 8, 8, 8 };
-        int max_spend_points = 27; 
-
-        while (editing)
+        int points = 27;
+        while (true)
         {
-            int select = 0; 
-            int adjust = 0;
-            int result = 0;
-            int remainder = 0;
+            Console.WriteLine($"Points remaining: {points}");
+            for (int i = 0; i < AbilityNames.Length; i++)
+                Console.WriteLine($"{i + 1}) {AbilityNames[i]} = {stats[i]}");
 
-            // Console writelines 
-            Console.WriteLine("You have " + max_spend_points + " points to spend on your ability scores.");
-            Console.WriteLine("Select a number to adjust that ability's score:\n1) STR = " + abilityScores[0] + "\n2) DEX = " + abilityScores[1] + "\n3) CON = " + abilityScores[2] + "\n4) INT = " + abilityScores[3] + "\n5) WIS = " + abilityScores[4] + "\n6) CHA = " + abilityScores[5]);
-            Console.WriteLine("Select a number outside the above range to finalize your ability scores.");
+            Console.WriteLine("Choose ability number to modify or any other key to finish:");
+            if (!int.TryParse(Console.ReadLine(), out int selection) || selection < 1 || selection > 6)
+                break;
 
+            Console.Write("Enter adjustment amount: ");
+            if (!int.TryParse(Console.ReadLine(), out int adjust))
+                continue;
 
-            if (int.TryParse(Console.ReadLine(), out select))
+            int current = stats[selection - 1];
+            int proposed = current + adjust;
+            if (proposed < 8 || proposed > 15)
             {
-                while (select >= 1 && select <= 6)
-                {
-                    Console.WriteLine("Enter the number of points to adjust the score: ");
-                    if (int.TryParse(Console.ReadLine(), out adjust))
-                    {
-                        if (adjust <= points && adjust >= -abilityScores[select - 1] + 8)
-                        {
-                            max_spend_points -= adjust;
-                            stats[select - 1] += adjust;
-                            Console.WriteLine("New " + abilityScores[select - 1] + " score: " + abilityScores[select - 1]);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Invalid entry. You don't have enough points or the value would exceed 15.");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid entry. Please enter a valid integer.");
-                    }
-
-                    Console.WriteLine("You have " + max_spend_points + " points left.");
-                    Console.WriteLine("Select a number to adjust that ability's score:\n1) STR = " + abilityScores[0] + "\n2) DEX = " + abilityScores[1] + "\n3) CON = " + abilityScores[2] + "\n4) INT = " + abilityScores[3] + "\n5) WIS = " + abilityScores[4] + "\n6) CHA = " + abilityScores[5]);
-                    Console.WriteLine("Select a number outside the above range to finalize your ability scores.");
-
-                    if (!int.TryParse(Console.ReadLine(), out select))
-                        break;
-                }
-
-                editing = false;
+                Console.WriteLine("Scores must be between 8 and 15.");
+                continue;
             }
-            else
+
+            int cost = Cost(proposed) - Cost(current);
+            if (points - cost < 0)
             {
-                Console.WriteLine("Invalid entry; try again.");
+                Console.WriteLine("Not enough points.");
+                continue;
             }
+
+            points -= cost;
+            stats[selection - 1] = proposed;
         }
 
-        Console.WriteLine("Ability Score Adjustment Completed!");
-        Console.WriteLine("The Final Scores Are:");
-        for (int i = 0; i < abilityScores.Length; i++)
-        {
-            Console.WriteLine(abilities[i] + ": " + abilityScores[i]);
-        }
+        Console.WriteLine("Final ability scores:");
+        for (int i = 0; i < AbilityNames.Length; i++)
+            Console.WriteLine($"{AbilityNames[i]}: {stats[i]}");
     }
-}
+
+    private static int Cost(int score) => score switch
+    {
+        8 => 0,
+        9 => 1,
+        10 => 2,
+        11 => 3,
+        12 => 4,
+        13 => 5,
+        14 => 7,
+        15 => 9,
+        _ => throw new ArgumentOutOfRangeException(nameof(score))
+    };
 }
