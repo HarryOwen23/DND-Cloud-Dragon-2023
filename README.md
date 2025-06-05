@@ -46,3 +46,5 @@ dotnet test CloudDragonLib/CloudDragonLib.sln
 This command builds the solution and runs all unit tests including `CloudDragon.Tests`.
 Additional tests verify the new standard array method and character generation features.
 
+CI runs these tests automatically using GitHub Actions. See `.github/workflows/dotnet.yml` for details.
+

@@ -24,24 +24,16 @@ namespace CloudDragonApi
             log.LogInformation("ProcessJson triggered");
             DebugLogger.Log("ProcessJson received a request");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            if (string.IsNullOrWhiteSpace(requestBody))
+            if (!ApiRequestHelper.IsAuthorized(req, log))
             {
-                log.LogWarning("Request body is empty.");
-                return new BadRequestObjectResult(new { success = false, error = "Request body is empty." });
+                return new UnauthorizedResult();
             }
 
-            JObject payload;
-            try
-            {
-                payload = JsonConvert.DeserializeObject<JObject>(requestBody);
-                DebugLogger.Log("Payload parsed successfully");
-            }
-            catch (JsonException ex)
-            {
-                log.LogError(ex, "Invalid JSON format.");
+            var payload = await ApiRequestHelper.ReadJsonAsync<JObject>(req, log);
+            if (payload == null)
                 return new BadRequestObjectResult(new { success = false, error = "Invalid JSON format." });
-            }
+
+            DebugLogger.Log("Payload parsed successfully");
 
             string type = payload?["type"]?.ToString()?.ToLowerInvariant();
             if (string.IsNullOrEmpty(type))

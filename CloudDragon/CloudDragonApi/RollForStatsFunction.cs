@@ -19,6 +19,11 @@ namespace CloudDragonApi
         {
             log.LogInformation("RollStats endpoint triggered.");
 
+            if (!ApiRequestHelper.IsAuthorized(req, log))
+            {
+                return new UnauthorizedResult();
+            }
+
             try
             {
                 var roller = new Character_Stats_Dice();
