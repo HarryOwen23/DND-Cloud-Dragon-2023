@@ -32,6 +32,12 @@ public static class CombatFunctions
         if (session == null)
             return new NotFoundObjectResult(new { success = false, error = "Session not found." });
 
+        if (session.Combatants == null || session.Combatants.Count == 0)
+            return new BadRequestObjectResult(new { success = false, error = "No combatants available." });
+
+        if (session.TurnIndex < 0 || session.TurnIndex >= session.Combatants.Count)
+            session.TurnIndex = 0;
+
         var currentCombatant = session.Combatants[session.TurnIndex];
         session.TurnIndex++;
         if (session.TurnIndex >= session.Combatants.Count)
@@ -51,72 +57,7 @@ public static class CombatFunctions
         });
     }
 
-    [FunctionName("CreateCombatSession")]
-    public static async Task<IActionResult> CreateCombatSession(
-        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat")] HttpRequest req,
-        [CosmosDB(
-            databaseName: "CloudDragonDB",
-            containerName: "CombatSessions",
-            Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
-        ILogger log)
-    {
-        var body = await new StreamReader(req.Body).ReadToEndAsync();
-        CombatSession session;
-
-        try
-        {
-            session = JsonConvert.DeserializeObject<CombatSession>(body);
-            if (session == null || string.IsNullOrWhiteSpace(session.Name))
-                return new BadRequestObjectResult(new { success = false, error = "Invalid session data." });
-
-            session.Combatants.ForEach(c =>
-            {
-                c.Initiative = Random.Shared.Next(1, 21) + c.InitiativeModifier;
-            });
-
-            session.Combatants = session.Combatants
-                .OrderByDescending(c => c.Initiative)
-                .ToList();
-
-            await sessionOut.AddAsync(session);
-            return new OkObjectResult(new { success = true, id = session.Id });
-        }
-        catch (Exception ex)
-        {
-            log.LogError(ex, "Error creating combat session.");
-            return new BadRequestObjectResult(new { success = false, error = ex.Message });
-        }
-    }
-
-    [FunctionName("EndCombatSession")]
-    public static async Task<IActionResult> EndCombatSession(
-        [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "combat/{id}")] HttpRequest req,
-        [CosmosDB(
-            databaseName: "CloudDragonDB",
-            containerName: "CombatSessions",
-            Connection = "CosmosDBConnection",
-            Id = "{id}",
-            PartitionKey = "{id}")] CombatSession session,
-        [CosmosDB(
-            databaseName: "CloudDragonDB",
-            containerName: "CombatSessions",
-            Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
-        string id,
-        ILogger log)
-    {
-        if (session == null)
-            return new NotFoundObjectResult(new { success = false, error = "Combat session not found." });
-
-        session.Name += " (ENDED)";
-        session.Combatants.ForEach(c => c.Conditions.Add("Archived"));
-
-        await sessionOut.AddAsync(session);
-
-        return new OkObjectResult(new
-        {
-            success = true,
-            message = "Combat session marked as ended.",
-            sessionId = session.Id
-        });
-    }
+    // The CreateCombatSession and EndCombatSession functions were moved to
+    // dedicated files.  Keeping only AdvanceTurn here avoids duplicate
+    // FunctionName attributes which caused runtime indexing errors.
 }
