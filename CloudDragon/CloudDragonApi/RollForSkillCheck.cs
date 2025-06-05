@@ -1,12 +1,10 @@
 using System;
-using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
@@ -26,23 +24,14 @@ namespace CloudDragonApi
         {
             log.LogInformation("RollForSkillCheck triggered");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            if (string.IsNullOrWhiteSpace(requestBody))
+            if (!ApiRequestHelper.IsAuthorized(req, log))
             {
-                log.LogWarning("Empty request body.");
-                return new BadRequestObjectResult(new { success = false, error = "Request body is empty." });
+                return new UnauthorizedResult();
             }
 
-            SkillCheckInput input;
-            try
+            var input = await ApiRequestHelper.ReadJsonAsync<SkillCheckInput>(req, log);
+            if (input == null)
             {
-                input = JsonConvert.DeserializeObject<SkillCheckInput>(requestBody);
-                if (input == null)
-                    throw new JsonException("Deserialized input is null.");
-            }
-            catch (JsonException ex)
-            {
-                log.LogError(ex, "Invalid JSON input.");
                 return new BadRequestObjectResult(new { success = false, error = "Invalid JSON format." });
             }
 

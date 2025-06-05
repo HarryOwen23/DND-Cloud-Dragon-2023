@@ -4,6 +4,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -15,6 +16,10 @@ namespace CloudDragonApi
             ILogger log)
         {
             log.LogInformation("StandardArray endpoint triggered.");
+            if (!ApiRequestHelper.IsAuthorized(req, log))
+            {
+                return new UnauthorizedResult();
+            }
             var stats = CharacterStatsStandardArray.Generate();
             return await Task.FromResult(new OkObjectResult(new { success = true, data = stats }));
         }

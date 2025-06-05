@@ -6,9 +6,8 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using CloudDragonLib.Models;
-using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Functions.Character
 {
@@ -25,9 +24,12 @@ namespace CloudDragonApi.Functions.Character
         {
             log.LogRequestDetails(req, nameof(CreateCharacter));
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            log.LogDebug("Request Body: {Body}", requestBody);
-            var character = JsonConvert.DeserializeObject<Character>(requestBody);
+            if (!ApiRequestHelper.IsAuthorized(req, log))
+            {
+                return new UnauthorizedResult();
+            }
+
+            var character = await ApiRequestHelper.ReadJsonAsync<Character>(req, log);
 
             if (character == null || string.IsNullOrWhiteSpace(character.Name))
                 return new BadRequestObjectResult(new { success = false, error = "Invalid character data." });
