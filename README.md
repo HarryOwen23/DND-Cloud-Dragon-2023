@@ -30,3 +30,15 @@ Things it can be used for:
 
 
 <h3 align="left">Special Thanks</h3>
+
+### Running Tests
+
+Ensure the [.NET SDK](https://dotnet.microsoft.com/download) is installed.
+From the repository root execute:
+
+```bash
+dotnet test CloudDragonLib/CloudDragonLib.sln
+```
+
+This command builds the solution and runs all unit tests including `CloudDragon.Tests`.
+
