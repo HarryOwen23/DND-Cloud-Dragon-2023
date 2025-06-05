@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CloudDragonApi;
 
 public static class UpdateCharacterFunction
 {
@@ -27,10 +28,16 @@ public static class UpdateCharacterFunction
         string id,
         ILogger log)
     {
+        log.LogRequestDetails(req, nameof(UpdateCharacter));
+
         if (existingChar == null)
+        {
+            log.LogWarning("Character {Id} not found", id);
             return new NotFoundObjectResult(new { success = false, error = "Character not found." });
+        }
 
         string body = await new StreamReader(req.Body).ReadToEndAsync();
+        log.LogDebug("Update payload: {Body}", body);
         var updates = JsonConvert.DeserializeObject<Character>(body);
 
         if (updates == null)
@@ -44,6 +51,7 @@ public static class UpdateCharacterFunction
         existingChar.Stats = updates.Stats?.Count > 0 ? updates.Stats : existingChar.Stats;
 
         await characterOut.AddAsync(existingChar);
+        log.LogInformation("Character {Id} updated", existingChar.Id);
 
         return new OkObjectResult(new { success = true, updated = existingChar });
     }

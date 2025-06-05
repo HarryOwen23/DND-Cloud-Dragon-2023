@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using CloudDragonApi;
 using Newtonsoft.Json;
 using CloudDragonApi.Models;
 
@@ -24,7 +25,10 @@ namespace CloudDragonApi.Functions.Combat
                 Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(CreateCombatSession));
+
             var body = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogDebug("Request Body: {Body}", body);
             CombatSession session;
 
             try
@@ -48,6 +52,7 @@ namespace CloudDragonApi.Functions.Combat
                     .ToList();
 
                 await sessionOut.AddAsync(session);
+                log.LogInformation("Combat session {Id} created with {Count} combatants", session.Id, session.Combatants.Count);
                 return new OkObjectResult(new { success = true, id = session.Id });
             }
             catch (Exception ex)
