@@ -6,9 +6,10 @@ using Newtonsoft.Json;
 public class DNDClasses
 {
     [JsonProperty("Class Name")]
-    public string className { get; set; }
-    public string classDescription { get; set; }
-    public string ClassName { get; }
+    public string ClassName { get; set; }
+
+    [JsonProperty("Class Description")]
+    public string ClassDescription { get; set; }
 
     public DNDClasses(string className)
     {
