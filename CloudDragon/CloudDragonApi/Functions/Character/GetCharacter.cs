@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 using System.Threading.Tasks;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Character
 {
@@ -23,9 +24,11 @@ namespace CloudDragonApi.Character
             ILogger log)
         {
             log.LogInformation("GetCharacter triggered for ID: {Id}", id);
+            DebugLogger.Log($"GetCharacter requested for {id}");
 
             if (character == null)
             {
+                DebugLogger.Log($"Character {id} not found");
                 return new NotFoundObjectResult(new
                 {
                     success = false,
@@ -33,6 +36,7 @@ namespace CloudDragonApi.Character
                 });
             }
 
+            DebugLogger.Log($"Returning character {character.Id}");
             return new OkObjectResult(new
             {
                 success = true,

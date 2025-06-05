@@ -3,6 +3,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Functions
 {
@@ -13,7 +14,8 @@ namespace CloudDragonApi.Functions
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
             ILogger log)
         {
-            return new OkObjectResult(new
+            DebugLogger.Log("Describe API endpoint hit");
+            var result = new
             {
                 success = true,
                 endpoints = new[]
@@ -26,7 +28,9 @@ namespace CloudDragonApi.Functions
                     "POST /character/{id}/inventory",
                     "GET /conditions"
                 }
-            });
+            };
+            DebugLogger.Log("Returning list of endpoints");
+            return new OkObjectResult(result);
         }
     }
 }

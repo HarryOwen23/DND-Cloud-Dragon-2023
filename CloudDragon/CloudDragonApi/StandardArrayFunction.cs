@@ -16,11 +16,13 @@ namespace CloudDragonApi
             ILogger log)
         {
             log.LogInformation("StandardArray endpoint triggered.");
+            DebugLogger.Log("StandardArray endpoint hit");
             if (!ApiRequestHelper.IsAuthorized(req, log))
             {
                 return new UnauthorizedResult();
             }
             var stats = CharacterStatsStandardArray.Generate();
+            DebugLogger.Log("Returning standard array values");
             return await Task.FromResult(new OkObjectResult(new { success = true, data = stats }));
         }
     }

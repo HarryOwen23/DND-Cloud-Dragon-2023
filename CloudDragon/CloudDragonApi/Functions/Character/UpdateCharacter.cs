@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 public static class UpdateCharacterFunction
 {
@@ -29,16 +30,19 @@ public static class UpdateCharacterFunction
         ILogger log)
     {
         log.LogRequestDetails(req, nameof(UpdateCharacter));
+        DebugLogger.Log($"UpdateCharacter called for {id}");
 
         if (existingChar == null)
         {
             log.LogWarning("Character {Id} not found", id);
+            DebugLogger.Log($"Character {id} not found for update");
             return new NotFoundObjectResult(new { success = false, error = "Character not found." });
         }
 
         string body = await new StreamReader(req.Body).ReadToEndAsync();
         log.LogDebug("Update payload: {Body}", body);
         var updates = JsonConvert.DeserializeObject<Character>(body);
+        DebugLogger.Log("Parsed update payload");
 
         if (updates == null)
             return new BadRequestObjectResult(new { success = false, error = "Invalid character update payload." });
@@ -52,6 +56,7 @@ public static class UpdateCharacterFunction
 
         await characterOut.AddAsync(existingChar);
         log.LogInformation("Character {Id} updated", existingChar.Id);
+        DebugLogger.Log($"Character {existingChar.Id} updated");
 
         return new OkObjectResult(new { success = true, updated = existingChar });
     }

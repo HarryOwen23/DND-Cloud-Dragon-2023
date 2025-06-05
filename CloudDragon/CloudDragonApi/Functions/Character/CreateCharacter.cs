@@ -23,6 +23,7 @@ namespace CloudDragonApi.Functions.Character
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(CreateCharacter));
+            DebugLogger.Log("CreateCharacter endpoint hit");
 
             if (!ApiRequestHelper.IsAuthorized(req, log))
             {
@@ -30,12 +31,14 @@ namespace CloudDragonApi.Functions.Character
             }
 
             var character = await ApiRequestHelper.ReadJsonAsync<Character>(req, log);
+            DebugLogger.Log("Character payload parsed");
 
             if (character == null || string.IsNullOrWhiteSpace(character.Name))
                 return new BadRequestObjectResult(new { success = false, error = "Invalid character data." });
 
             await characterOut.AddAsync(character);
             log.LogInformation("Character {Id} created", character.Id);
+            DebugLogger.Log($"Character {character.Id} created");
 
             return new OkObjectResult(new { success = true, id = character.Id });
         }
