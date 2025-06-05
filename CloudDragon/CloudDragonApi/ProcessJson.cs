@@ -57,8 +57,16 @@ namespace CloudDragonApi
                         return new OkObjectResult(new { success = true, data = resultStats });
 
                     case "roll-stats":
-                        var roller = new Character_Stats_Dice();
-                        var statBlock = roller.RollStats();
+                        var diceStats = CharacterStatsDice.Generate();
+                        var statBlock = new[]
+                        {
+                            diceStats.Strength,
+                            diceStats.Dexterity,
+                            diceStats.Constitution,
+                            diceStats.Intelligence,
+                            diceStats.Wisdom,
+                            diceStats.Charisma
+                        };
                         DebugLogger.Log("Stats rolled successfully");
                         return new OkObjectResult(new { success = true, data = statBlock });
 

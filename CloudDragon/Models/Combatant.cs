@@ -11,6 +11,12 @@ namespace CloudDragonApi.Models
         public int AC { get; set; }
 
         public List<string> Conditions { get; set; } = new();
+
+        /// <summary>
+        /// Optional ability scores for this combatant keyed by ability name
+        /// (e.g. "Dexterity"). Used for initiative and other rolls.
+        /// </summary>
+        public Dictionary<string, int> Stats { get; set; } = new();
         public bool IsDowned => HP <= 0;
     }
 }
