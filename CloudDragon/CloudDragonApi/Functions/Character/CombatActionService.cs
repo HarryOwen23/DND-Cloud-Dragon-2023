@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using CloudDragonLib.Models;
+using CloudDragonApi.Models;
 
 namespace CloudDragonApi.Services
 {
@@ -8,7 +8,7 @@ namespace CloudDragonApi.Services
     {
         private static readonly Random rng = Random.Shared;
 
-        public static (bool hit, int roll, int total) ResolveAttackRoll(Character attacker, Character defender, int attackModifier = 0)
+        public static (bool hit, int roll, int total) ResolveAttackRoll(Combatant attacker, Combatant defender, int attackModifier = 0)
         {
             int roll = rng.Next(1, 21); // d20
             int total = roll + attackModifier;
@@ -16,7 +16,7 @@ namespace CloudDragonApi.Services
             return (hit, roll, total);
         }
 
-        public static void ApplyCondition(Character combatant, string condition)
+        public static void ApplyCondition(Combatant combatant, string condition)
         {
             if (combatant == null || string.IsNullOrEmpty(condition))
                 return;
@@ -27,7 +27,7 @@ namespace CloudDragonApi.Services
                 combatant.Conditions.Add(condition);
         }
 
-        public static void RemoveCondition(Character combatant, string condition)
+        public static void RemoveCondition(Combatant combatant, string condition)
         {
             if (combatant?.Conditions == null)
                 return;
@@ -35,7 +35,7 @@ namespace CloudDragonApi.Services
             combatant.Conditions.Remove(condition);
         }
 
-        public static void ApplyCoverBonus(Character combatant, string coverType)
+        public static void ApplyCoverBonus(Combatant combatant, string coverType)
         {
             if (combatant == null || string.IsNullOrWhiteSpace(coverType))
                 return;
@@ -51,14 +51,15 @@ namespace CloudDragonApi.Services
             ApplyCondition(combatant, $"Cover ({coverType})");
         }
 
-        public static void HandleDodge(Character combatant)
+        public static void HandleDodge(Combatant combatant)
         {
             ApplyCondition(combatant, "Dodging");
         }
 
-       public static void ApplyDamage(Character target, int damage)
+       public static void ApplyDamage(Combatant target, int damage)
         {
             target.HP -= damage;
+            target.Conditions ??= new List<string>();
             if (target.HP <= 0)
             {
                 target.HP = 0;

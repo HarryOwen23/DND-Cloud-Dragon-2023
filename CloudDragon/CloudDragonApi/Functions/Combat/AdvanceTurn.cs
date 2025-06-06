@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonApi.Models;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 public static class CombatFunctions
 {
@@ -29,6 +31,9 @@ public static class CombatFunctions
         string id,
         ILogger log)
     {
+        log.LogRequestDetails(req, nameof(AdvanceTurn));
+        DebugLogger.Log($"Advancing turn for session {id}");
+
         if (session == null)
             return new NotFoundObjectResult(new { success = false, error = "Session not found." });
 

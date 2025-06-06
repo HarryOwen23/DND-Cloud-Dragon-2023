@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using CloudDragonLib.Models;
+using CloudDragonApi.Models;
 
 namespace CloudDragonApi.Services
 {
     public static class CombatConditionsService
     {
-        public static void ApplyCondition(Character combatant, string condition)
+        public static void ApplyCondition(Combatant combatant, string condition)
         {
             if (combatant == null || string.IsNullOrWhiteSpace(condition))
                 return;
@@ -16,7 +16,7 @@ namespace CloudDragonApi.Services
                 combatant.Conditions.Add(condition);
         }
 
-        public static void RemoveCondition(Character combatant, string condition)
+        public static void RemoveCondition(Combatant combatant, string condition)
         {
             if (combatant?.Conditions == null)
                 return;
@@ -24,12 +24,12 @@ namespace CloudDragonApi.Services
             combatant.Conditions.Remove(condition);
         }
 
-        public static bool HasCondition(Character combatant, string condition)
+        public static bool HasCondition(Combatant combatant, string condition)
         {
             return combatant?.Conditions != null && combatant.Conditions.Contains(condition);
         }
 
-        public static void ClearAllConditions(Character combatant)
+        public static void ClearAllConditions(Combatant combatant)
         {
             combatant?.Conditions?.Clear();
         }

@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonApi.Services;
-using CloudDragonLib.Models;
+using CloudDragonApi.Models;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.CombatConditions
 {
@@ -31,6 +33,9 @@ namespace CloudDragonApi.CombatConditions
                 Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(RemoveCondition));
+            DebugLogger.Log($"Removing condition from {combatantId} in session {sessionId}");
+
             if (session == null)
                 return new NotFoundObjectResult(new { success = false, error = "Combat session not found." });
 

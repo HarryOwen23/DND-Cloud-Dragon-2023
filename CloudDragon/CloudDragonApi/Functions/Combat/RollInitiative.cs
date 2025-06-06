@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonApi.Models; // Make sure CombatSession is from the correct namespace
 using Newtonsoft.Json;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Combat
 {
@@ -30,6 +32,9 @@ namespace CloudDragonApi.Combat
                 Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(RollInitiative));
+            DebugLogger.Log($"Rolling initiative for session {sessionId}");
+
             if (session == null)
             {
                 log.LogWarning("Combat session not found: {SessionId}", sessionId);
