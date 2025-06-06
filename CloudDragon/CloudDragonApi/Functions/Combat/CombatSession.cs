@@ -28,47 +28,4 @@ namespace CloudDragonApi.Models
 
         public List<string> Log { get; set; } = new();
     }
-    public static class CreateCombatSessionFunction
-    {
-        [FunctionName("CreateCombatSession")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat")] HttpRequest req,
-            [CosmosDB(
-                databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
-            ILogger log)
-        {
-            var body = await new StreamReader(req.Body).ReadToEndAsync();
-            CombatSession session;
-
-            try
-            {
-                session = JsonConvert.DeserializeObject<CombatSession>(body);
-                if (session == null || string.IsNullOrWhiteSpace(session.Name))
-                {
-                    return new BadRequestObjectResult(new { success = false, error = "Invalid session data." });
-                }
-
-                var rng = new Random();
-                foreach (var c in session.Combatants)
-                {
-                    c.Initiative = rng.Next(1, 21) + c.InitiativeModifier;
-                }
-
-                session.Combatants = session.Combatants
-                    .OrderByDescending(c => c.Initiative)
-                    .ToList();
-
-                await sessionOut.AddAsync(session);
-
-                return new OkObjectResult(new { success = true, id = session.Id });
-            }
-            catch (Exception ex)
-            {
-                log.LogError(ex, "Error creating combat session.");
-                return new BadRequestObjectResult(new { success = false, error = ex.Message });
-            }
-        }
-    }
 }

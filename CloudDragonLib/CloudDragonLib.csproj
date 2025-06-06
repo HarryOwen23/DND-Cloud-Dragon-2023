@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -23,7 +23,7 @@
     <None Update="Armor\Don_Doff_Times.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Armor\Sheild.json">
+    <None Update="Armor\Shield.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Background\Backgrounds.json">
@@ -650,7 +650,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="bin\Debug\net6.0\" />
+    <Folder Include="bin\Debug\net8.0\" />
   </ItemGroup>
 
 </Project>

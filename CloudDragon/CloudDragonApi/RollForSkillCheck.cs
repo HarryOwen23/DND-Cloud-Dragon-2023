@@ -1,12 +1,11 @@
 using System;
-using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -25,30 +24,22 @@ namespace CloudDragonApi
         {
             log.LogInformation("RollForSkillCheck triggered");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            if (string.IsNullOrWhiteSpace(requestBody))
+            if (!ApiRequestHelper.IsAuthorized(req, log))
             {
-                log.LogWarning("Empty request body.");
-                return new BadRequestObjectResult(new { success = false, error = "Request body is empty." });
+                return new UnauthorizedResult();
             }
 
-            SkillCheckInput input;
-            try
+            var input = await ApiRequestHelper.ReadJsonAsync<SkillCheckInput>(req, log);
+            if (input == null)
             {
-                input = JsonConvert.DeserializeObject<SkillCheckInput>(requestBody);
-                if (input == null)
-                    throw new JsonException("Deserialized input is null.");
-            }
-            catch (JsonException ex)
-            {
-                log.LogError(ex, "Invalid JSON input.");
                 return new BadRequestObjectResult(new { success = false, error = "Invalid JSON format." });
             }
 
-            var rng = new Random();
-            int roll = rng.Next(1, 21); // d20
+            int roll = Random.Shared.Next(1, 21); // d20
             int total = roll + input.Modifier;
             bool passed = total >= input.Dc;
+
+            DebugLogger.Log($"Skill check roll={roll}, modifier={input.Modifier}, dc={input.Dc}, total={total}, passed={passed}");
 
             log.LogInformation("Skill check: roll={Roll}, modifier={Modifier}, total={Total}, dc={Dc}, success={Success}",
                 roll, input.Modifier, total, input.Dc, passed);

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using CloudDragonLib;
 using System;
 using System.Threading.Tasks;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -18,22 +19,38 @@ namespace CloudDragonApi
         {
             log.LogInformation("RollStats endpoint triggered.");
 
+            if (!ApiRequestHelper.IsAuthorized(req, log))
+            {
+                return new UnauthorizedResult();
+            }
+
             try
             {
-                var roller = new Character_Stats_Dice();
-                var statBlock = roller.RollStats();
+                var statBlock = CharacterStatsDice.Generate();
+                var result = new[]
+                {
+                    statBlock.Strength,
+                    statBlock.Dexterity,
+                    statBlock.Constitution,
+                    statBlock.Intelligence,
+                    statBlock.Wisdom,
+                    statBlock.Charisma
+                };
+
+                DebugLogger.Log($"Generated stat block: {string.Join(",", result)}");
 
                 log.LogInformation("Stats rolled successfully.");
 
                 return new OkObjectResult(new
                 {
                     success = true,
-                    data = statBlock
+                    data = result
                 });
             }
             catch (Exception ex)
             {
                 log.LogError(ex, "An error occurred while rolling stats.");
+                DebugLogger.Log($"Error rolling stats: {ex.Message}");
                 return new BadRequestObjectResult(new
                 {
                     success = false,

@@ -6,7 +6,7 @@ namespace CloudDragonApi.Services
 {
     public static class CombatActionService
     {
-        private static readonly Random rng = new Random();
+        private static readonly Random rng = Random.Shared;
 
         public static (bool hit, int roll, int total) ResolveAttackRoll(Character attacker, Character defender, int attackModifier = 0)
         {

@@ -2,11 +2,11 @@ using System;
 using System.Linq;
 
 /// <summary>
-/// Generates random DND character ability scores using 4d6 drop lowest.
+/// Utility for generating random ability scores using the standard 4d6 drop lowest method.
 /// </summary>
 public class CharacterStatsDice
 {
-    private static readonly Random rng = new();
+    private static readonly Random rng = Random.Shared;
 
     public int Strength { get; }
     public int Dexterity { get; }
@@ -14,7 +14,8 @@ public class CharacterStatsDice
     public int Intelligence { get; }
     public int Wisdom { get; }
     public int Charisma { get; }
-    public int Hitpoints { get; }
+
+    public int Hitpoints => 10 + Modifier(Constitution);
 
     public CharacterStatsDice(int str, int dex, int con, int intel, int wis, int cha)
     {
@@ -24,7 +25,6 @@ public class CharacterStatsDice
         Intelligence = intel;
         Wisdom = wis;
         Charisma = cha;
-        Hitpoints = 10 + Modifier(con);
     }
 
     public static int Modifier(int score) => (int)Math.Floor((score - 10) / 2.0);

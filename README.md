@@ -1,44 +1,47 @@
-<h1 align="center">DND-Cloud-Dragon (Name is a work in progress)</h1>
+# DND-Cloud-Dragon
 
-A DND related project for Elastacloud + beyond. 
+This repository hosts utilities and tools for Dungeons & Dragons character creation and world building.
 
-<h2 align="left">About</h2>
+## About
 
-This is an open source project created to provide support with building for both DND and other ideas.
-Things it can be used for: 
- - Character creation 
- - Campaign Assistance
- - Document different ideas user's would have in mind
- - World building help
+DND-Cloud-Dragon began as an internal Elastacloud project and is now open source. It contains helpers for:
 
- <h2 align="left">Getting Started </h2>
+- Character creation
+- Campaign assistance
+- Documenting ideas
+- World building support
+- Standard array and point-buy calculators
+- File-based combat session persistence
 
- 
+## Getting Started
 
- <h2 align="left">Hopes for the project</h2>
+Use the Azure Functions API to generate ability scores and manage combat. For example:
 
-<p>With DND-Cloud-Dragon-2023, I hope to make an accessible tool to help dnd players make character building a nice and spicy experience!</p>
-<p>The tool will also be used for DM's to help with world builing for their campaigns.</p>
-<p>Massive thanks to all who want to contribute to the repo!</p>
+- `/roll-stats` rolls 4d6 dropping the lowest die
+- `/standard-array` returns the standard ability score array
 
-<h2 align="left">Future Updates</h2>
+## Hopes for the Project
 
-<h2 align="left">Disclaimer</h2>
+Our goal is to make character building fast and enjoyable for players and Dungeon Masters alike. Contributions are welcome!
 
+## Future Updates
 
-<h2 align="left">Credits</h2>
+Stay tuned for more features and improvements.
 
+## Disclaimer
 
-<h3 align="left">Special Thanks</h3>
+This project is provided as-is and is not affiliated with Wizards of the Coast.
 
-### Running Tests
+## Credits
 
-Ensure the [.NET SDK](https://dotnet.microsoft.com/download) is installed.
-From the repository root execute:
+Special thanks to everyone contributing to the project.
+
+## Running Tests
+
+Ensure the [.NET SDK](https://dotnet.microsoft.com/download) is installed. From the repository root run:
 
 ```bash
 dotnet test CloudDragonLib/CloudDragonLib.sln
 ```
 
-This command builds the solution and runs all unit tests including `CloudDragon.Tests`.
-
+This command builds the solution and executes all unit tests, including those in `CloudDragon.Tests`. Continuous integration runs these tests automatically via GitHub Actions. See `.github/workflows/dotnet.yml` for details.

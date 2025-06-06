@@ -1,15 +1,18 @@
 using System;
 
-[AttributeUsage(AttributeTargets.Class)]
-public class ModelContextAttribute : Attribute { }
-
-[AttributeUsage(AttributeTargets.Property)]
-public class ModelFieldAttribute : Attribute
+namespace CloudDragonApi.Services
 {
-    public string Description { get; }
+    [AttributeUsage(AttributeTargets.Class)]
+    public class ModelContextAttribute : Attribute { }
 
-    public ModelFieldAttribute(string description)
+    [AttributeUsage(AttributeTargets.Property)]
+    public class ModelFieldAttribute : Attribute
     {
-        Description = description;
+        public string Description { get; }
+
+        public ModelFieldAttribute(string description)
+        {
+            Description = description;
+        }
     }
 }

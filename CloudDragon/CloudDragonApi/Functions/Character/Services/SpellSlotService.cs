@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Services
 {
@@ -28,6 +30,7 @@ namespace CloudDragonApi.Services
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
+            DebugLogger.Log($"Retrieving spell slots for character {character.Id}");
             return new OkObjectResult(new { success = true, spellSlots = character.SpellSlots });
         }
         [FunctionName("UseSpellSlot")]
@@ -57,6 +60,7 @@ namespace CloudDragonApi.Services
                 return new BadRequestObjectResult(new { success = false, error = "No available spell slots at that level." });
 
             character.SpellSlots[level]--;
+            DebugLogger.Log($"Character {character.Id} used a level {level} spell slot. Remaining: {character.SpellSlots[level]}");
 
             await characterOut.AddAsync(character);
             return new OkObjectResult(new { success = true, remaining = character.SpellSlots[level] });
@@ -87,25 +91,43 @@ namespace CloudDragonApi.Services
                 character.SpellSlots[key] = GetMaxSpellSlots(character.Level, key);
             }
 
+            DebugLogger.Log($"Character {character.Id} completed long rest. Slots reset.");
+
             await characterOut.AddAsync(character);
             return new OkObjectResult(new { success = true, spellSlots = character.SpellSlots });
         }
 
+        private static readonly Dictionary<int, Dictionary<int, int>> FullCasterSlots = new()
+        {
+            [1] = new() { [1] = 2 },
+            [2] = new() { [1] = 3 },
+            [3] = new() { [1] = 4, [2] = 2 },
+            [4] = new() { [1] = 4, [2] = 3 },
+            [5] = new() { [1] = 4, [2] = 3, [3] = 2 },
+            [6] = new() { [1] = 4, [2] = 3, [3] = 3 },
+            [7] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 1 },
+            [8] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 2 },
+            [9] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 1 },
+            [10] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2 },
+            [11] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1 },
+            [12] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1 },
+            [13] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1, [7] = 1 },
+            [14] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1, [7] = 1 },
+            [15] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1, [7] = 1, [8] = 1 },
+            [16] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1, [7] = 1, [8] = 1 },
+            [17] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 2, [6] = 1, [7] = 1, [8] = 1, [9] = 1 },
+            [18] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 3, [6] = 1, [7] = 1, [8] = 1, [9] = 1 },
+            [19] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 3, [6] = 2, [7] = 1, [8] = 1, [9] = 1 },
+            [20] = new() { [1] = 4, [2] = 3, [3] = 3, [4] = 3, [5] = 3, [6] = 2, [7] = 2, [8] = 1, [9] = 1 }
+        };
+
         private static int GetMaxSpellSlots(int characterLevel, int spellLevel)
         {
-            // Simplified logic — we can replace with real D&D rules later if you want.
-            if (characterLevel < spellLevel * 2)
-                return 0;
-            if (spellLevel == 1)
-                return 4;
-            if (spellLevel == 2)
-                return 3;
-            if (spellLevel == 3)
-                return 3;
-            if (spellLevel == 4)
-                return 2;
-            if (spellLevel == 5)
-                return 1;
+            if (FullCasterSlots.TryGetValue(characterLevel, out var levels) &&
+                levels.TryGetValue(spellLevel, out int result))
+            {
+                return result;
+            }
             return 0;
         }
     }

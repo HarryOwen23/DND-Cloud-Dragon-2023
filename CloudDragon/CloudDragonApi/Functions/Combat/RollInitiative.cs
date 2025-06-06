@@ -42,15 +42,13 @@ namespace CloudDragonApi.Combat
                 return new OkObjectResult(new { success = false, message = "No combatants available to roll initiative." });
             }
 
-            var rng = new Random();
-
             foreach (var combatant in session.Combatants)
             {
                 int dexMod = combatant.Stats?.ContainsKey("Dexterity") == true
                     ? (int)Math.Floor((combatant.Stats["Dexterity"] - 10) / 2.0)
                     : 0;
 
-                combatant.Initiative = rng.Next(1, 21) + dexMod;
+                combatant.Initiative = Random.Shared.Next(1, 21) + dexMod;
             }
 
             session.Combatants = session.Combatants

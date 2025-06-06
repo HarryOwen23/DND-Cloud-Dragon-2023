@@ -64,7 +64,7 @@ namespace CloudDragonApi
 
             try
             {
-                var builder = new Character_Stats_Point_Buy();
+                var builder = new CharacterStatsPointBuy();
                 var stats = builder.GenerateStats(input.Stats); // Ensure this method exists and is public
 
                 log.LogInformation("Stats successfully generated via point buy.");

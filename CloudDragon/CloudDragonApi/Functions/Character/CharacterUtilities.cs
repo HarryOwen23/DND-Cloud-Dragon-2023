@@ -39,9 +39,9 @@ namespace CloudDragonApi.Character
             return new OkObjectResult(new { success = true, message = "Stats reset." });
         }
 
-        [FunctionName("LevelUpCharacter")]
-        public static async Task<IActionResult> LevelUpCharacter(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up")] HttpRequest req,
+        [FunctionName("LevelUpCharacterSimple")]
+        public static async Task<IActionResult> LevelUpCharacterSimple(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-simple")] HttpRequest req,
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
@@ -121,7 +121,7 @@ namespace CloudDragonApi.Character
             if (background == null)
                 return new NotFoundObjectResult(new { success = false, error = "Background not found." });
 
-            character.Race = background.name;
+            character.Background = background.name;
             await characterOut.AddAsync(character);
 
             return new OkObjectResult(new { success = true, background = background.name });

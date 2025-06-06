@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CloudDragonLib;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
@@ -21,29 +22,24 @@ namespace CloudDragonApi
             ILogger log)
         {
             log.LogInformation("ProcessJson triggered");
+            DebugLogger.Log("ProcessJson received a request");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            if (string.IsNullOrWhiteSpace(requestBody))
+            if (!ApiRequestHelper.IsAuthorized(req, log))
             {
-                log.LogWarning("Request body is empty.");
-                return new BadRequestObjectResult(new { success = false, error = "Request body is empty." });
+                return new UnauthorizedResult();
             }
 
-            JObject payload;
-            try
-            {
-                payload = JsonConvert.DeserializeObject<JObject>(requestBody);
-            }
-            catch (JsonException ex)
-            {
-                log.LogError(ex, "Invalid JSON format.");
+            var payload = await ApiRequestHelper.ReadJsonAsync<JObject>(req, log);
+            if (payload == null)
                 return new BadRequestObjectResult(new { success = false, error = "Invalid JSON format." });
-            }
+
+            DebugLogger.Log("Payload parsed successfully");
 
             string type = payload?["type"]?.ToString()?.ToLowerInvariant();
             if (string.IsNullOrEmpty(type))
             {
                 log.LogWarning("Missing 'type' in JSON payload.");
+                DebugLogger.Log("Missing 'type' in request payload");
                 return new BadRequestObjectResult(new { success = false, error = "Missing 'type' in JSON payload." });
             }
 
@@ -55,13 +51,23 @@ namespace CloudDragonApi
                         var stats = payload["stats"]?.ToObject<Dictionary<string, int>>();
                         if (stats == null) throw new ArgumentException("Missing or invalid 'stats' for point-buy.");
 
-                        var builder = new Character_Stats_Point_Buy();
+                        var builder = new CharacterStatsPointBuy();
                         var resultStats = builder.GenerateStats(stats);
+                        DebugLogger.Log("Point-buy stats generated");
                         return new OkObjectResult(new { success = true, data = resultStats });
 
                     case "roll-stats":
-                        var roller = new Character_Stats_Dice();
-                        var statBlock = roller.RollStats();
+                        var diceStats = CharacterStatsDice.Generate();
+                        var statBlock = new[]
+                        {
+                            diceStats.Strength,
+                            diceStats.Dexterity,
+                            diceStats.Constitution,
+                            diceStats.Intelligence,
+                            diceStats.Wisdom,
+                            diceStats.Charisma
+                        };
+                        DebugLogger.Log("Stats rolled successfully");
                         return new OkObjectResult(new { success = true, data = statBlock });
 
                     default:
@@ -75,6 +81,7 @@ namespace CloudDragonApi
             catch (Exception ex)
             {
                 log.LogError(ex, "Error during processing.");
+                DebugLogger.Log($"ProcessJson failed: {ex.Message}");
                 return new BadRequestObjectResult(new { success = false, error = ex.Message });
             }
         }
