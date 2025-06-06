@@ -42,7 +42,7 @@ namespace CloudDragonApi.Services
                 Class: {character.Class}
                 Personality: {character.Personality}
 
-            Limit it to 30 words. Make it evocative and suitable for card-based storytelling games like Magic: The Gathering.";
+            Limit to 30 words. Style it like fantasy card flavor text — poetic, cryptic, or heroic, as in Magic: The Gathering or Cardfight!! Vanguard.";
     }
 
     }
