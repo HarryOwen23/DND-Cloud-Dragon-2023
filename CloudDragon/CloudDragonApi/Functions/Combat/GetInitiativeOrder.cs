@@ -5,6 +5,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonApi.Models;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Combat
 {
@@ -22,6 +24,9 @@ namespace CloudDragonApi.Combat
                 PartitionKey = "{sessionId}")] CombatSession session,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(GetInitiativeOrder));
+            DebugLogger.Log($"Retrieving initiative order for session {sessionId}");
+
             if (session == null)
             {
                 log.LogWarning($"Combat session not found: {sessionId}");

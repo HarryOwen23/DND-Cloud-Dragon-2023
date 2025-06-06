@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonApi.Models;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Combat
 {
@@ -31,6 +33,9 @@ namespace CloudDragonApi.Combat
             string name,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(UpdateCombatant));
+            DebugLogger.Log($"Updating combatant {name} in session {sessionId}");
+
             if (session == null)
                 return new NotFoundObjectResult(new { success = false, error = "Combat session not found." });
 

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using CloudDragonApi;
 using CloudDragonApi.Models;
 using System.Linq;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Functions.Combat
 {
@@ -29,6 +30,7 @@ namespace CloudDragonApi.Functions.Combat
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(EndCombatSession));
+            DebugLogger.Log($"Ending combat session {id}");
 
             if (session == null)
             {

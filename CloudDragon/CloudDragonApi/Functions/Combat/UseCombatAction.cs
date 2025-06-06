@@ -2,16 +2,18 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragonLib.Models;
 using CloudDragonApi.Services;
-
-using CharacterModel = CloudDragonLib.Models.Character;
+using CloudDragonApi.Models;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
+using CharacterModel = CloudDragonApi.Models.Combatant;
 
 namespace CloudDragonApi.Combat
 {
@@ -34,6 +36,8 @@ namespace CloudDragonApi.Combat
                 Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(UseCombatAction));
+            DebugLogger.Log($"UseCombatAction called by {combatantId} in session {sessionId}");
             log.LogInformation($"Combatant {combatantId} is taking an action in session {sessionId}.");
 
             if (session == null)
@@ -74,7 +78,7 @@ namespace CloudDragonApi.Combat
                         {
                             var weapon = attacker.Equipped?.Values.FirstOrDefault(e => e.Type == "Weapon");
                             string damageDice = weapon?.Damage ?? "1d4";
-                            damage = CombatActionService.RollDamage(damageDice);
+                            damage = CombatRollService.RollDamage(damageDice);
                             CombatActionService.ApplyDamage(defender, damage);
                         }
 

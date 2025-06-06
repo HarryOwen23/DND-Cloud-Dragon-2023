@@ -9,6 +9,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonApi;
+using CloudDragonApi.Utils;
 using Newtonsoft.Json;
 using CloudDragonApi.Models;
 
@@ -26,6 +27,7 @@ namespace CloudDragonApi.Functions.Combat
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(CreateCombatSession));
+            DebugLogger.Log("Creating new combat session request received");
 
             var body = await new StreamReader(req.Body).ReadToEndAsync();
             log.LogDebug("Request Body: {Body}", body);
@@ -51,6 +53,7 @@ namespace CloudDragonApi.Functions.Combat
                     .ToList();
 
                 await sessionOut.AddAsync(session);
+                DebugLogger.Log($"Combat session created with id {session.Id}");
                 log.LogInformation("Combat session {Id} created with {Count} combatants", session.Id, session.Combatants.Count);
                 return new OkObjectResult(new { success = true, id = session.Id });
             }

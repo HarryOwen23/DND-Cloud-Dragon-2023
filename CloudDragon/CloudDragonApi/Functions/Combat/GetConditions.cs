@@ -4,6 +4,8 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Functions.Conditions
 {
@@ -14,6 +16,9 @@ namespace CloudDragonApi.Functions.Conditions
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "conditions")] HttpRequest req,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(GetConditions));
+            DebugLogger.Log("Retrieving conditions list");
+
             var conditions = new List<Condition>
             {
                 new Condition

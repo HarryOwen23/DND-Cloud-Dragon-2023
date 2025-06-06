@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonApi.Models;
 using System.Linq;
+using CloudDragonApi;
+using CloudDragonApi.Utils;
 
 public static class GetCombatStateFunction
 {
@@ -20,6 +22,9 @@ public static class GetCombatStateFunction
         string id,
         ILogger log)
     {
+        log.LogRequestDetails(req, nameof(GetCombatState));
+        DebugLogger.Log($"Retrieving combat state for session {id}");
+
         if (session == null)
         {
             log.LogWarning($"Combat session not found: {id}");
