@@ -2,34 +2,40 @@
 using System.Collections.Generic;
 
 // Class created to allow users to select a race for characters 
-public class Races
+namespace CloudDragonLib.Models
 {
-	public string Name { get; set; }
-	public Dictionary<string, int> abilityBonuses { get; set; }
+    /// <summary>
+    /// Represents a race and its ability score bonuses.
+    /// </summary>
+    public class Races
+    {
+        public string Name { get; set; }
 
-	public Races(string nameOfRace)
-	{
-		Name = nameOfRace;
-		abilityBonuses = new Dictionary<string, int>();
-	}
+        /// <summary>
+        /// Ability score bonuses granted by this race.
+        /// </summary>
+        public Dictionary<string, int> AbilityBonuses { get; } = new();
 
-	public void Add_ability_Bonuses(string abilityName, int abilityBonus)
-	{
-		if (abilityBonuses.ContainsKey(abilityName))
-		{
-			abilityBonuses[abilityName] += abilityBonus;
+        public Races(string nameOfRace)
+        {
+            Name = nameOfRace;
         }
-		else
-		{
-            abilityBonuses.Add(abilityName, abilityBonus);
 
+        public void AddAbilityBonus(string abilityName, int abilityBonus)
+        {
+            if (AbilityBonuses.ContainsKey(abilityName))
+            {
+                AbilityBonuses[abilityName] += abilityBonus;
+            }
+            else
+            {
+                AbilityBonuses[abilityName] = abilityBonus;
+            }
+        }
+
+        public void RemoveAbilityBonus(string abilityName)
+        {
+            AbilityBonuses.Remove(abilityName);
         }
     }
-    public void RemoveAbilityScoreBonus(string abilityName)
-    {
-        if (abilityBonuses.ContainsKey(abilityName))
-        {
-            abilityBonuses.Remove(abilityName);
-        }
-    } 
 }
