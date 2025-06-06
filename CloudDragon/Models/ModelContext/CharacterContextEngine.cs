@@ -102,6 +102,8 @@ namespace CloudDragonApi.Services
 
         public async Task<Dictionary<string, int>> GenerateStatsAsync(CharacterModel character)
         {
+            int RollStat() => Random.Shared.Next(8, 16); // adjust range as desired
+
             var stats = new Dictionary<string, int>
             {
                 ["STR"] = RollStat(),
@@ -113,8 +115,6 @@ namespace CloudDragonApi.Services
             };
 
             return await Task.FromResult(stats); // keep async-compatible signature
-
-            int RollStat() => Random.Shared.Next(8, 16); // adjust range as desired
         }
 
         private string BuildFlavorfulPrompt(CharacterModel character)
