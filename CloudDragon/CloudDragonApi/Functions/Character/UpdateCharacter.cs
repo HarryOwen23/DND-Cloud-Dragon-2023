@@ -11,8 +11,20 @@ using CloudDragonLib.Models;
 using CloudDragonApi;
 using CloudDragonApi.Utils;
 
+/// <summary>
+/// Azure Function used to update an existing character document.
+/// </summary>
 public static class UpdateCharacterFunction
 {
+    /// <summary>
+    /// Updates the provided character with any supplied fields.
+    /// </summary>
+    /// <param name="req">HTTP request containing the partial character payload.</param>
+    /// <param name="existingChar">Character document loaded from Cosmos DB.</param>
+    /// <param name="characterOut">Output binding for persisting updates.</param>
+    /// <param name="id">Character identifier.</param>
+    /// <param name="log">Function logger.</param>
+    /// <returns>Action result with the updated character.</returns>
     [FunctionName("UpdateCharacter")]
     public static async Task<IActionResult> UpdateCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "put", "patch", Route = "character/{id}")] HttpRequest req,

@@ -11,8 +11,18 @@ using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Races
 {
+    /// <summary>
+    /// Retrieves a race record by its name.
+    /// </summary>
     public static class GetRaceByName
     {
+        /// <summary>
+        /// Looks up a race by name and returns it if found.
+        /// </summary>
+        /// <param name="req">HTTP request.</param>
+        /// <param name="name">Race name to search for.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>The matching race or 404.</returns>
         [FunctionName("GetRaceByName")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races/{name}")] HttpRequest req,
