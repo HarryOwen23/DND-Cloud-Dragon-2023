@@ -13,7 +13,7 @@ namespace CloudDragonLib.Models
         [ModelField("The full name of the character.")]
         public string Name { get; set; }
 
-        [ModelField("The race of the character, such as Elf, Dwarf, or Human.")]
+        [ModelField("The race of the character, such as Human, Elf, or Dwarf.")]
         public string Race { get; set; }
 
         [ModelField("The age of the character.")]
@@ -23,8 +23,8 @@ namespace CloudDragonLib.Models
         public string? Background { get; set; }
 
         [ModelField("The class of the character, such as Ranger, Wizard, or Paladin.")]
-        public string Class { get; set; }
-        public string Subclass { get; set; }
+        public string? Class { get; set; }
+        public string? Subclass { get; set; }
 
         // Multiclassing (optional)
         public Dictionary<string, int> Classes { get; set; } = new();

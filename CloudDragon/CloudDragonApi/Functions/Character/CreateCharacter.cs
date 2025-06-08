@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using.System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -23,7 +24,7 @@ namespace CloudDragonApi.Functions.Character
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(CreateCharacter));
-            DebugLogger.Log("CreateCharacter endpoint hit");
+            log.LogInformation("CreateCharacter endpoint hit");
 
             if (!ApiRequestHelper.IsAuthorized(req, log))
             {
@@ -31,16 +32,44 @@ namespace CloudDragonApi.Functions.Character
             }
 
             var character = await ApiRequestHelper.ReadJsonAsync<Character>(req, log);
-            DebugLogger.Log("Character payload parsed");
+            log.LogInformation("Character payload parsed");
 
-            if (character == null || string.IsNullOrWhiteSpace(character.Name))
-                return new BadRequestObjectResult(new { success = false, error = "Invalid character data." });
+            if (character == null)
+            {
+                return new BadRequestObjectResult(new { success = false, error = "Character payload is missing or invalid." });
+            }
+
+            if (string.IsNullOrWhiteSpace(character.Name))
+            {
+                return new BadRequestObjectResult(new { success = false, error = "Character name is required." });
+            }
+
+            if (character.Stats == null || character.Stats.Count == 0)
+            {
+                return new BadRequestObjectResult(new { success = false, error = "Character stats are required." });
+            }
+
+            var requiredStats = new[] { "STR", "DEX", "CON", "INT", "WIS", "CHA" };
+            bool hasAllStats = requiredStats.All(stat =>
+                character.Stats != null &&
+                character.Stats.ContainsKey(stat) &&
+                character.Stats[stat] >= 1 && character.Stats[stat] <= 20
+             );
+
+            if (!hasAllStats)
+            {
+                return new BadRequestObjectResult(new
+                {
+                    success = false,
+                    error = "Character must have valid stats for STR, DEX, CON, INT, WIS, and CHA (1-20)."
+                });
+            }
 
             await characterOut.AddAsync(character);
             log.LogInformation("Character {Id} created", character.Id);
-            DebugLogger.Log($"Character {character.Id} created");
+            log.LogInformation($"Character {character.Id} created");
 
-            return new OkObjectResult(new { success = true, id = character.Id });
+            return new CreatedResult($"/character/{character.id}", new { success = true, id = character.Id });
         }
     }
 }
