@@ -9,8 +9,19 @@ using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Character
 {
+    /// <summary>
+    /// Azure Function that retrieves a single character by ID.
+    /// </summary>
     public static class GetCharacter
     {
+        /// <summary>
+        /// Gets a character from Cosmos DB and returns key fields.
+        /// </summary>
+        /// <param name="req">HTTP request.</param>
+        /// <param name="character">Character loaded from Cosmos DB.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Action result containing the character or error.</returns>
         [FunctionName("GetCharacter")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}")] HttpRequest req,

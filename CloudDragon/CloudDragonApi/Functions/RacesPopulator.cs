@@ -11,12 +11,23 @@ using CloudDragonApi.Utils;
 namespace CloudDragonApi
 {
 
-        public interface IRacesPopulator
-        {
-                Task<List<Races>> Populate(string fileName);
-        }
+    /// <summary>
+    /// Provides races data used by various functions.
+    /// </summary>
+    public interface IRacesPopulator
+    {
+        /// <summary>
+        /// Populates a list of races. The file name parameter is currently ignored.
+        /// </summary>
+        /// <param name="fileName">Optional source file name.</param>
+        /// <returns>List of races.</returns>
+        Task<List<Races>> Populate(string fileName);
+    }
 
-	public class RacesPopulator : IRacesPopulator
+    /// <summary>
+    /// Basic in-memory implementation of <see cref="IRacesPopulator"/>.
+    /// </summary>
+    public class RacesPopulator : IRacesPopulator
     {
         public async Task<List<Races>> Populate(string fileName)
         {

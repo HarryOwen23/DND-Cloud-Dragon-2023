@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using.System.Linq;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -12,8 +12,18 @@ using CloudDragonApi.Utils;
 
 namespace CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Azure Function that creates a new character document in Cosmos DB.
+    /// </summary>
     public static class CreateCharacterFunction
     {
+        /// <summary>
+        /// Creates a character from the posted JSON payload.
+        /// </summary>
+        /// <param name="req">HTTP request containing the character JSON.</param>
+        /// <param name="characterOut">Cosmos DB output binding.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns><see cref="IActionResult"/> describing the outcome.</returns>
         [FunctionName("CreateCharacter")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
@@ -25,6 +35,7 @@ namespace CloudDragonApi.Functions.Character
         {
             log.LogRequestDetails(req, nameof(CreateCharacter));
             log.LogInformation("CreateCharacter endpoint hit");
+            DebugLogger.Log("CreateCharacter invoked");
 
             if (!ApiRequestHelper.IsAuthorized(req, log))
             {
@@ -67,9 +78,9 @@ namespace CloudDragonApi.Functions.Character
 
             await characterOut.AddAsync(character);
             log.LogInformation("Character {Id} created", character.Id);
-            log.LogInformation($"Character {character.Id} created");
+            DebugLogger.Log($"Character {character.Id} saved");
 
-            return new CreatedResult($"/character/{character.id}", new { success = true, id = character.Id });
+            return new CreatedResult($"/character/{character.Id}", new { success = true, id = character.Id });
         }
     }
 }

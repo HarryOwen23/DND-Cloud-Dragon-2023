@@ -8,8 +8,17 @@ using CloudDragonLib.Models;
 using CloudDragonApi.Utils;
 namespace CloudDragonApi.Races
 {
+    /// <summary>
+    /// Retrieves the list of all available races.
+    /// </summary>
     public static class GetAllRaces
     {
+        /// <summary>
+        /// Returns every race known to the system.
+        /// </summary>
+        /// <param name="req">HTTP request.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Collection of race objects.</returns>
         [FunctionName("GetAllRaces")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races")] HttpRequest req,

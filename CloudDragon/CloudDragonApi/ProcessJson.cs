@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -7,15 +6,24 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CloudDragonLib;
 using CloudDragonApi.Utils;
 
 namespace CloudDragonApi
 {
+    /// <summary>
+    /// Azure Function that processes JSON payloads for various character stat generation
+    /// operations such as point buy and rolling for stats.
+    /// </summary>
     public static class ProcessJsonFunction
     {
+        /// <summary>
+        /// Entry point for the <c>ProcessJson</c> function.
+        /// </summary>
+        /// <param name="req">HTTP request containing the JSON payload.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Action result describing the outcome.</returns>
         [FunctionName("ProcessJson")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "process-json")] HttpRequest req,
@@ -87,5 +95,3 @@ namespace CloudDragonApi
         }
     }
 }
-// This function processes JSON payloads for different types of character stat generation.
-// It supports "point-buy" and "roll-stats" types.

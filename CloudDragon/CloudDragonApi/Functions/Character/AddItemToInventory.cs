@@ -12,8 +12,20 @@ using CloudDragonLib.Models;
 
 namespace CloudDragonApi.Inventory_System
 {
+    /// <summary>
+    /// Azure Function that adds an item to a character's inventory.
+    /// </summary>
     public static class AddItemToInventory
     {
+        /// <summary>
+        /// Adds an item from the request body to the specified character.
+        /// </summary>
+        /// <param name="req">HTTP request containing the item payload.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding for persisting the update.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Action result describing the operation.</returns>
         [FunctionName("AddItemToInventory")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")] HttpRequest req,
