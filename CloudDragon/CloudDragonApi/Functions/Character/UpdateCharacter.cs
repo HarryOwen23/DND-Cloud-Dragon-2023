@@ -56,9 +56,18 @@ namespace CloudDragonApi.Functions.Character
             return new NotFoundObjectResult(new { success = false, error = "Character not found." });
         }
 
-        string body = await new StreamReader(req.Body).ReadToEndAsync();
-        log.LogDebug("Update payload: {Body}", body);
-        var updates = JsonConvert.DeserializeObject<Character>(body);
+        Character updates;
+        try
+        {
+            string body = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogDebug("Update payload: {Body}", body);
+            updates = JsonConvert.DeserializeObject<Character>(body);
+        }
+        catch (JsonException ex)
+        {
+            log.LogError(ex, "UpdateCharacter failed to parse payload");
+            return new BadRequestObjectResult(new { success = false, error = "Invalid character update payload." });
+        }
         DebugLogger.Log("Parsed update payload");
 
         if (updates == null)
