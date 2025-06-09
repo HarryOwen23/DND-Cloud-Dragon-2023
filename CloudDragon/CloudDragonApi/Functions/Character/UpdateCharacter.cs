@@ -11,12 +11,14 @@ using CloudDragonLib.Models;
 using CloudDragonApi;
 using CloudDragonApi.Utils;
 
-/// <summary>
-/// Azure Function used to update an existing character document.
-/// </summary>
-public static class UpdateCharacterFunction
+namespace CloudDragonApi.Functions.Character
 {
     /// <summary>
+    /// Azure Function used to update an existing character document.
+    /// </summary>
+    public static class UpdateCharacterFunction
+    {
+        /// <summary>
     /// Updates the provided character with any supplied fields.
     /// </summary>
     /// <param name="req">HTTP request containing the partial character payload.</param>
@@ -43,6 +45,9 @@ public static class UpdateCharacterFunction
     {
         log.LogRequestDetails(req, nameof(UpdateCharacter));
         DebugLogger.Log($"UpdateCharacter called for {id}");
+
+        if (!ApiRequestHelper.IsAuthorized(req, log))
+            return new UnauthorizedResult();
 
         if (existingChar == null)
         {
@@ -72,4 +77,5 @@ public static class UpdateCharacterFunction
 
         return new OkObjectResult(new { success = true, updated = existingChar });
     }
+}
 }
