@@ -78,7 +78,35 @@ namespace CloudDragonApi.Functions.Character
         existingChar.Class = updates.Class ?? existingChar.Class;
         existingChar.Race = updates.Race ?? existingChar.Race;
         existingChar.Level = updates.Level > 0 ? updates.Level : existingChar.Level;
-        existingChar.Stats = updates.Stats?.Count > 0 ? updates.Stats : existingChar.Stats;
+
+        if (updates.Stats != null)
+            foreach (var kvp in updates.Stats)
+                existingChar.Stats[kvp.Key] = kvp.Value;
+
+        if (updates.Classes != null)
+            foreach (var kvp in updates.Classes)
+                existingChar.Classes[kvp.Key] = kvp.Value;
+
+        if (updates.Subclasses != null)
+            foreach (var kvp in updates.Subclasses)
+                existingChar.Subclasses[kvp.Key] = kvp.Value;
+
+        if (updates.Equipped != null)
+            foreach (var kvp in updates.Equipped)
+                existingChar.Equipped[kvp.Key] = kvp.Value;
+
+        if (updates.SpellSlots != null)
+            foreach (var kvp in updates.SpellSlots)
+                existingChar.SpellSlots[kvp.Key] = kvp.Value;
+
+        if (updates.Inventory != null)
+            existingChar.Inventory = updates.Inventory;
+
+        if (updates.PreparedSpells != null)
+            existingChar.PreparedSpells = updates.PreparedSpells;
+
+        if (updates.CastedSpells != null)
+            existingChar.CastedSpells = updates.CastedSpells;
 
         await characterOut.AddAsync(existingChar);
         log.LogInformation("Character {Id} updated", existingChar.Id);
