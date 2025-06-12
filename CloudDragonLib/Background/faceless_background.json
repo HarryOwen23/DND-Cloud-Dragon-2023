@@ -1,0 +1,58 @@
+{
+    "id": "faceless_background",
+    "BackgroundId": "faceless",
+    "Background Name": "Faceless",
+    "Description": "You are a master of disguise and subterfuge, skilled at blending into any environment or society. Your past is a mystery, and you excel at adopting new identities and concealing your true self.",
+    "Skill Proficiencies": [
+        "Deception",
+        "Stealth"
+    ],
+    "Tool Proficiencies": [
+        "Disguise Kit"
+    ],
+    "Starting Equipment": [
+        "A disguise kit",
+        "A set of common clothes",
+        "A hidden pocket containing 10 gold pieces",
+        "A forged identification document"
+    ],
+    "Feature": "Chameleon Persona",
+    "Feature Description": "Your expertise in disguise allows you to assume new identities with ease. You can create and maintain a false persona, complete with a backstory and forged documents. People who interact with you while you're using your persona find it difficult to remember specific details about your appearance or true identity. You have an advantage on Deception checks to maintain your disguise and on Stealth checks to blend in or disappear in a crowd.",
+    "Personality Traits": [
+        "1. I am cautious and always on guard, never revealing my true feelings or thoughts.",
+        "2. I am adaptable and can adjust my personality and demeanor to fit any situation.",
+        "3. I am distrustful of others and find it difficult to form deep connections or friendships.",
+        "4. I am curious about people and enjoy observing them from the shadows.",
+        "5. I am meticulous in my preparations, paying attention to every detail in my disguises.",
+        "6. I am secretive and rarely reveal anything personal about myself."
+    ],
+    "Ideals": [
+        "1. Freedom: I value my ability to remain hidden and independent. (Chaotic)",
+        "2. Truth: I believe that the truth is a powerful weapon, and I use deception to uncover it. (Neutral)",
+        "3. Ambition: I am driven by personal goals and desires, and I will use any means to achieve them. (Evil)",
+        "4. Justice: I use my talents to expose corruption and wrongdoing in society. (Good)",
+        "5. Survival: I do whatever it takes to stay alive in a dangerous world. (Neutral)",
+        "6. Mystery: I enjoy the intrigue and enigma of my own past and the secrets I uncover. (Chaotic)"
+    ],
+    "Bonds": [
+        "1. I owe a significant debt to a secretive organization that trained me in the art of disguise and subterfuge.",
+        "2. I have a mentor who taught me the skills of the Faceless background, and I owe them a great deal.",
+        "3. I have a hidden agenda or mission that I am pursuing, and my true identity plays a part in it.",
+        "4. I am searching for answers about my own past and true identity, driven by a mysterious past event.",
+        "5. I have a close ally who knows my true identity and helps me maintain my cover.",
+        "6. I am hunted by a powerful enemy who is determined to uncover my secrets and expose me."
+    ],
+    "Flaws": [
+        "1. I can be overly cautious and paranoid, always suspecting that others are trying to expose me.",
+        "2. I struggle with maintaining genuine relationships, as I fear that my true identity will be discovered.",
+        "3. I am prone to identity crises, sometimes losing track of who I truly am in the midst of multiple personas.",
+        "4. I have a fear of commitment and can be quick to abandon allies or plans if they become too risky.",
+        "5. I am obsessed with secrecy and can be overly secretive, even when it's not necessary.",
+        "6. I have a tendency to manipulate and deceive others, even when it's not in my best interest."
+    ],
+    "_rid": "LHEfAISGtYYUAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYUAAAAAAAAAA==/",
+    "_etag": "\"55000153-0000-1100-0000-6739f66f0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731851887
+}

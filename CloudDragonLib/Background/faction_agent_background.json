@@ -1,0 +1,61 @@
+{
+    "id": "faction_agent_background",
+    "BackgroundId": "faction_agent",
+    "Background Name": "Faction Agent",
+    "Description": "You are a member of a secretive organization or faction that operates behind the scenes, working to advance its own agenda and protect its interests. Whether you belong to a political faction, a spy network, a religious order, or a guild, you have access to resources, information, and support from your organization.",
+    "Skill Proficiencies": [
+        "Insight",
+        "Investigation"
+    ],
+    "Tool Proficiencies": [
+        "None"
+    ],
+    "Languages": [
+        "One of your choice"
+    ],
+    "Starting Equipment": [
+        "A set of common clothes with a hidden emblem or symbol of your faction",
+        "A badge or token of your faction's membership",
+        "A letter of introduction from your faction",
+        "A pouch containing 15 gold pieces"
+    ],
+    "Feature": "Faction Resources",
+    "Feature Description": "You can rely on your faction for assistance, resources, and information. Your faction can provide you with safe houses, contacts, and access to secret information. In times of need, you can call upon your faction for support, such as shelter, equipment, or information about a particular topic or individual.",
+    "Personality Traits": [
+        "1. I am fiercely loyal to my faction and its goals, willing to do whatever it takes to further its interests.",
+        "2. I am cautious and always alert to potential threats and hidden agendas.",
+        "3. I am a master of subterfuge and can blend into different social circles with ease.",
+        "4. I am resourceful and can find creative solutions to problems, using the resources of my faction.",
+        "5. I am secretive and rarely reveal more than necessary about my faction or its activities.",
+        "6. I am committed to uncovering secrets and gathering information, driven by a thirst for knowledge."
+    ],
+    "Ideals": [
+        "1. Loyalty: I am devoted to my faction above all else and will do whatever it takes to protect its interests. (Lawful)",
+        "2. Freedom: I believe in the importance of personal freedom and work to undermine oppressive forces. (Chaotic)",
+        "3. Justice: I strive to bring about justice and fairness in the world, using my faction's resources. (Good)",
+        "4. Power: I seek to increase my own power and influence, both within my faction and in the world. (Neutral)",
+        "5. Ambition: I am driven by personal ambition and seek to rise to the highest ranks of my faction. (Any)",
+        "6. Secrecy: I value the secrecy and hidden knowledge of my faction and will protect it at all costs. (Neutral)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or senior member within my faction who guides and trains me.",
+        "2. I owe a significant debt of gratitude to a faction member who once saved my life or provided me with an opportunity.",
+        "3. I have a deep connection to a specific cause or mission of my faction and am dedicated to its success.",
+        "4. I have a close ally within my faction whom I trust implicitly, and we work together closely.",
+        "5. I am on a mission from my faction to uncover a hidden threat or conspiracy, and I am determined to see it through.",
+        "6. I have a rival or adversary within my faction who challenges my position and authority."
+    ],
+    "Flaws": [
+        "1. I am paranoid and suspicious of others, even those within my own faction.",
+        "2. I can be ruthless and will do whatever it takes to achieve my faction's goals, even if it means harming innocents.",
+        "3. I am secretive to a fault, making it difficult for others to trust me or work with me.",
+        "4. I am driven by personal ambition and am willing to undermine or betray my faction if it serves my interests.",
+        "5. I have a tendency to hoard information and resources, even when they could be used for the greater good.",
+        "6. I am quick to take offense when my faction or loyalty is questioned, leading to confrontations."
+    ],
+    "_rid": "LHEfAISGtYYVAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYVAAAAAAAAAA==/",
+    "_etag": "\"5500a558-0000-1100-0000-6739f6d30000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731851987
+}

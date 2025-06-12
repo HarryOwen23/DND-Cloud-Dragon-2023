@@ -1,0 +1,57 @@
+{
+    "id": "noble_background",
+    "BackgroundId": "noble",
+    "Background Name": "Noble",
+    "Description": "You were born into a noble family, and you are accustomed to the privileges and responsibilities of noble life. You have connections, wealth, and a sense of entitlement that comes from your social status.",
+    "Skill Proficiencies": [
+        "History",
+        "Persuasion"
+    ],
+    "Tool Proficiencies": [],
+    "Languages": [],
+    "Starting Equipment": [
+        "A set of fine clothes",
+        "A signet ring or emblem of your family's crest",
+        "A scroll of pedigree or lineage",
+        "A purse containing 25 gold pieces"
+    ],
+    "Feature": "Position of Privilege",
+    "Feature Description": "Thanks to your noble birth, people are inclined to be helpful and courteous to you. You can usually gain access to influential people and high society events, and you can secure audiences with nobles and political leaders. Common folk tend to defer to you, and you can often get away with minor infractions due to your status.",
+    "Personality Traits": [
+        "1. I am accustomed to the finest things in life and expect to be treated accordingly.",
+        "2. I am polite and courteous to all, regardless of their station, and expect the same in return.",
+        "3. I am protective of my family's honor and reputation and will not tolerate insults.",
+        "4. I enjoy the power and influence that my noble status grants me and use it to my advantage.",
+        "5. I am inquisitive about the lives and cultures of common folk, and I enjoy mingling with them.",
+        "6. I have a deep sense of responsibility to my family and will do whatever it takes to uphold our name."
+    ],
+    "Ideals": [
+        "1. Responsibility. I must fulfill my family's duties and uphold our traditions. (Lawful)",
+        "2. Noblesse Oblige. I have a duty to protect and care for those less fortunate than myself. (Good)",
+        "3. Ambition. I seek to increase my family's power and wealth at any cost. (Any)",
+        "4. Tradition. I adhere to the customs and values of my noble heritage. (Lawful)",
+        "5. Power. I strive to attain and wield as much influence as possible. (Evil)",
+        "6. Freedom. I reject the constraints of my noble birth and seek personal freedom. (Chaotic)"
+    ],
+    "Bonds": [
+        "1. My family's honor is everything to me, and I would do anything to protect it.",
+        "2. I have a deep and abiding loyalty to a childhood friend or a loyal servant.",
+        "3. My family has a longstanding feud with another noble house, and I seek to settle the score.",
+        "4. I am in love with a commoner, and our love is forbidden by society.",
+        "5. I owe a life debt to a commoner who once saved my life.",
+        "6. I am on a personal quest to prove my worthiness and distinguish myself from my family's name."
+    ],
+    "Flaws": [
+        "1. I can be condescending and patronizing to those of lower social status.",
+        "2. I am quick to anger when my honor or family's honor is insulted.",
+        "3. I am bound by tradition and reluctant to embrace change or new ideas.",
+        "4. I am a spendthrift and often indulge in extravagance and luxury.",
+        "5. I am naive about the hardships faced by common people and their struggles.",
+        "6. I am prone to jealousy and envy when others receive attention or accolades."
+    ],
+    "_rid": "LHEfAISGtYYhAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYhAAAAAAAAAA==/",
+    "_etag": "\"5500cbd3-0000-1100-0000-6739ff8c0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731854220
+}

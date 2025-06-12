@@ -1,0 +1,58 @@
+{
+    "id": "soldier_background",
+    "BackgroundId": "soldier",
+    "Background Name": "Soldier",
+    "Description": "You are a trained and disciplined soldier who has served in a military organization or militia. You are well-versed in combat tactics and are accustomed to a life of discipline, drills, and warfare.",
+    "Skill Proficiencies": [
+        "Athletics",
+        "Intimidation"
+    ],
+    "Tool Proficiencies": [],
+    "Languages": [],
+    "Starting Equipment": [
+        "An insignia of rank",
+        "A trophy taken from a fallen enemy (such as a severed finger, belt, or emblem)",
+        "A set of bone dice or a deck of cards",
+        "A set of common clothes",
+        "A belt pouch containing 10 gold pieces"
+    ],
+    "Feature": "Military Rank",
+    "Feature Description": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority, and they might defer to your rank. You can gain access to military encampments and fortresses where your rank is recognized.",
+    "Personality Traits": [
+        "1. I am fiercely loyal to my comrades and would do anything to protect them.",
+        "2. I have a strong sense of duty and responsibility, and I take my orders seriously.",
+        "3. I am disciplined and focused, and I don't easily succumb to fear or panic.",
+        "4. I enjoy the thrill of battle and find it exhilarating.",
+        "5. I am deeply committed to upholding the values and principles of my military organization.",
+        "6. I can be gruff and stoic, and I often prefer action to words."
+    ],
+    "Ideals": [
+        "1. Duty. I will follow orders and serve my country without question. (Lawful)",
+        "2. Honor. I will uphold the values and traditions of my military organization. (Good)",
+        "3. Loyalty. My comrades are like family, and I will protect them at all costs. (Lawful)",
+        "4. Courage. I will never back down from a fight, no matter the odds. (Chaotic)",
+        "5. Freedom. I fight for the cause of liberty and against tyranny. (Chaotic)",
+        "6. Glory. I seek fame, recognition, and a legacy of heroic deeds. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a deep bond with my fellow soldiers, and we share a strong camaraderie.",
+        "2. I have a family back home that I must protect and provide for.",
+        "3. My loyalty to my commanding officer knows no bounds, and I would follow them anywhere.",
+        "4. I am haunted by a traumatic event from my military service that I cannot forget.",
+        "5. I am on a quest to redeem a past failure or dishonor.",
+        "6. I have a personal rivalry or vendetta against an enemy officer or foe."
+    ],
+    "Flaws": [
+        "1. I have difficulty adjusting to civilian life and often feel lost or out of place.",
+        "2. I am haunted by the memories of battles and violence, and I have nightmares.",
+        "3. I can be overly rigid and uncompromising in my beliefs and principles.",
+        "4. I have a short temper and can become easily angered or aggressive.",
+        "5. I struggle with authority figures who do not share my military background.",
+        "6. I find it hard to trust others who have not proven themselves in combat."
+    ],
+    "_rid": "LHEfAISGtYYmAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYmAAAAAAAAAA==/",
+    "_etag": "\"550056e3-0000-1100-0000-673a00de0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731854558
+}

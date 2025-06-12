@@ -1,0 +1,60 @@
+{
+    "id": "folk_hero_background",
+    "BackgroundId": "folk_hero",
+    "Background Name": "Folk Hero",
+    "Description": "You come from a humble background and have gained renown among the common folk for your acts of heroism and selflessness. Your actions have inspired others, and you are a symbol of hope and justice to those in need.",
+    "Skill Proficiencies": [
+        "Animal Handling",
+        "Survival"
+    ],
+    "Tool Proficiencies": [
+        "One type of artisan's tools"
+    ],
+    "Languages": [],
+    "Starting Equipment": [
+        "A set of artisan's tools (one of your choice)",
+        "A shovel",
+        "An iron pot",
+        "A set of common clothes",
+        "A pouch containing 10 gold pieces"
+    ],
+    "Feature": "Rustic Hospitality",
+    "Feature Description": "You can find a place to hide, rest, or recuperate among the common folk in rural areas. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.",
+    "Personality Traits": [
+        "1. I am loyal to my friends and will do anything for them.",
+        "2. I always try to see the good in people, even when they do bad things.",
+        "3. I can't resist helping those in need, even if it puts me in danger.",
+        "4. I am a natural leader and inspire others with my actions and words.",
+        "5. I am slow to anger and have a lot of patience.",
+        "6. I believe that everyone deserves a second chance."
+    ],
+    "Ideals": [
+        "1. Justice: I strive to right the wrongs and injustices of the world. (Good)",
+        "2. Freedom: I believe in the importance of personal freedom and autonomy. (Chaotic)",
+        "3. Responsibility: I take responsibility for protecting those who cannot protect themselves. (Lawful)",
+        "4. Generosity: I am generous and will give away my last coin to help others in need. (Good)",
+        "5. Independence: I value my freedom and independence above all else. (Chaotic)",
+        "6. Aspiration: I seek to prove myself as a true hero and make a lasting mark on the world. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a close friend or family member who is still living in the village or town where I grew up.",
+        "2. I owe my life to someone who stood up for me when I was in trouble.",
+        "3. My hometown is in danger, and I will do whatever it takes to protect it.",
+        "4. I have a romantic interest in someone who is unaware of my feelings.",
+        "5. I have a deep connection to a specific place in the wilderness or countryside.",
+        "6. I am haunted by a past failure or mistake and am driven to make amends for it."
+    ],
+    "Flaws": [
+        "1. I am quick to trust others, even when they have betrayed my trust in the past.",
+        "2. I can be naive and gullible, easily falling for tricks or deception.",
+        "3. I have a tendency to rush into danger without thinking things through.",
+        "4. I am overly protective of my friends and may put their safety above all else.",
+        "5. I can be stubborn and resistant to change or new ideas.",
+        "6. I have a fear of letting others down and will go to great lengths to avoid disappointment."
+    ],
+    "_rid": "LHEfAISGtYYZAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYZAAAAAAAAAA==/",
+    "_etag": "\"55007f6b-0000-1100-0000-6739f80b0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731852299
+}

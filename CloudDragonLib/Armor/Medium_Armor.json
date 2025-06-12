@@ -1,8 +1,11 @@
 {
-    "Medium Armor": [
+    "id": "Medium_Armor",
+    "ArmorId": "Medium_Armor",
+    "ArmorType": "Medium Armor",
+    "Items": [
         {
             "Name": "Hide",
-            "Armor Class (AC)": "12 + Dex modifier (max 2)",
+            "ArmorClass": "12 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "-",
             "Weight": "12 lb.",
@@ -10,7 +13,7 @@
         },
         {
             "Name": "Chain Shirt",
-            "Armor Class (AC)": "13 + Dex modifier (max 2)",
+            "ArmorClass": "13 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "-",
             "Weight": "20 lb.",
@@ -18,7 +21,7 @@
         },
         {
             "Name": "Scale Mail",
-            "Armor Class (AC)": "14 + Dex modifier (max 2)",
+            "ArmorClass": "14 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "45 lb.",
@@ -26,7 +29,7 @@
         },
         {
             "Name": "Spiked Armor",
-            "Armor Class (AC)": "14 + Dex modifier (max 2)",
+            "ArmorClass": "14 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "45 lb.",
@@ -34,7 +37,7 @@
         },
         {
             "Name": "Breastplate",
-            "Armor Class (AC)": "14 + Dex modifier (max 2)",
+            "ArmorClass": "14 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "-",
             "Weight": "20 lb.",
@@ -42,11 +45,16 @@
         },
         {
             "Name": "Halfplate",
-            "Armor Class (AC)": "15 + Dex modifier (max 2)",
+            "ArmorClass": "15 + Dex modifier (max 2)",
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "40 lb.",
             "Cost": "750 gp"
         }
-    ]
+    ],
+    "_rid": "LHEfALDUKKYCAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfALDUKKY=/docs/LHEfALDUKKYCAAAAAAAAAA==/",
+    "_etag": "\"5400e2c6-0000-1100-0000-673633ca0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731605450
 }

@@ -1,8 +1,11 @@
 {
-    "Light Armor": [
+    "id": "Light_Armor",
+    "ArmorId": "Light_Armor",
+    "ArmorType": "Light Armor",
+    "Items": [
         {
             "Name": "Padded",
-            "Armor Class(AC)": "11 + Dex modifier",
+            "ArmorClass": "11 + Dex modifier",
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "8 lb.",
@@ -10,7 +13,7 @@
         },
         {
             "Name": "Leather",
-            "Armor Class (AC)": "11 + Dex modifier",
+            "ArmorClass": "11 + Dex modifier",
             "Strength": "-",
             "Stealth": "-",
             "Weight": "10 lb.",
@@ -18,11 +21,16 @@
         },
         {
             "Name": "Studded Leather",
-            "Armor Class (AC)": "12 + Dex Modifier",
+            "ArmorClass": "12 + Dex modifier",
             "Strength": "-",
             "Stealth": "-",
             "Weight": "13 lb.",
             "Cost": "45 gp"
         }
-    ]
+    ],
+    "_rid": "LHEfALDUKKYDAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfALDUKKY=/docs/LHEfALDUKKYDAAAAAAAAAA==/",
+    "_etag": "\"54003ec7-0000-1100-0000-673633ee0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731605486
 }

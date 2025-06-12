@@ -1,0 +1,61 @@
+{
+    "id": "fisher_background",
+    "BackgroundId": "fisher",
+    "Background Name": "Fisher",
+    "Description": "You have spent a significant part of your life as a fisher, earning your livelihood from the bounties of rivers, lakes, or the open sea. Your experience on the water has given you a unique set of skills and insights into aquatic life and the trade of fishing.",
+    "Skill Proficiencies": [
+        "History",
+        "Survival"
+    ],
+    "Tool Proficiencies": [
+        "Fishing Tackle"
+    ],
+    "Languages": [
+        "One of your choice"
+    ],
+    "Starting Equipment": [
+        "A set of fishing tackle (fishing rod, fishing line, hooks, and bait)",
+        "A net",
+        "A set of common clothes",
+        "A pouch containing 10 gold pieces"
+    ],
+    "Feature": "Waterborne Expertise",
+    "Feature Description": "You are an expert when it comes to matters related to waterborne activities. You can find food and fresh water for yourself and up to five other people each day, provided that the bodies of water are inhabited by fish or other aquatic creatures. Additionally, you are familiar with the navigation of waterways, including rivers, lakes, and coastal areas, and can guide a boat or ship effectively.",
+    "Personality Traits": [
+        "1. I am patient and calm, even in the face of adversity or long hours of waiting.",
+        "2. I have a deep respect for the creatures of the water and never waste what I catch.",
+        "3. I am observant and have a keen eye for spotting changes in weather and water conditions.",
+        "4. I am a storyteller and enjoy sharing tales of my fishing adventures with others.",
+        "5. I am a conservationist and actively support efforts to protect aquatic ecosystems.",
+        "6. I am superstitious and have a set of rituals and beliefs related to fishing and the water."
+    ],
+    "Ideals": [
+        "1. Sustainability: I believe in the importance of sustainable fishing practices to ensure the health of aquatic environments. (Good)",
+        "2. Independence: I value my freedom and independence, relying on my fishing skills to make a living. (Chaotic)",
+        "3. Bounty: I am motivated by the desire for a bountiful catch and the prosperity it brings. (Neutral)",
+        "4. Exploration: I seek to explore new waters and discover unknown fishing spots. (Neutral)",
+        "5. Harmony: I strive to maintain a harmonious relationship with the water and its inhabitants. (Good)",
+        "6. Mastery: I am driven by the pursuit of becoming a master angler, respected by all. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a close friend or family member who taught me the art of fishing and passed down their legacy.",
+        "2. I owe a significant debt to a fishing crew or community that supported me in difficult times.",
+        "3. I have a special connection with a particular type of aquatic creature, which I consider a good omen for my catches.",
+        "4. I am on a quest to find a legendary or elusive fish that is said to bring great fortune to those who catch it.",
+        "5. I have a deep respect for a specific body of water or fishing spot, considering it sacred and worthy of protection.",
+        "6. I am haunted by memories of a dangerous encounter with a sea creature, which left a lasting scar on my psyche."
+    ],
+    "Flaws": [
+        "1. I can be overly superstitious, allowing irrational beliefs to guide my actions, even to my detriment.",
+        "2. I have a short temper when it comes to fishing, becoming easily frustrated when the catch is scarce.",
+        "3. I am overly cautious and prone to anxiety, fearing dangerous creatures or storms at sea.",
+        "4. I have a tendency to be secretive about my favorite fishing spots, guarding them as if they were treasure troves.",
+        "5. I am impulsive and can make rash decisions when faced with opportunities for a big catch.",
+        "6. I am fiercely protective of the water and its creatures, and I may react aggressively to those who harm them."
+    ],
+    "_rid": "LHEfAISGtYYYAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYYAAAAAAAAAA==/",
+    "_etag": "\"55006668-0000-1100-0000-6739f7d40000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731852244
+}

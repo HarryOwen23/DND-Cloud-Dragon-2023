@@ -1,8 +1,11 @@
 {
-    "Heavy Armor": [
+    "id": "Heavy_Armor",
+    "ArmorId": "Heavy_Armor",
+    "ArmorType": "Heavy Armor",
+    "Items": [
         {
             "Name": "Ring Mail",
-            "Armor Class (AC)": "14",
+            "ArmorClass": 14,
             "Strength": "-",
             "Stealth": "Disadvantage",
             "Weight": "40 lb.",
@@ -10,7 +13,7 @@
         },
         {
             "Name": "Chain Mail",
-            "Armor Class (AC)": "16",
+            "ArmorClass": 16,
             "Strength": "Str 13",
             "Stealth": "Disadvantage",
             "Weight": "55 lb.",
@@ -18,7 +21,7 @@
         },
         {
             "Name": "Splint",
-            "Armor Class (AC)": "17",
+            "ArmorClass": 17,
             "Strength": "Str 15",
             "Stealth": "Disadvantage",
             "Weight": "60 lb.",
@@ -26,11 +29,16 @@
         },
         {
             "Name": "Plate",
-            "Armor Class (AC)": "18",
+            "ArmorClass": 18,
             "Strength": "Str 15",
             "Stealth": "Disadvantage",
             "Weight": "65 lb.",
             "Cost": "1,500 gp"
         }
-    ]
+    ],
+    "_rid": "LHEfALDUKKYBAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfALDUKKY=/docs/LHEfALDUKKYBAAAAAAAAAA==/",
+    "_etag": "\"540089c6-0000-1100-0000-673633890000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731605385
 }

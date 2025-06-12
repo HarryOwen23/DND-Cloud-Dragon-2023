@@ -1,0 +1,59 @@
+{
+    "id": "city_watch_background",
+    "BackgroundId": "city_watch",
+    "Background Name": "City Watch",
+    "Description": "You are a member of the city's watch or guard force, responsible for maintaining law and order within the urban environment. You might have served as a constable, patrol officer, or investigator in a bustling city.",
+    "Skill Proficiencies": [
+        "Athletics",
+        "Insight"
+    ],
+    "Languages": [
+        "One of your choice"
+    ],
+    "Starting Equipment": [
+        "A uniform from your city watch or guard force",
+        "A badge of authority",
+        "A set of manacles",
+        "A signal whistle",
+        "A pouch containing 10 gold pieces"
+    ],
+    "Feature": "Watcher's Eye",
+    "Feature Description": "Your experience in law enforcement allows you to navigate urban environments effectively. You can easily find your way around city streets and neighborhoods, and you can identify criminal activity or dangerous situations with a keen eye. Additionally, you have access to city watch resources and can call upon your colleagues for assistance in certain situations.",
+    "Personality Traits": [
+        "1. I am disciplined and take my duties seriously, always striving to uphold the law.",
+        "2. I am observant and pay attention to the details, which helps me uncover hidden threats and suspects.",
+        "3. I am protective of the citizens I serve and am always ready to step in to help those in need.",
+        "4. I have a strong sense of justice and will go to great lengths to bring criminals to justice.",
+        "5. I am loyal to my fellow city watch members and consider them to be like family.",
+        "6. I can be a bit of a stickler for rules and regulations, often insisting on proper procedures."
+    ],
+    "Ideals": [
+        "1. Duty: I believe in upholding the law and serving the greater good of the city. (Lawful)",
+        "2. Justice: I am driven by a strong sense of justice and the need to protect the innocent. (Good)",
+        "3. Order: I value order and stability within the city, even if it means sacrificing personal freedom. (Lawful)",
+        "4. Independence: I am committed to personal freedom and resist any attempts to infringe on it. (Chaotic)",
+        "5. Loyalty: I am fiercely loyal to my fellow city watch members and will protect them at all costs. (Neutral)",
+        "6. Ambition: I seek to rise through the ranks of the city watch and gain more power and influence. (Any)"
+    ],
+    "Bonds": [
+        "1. I have a mentor or superior officer who taught me the ropes and helped shape my career.",
+        "2. I am deeply connected to my hometown or the city where I serve and will defend it fiercely.",
+        "3. I have a close friend or family member who is a civilian, and I constantly worry about their safety.",
+        "4. I have a nemesis or criminal adversary who always manages to evade justice, and I am determined to catch them.",
+        "5. I owe a debt of gratitude to a citizen who once saved my life, and I am committed to repaying it.",
+        "6. I am haunted by a past mistake or failure that still weighs on my conscience."
+    ],
+    "Flaws": [
+        "1. I can be overly cautious, second-guessing my decisions and hesitating in critical situations.",
+        "2. I am quick to assume guilt and can be suspicious of innocent individuals, especially if they are from outside the city.",
+        "3. I have a tendency to use excessive force when dealing with threats, which can lead to problems with superiors or the public.",
+        "4. I have hatred for my enemies which is blind and unreasoning.",
+        "5. I obey the law, even if the law causes misery.",
+        "6. I’d rather eat my armor than admit when I’m wrong."
+    ],
+    "_rid": "LHEfAISGtYYOAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYOAAAAAAAAAA==/",
+    "_etag": "\"5500093a-0000-1100-0000-6739f48a0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731851403
+}

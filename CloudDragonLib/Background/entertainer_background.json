@@ -1,0 +1,58 @@
+{
+    "id": "entertainer_background",
+    "BackgroundId": "entertainer",
+    "Background Name": "Entertainer",
+    "Description": "You are a performer, artist, or entertainer who has honed your skills in front of live audiences. Whether you are a musician, actor, dancer, or circus performer, you thrive on applause and the spotlight.",
+    "Skill Proficiencies": [
+        "Acrobatics",
+        "Performance"
+    ],
+    "Tool Proficiencies": [
+        "One type of musical instrument or one type of artisan's tool"
+    ],
+    "Starting Equipment": [
+        "A musical instrument (of your choice) or one type of artisan's tool",
+        "The favor of an admirer (a small trinket or token)",
+        "A costume or set of flashy clothes",
+        "A pouch containing 15 gold pieces"
+    ],
+    "Feature": "By Popular Demand",
+    "Feature Description": "You can always find a place to perform, usually in an inn or tavern but potentially with a circus, at a noble's court, or even on the streets. Your performances can earn you free room and board, or you can make a modest income while performing. The amount of money you can make varies depending on the quality of your performance and the local demand for entertainment.",
+    "Personality Traits": [
+        "1. I am a natural performer and love being the center of attention.",
+        "2. I am quick-witted and always ready with a clever comeback or joke.",
+        "3. I am empathetic and can connect with people's emotions through my performances.",
+        "4. I am easily excitable and prone to moments of enthusiasm and exuberance.",
+        "5. I am fiercely dedicated to my craft and strive for perfection in my performances.",
+        "6. I am a bit of a show-off and enjoy flaunting my talents whenever possible."
+    ],
+    "Ideals": [
+        "1. Fame: I am driven by the desire for fame and recognition as the best entertainer in the world. (Any)",
+        "2. Artistic Expression: I believe in the power of art and creativity to inspire and uplift others. (Good)",
+        "3. Joy: I perform to bring joy and laughter to people's lives, regardless of their troubles. (Good)",
+        "4. Freedom: I value my independence and the freedom to perform on my own terms. (Chaotic)",
+        "5. Excellence: I strive for excellence in my craft and am always pushing the boundaries of what I can do. (Any)",
+        "6. Wealth: I perform to make a comfortable living and am motivated by the promise of financial success. (Neutral)"
+    ],
+    "Bonds": [
+        "1. I have a close friend or mentor who taught me everything I know about my art, and I owe them a great deal.",
+        "2. I am dedicated to a cause or charity and use my performances to raise funds for it.",
+        "3. I have a family member or loved one who is my biggest fan and attends all of my shows.",
+        "4. I have a rival performer or entertainer whom I am constantly trying to outshine.",
+        "5. I owe a significant debt to a patron who has supported me and my career.",
+        "6. I am on a quest to find the ultimate performance piece or artistic inspiration."
+    ],
+    "Flaws": [
+        "1. I can be easily distracted by the allure of parties, social events, and adoring fans.",
+        "2. I am prone to mood swings and can be moody or temperamental, especially when my performances don't go well.",
+        "3. I am a perfectionist and am highly critical of myself, often dwelling on my mistakes.",
+        "4. I can be overly competitive and see other performers as rivals to be defeated.",
+        "5. I am superstitious and have a set of rituals and routines I must follow before each performance.",
+        "6. I have a tendency to overspend on luxuries and extravagances, leaving me in financial trouble at times."
+    ],
+    "_rid": "LHEfAISGtYYTAAAAAAAAAA==",
+    "_self": "dbs/LHEfAA==/colls/LHEfAISGtYY=/docs/LHEfAISGtYYTAAAAAAAAAA==/",
+    "_etag": "\"55007750-0000-1100-0000-6739f63e0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1731851838
+}
