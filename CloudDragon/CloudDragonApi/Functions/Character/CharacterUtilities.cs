@@ -31,6 +31,8 @@ namespace CloudDragonApi.Character
                 Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(ResetCharacterStats));
+            DebugLogger.Log($"ResetCharacterStats called for {id}");
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
@@ -55,6 +57,8 @@ namespace CloudDragonApi.Character
                 Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(LevelUpCharacterSimple));
+            DebugLogger.Log($"LevelUpCharacterSimple called for {id}");
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
@@ -75,6 +79,8 @@ namespace CloudDragonApi.Character
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(ValidateCharacter));
+            DebugLogger.Log($"ValidateCharacter called for {id}");
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
@@ -110,6 +116,8 @@ namespace CloudDragonApi.Character
                 Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(ApplyBackground));
+            DebugLogger.Log($"ApplyBackground called for {id}");
             string body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
             string backgroundId = input?.backgroundId;
@@ -143,6 +151,8 @@ namespace CloudDragonApi.Character
                 Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(AssignSpell));
+            DebugLogger.Log($"AssignSpell called for {id}");
             var body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
             string spellName = input?.spell;
@@ -176,6 +186,8 @@ namespace CloudDragonApi.Character
                 Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
+            log.LogRequestDetails(req, nameof(AddFeat));
+            DebugLogger.Log($"AddFeat called for {id}");
             var body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
             string featId = input?.feat;

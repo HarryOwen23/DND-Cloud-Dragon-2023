@@ -8,8 +8,17 @@ namespace CloudDragonApi.Services
     /// </summary>
     public interface ICharacterRepository
     {
+        /// <summary>
+        /// Persists the supplied character to the underlying data store.
+        /// </summary>
+        /// <param name="character">Character instance to save.</param>
         Task SaveAsync(CharacterModel character);
-        Task<CloudDragonLib.Models.Character> GetAsync(string id);
-        // Task SaveAsync(CloudDragonLib.Models.Character character);
+
+        /// <summary>
+        /// Retrieves a character by identifier.
+        /// </summary>
+        /// <param name="id">Unique identifier of the character.</param>
+        /// <returns>The stored character or <c>null</c> if not found.</returns>
+        Task<CharacterModel> GetAsync(string id);
     }
 }

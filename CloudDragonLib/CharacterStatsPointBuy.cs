@@ -6,8 +6,14 @@ using System.Collections.Generic;
 /// </summary>
 public class CharacterStatsPointBuy
 {
+    /// <summary>
+    /// Ordered list of ability names used by the point buy system.
+    /// </summary>
     private static readonly string[] AbilityNames = {"STR", "DEX", "CON", "INT", "WIS", "CHA"};
 
+    /// <summary>
+    /// Maps an ability score to the point cost required to purchase it.
+    /// </summary>
     private static readonly IReadOnlyDictionary<int, int> CostTable = new Dictionary<int, int>
     {
         [8] = 0,
@@ -33,6 +39,7 @@ public class CharacterStatsPointBuy
 
         var result = new Dictionary<string, int>();
         int points = 0;
+        Console.WriteLine("Starting point buy calculation");
 
         foreach (var ability in AbilityNames)
         {
@@ -42,11 +49,17 @@ public class CharacterStatsPointBuy
 
             points += CostTable[score];
             result[ability] = score;
+            Console.WriteLine($"{ability} -> {score} (points so far {points})");
         }
 
         if (points > 27)
             throw new ArgumentException("Point buy total exceeds 27 points.");
-
+        Console.WriteLine($"Total points used: {points}");
+        Console.WriteLine("Final ability scores:");
+        foreach (var kvp in result)
+        {
+            Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+        }
         return result;
     }
 }

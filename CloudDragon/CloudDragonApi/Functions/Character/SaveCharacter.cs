@@ -9,9 +9,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CloudDragonApi.Utils;
 
-public static class SaveCharacterFunction
+namespace CloudDragonApi.Functions.Character
 {
+    public static class SaveCharacterFunction
+    {
     [FunctionName("SaveCharacter")]
     public static async Task<IActionResult> SaveCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
@@ -22,6 +25,11 @@ public static class SaveCharacterFunction
         ILogger log)
     {
         log.LogInformation("SaveCharacter triggered");
+
+        if (!ApiRequestHelper.IsAuthorized(req, log))
+        {
+            return new UnauthorizedResult();
+        }
 
         string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
         Character newChar;
@@ -75,4 +83,6 @@ public static class SaveCharacterFunction
         if (effectiveLevel >= 7) character.SpellSlots[4] = 1;
         if (effectiveLevel >= 9) character.SpellSlots[5] = 1;
     }
+}
+
 }
