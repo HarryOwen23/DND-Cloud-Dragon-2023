@@ -21,6 +21,11 @@ namespace CloudDragonLib.Models
             Name = nameOfRace;
         }
 
+        /// <summary>
+        /// Adds or increments an ability bonus for this race.
+        /// </summary>
+        /// <param name="abilityName">Ability abbreviation (STR, DEX, etc.).</param>
+        /// <param name="abilityBonus">Bonus amount to add.</param>
         public void AddAbilityBonus(string abilityName, int abilityBonus)
         {
             if (AbilityBonuses.ContainsKey(abilityName))
@@ -31,11 +36,20 @@ namespace CloudDragonLib.Models
             {
                 AbilityBonuses[abilityName] = abilityBonus;
             }
+
+            Console.WriteLine($"Added {abilityBonus} {abilityName} bonus to {Name}");
         }
 
+        /// <summary>
+        /// Removes an ability bonus from the race if present.
+        /// </summary>
+        /// <param name="abilityName">Ability abbreviation to remove.</param>
         public void RemoveAbilityBonus(string abilityName)
         {
-            AbilityBonuses.Remove(abilityName);
+            if (AbilityBonuses.Remove(abilityName))
+            {
+                Console.WriteLine($"Removed {abilityName} bonus from {Name}");
+            }
         }
     }
 }
