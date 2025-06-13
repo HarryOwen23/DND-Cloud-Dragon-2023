@@ -16,9 +16,14 @@ public class Race
     /// </summary>
     public Dictionary<string, int> AbilityScoreBonuses { get; } = new();
 
+    /// <summary>
+    /// Initializes a new race with the specified name.
+    /// </summary>
+    /// <param name="name">Race name.</param>
     public Race(string name)
     {
         Name = name;
+        Console.WriteLine($"Created race {name}");
     }
 
     /// <summary>

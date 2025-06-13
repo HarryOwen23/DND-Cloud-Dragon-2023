@@ -9,6 +9,9 @@ namespace CloudDragonLib.Models
     /// </summary>
     public class Races
     {
+        /// <summary>
+        /// Name of the race.
+        /// </summary>
         public string Name { get; set; }
 
         /// <summary>
@@ -16,9 +19,14 @@ namespace CloudDragonLib.Models
         /// </summary>
         public Dictionary<string, int> AbilityBonuses { get; } = new();
 
+        /// <summary>
+        /// Creates a race with the given name.
+        /// </summary>
+        /// <param name="nameOfRace">Name of the race.</param>
         public Races(string nameOfRace)
         {
             Name = nameOfRace;
+            Console.WriteLine($"Created race {nameOfRace}");
         }
 
         /// <summary>
@@ -28,16 +36,16 @@ namespace CloudDragonLib.Models
         /// <param name="abilityBonus">Bonus amount to add.</param>
         public void AddAbilityBonus(string abilityName, int abilityBonus)
         {
-            if (AbilityBonuses.ContainsKey(abilityName))
+            if (AbilityBonuses.TryGetValue(abilityName, out var current))
             {
-                AbilityBonuses[abilityName] += abilityBonus;
+                AbilityBonuses[abilityName] = current + abilityBonus;
+                Console.WriteLine($"Increased {Name}'s {abilityName} bonus from {current} to {AbilityBonuses[abilityName]}");
             }
             else
             {
                 AbilityBonuses[abilityName] = abilityBonus;
+                Console.WriteLine($"Added {abilityBonus} {abilityName} bonus to {Name}");
             }
-
-            Console.WriteLine($"Added {abilityBonus} {abilityName} bonus to {Name}");
         }
 
         /// <summary>
