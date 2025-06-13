@@ -6,8 +6,16 @@ using Newtonsoft.Json.Linq;
 
 namespace CloudDragonLib
 {
+    /// <summary>
+    /// Abstraction for loading feats from an external file.
+    /// </summary>
     public interface IFeatsPopulator
     {
+        /// <summary>
+        /// Reads and parses feats from the specified JSON file.
+        /// </summary>
+        /// <param name="fileName">Path to the file containing feat data.</param>
+        /// <returns>List of parsed feats.</returns>
         Task<List<Feats>> Populate(string fileName);
     }
 
@@ -41,6 +49,7 @@ namespace CloudDragonLib
                     if (!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(description))
                     {
                         result.Add(new Feats(name, description));
+                        Console.WriteLine($"Loaded feat {name}");
                     }
                 }
             }
