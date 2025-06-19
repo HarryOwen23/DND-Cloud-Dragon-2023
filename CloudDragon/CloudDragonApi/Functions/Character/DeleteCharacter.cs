@@ -6,6 +6,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Make sure this points to the correct namespace for Character
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
@@ -32,11 +33,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character characterToDelete,
+                PartitionKey = "{id}")] CharacterModel characterToDelete,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {

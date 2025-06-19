@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Linq;
 
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.Equipment;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
@@ -24,11 +25,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)
