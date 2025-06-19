@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 
@@ -35,11 +36,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             containerName: "Characters",
             Connection = "CosmosDBConnection",
             Id = "{id}",
-            PartitionKey = "{id}")] Character existingChar,
+            PartitionKey = "{id}")] CharacterModel existingChar,
         [CosmosDB(
             databaseName: "CloudDragonDB",
             containerName: "Characters",
-            Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+            Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         string id,
         ILogger log)
     {
@@ -56,12 +57,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             return new NotFoundObjectResult(new { success = false, error = "Character not found." });
         }
 
-        Character updates;
+        CharacterModel updates;
         try
         {
             string body = await new StreamReader(req.Body).ReadToEndAsync();
             log.LogDebug("Update payload: {Body}", body);
-            updates = JsonConvert.DeserializeObject<Character>(body);
+            updates = JsonConvert.DeserializeObject<CharacterModel>(body);
         }
         catch (JsonException ex)
         {

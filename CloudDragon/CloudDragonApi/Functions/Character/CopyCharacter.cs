@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
@@ -20,17 +21,17 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character sourceChar,
+                PartitionKey = "{id}")] CharacterModel sourceChar,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (sourceChar == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
-            var clone = new Character
+            var clone = new CharacterModel
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = $"{sourceChar.Name} (Clone)",

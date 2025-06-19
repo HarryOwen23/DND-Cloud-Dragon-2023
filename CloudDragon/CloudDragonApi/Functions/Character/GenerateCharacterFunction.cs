@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
@@ -42,7 +43,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             DebugLogger.Log("Parsing character payload");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            var character = JsonConvert.DeserializeObject<Character>(requestBody);
+            var character = JsonConvert.DeserializeObject<CharacterModel>(requestBody);
             DebugLogger.Log("Character payload parsed");
 
             if (character == null || string.IsNullOrWhiteSpace(character.Name))

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
@@ -21,7 +22,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         [CosmosDB(
             databaseName: "CloudDragonDB",
             containerName: "Characters",
-            Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+            Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         ILogger log)
     {
         log.LogInformation("SaveCharacter triggered");
@@ -32,11 +33,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
 
         string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        Character newChar;
+        CharacterModel newChar;
 
         try
         {
-            newChar = JsonConvert.DeserializeObject<Character>(requestBody);
+            newChar = JsonConvert.DeserializeObject<CharacterModel>(requestBody);
 
             if (newChar == null || string.IsNullOrWhiteSpace(newChar.Name))
             {

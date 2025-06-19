@@ -10,12 +10,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class LevelUpService
     {
-        public static bool CheckSubclassUnlock(Character character)
+        public static bool CheckSubclassUnlock(CharacterModel character)
         {
             if (character == null || string.IsNullOrWhiteSpace(character.Class))
                 return false;
@@ -44,11 +45,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {
@@ -83,11 +84,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {

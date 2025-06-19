@@ -4,6 +4,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using System.Threading.Tasks;
 using CloudDragon.CloudDragonApi.Utils;
 
@@ -30,7 +31,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             string id,
             ILogger log)
         {
