@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
@@ -24,7 +25,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             ILogger log)
         {
             if (character == null)
@@ -42,11 +43,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)
@@ -75,11 +76,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
-                PartitionKey = "{id}")] Character character,
+                PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<Character> characterOut,
+                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)

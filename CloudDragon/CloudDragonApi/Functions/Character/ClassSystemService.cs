@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CloudDragonLib.Models;
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
@@ -25,7 +26,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             { "artificer", 3 }
         };
 
-        public static void AssignClass(Character character, string className)
+        public static void AssignClass(CharacterModel character, string className)
         {
             if (string.IsNullOrWhiteSpace(className))
                 throw new ArgumentException("Class name cannot be empty.");
@@ -35,7 +36,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             character.Classes[className] = 1; // Start at level 1
         }
 
-        public static void AssignSubclass(Character character, string subclassName)
+        public static void AssignSubclass(CharacterModel character, string subclassName)
         {
             if (string.IsNullOrWhiteSpace(subclassName))
                 throw new ArgumentException("Subclass name cannot be empty.");
@@ -56,7 +57,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             character.Subclasses[primaryClass] = subclassName;
         }
 
-        public static bool ValidateMulticlass(Character character, string newClass)
+        public static bool ValidateMulticlass(CharacterModel character, string newClass)
         {
             if (character.Classes.ContainsKey(newClass.ToLower()))
                 return false; // Can't multiclass into the same class again

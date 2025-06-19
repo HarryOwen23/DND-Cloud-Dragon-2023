@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Ensure the Character class is in this namespace
+using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
@@ -29,7 +30,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
                 SqlQuery = "SELECT * FROM c WHERE c.Level > 0",
-                Connection = "CosmosDBConnection")] IEnumerable<Character> characters,
+                Connection = "CosmosDBConnection")] IEnumerable<CharacterModel> characters,
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(ListCharacters));
