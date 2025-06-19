@@ -3,10 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\updatecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\describeapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\copycharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\updatecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88F62147-4064-4C67-8A59-500ACEDD18EC}|CloudDragonLib.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragonlib\\characterstatsdice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,9 +30,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\castcantripfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\copycharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7098CF1C-AAA5-4A47-9F76-960BF334576D}|..\\CloudDragon\\CloudDragon.csproj|c:\\users\\harryowen\\source\\repos\\dnd-cloud-dragon-2023-backup\\clouddragon\\clouddragonapi\\functions\\character\\createcharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -48,7 +51,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,20 +71,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DescribeAPI.cs",
+              "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\DescribeAPI.cs",
+              "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\DescribeAPI.cs",
+              "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\DescribeAPI.cs",
+              "RelativeToolTip": "..\\CloudDragon\\CloudDragonApi\\DescribeAPI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T16:03:37.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\Program.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Program.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\Program.cs",
               "RelativeToolTip": "..\\CloudDragon\\Program.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAYwCEAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:52:08.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Cosmos_Loader.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\Cosmos_Loader.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Cosmos_Loader.cs",
@@ -94,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CharacterStatsDice.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragonLib\\CharacterStatsDice.cs",
               "RelativeDocumentMoniker": "CharacterStatsDice.cs",
@@ -107,20 +123,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "UpdateCharacter.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\UpdateCharacter.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\UpdateCharacter.cs",
               "ToolTip": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\UpdateCharacter.cs",
               "RelativeToolTip": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\UpdateCharacter.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwBoAAABKAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wBAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T13:13:37.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "McpPromptBuilder.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\Models\\ModelContext\\McpPromptBuilder.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\Models\\ModelContext\\McpPromptBuilder.cs",
@@ -133,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ApplyLevelUpFunction.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\ApplyLevelUpFunction.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\ApplyLevelUpFunction.cs",
@@ -146,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CreateCharacter.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CreateCharacter.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CreateCharacter.cs",
@@ -159,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "CopyCharacter.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CopyCharacter.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CopyCharacter.cs",
@@ -172,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\Character.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\Character.cs",
@@ -184,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CastCantripFunction.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CastCantripFunction.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\CastCantripFunction.cs",
@@ -197,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AddItemToInventory.cs",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragon\\CloudDragonApi\\Functions\\Character\\AddItemToInventory.cs",
               "RelativeDocumentMoniker": "..\\CloudDragon\\CloudDragonApi\\Functions\\Character\\AddItemToInventory.cs",
@@ -210,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CloudDragonLib.csproj",
               "DocumentMoniker": "C:\\Users\\HarryOwen\\source\\repos\\DND-Cloud-Dragon-2023-backup\\CloudDragonLib\\CloudDragonLib.csproj",
               "RelativeDocumentMoniker": "CloudDragonLib.csproj",
