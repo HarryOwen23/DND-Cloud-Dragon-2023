@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using CloudDragonApi.Services;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
 using CloudDragonLib.Models;
 using System.Collections.Generic;
 

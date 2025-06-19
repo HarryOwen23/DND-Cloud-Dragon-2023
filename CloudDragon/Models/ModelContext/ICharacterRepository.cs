@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using CharacterModel = CloudDragonLib.Models.Character;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.Models.ModelContext
 {
     /// <summary>
     /// Provides access to storing and retrieving <see cref="CharacterModel"/> data.

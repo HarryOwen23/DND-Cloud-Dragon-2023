@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Inventory_System
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class RemoveItemFromInventory
     {

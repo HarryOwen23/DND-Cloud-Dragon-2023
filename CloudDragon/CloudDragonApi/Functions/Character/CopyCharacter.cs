@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Functions.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class CharacterCloneFunction
     {

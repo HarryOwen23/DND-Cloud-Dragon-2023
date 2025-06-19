@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace CloudDragonApi.Utils
+namespace CloudDragon.CloudDragonApi.Utils
 {
     /// <summary>
     /// Utility methods for working with HTTP requests.

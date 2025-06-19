@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class SubclassService
     {

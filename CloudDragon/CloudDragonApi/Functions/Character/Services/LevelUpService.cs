@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class LevelUpService
     {
@@ -32,7 +32,7 @@ namespace CloudDragonApi.Services
 }
 
 // 2. Create POST /character/{id}/level-up function
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class CharacterLevelUpFunction
     {
@@ -71,7 +71,7 @@ namespace CloudDragonApi.Character
 }
 
 // 3. Build POST /character/{id}/subclass function
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class AssignSubclassFunction
     {

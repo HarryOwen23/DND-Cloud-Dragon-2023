@@ -8,7 +8,7 @@ using Microsoft.Azure.Functions.Worker.Http;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character; 
 
-namespace CloudDragonApi.Spellcasting
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public class CastSpellFunction
     {

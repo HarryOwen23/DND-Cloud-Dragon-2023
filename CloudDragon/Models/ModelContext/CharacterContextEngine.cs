@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CharacterModel = CloudDragonLib.Models.Character;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.Models.ModelContext
 {
     /// <summary>
     /// Generates narrative details and statistics for characters using an underlying

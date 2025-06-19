@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Xunit;
 
+namespace CloudDragon.Tests
+{
 public class PointBuyBuilderTests
 {
     [Fact]
@@ -41,4 +43,5 @@ public class PointBuyBuilderTests
         };
         Assert.Throws<ArgumentException>(() => builder.GenerateStats(input));
     }
+}
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using CloudDragonLib.Models;
 
+namespace CloudDragonLib
+{
 class raceModifier
 {
     static void Main()
@@ -280,4 +282,5 @@ class raceModifier
             Console.WriteLine(bonus.Key + ": " + bonus.Value);
         }
     }
+}
 }

@@ -1,4 +1,4 @@
-namespace CloudDragonApi.Models
+namespace CloudDragon.Models
 {
     public class Item
     {

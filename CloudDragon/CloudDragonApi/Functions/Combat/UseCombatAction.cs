@@ -9,13 +9,13 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragonApi.Services;
-using CloudDragonApi.Models;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
-using CharacterModel = CloudDragonApi.Models.Combatant;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
+using CloudDragon.CloudDragonApi.Functions.Combat;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
+using CharacterModel = CloudDragon.Models.Combatant;
 
-namespace CloudDragonApi.Combat
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class UseCombatAction
     {

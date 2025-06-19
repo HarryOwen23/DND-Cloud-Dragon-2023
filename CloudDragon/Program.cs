@@ -4,13 +4,15 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using CloudDragon;
-using CloudDragonApi.Services;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
 using DotNetEnv;
 using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragonLib.Models;
 using System.Collections.Generic;
 
+namespace CloudDragon
+{
 public partial class Program
 {
     private static async Task Main(string[] args)

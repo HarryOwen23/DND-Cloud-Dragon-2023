@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Text;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.Models.ModelContext
 {
     public class McpPromptBuilder
     {

@@ -7,12 +7,12 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragonApi.Models; // Make sure CombatSession is from the correct namespace
+using CloudDragon.CloudDragonApi.Functions.Combat; // Make sure CombatSession is from the correct namespace
 using Newtonsoft.Json;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Combat
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class RollInitiative
     {

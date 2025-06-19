@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+namespace CloudDragonLib
+{
 /// <summary>
 /// Provides a simple implementation of the standard 27 point buy system.
 /// </summary>

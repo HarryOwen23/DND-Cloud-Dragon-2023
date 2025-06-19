@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+namespace CloudDragon
+{
 public class Cosmos_Loader
 {
     private CosmosClient _client;

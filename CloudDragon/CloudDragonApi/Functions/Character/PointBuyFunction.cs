@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib;
 
-namespace CloudDragonApi
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public class PointBuyInput
     {

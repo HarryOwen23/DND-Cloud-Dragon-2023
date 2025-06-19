@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Ensure the Character class is in this namespace
 
-namespace CloudDragonApi.Functions.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Lists all characters stored in Cosmos DB.

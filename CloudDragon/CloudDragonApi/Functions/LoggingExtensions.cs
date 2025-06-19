@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace CloudDragonApi
+namespace CloudDragon.CloudDragonApi.Functions
 {
     /// <summary>
     /// Helper extension methods for logging common request details.

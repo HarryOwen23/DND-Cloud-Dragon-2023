@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 
+namespace CloudDragonLib
+{
 /// <summary>
 /// Utility for generating random ability scores using the standard 4d6 drop lowest method.
 /// </summary>

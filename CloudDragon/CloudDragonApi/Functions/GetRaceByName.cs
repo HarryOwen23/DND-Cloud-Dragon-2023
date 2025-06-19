@@ -7,9 +7,9 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Races
+namespace CloudDragon.CloudDragonApi.Functions
 {
     /// <summary>
     /// Retrieves a race record by its name.
