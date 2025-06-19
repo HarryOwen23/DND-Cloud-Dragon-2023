@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using CharacterModel = CloudDragonLib.Models.Character;
 
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     /// <summary>
     /// Implementation of <see cref="ICharacterRepository"/> using Azure Cosmos DB.

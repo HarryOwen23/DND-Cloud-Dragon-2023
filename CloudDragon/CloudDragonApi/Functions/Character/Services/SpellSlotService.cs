@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class SpellSlotService 
     {

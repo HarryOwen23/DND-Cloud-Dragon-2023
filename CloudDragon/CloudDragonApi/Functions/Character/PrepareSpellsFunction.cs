@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Spellcasting
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class PrepareSpellsFunction
     {

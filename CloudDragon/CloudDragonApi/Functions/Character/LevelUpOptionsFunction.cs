@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
-using CloudDragonApi.Services;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
 
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class LevelUpOptionsFunction
     {

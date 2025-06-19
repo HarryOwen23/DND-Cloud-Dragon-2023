@@ -4,12 +4,12 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragonApi;
-using CloudDragonApi.Models;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Functions.Combat;
 using System.Linq;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Functions.Combat
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class EndCombatSessionFunction
     {

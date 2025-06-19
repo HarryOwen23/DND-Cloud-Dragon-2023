@@ -8,9 +8,9 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Functions.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Azure Function that creates a new character document in Cosmos DB.

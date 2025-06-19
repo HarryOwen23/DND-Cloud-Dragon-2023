@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CloudDragonApi;
+using CloudDragon.CloudDragonApi;
 using CloudDragonLib.Models;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
 
-namespace CloudDragonApi
+namespace CloudDragon.CloudDragonApi.Functions
 {
 
     /// <summary>

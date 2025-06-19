@@ -6,9 +6,9 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Make sure this points to the correct namespace for Character
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Functions.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Azure Function that performs a soft delete on a character document.

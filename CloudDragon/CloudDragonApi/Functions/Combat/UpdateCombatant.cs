@@ -8,11 +8,11 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragonApi.Models;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Functions.Combat;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Combat
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class UpdateCombatantFunction
     {

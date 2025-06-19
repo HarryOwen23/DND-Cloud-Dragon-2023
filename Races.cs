@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+namespace DNDCloudDragon
+{
 /// <summary>
 /// Represents a playable race and the ability score bonuses it grants.
 /// </summary>
@@ -56,4 +58,5 @@ public class Race
             Console.WriteLine($"Removed {ability} bonus from {Name}");
         }
     }
+}
 }

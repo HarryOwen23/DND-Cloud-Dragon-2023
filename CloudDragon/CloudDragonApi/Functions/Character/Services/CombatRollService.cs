@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using CharacterModel = CloudDragonLib.Models.Character;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class CombatRollService
     {

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace CloudDragonApi.Models
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     /// <summary>
     /// Abstraction for storing and retrieving combat sessions.

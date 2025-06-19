@@ -1,5 +1,7 @@
 using System;
 
+namespace DNDCloudDragon
+{
 /// <summary>
 /// Represents a single feat with a name and description.
 /// </summary>
@@ -26,4 +28,5 @@ public class Feat
         Description = description;
         Console.WriteLine($"Created feat {name}");
     }
+}
 }

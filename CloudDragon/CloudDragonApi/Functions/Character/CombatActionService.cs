@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CloudDragonApi.Models;
+using CloudDragon.CloudDragonApi.Functions.Combat;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class CombatActionService
     {

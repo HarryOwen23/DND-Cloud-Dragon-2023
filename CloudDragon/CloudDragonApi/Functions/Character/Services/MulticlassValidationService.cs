@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CharacterModel = CloudDragonLib.Models.Character;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class MulticlassValidationService
     {

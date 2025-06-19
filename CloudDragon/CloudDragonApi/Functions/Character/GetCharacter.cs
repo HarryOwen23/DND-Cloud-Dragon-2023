@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 using System.Threading.Tasks;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Azure Function that retrieves a single character by ID.

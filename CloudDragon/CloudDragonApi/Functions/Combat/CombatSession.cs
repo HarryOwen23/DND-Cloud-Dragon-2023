@@ -9,9 +9,9 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragonApi.Models;
+using CloudDragon.CloudDragonApi.Functions.Combat;
 
-namespace CloudDragonApi.Models
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     /// <summary>
     /// Represents the state of an ongoing combat encounter.

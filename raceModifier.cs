@@ -1,5 +1,7 @@
 using System;
 
+namespace DNDCloudDragon
+{
 /// <summary>
 /// Simple console demo that shows race ability score bonus handling.
 /// </summary>
@@ -26,4 +28,5 @@ class RaceModifier
             Console.WriteLine($"{bonus.Key}: {bonus.Value}");
         Console.WriteLine("Demo complete");
     }
+}
 }

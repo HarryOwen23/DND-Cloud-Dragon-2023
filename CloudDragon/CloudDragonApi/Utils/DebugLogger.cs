@@ -1,6 +1,6 @@
 using System;
 
-namespace CloudDragonApi.Utils
+namespace CloudDragon.CloudDragonApi.Utils
 {
     /// <summary>
     /// Simple helper for writing debug information.

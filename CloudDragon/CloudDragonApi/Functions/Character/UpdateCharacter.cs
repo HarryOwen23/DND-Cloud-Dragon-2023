@@ -8,10 +8,10 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Functions.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Azure Function used to update an existing character document.

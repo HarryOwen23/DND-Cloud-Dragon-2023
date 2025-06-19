@@ -1,8 +1,10 @@
 using System.Threading.Tasks;
 using Xunit;
-using CloudDragonApi.Services;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
 using CloudDragonLib.Models;
 
+namespace CloudDragon.Tests
+{
 public class CharacterContextEngineTests
 {
     [Fact]
@@ -25,4 +27,5 @@ public class CharacterContextEngineTests
         public Task<Character> GetAsync(string id) => Task.FromResult<Character>(null);
         public Task SaveAsync(Character c) => Task.CompletedTask;
     }
+}
 }

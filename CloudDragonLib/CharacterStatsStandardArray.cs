@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+namespace CloudDragonLib
+{
 /// <summary>
 /// Provides the classic D&D standard array ability scores.
 /// </summary>

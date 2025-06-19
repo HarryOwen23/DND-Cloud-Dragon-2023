@@ -6,11 +6,11 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Inventory_System
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Azure Function that adds an item to a character's inventory.

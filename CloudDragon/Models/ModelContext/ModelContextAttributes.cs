@@ -1,6 +1,6 @@
 using System;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.Models.ModelContext
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class ModelContextAttribute : Attribute { }

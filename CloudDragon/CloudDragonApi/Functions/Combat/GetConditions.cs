@@ -4,10 +4,10 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Functions.Conditions
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class GetConditionsFunction
     {

@@ -6,9 +6,9 @@ using Microsoft.Extensions.Logging;
 using CloudDragonLib;
 using System;
 using System.Threading.Tasks;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi
+namespace CloudDragon.CloudDragonApi
 {
     public static class RollForStatsFunction
     {

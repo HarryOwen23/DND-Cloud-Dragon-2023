@@ -1,5 +1,7 @@
 using Xunit;
 
+namespace CloudDragon.Tests
+{
 public class CharacterStatsDiceTests
 {
     [Fact]
@@ -13,4 +15,5 @@ public class CharacterStatsDiceTests
         Assert.InRange(stats.Wisdom, 3, 18);
         Assert.InRange(stats.Charisma, 3, 18);
     }
+}
 }

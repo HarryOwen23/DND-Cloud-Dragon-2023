@@ -5,12 +5,12 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragonApi.Services;
-using CloudDragonApi.Models;
-using CloudDragonApi;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Functions.Character.Services;
+using CloudDragon.CloudDragonApi.Functions.Combat;
+using CloudDragon.CloudDragonApi;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.CombatConditions
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     public static class ClearConditionsFunction
     {

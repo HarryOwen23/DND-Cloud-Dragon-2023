@@ -5,8 +5,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
-using CloudDragonApi.Utils;
-namespace CloudDragonApi.Races
+using CloudDragon.CloudDragonApi.Utils;
+namespace CloudDragon.CloudDragonApi.Functions
 {
     /// <summary>
     /// Retrieves the list of all available races.

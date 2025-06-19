@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Character
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class CharacterUtilities
     {

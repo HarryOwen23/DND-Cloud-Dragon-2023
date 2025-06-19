@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.Models.ModelContext
 {
     public interface ILlmService
     {

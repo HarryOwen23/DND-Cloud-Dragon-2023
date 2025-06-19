@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Services
+namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
     public static class ClassSystemService
     {

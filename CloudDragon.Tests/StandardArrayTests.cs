@@ -1,5 +1,7 @@
 using Xunit;
 
+namespace CloudDragon.Tests
+{
 public class StandardArrayTests
 {
     [Fact]
@@ -14,4 +16,5 @@ public class StandardArrayTests
         Assert.Equal(10, stats["WIS"]);
         Assert.Equal(8, stats["CHA"]);
     }
+}
 }

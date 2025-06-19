@@ -3,6 +3,8 @@ using System.Text.Json.Serialization;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
+namespace CloudDragonLib.Models
+{
 /// <summary>
 /// Represents a playable character class such as Fighter or Wizard.
 /// </summary>

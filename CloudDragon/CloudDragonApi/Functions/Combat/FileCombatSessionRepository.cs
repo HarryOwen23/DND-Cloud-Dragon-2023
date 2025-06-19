@@ -1,9 +1,9 @@
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi.Models
+namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
     /// <summary>
     /// Simple file-based repository for storing combat sessions locally.

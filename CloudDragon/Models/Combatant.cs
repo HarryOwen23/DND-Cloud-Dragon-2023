@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CloudDragonLib.Models;
 using Newtonsoft.Json;
 
-namespace CloudDragonApi.Models
+namespace CloudDragon.Models
 {
     public class Combatant
     {

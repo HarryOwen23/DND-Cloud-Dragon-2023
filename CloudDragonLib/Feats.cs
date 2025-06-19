@@ -1,5 +1,7 @@
 ﻿using System;
 
+namespace CloudDragonLib.Models
+{
 /// <summary>
 /// Represents a single feat and its descriptive text.
 /// </summary>
@@ -34,5 +36,6 @@ public class Feats
     {
         Console.WriteLine("Created empty feat");
     }
+}
 }
 

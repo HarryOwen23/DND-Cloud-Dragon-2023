@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Inventory_System
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
     /// Retrieves the inventory for a specific character.

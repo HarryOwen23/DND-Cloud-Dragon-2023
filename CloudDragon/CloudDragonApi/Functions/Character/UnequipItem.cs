@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using CloudDragonLib.Models;
 using CloudDragon.Equipment;
 
-namespace CloudDragonApi.Inventory_System
+namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class UnequipItem
     {

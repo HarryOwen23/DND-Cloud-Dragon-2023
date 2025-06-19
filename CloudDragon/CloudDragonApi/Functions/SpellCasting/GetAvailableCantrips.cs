@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 
-namespace CloudDragonApi.Spellcasting
+namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
 {
     public static class GetAvailableCantrips
     {

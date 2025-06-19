@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using CloudDragonLib;
-using CloudDragonApi.Utils;
+using CloudDragon.CloudDragonApi.Utils;
 
-namespace CloudDragonApi
+namespace CloudDragon.CloudDragonApi
 {
     /// <summary>
     /// Azure Function that processes JSON payloads for various character stat generation

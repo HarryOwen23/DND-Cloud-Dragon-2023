@@ -1,8 +1,10 @@
 using System.IO;
 using System.Threading.Tasks;
 using Xunit;
-using CloudDragonApi.Models;
+using CloudDragon.CloudDragonApi.Functions.Combat;
 
+namespace CloudDragon.Tests
+{
 public class FileCombatSessionRepositoryTests
 {
     [Fact]
@@ -19,4 +21,5 @@ public class FileCombatSessionRepositoryTests
         Assert.Equal(session.Id, loaded.Id);
         Directory.Delete(dir, true);
     }
+}
 }
