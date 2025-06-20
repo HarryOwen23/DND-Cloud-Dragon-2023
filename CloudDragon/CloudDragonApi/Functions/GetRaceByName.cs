@@ -1,9 +1,10 @@
 using System;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 using CloudDragon.CloudDragonApi.Utils;
@@ -20,15 +21,15 @@ namespace CloudDragon.CloudDragonApi.Functions
         /// </summary>
         /// <param name="req">HTTP request.</param>
         /// <param name="name">Race name to search for.</param>
-        /// <param name="context">Function execution context.</param>
+        /// <param name="log">Function logger.</param>
         /// <returns>The matching race or 404.</returns>
-        [Function("GetRaceByName")]
-        public static async Task<HttpResponseData> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races/{name}")] HttpRequestData req,
+        [FunctionName("GetRaceByName")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races/{name}")] HttpRequest req,
             string name,
-            FunctionContext context)
+            ILogger log)
         {
-            var log = context.GetLogger(nameof(GetRaceByName));
+            log.LogRequestDetails(req, nameof(GetRaceByName));
             DebugLogger.Log($"GetRaceByName called with {name}");
 
             var populator = new RacesPopulator();
@@ -36,21 +37,15 @@ namespace CloudDragon.CloudDragonApi.Functions
             DebugLogger.Log($"Loaded {races.Count} races searching for {name}");
             var match = races.FirstOrDefault(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
-            HttpResponseData response;
             if (match == null)
             {
                 log.LogWarning("Race not found: {Name}", name);
                 DebugLogger.Log($"Race {name} not found");
-                response = req.CreateResponse(HttpStatusCode.NotFound);
-                await response.WriteAsJsonAsync(new { success = false, error = "Race not found." });
-                return response;
+                return new NotFoundObjectResult(new { success = false, error = "Race not found." });
             }
-
             log.LogInformation("Returning race {Race}", match.Name);
             DebugLogger.Log($"Returning race {match.Name}");
-            response = req.CreateResponse(HttpStatusCode.OK);
-            await response.WriteAsJsonAsync(new { success = true, race = match });
-            return response;
+            return new OkObjectResult(new { success = true, race = match });
         }
     }
 }

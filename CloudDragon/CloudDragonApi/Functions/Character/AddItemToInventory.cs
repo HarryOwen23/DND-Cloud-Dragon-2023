@@ -1,5 +1,4 @@
 using System.IO;
-using System.Net;
 using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -24,11 +23,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="character">Character document from Cosmos DB.</param>
         /// <param name="characterOut">Output binding for persisting the update.</param>
-        /// <param name="context">The current function execution context.</param>
-        /// <returns>The HTTP response describing the operation.</returns>
-        [Function("AddItemToInventory")]
-        public static async Task<HttpResponseData> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")] HttpRequestData req,
+        /// <param name="log">Function logger.</param>
+        /// <returns>Action result describing the operation.</returns>
+        [FunctionName("AddItemToInventory")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")] HttpRequest req,
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
@@ -40,17 +39,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
                 Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
-            FunctionContext context)
+            ILogger log)
         {
-            var log = context.GetLogger("AddItemToInventory");
-            var response = req.CreateResponse();
-
             if (character == null)
             {
                 DebugLogger.Log($"AddItemToInventory - character {id} not found");
-                response.StatusCode = HttpStatusCode.NotFound;
-                await response.WriteAsJsonAsync(new { success = false, error = "Character not found." });
-                return response;
+                return new NotFoundObjectResult(new { success = false, error = "Character not found." });
             }
 
             DebugLogger.Log($"AddItemToInventory called for {id}");
@@ -60,18 +54,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             if (item == null || string.IsNullOrEmpty(item.Name))
             {
                 DebugLogger.Log("Invalid item payload received");
-                response.StatusCode = HttpStatusCode.BadRequest;
-                await response.WriteAsJsonAsync(new { success = false, error = "Invalid item data." });
-                return response;
+                return new BadRequestObjectResult(new { success = false, error = "Invalid item data." });
             }
 
             character.Inventory.Add(item);
             await characterOut.AddAsync(character);
             DebugLogger.Log($"Added {item.Name} to {id}'s inventory");
 
-            response.StatusCode = HttpStatusCode.OK;
-            await response.WriteAsJsonAsync(new { success = true, message = $"Added '{item.Name}' to inventory." });
-            return response;
+            return new OkObjectResult(new { success = true, message = $"Added '{item.Name}' to inventory." });
         }
     }
 }
