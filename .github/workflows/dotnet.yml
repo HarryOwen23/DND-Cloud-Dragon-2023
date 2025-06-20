@@ -15,4 +15,4 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Run tests
-      run: dotnet test CloudDragonLib/CloudDragonLib.sln --no-build --verbosity minimal
+      run: dotnet test CloudDragonLib/CloudDragonLib.sln --verbosity minimal
