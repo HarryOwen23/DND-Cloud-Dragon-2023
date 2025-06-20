@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
@@ -34,14 +35,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/reset-stats")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -71,14 +72,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-simple")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -107,8 +108,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/validate")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
@@ -147,18 +148,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/background")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Backgrounds",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Backgrounds",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> backgrounds,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -198,14 +199,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/spells/add")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -240,18 +241,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/feats/add")] HttpRequest req,
             string id,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Feats",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Feats",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> feats,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {

@@ -2,12 +2,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Functions.Combat;
 using System.Linq;
 using CloudDragon.CloudDragonApi.Utils;
+using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
     /// <summary>
@@ -23,14 +25,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "combat/{id}")] HttpRequest req,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "CombatSessions",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CombatSession session,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "CombatSessions",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string id,
             ILogger log)

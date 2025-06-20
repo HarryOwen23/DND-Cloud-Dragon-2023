@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragon.CloudDragonApi.Functions.Combat;
 using System.Linq;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
+using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
@@ -16,8 +18,8 @@ public static class GetCombatStateFunction
     public static IActionResult Run(
         [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{id}")] HttpRequest req,
         [CosmosDB(
-            databaseName: "CloudDragonDB",
-            ContainerName: "CombatSessions",
+            DatabaseName = "CloudDragonDB",
+            ContainerName = "CombatSessions",
             ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CombatSession session,

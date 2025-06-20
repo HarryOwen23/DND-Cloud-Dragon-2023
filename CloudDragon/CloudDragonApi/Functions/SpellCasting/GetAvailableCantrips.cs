@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -28,8 +29,8 @@ namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "cantrips/{className}")] HttpRequest req,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Spells",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Spells",
                 SqlQuery = "SELECT * FROM c WHERE c.ClassName = {className} AND c.Type = 'Cantrip'",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> cantrips,
             string className,

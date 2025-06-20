@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -16,8 +17,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "subclasses/{className}")] HttpRequest req,
             string className,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Classes",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Classes",
                 SqlQuery = "SELECT * FROM c WHERE c.{partitionKey} = {className}",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> allEntries,
             ILogger log)

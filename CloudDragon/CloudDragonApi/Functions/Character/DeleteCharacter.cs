@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Make sure this points to the correct namespace for Character
 using CharacterModel = CloudDragonLib.Models.Character;
@@ -30,14 +31,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "character/{id}")] HttpRequest req,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel characterToDelete,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)

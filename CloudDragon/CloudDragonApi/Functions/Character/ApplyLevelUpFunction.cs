@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using System.Net;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -33,14 +34,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-levelup")] HttpRequest req,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)

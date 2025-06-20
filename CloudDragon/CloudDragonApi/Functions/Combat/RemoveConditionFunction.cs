@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -11,6 +12,7 @@ using CloudDragon.CloudDragonApi.Functions.Character.Services;
 using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
+using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
@@ -28,14 +30,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             string sessionId,
             string combatantId,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "CombatSessions",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "CombatSessions",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

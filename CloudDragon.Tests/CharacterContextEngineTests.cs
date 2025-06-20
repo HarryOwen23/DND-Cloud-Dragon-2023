@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Xunit;
 using CloudDragon.CloudDragonApi.Functions.Character.Services;
 using CloudDragonLib.Models;
+using CloudDragon.Models.ModelContext;
 
 namespace CloudDragon.Tests
 {

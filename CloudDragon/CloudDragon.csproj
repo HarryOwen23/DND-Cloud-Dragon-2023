@@ -19,6 +19,12 @@
     <!-- Packages required for legacy in-process functions -->
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" Version="3.1.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ASP.NET Core framework for HttpRequest type -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
