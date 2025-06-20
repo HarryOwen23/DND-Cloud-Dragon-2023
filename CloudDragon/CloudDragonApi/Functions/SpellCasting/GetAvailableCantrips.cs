@@ -19,9 +19,9 @@ namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "cantrips/{className}")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Spells",
+                ContainerName: "Spells",
                 SqlQuery = "SELECT * FROM c WHERE c.ClassName = {className} AND c.Type = 'Cantrip'",
-                Connection = "CosmosDBConnection")] IEnumerable<dynamic> cantrips,
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> cantrips,
             string className,
             ILogger log)
         {

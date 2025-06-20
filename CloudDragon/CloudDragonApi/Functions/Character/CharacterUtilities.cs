@@ -35,14 +35,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"ResetCharacterStats called for {id}");
@@ -72,14 +72,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"LevelUpCharacterSimple called for {id}");
@@ -108,8 +108,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             ILogger log)
@@ -148,18 +148,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Backgrounds",
-                Connection = "CosmosDBConnection")] IEnumerable<dynamic> backgrounds,
+                ContainerName: "Backgrounds",
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> backgrounds,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"ApplyBackground called for {id}");
@@ -199,14 +199,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"AssignSpell called for {id}");
@@ -241,18 +241,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Feats",
-                Connection = "CosmosDBConnection")] IEnumerable<dynamic> feats,
+                ContainerName: "Feats",
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> feats,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"AddFeat called for {id}");

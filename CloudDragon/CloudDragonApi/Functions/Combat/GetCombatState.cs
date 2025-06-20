@@ -17,8 +17,8 @@ public static class GetCombatStateFunction
         [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{id}")] HttpRequest req,
         [CosmosDB(
             databaseName: "CloudDragonDB",
-            containerName: "CombatSessions",
-            Connection = "CosmosDBConnection",
+            ContainerName: "CombatSessions",
+            ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CombatSession session,
         string id,

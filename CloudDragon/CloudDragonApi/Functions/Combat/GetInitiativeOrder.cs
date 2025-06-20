@@ -18,8 +18,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             string sessionId,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection",
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             ILogger log)
