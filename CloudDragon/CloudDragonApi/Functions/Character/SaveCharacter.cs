@@ -1,7 +1,8 @@
 using System.Net;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Logging;
-using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
 using System.Threading.Tasks;
 using CloudDragon.CloudDragonApi.Utils;
 using Microsoft.Extensions.Logging;

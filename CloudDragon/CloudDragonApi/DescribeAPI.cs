@@ -1,6 +1,8 @@
 using System.Net;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
 using System.Threading.Tasks;
 using CloudDragon.CloudDragonApi.Utils;
 using Microsoft.Extensions.Logging;
@@ -9,18 +11,17 @@ namespace CloudDragon.CloudDragonApi.Functions
 {
     public static class DescribeApiFunction
     {
-        [Function("DescribeApi")]
+        [FunctionName("DescribeApi")]
         /// <summary>
         /// Returns a JSON object describing the available CloudDragon API endpoints.
         /// </summary>
         /// <param name="req">The incoming HTTP request.</param>
         /// <param name="context">The current function execution context.</param>
         /// <returns>The HTTP response containing the list of endpoints.</returns>
-        public static HttpResponseData Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequestData req,
-            FunctionContext context)
+        public static IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
+            ILogger logger)
         {
-            var logger = context.GetLogger(nameof(DescribeApiFunction));
             DebugLogger.Log("Describe API endpoint hit");
 
             var result = new
@@ -38,10 +39,8 @@ namespace CloudDragon.CloudDragonApi.Functions
                 }
             };
 
-            var response = req.CreateResponse(HttpStatusCode.OK);
-            response.WriteAsJsonAsync(result);
             DebugLogger.Log("Returning list of endpoints");
-            return response;
+            return new OkObjectResult(result);
         }
     }
 }
