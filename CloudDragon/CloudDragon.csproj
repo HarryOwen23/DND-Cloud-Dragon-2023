@@ -16,6 +16,9 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.CosmosDB" Version="4.0.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs" Version="4.0.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Queues" Version="4.0.0" />
+    <!-- Packages required for legacy in-process functions -->
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.10" />
   </ItemGroup>
 
   <ItemGroup>
