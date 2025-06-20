@@ -14,8 +14,14 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Removes a specified condition from a combatant.
+    /// </summary>
     public static class RemoveConditionFunction
     {
+        /// <summary>
+        /// Removes the condition if it exists on the specified combatant.
+        /// </summary>
         [FunctionName("RemoveCondition")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/remove-condition")] HttpRequest req,

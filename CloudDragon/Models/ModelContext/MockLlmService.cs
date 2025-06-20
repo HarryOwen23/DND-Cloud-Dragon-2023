@@ -2,8 +2,12 @@ using System.Threading.Tasks;
 
 namespace CloudDragon.Models.ModelContext
 {
+    /// <summary>
+    /// Simple mock implementation of <see cref="ILlmService"/> for testing.
+    /// </summary>
     public class MockLlmService : ILlmService
     {
+        /// <inheritdoc />
         public Task<string> GenerateAsync(string prompt)
         {
             // Simple mock: just echoes the prompt back with a pretend "backstory".

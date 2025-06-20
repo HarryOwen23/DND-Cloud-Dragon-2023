@@ -15,8 +15,14 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
+    /// <summary>
+    /// Helper functions for retrieving and modifying a character's spell slots.
+    /// </summary>
     public static class SpellSlotService 
     {
+        /// <summary>
+        /// Returns the current spell slot counts for the specified character.
+        /// </summary>
         [FunctionName("GetSpellSlots")]
         public static IActionResult GetSpellSlots(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/spell-slots")] HttpRequest req,
@@ -34,6 +40,9 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             DebugLogger.Log($"Retrieving spell slots for character {character.Id}");
             return new OkObjectResult(new { success = true, spellSlots = character.SpellSlots });
         }
+        /// <summary>
+        /// Consumes a spell slot of the specified level if available.
+        /// </summary>
         [FunctionName("UseSpellSlot")]
         public static async Task<IActionResult> UseSpellSlot(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/spell-slots/use")] HttpRequest req,
@@ -67,6 +76,9 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             return new OkObjectResult(new { success = true, remaining = character.SpellSlots[level] });
         }
 
+        /// <summary>
+        /// Resets all spell slots to their maximum values after a long rest.
+        /// </summary>
         [FunctionName("LongRestRecoverSlots")]
         public static async Task<IActionResult> LongRestRecoverSlots(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/long-rest")] HttpRequest req,
@@ -86,7 +98,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             if (character == null)
                 return new NotFoundObjectResult(new { success = false, error = "Character not found." });
 
-            // TODO: Replace this with proper per-class slot recovery later if needed.
+            // Currently assumes full caster progression for all classes.
             foreach (var key in character.SpellSlots.Keys.ToList())
             {
                 character.SpellSlots[key] = GetMaxSpellSlots(character.Level, key);

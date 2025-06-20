@@ -9,15 +9,18 @@ using Microsoft.Extensions.Logging;
 
 namespace CloudDragon.CloudDragonApi.Functions
 {
+    /// <summary>
+    /// Provides a simple listing of available API endpoints.
+    /// </summary>
     public static class DescribeApiFunction
     {
-        [FunctionName("DescribeApi")]
         /// <summary>
         /// Returns a JSON object describing the available CloudDragon API endpoints.
         /// </summary>
         /// <param name="req">The incoming HTTP request.</param>
-        /// <param name="context">The current function execution context.</param>
+        /// <param name="logger">Function logger.</param>
         /// <returns>The HTTP response containing the list of endpoints.</returns>
+        [FunctionName("DescribeApi")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
             ILogger logger)

@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace CloudDragon.PartitionKeys
 {
+    /// <summary>
+    /// Partition keys used for Fighter archetype data.
+    /// </summary>
     public class FighterPartitionKeysConfig
     {
+        /// <summary>Base Fighter partition.</summary>
         public string Base { get; set; }
+        /// <summary>Champion archetype partition.</summary>
         public string Champion { get; set; }
+        /// <summary>Battle Master archetype partition.</summary>
         public string BattleMaster { get; set; }
         public string ArcaneArcher { get; set; }
         public string Banneret { get; set; }

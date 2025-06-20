@@ -8,8 +8,17 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi
 {
+    /// <summary>
+    /// Azure Function that returns the 5e standard array of ability scores.
+    /// </summary>
     public static class StandardArrayFunction
     {
+        /// <summary>
+        /// HTTP entry point for retrieving the standard array.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>The standard array wrapped in an <see cref="IActionResult"/>.</returns>
         [FunctionName("StandardArray")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "standard-array")] HttpRequest req,

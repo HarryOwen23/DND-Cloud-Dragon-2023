@@ -10,9 +10,15 @@ using System.Linq;
 using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
+    /// <summary>
+    /// Marks an existing combat session as ended and archives combatants.
+    /// </summary>
 {
     public static class EndCombatSessionFunction
     {
+        /// <summary>
+        /// Flags the specified combat session as ended.
+        /// </summary>
         [FunctionName("EndCombatSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "combat/{id}")] HttpRequest req,

@@ -15,8 +15,14 @@ using CloudDragon.CloudDragonApi.Functions.Combat;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Azure Function endpoints for creating a new combat session.
+    /// </summary>
     public static class CreateCombatSessionFunction
     {
+        /// <summary>
+        /// Creates a new combat session from the provided combatants.
+        /// </summary>
         [FunctionName("CreateCombatSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat")] HttpRequest req,

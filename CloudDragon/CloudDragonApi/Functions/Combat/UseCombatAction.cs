@@ -17,8 +17,14 @@ using CharacterModel = CloudDragon.Models.Combatant;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Handles combat actions like attacking, dodging, and taking cover.
+    /// </summary>
     public static class UseCombatAction
     {
+        /// <summary>
+        /// Executes a combatant action within an existing combat session.
+        /// </summary>
         [FunctionName("UseCombatAction")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/action")] HttpRequest req,

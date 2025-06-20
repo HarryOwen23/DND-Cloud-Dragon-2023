@@ -7,8 +7,16 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi
 {
+    /// <summary>
+    /// Simple health check endpoint to verify the API is running.
+    /// </summary>
     public static class HealthCheckFunction
     {
+        /// <summary>
+        /// Responds with a timestamp and version string.
+        /// </summary>
+        /// <param name="req">Incoming request.</param>
+        /// <param name="log">Function logger.</param>
         [FunctionName("HealthCheck")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "health")] HttpRequest req,

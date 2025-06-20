@@ -13,8 +13,20 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions
 {
+    /// <summary>
+    /// Azure Function that applies a racial bonus set to a character.
+    /// </summary>
     public static class ApplyRaceFunction
     {
+        /// <summary>
+        /// Applies the chosen race to the provided character document.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request containing the race name.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="character">Character record from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding for persisting changes.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Details about the applied race.</returns>
         [FunctionName("ApplyRace")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-race")] HttpRequest req,
