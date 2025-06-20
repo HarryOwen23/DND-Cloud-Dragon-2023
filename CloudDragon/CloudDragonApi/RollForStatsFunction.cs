@@ -10,8 +10,17 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi
 {
+    /// <summary>
+    /// Azure Function that rolls six ability scores using 4d6 drop-low.
+    /// </summary>
     public static class RollForStatsFunction
     {
+        /// <summary>
+        /// Generates a new stat block and returns it to the caller.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>List of six ability scores.</returns>
         [FunctionName("RollStats")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "roll-stats")] HttpRequest req,

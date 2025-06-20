@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace CloudDragon.ItemIds
 {
+    /// <summary>
+    /// Item identifiers for Fighter archetypes.
+    /// </summary>
     public class FighterItemIdsConfig
     {
+        /// <summary>Base Fighter class items.</summary>
         public string Base { get; set; }
+        /// <summary>Champion archetype items.</summary>
         public string Champion { get; set; }
+        /// <summary>Battle Master archetype items.</summary>
         public string BattleMaster { get; set; }
         public string ArcaneArcher { get; set; }
         public string Banneret { get; set; }

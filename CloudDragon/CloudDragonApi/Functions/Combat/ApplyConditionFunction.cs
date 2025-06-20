@@ -14,8 +14,14 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Applies a combat condition to a specific combatant.
+    /// </summary>
     public static class ApplyConditionFunction
     {
+        /// <summary>
+        /// Adds the given condition to the combatant if present.
+        /// </summary>
         [FunctionName("ApplyCondition")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/apply-condition")] HttpRequest req,

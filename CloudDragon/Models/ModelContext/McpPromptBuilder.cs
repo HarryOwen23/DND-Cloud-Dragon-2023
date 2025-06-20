@@ -6,8 +6,16 @@ using CloudDragonLib.Models;
 
 namespace CloudDragon.Models.ModelContext
 {
+    /// <summary>
+    /// Builds prompt strings for use with the language model service.
+    /// </summary>
     public class McpPromptBuilder
     {
+        /// <summary>
+        /// Creates a prompt describing the supplied model context.
+        /// </summary>
+        /// <param name="model">Model object decorated with context attributes.</param>
+        /// <returns>The assembled prompt.</returns>
         public string BuildPrompt(object model)
         {
             var type = model.GetType();
@@ -31,6 +39,11 @@ namespace CloudDragon.Models.ModelContext
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Generates a short flavor quote prompt for the given character.
+        /// </summary>
+        /// <param name="character">Character providing context.</param>
+        /// <returns>Prompt string.</returns>
         public string BuildFlavorQuotePrompt(Character character)
         {
             return
@@ -43,7 +56,6 @@ namespace CloudDragon.Models.ModelContext
                 Personality: {character.Personality}
 
             Limit to 30 words. Style it like fantasy card flavor text — poetic, cryptic, or heroic, as in Magic: The Gathering or Cardfight!! Vanguard.";
-    }
-
+        }
     }
 }

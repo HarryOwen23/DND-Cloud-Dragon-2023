@@ -12,8 +12,19 @@ using CloudDragonLib.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
 {
+    /// <summary>
+    /// Retrieves leveled spells for the specified class and level.
+    /// </summary>
     public static class GetAvailableSpells
     {
+        /// <summary>
+        /// Queries the Cosmos DB container for matching spells.
+        /// </summary>
+        /// <param name="req">HTTP request.</param>
+        /// <param name="spells">Query result set.</param>
+        /// <param name="className">Name of the caster class.</param>
+        /// <param name="level">Spell level requested.</param>
+        /// <param name="log">Function logger.</param>
         [FunctionName("GetAvailableSpells")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "spells/{className}/{level}")] HttpRequest req,

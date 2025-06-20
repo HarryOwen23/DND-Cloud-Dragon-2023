@@ -9,14 +9,29 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi
 {
+    /// <summary>
+    /// Input payload for performing a skill check.
+    /// </summary>
     public class SkillCheckInput
     {
+        /// <summary>Bonus modifier applied to the d20 roll.</summary>
         public int Modifier { get; set; } = 0;
+
+        /// <summary>Difficulty class that must be met or exceeded.</summary>
         public int Dc { get; set; } = 10;
     }
 
+    /// <summary>
+    /// Azure Function that simulates a single skill check roll.
+    /// </summary>
     public static class RollForSkillCheck
     {
+        /// <summary>
+        /// Performs the skill check using the provided modifiers.
+        /// </summary>
+        /// <param name="req">HTTP request containing <see cref="SkillCheckInput"/>.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Roll result data.</returns>
         [FunctionName("RollForSkillCheck")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "skill-check")] HttpRequest req,

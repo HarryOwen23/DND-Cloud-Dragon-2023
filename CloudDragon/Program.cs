@@ -13,8 +13,15 @@ using System.Collections.Generic;
 
 namespace CloudDragon
 {
+    /// <summary>
+    /// Console entry point for interacting with the Cloud Dragon sample data.
+    /// </summary>
     public partial class Program
     {
+        /// <summary>
+        /// Runs the interactive character creation workflow.
+        /// </summary>
+        /// <param name="args">Command line arguments.</param>
         private static async Task Main(string[] args)
         {
             Env.Load();
@@ -111,12 +118,23 @@ namespace CloudDragon
             await RetrieveAndDisplayItemAsync(cosmosLoader, configuration, "Characters", character.Id);
         }
 
+        /// <summary>
+        /// Displays a prompt and reads user input from the console.
+        /// </summary>
+        /// <param name="message">Prompt text to display.</param>
         private static string Prompt(string message)
         {
             Console.Write(message);
             return Console.ReadLine();
         }
 
+        /// <summary>
+        /// Fetches an item from Cosmos DB and writes it to the console.
+        /// </summary>
+        /// <param name="cosmosLoader">Loader instance.</param>
+        /// <param name="config">Application configuration.</param>
+        /// <param name="containerName">Name of the container.</param>
+        /// <param name="itemKey">Key identifying the item.</param>
         private static async Task RetrieveAndDisplayItemAsync(Cosmos_Loader cosmosLoader, IConfiguration config, string containerName, string itemKey)
         {
             var containerConfig = config.GetSection($"CosmosDb:Containers:{containerName}");

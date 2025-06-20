@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace CloudDragon
 {
+    /// <summary>
+    /// Utility wrapper for interacting with Cosmos DB containers.
+    /// </summary>
     public class Cosmos_Loader
     {
         private CosmosClient _client;
         private Database _database;
         private Dictionary<string, Container> _containers; // To hold multiple containers
 
+        /// <summary>
+        /// Initializes the loader and reads configuration for Cosmos DB.
+        /// </summary>
+        /// <param name="configuration">Application configuration.</param>
         public Cosmos_Loader(IConfiguration configuration)
         {
             var cosmosSettings = configuration.GetSection("CosmosDb");
@@ -44,6 +51,12 @@ namespace CloudDragon
             }
         }
 
+        /// <summary>
+        /// Creates or updates an item in the given container.
+        /// </summary>
+        /// <param name="containerName">Target container name.</param>
+        /// <param name="item">The item to save.</param>
+        /// <param name="partitionKey">Partition key for the item.</param>
         public async Task UpsertItemAsync(string containerName, object item, string partitionKey)
         {
             if (_containers.ContainsKey(containerName))
@@ -57,6 +70,13 @@ namespace CloudDragon
             }
         }
 
+        /// <summary>
+        /// Retrieves an item by id from the specified container.
+        /// </summary>
+        /// <param name="containerName">Container name.</param>
+        /// <param name="itemId">Item identifier.</param>
+        /// <param name="partitionKeyValue">Partition key value.</param>
+        /// <returns>The item if found; otherwise <c>null</c>.</returns>
         public async Task<dynamic> GetItemByIdAsync(string containerName, string itemId, string partitionKeyValue)
         {
             if (_containers.ContainsKey(containerName))
@@ -87,6 +107,9 @@ namespace CloudDragon
             }
         }
 
+        /// <summary>
+        /// Writes all items from every registered container to the console.
+        /// </summary>
         public async Task QueryAllItemsFromAllContainersAsync()
         {
             foreach (var containerEntry in _containers)

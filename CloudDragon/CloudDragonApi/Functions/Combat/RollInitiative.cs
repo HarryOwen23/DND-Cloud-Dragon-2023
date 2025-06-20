@@ -14,8 +14,14 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Functions for determining combat initiative order.
+    /// </summary>
     public static class RollInitiative
     {
+        /// <summary>
+        /// Rolls initiative for every combatant in the session.
+        /// </summary>
         [FunctionName("RollInitiative")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/roll-initiative")] HttpRequest req,
