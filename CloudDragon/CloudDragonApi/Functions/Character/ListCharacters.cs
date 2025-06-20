@@ -28,9 +28,9 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "characters")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
+                ContainerName: "Characters",
                 SqlQuery = "SELECT * FROM c WHERE c.Level > 0",
-                Connection = "CosmosDBConnection")] IEnumerable<CharacterModel> characters,
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<CharacterModel> characters,
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(ListCharacters));

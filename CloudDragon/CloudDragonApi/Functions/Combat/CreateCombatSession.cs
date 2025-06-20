@@ -22,8 +22,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(CreateCombatSession));

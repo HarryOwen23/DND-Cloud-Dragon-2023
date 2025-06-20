@@ -17,9 +17,9 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string className,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Classes",
+                ContainerName: "Classes",
                 SqlQuery = "SELECT * FROM c WHERE c.{partitionKey} = {className}",
-                Connection = "CosmosDBConnection")] IEnumerable<dynamic> allEntries,
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> allEntries,
             ILogger log)
         {
             if (string.IsNullOrEmpty(className))

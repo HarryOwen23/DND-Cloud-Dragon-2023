@@ -28,8 +28,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             ILogger log)

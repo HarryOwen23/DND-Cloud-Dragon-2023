@@ -22,14 +22,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             string sessionId,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection",
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {
             log.LogRequestDetails(req, nameof(RollInitiative));

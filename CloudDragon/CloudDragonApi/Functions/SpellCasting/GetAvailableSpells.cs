@@ -19,9 +19,9 @@ namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "spells/{className}/{level}")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Spells",
+                ContainerName: "Spells",
                 SqlQuery = "SELECT * FROM c WHERE c.ClassName = {className} AND c.Level = {level}",
-                Connection = "CosmosDBConnection")] IEnumerable<dynamic> spells,
+                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> spells,
             string className,
             int level,
             ILogger log)

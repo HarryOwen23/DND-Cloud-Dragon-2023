@@ -42,14 +42,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {
@@ -81,14 +81,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/subclass")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {

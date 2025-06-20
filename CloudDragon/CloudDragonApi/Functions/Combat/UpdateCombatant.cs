@@ -21,14 +21,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             [HttpTrigger(AuthorizationLevel.Function, "patch", Route = "combat/{sessionId}/combatant/{name}")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection",
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string sessionId,
             string name,
             ILogger log)

@@ -35,14 +35,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{id}/advance")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "CombatSessions",
-                Connection = "CosmosDBConnection",
+                ContainerName: "CombatSessions",
+                ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CombatSession session,
         [CosmosDB(
             databaseName: "CloudDragonDB",
-            containerName: "CombatSessions",
-            Connection = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
+            ContainerName: "CombatSessions",
+            ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string id,
             ILogger log)
         {

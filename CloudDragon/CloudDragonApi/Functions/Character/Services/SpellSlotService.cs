@@ -22,8 +22,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/spell-slots")] HttpRequest req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             ILogger log)
@@ -40,14 +40,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)
@@ -73,14 +73,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)

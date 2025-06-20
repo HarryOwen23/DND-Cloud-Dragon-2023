@@ -18,14 +18,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)

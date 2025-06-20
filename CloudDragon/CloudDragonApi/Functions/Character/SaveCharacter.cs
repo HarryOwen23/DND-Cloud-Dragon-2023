@@ -20,8 +20,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
         [CosmosDB(
             databaseName: "CloudDragonDB",
-            containerName: "Characters",
-            Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+            ContainerName: "Characters",
+            ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         ILogger log)
     {
         log.LogInformation("SaveCharacter triggered");

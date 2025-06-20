@@ -21,14 +21,14 @@ namespace CloudDragon.CloudDragonApi.Functions
             string id,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection",
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
-                containerName: "Characters",
-                Connection = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                ContainerName: "Characters",
+                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"ApplyRace triggered for {id}");

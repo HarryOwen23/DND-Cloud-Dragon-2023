@@ -33,14 +33,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         [HttpTrigger(AuthorizationLevel.Function, "put", "patch", Route = "character/{id}")] HttpRequest req,
         [CosmosDB(
             databaseName: "CloudDragonDB",
-            containerName: "Characters",
-            Connection = "CosmosDBConnection",
+            ContainerName: "Characters",
+            ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CharacterModel existingChar,
         [CosmosDB(
             databaseName: "CloudDragonDB",
-            containerName: "Characters",
-            Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+            ContainerName: "Characters",
+            ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         string id,
         ILogger log)
     {
