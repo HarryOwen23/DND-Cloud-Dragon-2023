@@ -3,8 +3,11 @@ using System.Text.Json;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character; 
 
@@ -21,14 +24,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             _cosmosClient = cosmosClient;
         }
 
-        [Function("CastSpell")]
-        public async Task<HttpResponseData> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-spell")] HttpRequestData req,
+        [FunctionName("CastSpell")]
+        public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-spell")] HttpRequest req,
             string id,
-            FunctionContext context)
+            ILogger logger)
         {
-            var logger = context.GetLogger("CastSpell");
-            var response = req.CreateResponse();
+            
 
             // Parse input
             var body = await new StreamReader(req.Body).ReadToEndAsync();
@@ -36,9 +38,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
 
             if (input == null || string.IsNullOrEmpty(input.Spell) || input.Level <= 0)
             {
-                response.StatusCode = HttpStatusCode.BadRequest;
-                await response.WriteAsJsonAsync(new { success = false, error = "Spell name and level are required." });
-                return response;
+                return new BadRequestObjectResult(new { success = false, error = "Spell name and level are required." });
             }
 
             // Get container and fetch character
@@ -47,9 +47,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
 
             if (character is null)
             {
-                response.StatusCode = HttpStatusCode.NotFound;
-                await response.WriteAsJsonAsync(new { success = false, error = "Character not found." });
-                return response;
+                return new NotFoundObjectResult(new { success = false, error = "Character not found." });
             }
 
             var c = character;
@@ -57,17 +55,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             // Validate spell preparation
             if (c.PreparedSpells == null || !c.PreparedSpells.Contains(input.Spell))
             {
-                response.StatusCode = HttpStatusCode.BadRequest;
-                await response.WriteAsJsonAsync(new { success = false, error = $"Spell '{input.Spell}' is not prepared." });
-                return response;
+                return new BadRequestObjectResult(new { success = false, error = $"Spell '{input.Spell}' is not prepared." });
             }
 
             // Validate spell slot availability
             if (c.SpellSlots == null || !c.SpellSlots.ContainsKey(input.Level) || c.SpellSlots[input.Level] <= 0)
             {
-                response.StatusCode = HttpStatusCode.BadRequest;
-                await response.WriteAsJsonAsync(new { success = false, error = $"No available spell slots at level {input.Level}." });
-                return response;
+                return new BadRequestObjectResult(new { success = false, error = $"No available spell slots at level {input.Level}." });
             }
 
             // Cast the spell
@@ -78,9 +72,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             // Save updated character
             await container.ReplaceItemAsync(c, c.Id, new PartitionKey(c.Id));
 
-            response.StatusCode = HttpStatusCode.OK;
-            await response.WriteAsJsonAsync(new { success = true, message = $"Casted {input.Spell} (Level {input.Level})" });
-            return response;
+            return new OkObjectResult(new { success = true, message = $"Casted {input.Spell} (Level {input.Level})" });
         }
 
         private async Task<CharacterModel?> GetCharacterAsync(string id, Container container)
