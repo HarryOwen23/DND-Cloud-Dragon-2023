@@ -13,11 +13,23 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Azure Function that applies level-up changes to a character document.
+    /// </summary>
     public static class ApplyLevelUpFunction
     {
-        [FunctionName("ApplyLevelUp")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-levelup")] HttpRequest req,
+        /// <summary>
+        /// Applies level-up choices to the specified character.
+        /// </summary>
+        /// <param name="req">HTTP request carrying level-up options.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist updates.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="context">Function context for logging.</param>
+        /// <returns>HTTP response describing the result.</returns>
+        [Function("ApplyLevelUp")]
+        public static async Task<HttpResponseData> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-levelup")] HttpRequestData req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
@@ -29,10 +41,17 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 containerName: "Characters",
                 Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
-            ILogger log)
+            FunctionContext context)
         {
+            var log = context.GetLogger("ApplyLevelUp");
+            var response = req.CreateResponse();
+
             if (character == null)
-                return new NotFoundObjectResult(new { success = false, error = "Character not found." });
+            {
+                response.StatusCode = HttpStatusCode.NotFound;
+                await response.WriteAsJsonAsync(new { success = false, error = "Character not found." });
+                return response;
+            }
 
             string body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
@@ -77,12 +96,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
 
             await characterOut.AddAsync(character);
 
-            return new OkObjectResult(new
+            response.StatusCode = HttpStatusCode.OK;
+            await response.WriteAsJsonAsync(new
             {
                 success = true,
                 message = "Level-up applied successfully.",
                 updatedCharacterId = character.Id
             });
+            return response;
         }
     }
 }

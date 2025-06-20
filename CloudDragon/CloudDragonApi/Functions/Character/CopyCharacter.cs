@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using System.Net;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character;
@@ -14,9 +12,17 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     public static class CharacterCloneFunction
     {
-        [FunctionName("CopyCharacter")]
-        public static async Task<IActionResult> CopyCharacter(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/clone")] HttpRequest req,
+        /// <summary>
+        /// Creates a clone of an existing character document.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="sourceChar">Source character loaded from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding for the new clone.</param>
+        /// <param name="context">Function execution context.</param>
+        /// <returns>HTTP response containing the identifier of the clone.</returns>
+        [Function("CopyCharacter")]
+        public static async Task<HttpResponseData> CopyCharacter(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/clone")] HttpRequestData req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
@@ -27,10 +33,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
                 Connection = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
-            ILogger log)
+            FunctionContext context)
         {
+            var log = context.GetLogger(nameof(CopyCharacter));
+
+            var response = req.CreateResponse();
+
             if (sourceChar == null)
-                return new NotFoundObjectResult(new { success = false, error = "Character not found." });
+            {
+                response.StatusCode = HttpStatusCode.NotFound;
+                await response.WriteAsJsonAsync(new { success = false, error = "Character not found." });
+                return response;
+            }
 
             var clone = new CharacterModel
             {
@@ -43,7 +57,10 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             };
 
             await characterOut.AddAsync(clone);
-            return new OkObjectResult(new { success = true, id = clone.Id });
+
+            response.StatusCode = HttpStatusCode.OK;
+            await response.WriteAsJsonAsync(new { success = true, id = clone.Id });
+            return response;
         }
     }
 }

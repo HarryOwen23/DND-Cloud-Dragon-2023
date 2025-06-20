@@ -13,22 +13,40 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Azure Function that allows a character to cast a cantrip.
+    /// </summary>
     public static class CastCantripFunction
     {
-        [FunctionName("CastCantrip")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-cantrip")] HttpRequest req,
-            string id,
+        /// <summary>
+        /// Validates the request and logs the cantrip casting action.
+        /// </summary>
+        /// <param name="req">HTTP request containing the cantrip name.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="context">Function execution context.</param>
+        /// <returns>HTTP response describing the outcome.</returns>
+        [Function("CastCantrip")]
+        public static async Task<HttpResponseData> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-cantrip")] HttpRequestData req,
             [CosmosDB(
                 databaseName: "CloudDragonDB",
                 containerName: "Characters",
                 Connection = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
-            ILogger log)
+            string id,
+            FunctionContext context)
         {
+            var log = context.GetLogger("CastCantrip");
+            var response = req.CreateResponse();
+
             if (character == null)
-                return new NotFoundObjectResult(new { success = false, error = "Character not found." });
+            {
+                response.StatusCode = HttpStatusCode.NotFound;
+                await response.WriteAsJsonAsync(new { success = false, error = "Character not found." });
+                return response;
+            }
 
             var body = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic input = JsonConvert.DeserializeObject(body);
@@ -36,17 +54,26 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             string cantripName = input?.cantrip;
 
             if (string.IsNullOrEmpty(cantripName))
-                return new BadRequestObjectResult(new { success = false, error = "Cantrip name is required." });
+            {
+                response.StatusCode = HttpStatusCode.BadRequest;
+                await response.WriteAsJsonAsync(new { success = false, error = "Cantrip name is required." });
+                return response;
+            }
 
-            // Validate that the cantrip is known (Inventory contains cantrip)
             bool knowsCantrip = character.Inventory?.Any(i => i.Name == cantripName && i.Type == "Cantrip") ?? false;
 
             if (!knowsCantrip)
-                return new BadRequestObjectResult(new { success = false, error = $"Character does not know the cantrip {cantripName}." });
+            {
+                response.StatusCode = HttpStatusCode.BadRequest;
+                await response.WriteAsJsonAsync(new { success = false, error = $"Character does not know the cantrip {cantripName}." });
+                return response;
+            }
 
             log.LogInformation($"{character.Name} casts cantrip {cantripName}!");
 
-            return new OkObjectResult(new { success = true, message = $"{character.Name} casts {cantripName}!" });
+            response.StatusCode = HttpStatusCode.OK;
+            await response.WriteAsJsonAsync(new { success = true, message = $"{character.Name} casts {cantripName}!" });
+            return response;
         }
     }
 }
