@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using System.Threading.Tasks;
 using CloudDragon.CloudDragonApi.Utils;
 using Microsoft.Extensions.Logging;
@@ -19,8 +20,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
     public static async Task<IActionResult> SaveCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
         [CosmosDB(
-            databaseName: "CloudDragonDB",
-            ContainerName: "Characters",
+            DatabaseName = "CloudDragonDB",
+            ContainerName = "Characters",
             ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         ILogger log)
     {
@@ -57,7 +58,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
     }
 
-    private static void InitializeSpellSlots(Character character)
+    private static void InitializeSpellSlots(CharacterModel character)
     {
         var fullCasters = new List<string> { "wizard", "cleric", "druid", "bard", "sorcerer", "warlock" };
         var halfCasters = new List<string> { "paladin", "ranger", "artificer" };

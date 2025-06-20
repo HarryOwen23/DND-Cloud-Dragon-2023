@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using CharacterModel = CloudDragonLib.Models.Character;
+using CloudDragon.Models.ModelContext;
 
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services

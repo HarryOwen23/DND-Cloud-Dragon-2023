@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character;
@@ -32,14 +33,14 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
     public static async Task<IActionResult> UpdateCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "put", "patch", Route = "character/{id}")] HttpRequest req,
         [CosmosDB(
-            databaseName: "CloudDragonDB",
-            ContainerName: "Characters",
+            DatabaseName = "CloudDragonDB",
+            ContainerName = "Characters",
             ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CharacterModel existingChar,
         [CosmosDB(
-            databaseName: "CloudDragonDB",
-            ContainerName: "Characters",
+            DatabaseName = "CloudDragonDB",
+            ContainerName = "Characters",
             ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         string id,
         ILogger log)

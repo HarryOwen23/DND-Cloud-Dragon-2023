@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CloudDragon.CloudDragonApi.Functions.Combat;
+using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragonLib.Models; // Ensure the Character class is in this namespace
@@ -27,8 +28,8 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "characters")] HttpRequest req,
             [CosmosDB(
-                databaseName: "CloudDragonDB",
-                ContainerName: "Characters",
+                DatabaseName = "CloudDragonDB",
+                ContainerName = "Characters",
                 SqlQuery = "SELECT * FROM c WHERE c.Level > 0",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<CharacterModel> characters,
             ILogger log)

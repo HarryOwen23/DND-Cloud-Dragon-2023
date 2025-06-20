@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character;
 using CloudDragon.CloudDragonApi.Utils;
+using CloudDragon.Models.ModelContext;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
