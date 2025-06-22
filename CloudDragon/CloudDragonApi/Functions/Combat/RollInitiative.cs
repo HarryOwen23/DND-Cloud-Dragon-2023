@@ -8,7 +8,6 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragon.CloudDragonApi.Functions.Combat; // Make sure CombatSession is from the correct namespace
 using Newtonsoft.Json;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;

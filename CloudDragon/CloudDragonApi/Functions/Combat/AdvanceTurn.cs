@@ -10,7 +10,6 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;
@@ -79,9 +78,5 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
                 round = session.Round
             });
         }
-
-        // The CreateCombatSession and EndCombatSession functions were moved to
-        // dedicated files.  Keeping only AdvanceTurn here avoids duplicate
-        // FunctionName attributes which caused runtime indexing errors.
     }
 }

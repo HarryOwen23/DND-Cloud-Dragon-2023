@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragon.CloudDragonApi.Functions.Character.Services;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;

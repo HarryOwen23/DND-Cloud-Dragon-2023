@@ -16,8 +16,18 @@ using CloudDragon.CloudDragonApi.Functions.Character.Services;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Provides level-up option information for a character document.
+    /// </summary>
     public static class LevelUpOptionsFunction
     {
+        /// <summary>
+        /// Generates available level-up choices for the specified character.
+        /// </summary>
+        /// <param name="req">HTTP request containing the character id.</param>
+        /// <param name="character">Character data loaded from Cosmos DB.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>A summary of level-up options.</returns>
         [FunctionName("GetLevelUpOptions")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-options")] HttpRequest req,

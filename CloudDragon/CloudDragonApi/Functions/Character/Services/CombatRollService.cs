@@ -5,10 +5,17 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
+    /// <summary>
+    /// Provides dice rolling helpers for combat scenarios.
+    /// </summary>
     public static class CombatRollService
     {
         private static readonly Random rng = Random.Shared;
 
+        /// <summary>
+        /// Rolls a d20 and logs the result.
+        /// </summary>
+        /// <returns>Random value between 1 and 20.</returns>
         public static int RollD20()
         {
             int roll = rng.Next(1, 21);
@@ -16,6 +23,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             return roll;
         }
 
+        /// <summary>
+        /// Performs a saving throw roll for the specified ability.
+        /// </summary>
+        /// <param name="target">Character attempting the save.</param>
+        /// <param name="ability">Ability name used for the save.</param>
+        /// <param name="dc">Difficulty class to beat.</param>
+        /// <returns>Tuple containing roll, total and success flag.</returns>
         public static (int roll, int total, bool success) RollSavingThrow(CharacterModel target, string ability, int dc)
         {
             target.Stats ??= new Dictionary<string, int>();
@@ -32,6 +46,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             return (roll, total, success);
         }
 
+        /// <summary>
+        /// Performs an attack roll against a target AC.
+        /// </summary>
+        /// <param name="attacker">Attacking character.</param>
+        /// <param name="targetAC">Armor class of the target.</param>
+        /// <param name="attackModifier">Attack bonus to include.</param>
+        /// <returns>Tuple containing roll, total and hit flag.</returns>
         public static (int roll, int total, bool hit) RollAttack(CharacterModel attacker, int targetAC, int attackModifier = 0)
         {
             int roll = RollD20();
@@ -42,6 +63,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             return (roll, total, hit);
         }
 
+        /// <summary>
+        /// Rolls damage using standard dice notation (e.g. 2d6).
+        /// </summary>
+        /// <param name="damageDice">Damage dice expression.</param>
+        /// <returns>Total damage rolled.</returns>
         public static int RollDamage(string damageDice)
         {
             if (string.IsNullOrWhiteSpace(damageDice))

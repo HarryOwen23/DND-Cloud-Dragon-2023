@@ -7,15 +7,27 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragon.CloudDragonApi.Functions.Character.Services;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Removes all combat conditions from a combatant within a session.
+    /// </summary>
     public static class ClearConditionsFunction
     {
+        /// <summary>
+        /// HTTP trigger that clears every condition from a combatant.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="sessionId">Identifier of the combat session.</param>
+        /// <param name="combatantId">Combatant id to clear conditions for.</param>
+        /// <param name="session">Loaded combat session document.</param>
+        /// <param name="sessionOut">Output binding for persisting updates.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result object describing success or failure.</returns>
         [FunctionName("ClearConditions")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/clear-conditions")] HttpRequest req,

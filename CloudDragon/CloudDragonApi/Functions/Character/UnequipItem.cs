@@ -14,8 +14,20 @@ using CloudDragon.Equipment;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Removes an equipped item from the specified slot on a character.
+    /// </summary>
     public static class UnequipItem
     {
+        /// <summary>
+        /// HTTP entry point for unequipping an item.
+        /// </summary>
+        /// <param name="req">Request containing slot information.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist the update.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result containing success status.</returns>
         [FunctionName("UnequipItem")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/unequip")] HttpRequest req,

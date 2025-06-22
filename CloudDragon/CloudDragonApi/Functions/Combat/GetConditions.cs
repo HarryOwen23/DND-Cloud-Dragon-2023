@@ -9,8 +9,17 @@ using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Returns a list of common combat conditions.
+    /// </summary>
     public static class GetConditionsFunction
     {
+        /// <summary>
+        /// HTTP trigger that returns available combat conditions.
+        /// </summary>
+        /// <param name="req">The incoming HTTP request.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Collection of conditions.</returns>
         [FunctionName("GetConditions")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "conditions")] HttpRequest req,
@@ -45,10 +54,16 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         }
     }
 
+    /// <summary>
+    /// Representation of a combat condition and its basic effects.
+    /// </summary>
     public class Condition
     {
+        /// <summary>Name of the condition.</summary>
         public string Name { get; set; }
+        /// <summary>Short description of the effect.</summary>
         public string Effect { get; set; }
+        /// <summary>Whether the condition automatically ends at turn end.</summary>
         public bool EndsOnTurnEnd { get; set; }
     }
 }

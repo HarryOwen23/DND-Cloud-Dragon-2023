@@ -10,8 +10,19 @@ using Newtonsoft.Json;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Utility endpoints for working with character subclasses.
+    /// </summary>
     public static class SubclassService
     {
+        /// <summary>
+        /// Retrieves available subclasses for the specified class.
+        /// </summary>
+        /// <param name="req">Incoming request.</param>
+        /// <param name="className">Class name being queried.</param>
+        /// <param name="allEntries">Cosmos DB records for that class.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>List of subclasses or an error response.</returns>
         [FunctionName("GetAvailableSubclasses")]
         public static async Task<IActionResult> GetAvailableSubclasses(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "subclasses/{className}")] HttpRequest req,

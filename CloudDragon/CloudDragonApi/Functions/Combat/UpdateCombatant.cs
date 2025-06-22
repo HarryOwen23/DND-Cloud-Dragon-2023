@@ -9,15 +9,27 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Updates an existing combatant within a combat session document.
+    /// </summary>
     public static class UpdateCombatantFunction
     {
+        /// <summary>
+        /// Handles HTTP PATCH requests to update a combatant's data.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request containing updated values.</param>
+        /// <param name="session">Existing combat session loaded from Cosmos DB.</param>
+        /// <param name="sessionOut">Output binding used to persist the session.</param>
+        /// <param name="sessionId">Identifier for the combat session.</param>
+        /// <param name="name">Combatant name to update.</param>
+        /// <param name="log">Function logger instance.</param>
+        /// <returns>Result detailing success or failure of the update.</returns>
         [FunctionName("UpdateCombatant")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "patch", Route = "combat/{sessionId}/combatant/{name}")] HttpRequest req,

@@ -9,7 +9,6 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat

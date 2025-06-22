@@ -12,13 +12,26 @@ using CloudDragonLib;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Input payload for the point buy character stat generator.
+    /// </summary>
     public class PointBuyInput
     {
+        /// <summary>Requested ability scores.</summary>
         public Dictionary<string, int> Stats { get; set; }
     }
 
+    /// <summary>
+    /// Azure Function that calculates ability scores using the point buy system.
+    /// </summary>
     public static class PointBuyFunction
     {
+        /// <summary>
+        /// Executes the point buy calculation for the provided stats.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result with generated ability scores or an error.</returns>
         [FunctionName("PointBuy")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "point-buy")] HttpRequest req,
