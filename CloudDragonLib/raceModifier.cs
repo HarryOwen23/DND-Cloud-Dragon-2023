@@ -1,286 +1,117 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
 using CloudDragonLib.Models;
 
 namespace CloudDragonLib
 {
-class raceModifier
-{
-    static void Main()
+    /// <summary>
+    /// Demonstrates creation of <see cref="Races"/> objects using a data driven
+    /// approach rather than many hard coded statements.
+    /// </summary>
+    internal static class RaceModifier
     {
-        // Creating races and adding ability score bonuses
-        Races humanRace = new Races("Human");
-        humanRace.AddAbilityBonus("STR", 1);
-        humanRace.AddAbilityBonus("DEX", 1);
-        humanRace.AddAbilityBonus("CON", 1);
-        humanRace.AddAbilityBonus("INT", 1);
-        humanRace.AddAbilityBonus("WIS", 1);
-        humanRace.AddAbilityBonus("CHA", 1);
-
-        // Dwarf Races
-        Races dwarfHillRace = new Races("Dwarf (Hill)");
-        dwarfHillRace.AddAbilityBonus("CON", 2);
-
-        Races dwarfMountainRace = new Races("Dwarf (Mountain)");
-        dwarfMountainRace.AddAbilityBonus("STR", 2);
-        dwarfHillRace.AddAbilityBonus("CON", 2);
-
-        Races dwarfGrayRace = new Races("Dwarf (Gray/Duergar)");
-        dwarfGrayRace.AddAbilityBonus("STR", 1);
-        dwarfGrayRace.AddAbilityBonus("CON", 2);
-
-        Races dwarfDuergarRace = new Races("Dwarf (Duergar)");
-        dwarfDuergarRace.AddAbilityBonus("STR", 1);
-        dwarfDuergarRace.AddAbilityBonus("CON", 2);
-
-        // Elf Races
-        Races elfHighRace = new Races("Elf (High)");
-        elfHighRace.AddAbilityBonus("DEX", 2);
-        elfHighRace.AddAbilityBonus("INT", 1);
-
-        Races elfWoodRace = new Races("Elf (Wood)");
-        elfWoodRace.AddAbilityBonus("DEX", 2);
-        elfWoodRace.AddAbilityBonus("WIS", 1);
-
-        Races elfDrowRace = new Races("Elf (Drow)");
-        elfDrowRace.AddAbilityBonus("DEX", 2);
-        elfDrowRace.AddAbilityBonus("CHA", 1);
-
-        Races elfEladrinRace = new Races("Elf (Eladrin)");
-        elfEladrinRace.AddAbilityBonus("DEX", 2);
-        elfEladrinRace.AddAbilityBonus("INT", 1);
-
-        Races elfSeaRace = new Races("Elf (Sea)");
-        elfSeaRace.AddAbilityBonus("DEX", 2);
-        elfSeaRace.AddAbilityBonus("CON", 1);
-
-        Races elfShadarRace = new Races("Elf (Shadar-kai)");
-        elfShadarRace.AddAbilityBonus("DEX", 2);
-        elfShadarRace.AddAbilityBonus("CON", 1);
-
-        // Halfling Races 
-        Races halflingLfRace = new Races("Halfling (Lightfoot)");
-        halflingLfRace.AddAbilityBonus("DEX", 2);
-        halflingLfRace.AddAbilityBonus("CHA", 1);
-
-        Races halflingStoutRace = new Races("Halfling (Stout)");
-        halflingStoutRace.AddAbilityBonus("DEX", 2);
-        halflingStoutRace.AddAbilityBonus("CON", 1);
-
-        Races halflingGhostwiseRace = new Races("Halfling (Ghostwise)");
-        halflingGhostwiseRace.AddAbilityBonus("DEX", 2);
-        halflingGhostwiseRace.AddAbilityBonus("WIS", 1);
-
-        // Gnome Races 
-        Races gnomeForestRace = new Races("Gnome (Forest)");
-        gnomeForestRace.AddAbilityBonus("DEX", 1);
-        gnomeForestRace.AddAbilityBonus("INT", 2);
-
-        Races gnomeRockRace = new Races("Gnome (Rock)");
-        gnomeRockRace.AddAbilityBonus("CON", 1);
-        gnomeRockRace.AddAbilityBonus("INT", 2);
-
-        Races gnomeDeepRace = new Races("Gnome (Deep)");
-        gnomeDeepRace.AddAbilityBonus("DEX", 1);
-        gnomeDeepRace.AddAbilityBonus("INT", 2);
-
-        // Orc Races 
-        Races orcRace = new Races("Orc");
-        orcRace.AddAbilityBonus("STR", 2);
-        orcRace.AddAbilityBonus("CON", 1);
-
-        Races halfOrcRace = new Races("Half Orc");
-        halfOrcRace.AddAbilityBonus("STR", 2);
-        halfOrcRace.AddAbilityBonus("CON", 1);
-
-        // Tiefling Race
-        Races tieflingRace = new Races("Tiefling");
-        tieflingRace.AddAbilityBonus("INT", 1);
-        tieflingRace.AddAbilityBonus("CHA", 2);
-
-        Races tieflingFeralRace = new Races("Tiefling (Feral)");
-        tieflingFeralRace.AddAbilityBonus("DEX", 2);
-        tieflingFeralRace.AddAbilityBonus("INT", 1);
-
-        // Aasimar Races
-        Races aasimarRace = new Races("Aasimar");
-        aasimarRace.AddAbilityBonus("WIS", 1);
-        aasimarRace.AddAbilityBonus("CHA", 2);
-
-        Races aasimarProtectorRace = new Races("Aasimar (Protector)");
-        aasimarProtectorRace.AddAbilityBonus("WIS", 1);
-        aasimarProtectorRace.AddAbilityBonus("CHA", 2);
-
-        Races aasimarScourgeRace = new Races("Aasimar (Scourge)");
-        aasimarScourgeRace.AddAbilityBonus("CON", 1);
-        aasimarScourgeRace.AddAbilityBonus("CHA", 2);
-
-        Races aasimarFallenRace = new Races("Aasimar (Fallen)");
-        aasimarFallenRace.AddAbilityBonus("STR", 1);
-        aasimarFallenRace.AddAbilityBonus("CHA", 2);
-
-        // Aarakocra Race
-        Races aarakocraRace = new Races("Aarakocra");
-        aarakocraRace.AddAbilityBonus("DEX", 2);
-        aarakocraRace.AddAbilityBonus("WIS", 1);
-
-        // Gensai Races
-        Races gensaiAirRace = new Races("Genasi (Air)");
-        gensaiAirRace.AddAbilityBonus("DEX", 1);
-        gensaiAirRace.AddAbilityBonus("CON", 2);
-
-        Races gensaiEarthRace = new Races("Genasi (Earth)");
-        gensaiEarthRace.AddAbilityBonus("STR", 1);
-        gensaiEarthRace.AddAbilityBonus("CON", 2);
-
-        Races gensaiFireRace = new Races("Genasi (Fire)");
-        gensaiFireRace.AddAbilityBonus("CON", 2);
-        gensaiFireRace.AddAbilityBonus("INT", 1);
-
-        Races gensaiWaterRace = new Races("Genasi (Water)");
-        gensaiWaterRace.AddAbilityBonus("CON", 2);
-        gensaiWaterRace.AddAbilityBonus("WIS", 1);
-
-        // Goliath Race 
-        Races goliathRace = new Races("Goliath");
-        goliathRace.AddAbilityBonus("STR", 2);
-        goliathRace.AddAbilityBonus("CON", 1);
-
-        // Firbolg
-        Races firbolgRace = new Races("Firbolg");
-        firbolgRace.AddAbilityBonus("STR", 1);
-        firbolgRace.AddAbilityBonus("WIS", 2);
-
-        // Kenku
-        Races kenkuRace = new Races("Kenku");
-        kenkuRace.AddAbilityBonus("DEX", 2);
-        kenkuRace.AddAbilityBonus("WIS",1);
-
-        // Lizardfolk 
-        Races lizardFolkRace = new Races("Lizardfolk");
-        lizardFolkRace.AddAbilityBonus("CON", 2);
-        lizardFolkRace.AddAbilityBonus("WIS", 1);
-
-        // Tabaxi 
-        Races tabaxiRace = new Races("Tabaxi");
-        tabaxiRace.AddAbilityBonus("DEX", 2);
-        tabaxiRace.AddAbilityBonus("CHA", 1);
-
-        // Triton 
-        Races tritonRace = new Races("Triton");
-        tritonRace.AddAbilityBonus("STR", 2);
-        tritonRace.AddAbilityBonus("CON", 1);
-        tritonRace.AddAbilityBonus("CHA", 1);
-
-        // Bugbear
-        Races bugBearRace = new Races("Bugbear");
-        bugBearRace.AddAbilityBonus("STR", 2);
-        bugBearRace.AddAbilityBonus("CON", 1);
-
-        // Goblin Races 
-        Races goblinRace = new Races("Goblin");
-        goblinRace.AddAbilityBonus("DEX", 2);
-        goblinRace.AddAbilityBonus("CON", 1);
-
-        Races hobGoblinRace = new Races("Hobgoblin");
-        hobGoblinRace.AddAbilityBonus("CON", 2);
-        hobGoblinRace.AddAbilityBonus("INT", 1);
-
-        // Kobold Race 
-        Races koboldRace = new Races("Kobold");
-        koboldRace.AddAbilityBonus("DEX", 2);
-
-        // Yuan-ti Pureblood Race 
-        Races yuantiPbRace = new Races("Yuan-ti Pureblood");
-        yuantiPbRace.AddAbilityBonus("INT", 1);
-        yuantiPbRace.AddAbilityBonus("CHA", 1);
-
-        // Githyanki
-        Races githyankiRace = new Races("Githyanki");
-        githyankiRace.AddAbilityBonus("STR", 2);
-        githyankiRace.AddAbilityBonus("INT", 1);
-
-        // Githzerai	
-        Races githzeraiRace = new Races("Githzerai");
-        githzeraiRace.AddAbilityBonus("INT", 1);
-        githzeraiRace.AddAbilityBonus("WIS", 2);
-
-        // Tortle 
-        Races tortleRace = new Races("Tortle");
-        tortleRace.AddAbilityBonus("STR", 2);
-        tortleRace.AddAbilityBonus("WIS", 1);
-
-        // Verdan
-        Races verdanRace = new Races("Verdan");
-        verdanRace.AddAbilityBonus("CON", 2);
-        verdanRace.AddAbilityBonus("CHA", 2);
-
-        // Kalashtar
-        Races kalashtarRace = new Races("Kalashtar");
-        kalashtarRace.AddAbilityBonus("CON", 2);
-        kalashtarRace.AddAbilityBonus("CHA", 1);
-
-        // Shifter Races 
-        Races shifterBeasthideRace = new Races("Shifter (Beasthide)");
-        shifterBeasthideRace.AddAbilityBonus("STR", 1);
-        shifterBeasthideRace.AddAbilityBonus("CON", 2);
-
-        Races shifterLongToothRace = new Races("Shifter (Longtooth)");
-        shifterLongToothRace.AddAbilityBonus("STR", 2);
-        shifterLongToothRace.AddAbilityBonus("DEX", 1);
-
-        Races shifterSwiftstrideRace = new Races("Shifter (Swiftstride)");
-        shifterSwiftstrideRace.AddAbilityBonus("DEX", 2);
-        shifterSwiftstrideRace.AddAbilityBonus("CHA", 1);
-
-        Races shifterWildhuntRace = new Races("Shifter (Wildhunt)");
-        shifterWildhuntRace.AddAbilityBonus("DEX", 1);
-        shifterWildhuntRace.AddAbilityBonus("WIS", 2);
-
-        // Centaur 
-        Races centaurRace = new Races("Centaur");
-        centaurRace.AddAbilityBonus("STR", 2);
-        centaurRace.AddAbilityBonus("WIS", 1);
-
-        // Loxodon 
-        Races loxodonRace = new Races("Loxodon");
-        loxodonRace.AddAbilityBonus("CON", 2);
-        loxodonRace.AddAbilityBonus("WIS", 1);
-
-        // Minotaur 
-        Races minotaurRace = new Races("Minotaur");
-        minotaurRace.AddAbilityBonus("STR", 2);
-        minotaurRace.AddAbilityBonus("CON", 1);
-
-        // Vedalken 
-        Races vedalkenRace = new Races("Vedalken");
-        vedalkenRace.AddAbilityBonus("INT", 2);
-        vedalkenRace.AddAbilityBonus("WIS", 1);
-
-
-        // Leonin
-        Races leoninRace = new Races("Leonin");
-        leoninRace.AddAbilityBonus("STR", 1);
-        leoninRace.AddAbilityBonus("CON", 2);
-
-
-        // Satyr 
-        Races SatyrRace = new Races("Satyr");
-        SatyrRace.AddAbilityBonus("DEX", 1);
-        SatyrRace.AddAbilityBonus("CHA", 2);
-
-        // Example usage
-        Console.WriteLine("Welcome to the character creation screen!");
-
-        // Let's say the player chooses to play an Elf character
-        Races selectedRace = SatyrRace;
-
-        Console.WriteLine("You've selected the " + selectedRace.Name + " race.");
-        Console.WriteLine("Ability Score Bonuses:");
-
-        foreach (var bonus in selectedRace.AbilityBonuses)
+        /// <summary>
+        /// Map of race names to their ability score bonuses.
+        /// </summary>
+        private static readonly Dictionary<string, Dictionary<StringMarshalling int>> RaceDefinitions = new()
         {
-            Console.WriteLine(bonus.Key + ": " + bonus.Value);
+            ["Human"] = new()
+            {
+                ["STR"] = 1,
+                ["DEX"] = 1,
+                ["CON"] = 1,
+                ["INT"] = 1,
+                ["WIS"] = 1,
+                ["CHA"] = 1,
+            },
+            ["Dwarf (Hill)"] = new() { ["CON"] = 2 },
+            ["Dwarf (Mountain)"] = new() { ["STR"] = 2, ["CON"] = 2 },
+            ["Dwarf (Gray/Duergar)"] = new() { ["STR"] = 1, ["CON"] = 2 },
+            ["Dwarf (Duergar)"] = new() { ["STR"] = 1, ["CON"] = 2 },
+            ["Elf (High)"] = new() { ["DEX"] = 2, ["INT"] = 1 },
+            ["Elf (Wood)"] = new() { ["DEX"] = 2, ["WIS"] = 1 },
+            ["Elf (Drow)"] = new() { ["DEX"] = 2, ["CHA"] = 1 },
+            ["Elf (Eladrin)"] = new() { ["DEX"] = 2, ["INT"] = 1 },
+            ["Elf (Sea)"] = new() { ["DEX"] = 2, ["CON"] = 1 },
+            ["Elf (Shadar-kai)"] = new() { ["DEX"] = 2, ["CON"] = 1 },
+            ["Halfling (Lightfoot)"] = new() { ["DEX"] = 2, ["CHA"] = 1 },
+            ["Halfling (Stout)"] = new() { ["DEX"] = 2, ["CON"] = 1 },
+            ["Halfling (Ghostwise)"] = new() { ["DEX"] = 2, ["WIS"] = 1 },
+            ["Gnome (Forest)"] = new() { ["DEX"] = 1, ["INT"] = 2 },
+            ["Gnome (Rock)"] = new() { ["CON"] = 1, ["INT"] = 2 },
+            ["Gnome (Deep)"] = new() { ["DEX"] = 1, ["INT"] = 2 },
+            ["Orc"] = new() { ["STR"] = 2, ["CON"] = 1 },
+            ["Half Orc"] = new() { ["STR"] = 2, ["CON"] = 1 },
+            ["Tiefling"] = new() { ["INT"] = 1, ["CHA"] = 2 },
+            ["Tiefling (Feral)"] = new() { ["DEX"] = 2, ["INT"] = 1 },
+            ["Aasimar"] = new() { ["WIS"] = 1, ["CHA"] = 2 },
+            ["Aasimar (Protector)"] = new() { ["WIS"] = 1, ["CHA"] = 2 },
+            ["Aasimar (Scourge)"] = new() { ["CON"] = 1, ["CHA"] = 2 },
+            ["Aasimar (Fallen)"] = new() { ["STR"] = 1, ["CHA"] = 2 },
+            ["Aarakocra"] = new() { ["DEX"] = 2, ["WIS"] = 1 },
+            ["Genasi (Air)"] = new() { ["DEX"] = 1, ["CON"] = 2 },
+            ["Genasi (Earth)"] = new() { ["STR"] = 1, ["CON"] = 2 },
+            ["Genasi (Fire)"] = new() { ["CON"] = 2, ["INT"] = 1 },
+            ["Genasi (Water)"] = new() { ["CON"] = 2, ["WIS"] = 1 },
+            ["Goliath"] = new() { ["STR"] = 2, ["CON"] = 1 },
+            ["Firbolg"] = new() { ["STR"] = 1, ["WIS"] = 2 },
+            ["Kenku"] = new() { ["DEX"] = 2, ["WIS"] = 1 },
+            ["Lizardfolk"] = new() { ["CON"] = 2, ["WIS"] = 1 },
+            ["Tabaxi"] = new() { ["DEX"] = 2, ["CHA"] = 1 },
+            ["Triton"] = new() { ["STR"] = 2, ["CON"] = 1, ["CHA"] = 1 },
+            ["Bugbear"] = new() { ["STR"] = 2, ["CON"] = 1 },
+            ["Goblin"] = new() { ["DEX"] = 2, ["CON"] = 1 },
+            ["Hobgoblin"] = new() { ["CON"] = 2, ["INT"] = 1 },
+            ["Kobold"] = new() { ["DEX"] = 2 },
+            ["Yuan-ti Pureblood"] = new() { ["INT"] = 1, ["CHA"] = 1 },
+            ["Githyanki"] = new() { ["STR"] = 2, ["INT"] = 1 },
+            ["Githzerai"] = new() { ["INT"] = 1, ["WIS"] = 2 },
+            ["Tortle"] = new() { ["STR"] = 2, ["WIS"] = 1 },
+            ["Verdan"] = new() { ["CON"] = 2, ["CHA"] = 2 },
+            ["Kalashtar"] = new() { ["CON"] = 2, ["CHA"] = 1 },
+            ["Shifter (Beasthide)"] = new() { ["STR"] = 1, ["CON"] = 2 },
+            ["Shifter (Longtooth)"] = new() { ["STR"] = 2, ["DEX"] = 1 },
+            ["Shifter (Swiftstride)"] = new() { ["DEX"] = 2, ["CHA"] = 1 },
+            ["Shifter (Wildhunt)"] = new() { ["DEX"] = 1, ["WIS"] = 2 },
+            ["Centaur"] = new() { ["STR"] = 2, ["WIS"] = 1 },
+            ["Loxodon"] = new() { ["CON"] = 2, ["WIS"] = 1 },
+            ["Minotaur"] = new() { ["STR"] = 2, ["CON"] = 1 },
+            ["Vedalken"] = new() { ["INT"] = 2, ["WIS"] = 1 },
+            ["Leonin"] = new() { ["STR"] = 1, ["CON"] = 2 },
+            ["Satyr"] = new() { ["DEX"] = 1, ["CHA"] = 2 },
+        };
+
+        /// <summary>
+        /// Entry point demonstrating selection of a race + output of it's bonuses. 
+        /// </summary>
+        private static void Main()
+        {
+            var races = RaceDefinitions
+                .Select(d => CreateRace(d.Key, d.Value))
+                .ToDictionary(r => r.Name, r => r);
+
+            Console.WriteLine("Welcome to the character creation screen!");
+            var selectedRace = races["Human"];
+            Console.WriteLine($"You've selected the {selectedRace.Name} race.");
+            Console.WriteLine("Ability Score Bonuses:");
+            foreach (var bonus in selectedRace.AbilityBonuses)
+                Console.WriteLine($"{bonus.Key}: {bonus.Value}");
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Races"/> instance and applies the provided ability bonuses.
+        /// </summary>
+        /// <param name="name">Race name.</param>
+        /// <param name="bonuses">Ability bonuses keyed by ability abbreviation.</param>
+        /// <returns>Newly created race.</returns>
+        private static Races CreateRace(string name, Dictionary<string, int> bonuses)
+        {
+            var race = new Races(name);
+            foreach (var kv in bonuses)
+                race.AddAbilityBonus(kv.Key, kv.Value);
+            return race;
         }
     }
-}
 }
