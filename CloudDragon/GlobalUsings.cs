@@ -6,7 +6,6 @@
 global using Microsoft.Azure.WebJobs;
 global using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 global using Microsoft.Azure.WebJobs.Extensions.Http;
-global using Microsoft.Azure.WebJobs.Extensions.Storage;
 
 // ASP.NET Core primitives and logging abstractions
 global using Microsoft.AspNetCore.Mvc;
