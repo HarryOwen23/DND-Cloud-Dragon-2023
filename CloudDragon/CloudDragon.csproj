@@ -17,7 +17,6 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs" Version="4.0.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Queues" Version="4.0.0" />
     <!-- Required for IAsyncCollector and other in-process bindings -->
-    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.0.0" />
     <!-- Packages required for legacy in-process functions -->
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" Version="3.1.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.10" />
