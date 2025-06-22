@@ -20,18 +20,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Flags the specified combat session as ended.
         /// </summary>
-        [FunctionName("EndCombatSession")]
+        [Microsoft.Azure.WebJobs.FunctionName("EndCombatSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "combat/{id}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string id,
             ILogger log)

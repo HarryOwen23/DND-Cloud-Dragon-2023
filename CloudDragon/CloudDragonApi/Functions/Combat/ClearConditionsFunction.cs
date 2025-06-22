@@ -28,20 +28,20 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="sessionOut">Output binding for persisting updates.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result object describing success or failure.</returns>
-        [FunctionName("ClearConditions")]
+        [Microsoft.Azure.WebJobs.FunctionName("ClearConditions")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/clear-conditions")] HttpRequest req,
             string sessionId,
             string combatantId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

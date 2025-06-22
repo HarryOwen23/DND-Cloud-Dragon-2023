@@ -31,18 +31,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="id">Session identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Details about the next turn and round.</returns>
-        [FunctionName("AdvanceTurn")]
+        [Microsoft.Azure.WebJobs.FunctionName("AdvanceTurn")]
         public static async Task<IActionResult> AdvanceTurn(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{id}/advance")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CombatSession session,
         [CosmosDB(
             DatabaseName = "CloudDragonDB",
-            ContainerName = "CombatSessions",
+            CollectionName = "CombatSessions",
             ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string id,
             ILogger log)

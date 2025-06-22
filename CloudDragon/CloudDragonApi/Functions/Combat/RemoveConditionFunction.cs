@@ -23,20 +23,20 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Removes the condition if it exists on the specified combatant.
         /// </summary>
-        [FunctionName("RemoveCondition")]
+        [Microsoft.Azure.WebJobs.FunctionName("RemoveCondition")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/remove-condition")] HttpRequest req,
             string sessionId,
             string combatantId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

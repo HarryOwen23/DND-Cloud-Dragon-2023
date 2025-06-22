@@ -21,7 +21,7 @@ namespace CloudDragon.CloudDragonApi
         /// <param name="req">Incoming HTTP request.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>List of six ability scores.</returns>
-        [FunctionName("RollStats")]
+        [Microsoft.Azure.WebJobs.FunctionName("RollStats")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "roll-stats")] HttpRequest req,
             ILogger log)

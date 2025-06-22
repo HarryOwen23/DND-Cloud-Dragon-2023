@@ -32,7 +32,7 @@ namespace CloudDragon.CloudDragonApi
         /// <param name="req">HTTP request containing <see cref="SkillCheckInput"/>.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Roll result data.</returns>
-        [FunctionName("RollForSkillCheck")]
+        [Microsoft.Azure.WebJobs.FunctionName("RollForSkillCheck")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "skill-check")] HttpRequest req,
             ILogger log)

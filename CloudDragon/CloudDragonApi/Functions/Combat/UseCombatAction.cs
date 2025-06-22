@@ -26,20 +26,20 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Executes a combatant action within an existing combat session.
         /// </summary>
-        [FunctionName("UseCombatAction")]
+        [Microsoft.Azure.WebJobs.FunctionName("UseCombatAction")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/action")] HttpRequest req,
             string sessionId,
             string combatantId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

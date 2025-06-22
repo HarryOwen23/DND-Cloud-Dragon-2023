@@ -24,12 +24,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Action result containing the character or error.</returns>
-        [FunctionName("GetCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetCharacter")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,

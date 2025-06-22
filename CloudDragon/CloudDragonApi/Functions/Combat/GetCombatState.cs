@@ -24,12 +24,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="id">Session identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Action result with the combat state.</returns>
-        [FunctionName("GetCombatState")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetCombatState")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{id}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-            ContainerName = "CombatSessions",
+            CollectionName = "CombatSessions",
             ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
             PartitionKey = "{id}")] CombatSession session,

@@ -20,7 +20,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
     {
         private readonly CosmosClient _cosmosClient;
         private const string DatabaseName = "CloudDragonDB";
-        private const string ContainerName = "Characters";
+        private const string CollectionName = "Characters";
 
         public CastSpellFunction(CosmosClient cosmosClient)
         {
@@ -34,7 +34,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="logger">Function logger.</param>
         /// <returns>Result with cast confirmation.</returns>
-        [FunctionName("CastSpell")]
+        [Microsoft.Azure.WebJobs.FunctionName("CastSpell")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-spell")] HttpRequest req,
             string id,
@@ -52,7 +52,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             }
 
             // Get container and fetch character
-            var container = _cosmosClient.GetContainer(DatabaseName, ContainerName);
+            var container = _cosmosClient.GetContainer(DatabaseName, CollectionName);
             var character = await GetCharacterAsync(id, container);
 
             if (character is null)

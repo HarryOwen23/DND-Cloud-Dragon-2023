@@ -28,19 +28,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding to persist the update.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result containing success status.</returns>
-        [FunctionName("UnequipItem")]
+        [Microsoft.Azure.WebJobs.FunctionName("UnequipItem")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/unequip")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

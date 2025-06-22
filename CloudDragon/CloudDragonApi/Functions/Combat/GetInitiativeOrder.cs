@@ -24,13 +24,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="session">Session document from Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result with the initiative order list.</returns>
-        [FunctionName("GetInitiativeOrder")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetInitiativeOrder")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{sessionId}/initiative")] HttpRequest req,
             string sessionId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,

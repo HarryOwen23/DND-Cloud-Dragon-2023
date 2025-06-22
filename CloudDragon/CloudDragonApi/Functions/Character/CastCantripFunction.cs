@@ -29,12 +29,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response describing the outcome.</returns>
-        [FunctionName("CastCantrip")]
+        [Microsoft.Azure.WebJobs.FunctionName("CastCantrip")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-cantrip")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,

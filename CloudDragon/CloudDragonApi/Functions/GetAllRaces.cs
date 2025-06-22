@@ -19,7 +19,7 @@ namespace CloudDragon.CloudDragonApi.Functions
         /// <param name="req">HTTP request.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Collection of race objects.</returns>
-        [FunctionName("GetAllRaces")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetAllRaces")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races")] HttpRequest req,
             ILogger log)

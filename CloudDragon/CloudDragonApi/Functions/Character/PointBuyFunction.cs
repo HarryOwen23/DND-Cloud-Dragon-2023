@@ -32,7 +32,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="req">Incoming HTTP request.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result with generated ability scores or an error.</returns>
-        [FunctionName("PointBuy")]
+        [Microsoft.Azure.WebJobs.FunctionName("PointBuy")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "point-buy")] HttpRequest req,
             ILogger log)

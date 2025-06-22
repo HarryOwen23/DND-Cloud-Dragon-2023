@@ -23,18 +23,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for the new clone.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response containing the identifier of the clone.</returns>
-        [FunctionName("CopyCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("CopyCharacter")]
         public static async Task<IActionResult> CopyCharacter(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/clone")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel sourceChar,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

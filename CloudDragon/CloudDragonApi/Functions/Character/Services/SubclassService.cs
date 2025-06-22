@@ -23,13 +23,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="allEntries">Cosmos DB records for that class.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>List of subclasses or an error response.</returns>
-        [FunctionName("GetAvailableSubclasses")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetAvailableSubclasses")]
         public static async Task<IActionResult> GetAvailableSubclasses(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "subclasses/{className}")] HttpRequest req,
             string className,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Classes",
+                CollectionName = "Classes",
                 SqlQuery = "SELECT * FROM c WHERE c.{partitionKey} = {className}",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> allEntries,
             ILogger log)

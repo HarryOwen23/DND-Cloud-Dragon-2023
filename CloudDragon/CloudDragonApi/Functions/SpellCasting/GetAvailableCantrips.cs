@@ -25,12 +25,12 @@ namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
         /// <param name="cantrips">Query results from Cosmos DB.</param>
         /// <param name="className">Player class name.</param>
         /// <param name="log">Function logger.</param>
-        [FunctionName("GetAvailableCantrips")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetAvailableCantrips")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "cantrips/{className}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Spells",
+                CollectionName = "Spells",
                 SqlQuery = "SELECT * FROM c WHERE c.ClassName = {className} AND c.Type = 'Cantrip'",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> cantrips,
             string className,

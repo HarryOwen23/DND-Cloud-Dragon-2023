@@ -23,19 +23,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Rolls initiative for every combatant in the session.
         /// </summary>
-        [FunctionName("RollInitiative")]
+        [Microsoft.Azure.WebJobs.FunctionName("RollInitiative")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/roll-initiative")] HttpRequest req,
             string sessionId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

@@ -28,12 +28,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Cosmos DB output binding.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Action result describing the outcome.</returns>
-        [FunctionName("CreateCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("CreateCharacter")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

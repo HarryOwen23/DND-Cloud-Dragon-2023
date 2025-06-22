@@ -20,7 +20,7 @@ namespace CloudDragon.CloudDragonApi.Functions
         /// <param name="req">The incoming HTTP request.</param>
         /// <param name="logger">Function logger.</param>
         /// <returns>The HTTP response containing the list of endpoints.</returns>
-        [FunctionName("DescribeApi")]
+        [Microsoft.Azure.WebJobs.FunctionName("DescribeApi")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "describe")] HttpRequest req,
             ILogger logger)

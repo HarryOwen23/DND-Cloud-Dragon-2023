@@ -24,7 +24,7 @@ namespace CloudDragon.CloudDragonApi
         /// <param name="req">HTTP request containing the JSON payload.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Action result describing the outcome.</returns>
-        [FunctionName("ProcessJson")]
+        [Microsoft.Azure.WebJobs.FunctionName("ProcessJson")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "process-json")] HttpRequest req,
             ILogger log)
