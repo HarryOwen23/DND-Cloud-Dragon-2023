@@ -13,6 +13,9 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Azure Function responsible for casting spells from a character sheet.
+    /// </summary>
     public class CastSpellFunction
     {
         private readonly CosmosClient _cosmosClient;
@@ -24,6 +27,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             _cosmosClient = cosmosClient;
         }
 
+        /// <summary>
+        /// Casts a spell for the specified character.
+        /// </summary>
+        /// <param name="req">HTTP request containing the spell info.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="logger">Function logger.</param>
+        /// <returns>Result with cast confirmation.</returns>
         [FunctionName("CastSpell")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/cast-spell")] HttpRequest req,
@@ -75,6 +85,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
             return new OkObjectResult(new { success = true, message = $"Casted {input.Spell} (Level {input.Level})" });
         }
 
+        /// <summary>
+        /// Retrieves the character document from Cosmos DB.
+        /// </summary>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="container">Cosmos DB container.</param>
+        /// <returns>The character or <c>null</c> if not found.</returns>
         private async Task<CharacterModel?> GetCharacterAsync(string id, Container container)
         {
             try
@@ -89,9 +105,15 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
     }
 
+    /// <summary>
+    /// Payload describing the spell to cast and at what level.
+    /// </summary>
     public class SpellCastInput
     {
+        /// <summary>Name of the spell being cast.</summary>
         public string Spell { get; set; }
+
+        /// <summary>Slot level used to cast the spell.</summary>
         public int Level { get; set; }
     }
 }

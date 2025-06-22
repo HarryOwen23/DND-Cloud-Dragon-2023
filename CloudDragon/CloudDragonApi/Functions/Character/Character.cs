@@ -5,6 +5,9 @@ using CloudDragon.Models.ModelContext;
 
 namespace CloudDragonLib.Models
 {
+    /// <summary>
+    /// Primary representation of a player character.
+    /// </summary>
     [ModelContext]
     public class Character
     {

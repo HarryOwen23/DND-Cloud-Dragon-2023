@@ -12,7 +12,6 @@ using Microsoft.Extensions.Logging;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using Newtonsoft.Json;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat

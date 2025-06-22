@@ -13,8 +13,20 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Updates a character's list of prepared spells.
+    /// </summary>
     public static class PrepareSpellsFunction
     {
+        /// <summary>
+        /// HTTP POST endpoint to set the prepared spells for a character.
+        /// </summary>
+        /// <param name="req">Request containing spells to prepare.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist the change.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result listing the prepared spells.</returns>
         [FunctionName("PrepareSpells")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/prepare-spells")] HttpRequest req,

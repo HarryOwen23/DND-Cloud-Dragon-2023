@@ -10,12 +10,21 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character;
-using CloudDragon.CloudDragonApi.Utils;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Creates and persists a new character document.
+    /// </summary>
     public static class SaveCharacterFunction
     {
+    /// <summary>
+    /// HTTP POST endpoint to save a character to Cosmos DB.
+    /// </summary>
+    /// <param name="req">Request containing the character data.</param>
+    /// <param name="characterOut">Output binding for persisted character.</param>
+    /// <param name="log">Function logger.</param>
+    /// <returns>Result containing the new character id.</returns>
     [FunctionName("SaveCharacter")]
     public static async Task<IActionResult> SaveCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
@@ -58,6 +67,10 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
     }
 
+    /// <summary>
+    /// Initializes a basic set of spell slots based on class and level.
+    /// </summary>
+    /// <param name="character">Character to initialize.</param>
     private static void InitializeSpellSlots(CharacterModel character)
     {
         var fullCasters = new List<string> { "wizard", "cleric", "druid", "bard", "sorcerer", "warlock" };

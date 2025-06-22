@@ -5,15 +5,25 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
+    /// <summary>
+    /// Retrieves the initiative order for a combat session.
+    /// </summary>
     public static class GetInitiativeOrder
     {
+        /// <summary>
+        /// HTTP GET endpoint returning combatants sorted by initiative.
+        /// </summary>
+        /// <param name="req">Incoming HTTP request.</param>
+        /// <param name="sessionId">Combat session identifier.</param>
+        /// <param name="session">Session document from Cosmos DB.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result with the initiative order list.</returns>
         [FunctionName("GetInitiativeOrder")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{sessionId}/initiative")] HttpRequest req,

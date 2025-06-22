@@ -5,8 +5,16 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
+    /// <summary>
+    /// Provides validation helpers for characters with multiple classes.
+    /// </summary>
     public static class MulticlassValidationService
     {
+        /// <summary>
+        /// Validates the character's multiclass configuration.
+        /// </summary>
+        /// <param name="character">Character to inspect.</param>
+        /// <returns>A list of validation error messages.</returns>
         public static List<string> ValidateMulticlass(CharacterModel character)
         {
             var errors = new List<string>();

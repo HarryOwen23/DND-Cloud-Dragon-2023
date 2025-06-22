@@ -7,6 +7,9 @@ using CharacterModel = CloudDragonLib.Models.Character;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character.Services
 {
+    /// <summary>
+    /// Provides helper methods for assigning and validating character classes.
+    /// </summary>
     public static class ClassSystemService
     {
         private static readonly Dictionary<string, int> SubclassUnlockLevels = new()
@@ -26,6 +29,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             { "artificer", 3 }
         };
 
+        /// <summary>
+        /// Assigns a primary class to the character and initializes class levels.
+        /// </summary>
+        /// <param name="character">Character to update.</param>
+        /// <param name="className">Name of the class to assign.</param>
         public static void AssignClass(CharacterModel character, string className)
         {
             if (string.IsNullOrWhiteSpace(className))
@@ -36,6 +44,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             character.Classes[className] = 1; // Start at level 1
         }
 
+        /// <summary>
+        /// Assigns a subclass to the character if allowed by level.
+        /// </summary>
+        /// <param name="character">Character to modify.</param>
+        /// <param name="subclassName">Subclass name.</param>
         public static void AssignSubclass(CharacterModel character, string subclassName)
         {
             if (string.IsNullOrWhiteSpace(subclassName))
@@ -57,6 +70,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             character.Subclasses[primaryClass] = subclassName;
         }
 
+        /// <summary>
+        /// Checks if the character can multiclass into the specified class.
+        /// </summary>
+        /// <param name="character">Character performing the multiclass.</param>
+        /// <param name="newClass">Class to add.</param>
+        /// <returns><c>true</c> if allowed; otherwise <c>false</c>.</returns>
         public static bool ValidateMulticlass(CharacterModel character, string newClass)
         {
             if (character.Classes.ContainsKey(newClass.ToLower()))
@@ -65,6 +84,11 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
             return true;
         }
 
+        /// <summary>
+        /// Gets the level at which a class selects a subclass.
+        /// </summary>
+        /// <param name="className">Class name.</param>
+        /// <returns>Level number when subclasses become available.</returns>
         private static int GetSubclassUnlockLevel(string className)
         {
             if (string.IsNullOrWhiteSpace(className))

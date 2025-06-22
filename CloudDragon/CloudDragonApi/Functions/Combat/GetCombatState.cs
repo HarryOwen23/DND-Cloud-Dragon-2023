@@ -4,7 +4,6 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using System.Linq;
 using CloudDragon.CloudDragonApi;
 using CloudDragon.CloudDragonApi.Utils;
@@ -12,13 +11,24 @@ using CloudDragon.Models;
 
 namespace CloudDragon.CloudDragonApi.Functions.Combat
 {
-public static class GetCombatStateFunction
-{
-    [FunctionName("GetCombatState")]
-    public static IActionResult Run(
-        [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{id}")] HttpRequest req,
-        [CosmosDB(
-            DatabaseName = "CloudDragonDB",
+    /// <summary>
+    /// Retrieves the full combat state for a given session.
+    /// </summary>
+    public static class GetCombatStateFunction
+    {
+        /// <summary>
+        /// HTTP GET endpoint to fetch combat session details.
+        /// </summary>
+        /// <param name="req">The incoming HTTP request.</param>
+        /// <param name="session">Session loaded from Cosmos DB.</param>
+        /// <param name="id">Session identifier.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Action result with the combat state.</returns>
+        [FunctionName("GetCombatState")]
+        public static IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "combat/{id}")] HttpRequest req,
+            [CosmosDB(
+                DatabaseName = "CloudDragonDB",
             ContainerName = "CombatSessions",
             ConnectionStringSetting = "CosmosDBConnection",
             Id = "{id}",
@@ -46,7 +56,6 @@ public static class GetCombatStateFunction
             currentTurn = current?.Name ?? "No active combatant",
             round = session.Round
         });
-    } 
+    }
 }
 }
-// This function retrieves the current state of a combat session in a D&D game.

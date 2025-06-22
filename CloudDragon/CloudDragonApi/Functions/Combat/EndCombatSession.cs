@@ -6,7 +6,6 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using CloudDragon.CloudDragonApi;
-using CloudDragon.CloudDragonApi.Functions.Combat;
 using System.Linq;
 using CloudDragon.CloudDragonApi.Utils;
 using CloudDragon.Models;

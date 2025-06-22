@@ -15,8 +15,20 @@ using CloudDragon.Equipment;
 
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
+    /// <summary>
+    /// Equips an item from a character's inventory.
+    /// </summary>
     public static class EquipItem
     {
+        /// <summary>
+        /// HTTP endpoint used to equip an item on a character.
+        /// </summary>
+        /// <param name="req">Request containing the item id.</param>
+        /// <param name="id">Character identifier.</param>
+        /// <param name="character">Character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist changes.</param>
+        /// <param name="log">Function logger.</param>
+        /// <returns>Result describing success or failure.</returns>
         [FunctionName("EquipItem")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/equip")] HttpRequest req,
