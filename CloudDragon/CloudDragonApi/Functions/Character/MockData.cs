@@ -22,12 +22,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding to Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result containing number of characters created.</returns>
-        [FunctionName("LoadMockCharacters")]
+        [Microsoft.Azure.WebJobs.FunctionName("LoadMockCharacters")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "dev/mock-characters")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

@@ -17,7 +17,7 @@ namespace CloudDragonLib
         /// </summary>
         /// <param name="fileName">Path to the file containing feat data.</param>
         /// <returns>List of parsed feats.</returns>
-        Task<List<Feats>> Populate(string fileName);
+        Task<List<Models.Feats>> Populate(string fileName);
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ namespace CloudDragonLib
     /// </summary>
     public class FeatsPopulator : IFeatsPopulator
     {
-        public async Task<List<Feats>> Populate(string fileName)
+        public async Task<List<Models.Feats>> Populate(string fileName)
         {
             Console.WriteLine($"Populating feats from {fileName}");
             if (string.IsNullOrWhiteSpace(fileName))
@@ -38,7 +38,7 @@ namespace CloudDragonLib
             Console.WriteLine($"Loaded feats JSON, length {json.Length}");
             var jObject = JObject.Parse(json);
             var featsArray = jObject["Feats"] as JArray;
-            var result = new List<Feats>();
+            var result = new List<Models.Feats>();
 
             if (featsArray != null)
             {
@@ -49,7 +49,7 @@ namespace CloudDragonLib
 
                     if (!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(description))
                     {
-                        result.Add(new Feats(name, description));
+                        result.Add(new Models.Feats(name, description));
                         Console.WriteLine($"Loaded feat {name}");
                     }
                 }

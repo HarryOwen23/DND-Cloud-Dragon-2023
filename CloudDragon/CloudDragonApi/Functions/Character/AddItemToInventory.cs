@@ -29,19 +29,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for persisting the update.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>The HTTP response describing the operation.</returns>
-        [FunctionName("AddItemToInventory")]
+        [Microsoft.Azure.WebJobs.FunctionName("AddItemToInventory")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

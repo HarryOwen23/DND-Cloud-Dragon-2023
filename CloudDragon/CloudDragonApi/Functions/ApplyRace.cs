@@ -28,19 +28,19 @@ namespace CloudDragon.CloudDragonApi.Functions
         /// <param name="characterOut">Output binding for persisting changes.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Details about the applied race.</returns>
-        [FunctionName("ApplyRace")]
+        [Microsoft.Azure.WebJobs.FunctionName("ApplyRace")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-race")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {

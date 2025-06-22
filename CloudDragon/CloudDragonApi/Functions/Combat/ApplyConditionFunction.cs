@@ -23,20 +23,20 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Adds the given condition to the combatant if present.
         /// </summary>
-        [FunctionName("ApplyCondition")]
+        [Microsoft.Azure.WebJobs.FunctionName("ApplyCondition")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat/{sessionId}/combatant/{combatantId}/apply-condition")] HttpRequest req,
             string sessionId,
             string combatantId,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

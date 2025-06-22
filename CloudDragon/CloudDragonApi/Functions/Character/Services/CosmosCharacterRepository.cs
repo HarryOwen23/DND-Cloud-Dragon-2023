@@ -11,7 +11,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
     public class CosmosCharacterRepository : ICharacterRepository
     {
         private readonly Cosmos_Loader _cosmosLoader;
-        private const string ContainerName = "Characters";
+        private const string CollectionName = "Characters";
 
         /// <summary>
         /// Initializes a new instance of the repository with the provided loader.
@@ -25,7 +25,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
         /// <inheritdoc />
         public async Task<CharacterModel> GetAsync(string id)
         {
-            var raw = await _cosmosLoader.GetItemByIdAsync(ContainerName, id, id);
+            var raw = await _cosmosLoader.GetItemByIdAsync(CollectionName, id, id);
             return raw != null
                 ? Newtonsoft.Json.JsonConvert.DeserializeObject<CharacterModel>(raw.ToString())
                 : null;
@@ -34,7 +34,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
         /// <inheritdoc />
         public async Task SaveAsync(CharacterModel  character)
         {
-            await _cosmosLoader.UpsertItemAsync(ContainerName, character, character.Id);
+            await _cosmosLoader.UpsertItemAsync(CollectionName, character, character.Id);
         }
     }
 }

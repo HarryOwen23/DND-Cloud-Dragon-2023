@@ -19,7 +19,7 @@ namespace CloudDragon.CloudDragonApi
         /// <param name="req">Incoming HTTP request.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>The standard array wrapped in an <see cref="IActionResult"/>.</returns>
-        [FunctionName("StandardArray")]
+        [Microsoft.Azure.WebJobs.FunctionName("StandardArray")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "standard-array")] HttpRequest req,
             ILogger log)

@@ -30,18 +30,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="name">Combatant name to update.</param>
         /// <param name="log">Function logger instance.</param>
         /// <returns>Result detailing success or failure of the update.</returns>
-        [FunctionName("UpdateCombatant")]
+        [Microsoft.Azure.WebJobs.FunctionName("UpdateCombatant")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "patch", Route = "combat/{sessionId}/combatant/{name}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{sessionId}",
                 PartitionKey = "{sessionId}")] CombatSession session,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             string sessionId,
             string name,

@@ -30,19 +30,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for the updated character.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response describing the result.</returns>
-        [FunctionName("ResetCharacterStats")]
+        [Microsoft.Azure.WebJobs.FunctionName("ResetCharacterStats")]
         public static async Task<IActionResult> ResetCharacterStats(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/reset-stats")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -67,19 +67,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for persistence.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response containing the new level.</returns>
-        [FunctionName("LevelUpCharacterSimple")]
+        [Microsoft.Azure.WebJobs.FunctionName("LevelUpCharacterSimple")]
         public static async Task<IActionResult> LevelUpCharacterSimple(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-simple")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -103,13 +103,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="character">Character loaded from Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response indicating validation results.</returns>
-        [FunctionName("ValidateCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("ValidateCharacter")]
         public static async Task<IActionResult> ValidateCharacter(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/validate")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
@@ -143,23 +143,23 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for persistence.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response with the applied background.</returns>
-        [FunctionName("ApplyBackground")]
+        [Microsoft.Azure.WebJobs.FunctionName("ApplyBackground")]
         public static async Task<IActionResult> ApplyBackground(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/background")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Backgrounds",
+                CollectionName = "Backgrounds",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> backgrounds,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -194,19 +194,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for persistence.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response describing the outcome.</returns>
-        [FunctionName("AssignSpell")]
+        [Microsoft.Azure.WebJobs.FunctionName("AssignSpell")]
         public static async Task<IActionResult> AssignSpell(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/spells/add")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
@@ -236,23 +236,23 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characterOut">Output binding for persistence.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response describing the result.</returns>
-        [FunctionName("AddFeat")]
+        [Microsoft.Azure.WebJobs.FunctionName("AddFeat")]
         public static async Task<IActionResult> AddFeat(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/feats/add")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Feats",
+                CollectionName = "Feats",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> feats,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {

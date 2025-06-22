@@ -27,18 +27,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Identifier of the character.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>HTTP response describing the result.</returns>
-        [FunctionName("DeleteCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("DeleteCharacter")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "character/{id}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel characterToDelete,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)

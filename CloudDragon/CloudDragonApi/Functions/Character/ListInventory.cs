@@ -23,13 +23,13 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="character">Character loaded from Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Inventory details.</returns>
-        [FunctionName("ListInventory")]
+        [Microsoft.Azure.WebJobs.FunctionName("ListInventory")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/inventory")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,

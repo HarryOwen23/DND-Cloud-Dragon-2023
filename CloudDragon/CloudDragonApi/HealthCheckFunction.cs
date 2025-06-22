@@ -17,7 +17,7 @@ namespace CloudDragon.CloudDragonApi
         /// </summary>
         /// <param name="req">Incoming request.</param>
         /// <param name="log">Function logger.</param>
-        [FunctionName("HealthCheck")]
+        [Microsoft.Azure.WebJobs.FunctionName("HealthCheck")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "health")] HttpRequest req,
             ILogger log)

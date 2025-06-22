@@ -26,12 +26,12 @@ namespace CloudDragon.CloudDragonApi.Functions.SpellCasting
         /// <param name="className">Name of the caster class.</param>
         /// <param name="level">Spell level requested.</param>
         /// <param name="log">Function logger.</param>
-        [FunctionName("GetAvailableSpells")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetAvailableSpells")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "spells/{className}/{level}")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Spells",
+                CollectionName = "Spells",
                 SqlQuery = "SELECT * FROM c WHERE c.ClassName = {className} AND c.Level = {level}",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> spells,
             string className,

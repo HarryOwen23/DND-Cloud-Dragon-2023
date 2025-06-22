@@ -24,12 +24,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
         /// <summary>
         /// Returns the current spell slot counts for the specified character.
         /// </summary>
-        [FunctionName("GetSpellSlots")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetSpellSlots")]
         public static IActionResult GetSpellSlots(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/spell-slots")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
@@ -44,19 +44,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
         /// <summary>
         /// Consumes a spell slot of the specified level if available.
         /// </summary>
-        [FunctionName("UseSpellSlot")]
+        [Microsoft.Azure.WebJobs.FunctionName("UseSpellSlot")]
         public static async Task<IActionResult> UseSpellSlot(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/spell-slots/use")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
@@ -80,19 +80,19 @@ namespace CloudDragon.CloudDragonApi.Functions.Character.Services
         /// <summary>
         /// Resets all spell slots to their maximum values after a long rest.
         /// </summary>
-        [FunctionName("LongRestRecoverSlots")]
+        [Microsoft.Azure.WebJobs.FunctionName("LongRestRecoverSlots")]
         public static async Task<IActionResult> LongRestRecoverSlots(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/long-rest")] HttpRequest req,
             string id,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {

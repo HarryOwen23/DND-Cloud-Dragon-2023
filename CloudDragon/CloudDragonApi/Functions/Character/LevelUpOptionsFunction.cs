@@ -28,12 +28,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="character">Character data loaded from Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>A summary of level-up options.</returns>
-        [FunctionName("GetLevelUpOptions")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetLevelUpOptions")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-options")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,

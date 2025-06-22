@@ -24,12 +24,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="characters">Enumeration of characters from Cosmos DB.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>List of characters.</returns>
-        [FunctionName("ListCharacters")]
+        [Microsoft.Azure.WebJobs.FunctionName("ListCharacters")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "characters")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 SqlQuery = "SELECT * FROM c WHERE c.Level > 0",
                 ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<CharacterModel> characters,
             ILogger log)

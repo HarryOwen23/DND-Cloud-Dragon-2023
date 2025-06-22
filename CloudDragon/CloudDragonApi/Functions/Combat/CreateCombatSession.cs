@@ -24,12 +24,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <summary>
         /// Creates a new combat session from the provided combatants.
         /// </summary>
-        [FunctionName("CreateCombatSession")]
+        [Microsoft.Azure.WebJobs.FunctionName("CreateCombatSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "combat")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "CombatSessions",
+                CollectionName = "CombatSessions",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CombatSession> sessionOut,
             ILogger log)
         {

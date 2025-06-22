@@ -57,18 +57,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Result containing new level information.</returns>
-        [FunctionName("LevelUpCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("LevelUpCharacter")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
@@ -107,18 +107,18 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="id">Character identifier.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Operation result.</returns>
-        [FunctionName("AssignSubclass")]
+        [Microsoft.Azure.WebJobs.FunctionName("AssignSubclass")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/subclass")] HttpRequest req,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection",
                 Id = "{id}",
                 PartitionKey = "{id}")] CharacterModel character,
             [CosmosDB(
                 DatabaseName = "CloudDragonDB",
-                ContainerName = "Characters",
+                CollectionName = "Characters",
                 ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)

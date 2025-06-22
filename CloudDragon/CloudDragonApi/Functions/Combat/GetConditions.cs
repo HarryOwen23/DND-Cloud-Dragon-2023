@@ -20,7 +20,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Combat
         /// <param name="req">The incoming HTTP request.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Collection of conditions.</returns>
-        [FunctionName("GetConditions")]
+        [Microsoft.Azure.WebJobs.FunctionName("GetConditions")]
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "conditions")] HttpRequest req,
             ILogger log)

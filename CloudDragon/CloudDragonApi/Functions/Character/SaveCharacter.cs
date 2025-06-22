@@ -25,12 +25,12 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
     /// <param name="characterOut">Output binding for persisted character.</param>
     /// <param name="log">Function logger.</param>
     /// <returns>Result containing the new character id.</returns>
-    [FunctionName("SaveCharacter")]
+    [Microsoft.Azure.WebJobs.FunctionName("SaveCharacter")]
     public static async Task<IActionResult> SaveCharacter(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character")] HttpRequest req,
         [CosmosDB(
             DatabaseName = "CloudDragonDB",
-            ContainerName = "Characters",
+            CollectionName = "Characters",
             ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
         ILogger log)
     {

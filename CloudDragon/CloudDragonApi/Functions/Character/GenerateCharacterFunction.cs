@@ -14,17 +14,17 @@ using CloudDragon.Models.ModelContext;
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
-    /// Azure Function for generating a character and persisting it using the <see cref="CharacterContextEngine"/>.
+    /// Azure Function for generating a character and persisting it using the <see cref="CloudDragon.Models.ModelContext.CharacterContextEngine"/>.
     /// </summary>
     public class GenerateCharacterFunction
     {
-        private readonly CharacterContextEngine _engine;
+        private readonly CloudDragon.Models.ModelContext.CharacterContextEngine _engine;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateCharacterFunction"/> class.
         /// </summary>
         /// <param name="engine">Engine used to fill in character details.</param>
-        public GenerateCharacterFunction(CharacterContextEngine engine)
+        public GenerateCharacterFunction(CloudDragon.Models.ModelContext.CharacterContextEngine engine)
         {
             _engine = engine;
         }
@@ -35,7 +35,7 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <param name="req">HTTP request containing the character payload.</param>
         /// <param name="log">Function logger.</param>
         /// <returns>Action result with generated character information.</returns>
-        [FunctionName("GenerateCharacter")]
+        [Microsoft.Azure.WebJobs.FunctionName("GenerateCharacter")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/generate")] HttpRequest req,
             ILogger log)
