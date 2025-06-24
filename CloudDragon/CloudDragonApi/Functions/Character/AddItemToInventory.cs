@@ -9,7 +9,6 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragon.CloudDragonApi.Utils;
-
 using CloudDragonLib.Models;
 using CharacterModel = CloudDragonLib.Models.Character;
 
@@ -23,26 +22,23 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <summary>
         /// Adds an item from the request body to the specified character.
         /// </summary>
-        /// <param name="req">HTTP request containing the item payload.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character document from Cosmos DB.</param>
-        /// <param name="characterOut">Output binding for persisting the update.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>The HTTP response describing the operation.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("AddItemToInventory")]
+        [FunctionName("AddItemToInventory")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/inventory/add")]
+            HttpRequest req,
             string id,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CharacterModel character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")]
+            CharacterModel character,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection")]
+            IAsyncCollector<CharacterModel> characterOut,
             ILogger log)
         {
             if (character == null)

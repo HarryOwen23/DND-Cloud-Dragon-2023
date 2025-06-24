@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
-using System.Net;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using CloudDragonLib.Models;
@@ -24,25 +23,22 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         /// <summary>
         /// Applies level-up choices to the specified character.
         /// </summary>
-        /// <param name="req">HTTP request carrying level-up options.</param>
-        /// <param name="character">Character document from Cosmos DB.</param>
-        /// <param name="characterOut">Output binding to persist updates.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response describing the result.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("ApplyLevelUp")]
+        [FunctionName("ApplyLevelUp")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-levelup")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-levelup")]
+            HttpRequest req,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CharacterModel character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")]
+            CharacterModel character,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CharacterModel> characterOut,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection")]
+            IAsyncCollector<CharacterModel> characterOut,
             string id,
             ILogger log)
         {

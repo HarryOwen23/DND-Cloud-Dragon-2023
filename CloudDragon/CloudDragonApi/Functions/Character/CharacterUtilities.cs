@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -17,33 +16,33 @@ using CloudDragon.CloudDragonApi.Utils;
 namespace CloudDragon.CloudDragonApi.Functions.Character
 {
     /// <summary>
-    /// Helper Azure Functions for character management.
+    /// Provides utility functions for managing character-related operations.
     /// </summary>
     public static class CharacterUtilities
     {
         /// <summary>
-        /// Clears all stats for the specified character document.
+        /// Resets all ability stats for a character.
         /// </summary>
-        /// <param name="req">Incoming request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character loaded from Cosmos DB.</param>
-        /// <param name="characterOut">Output binding for the updated character.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response describing the result.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("ResetCharacterStats")]
+        /// <param name="req">HTTP request.</param>
+        /// <param name="id">The unique character ID.</param>
+        /// <param name="character">The character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist changes.</param>
+        /// <param name="log">Logger for diagnostic information.</param>
+        /// <returns>HTTP response indicating success or failure.</returns>
+        [FunctionName("ResetCharacterStats")]
         public static async Task<IActionResult> ResetCharacterStats(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/reset-stats")] HttpRequest req,
             string id,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"ResetCharacterStats called for {id}");
@@ -59,28 +58,28 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
 
         /// <summary>
-        /// Increments the character level by one.
+        /// Increases a character's level by one.
         /// </summary>
         /// <param name="req">HTTP request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character document from Cosmos DB.</param>
-        /// <param name="characterOut">Output binding for persistence.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response containing the new level.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("LevelUpCharacterSimple")]
+        /// <param name="id">The unique character ID.</param>
+        /// <param name="character">The character document from Cosmos DB.</param>
+        /// <param name="characterOut">Output binding to persist changes.</param>
+        /// <param name="log">Logger for diagnostic information.</param>
+        /// <returns>HTTP response indicating the new level or an error.</returns>
+        [FunctionName("LevelUpCharacterSimple")]
         public static async Task<IActionResult> LevelUpCharacterSimple(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/level-up-simple")] HttpRequest req,
             string id,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")] CloudDragonLib.Models.Character character,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"LevelUpCharacterSimple called for {id}");
@@ -96,23 +95,23 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
         }
 
         /// <summary>
-        /// Validates the character fields for common mistakes.
+        /// Validates a character's properties for common issues.
         /// </summary>
         /// <param name="req">HTTP request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character loaded from Cosmos DB.</param>
-        /// <param name="log">Function logger.</param>
+        /// <param name="id">The unique character ID.</param>
+        /// <param name="character">The character document from Cosmos DB.</param>
+        /// <param name="log">Logger for diagnostic information.</param>
         /// <returns>HTTP response indicating validation results.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("ValidateCharacter")]
+        [FunctionName("ValidateCharacter")]
         public static async Task<IActionResult> ValidateCharacter(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "character/{id}/validate")] HttpRequest req,
             string id,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")] CloudDragonLib.Models.Character character,
             ILogger log)
         {
             DebugLogger.Log($"ValidateCharacter called for {id}");
@@ -131,165 +130,6 @@ namespace CloudDragon.CloudDragonApi.Functions.Character
                 success = errors.Count == 0,
                 errors
             });
-        }
-
-        /// <summary>
-        /// Applies a background template to the character.
-        /// </summary>
-        /// <param name="req">HTTP request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character document.</param>
-        /// <param name="backgrounds">Available background records.</param>
-        /// <param name="characterOut">Output binding for persistence.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response with the applied background.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("ApplyBackground")]
-        public static async Task<IActionResult> ApplyBackground(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/background")] HttpRequest req,
-            string id,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Backgrounds",
-                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> backgrounds,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
-            ILogger log)
-        {
-            DebugLogger.Log($"ApplyBackground called for {id}");
-            string body = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic input = JsonConvert.DeserializeObject(body);
-            string backgroundId = input?.backgroundId;
-
-            if (character == null || string.IsNullOrEmpty(backgroundId))
-            {
-                return new BadRequestObjectResult(new { success = false, error = "Invalid input." });
-            }
-
-            var background = backgrounds.FirstOrDefault(b => b.id == backgroundId);
-            if (background == null)
-            {
-                return new NotFoundObjectResult(new { success = false, error = "Background not found." });
-            }
-
-            character.Background = background.name;
-            await characterOut.AddAsync(character);
-
-            return new OkObjectResult(new { success = true, background = background.name });
-        }
-
-        /// <summary>
-        /// Adds a spell item to the character inventory.
-        /// </summary>
-        /// <param name="req">HTTP request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character document.</param>
-        /// <param name="characterOut">Output binding for persistence.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response describing the outcome.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("AssignSpell")]
-        public static async Task<IActionResult> AssignSpell(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/spells/add")] HttpRequest req,
-            string id,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
-            ILogger log)
-        {
-            DebugLogger.Log($"AssignSpell called for {id}");
-            var body = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic input = JsonConvert.DeserializeObject(body);
-            string spellName = input?.spell;
-
-            if (character == null || string.IsNullOrEmpty(spellName))
-            {
-                return new BadRequestObjectResult(new { success = false, error = "Invalid request." });
-            }
-
-            character.Inventory.Add(new Item { Name = spellName, Type = "Spell" });
-            await characterOut.AddAsync(character);
-
-            return new OkObjectResult(new { success = true, spell = spellName });
-        }
-
-        /// <summary>
-        /// Adds a feat to the character and applies any bonuses.
-        /// </summary>
-        /// <param name="req">HTTP request.</param>
-        /// <param name="id">Character identifier.</param>
-        /// <param name="character">Character document.</param>
-        /// <param name="feats">Available feats.</param>
-        /// <param name="characterOut">Output binding for persistence.</param>
-        /// <param name="log">Function logger.</param>
-        /// <returns>HTTP response describing the result.</returns>
-        [Microsoft.Azure.WebJobs.FunctionName("AddFeat")]
-        public static async Task<IActionResult> AddFeat(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/feats/add")] HttpRequest req,
-            string id,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Feats",
-                ConnectionStringSetting = "CosmosDBConnection")] IEnumerable<dynamic> feats,
-            [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
-            ILogger log)
-        {
-            DebugLogger.Log($"AddFeat called for {id}");
-            var body = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic input = JsonConvert.DeserializeObject(body);
-            string featId = input?.feat;
-
-            if (character == null || string.IsNullOrEmpty(featId))
-            {
-                return new BadRequestObjectResult(new { success = false, error = "Invalid request." });
-            }
-
-            var feat = feats.FirstOrDefault(f => f.id == featId);
-            if (feat == null)
-            {
-                return new NotFoundObjectResult(new { success = false, error = "Feat not found." });
-            }
-
-            character.Inventory.Add(new Item { Name = feat.name, Type = "Feat" });
-
-            if (feat.bonus != null)
-            {
-                foreach (var bonus in feat.bonus)
-                {
-                    string stat = bonus.name;
-                    int value = bonus.value;
-                    if (!character.Stats.ContainsKey(stat))
-                        character.Stats[stat] = value;
-                    else
-                        character.Stats[stat] += value;
-                }
-            }
-
-            await characterOut.AddAsync(character);
-
-            return new OkObjectResult(new { success = true, feat = feat.name });
         }
     }
 }

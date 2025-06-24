@@ -15,7 +15,7 @@ namespace CloudDragonLib
         /// <summary>
         /// Map of race names to their ability score bonuses.
         /// </summary>
-        private static readonly Dictionary<string, Dictionary<StringMarshalling int>> RaceDefinitions = new()
+        private static readonly Dictionary<string, Dictionary<string, int>> RaceDefinitions = new()
         {
             ["Human"] = new()
             {

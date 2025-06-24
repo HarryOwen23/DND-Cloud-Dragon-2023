@@ -33,15 +33,17 @@ namespace CloudDragon.CloudDragonApi.Functions
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "character/{id}/apply-race")] HttpRequest req,
             string id,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}",
-                PartitionKey = "{id}")] CloudDragonLib.Models.Character character,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection",
+                id: "{id}",
+                partitionKey: "{id}")]
+            CloudDragonLib.Models.Character character,
             [CosmosDB(
-                DatabaseName = "CloudDragonDB",
-                CollectionName = "Characters",
-                ConnectionStringSetting = "CosmosDBConnection")] IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
+                databaseName: "CloudDragonDB",
+                containerName: "Characters",
+                connection: "CosmosDBConnection")]
+            IAsyncCollector<CloudDragonLib.Models.Character> characterOut,
             ILogger log)
         {
             DebugLogger.Log($"ApplyRace triggered for {id}");

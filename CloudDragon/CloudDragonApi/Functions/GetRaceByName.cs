@@ -11,29 +11,33 @@ using CloudDragon.CloudDragonApi.Utils;
 namespace CloudDragon.CloudDragonApi.Functions
 {
     /// <summary>
-    /// Retrieves a race record by its name.
+    /// Azure Function to retrieve a race record by its name.
     /// </summary>
     public static class GetRaceByName
     {
         /// <summary>
-        /// Looks up a race by name and returns it if found.
+        /// Handles GET requests for race lookup by name.
         /// </summary>
         /// <param name="req">HTTP request.</param>
-        /// <param name="name">Race name to search for.</param>
+        /// <param name="name">Race name.</param>
         /// <param name="context">Function execution context.</param>
-        /// <returns>The matching race or 404.</returns>
+        /// <returns>HTTP response containing the race info or a 404 error.</returns>
         [Function("GetRaceByName")]
         public static async Task<HttpResponseData> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "races/{name}")] HttpRequestData req,
+            [HttpTrigger(Microsoft.Azure.Functions.Worker.AuthorizationLevel.Function, "get", Route = "races/{name}")]
+            HttpRequestData req,
             string name,
             FunctionContext context)
         {
             var log = context.GetLogger(nameof(GetRaceByName));
             DebugLogger.Log($"GetRaceByName called with {name}");
 
+            // Load race data
             var populator = new RacesPopulator();
             var races = await populator.Populate("races.json");
             DebugLogger.Log($"Loaded {races.Count} races searching for {name}");
+
+            // Search for the matching race
             var match = races.FirstOrDefault(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
             HttpResponseData response;
@@ -41,6 +45,7 @@ namespace CloudDragon.CloudDragonApi.Functions
             {
                 log.LogWarning("Race not found: {Name}", name);
                 DebugLogger.Log($"Race {name} not found");
+
                 response = req.CreateResponse(HttpStatusCode.NotFound);
                 await response.WriteAsJsonAsync(new { success = false, error = "Race not found." });
                 return response;
@@ -48,6 +53,7 @@ namespace CloudDragon.CloudDragonApi.Functions
 
             log.LogInformation("Returning race {Race}", match.Name);
             DebugLogger.Log($"Returning race {match.Name}");
+
             response = req.CreateResponse(HttpStatusCode.OK);
             await response.WriteAsJsonAsync(new { success = true, race = match });
             return response;
